@@ -88,3 +88,13 @@ Plan docs: `plans/anish-[track]-[phase]-[date].md` (same naming as MOU).
 ## Reference repo
 
 MOU lives at `C:\Users\anish\Projects\gsl-mou-system`. Reuse `src/lib/pendingUpdates.ts`, `src/lib/templates.ts`, `.github/workflows/sync-and-deploy.yml` verbatim where applicable.
+
+## Authoritative planning docs (read these for the "why")
+
+Phase 1 is specified across three living documents in this repo. When anything about scope, premises, or architecture is ambiguous, these files are the source of truth, not this CLAUDE.md:
+
+- **`docs/plans/phase-1-design.md`** — design doc from `/office-hours` (2026-04-23). Problem statement, demand evidence, status quo, premises P1-P10, three approaches considered, recommended approach, success criteria, the Shruti-shadow assignment. Captures the "why we're building what we're building."
+- **`docs/plans/phase-1-ceo-review.md`** — CEO plan from `/plan-ceo-review` SELECTIVE EXPANSION (2026-04-23). Vision (10x check + platonic ideal), nine cherry-picks scored, seven accepted into Phase 1 scope (CP1 portal depth, CP2 mobile-first, CP3 in-app prompt drawer, CP4 JSON validator, CP5 quality floor, CP7 HOD rubric, CP8 self-withdraw), two deferred with explicit reactivation triggers. Captures the "what we're building and how ambitious."
+- **`docs/TODOS.md`** — deferred items with reactivation signals. Each entry states the specific observation that would promote it to active work (e.g., "30 days after launch, leadership opens /dashboard ≥ 2× per week → build CP6 expanded dashboard").
+
+These three docs replace the need for Claude to re-derive scope from this CLAUDE.md. Read them first, this file second.
