@@ -158,6 +158,81 @@ Measurable definitions of Phase 1 complete.
 
 Before the first line of feature code, Anish spends 45 minutes shoulder-to-shoulder with Shruti watching her process one candidate end-to-end in her current Excel workflow — from resume landing in her inbox to the row update. No coaching. Take notes. The gap between the pipeline stages the brief lists and the stages Shruti actually uses is the gap between this being a tool HR uses daily and a tool HR opens once and closes. MOU's office-hours sessions produced this exact assignment against Shubhangi and it paid for itself many times over; the same is true here.
 
+## Internal Surfaces Design Decisions (from /plan-design-review Pass 1, 2026-04-23)
+
+Living addendum. Candidate-facing surfaces get their own section after Pass 2. `/design-consultation` runs between Pass 1 and Pass 2 to produce DESIGN.md; this addendum operates against MOU's inherited tokens + universal design principles until DESIGN.md lands.
+
+### Information Architecture
+
+**Home (post-login):** needs-attention feed first. Primary view = every candidate awaiting this user's action across all their roles, grouped by action type (review, score, schedule, generate offer). Secondary = open-roles summary. Tertiary = global search. ⚠️ HR-workflow-dependent, re-check with Shruti shadow notes.
+
+**Role Kanban (`/roles/[id]`):** role selector at top, stage columns per `role.pipelineStages`, horizontal scroll. Card density = medium: name + source badge + days-in-stage indicator (~72px card height, 6-8 visible per column without scroll at laptop height). Click → bottom sheet on mobile (per `bottom-sheet-for-expand`), inline drawer on desktop. Drag between columns transitions stage.
+
+**Candidate detail (`/candidates/[id]`):** identity block + actions top, timeline middle, per-application sections (nested interviews/assessments/videos/offer/onboarding) below. Desktop sidebar jump-to list; mobile bottom sheet on action tap.
+
+**HOD rubric interview form:** candidate identity mini-card top; role rubric rendered as labeled scored inputs (scale driven by `role.rubric[].scale`); per-criterion short notes; live aggregate score at bottom (weighted average); overall notes textarea (16px minimum, per `ios-textarea-zoom-16px`); recommend proceed/hold/reject radio.
+
+**Offer drafting (`/offers/[id]`):** desktop split view, form 40% left + preview 60% right, live re-render on every edit. Mobile stacked with "see preview" expandable. Approve + generate disabled until all required placeholders filled; tooltip lists missing fields.
+
+**Prompt drawer (CP3):** sidebar "Prompts" entry invokes right-rail drawer (40% width desktop, full-screen modal mobile). Contents: search, category chips, scrollable prompt list. Selected prompt shows title + use-case + copy button + schema preview + example outputs + favourite. Paste-back validator is a separate tab within the same drawer.
+
+**Global dashboard (`/dashboard`) — Phase 1 basic version:** needs-attention feed (shared component with Home), KPI row (open roles, open offers, in-flight candidates, joined this month), role-by-role count aside. Leadership read-only mode = same surface, no action buttons. CP6 expansion triggers at 30-day leadership-usage signal.
+
+### Interaction States (all 5 covered per feature)
+
+Loading / Empty / Error / Success / Partial states specified explicitly per Pass 2 table. Key empty-state copy commitments:
+- "No candidates in this role yet. Add the first candidate →" with primary CTA.
+- "This role doesn't have a rubric yet. Configure one →" (HR-only CTA in HOD interview form).
+- "No employees yet. Once your first candidate joins, they'll appear here."
+- First-time prompt drawer tour: "Welcome. Here are the 3 most-used prompts to get you started."
+
+Queue-eventual-consistency UX: "Saved. Appears in ~1 min." toast (MOU verbatim).
+
+### AI Slop Guardrails
+
+Rejected patterns in internal surfaces: 3-column icon-in-circle feature grids, purple/violet gradients, emoji as design, generic hero copy ("Unlock the power of..."), cookie-cutter dashboard rhythm, centered-everything, uniform bubbly radii, decorative icon-in-circle next to headings, arbitrary colored left-borders.
+
+**Exception:** MOU's `.gsl-annexure-block` pattern (3px teal left border + navy-tinted background) is brand-specific, not slop. HR inherits it only for the offer-draft form's editable-region affordance.
+
+Dashboard KPI display uses row-flow (headline + number + sparkline), not cards per number. Cards earn existence only where card IS the interaction (Kanban cards, needs-attention feed items, per-application sections on candidate detail).
+
+### Design System Alignment (capped at 6/10 pending DESIGN.md)
+
+Palette + typography + icons inherited from MOU verbatim. Badge vocabulary needs HR adaptation — source badges (Naukri/Referral/Educohire/Careerchoice/HRTeam/Application/CSS/Other), stage pills (full pipeline + terminal states), priority indicators. `/design-consultation` produces the DESIGN.md that formalises this.
+
+### Responsive & Accessibility
+
+Internal-surface mobile = accepted degradation (HR is at a desk primarily). Offer drafting redirects to desktop under 768px. Kanban becomes stage-picker-dropdown + single-column list on mobile. Candidate detail collapses aside into bottom sheet.
+
+Accessibility (WCAG 2.1 AA non-negotiable):
+- 44×44px minimum touch targets
+- 4.5:1 contrast on body text; 3:1 on large text and UI controls
+- focus-visible rings at 2px teal + 2px offset (already in globals.css)
+- Skip-to-content link + ARIA landmarks on every authenticated page
+- Kanban keyboard nav: Tab between cards, arrow keys between columns, Enter to expand, Space to start drag
+- `aria-live` drag announcements
+- 16px minimum text on mobile-touchable inputs
+- Axe-core CI with shrinking baseline
+
+### HOD Notification Channel
+
+**Email only Phase 1**, HMAC-signed deep-link to HOD's rubric review form. No Slack/Teams integration. ⚠️ HR-workflow-dependent, re-check with Shruti shadow — if Manali strongly prefers WhatsApp, amend before Week 2 ships.
+
+### Shruti-Shadow Flagged Decisions (re-check tomorrow)
+
+Three tonight-locked calls that depend on assumed HR workflow:
+
+1. **Home default = needs-attention feed.** If Shruti deep-focuses one role at a time → flip to default-role-Kanban.
+2. **HOD notification = email only.** If Manali doesn't reliably read email → amend channel.
+3. **Assessment engine = .docx link-out** (from eng review). If HR already uses an LMS or structured assessment tool → revisit integration scope.
+
+### Deferred (not Pass 1 scope)
+
+- Candidate-facing surfaces (`/careers`, `/portal/*`) — Pass 2 of `/plan-design-review` after `/design-consultation`.
+- DESIGN.md content — from `/design-consultation` before Pass 2.
+- CP6 expanded dashboard — TODOs entry with 30-day trigger.
+- CP9 rejection feedback publish — TODOs entry with 60-day + 60%-fill trigger.
+
 ## What I noticed about how you think
 
 - On premise resolution you wrote *"fuzzy answers = fuzzy execution later"* and then delivered precise multi-line answers to every challenge with the mechanism fully specified (15-minute magic-link expiry, 30-day session cookie, HMAC key reuse, exact field names on the Role schema). That pattern — challenge accepted, mechanism specified, one round trip — is the fastest way to get software built.
