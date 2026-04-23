@@ -91,10 +91,15 @@ MOU lives at `C:\Users\anish\Projects\gsl-mou-system`. Reuse `src/lib/pendingUpd
 
 ## Authoritative planning docs (read these for the "why")
 
-Phase 1 is specified across three living documents in this repo. When anything about scope, premises, or architecture is ambiguous, these files are the source of truth, not this CLAUDE.md:
+Phase 1 is specified across four living documents in this repo. When anything about scope, premises, architecture, or visual design is ambiguous, these files are the source of truth, not this CLAUDE.md:
 
-- **`docs/plans/phase-1-design.md`** — design doc from `/office-hours` (2026-04-23). Problem statement, demand evidence, status quo, premises P1-P10, three approaches considered, recommended approach, success criteria, the Shruti-shadow assignment. Captures the "why we're building what we're building."
+- **`docs/plans/phase-1-design.md`** — design doc from `/office-hours` (2026-04-23) plus internal-surfaces design decisions from `/plan-design-review` Pass 1. Problem statement, demand evidence, status quo, premises P1-P13, three approaches considered, recommended approach, success criteria, the Shruti-shadow assignment, internal-surface design decisions (IA, interaction states, AI slop guardrails, responsive/a11y). Captures the "why we're building what we're building" and the "how the internal surfaces look."
 - **`docs/plans/phase-1-ceo-review.md`** — CEO plan from `/plan-ceo-review` SELECTIVE EXPANSION (2026-04-23). Vision (10x check + platonic ideal), nine cherry-picks scored, seven accepted into Phase 1 scope (CP1 portal depth, CP2 mobile-first, CP3 in-app prompt drawer, CP4 JSON validator, CP5 quality floor, CP7 HOD rubric, CP8 self-withdraw), two deferred with explicit reactivation triggers. Captures the "what we're building and how ambitious."
+- **`DESIGN.md`** — design system from `/design-consultation` (2026-04-23). Two-audience design language (internal ops + candidate-facing), palette, typography (Montserrat + Open Sans + Fraunces for candidate moments), badge vocabulary, component additions, motion inventory, copy voice, accessibility commitments, AI slop blacklist. Every visual or UI decision calibrates against this file — not against this CLAUDE.md or any individual component's judgement.
 - **`docs/TODOS.md`** — deferred items with reactivation signals. Each entry states the specific observation that would promote it to active work (e.g., "30 days after launch, leadership opens /dashboard ≥ 2× per week → build CP6 expanded dashboard").
 
-These three docs replace the need for Claude to re-derive scope from this CLAUDE.md. Read them first, this file second.
+These four docs replace the need for Claude to re-derive scope or visual language from this CLAUDE.md. Read them first, this file second.
+
+## Design System
+
+Always read `DESIGN.md` before making any visual or UI decisions. All font choices, colors, spacing, aesthetic direction, and copy voice are defined there. Do not deviate without explicit user approval. In QA mode, flag any code that doesn't match `DESIGN.md`.
