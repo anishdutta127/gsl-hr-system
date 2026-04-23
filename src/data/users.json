@@ -1,0 +1,218 @@
+[
+  {
+    "id": "7bf93d54-422c-4889-9e18-18d13a9316fd",
+    "email": "anish@gsl.edu.in",
+    "name": "Anish Dutta",
+    "role": "Admin",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "anish@gsl.edu.in",
+          "name": "Anish Dutta",
+          "role": "Admin",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "952d8f57-5218-43c5-b61f-e4060a3edef2",
+    "email": "shruti@gsl.edu.in",
+    "name": "Shruti",
+    "role": "HR",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "shruti@gsl.edu.in",
+          "name": "Shruti",
+          "role": "HR",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "f9caca4e-5d33-4693-a210-4e74120d137e",
+    "email": "riddhi@gsl.edu.in",
+    "name": "Riddhi",
+    "role": "HR",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "riddhi@gsl.edu.in",
+          "name": "Riddhi",
+          "role": "HR",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "162d4a5b-a86b-4ff9-bee6-b98ee64e7834",
+    "email": "manali@gsl.edu.in",
+    "name": "Manali",
+    "role": "HOD",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "manali@gsl.edu.in",
+          "name": "Manali",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "48532c36-f0d7-482f-8d04-6051ea15b212",
+    "email": "shashank@gsl.edu.in",
+    "name": "Shashank",
+    "role": "HOD",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "shashank@gsl.edu.in",
+          "name": "Shashank",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "7bb9c4ee-e0a9-463f-9b93-c7a46fd6a987",
+    "email": "vishwanath@gsl.edu.in",
+    "name": "Vishwanath",
+    "role": "HOD",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "vishwanath@gsl.edu.in",
+          "name": "Vishwanath",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "cbe1b01c-c124-4c2e-a6da-8af0b57dffd6",
+    "email": "ritu@gsl.edu.in",
+    "name": "Ritu",
+    "role": "Leadership",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "ritu@gsl.edu.in",
+          "name": "Ritu",
+          "role": "Leadership",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "b9ace6cd-1927-4447-82fc-4627ac12c369",
+    "email": "ameet@gsl.edu.in",
+    "name": "Ameet",
+    "role": "Leadership",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "ameet@gsl.edu.in",
+          "name": "Ameet",
+          "role": "Leadership",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  },
+  {
+    "id": "d08aa2f1-1337-4142-8fdb-d33543f8a12d",
+    "email": "jesal@gsl.edu.in",
+    "name": "Jesal",
+    "role": "Leadership",
+    "bcryptHash": "$2b$12$GxOr.i.6kIQzkQI.PIoCq.nKHw4ITEgd/QqFjJTeJSXwlVOWmp8A6",
+    "createdAt": "2026-04-23T17:22:33.725Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-23T17:22:33.725Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "jesal@gsl.edu.in",
+          "name": "Jesal",
+          "role": "Leadership",
+          "active": true
+        },
+        "notes": "Seeded with initial password. User must change on first login."
+      }
+    ]
+  }
+]
