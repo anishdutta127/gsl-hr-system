@@ -1,18 +1,58 @@
 import Link from 'next/link'
-import { loadRoles, loadCandidates, loadApplications } from '@/lib/data'
+import {
+  loadRoles,
+  loadCandidates,
+  loadApplications,
+  loadInterviews,
+  loadOffers,
+} from '@/lib/data'
 import { getCurrentSession } from '@/lib/identity'
 import { isTerminal } from '@/lib/pipeline'
-import { formatCount } from '@/lib/format'
+import { formatCount, formatRelative } from '@/lib/format'
+import { buildAttentionFeed, groupAttention, type AttentionAction } from '@/lib/needsAttention'
+
+const ACTION_HEADINGS: Record<AttentionAction, string> = {
+  'review-assessment': 'Review completed assessments',
+  'schedule-hod-round': 'Schedule HOD rounds',
+  'schedule-hr-round': 'Schedule HR rounds',
+  'score-interview': 'Score pending interviews',
+  'generate-offer': 'Draft offers',
+  'collect-docs': 'Collect joining documents',
+  'activate-employee': 'Activate new joiners',
+}
 
 export default async function HomePage() {
   const session = await getCurrentSession()
+  if (!session) return null
+
   const roles = loadRoles()
   const openRoles = roles.filter((r) => r.status === 'Open')
   const applications = loadApplications()
-  const inFlight = applications.filter((a) => !isTerminal(a.currentStage))
   const candidates = loadCandidates()
+  const interviews = loadInterviews()
+  const offers = loadOffers()
+  const inFlight = applications.filter((a) => !isTerminal(a.currentStage))
 
-  const firstName = session?.name?.split(' ')[0] ?? 'there'
+  const attention = buildAttentionFeed({
+    session,
+    applications,
+    roles,
+    candidates,
+    interviews,
+    offers,
+  })
+  const grouped = groupAttention(attention)
+  const actionOrder: AttentionAction[] = [
+    'review-assessment',
+    'score-interview',
+    'schedule-hod-round',
+    'schedule-hr-round',
+    'generate-offer',
+    'collect-docs',
+    'activate-employee',
+  ]
+
+  const firstName = session.name?.split(' ')[0] ?? 'there'
 
   return (
     <div className="container-page py-8">
@@ -24,10 +64,65 @@ export default async function HomePage() {
       </div>
 
       <section aria-label="Key figures" className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <Kpi label="Needs your attention" value={formatCount(attention.length)} />
         <Kpi label="Open roles" value={formatCount(openRoles.length)} />
         <Kpi label="Candidates in flight" value={formatCount(inFlight.length)} />
         <Kpi label="Total candidates" value={formatCount(candidates.length)} />
-        <Kpi label="Total roles" value={formatCount(roles.length)} />
+      </section>
+
+      <section aria-labelledby="attention-heading" className="mb-10">
+        <h2 id="attention-heading" className="mb-3 font-display text-lg text-ink">
+          Needs your attention
+        </h2>
+        {attention.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
+            <p className="text-sm text-ink-2">
+              Nothing waiting on you right now. Open a role to review its pipeline, or add a new
+              candidate.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {actionOrder.map((action) => {
+              const items = grouped[action]
+              if (!items || items.length === 0) return null
+              return (
+                <div key={action}>
+                  <h3 className="mb-2 text-sm font-medium text-ink-2">
+                    {ACTION_HEADINGS[action]} ({items.length})
+                  </h3>
+                  <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
+                    {items.slice(0, 8).map((item) => (
+                      <li key={item.applicationId}>
+                        <Link
+                          href={item.href}
+                          className="flex items-center justify-between gap-4 px-5 py-3 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+                        >
+                          <span>
+                            <span className="block font-medium text-ink">
+                              {item.candidateName}
+                            </span>
+                            <span className="block text-xs text-ink-2">
+                              {item.roleTitle} · {item.currentStage}
+                            </span>
+                          </span>
+                          <span className="shrink-0 text-xs text-ink-3 tabular">
+                            {formatRelative(item.stageEnteredAt)}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                    {items.length > 8 && (
+                      <li className="px-5 py-2 text-xs text-ink-3">
+                        +{items.length - 8} more.
+                      </li>
+                    )}
+                  </ul>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </section>
 
       <section aria-labelledby="open-roles-heading">

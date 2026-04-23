@@ -8,7 +8,15 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
-import type { User, Role, Candidate, Application } from './types'
+import type {
+  User,
+  Role,
+  Candidate,
+  Application,
+  Interview,
+  Offer,
+  Employee,
+} from './types'
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data')
 
@@ -38,6 +46,34 @@ export function loadCandidates(): Candidate[] {
 
 export function loadApplications(): Application[] {
   return readJson<Application[]>('applications.json', [])
+}
+
+export function loadInterviews(): Interview[] {
+  return readJson<Interview[]>('interviews.json', [])
+}
+
+export function loadOffers(): Offer[] {
+  return readJson<Offer[]>('offers.json', [])
+}
+
+export function loadEmployees(): Employee[] {
+  return readJson<Employee[]>('employees.json', [])
+}
+
+export function findCandidateById(id: string): Candidate | undefined {
+  return loadCandidates().find((c) => c.id === id)
+}
+
+export function findApplicationById(id: string): Application | undefined {
+  return loadApplications().find((a) => a.id === id)
+}
+
+export function findOfferById(id: string): Offer | undefined {
+  return loadOffers().find((o) => o.id === id)
+}
+
+export function findEmployeeById(id: string): Employee | undefined {
+  return loadEmployees().find((e) => e.id === id)
 }
 
 /** Find a user by email for login. Case-insensitive. */

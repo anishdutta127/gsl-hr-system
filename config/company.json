@@ -1,0 +1,31 @@
+{
+  "name": "GSL",
+  "legalName": "MAF Technologies Private Limited",
+  "tagline": "Get Set Learn",
+  "logoPath": "/brand/gsl-logo.svg",
+  "gstin": "27AAACM1234A1Z5",
+  "cin": "U72200MH2015PTC000000",
+  "pan": "AAACM1234A",
+  "registeredAddress": {
+    "line1": "Office address line 1",
+    "line2": "Office address line 2",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400001",
+    "country": "India"
+  },
+  "signatory": {
+    "name": "Authorised Signatory",
+    "title": "Director",
+    "email": "signatory@gsl.edu.in",
+    "phone": "+91-2200000000"
+  },
+  "hrContact": {
+    "name": "Shruti",
+    "title": "HR Lead",
+    "email": "hr@gsl.edu.in",
+    "whatsapp": "+91-9900000000"
+  },
+  "website": "https://getsetlearn.in",
+  "parentGroup": "Arvind Mafatlal Group"
+}

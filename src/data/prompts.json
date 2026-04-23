@@ -1,0 +1,126 @@
+[
+  {
+    "id": "p-resume-parse",
+    "title": "Parse a resume into structured JSON",
+    "useCase": "Paste a candidate's resume. Get back a structured record ready to paste into the candidate intake form.",
+    "category": "resume",
+    "body": "You are reviewing a candidate resume for GSL (EdTech, Mumbai). Extract the following into strict JSON matching the schema below. If a field is genuinely missing from the resume, use null — never fabricate. British English. Indian number formatting for any compensation figures (lakh, crore). Years of experience as a decimal number (e.g., 3.5). Do not include any commentary outside the JSON block.\n\nResume text:\n---\n{{PASTE_RESUME_HERE}}\n---",
+    "inputHint": "Paste the full resume text between the --- markers. Works with PDF-to-text copy or plain text.",
+    "outputSchema": {
+      "type": "object",
+      "required": ["name", "email", "phone", "yearsOfExperience", "currentRole", "skills", "education"],
+      "properties": {
+        "name": { "type": "string", "description": "Full legal name" },
+        "email": { "type": "string", "description": "Primary email" },
+        "phone": { "type": "string", "description": "Primary phone with country code" },
+        "yearsOfExperience": { "type": "number", "description": "Total years, decimal" },
+        "currentRole": { "type": "string", "description": "Most recent title + company, or null" },
+        "skills": { "type": "array", "description": "Array of skill strings" },
+        "education": { "type": "array", "description": "Array of {degree, institution, year}" },
+        "expectedCtcLakhs": { "type": "number", "description": "Expected annual CTC in lakh, null if not stated" },
+        "noticePeriodDays": { "type": "number", "description": "Days required to serve" }
+      }
+    },
+    "exampleOutputs": [
+      {
+        "name": "Priya Sharma",
+        "email": "priya.sharma@example.com",
+        "phone": "+91-9876543210",
+        "yearsOfExperience": 4.5,
+        "currentRole": "Senior Instructional Designer at Byju's",
+        "skills": ["Instructional Design", "SCORM", "Articulate Storyline", "K-12 curriculum"],
+        "education": [{ "degree": "M.A. Education", "institution": "TISS Mumbai", "year": 2021 }],
+        "expectedCtcLakhs": 14,
+        "noticePeriodDays": 60
+      }
+    ],
+    "createdAt": "2026-04-23T00:00:00.000Z",
+    "validatedBy": "anish@gsl.edu.in",
+    "validatedAt": "2026-04-23T00:00:00.000Z"
+  },
+  {
+    "id": "p-jd-draft",
+    "title": "Draft a role JD from a brief",
+    "useCase": "Give Claude a one-paragraph hiring brief. Get back a structured role draft ready to paste into the New Role form.",
+    "category": "jd",
+    "body": "You are drafting a role posting for GSL (EdTech, Mumbai, parent Arvind Mafatlal Group). Return strict JSON matching the schema. British English. Indian context. Never use emdashes (use hyphen or colon). Responsibilities and must-haves as short bulletable lines (max ~15 words each). Focus on what the person will actually do, not generic descriptions.\n\nBrief:\n---\n{{PASTE_BRIEF_HERE}}\n---",
+    "inputHint": "Paste a 2-5 sentence description of the role: what the person does, who they report to, must-have skills.",
+    "outputSchema": {
+      "type": "object",
+      "required": ["title", "department", "location", "employmentType", "description", "responsibilities", "mustHaves", "niceToHaves"],
+      "properties": {
+        "title": { "type": "string" },
+        "department": { "type": "string" },
+        "location": { "type": "string" },
+        "employmentType": { "type": "string" },
+        "description": { "type": "string", "description": "One-sentence what-you-will-do" },
+        "responsibilities": { "type": "array" },
+        "mustHaves": { "type": "array" },
+        "niceToHaves": { "type": "array" }
+      }
+    },
+    "exampleOutputs": [
+      {
+        "title": "Content Lead — Secondary Science",
+        "department": "Academics",
+        "location": "Mumbai",
+        "employmentType": "Full-time",
+        "description": "Own the Grade 9-10 Science content pipeline for 10,000+ rural school students on the GSL platform.",
+        "responsibilities": [
+          "Design Grade 9-10 Physics, Chemistry, and Biology curricula mapped to NCERT + CBSE",
+          "Lead a team of 3 SMEs and 2 instructional designers",
+          "Review and sign off every lesson before publish",
+          "Partner with the Ops team on rollout pacing"
+        ],
+        "mustHaves": [
+          "5+ years teaching or curriculum design in Secondary Science",
+          "Deep familiarity with NCERT Grade 9-10 Science syllabus",
+          "Team leadership experience (3+ direct reports)"
+        ],
+        "niceToHaves": [
+          "M.Sc. or Ed.D. in Science or Education",
+          "EdTech startup experience",
+          "Comfort with Hindi + English bilingual content"
+        ]
+      }
+    ],
+    "createdAt": "2026-04-23T00:00:00.000Z",
+    "validatedBy": "anish@gsl.edu.in",
+    "validatedAt": "2026-04-23T00:00:00.000Z"
+  },
+  {
+    "id": "p-interview-summary",
+    "title": "Summarise interview notes into a structured feedback record",
+    "useCase": "Paste your raw interview notes. Get back a structured scorecard ready to paste into the rubric form.",
+    "category": "interview",
+    "body": "You are summarising interview notes for a candidate at GSL. Return strict JSON. Scores use the scale given in the rubric. Keep the summary short and honest. British English. Never generic filler (no 'strong communicator' without an example).\n\nRubric criteria:\n{{PASTE_RUBRIC_CRITERIA}}\n\nInterview notes:\n---\n{{PASTE_NOTES_HERE}}\n---",
+    "inputHint": "Paste the rubric criteria (from the role page) followed by your raw notes from the interview.",
+    "outputSchema": {
+      "type": "object",
+      "required": ["scores", "summary", "recommendation", "redFlags", "strengths"],
+      "properties": {
+        "scores": { "type": "array", "description": "Array of {criterionId, value}" },
+        "summary": { "type": "string", "description": "One paragraph, specific to this candidate" },
+        "recommendation": { "type": "string", "description": "proceed | hold | reject" },
+        "redFlags": { "type": "array" },
+        "strengths": { "type": "array" }
+      }
+    },
+    "exampleOutputs": [
+      {
+        "scores": [
+          { "criterionId": "content-depth", "value": 8 },
+          { "criterionId": "communication", "value": 7 },
+          { "criterionId": "team-fit", "value": 6 }
+        ],
+        "summary": "Priya brought three specific examples of restructuring a Grade 9 Chemistry module after student feedback — clear ownership. Communication solid in English and Hindi. Hesitant on managing a team larger than 2.",
+        "recommendation": "proceed",
+        "redFlags": ["No direct experience managing 3+ reports"],
+        "strengths": ["Iterative content improvement based on student signal", "Bilingual delivery"]
+      }
+    ],
+    "createdAt": "2026-04-23T00:00:00.000Z",
+    "validatedBy": "anish@gsl.edu.in",
+    "validatedAt": "2026-04-23T00:00:00.000Z"
+  }
+]

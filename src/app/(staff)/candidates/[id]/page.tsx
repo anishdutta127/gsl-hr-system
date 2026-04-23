@@ -1,0 +1,190 @@
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import {
+  findCandidateById,
+  loadApplications,
+  loadRoles,
+  loadInterviews,
+  loadOffers,
+} from '@/lib/data'
+import { formatDate, formatRelative } from '@/lib/format'
+import { isTerminal } from '@/lib/pipeline'
+
+export default function CandidateDetailPage({ params }: { params: { id: string } }) {
+  const candidate = findCandidateById(params.id)
+  if (!candidate) notFound()
+
+  const apps = loadApplications().filter((a) => a.candidateId === candidate.id)
+  const roles = loadRoles()
+  const roleById = new Map(roles.map((r) => [r.id, r] as const))
+  const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
+  const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
+
+  return (
+    <div className="container-page py-8">
+      <div className="mb-2 text-xs text-ink-3">
+        <Link href="/candidates" className="hover:text-ink">
+          Candidates
+        </Link>{' '}
+        / {candidate.name}
+      </div>
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl text-ink">{candidate.name}</h1>
+          <p className="mt-1 text-sm text-ink-2">
+            {candidate.email}
+            {candidate.phone ? ` · ${candidate.phone}` : ''} · Source: {candidate.source}
+          </p>
+          <p className="mt-1 text-xs text-ink-3">
+            Added {formatDate(candidate.createdAt)} by {candidate.createdBy}
+          </p>
+        </div>
+      </div>
+
+      {candidate.notes && (
+        <section className="mb-6 rounded-lg border border-line bg-card p-4">
+          <h2 className="mb-1 text-sm font-medium text-ink-2">Notes</h2>
+          <p className="whitespace-pre-wrap text-sm text-ink">{candidate.notes}</p>
+        </section>
+      )}
+
+      <section aria-labelledby="apps-heading" className="mb-6">
+        <h2 id="apps-heading" className="mb-3 font-display text-lg text-ink">
+          Applications ({apps.length})
+        </h2>
+        {apps.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-line-strong bg-card p-6 text-center text-sm text-ink-2">
+            No applications yet.
+          </div>
+        ) : (
+          <ul className="space-y-3">
+            {apps.map((app) => {
+              const role = roleById.get(app.roleId)
+              const appInterviews = interviews.filter((i) => i.applicationId === app.id)
+              const appOffers = offers.filter((o) => o.applicationId === app.id)
+              const terminal = isTerminal(app.currentStage)
+              return (
+                <li
+                  key={app.id}
+                  className="rounded-lg border border-line bg-card p-4"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <Link
+                        href={`/roles/${app.roleId}`}
+                        className="font-medium text-ink hover:text-navy"
+                      >
+                        {role?.title ?? '(role removed)'}
+                      </Link>
+                      <div className="mt-0.5 text-xs text-ink-2">
+                        {role?.department} · Applied {formatDate(app.createdAt)}
+                      </div>
+                    </div>
+                    <span
+                      className={
+                        terminal
+                          ? 'inline-flex items-center rounded bg-surface px-2 py-1 text-xs text-ink-2'
+                          : 'inline-flex items-center rounded bg-teal-light px-2 py-1 text-xs font-medium text-teal-dark'
+                      }
+                    >
+                      {app.currentStage}
+                    </span>
+                  </div>
+
+                  <div className="mt-3 text-xs text-ink-3">
+                    In stage for {formatRelative(app.stageEnteredAt, { addSuffix: false })}
+                  </div>
+
+                  {(appInterviews.length > 0 || appOffers.length > 0) && (
+                    <div className="mt-3 border-t border-line pt-3 text-xs text-ink-2">
+                      {appInterviews.length > 0 && (
+                        <div>
+                          Interviews: {appInterviews.length}
+                          {appInterviews
+                            .slice(0, 2)
+                            .map(
+                              (i) =>
+                                ` · ${i.round} round${i.aggregateScore != null ? ` (${i.aggregateScore}/10)` : ''}`,
+                            )
+                            .join('')}
+                        </div>
+                      )}
+                      {appOffers.length > 0 && (
+                        <div className="mt-1">
+                          Offers:{' '}
+                          {appOffers
+                            .map((o) => `${o.status}`)
+                            .join(', ')}
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  {!terminal && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      <Link
+                        href={`/roles/${app.roleId}`}
+                        className="inline-flex items-center rounded border border-line-strong bg-card px-3 py-1.5 text-xs font-medium text-ink hover:bg-surface"
+                      >
+                        Open role pipeline
+                      </Link>
+                      <Link
+                        href={`/interviews/new?applicationId=${app.id}`}
+                        className="inline-flex items-center rounded border border-line-strong bg-card px-3 py-1.5 text-xs font-medium text-ink hover:bg-surface"
+                      >
+                        Score an interview
+                      </Link>
+                      {(app.currentStage === 'HRRoundDone' ||
+                        app.currentStage === 'Offered' ||
+                        app.currentStage === 'OfferAccepted') && (
+                        <Link
+                          href={`/offers/new?applicationId=${app.id}`}
+                          className="inline-flex items-center rounded bg-navy px-3 py-1.5 text-xs font-medium text-white hover:bg-navy-dark"
+                        >
+                          Draft offer
+                        </Link>
+                      )}
+                    </div>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </section>
+
+      <section aria-labelledby="timeline-heading">
+        <h2 id="timeline-heading" className="mb-3 font-display text-lg text-ink">
+          Audit timeline
+        </h2>
+        {candidate.auditLog.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-line-strong bg-card p-6 text-center text-sm text-ink-2">
+            No audit entries yet.
+          </div>
+        ) : (
+          <ol className="space-y-2">
+            {[...candidate.auditLog].reverse().map((entry, idx) => (
+              <li
+                key={idx}
+                className="rounded-lg border border-line bg-card px-4 py-3 text-sm"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <div className="font-medium text-ink">{entry.action}</div>
+                    {entry.notes && (
+                      <div className="mt-0.5 text-xs text-ink-2">{entry.notes}</div>
+                    )}
+                  </div>
+                  <time className="shrink-0 text-xs text-ink-3 tabular" dateTime={entry.timestamp}>
+                    {formatDate(entry.timestamp)}
+                  </time>
+                </div>
+                <div className="mt-1 text-xs text-ink-3">by {entry.user}</div>
+              </li>
+            ))}
+          </ol>
+        )}
+      </section>
+    </div>
+  )
+}

@@ -147,9 +147,138 @@ export interface AuditEntry {
   notes?: string
 }
 
+// --- Interview (HOD rubric scoring, freeform notes) -----------------------
+
+export interface InterviewScore {
+  criterionId: string
+  value: number | 'yes' | 'no'
+}
+
+export type InterviewRound = 'HOD' | 'HR' | 'Final' | 'Panel' | string
+
+export interface Interview {
+  id: string
+  applicationId: string
+  roleId: string
+  candidateId: string
+  round: InterviewRound
+  interviewerUserId: string
+  scheduledAt?: string
+  conductedAt?: string
+  scores: InterviewScore[]
+  notes: string
+  recommendation: 'proceed' | 'hold' | 'reject'
+  aggregateScore?: number
+  createdAt: string
+  createdBy: string
+  auditLog: AuditEntry[]
+}
+
+// --- Offer ---------------------------------------------------------------
+
+export interface Offer {
+  id: string
+  applicationId: string
+  candidateId: string
+  roleId: string
+  status: 'Draft' | 'Approved' | 'Generated' | 'Sent' | 'Accepted' | 'Declined' | 'Withdrawn'
+  compensation: {
+    ctcAnnual: number
+    fixedMonthly?: number
+    variableAnnual?: number
+    joiningBonus?: number
+    noticePeriodDays: number
+  }
+  proposedJoiningDate?: string
+  location: string
+  designation: string
+  reportingTo?: string
+  generatedFilePath?: string
+  approvedBy?: string
+  approvedAt?: string
+  sentAt?: string
+  respondedAt?: string
+  createdAt: string
+  createdBy: string
+  auditLog: AuditEntry[]
+}
+
+// --- Employee (post-join record) -----------------------------------------
+
+export interface Employee {
+  id: string
+  employeeCode: string
+  candidateId?: string
+  applicationId?: string
+  name: string
+  email: string
+  phone?: string
+  designation: string
+  department: string
+  reportingTo?: string
+  location: string
+  dateOfJoining: string
+  status: 'Active' | 'Exited'
+  ctcAnnual?: number
+  exit?: {
+    lastWorkingDay: string
+    reason: string
+    relievingLetterIssued: boolean
+    experienceLetterIssued: boolean
+    notes?: string
+  }
+  onboardingChecklist?: OnboardingItem[]
+  createdAt: string
+  createdBy: string
+  auditLog: AuditEntry[]
+}
+
+export interface OnboardingItem {
+  id: string
+  label: string
+  done: boolean
+  doneAt?: string
+  doneBy?: string
+}
+
+// --- Prompt library (CP3 + CP4) ------------------------------------------
+
+export interface Prompt {
+  id: string
+  title: string
+  useCase: string
+  category: 'resume' | 'jd' | 'interview' | 'shortlist' | 'other'
+  body: string
+  inputHint: string
+  /** Minimal JSON Schema (type + required keys). Enforced by paste-back validator. */
+  outputSchema: {
+    type: 'object'
+    required: string[]
+    properties: Record<string, { type: string; description?: string }>
+  }
+  exampleOutputs: Array<Record<string, unknown>>
+  createdAt: string
+  validatedBy?: string
+  validatedAt?: string
+}
+
+// --- Candidate application (magic link + session) ------------------------
+// See src/lib/candidateAuth.ts. Magic link is a short-lived HMAC token; the
+// candidate session cookie is an httpOnly SameSite=Strict cookie that proves
+// the holder owns a particular candidateId. Both are signed with
+// GSL_SNAPSHOT_SIGNING_KEY.
+
 // --- Pending update (queue entry) -----------------------------------------
 
-export type PendingUpdateEntity = 'user' | 'role' | 'candidate' | 'application' | 'interview' | 'offer' | 'employee'
+export type PendingUpdateEntity =
+  | 'user'
+  | 'role'
+  | 'candidate'
+  | 'application'
+  | 'interview'
+  | 'offer'
+  | 'employee'
+  | 'careers_application'
 
 export interface PendingUpdate {
   id: string

@@ -2,7 +2,15 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Briefcase, Users, FileSignature, Building2, LayoutDashboard } from 'lucide-react'
+import {
+  Briefcase,
+  Users,
+  FileSignature,
+  Building2,
+  LayoutDashboard,
+  Sparkles,
+  ClipboardList,
+} from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
 
@@ -15,10 +23,12 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/', icon: LayoutDashboard, roles: ['Admin', 'HR', 'HOD', 'Leadership'] },
+  { label: 'Dashboard', href: '/dashboard', icon: ClipboardList, roles: ['Admin', 'HR', 'Leadership'] },
   { label: 'Roles', href: '/roles', icon: Briefcase, roles: ['Admin', 'HR', 'HOD', 'Leadership'] },
   { label: 'Candidates', href: '/candidates', icon: Users, roles: ['Admin', 'HR', 'HOD'] },
   { label: 'Offers', href: '/offers', icon: FileSignature, roles: ['Admin', 'HR'] },
   { label: 'Employees', href: '/employees', icon: Building2, roles: ['Admin', 'HR', 'Leadership'] },
+  { label: 'Prompts', href: '/prompts', icon: Sparkles, roles: ['Admin', 'HR', 'HOD'] },
 ]
 
 export function SidebarNav({ role }: { role: StaffRole }) {
