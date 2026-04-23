@@ -4,7 +4,7 @@ Written for future Claude sessions. Keep short, current, opinionated.
 
 ## What this is
 
-Internal HR system for GSL (EdTech in Mumbai): hiring pipeline, employee records, onboarding, exits. Fork-in-spirit of `gsl-mou-system` — same architecture, standards, team. Multi-tenant-ready under the hood so we can pitch Mafatlal Group later; shipping GSL-first.
+Internal HR system for GSL (EdTech in Mumbai): hiring pipeline, employee records, onboarding, exits. Fork-in-spirit of `gsl-mou-system` — same architecture, standards, team. **Single-tenant, GSL-only.** Company identity (name, logo, GSTIN, registered address, PAN, CIN, signatory details) lives in `config/company.json`; every templated string and UI chrome reads from that config. If Mafatlal Group bites later, converting single-tenant → multi-tenant is a known 1-2 week migration (add `tenantId`, backfill `gsl`, scope queries) — we'll pay that tax when the pitch is real, not now.
 
 ## Status
 
@@ -39,7 +39,7 @@ Phase 1 scaffold landed. Planning via the gstack cycle is the immediate next ste
 MOU uses single-user basic auth. HR has real users and candidates:
 
 - **Staff accounts**: `users.json` queue-managed. bcrypt hashes, JWT httpOnly cookies, 7-day expiry, refreshed on activity. Roles: Admin, HR, HOD, Leadership.
-- **Candidate access**: signed magic-link tokens (HMAC with `GSL_SNAPSHOT_SIGNING_KEY`, reused for this purpose). No password, no account. Links scoped to a single candidate record and expire.
+- **Candidate access: magic link + session cookie.** First visit: candidate receives a signed HMAC magic link (single-use, 15-minute expiry). Server validates and exchanges the link for an httpOnly SameSite=Strict session cookie scoped to that candidate's record, 30-day expiry, rolling refresh on activity. Return visits: cookie active lands in portal. Cookie expired lands on "check your email for a fresh link" page; we issue a new magic link. The same `GSL_SNAPSHOT_SIGNING_KEY` HMAC signs both. No passwords, no accounts.
 
 ## Data boundaries
 
@@ -63,11 +63,17 @@ Set in Vercel (Anish will add when ready):
 - **Leadership** — Ritu, Ameet, Jesal. Dashboard read-only.
 - **Candidate** — external, magic-link scoped.
 
-## Pipeline (matches HR's Excel mental model)
+## Pipeline (role-configurable)
 
-Sourced → Submitted → Shortlisted → AssessmentSent → AssessmentDone → VideoSent → VideoDone → HODRoundScheduled → HODRoundDone → HRRoundScheduled → HRRoundDone → Offered → OfferAccepted → DocsCollected → Joined.
+Each role's pipeline stages live on the role record as `pipelineStages: Stage[]`. Default ordering:
 
-Terminal: Rejected, OnHold, NotInterested, Withdrawn.
+`Sourced → Submitted → Shortlisted → AssessmentSent → AssessmentDone → VideoSent → VideoDone → HODRoundScheduled → HODRoundDone → HRRoundScheduled → HRRoundDone → Offered → OfferAccepted → DocsCollected → Joined`
+
+Roles may override the middle section (for example: adding a Final Round, CEO Round, or Technical Panel, or reversing HOD and HR). The engine iterates `role.pipelineStages`, not a global hardcoded enum. This is how HR's data actually behaves — HOD-first for academics, HR-first for some premium sales hires. Hardcoding would break real cases immediately.
+
+**Terminal states (global, never role-scoped):** Rejected, OnHold, NotInterested, Withdrawn, Joined.
+
+Interim states that are also visible in the Kanban but aren't terminal: Offered, OfferAccepted, DocsCollected.
 
 ## Candidate source enum (matches `Hiring_Status` Q1 Source column)
 
