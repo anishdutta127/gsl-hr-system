@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import type { Prompt } from '@/lib/types'
-import { validateAgainstSchema } from '@/lib/prompts'
+import { validateAgainstSchema } from '@/lib/promptValidator'
 
 const CATEGORY_LABELS: Record<Prompt['category'], string> = {
   resume: 'Resume',

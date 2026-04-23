@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Montserrat, Open_Sans } from 'next/font/google'
+import { Montserrat, Open_Sans, Fraunces } from 'next/font/google'
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -14,6 +14,13 @@ const openSans = Open_Sans({
   weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-body',
+})
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap',
+  variable: '--font-serif',
 })
 
 export const metadata: Metadata = {
@@ -32,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en-IN"
-      className={`${montserrat.variable} ${openSans.variable}`}
+      className={`${montserrat.variable} ${openSans.variable} ${fraunces.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-surface text-ink antialiased">{children}</body>

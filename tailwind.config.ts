@@ -46,6 +46,7 @@ const config: Config = {
       fontFamily: {
         display: ['var(--font-display)', 'Montserrat', 'system-ui', 'sans-serif'],
         body: ['var(--font-body)', 'Open Sans', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-serif)', 'Georgia', 'serif'],
         mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       borderRadius: {

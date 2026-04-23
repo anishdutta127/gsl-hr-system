@@ -41,6 +41,7 @@
   /* Typography */
   --font-display: 'Montserrat', system-ui, sans-serif;
   --font-body:    'Open Sans', system-ui, sans-serif;
+  --font-serif:   'Fraunces', Georgia, serif;
   --font-mono:    'JetBrains Mono', ui-monospace, monospace;
 
   --text-xs:   12px;

@@ -1,24 +1,21 @@
 /*
- * Auth middleware — staff JWT for authenticated routes, public for /careers.
+ * Auth middleware.
  *
  * Route scopes:
- *   /login, /api/login       — public (auth endpoints themselves)
- *   /careers/**              — public (external candidate surface — Phase 1 Week 3)
- *   /portal/**               — candidate cookie auth (Phase 1 Week 3; for now returns 404-equivalent)
- *   /api/public/**           — public
- *   everything else          — staff JWT required
- *
- * On missing/invalid JWT for protected routes: redirect to /login preserving the
- * intended destination via ?next= query param.
- *
- * Refresh-on-activity is handled at the page level (by re-issuing the cookie
- * with a fresh exp when session is > 1 day old) rather than in middleware,
- * since middleware runs before cookie-writing is convenient.
+ *   /login, /api/login, /api/logout, /api/health   — public
+ *   /careers/**                                    — public (candidate-facing)
+ *   /api/public/**                                 — public
+ *   /portal/**                                     — candidate session cookie required
+ *                                                    (magic-link exchange sets it)
+ *   /portal/request-new-link                       — public (recovery surface)
+ *   /portal/exchange                               — public (magic-link landing)
+ *   everything else                                — staff JWT required
  */
 
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { SESSION_COOKIE_NAME, verifySessionToken } from '@/lib/crypto/jwt'
+import { CANDIDATE_SESSION_COOKIE, verifyCandidateSession } from '@/lib/candidateAuth'
 
 const PUBLIC_PATHS = [
   '/login',
@@ -30,14 +27,15 @@ const PUBLIC_PATHS = [
 const PUBLIC_PREFIXES = [
   '/careers',
   '/api/public',
+]
+
+const CANDIDATE_PUBLIC = [
   '/portal/request-new-link',
+  '/portal/exchange',
 ]
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
-
-  // Static assets and Next internals are excluded via the matcher config
-  // below. The middleware only runs on app routes.
 
   if (PUBLIC_PATHS.includes(pathname)) {
     return NextResponse.next()
@@ -46,13 +44,27 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Candidate portal: to be implemented in Week 3 with magic-link cookie.
-  // For now, block with a friendly message.
-  if (pathname.startsWith('/portal')) {
-    return new NextResponse(
-      'Candidate portal: coming soon. Check back in a week.',
-      { status: 503 },
-    )
+  if (pathname.startsWith('/portal') || pathname.startsWith('/api/portal')) {
+    if (CANDIDATE_PUBLIC.some((p) => pathname.startsWith(p))) {
+      return NextResponse.next()
+    }
+    const token = request.cookies.get(CANDIDATE_SESSION_COOKIE)?.value
+    if (!token) {
+      const url = request.nextUrl.clone()
+      url.pathname = '/portal/request-new-link'
+      url.search = ''
+      return NextResponse.redirect(url)
+    }
+    const result = await verifyCandidateSession(token)
+    if (!result.valid) {
+      const url = request.nextUrl.clone()
+      url.pathname = '/portal/request-new-link'
+      url.search = '?reason=expired'
+      const response = NextResponse.redirect(url)
+      response.cookies.delete(CANDIDATE_SESSION_COOKIE)
+      return response
+    }
+    return NextResponse.next()
   }
 
   // Staff JWT required for everything else
@@ -69,7 +81,6 @@ export async function middleware(request: NextRequest) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'
     url.search = `?next=${encodeURIComponent(pathname)}`
-    // Clear the invalid cookie.
     const response = NextResponse.redirect(url)
     response.cookies.delete(SESSION_COOKIE_NAME)
     return response
