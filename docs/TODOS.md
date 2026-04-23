@@ -15,6 +15,29 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-04-23 — From /plan-devex-review
+
+### Build /admin/health operational dashboard
+- Added: 2026-04-23
+- Priority: P3
+- Effort (human / CC): 1 day / 2 hr
+- Reactivation signal: **any Phase 1 operational incident takes > 30 min from HR reporting to Anish identifying root cause.** Or, sustained > 5 support-ping messages per week ("is X working?"). Measured manually.
+- Notes: Phase 1 ships manual monitoring (Vercel dashboard + file-size checks on failed_updates.json). A `/admin/health` page would show: last-queue-apply timestamp, pending_updates count, failed_updates count, last-sync-runner-success, magic-link-issued vs exchanged ratio, Resend quota remaining. All computed from existing JSON files plus one Resend API call. Keeps Phase 1 lean; builds when manual monitoring starts costing time.
+
+### Write docs/PATTERNS.md for future-Claude sessions
+- Added: 2026-04-23
+- Priority: P3
+- Effort (human / CC): 30 min / 10 min
+- Reactivation signal: **second Claude session (fresh context) onboards onto this repo and drifts from this session's conventions.** Measurable signals: commit message pattern breaks (non-conventional-commits style), queue-write pattern gets bypassed with direct fs.writeFile, new entity skips audit-log append.
+- Notes: Conventions (conventional-commits, write-through-queue invariant, when-to-add-tests, pure-function pipeline-transition, server-default / client-opt-in components) are captured implicitly across CLAUDE.md + docs/plans/*. Codifying them separately in `docs/PATTERNS.md` is cheap insurance. Deliberately deferred Phase 1: let patterns emerge from actual Week 1 code, then canonicalise.
+
+### Week 1 onboarding audit
+- Added: 2026-04-23
+- Priority: P3
+- Effort (human / CC): 30 min / 5 min
+- Reactivation signal: **after Anish finishes Week 1 implementation slice.** Look back: what was missing from .env.example, config/company.json.example, or docs/RUNBOOK.md that caused >10 min friction during implementation? Update those files to match what was actually needed.
+- Notes: This is the DX boomerang from `/plan-devex-review`. Plan said "these three stubs are enough to onboard Week 1." Reality check post-implementation. Don't skip — if we got it wrong, future Claude sessions pay the cost.
+
 ## 2026-04-23 — From /plan-design-review Pass 2 (candidate surfaces)
 
 ### Upgrade "what happens next" timeline to data-driven

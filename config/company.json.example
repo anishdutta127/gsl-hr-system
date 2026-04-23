@@ -1,0 +1,32 @@
+{
+  "$comment": "Stub for config/company.json. Copy to config/company.json and fill in real values. This file is COMMITTED to the repo (not queued) — it's build-time configuration, not transactional data. Every template and UI chrome string reads from here. Change = developer commit + redeploy. If P14 (self-maintainability) folds into Phase 1, this migrates to src/data/_company.json (queue-managed) with an admin UI form.",
+  "name": "GSL",
+  "legalName": "MAF Technologies Private Limited",
+  "tagline": "Get Set Learn",
+  "logoPath": "/brand/gsl-logo.svg",
+  "gstin": "XX-AAAAA0000A-1-Z-5",
+  "cin": "U72200MHXXXXPTCXXXXXX",
+  "pan": "AAAAA0000A",
+  "registeredAddress": {
+    "line1": "...",
+    "line2": "...",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "pincode": "400000",
+    "country": "India"
+  },
+  "signatory": {
+    "name": "Fill Name",
+    "title": "Fill Title",
+    "email": "fill@gsl.edu.in",
+    "phone": "+91-XXXXXXXXXX"
+  },
+  "hrContact": {
+    "name": "Shruti",
+    "title": "HR Lead",
+    "email": "hr@gsl.edu.in",
+    "whatsapp": "+91-XXXXXXXXXX"
+  },
+  "website": "https://getsetlearn.in",
+  "parentGroup": "Arvind Mafatlal Group"
+}

@@ -97,8 +97,14 @@ Phase 1 is specified across four living documents in this repo. When anything ab
 - **`docs/plans/phase-1-ceo-review.md`** — CEO plan from `/plan-ceo-review` SELECTIVE EXPANSION (2026-04-23). Vision (10x check + platonic ideal), nine cherry-picks scored, seven accepted into Phase 1 scope (CP1 portal depth, CP2 mobile-first, CP3 in-app prompt drawer, CP4 JSON validator, CP5 quality floor, CP7 HOD rubric, CP8 self-withdraw), two deferred with explicit reactivation triggers. Captures the "what we're building and how ambitious."
 - **`DESIGN.md`** — design system from `/design-consultation` (2026-04-23). Two-audience design language (internal ops + candidate-facing), palette, typography (Montserrat + Open Sans + Fraunces for candidate moments), badge vocabulary, component additions, motion inventory, copy voice, accessibility commitments, AI slop blacklist. Every visual or UI decision calibrates against this file — not against this CLAUDE.md or any individual component's judgement.
 - **`docs/TODOS.md`** — deferred items with reactivation signals. Each entry states the specific observation that would promote it to active work (e.g., "30 days after launch, leadership opens /dashboard ≥ 2× per week → build CP6 expanded dashboard").
+- **`docs/RUNBOOK.md`** — operational playbook. Common incidents (queue stuck, magic link expired, offer letter template missing, etc.) with check → cause → fix. Written 2026-04-23 from `/plan-eng-review` Section 8; populated as incidents happen.
 
-These four docs replace the need for Claude to re-derive scope or visual language from this CLAUDE.md. Read them first, this file second.
+These five docs replace the need for Claude to re-derive scope, visual language, or operational posture from this CLAUDE.md. Read them first, this file second.
+
+### Onboarding new environments
+
+- Copy `.env.example` → `.env.local` and fill in values. Production values live in Vercel env vars.
+- Copy `config/company.json.example` → `config/company.json` and fill with real GSL details. This file is COMMITTED (it's configuration, not secrets).
 
 ## Design System
 
