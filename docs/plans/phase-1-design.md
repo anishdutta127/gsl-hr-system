@@ -228,10 +228,90 @@ Three tonight-locked calls that depend on assumed HR workflow:
 
 ### Deferred (not Pass 1 scope)
 
-- Candidate-facing surfaces (`/careers`, `/portal/*`) — Pass 2 of `/plan-design-review` after `/design-consultation`.
-- DESIGN.md content — from `/design-consultation` before Pass 2.
+- DESIGN.md content — from `/design-consultation` before Pass 2. ✓ DONE 2026-04-23.
 - CP6 expanded dashboard — TODOs entry with 30-day trigger.
 - CP9 rejection feedback publish — TODOs entry with 60-day + 60%-fill trigger.
+
+## Candidate-facing Surfaces Design Decisions (from /plan-design-review Pass 2, 2026-04-23)
+
+Pass 2 of the design review. Calibrates against DESIGN.md (landed earlier in this session). Text-based review chosen over mockup generation — the user's stance (saved as cross-session memory) is that plan-stage AI mockups add noise once DESIGN.md exists and /frontend-design produces real UI at implementation time.
+
+### Information Architecture (per candidate surface)
+
+**`/careers` public listing:** brand + tagline + **filter chips (team / location / role-type)** + scrollable role list. No marketing hero, no 3-column feature grid, no "why GSL" section above the fold. About-GSL block at page bottom as prose.
+
+**`/careers/[roleId]` role detail:** role title + one-sentence "what you'll do" + Apply CTA (sticky bottom on mobile) + full role detail (what-you'll-do, responsibilities, must-haves, nice-to-haves, salary range if disclosed, location, role-type) + application form (name/email/phone/resume/cover note) + team info + "what happens next" timeline.
+
+**`/portal/welcome` (post-magic-link CP1):** welcome card single-focus. Fraunces greeting + current-stage plain-English summary + recruiter contact card + primary CTA for next action. Nothing else on screen.
+
+**`/portal/me` (returning view):** vertical-timeline progress-viz primary; next-action card secondary; application details + recruiter contact tertiary.
+
+**`/portal/assessment/[id]`:** full-screen takeover. Timer top-anchored (JetBrains Mono), one question at a time (18 px body), stacked answer input (48 px touch targets), sticky "Save and exit" + "Next" bottom. No nav chrome.
+
+**`/portal/video/[id]`:** instructions + URL input with supported-hosts hint + submit.
+
+**`/portal/withdraw/[applicationId]` (CP8):** single-focus confirm. Question + optional reason dropdown + freeform notes + confirm (danger colour) / cancel.
+
+**`/portal/request-new-link`:** single-focus status. Resend-countdown + rate-limited resend button.
+
+### Interaction State Coverage (candidate-side)
+
+All five states (loading / empty / error / success / partial) specified per surface in Pass 2 table. Key copy commitments:
+
+- `/careers` empty: *"Check back soon."* Phase 1; waitlist-subscribe is Phase 2.
+- `/careers/[role]` form network error: *"We couldn't reach our server. Your details are saved — try again in a moment."*
+- `/portal/welcome` invalid link: redirect to *"This link isn't recognised"* page with *"Request a new link →"* CTA.
+- `/portal/assessment` network drop: *"Saved locally. Reconnecting…"* with silent queue flush on reconnect.
+- `/portal/video` URL rejection: *"Only Drive, OneDrive, SharePoint links accepted."*
+- `/portal/withdraw` success: *"Your application has been withdrawn. Thanks for letting us know."*
+- Rejection UX: portal shows *"Application ended"* plainly. No generic canned reason. No corporate softening. Sets the stage for CP9 upgrade when HR actually writes feedback.
+
+### Four decisions locked
+
+1. **/careers layout — filters above list** (team / location / role-type). User overrode the recommendation for A-minimal based on projected GSL growth trajectory. Filters ship Phase 1 even at current small volume. ⚠️ Validate filter usefulness after 30 days of live traffic.
+2. **Salary disclosure — per-role HR discretion.** `role.salaryRange` field optional on the Role record. If present, displayed prominently. If absent, candidate sees *"Shared at first interview."* HR defaults to disclosing; senior roles opt out for negotiation room. ⚠️ HR-workflow-dependent, re-check with Shruti shadow.
+3. **"What happens next" timeline — generic Phase 1.** Static 5-step timeline on role detail: Apply → Assessment → HOD Interview → HR Round → Offer. Copy: *"Typically 4-6 weeks end-to-end."* Upgrade to data-driven timeline (per-role median time per stage from historical data) triggers at 30+ completed hires.
+4. **Rejection UX — plain honesty.** Portal shows *"Application ended"* with no reason. No *"We've moved forward with other candidates"* softening. When CP9 ships later, this becomes *"Application ended. View feedback →"* for HR-opted-in cases.
+
+### User Journey (emotional arc, memorable-thing aligned)
+
+Full 14-step arc mapped from Naukri / Referral surface through Day-1 onboarding. The **keystone moment** is step 7: candidate lands on `/portal/welcome` with Fraunces greeting by first name and current-stage plain-English summary. That is where the candidate memorable-thing — *"they treated me like a human"* — is delivered or lost. Every design decision on this surface calibrates against that test.
+
+**Time-horizon design:**
+- 5-sec visceral: Fraunces greeting + first-name personalisation.
+- 5-min behavioural: mobile assessment completion without frustration; video URL submission without confusion.
+- 5-year reflective: even rejected candidates remember GSL as "the hiring process that respected my time."
+
+### AI Slop Risk — surface-specific audit
+
+Each candidate surface explicitly checked against the DESIGN.md blacklist. Hard-guards named per surface:
+
+- `/careers` NOT marketing site: no hero, no 3-col feature grid, no purple gradients.
+- Role detail first-sentence rule: role-specific ("You'll build the content pipeline for 10,000 rural schools"), never generic ("Unlock the power of working at GSL").
+- `/portal/welcome` NO emoji in greeting, NO stock-photo human imagery.
+- Assessment runner NO gamification decoration, NO motivational copy.
+- Celebration moment motion-ceiling = fade-in + one-pass confetti. Hard cap. No parallax, no scroll-reveal, no animated signature.
+
+### Responsive & Accessibility (candidate-side)
+
+Candidate surfaces = **mobile-first** (CP2 locked). Every flow designed at 375 px first; desktop adapts up. All touch targets ≥ 44 px (48 px on assessment for timed-test calm). All form inputs ≥ 16 px (prevents iOS zoom). WCAG 2.1 AA verified (Fraunces greeting at 24 px on teal-light band = 10.4:1 contrast). Keyboard nav + screen reader announcements + reduced-motion substitutions specified for every motion.
+
+RTL support = NOT Phase 1. Noted as future addition if GSL expands beyond India.
+
+### Shruti-Shadow Flagged Decisions (candidate-side, re-check tomorrow)
+
+Two new flags added from this pass:
+
+5. **`/careers` filter volume assumption.** User chose filters even at small role counts. If 30-day post-launch traffic shows filters rarely engaged, consider reverting to minimal list.
+6. **Salary disclosure policy.** What's GSL's current practice? Does Shruti disclose ranges today, or is it always negotiated? Decide default posture for the `role.salaryRange` field based on her answer.
+
+Combined with Pass 1's three flags + eng review's P13 flag, Shruti shadow is now informing six decisions total. All listed in the Shruti-Shadow Re-check block above.
+
+### Deferred (not Pass 2 scope)
+
+- Data-driven "what happens next" timeline — TODOs entry with 30-hire trigger.
+- Waitlist subscription for /careers empty state — Phase 2 concern.
+- RTL / non-English language support — future (only if expanding beyond India).
 
 ## What I noticed about how you think
 

@@ -15,6 +15,29 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-04-23 — From /plan-design-review Pass 2 (candidate surfaces)
+
+### Upgrade "what happens next" timeline to data-driven
+- Added: 2026-04-23
+- Priority: P2
+- Effort (human / CC): 1-2 days / 30 min
+- Reactivation signal: **30+ completed hires in the system** (status = Joined). At that volume, per-stage median time becomes statistically meaningful.
+- Notes: Phase 1 ships a static generic 5-step timeline on role detail ("Apply → Assessment → HOD Interview → HR Round → Offer, typically 4-6 weeks end-to-end"). When 30+ hires exist, swap to a role-specific timeline computed from historical median time-in-stage per role. Candidate sees real expected durations. Upgrade keystone: reuses the CP6 leadership-dashboard infrastructure (time-in-stage p50 computation) — build once, use twice.
+
+### Validate /careers filter usefulness
+- Added: 2026-04-23
+- Priority: P3
+- Effort (human / CC): 30 min investigation
+- Reactivation signal: **30 days after /careers ships.** Check: are filter chips engaged by > 20% of visitors? Filter usage drops off sharply at low role counts (< 10 open roles). If usage is minimal and role count stays < 15, revert to minimal-list layout and remove filter chrome.
+- Notes: User chose filters-above-list at small role counts on the bet that GSL's hiring will grow. If that bet doesn't play out in first 30 days, the filters are unnecessary friction and should go.
+
+### Waitlist subscribe on /careers empty state
+- Added: 2026-04-23
+- Priority: P3
+- Effort (human / CC): 1-2 days / 45 min
+- Reactivation signal: user request, or /careers traffic > 500 visits / month with the empty state seen > 30% of the time.
+- Notes: Phase 1 empty state on /careers is just "Check back soon." A waitlist subscription (email input → stored list → notify on new role posting) is a Phase 2 upgrade. Requires email-delivery infrastructure (inherit from magic-link Resend setup).
+
 ## 2026-04-23 — From /plan-ceo-review SELECTIVE EXPANSION
 
 ### Add captcha to /careers/apply
