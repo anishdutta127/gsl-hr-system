@@ -158,6 +158,49 @@ Measurable definitions of Phase 1 complete.
 
 Before the first line of feature code, Anish spends 45 minutes shoulder-to-shoulder with Shruti watching her process one candidate end-to-end in her current Excel workflow — from resume landing in her inbox to the row update. No coaching. Take notes. The gap between the pipeline stages the brief lists and the stages Shruti actually uses is the gap between this being a tool HR uses daily and a tool HR opens once and closes. MOU's office-hours sessions produced this exact assignment against Shubhangi and it paid for itself many times over; the same is true here.
 
+## PARKED FOR NEXT SESSION — Premise P14: Self-Maintainability (surfaced 2026-04-23 end-of-session)
+
+**Status: UNDECIDED. Surface this at the start of the next session before any other work.**
+
+Anish surfaced a new architectural requirement late in the 2026-04-23 session: HR should be able to upload files, update content, and maintain the system without developer intervention. Specifically:
+
+- Upload new `.docx` templates (offer letter, appointment letter, relieving letter, experience letter, assessment docx) via admin UI, **versioned** (history preserved), **immediately active** (no redeploy required).
+- Edit `config/company.json` (logo, GSTIN, signatory details, registered address, PAN, CIN) through UI, not code commit.
+- Edit enum-like reference data (source values, pipeline stage labels, rubric criterion names) through UI.
+- Edit email copy, candidate portal "next steps" copy, prompt library entries through UI.
+- Add new role types with their own `pipelineStages` + `rubric` + assessment attachment through UI.
+
+This is a **scope expansion** relative to everything committed today. Every committed doc assumes code-committed templates and config. Admin UI is not in any accepted cherry-pick (CP1-CP9). The Engineering plan assumes `config/company.json` is a developer-committed file. The Design review Pass 1 assumed `docs/claude-prompts/*.md` markdown is the prompt library.
+
+Three paths to decide first thing in the next session. **Do not decide now; decide with fresh eyes after Shruti shadow, since her workflow observation may sharpen what "self-maintainable" actually means in practice.**
+
+1. **Fold into Phase 1 and slip timeline.** Scope expands from 4-6 weeks honest to 6-9 weeks honest. HR gets a system they maintain from day 1.
+2. **Phase 1 ships code-committed assets. Admin UI as Phase 1.5.** HR uses the system in its current form for ~4 weeks. Admin UI drops in as a focused 2-3 week follow-up, informed by what HR actually tried to change during those 4 weeks.
+3. **Both as Phase 1 with a tighter cut elsewhere.** Keep the 4-6 week target. Cut something already accepted (candidate cathedral? leadership dashboard? rubric structure?) to make room. Harder tradeoff because accepted cherry-picks were already the value drivers.
+
+### Architectural shape (either way)
+
+When this decision lands, the following spike into the eng-review plan:
+- Template storage moves from `public/hr-templates/*.docx` (committed) to a queue-managed directory with per-version metadata (`{id, filename, uploadedBy, uploadedAt, activeAt, replaces}`). `outputFileTracingIncludes` still covers the path.
+- `config/company.json` becomes `src/data/_company.json` (queue-written) + a schema validator run at every write.
+- Enum editing adds `src/data/_enums.json` (already planned as data-editable for source enum additions) — extended to cover pipeline stage labels, rubric criteria, email subject templates.
+- Prompt library moves from `docs/claude-prompts/*.md` to `src/data/prompts.json` (queue-written) + the CP3 in-app drawer renders from it directly.
+- Admin-only routes gated behind `requireAdmin` middleware (already spec'd in eng review).
+- File upload for .docx templates — new validator + queue write path + storage location. Max size constraint (8MB for .docx vs 5MB candidate resume). MIME-sniff at server.
+
+### What this does NOT change (from today's decisions)
+
+- Single-tenant (P7 defer) is unaffected. Admin UI is single-tenant admin, not multi-tenant.
+- Flat-file Option A (P13) is unaffected. Template versions are just more entries in a flat JSON.
+- Candidate-facing magic-link auth (P9) is unaffected.
+- Role-configurable pipelineStages (locked) is unaffected — Admin UI just gives it a form.
+
+### Decision owner
+
+Anish, next session start. Parked here so it's impossible to miss.
+
+---
+
 ## Internal Surfaces Design Decisions (from /plan-design-review Pass 1, 2026-04-23)
 
 Living addendum. Candidate-facing surfaces get their own section after Pass 2. `/design-consultation` runs between Pass 1 and Pass 2 to produce DESIGN.md; this addendum operates against MOU's inherited tokens + universal design principles until DESIGN.md lands.
