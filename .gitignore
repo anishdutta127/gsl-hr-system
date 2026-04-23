@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+
+# Environment
+.env*.local
+.env.local
+.env.production
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# OneDrive
+~$*
+.tmp.drivedownload/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Claude Code local state (personal, not shared)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# Logs
+*.log
+npm-debug.log*
+# ...except the sync rolling log, which is committed by the runner
+!logs/sync.log
+
+# Vercel
+.vercel/
+
+# Test artefacts
+coverage/
+playwright-report/
+test-results/
+.vitest-cache/
+
+# Don't accidentally commit OneDrive contents (the symlink itself is fine,
+# but anything under it is the source of truth, not part of the repo)
+/onedrive-data/*
+!/onedrive-data/.gitkeep
+
+tsconfig.tsbuildinfo
+
+# User-saved drafts: committed by the queue runner, not by devs locally
+/src/data/drafts/

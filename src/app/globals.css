@@ -1,0 +1,65 @@
+@import '../styles/tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-body), 'Open Sans', system-ui, sans-serif;
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    color: var(--color-ink);
+    background: var(--color-surface);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), 'Montserrat', sans-serif;
+    color: var(--color-ink);
+    line-height: var(--leading-tight);
+    font-weight: var(--weight-semibold);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+  h3 {
+    font-size: var(--text-lg);
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-teal);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection {
+    background: var(--color-teal-light);
+    color: var(--color-ink);
+  }
+}
+
+@layer components {
+  .container-page {
+    margin-inline: auto;
+    max-width: var(--content-max);
+    padding-inline: var(--container-pad-mobile);
+  }
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: var(--container-pad);
+    }
+  }
+}

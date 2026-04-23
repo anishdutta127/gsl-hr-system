@@ -1,0 +1,137 @@
+name: Sync Excel and Deploy
+
+# Self-hosted runner on Anish's Windows laptop. The runner has the OneDrive
+# desktop client signed in and syncing the master folder. The Python sync
+# script reads the local copy at GSL_HR_XLSX_PATH (a repo secret).
+#
+# Pattern inherited from gsl-mou-system. Sync script is a stub until the
+# gstack planning cycle scopes the source workbook and target entities.
+#
+# GitHub Actions cron is evaluated in UTC. IST = UTC+5:30, so IST business
+# hours 09:00 to 19:00 map to UTC 03:30 to 13:30. Once per hour, on the hour
+# IST, to stay well under the Hobby-tier Vercel deploys-per-day limit.
+# Manual `workflow_dispatch` covers urgent edits between ticks.
+
+on:
+  schedule:
+    # IST 09:00, 10:00, ... 19:00 Mon-Fri  =  UTC 03:30, 04:30, ..., 13:30
+    - cron: '30 3-13 * * 1-5'
+  workflow_dispatch: {}
+  push:
+    paths:
+      - 'scripts/sync_excel.py'
+      - '.github/workflows/sync-and-deploy.yml'
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: [self-hosted, windows, gsl-sync]
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.SYNC_BOT_PAT }}
+          fetch-depth: 0
+
+      # Belt and braces against a tier-limit incident: if the xlsx mtime has
+      # not advanced since the last successful sync wrote _sync_meta.json,
+      # skip the rest of the job. workflow_dispatch and the push-trigger
+      # still fire; both bypass the scheduler and can force a run.
+      - name: Check xlsx mtime vs last sync
+        id: mtime-check
+        shell: powershell
+        env:
+          GSL_HR_XLSX_PATH: ${{ secrets.GSL_HR_XLSX_PATH }}
+        run: |
+          $ErrorActionPreference = "Stop"
+          $metaPath = "src/data/_sync_meta.json"
+          $xlsxPath = $env:GSL_HR_XLSX_PATH
+          if ([string]::IsNullOrWhiteSpace($xlsxPath)) {
+            Write-Host "GSL_HR_XLSX_PATH secret is empty; running sync so the script surfaces the config error."
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            exit 0
+          }
+          if (-not (Test-Path $xlsxPath)) {
+            Write-Host "Xlsx not found at $xlsxPath; running sync so the script surfaces the missing-file error."
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            exit 0
+          }
+          if (-not (Test-Path $metaPath)) {
+            Write-Host "No prior _sync_meta.json; first-time sync, will run."
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            exit 0
+          }
+          $meta = Get-Content $metaPath -Raw | ConvertFrom-Json
+          $lastRaw = $meta.sourceModifiedAt
+          if ([string]::IsNullOrWhiteSpace($lastRaw)) {
+            Write-Host "_sync_meta.json has no sourceModifiedAt; running sync."
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            exit 0
+          }
+          $lastDt = [DateTime]::Parse($lastRaw).ToUniversalTime()
+          $currentDt = (Get-Item $xlsxPath).LastWriteTimeUtc
+          Write-Host ("Last sync saw xlsx at {0:o}; current mtime {1:o}" -f $lastDt, $currentDt)
+          if ($currentDt -le $lastDt) {
+            Write-Host "Xlsx unchanged since last sync, skipping."
+            "skip=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          } else {
+            Write-Host "Xlsx has advanced; running sync."
+            "skip=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+
+      - name: Verify Python is available
+        if: steps.mtime-check.outputs.skip != 'true'
+        shell: powershell
+        run: |
+          python --version
+          python -m pip --version
+
+      - name: Install Python dependencies
+        if: steps.mtime-check.outputs.skip != 'true'
+        shell: powershell
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run sync against local OneDrive
+        if: steps.mtime-check.outputs.skip != 'true'
+        env:
+          GSL_HR_XLSX_PATH: ${{ secrets.GSL_HR_XLSX_PATH }}
+        run: python scripts/sync_excel.py
+
+      - name: Commit and push if changed
+        if: steps.mtime-check.outputs.skip != 'true'
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          git config user.email "sync-bot@gsl-hr.local"
+          git config user.name "HR Sync Bot"
+          git add src/data/ logs/sync.log
+          git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No data or log changes, skipping commit"
+            exit 0
+          }
+          $timestamp = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mmZ")
+          git commit -m "chore(sync): update from Excel $timestamp"
+          if ($LASTEXITCODE -ne 0) { exit 1 }
+          foreach ($attempt in 1..3) {
+            Write-Host "--- push attempt $attempt ---"
+            git pull --rebase origin main
+            if ($LASTEXITCODE -ne 0) {
+              Write-Host "pull --rebase failed, aborting rebase and retrying"
+              git rebase --abort 2>$null
+              Start-Sleep -Seconds 5
+              continue
+            }
+            git push
+            if ($LASTEXITCODE -eq 0) {
+              Write-Host "push succeeded on attempt $attempt"
+              exit 0
+            }
+            Write-Host "push failed, retrying"
+            Start-Sleep -Seconds 5
+          }
+          Write-Host "push failed after 3 attempts"
+          exit 1

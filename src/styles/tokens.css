@@ -1,0 +1,120 @@
+/*
+ * GSL HR System — design tokens
+ *
+ * All visual primitives live here as CSS custom properties.
+ * Tailwind config extends from these so utility classes (bg-teal, text-ink-2,
+ * shadow, rounded-lg, etc.) resolve to the same values.
+ *
+ * Palette inherited from gsl-mou-system. The design-review cycle will refine
+ * this (notably the candidate-facing surfaces need a warmer, more inviting
+ * treatment than internal ops tooling).
+ */
+
+:root {
+  /* Brand */
+  --color-teal:        #00D8B9;
+  --color-teal-dark:   #00B89D;
+  --color-teal-light:  #E6FBF7;
+  --color-navy:        #073393;
+  --color-navy-dark:   #052563;
+  --color-navy-light:  #E8EEFB;
+
+  /* Neutrals (slightly cool, Linear-inspired) */
+  --color-ink:         #0A0F1F;
+  --color-ink-2:       #4A5365;
+  --color-ink-3:       #8189A0;
+  --color-line:        #E5E8F0;
+  --color-line-strong: #C8CDD9;
+  --color-surface:     #FAFBFC;
+  --color-card:        #FFFFFF;
+
+  /* Semantic */
+  --color-success:     #10B981;
+  --color-success-bg:  #ECFDF5;
+  --color-warning:     #F59E0B;
+  --color-warning-bg:  #FFFBEB;
+  --color-danger:      #EF4444;
+  --color-danger-bg:   #FEF2F2;
+  --color-info:        var(--color-navy);
+  --color-info-bg:     var(--color-navy-light);
+
+  /* Typography */
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body:    'Open Sans', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  40px;
+
+  --leading-tight:   1.2;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* Spacing (8px base) */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-8:  48px;
+  --space-10: 64px;
+  --space-12: 96px;
+
+  /* Layout */
+  --shell-sidebar:        280px;
+  --shell-topbar:         64px;
+  --shell-mobile-topbar:  56px;
+  --shell-mobile-bottom:  64px;
+  --content-max:          1200px;
+  --container-pad:        24px;
+  --container-pad-mobile: 16px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 15, 31, 0.05);
+  --shadow:    0 2px 8px rgba(10, 15, 31, 0.06), 0 1px 3px rgba(10, 15, 31, 0.04);
+  --shadow-lg: 0 8px 24px rgba(10, 15, 31, 0.08);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+}
+
+/* Tabular numerals on every money / count / ID field */
+.tabular,
+.money,
+.count,
+.emp-id,
+.candidate-id {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}
