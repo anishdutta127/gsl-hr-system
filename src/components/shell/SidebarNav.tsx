@@ -10,6 +10,12 @@ import {
   LayoutDashboard,
   Sparkles,
   ClipboardList,
+  Bell,
+  MessageSquare,
+  LogOut,
+  Settings,
+  UserCog,
+  UserCircle,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
@@ -24,11 +30,17 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/', icon: LayoutDashboard, roles: ['Admin', 'HR', 'HOD', 'Leadership'] },
   { label: 'Dashboard', href: '/dashboard', icon: ClipboardList, roles: ['Admin', 'HR', 'Leadership'] },
+  { label: 'Alerts', href: '/alerts', icon: Bell, roles: ['Admin', 'HR', 'HOD'] },
   { label: 'Roles', href: '/roles', icon: Briefcase, roles: ['Admin', 'HR', 'HOD', 'Leadership'] },
   { label: 'Candidates', href: '/candidates', icon: Users, roles: ['Admin', 'HR', 'HOD'] },
+  { label: 'Interviews', href: '/interviews', icon: MessageSquare, roles: ['Admin', 'HR', 'HOD'] },
   { label: 'Offers', href: '/offers', icon: FileSignature, roles: ['Admin', 'HR'] },
   { label: 'Employees', href: '/employees', icon: Building2, roles: ['Admin', 'HR', 'Leadership'] },
+  { label: 'Exits', href: '/exits', icon: LogOut, roles: ['Admin', 'HR'] },
   { label: 'Prompts', href: '/prompts', icon: Sparkles, roles: ['Admin', 'HR', 'HOD'] },
+  { label: 'Users', href: '/users', icon: UserCog, roles: ['Admin'] },
+  { label: 'Settings', href: '/settings', icon: Settings, roles: ['Admin'] },
+  { label: 'My account', href: '/account', icon: UserCircle, roles: ['Admin', 'HR', 'HOD', 'Leadership'] },
 ]
 
 export function SidebarNav({ role }: { role: StaffRole }) {
