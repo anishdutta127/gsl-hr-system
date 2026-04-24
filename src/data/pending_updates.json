@@ -15,7 +15,9 @@
       },
       "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
     },
-    "retryCount": 0
+    "retryCount": 0,
+    "failedAt": "2026-04-24T10:46:17.245Z",
+    "failureReason": "Unknown update operation: letter.generated"
   },
   {
     "id": "b5908131-13c6-44b6-abd0-7071652703c5",
@@ -33,7 +35,9 @@
       },
       "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
     },
-    "retryCount": 0
+    "retryCount": 0,
+    "failedAt": "2026-04-24T10:46:17.247Z",
+    "failureReason": "Unknown update operation: letter.generated"
   },
   {
     "id": "72c036cf-a712-4056-b126-05e66ed2107b",
@@ -51,48 +55,8 @@
       },
       "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
     },
-    "retryCount": 0
-  },
-  {
-    "id": "4323a685-8eb4-47a7-9aa0-a429757634a5",
-    "queuedAt": "2026-04-24T10:25:06.472Z",
-    "queuedBy": "anish.d@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "9638787a-3d7a-4f04-b19d-44c5aa64bfd8",
-      "name": "Close-out Test",
-      "email": "",
-      "phone": "",
-      "source": "HRTeam",
-      "searchableText": "Sample resume text for final verification",
-      "tags": {
-        "programmes": [
-          "Marketing"
-        ]
-      },
-      "status": "Active",
-      "consentedAt": null,
-      "notes": "Can delete after test",
-      "createdAt": "2026-04-24T10:25:06.472Z",
-      "createdBy": "anish.d@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-24T10:25:06.472Z",
-          "user": "anish.d@getsetlearn.info",
-          "action": "candidate.create",
-          "after": {
-            "name": "Close-out Test",
-            "email": "",
-            "source": "HRTeam",
-            "programmes": [
-              "Marketing"
-            ]
-          },
-          "notes": "Created via paste-in import."
-        }
-      ]
-    },
-    "retryCount": 0
+    "retryCount": 0,
+    "failedAt": "2026-04-24T10:46:17.248Z",
+    "failureReason": "Unknown update operation: letter.generated"
   }
 ]

@@ -5859,5 +5859,39 @@
         "notes": "Seeded from HR resume delivery."
       }
     ]
+  },
+  {
+    "id": "9638787a-3d7a-4f04-b19d-44c5aa64bfd8",
+    "name": "Close-out Test",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sample resume text for final verification",
+    "tags": {
+      "programmes": [
+        "Marketing"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Can delete after test",
+    "createdAt": "2026-04-24T10:25:06.472Z",
+    "createdBy": "anish.d@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T10:25:06.472Z",
+        "user": "anish.d@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Close-out Test",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Marketing"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
