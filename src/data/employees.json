@@ -1,1 +1,4922 @@
-[]
+[
+  {
+    "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+    "employeeCode": "MTPL/004",
+    "title": "Mr.",
+    "name": "AJITH NAIR",
+    "email": "ajith.n@getsetlearn.info",
+    "phone": "+91-9930098515",
+    "designation": "Senior Manager - Technology",
+    "department": "Technology",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2021-01-01",
+    "status": "Active",
+    "confirmationDate": "2021-04-01",
+    "tenureYears": 5,
+    "dateOfBirth": "1976-04-18",
+    "age": 49.8,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "KANCHAN FLAT NO - 8, ANKUR SOCIETY,BEST NAGAR, GOREGAON WEST, MUMBAI 400104",
+    "personalEmail": "nair.ajith76@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/004",
+          "name": "AJITH NAIR",
+          "designation": "Senior Manager - Technology",
+          "department": "Technology"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "86763a19-6414-53a6-fac4-2f7a4ca417c3",
+    "employeeCode": "MTPL/014",
+    "title": "Mr.",
+    "name": "AMIT ZAVERI",
+    "email": "ameet.z@getsetlearn.info",
+    "phone": "+91-9820321067",
+    "designation": "Chief Executive Officer",
+    "department": "Founder's Office",
+    "reportingTo": "PHM",
+    "reportingManagerId": "add8f363-5ac0-53f8-ab2c-4358c11e11e5",
+    "location": "Mumbai",
+    "dateOfJoining": "2021-04-01",
+    "status": "Active",
+    "confirmationDate": "2021-07-01",
+    "tenureYears": 5.1,
+    "dateOfBirth": "1975-11-18",
+    "age": 50.5,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "401 / 402, NANDADEEP, VIDHYANIDHI MARG, OPP. KAIFI AZMI PARK, JUHU, VILE-PARLE (EAST), MUMBAI - 400 049, MAHARASHTRA",
+    "personalEmail": "amitzave@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/014",
+          "name": "AMIT ZAVERI",
+          "designation": "Chief Executive Officer",
+          "department": "Founder's Office"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2ed7ec2a-e2a6-508f-8c9b-1ba7c6fe680d",
+    "employeeCode": "MTPL/016",
+    "title": "Mrs.",
+    "name": "SHUBHANGI GAJAKOSH",
+    "email": "ujaccounts@getsetlearn.info",
+    "phone": "+91-8097858677",
+    "designation": "Chief Manager - Finance & Accounts",
+    "department": "Finance & Accounts",
+    "reportingTo": "Saurabh Agrawal",
+    "reportingManagerId": "15bc8393-575d-5da0-0a0d-ae1b5094f31e",
+    "location": "Mumbai",
+    "dateOfJoining": "2021-07-01",
+    "status": "Active",
+    "confirmationDate": "2021-10-01",
+    "tenureYears": 4.8,
+    "dateOfBirth": "1983-01-13",
+    "age": 43.3,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "ARIHANTCOMPLEX BLDG NO-4, ROOM NO 3O4,NEAR RAM NAGAR,OLD VIVA COLLEGE ROAD, VIRAR - WEST - 401303",
+    "personalEmail": "gajakosh.shubhangi@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/016",
+          "name": "SHUBHANGI GAJAKOSH",
+          "designation": "Chief Manager - Finance & Accounts",
+          "department": "Finance & Accounts"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "74f19707-3590-5a01-210d-fc4b57fd9c36",
+    "employeeCode": "MTPL/020",
+    "title": "Mrs.",
+    "name": "VIDYASHREE B. M.",
+    "email": "vidya.m@getsetlearn.info",
+    "phone": "+91-9880497929",
+    "designation": "Manager - Marketing & Operations",
+    "department": "Marketing",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Bangalore",
+    "dateOfJoining": "2021-07-01",
+    "status": "Active",
+    "confirmationDate": "2021-10-01",
+    "tenureYears": 4.8,
+    "dateOfBirth": "1992-05-05",
+    "age": 34,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "#199, 1st Floor, Near Anugraha College of Nursing 560049",
+    "personalEmail": "vidyashreebm55@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/020",
+          "name": "VIDYASHREE B. M.",
+          "designation": "Manager - Marketing & Operations",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ab829e51-9abd-585a-e572-dd808e5df08b",
+    "employeeCode": "MTPL/022",
+    "title": "Mr.",
+    "name": "PRADEEP RAGAV",
+    "email": "pradeep.r@getsetlearn.info",
+    "phone": "+91-9663699916",
+    "designation": "Chief Manager - Operations",
+    "department": "Operations",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Bangalore",
+    "dateOfJoining": "2021-07-01",
+    "status": "Active",
+    "confirmationDate": "2021-10-01",
+    "tenureYears": 4.8,
+    "dateOfBirth": "1980-04-26",
+    "age": 46,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "#311,GF,SUKHI, 5TH MAIN,6TH CROSS, RHCS 2ND STAGE, SRIGANDHAKAVALU,BENGALURU NORTH,KARNATAKA",
+    "personalEmail": "pradeepragav@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/022",
+          "name": "PRADEEP RAGAV",
+          "designation": "Chief Manager - Operations",
+          "department": "Operations"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
+    "employeeCode": "MTPL/027",
+    "title": "Mrs.",
+    "name": "SWATI PHUTANE",
+    "email": "swati.p@getsetlearn.info",
+    "phone": "+91-9820835461",
+    "designation": "Senior Vice President - Operations",
+    "department": "Operations",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2021-07-01",
+    "status": "Active",
+    "confirmationDate": "2021-10-01",
+    "tenureYears": 4.8,
+    "dateOfBirth": "1970-01-06",
+    "age": 56.3,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "A-503, Shri Hari CHS, RTO Lane Near Babasaheb Gaikwad Hall, 4 Bunglows, Andheri West, Mumbai 400053",
+    "personalEmail": "swati.phutane@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/027",
+          "name": "SWATI PHUTANE",
+          "designation": "Senior Vice President - Operations",
+          "department": "Operations"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "15bc8393-575d-5da0-0a0d-ae1b5094f31e",
+    "employeeCode": "MTPL/015",
+    "title": "Mr.",
+    "name": "SAURABH AGRAWAL",
+    "email": "saurabh.a@getsetlearn.info",
+    "phone": "+91-9820745326",
+    "designation": "Chief Financial Officer",
+    "department": "Finance & Accounts",
+    "reportingTo": "PHM",
+    "reportingManagerId": "add8f363-5ac0-53f8-ab2c-4358c11e11e5",
+    "location": "Mumbai",
+    "dateOfJoining": "2021-07-29",
+    "status": "Active",
+    "confirmationDate": "2021-10-29",
+    "tenureYears": 4.7,
+    "dateOfBirth": "1986-05-02",
+    "age": 40,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "B1002 Raj Hill Dattapada Road Rai Dongri Opp Lohar Sutar Wadi, Borivali East Mumbai 400066",
+    "personalEmail": "saurabhagrawal_123@yahoo.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/015",
+          "name": "SAURABH AGRAWAL",
+          "designation": "Chief Financial Officer",
+          "department": "Finance & Accounts"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "3b3bd30c-827d-5b95-f981-d16897cdf7f9",
+    "employeeCode": "MTPL/028",
+    "title": "Mr.",
+    "name": "PRANAV BHARDWAJ",
+    "email": "pranav.b@getsetlearn.info",
+    "phone": "+91-9421479139",
+    "designation": "Senior Manager - Finance & Accounts",
+    "department": "Finance & Accounts",
+    "reportingTo": "Saurabh Agrawal",
+    "reportingManagerId": "15bc8393-575d-5da0-0a0d-ae1b5094f31e",
+    "location": "Nagpur",
+    "dateOfJoining": "2021-08-10",
+    "status": "Active",
+    "confirmationDate": "2021-11-10",
+    "tenureYears": 4.7,
+    "dateOfBirth": "1996-09-30",
+    "age": 29.6,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "PLOT NO. 22, DHANWANTARI NAGAR, RAMNA MAROTI, NEAR JYOTI SCHOOL, NAGPUR - 440024",
+    "personalEmail": "capranavbhardwaj@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/028",
+          "name": "PRANAV BHARDWAJ",
+          "designation": "Senior Manager - Finance & Accounts",
+          "department": "Finance & Accounts"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "67dcbb10-3834-5442-f003-085cff6258e8",
+    "employeeCode": "MTPL/036",
+    "title": "Ms.",
+    "name": "GOWRI RAMAKRISHNAN",
+    "email": "gowri.r@getsetlearn.info",
+    "phone": "+91-9987289956",
+    "designation": "Assistant Manager - Platform and Implementation",
+    "department": "Operations",
+    "reportingTo": "Swati Phutane",
+    "reportingManagerId": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
+    "location": "Mumbai",
+    "dateOfJoining": "2022-01-11",
+    "status": "Active",
+    "confirmationDate": "2022-07-11",
+    "tenureYears": 4.3,
+    "dateOfBirth": "2000-12-30",
+    "age": 25.3,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "L-204 MAYURESH SRISHTI ,LBS MARG,OPPO ASIAN PAINTS,BHANDUP WEST,MUMBAI 400078",
+    "personalEmail": "gow302000@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/036",
+          "name": "GOWRI RAMAKRISHNAN",
+          "designation": "Assistant Manager - Platform and Implementation",
+          "department": "Operations"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "employeeCode": "MTPL/037",
+    "title": "Mr.",
+    "name": "SHASHANK SANAS",
+    "email": "shashank.s@getsetlearn.info",
+    "phone": "+91-9167795766",
+    "designation": "Head - Training (India)",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2022-01-17",
+    "status": "Active",
+    "confirmationDate": "2022-07-17",
+    "tenureYears": 4.3,
+    "dateOfBirth": "1990-05-23",
+    "age": 35.9,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "C-6/01, NILE CHS, GODREJ HILL KHADAKPADA, NEAR MADHAV SHRUSTHI, KALYAN WEST, 421301",
+    "personalEmail": "shashanksanas@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/037",
+          "name": "SHASHANK SANAS",
+          "designation": "Head - Training (India)",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "employeeCode": "MTPL/038",
+    "title": "Mrs.",
+    "name": "RITU UPPAL",
+    "email": "ritu.u@getsetlearn.info",
+    "phone": "+91-9029060015",
+    "designation": "Chief Academics Officer",
+    "department": "Academics",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2022-04-01",
+    "status": "Active",
+    "confirmationDate": "2022-10-01",
+    "tenureYears": 4.1,
+    "dateOfBirth": "1966-07-02",
+    "age": 59.9,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "21, Sunanda, 25 Crossing of Juhu & Tagore Road, Santacruz West, Mumbai 400054",
+    "personalEmail": "rituuppal3@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/038",
+          "name": "RITU UPPAL",
+          "designation": "Chief Academics Officer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "employeeCode": "MTPL/041",
+    "title": "Mr.",
+    "name": "PRATIK DASTIDAR",
+    "email": "pratik.d@getsetlearn.info",
+    "phone": "+91-9830178546",
+    "designation": "President - Sales",
+    "department": "Sales",
+    "reportingTo": "Naval Shukla",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2022-07-13",
+    "status": "Active",
+    "confirmationDate": "2023-01-13",
+    "tenureYears": 3.8,
+    "dateOfBirth": "1973-08-16",
+    "age": 52.7,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "ABANTIKA APARTMENT, 40 A (N) PURBACHAL KALITALA LINK ROAD 700078",
+    "personalEmail": "pratikgd@googlemail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/041",
+          "name": "PRATIK DASTIDAR",
+          "designation": "President - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "employeeCode": "MTPL/043",
+    "title": "Ms.",
+    "name": "SHUBHRA RISHI",
+    "email": "shubhra.r@getsetlearn.info",
+    "phone": "+91-9967058105",
+    "designation": "President - Marketing",
+    "department": "Marketing",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2022-08-29",
+    "status": "Active",
+    "confirmationDate": "29-Feb-23",
+    "tenureYears": 3.7,
+    "dateOfBirth": "1984-07-16",
+    "age": 41.8,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "B-502, SHAKTISADAN APARTMENTS, KHERWADI, BANDRA (EAST) MUMBAI 400051",
+    "personalEmail": "shubhra.rishi@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/043",
+          "name": "SHUBHRA RISHI",
+          "designation": "President - Marketing",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "b09f40b1-09df-5bfa-f3ec-dc5f36e11710",
+    "employeeCode": "MTPL/047",
+    "title": "Mrs.",
+    "name": "REEMA JAISWAL",
+    "email": "reema.j@getsetlearn.info",
+    "phone": "+91-8604133884",
+    "designation": "Chief Manager - Product and Implementation",
+    "department": "Product",
+    "reportingTo": "Swati Phutane",
+    "reportingManagerId": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
+    "location": "Mumbai",
+    "dateOfJoining": "2022-12-05",
+    "status": "Active",
+    "confirmationDate": "2023-06-05",
+    "tenureYears": 3.4,
+    "dateOfBirth": "1989-06-02",
+    "age": 36.9,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "FLAT NO. 604 SAI BHAKTI CHS PLOT NO 129A SECTOR 13, KHARGHAR, NAVI MUMBAI  410210",
+    "personalEmail": "reemajaiswal2011@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/047",
+          "name": "REEMA JAISWAL",
+          "designation": "Chief Manager - Product and Implementation",
+          "department": "Product"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "employeeCode": "MTPL/049",
+    "title": "Mr.",
+    "name": "DEEPJYOTI DAS",
+    "email": "deepjyoti.d@getsetlearn.info",
+    "phone": "+91-8876695518",
+    "designation": "Zonal Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Shashank Sanas",
+    "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "location": "Guwahati",
+    "dateOfJoining": "2023-04-03",
+    "status": "Active",
+    "confirmationDate": "2023-10-03",
+    "tenureYears": 3.1,
+    "dateOfBirth": "1992-04-25",
+    "age": 34,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "HOUSE NO :62,BHUGARGAON, KK HANDIQUE PATH, DPI, KAHILIPARA,GUWAHATI. PIN: 781019",
+    "personalEmail": "jorn.deep@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/049",
+          "name": "DEEPJYOTI DAS",
+          "designation": "Zonal Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "employeeCode": "MTPL/051",
+    "title": "Mr.",
+    "name": "AVISHEK DASGUPTA",
+    "email": "avishek.d@getsetlearn.info",
+    "phone": "+91-9830166457",
+    "designation": "Deputy Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Deepjyoti Das",
+    "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "location": "Kolkata",
+    "dateOfJoining": "2023-05-02",
+    "status": "Active",
+    "confirmationDate": "2023-11-02",
+    "tenureYears": 3,
+    "dateOfBirth": "1990-10-29",
+    "age": 35.5,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "171 Bidhan Park, P.O. Noapara, P.S. Baranagar,Kolkata – 700090,North 24 Parganas.",
+    "personalEmail": "avishek.dasgupta@outlook.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/051",
+          "name": "AVISHEK DASGUPTA",
+          "designation": "Deputy Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "b1c96c3a-58eb-51ec-0e04-fc7c0ff4c79e",
+    "employeeCode": "MTPL/056",
+    "title": "Ms.",
+    "name": "MISBA MUSTHAFA",
+    "email": "misba.m@getsetlearn.info",
+    "phone": "+91-9867695258",
+    "designation": "Assistant Manager - Planning and Implementation",
+    "department": "Operations",
+    "reportingTo": "Swati Phutane",
+    "reportingManagerId": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
+    "location": "Mumbai",
+    "dateOfJoining": "2023-06-12",
+    "status": "Active",
+    "confirmationDate": "2023-12-12",
+    "tenureYears": 2.9,
+    "dateOfBirth": "1998-10-02",
+    "age": 27.6,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Kolkata – 700090,",
+    "personalEmail": "pkmisba@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/056",
+          "name": "MISBA MUSTHAFA",
+          "designation": "Assistant Manager - Planning and Implementation",
+          "department": "Operations"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ee6eded2-746a-552d-9fac-5962da4b81b1",
+    "employeeCode": "MTPL/057",
+    "title": "Mr.",
+    "name": "PURUSHOTTHAMA B V",
+    "email": "purushotthama.b@getsetlearn.info",
+    "phone": "+91-9620531144",
+    "designation": "Frontend Developer",
+    "department": "Technology",
+    "reportingTo": "Ajith Nair",
+    "reportingManagerId": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+    "location": "Bangalore",
+    "dateOfJoining": "2023-06-12",
+    "status": "Active",
+    "confirmationDate": "2023-12-12",
+    "tenureYears": 2.9,
+    "dateOfBirth": "1990-12-11",
+    "age": 35.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "North 24 Parganas.",
+    "personalEmail": "bvp1144@yahoo.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/057",
+          "name": "PURUSHOTTHAMA B V",
+          "designation": "Frontend Developer",
+          "department": "Technology"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e18b8664-7e8c-5d9e-895b-ae0d790ee455",
+    "employeeCode": "MTPL/063",
+    "title": "Ms.",
+    "name": "ROVEENA VERMA",
+    "email": "roveena.v@getsetlearn.info",
+    "phone": "+91-7602318984",
+    "designation": "Zonal Sales Manager",
+    "department": "Sales",
+    "reportingTo": "Pratik Dastidar",
+    "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "location": "Delhi",
+    "dateOfJoining": "2023-08-28",
+    "status": "Active",
+    "confirmationDate": "2024-02-27",
+    "tenureYears": 2.7,
+    "dateOfBirth": "1988-11-08",
+    "age": 37.5,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "J-52, Dal and Roti Building, Old double storey, Lajpat Nagar 4 Pin: 110024",
+    "personalEmail": "roveenaverma1@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/063",
+          "name": "ROVEENA VERMA",
+          "designation": "Zonal Sales Manager",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e0624a5c-964f-5ec4-87cb-88f5d89637ab",
+    "employeeCode": "MTPL/064",
+    "title": "Mr.",
+    "name": "KRANTHI KUMAR",
+    "email": "kranthi.k@getsetlearn.info",
+    "phone": "+91-7793957564",
+    "designation": "Area Sales Manager",
+    "department": "Sales",
+    "reportingTo": "Nilabhra Poddar",
+    "reportingManagerId": null,
+    "location": "Hyderabad",
+    "dateOfJoining": "2023-09-04",
+    "status": "Active",
+    "confirmationDate": "2024-03-04",
+    "tenureYears": 2.6,
+    "dateOfBirth": "1982-04-13",
+    "age": 44.1,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Plot no 90, Road no 3, Louthkunta, Tirumalgiri, Secunderabad 500015",
+    "personalEmail": "kranthilucky31@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/064",
+          "name": "KRANTHI KUMAR",
+          "designation": "Area Sales Manager",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "44e0c598-5994-5f92-5b2e-9bfbbff6ef22",
+    "employeeCode": "MTPL/065",
+    "title": "Mr.",
+    "name": "HIRAK THAKUR",
+    "email": "hirak.t@getsetlearn.info",
+    "phone": "+91-9800128152",
+    "designation": "Area Sales Manager",
+    "department": "Sales",
+    "reportingTo": "Pratik Dastidar",
+    "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "location": "Siliguri",
+    "dateOfJoining": "2023-09-05",
+    "status": "Active",
+    "confirmationDate": "2024-03-05",
+    "tenureYears": 2.6,
+    "dateOfBirth": "1965-06-04",
+    "age": 60.9,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Subrata Abasan, 2nd floor, Premkendra Mitra Path, South Babupara, Siliguri, Darjeeling Pin: 724004",
+    "personalEmail": "hirakthakur69@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/065",
+          "name": "HIRAK THAKUR",
+          "designation": "Area Sales Manager",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "employeeCode": "MTPL/066",
+    "title": "Mr.",
+    "name": "PRODIPTO BANERJEE",
+    "email": "prodipto.b@getsetlearn.info",
+    "phone": "+91-9641525040",
+    "designation": "Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Pratik Dastidar",
+    "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "location": "Kolkata",
+    "dateOfJoining": "2023-09-05",
+    "status": "Active",
+    "confirmationDate": "2024-03-05",
+    "tenureYears": 2.6,
+    "dateOfBirth": "1990-01-19",
+    "age": 36.3,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Krishna Villa, Flat No. 2, 37, Patoary Para, P. S. - Survey Park, Kolkata- 700075, Near-Bhatkhande",
+    "personalEmail": "prodiptobanerjee07@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/066",
+          "name": "PRODIPTO BANERJEE",
+          "designation": "Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
+    "employeeCode": "MTPL/070",
+    "title": "Mr.",
+    "name": "EZHILARASAN ELUMALAI",
+    "email": "ezhilarasan.e@getsetlearn.info",
+    "phone": "+91-9941967127",
+    "designation": "Executive - Sales",
+    "department": "Sales",
+    "reportingTo": "Balu R",
+    "reportingManagerId": "1584f525-bad3-5aa3-a9ca-a7a748543f6f",
+    "location": "Chennai",
+    "dateOfJoining": "2023-10-03",
+    "status": "Active",
+    "confirmationDate": "2024-04-03",
+    "tenureYears": 2.6,
+    "dateOfBirth": "1999-09-02",
+    "age": 26.7,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "No. 68/208, Vilage Street Sathuma Nagar, Thiruvottiyur, Chennai Pin: 600019",
+    "personalEmail": "ezhile2luvhart@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/070",
+          "name": "EZHILARASAN ELUMALAI",
+          "designation": "Executive - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ae8b87ec-59a0-5c98-6426-45c3a9069bf2",
+    "employeeCode": "MTPL/076",
+    "title": "Mr.",
+    "name": "KUNAL SHARMA",
+    "email": "kunal.s@getsetlearn.info",
+    "phone": "+91-7091878999",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Ranchi",
+    "dateOfJoining": "2024-01-02",
+    "status": "Active",
+    "confirmationDate": "2024-07-02",
+    "tenureYears": 2.3,
+    "dateOfBirth": "2002-09-10",
+    "age": 23.6,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "SHARMA COLONY TATISILWAI RANCHI JHARKHAND  835103",
+    "personalEmail": "kunalsharmacse2021@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/076",
+          "name": "KUNAL SHARMA",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "eb9f299d-ac36-5746-dbf9-55eec1968e15",
+    "employeeCode": "MTPL/078",
+    "title": "Ms.",
+    "name": "TAMANNA JAISINGHANI",
+    "email": "tamanna.j@getsetlearn.info",
+    "phone": "+91-9920565052",
+    "designation": "Senior Manager - Product & Partnerships",
+    "department": "Partnerships",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2024-01-08",
+    "status": "Active",
+    "confirmationDate": "2024-07-08",
+    "tenureYears": 2.3,
+    "dateOfBirth": "1987-04-02",
+    "age": 39.1,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "27A, FLAT NO 5, NAVJIVAN SOCIETY, RC MARG, CHEMBUR (E) 400074",
+    "personalEmail": "tamanna.jaisinghani@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/078",
+          "name": "TAMANNA JAISINGHANI",
+          "designation": "Senior Manager - Product & Partnerships",
+          "department": "Partnerships"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0f554066-82ad-5600-bd5e-866f6fc28f55",
+    "employeeCode": "MTPL/079",
+    "title": "Mr.",
+    "name": "DIPANJAN KARMAKAR",
+    "email": "dipanjan@getsetlearn.info",
+    "phone": "+91-7384252504",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-01-16",
+    "status": "Active",
+    "confirmationDate": "2024-07-16",
+    "tenureYears": 2.3,
+    "dateOfBirth": "1995-11-20",
+    "age": 30.4,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "VILL- NAIHATI,PO-BADARTALA,PS-BASIRHAT,NORTH 24 PARGANAS WEST BENGAL - 743292",
+    "personalEmail": "dipanjankarmakarsit@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/079",
+          "name": "DIPANJAN KARMAKAR",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "b986335d-2012-5091-0251-a26844c08b6d",
+    "employeeCode": "MTPL/080",
+    "title": "Mr.",
+    "name": "GOGUL BASKARAN",
+    "email": "gogul.b@getsetlearn.info",
+    "phone": "+91-9597798852",
+    "designation": "Jr. RoR Developer",
+    "department": "Technology",
+    "reportingTo": "Ajith Nair",
+    "reportingManagerId": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+    "location": "Bangalore",
+    "dateOfJoining": "2024-01-29",
+    "status": "Active",
+    "confirmationDate": "2024-07-29",
+    "tenureYears": 2.2,
+    "dateOfBirth": "1999-01-30",
+    "age": 27.2,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "No:10-B PERUMAL KOVIL STREET,VILLUPURAM 605602",
+    "personalEmail": "gogulbaskaran01@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/080",
+          "name": "GOGUL BASKARAN",
+          "designation": "Jr. RoR Developer",
+          "department": "Technology"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "46d73ce5-436c-5460-a889-0e5ef0bec232",
+    "employeeCode": "MTPL/081",
+    "title": "Mr.",
+    "name": "ASHWIN ADHIKARI",
+    "email": "ashwin.a@getsetlearn.info",
+    "phone": "+91-9833976650",
+    "designation": "Senior Vice President - Sales",
+    "department": "Sales",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2024-01-29",
+    "status": "Active",
+    "confirmationDate": "2024-07-29",
+    "tenureYears": 2.2,
+    "dateOfBirth": "1980-12-22",
+    "age": 45.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "A-404, KALPVRUKSH HEIGHTS, NEW LINK ROAD KANDiVILI WEST MUMBAI 400067",
+    "personalEmail": "ashwinadhikari@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/081",
+          "name": "ASHWIN ADHIKARI",
+          "designation": "Senior Vice President - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "a002df93-aed2-50d9-dc10-34f7bfe6feb4",
+    "employeeCode": "MTPL/083",
+    "title": "Ms.",
+    "name": "JOANNA DIAS",
+    "email": "joanna.d@getsetlearn.info",
+    "phone": "+91-7829333320",
+    "designation": "Asst. Manager - Marketing",
+    "department": "Marketing",
+    "reportingTo": "Pradeep Ragav",
+    "reportingManagerId": "ab829e51-9abd-585a-e572-dd808e5df08b",
+    "location": "Bangalore",
+    "dateOfJoining": "2024-03-04",
+    "status": "Active",
+    "confirmationDate": "2024-09-04",
+    "tenureYears": 2.1,
+    "dateOfBirth": "Tuesday, August 15, 2000",
+    "age": 25.7,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "B6-903, B6 BLOCK, L&T SOUTH CITY APARTMENTS, AREKERE MICO LAYOUT, BENGALURU, KARNATAKA, 560076",
+    "personalEmail": "joannadias.work@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/083",
+          "name": "JOANNA DIAS",
+          "designation": "Asst. Manager - Marketing",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "employeeCode": "MTPL/084",
+    "title": "Mrs.",
+    "name": "RUCHA DOIFODE",
+    "email": "rucha.d@getsetlearn.info",
+    "phone": "+91-7447766246",
+    "designation": "Chief Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Shashank Sanas",
+    "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "location": "Pune",
+    "dateOfJoining": "2024-04-01",
+    "status": "Active",
+    "confirmationDate": "2024-10-01",
+    "tenureYears": 2.1,
+    "dateOfBirth": "Tuesday, November 6, 1990",
+    "age": 35.5,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "B-303,LAKE PARADISE,OPP.CRPF, OLD PUNE- BOMBAY HIGHWAY,TALEGAON DABHADE, TAL MAWAL,PUNE-410506",
+    "personalEmail": "ruchasarwadnya@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/084",
+          "name": "RUCHA DOIFODE",
+          "designation": "Chief Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "11867deb-31d3-5c0c-b2db-13f1195bcb20",
+    "employeeCode": "MTPL/086",
+    "title": "Ms.",
+    "name": "KOUSHIKI MISRA",
+    "email": "koushiki.m@getsetlearn.info",
+    "phone": "+91-7300147882",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-04-01",
+    "status": "Active",
+    "confirmationDate": "2024-10-01",
+    "tenureYears": 2.1,
+    "dateOfBirth": "Wednesday, September 12, 2001",
+    "age": 24.6,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "87,WOMEN'S COLLEGE LANE,PEROZPUR,MALDA,732101",
+    "personalEmail": "koushikimisra28@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/086",
+          "name": "KOUSHIKI MISRA",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "130579bf-447a-5bb8-57f1-03b5a58b994c",
+    "employeeCode": "MTPL/087",
+    "title": "Ms.",
+    "name": "TOOBA MIRZA",
+    "email": "tooba.m@getsetlearn.info",
+    "phone": "+91-9867125860",
+    "designation": "Instructional Designer",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-04-03",
+    "status": "Active",
+    "confirmationDate": "2024-10-03",
+    "tenureYears": 2.1,
+    "dateOfBirth": "Friday, April 1, 1988",
+    "age": 38.1,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "D-1,604 Wafa Hills, Almas Colony, Kausa, Mumbra, Thane",
+    "personalEmail": "tuba.mirza1407@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/087",
+          "name": "TOOBA MIRZA",
+          "designation": "Instructional Designer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fc715df5-584c-5af1-3d8e-2ad7caa3f40e",
+    "employeeCode": "MTPL/088",
+    "title": "Mr.",
+    "name": "RISHEK RANJAN",
+    "email": "rishek.r@getsetlearn.info",
+    "phone": "+91-7091878999",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Ranchi",
+    "dateOfJoining": "2024-04-15",
+    "status": "Active",
+    "confirmationDate": "2024-10-15",
+    "tenureYears": 2,
+    "dateOfBirth": "Sunday, March 28, 1999",
+    "age": 27.1,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "NAMKOM ROAD, PIPRA TOLI, KHUNTO (JHARKHAND)",
+    "personalEmail": "jhaa9085@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/088",
+          "name": "RISHEK RANJAN",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "4bad7b98-5920-5b7d-b09f-25a5e3b867fc",
+    "employeeCode": "MTPL/093",
+    "title": "Mr.",
+    "name": "KRISHNAMURTY WORAH",
+    "email": "krishnamurty.w@getsetlearn.info",
+    "phone": "+91-9831582746",
+    "designation": "Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Prodipto Banerjee",
+    "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-04-01",
+    "status": "Active",
+    "confirmationDate": "2024-10-01",
+    "tenureYears": 2.1,
+    "dateOfBirth": "Wednesday, June 18, 1958",
+    "age": 67.9,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "34 A DOCTOR RAJENDRA ROAD, KOLKATA 700020",
+    "personalEmail": "krishworah@yahoo.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/093",
+          "name": "KRISHNAMURTY WORAH",
+          "designation": "Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "f0a9a2a0-31b0-564d-2383-026e4ed190a4",
+    "employeeCode": "MTPL/096",
+    "title": "Ms.",
+    "name": "PRIYA VERMA",
+    "email": "priya.v@getsetlearn.info",
+    "phone": "+91-7000206457",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Raipur",
+    "dateOfJoining": "2024-04-30",
+    "status": "Active",
+    "confirmationDate": "2024-10-30",
+    "tenureYears": 2,
+    "dateOfBirth": "1991-06-10",
+    "age": 34.9,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "Q.NO 10/D STREET 25 SECTOR  BHILAI PIN 490006",
+    "personalEmail": "vpriyaangle@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/096",
+          "name": "PRIYA VERMA",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "df5cd030-c938-5363-ff44-9fdf4f9f514a",
+    "employeeCode": "MTPL/100",
+    "title": "Mr.",
+    "name": "YASH KAPOOR",
+    "email": "yash.k@getsetlearn.info",
+    "phone": "+91-8529870792",
+    "designation": "Assistant Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Pune",
+    "dateOfJoining": "2024-05-13",
+    "status": "Active",
+    "confirmationDate": "2024-11-13",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1990-12-16",
+    "age": 35.4,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Flat-105, E3 Wing, Sunshine Nagar, Nakhate Wasti, Rahatni-Kalewadi road, Rahatni, Pune, Maharashtra, 411017.",
+    "personalEmail": "kapooryash555@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/100",
+          "name": "YASH KAPOOR",
+          "designation": "Assistant Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "5364378a-9f51-57e2-6551-f238fdf39cee",
+    "employeeCode": "MTPL/101",
+    "title": "Ms.",
+    "name": "SANGEETHA NANNA",
+    "email": "sangeetha.n@getsetlearn.info",
+    "phone": "+91-8919814135",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Secunderabad",
+    "dateOfJoining": "2024-05-13",
+    "status": "Active",
+    "confirmationDate": "2024-11-13",
+    "tenureYears": 1.9,
+    "dateOfBirth": "Wednesday, May 23, 2001",
+    "age": 24.9,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "1-77 VKITCHEN,LAXMAREDDY COLONY,UPPAL,HYDERABAD,500039",
+    "personalEmail": "nannasangeethans@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/101",
+          "name": "SANGEETHA NANNA",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "7e7e9bb7-62e3-5553-d64c-8b493c6ca5f0",
+    "employeeCode": "MTPL/102",
+    "title": "Ms.",
+    "name": "LIKHITHA KOMIRISHETTY",
+    "email": "likhitha.c@getsetlearn.info",
+    "phone": "+91-8179833959",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Hyderabad",
+    "dateOfJoining": "2024-05-13",
+    "status": "Active",
+    "confirmationDate": "2024-11-13",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1999-05-15",
+    "age": 27,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "304 Kamala Nivas, Kamala Nagar, Beside Lalitha jewellers pillar no 1558  Chaitanya Pur, Hyderabad 500060, Telangana",
+    "personalEmail": "likhitha018@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/102",
+          "name": "LIKHITHA KOMIRISHETTY",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "17cf6d1f-509a-5ce4-399c-450cc7316d49",
+    "employeeCode": "MTPL/106",
+    "title": "Mr.",
+    "name": "TUSHAR TELDHUNE",
+    "email": "tushar.t@getsetlearn.info",
+    "phone": "+91-9673037707",
+    "designation": "Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Ashwin Adhikari",
+    "reportingManagerId": "46d73ce5-436c-5460-a889-0e5ef0bec232",
+    "location": "Pune",
+    "dateOfJoining": "2024-05-22",
+    "status": "Active",
+    "confirmationDate": "2024-11-22",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1993-08-23",
+    "age": 32.7,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "302,AARYA RESIDENCY,PRAYEJA CITY ROAD , PUNE-411041",
+    "personalEmail": "tteldhune@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/106",
+          "name": "TUSHAR TELDHUNE",
+          "designation": "Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "employeeCode": "MTPL/107",
+    "title": "Ms.",
+    "name": "PALLAVI TATAWATI",
+    "email": "pallavi.t@getsetlearn.info",
+    "phone": "+91-9945388599",
+    "designation": "Deputy Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Swati Phutane",
+    "reportingManagerId": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
+    "location": "Bangalore",
+    "dateOfJoining": "2024-05-27",
+    "status": "Active",
+    "confirmationDate": "2024-11-27",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1987-07-17",
+    "age": 38.8,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "Shravanti Paramount apartment flat no. 327 Hulimavu Bangalore- 560068",
+    "personalEmail": "paa1315169@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/107",
+          "name": "PALLAVI TATAWATI",
+          "designation": "Deputy Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fb4400da-d6ec-5c2d-9ae1-fb867cd61606",
+    "employeeCode": "MTPL/108",
+    "title": "Ms.",
+    "name": "SHRUTI RAWUL",
+    "email": "shruti.r@getsetlearn.info",
+    "phone": "+91-7676703200",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Belgaum",
+    "dateOfJoining": "2024-06-03",
+    "status": "Active",
+    "confirmationDate": "2024-12-03",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1991-09-17",
+    "age": 34.6,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "H.NO 146 BHARAT NAGAR 1ST CROSS SHAHAPUR BELAGAVI-590003",
+    "personalEmail": "girigoudarshruti4@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/108",
+          "name": "SHRUTI RAWUL",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "employeeCode": "MTPL/111",
+    "title": "Ms.",
+    "name": "POOJA SHARMA",
+    "email": "pooja.s@getsetlearn.info",
+    "phone": "+91-8871565200",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Deepjyoti Das",
+    "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "location": "Indore",
+    "dateOfJoining": "2024-06-03",
+    "status": "Active",
+    "confirmationDate": "2024-12-03",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1992-04-15",
+    "age": 34,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "75-B, TIRUPATI PALACE NIPANIYA, INDORE-452010",
+    "personalEmail": "pooja.sharma.020492@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/111",
+          "name": "POOJA SHARMA",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "070be06a-2682-546e-4412-72edf09d471e",
+    "employeeCode": "MTPL/112",
+    "title": "Ms.",
+    "name": "PRIYANKA PUSHKER",
+    "email": "priyanka.p@getsetlearn.info",
+    "phone": "+91-8789337088",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Pune",
+    "dateOfJoining": "2024-06-03",
+    "status": "Active",
+    "confirmationDate": "2024-12-03",
+    "tenureYears": 1.2,
+    "dateOfBirth": "1990-01-04",
+    "age": 35.7,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "C-602, Silver Stone Society, Handewadi Chowk, Pune-412308",
+    "personalEmail": "priyanka.sinha0401@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/112",
+          "name": "PRIYANKA PUSHKER",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0da7f95f-a76a-51ef-ea98-af7f4c5edcdf",
+    "employeeCode": "MTPL/115",
+    "title": "Ms.",
+    "name": "SARIKA CHANDRATRE",
+    "email": "sarika.c@getsetlearn.info",
+    "phone": "+91-9833086774",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-06-04",
+    "status": "Active",
+    "confirmationDate": "2024-12-04",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1981-03-10",
+    "age": 45.2,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "B-104,SAIRAJ CHS,NEAR KENDRIYA VIHAR,PLOT NO 51A, SECTOR 11, KHARGHAR,NAVI MUMBAI - 410210",
+    "personalEmail": "sarika.chandratre@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/115",
+          "name": "SARIKA CHANDRATRE",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "12eb7afa-2221-5758-6ad7-63a6dd9a7d8a",
+    "employeeCode": "MTPL/117",
+    "title": "Ms.",
+    "name": "SNEHA PATIL",
+    "email": "sneha.p@getsetlearn.info",
+    "phone": "+91-9743789493",
+    "designation": "Assistant Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Belgaum",
+    "dateOfJoining": "2024-06-10",
+    "status": "Active",
+    "confirmationDate": "2024-12-10",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1995-01-06",
+    "age": 31.3,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "Plot no 1895,CTS no 6794,sector no 9, 1st floor, Malmaruti Extension, Mahantesh Nagar, Belagavi,590016",
+    "personalEmail": "snehapatil12324@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/117",
+          "name": "SNEHA PATIL",
+          "designation": "Assistant Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "99131ea3-948a-5b95-5f3a-ea28fed88e23",
+    "employeeCode": "MTPL/119",
+    "title": "Ms.",
+    "name": "PAULAMEE PAUL",
+    "email": "paulamee.p@getsetlearn.info",
+    "phone": "+91-7439577792",
+    "designation": "Assistant Manager - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-06-10",
+    "status": "Active",
+    "confirmationDate": "2024-12-10",
+    "tenureYears": 1.9,
+    "dateOfBirth": "1989-12-10",
+    "age": 36.4,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "6/141, BALIRMORE, KALITALA, HOOGHLY- 712103, KOLKATA",
+    "personalEmail": "paulameepaul2@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/119",
+          "name": "PAULAMEE PAUL",
+          "designation": "Assistant Manager - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "a226d994-b34c-50a4-d556-0f641b4e968a",
+    "employeeCode": "MTPL/122",
+    "title": "Mr.",
+    "name": "VAISHNAV V",
+    "email": "vaishnav.v@getsetlearn.info",
+    "phone": "+91-8547804560",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Bangalore",
+    "dateOfJoining": "2024-06-21",
+    "status": "Active",
+    "confirmationDate": "2024-12-21",
+    "tenureYears": 1.8,
+    "dateOfBirth": "1999-05-19",
+    "age": 27,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Sri Vinayaka New PG for Gents, No 16. Keerthi Nilaya, 5th main 4th cross, Badrappa layout, Nagashetty Halli, Bengaluru, Karnataka 560094",
+    "personalEmail": "vaishnavgangadharan@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/122",
+          "name": "VAISHNAV V",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "052f1adf-babb-5ef6-59d6-84b29f5aa52a",
+    "employeeCode": "MTPL/130",
+    "title": "Mr.",
+    "name": "MOHIT KUMAR",
+    "email": "mohit.k@getsetlearn.info",
+    "phone": "+91-8826498397",
+    "designation": "Manager- Business Development",
+    "department": "Sales",
+    "reportingTo": "Ashwin Adhikari",
+    "reportingManagerId": "46d73ce5-436c-5460-a889-0e5ef0bec232",
+    "location": "Delhi",
+    "dateOfJoining": "2026-07-08",
+    "status": "Active",
+    "confirmationDate": "2025-01-08",
+    "tenureYears": 1.8,
+    "dateOfBirth": "Saturday, December 4, 1993",
+    "age": 32.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "HNO 137 NEAR CIVIL HOSPITAL SECTOR 10 GURGAON-122001",
+    "personalEmail": "kmohit267@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/130",
+          "name": "MOHIT KUMAR",
+          "designation": "Manager- Business Development",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "a8b3b0b3-2cfd-59c9-327f-9fdb1fef1440",
+    "employeeCode": "MTPL/131",
+    "title": "Mr.",
+    "name": "RAJESH PERUMAL",
+    "email": "rajesh.p@getsetlearn.info",
+    "phone": "+91-9884201671",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Chennai",
+    "dateOfJoining": "2026-07-22",
+    "status": "Active",
+    "confirmationDate": "2025-01-22",
+    "tenureYears": 1.8,
+    "dateOfBirth": "1995-06-13",
+    "age": 30.9,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "1102/5 ROAD STREET VADUGASATHU VILLAGE,ARANI -632316,TIRUVANNAMALAI DISTRICT",
+    "personalEmail": "sabthagiri13@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/131",
+          "name": "RAJESH PERUMAL",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e751b016-5a46-5d2a-2b72-d5bdbcc19390",
+    "employeeCode": "MTPL/132",
+    "title": "Mr.",
+    "name": "VIVEK JAISWAR",
+    "email": "vivek.j@getsetlearn.info",
+    "phone": "+91-8652446582",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Shashank Sanas",
+    "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-08-01",
+    "status": "Active",
+    "confirmationDate": "2025-02-01",
+    "tenureYears": 1.7,
+    "dateOfBirth": "2000-01-02",
+    "age": 26.3,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Room No 847, Indra Nagar, Rhivasi Seva Sangh, J.B. Marg Mumbai PO: TF Donar Maharashtra 400088",
+    "personalEmail": "jaiswarvivek253@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/132",
+          "name": "VIVEK JAISWAR",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e72c23ec-5c53-59f8-1c92-1b7a76c14d33",
+    "employeeCode": "MTPL/135",
+    "title": "Mr.",
+    "name": "TANUJ SINGH",
+    "email": "tanuj.s@getsetlearn.info",
+    "phone": "+91-9953250434",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Roveena Verma",
+    "reportingManagerId": "e18b8664-7e8c-5d9e-895b-ae0d790ee455",
+    "location": "Delhi",
+    "dateOfJoining": "2024-08-22",
+    "status": "Active",
+    "confirmationDate": "2025-02-22",
+    "tenureYears": 1.7,
+    "dateOfBirth": "1994-11-20",
+    "age": 31.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "H. No-482, Vill+Post- Kalandi, Tehsil- Sardana, district - Meerut , Uttar Pradesh. PIN - 250342",
+    "personalEmail": "tanujrajpoot1212@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/135",
+          "name": "TANUJ SINGH",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "afab6875-f581-5a4f-a623-180138d4afde",
+    "employeeCode": "MTPL/138",
+    "title": "Mr.",
+    "name": "SAHIL SHARMA",
+    "email": "sahil.s@getsetlearn.info",
+    "phone": "+91-9896578193",
+    "designation": "Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Pratik Dastidar",
+    "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "location": "Delhi",
+    "dateOfJoining": "2024-09-09",
+    "status": "Active",
+    "confirmationDate": "2025-03-09",
+    "tenureYears": 1.6,
+    "dateOfBirth": "1991-12-11",
+    "age": 34.4,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "D-212, 2ND FLOOR, MOHAN GARDEN, NEW DELHI-110059",
+    "personalEmail": "sahilsharma076@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/138",
+          "name": "SAHIL SHARMA",
+          "designation": "Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975",
+    "employeeCode": "MTPL/139",
+    "title": "Mr.",
+    "name": "SHIVA EPPA",
+    "email": "shiva.e@getsetlearn.info",
+    "phone": "+91-6303451669",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Hyderabad",
+    "dateOfJoining": "2024-09-09",
+    "status": "Active",
+    "confirmationDate": "2025-03-09",
+    "tenureYears": 1.6,
+    "dateOfBirth": "1995-08-12",
+    "age": 30.7,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Flat No 302, Shiva Sai Pramukha Nilayam, Sathyanarayanapuram Colony, Chaithanayapuri, Hyderabad, 500060",
+    "personalEmail": "shivaeppa1234@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/139",
+          "name": "SHIVA EPPA",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "1feff9e8-7188-53e8-0e7f-bbfd05e644d7",
+    "employeeCode": "MTPL/141",
+    "title": "Mr.",
+    "name": "SUNDEEP MADALAGI",
+    "email": "sundeep.m@getsetlearn.info",
+    "phone": "+91-9538351035",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Belgaum",
+    "dateOfJoining": "2024-09-18",
+    "status": "Active",
+    "confirmationDate": "2025-03-18",
+    "tenureYears": 1.6,
+    "dateOfBirth": "1991-08-08",
+    "age": 34.7,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Flat no-301, 4th floor, Shivsai Apt, Bauxite road, vidyagiri, belgaum- 590010",
+    "personalEmail": "sundeepmadalagi@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/141",
+          "name": "SUNDEEP MADALAGI",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "86bc8333-efce-57ac-3e45-26524abd3239",
+    "employeeCode": "MTPL/143",
+    "title": "Mr.",
+    "name": "SUMIT MAJUMDER",
+    "email": "sumit.m@getsetlearn.info",
+    "phone": "+91-9818153491",
+    "designation": "Deputy Vice President - Academics",
+    "department": "Sales",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-09-23",
+    "status": "Active",
+    "confirmationDate": "2025-03-23",
+    "tenureYears": 1.6,
+    "dateOfBirth": "Friday, October 2, 1981",
+    "age": 44.6,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "L-2/10, Spaghetti, Sector 15, Kharghar, Navi Mumbai Pin 410210",
+    "personalEmail": "sumitmajumdar81@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/143",
+          "name": "SUMIT MAJUMDER",
+          "designation": "Deputy Vice President - Academics",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "47e2de22-09c9-5bd7-e428-cc4a1e15ef91",
+    "employeeCode": "MTPL/144",
+    "title": "Ms.",
+    "name": "SARA RUMAO",
+    "email": "sara.r@getsetlearn.info",
+    "phone": "+91-7030643577",
+    "designation": "Executive – Instructional Designer",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-10-03",
+    "status": "Active",
+    "confirmationDate": "2025-04-03",
+    "tenureYears": 1.6,
+    "dateOfBirth": "2001-06-10",
+    "age": 24.9,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "JUILEE, MOTHER TERESA SEJOL, LAST STOP, GASS, NALLASOPARA (W),   TAL- VASAI, DIS- Palghar - 401203",
+    "personalEmail": "sararumao2410@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/144",
+          "name": "SARA RUMAO",
+          "designation": "Executive – Instructional Designer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0342dae1-f699-5c97-0065-8d10b0da51d6",
+    "employeeCode": "MTPL/145",
+    "title": "Ms.",
+    "name": "SIDDHI GAWADE",
+    "email": "siddhi.g@getsetlearn.info",
+    "phone": "+91-8451834416",
+    "designation": "Executive – Instructional Designer",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-10-03",
+    "status": "Active",
+    "confirmationDate": "2025-04-03",
+    "tenureYears": 1.6,
+    "dateOfBirth": "Tuesday, October 31, 2000",
+    "age": 25.5,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "GURUKRUPA PARAM, 'A' WING, FLAT NO. 801, KANNAMWAR NAGAR 2,VIKHROLI (EAST), MUMBAI- 400083",
+    "personalEmail": "siddhigawade59@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/145",
+          "name": "SIDDHI GAWADE",
+          "designation": "Executive – Instructional Designer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "9482d08f-da43-5d36-f277-ae04390220a7",
+    "employeeCode": "MTPL/146",
+    "title": "Mr.",
+    "name": "NEELADRI SEN",
+    "email": "neeladri.s@getsetlearn.info",
+    "phone": "+91-8013851141",
+    "designation": "Manager - Demonstrations and Support",
+    "department": "Demonstration & Support",
+    "reportingTo": "Pratik Dastidar",
+    "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-10-03",
+    "status": "Active",
+    "confirmationDate": "2025-04-03",
+    "tenureYears": 1.6,
+    "dateOfBirth": "Sunday, June 27, 1999",
+    "age": 26.8,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "1484, DEB BANNERJEE ROAD, KOL-700039",
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/146",
+          "name": "NEELADRI SEN",
+          "designation": "Manager - Demonstrations and Support",
+          "department": "Demonstration & Support"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "85cd7a51-9dfc-5b12-c490-1fcb839816ea",
+    "employeeCode": "MTPL/149",
+    "title": "Mr.",
+    "name": "RANOTOSH GHOSH",
+    "email": "ranotosh.g@getsetlearn.info",
+    "phone": "+91-6397481274",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Prodipto Banerjee",
+    "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "location": "Kolkata",
+    "dateOfJoining": "2024-10-14",
+    "status": "Active",
+    "confirmationDate": "2025-04-14",
+    "tenureYears": 1.5,
+    "dateOfBirth": "Saturday, October 29, 1988",
+    "age": 37.5,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "265/B, Maharani Indira Devi Road, Behala Parnashree, Kolkata - 700060",
+    "personalEmail": "ranotosh.ghosh@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/149",
+          "name": "RANOTOSH GHOSH",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "f758a3d8-8897-592e-d02c-d73e9d30b2b3",
+    "employeeCode": "MTPL/150",
+    "title": "Ms.",
+    "name": "NAMRATA SAWANT",
+    "email": "namrata.s@getsetlearn.info",
+    "phone": "+91-9137546454",
+    "designation": "Chief Manager - Operations",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2024-11-04",
+    "status": "Active",
+    "confirmationDate": "2025-05-04",
+    "tenureYears": 1.5,
+    "dateOfBirth": "Monday, June 7, 1982",
+    "age": 43.9,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "B/603 Bhakti Ornate, Plot No. 71, Sector - 35, Kamothe, Mansarovar, Navi Mumbai- 410206.",
+    "personalEmail": "namrata198259@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/150",
+          "name": "NAMRATA SAWANT",
+          "designation": "Chief Manager - Operations",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "acfb8956-81c2-51ac-969c-50463be531ee",
+    "employeeCode": "MTPL/152",
+    "title": "Mr.",
+    "name": "SURESH MAHURKAR",
+    "email": "suresh.m@getsetlearn.info",
+    "phone": "+91-9860097791",
+    "designation": "Zonal Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Nilabhra Poddar",
+    "reportingManagerId": null,
+    "location": "Pune",
+    "dateOfJoining": "2024-11-11",
+    "status": "Active",
+    "confirmationDate": "2025-05-11",
+    "tenureYears": 1.4,
+    "dateOfBirth": "Monday, May 16, 1977",
+    "age": 49,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "C-1001,Phase-II, Grande View-7, Ambegaon Budruk, Pune-411046",
+    "personalEmail": "sur_mah@yahoo.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/152",
+          "name": "SURESH MAHURKAR",
+          "designation": "Zonal Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "b5a25060-d0ea-50b9-e15f-d6c131dcfe8d",
+    "employeeCode": "MTPL/156",
+    "title": "Mr.",
+    "name": "BALACHANDRA BALI",
+    "email": "balachandra.b@getsetlearn.info",
+    "phone": "+91-9844674919",
+    "designation": "Area Sales Manager",
+    "department": "Sales",
+    "reportingTo": "Nilabhra Poddar",
+    "reportingManagerId": null,
+    "location": "Bangalore",
+    "dateOfJoining": "2024-11-11",
+    "status": "Active",
+    "confirmationDate": "2025-05-11",
+    "tenureYears": 1.4,
+    "dateOfBirth": "Monday, July 2, 1979",
+    "age": 46.8,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "101, MARS ENCLAVE, BESIDE RELIANCEMART POINT, DODDABOMMASANDRA ROAD, VIDYARANYAPURA, BENAGALURU - 560097",
+    "personalEmail": "bpbali@yahoo.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/156",
+          "name": "BALACHANDRA BALI",
+          "designation": "Area Sales Manager",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "employeeCode": "MTPL/158",
+    "title": "Mr.",
+    "name": "VISHWANATH GHANEKAR",
+    "email": "vishwanath.g@getsetlearn.info",
+    "phone": "+91-9867603674",
+    "designation": "GM - Key accounts",
+    "department": "Sales",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2024-11-25",
+    "status": "Active",
+    "confirmationDate": "2025-05-25",
+    "tenureYears": 1.4,
+    "dateOfBirth": "1974-03-06",
+    "age": 51.9,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "6/302, Devdarshan CHS, Dongripada, Ghodbunder Road, Thane (w) PIN: 400615",
+    "personalEmail": "vishwanath.ghanekar@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/158",
+          "name": "VISHWANATH GHANEKAR",
+          "designation": "GM - Key accounts",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "1584f525-bad3-5aa3-a9ca-a7a748543f6f",
+    "employeeCode": "MTPL/160",
+    "title": "Mr.",
+    "name": "BALU MAHENDRAN",
+    "email": "balu.r@getsetlearn.info",
+    "phone": null,
+    "designation": "",
+    "department": "Sales",
+    "reportingTo": "Nilabhra Poddar",
+    "reportingManagerId": null,
+    "location": "Chennai",
+    "dateOfJoining": "2024-12-04",
+    "status": "Active",
+    "confirmationDate": "2025-06-04",
+    "tenureYears": 1.4,
+    "dateOfBirth": "1996-06-10",
+    "age": 29.9,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": null,
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/160",
+          "name": "BALU MAHENDRAN",
+          "designation": "",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "633cca68-8d72-503f-ba41-e6cfd62bb405",
+    "employeeCode": "MTPL/161",
+    "title": "Ms.",
+    "name": "DIVYA NYAMAGOUDRA",
+    "email": "divya.n@getsetlearn.info",
+    "phone": "+91-6366117017",
+    "designation": "ROR Developer",
+    "department": "Technology",
+    "reportingTo": "Ajith Nair",
+    "reportingManagerId": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+    "location": "Bangalore",
+    "dateOfJoining": "2025-01-06",
+    "status": "Active",
+    "confirmationDate": "2025-07-06",
+    "tenureYears": 1.3,
+    "dateOfBirth": "1993-06-21",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "H.R.nyamagoudra,malali,tq: mudhol, di: bagalkot",
+    "personalEmail": "d.h.nyamagoudra@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/161",
+          "name": "DIVYA NYAMAGOUDRA",
+          "designation": "ROR Developer",
+          "department": "Technology"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "926fbc03-3fa2-5940-f653-aa0ba07d0ff3",
+    "employeeCode": "MTPL/162",
+    "title": "Mr.",
+    "name": "NANDAN ESWAR",
+    "email": "nandan.e@getsetlearn.info",
+    "phone": "+91-9967945654",
+    "designation": "Assistant - Product Manager",
+    "department": "Product",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-01-13",
+    "status": "Active",
+    "confirmationDate": "2025-07-13",
+    "tenureYears": 1.3,
+    "dateOfBirth": "Friday, May 25, 2001",
+    "age": 24.9,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Mannveedu 9C1, 24/72 Irudhayapuram Main Road, Shenbaganur, Kodaikanal, Tamil Nadu, India",
+    "personalEmail": "nandaneswar@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/162",
+          "name": "NANDAN ESWAR",
+          "designation": "Assistant - Product Manager",
+          "department": "Product"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2735a849-933f-50b8-90b7-0224a1ee6563",
+    "employeeCode": "MTPL/165",
+    "title": "Mr.",
+    "name": "ZEESHAN QUADRI",
+    "email": "zeeshan.q@getsetlearn.info",
+    "phone": "+91-8447170834",
+    "designation": "Senior Exceutive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Delhi",
+    "dateOfJoining": "2025-02-11",
+    "status": "Active",
+    "confirmationDate": "2025-08-11",
+    "tenureYears": 1.2,
+    "dateOfBirth": "Tuesday, December 19, 2000",
+    "age": 25.4,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "J-19/D Abulfazal Enclave Jamia Nagar Okhla New Delhi-25",
+    "personalEmail": "zshan3122@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/165",
+          "name": "ZEESHAN QUADRI",
+          "designation": "Senior Exceutive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "f0268980-a946-5dd6-780f-bae0d8a1b61a",
+    "employeeCode": "MTPL/167",
+    "title": "Ms.",
+    "name": "PRITY MANDAL",
+    "email": "prity.m@getsetlearn.info",
+    "phone": "+91-8240716023",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-03-03",
+    "status": "Active",
+    "confirmationDate": "2025-09-03",
+    "tenureYears": 1.1,
+    "dateOfBirth": "Saturday, June 22, 2002",
+    "age": 23.9,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Uttar Maheshtala , Natun para. P.S: Maheshtala , P.O: Dhakghar, District : South 24 Parganas, State : West Bengal, PIN Code: 700141",
+    "personalEmail": "pritymandal2016@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/167",
+          "name": "PRITY MANDAL",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "11593bb1-7b33-52c0-2312-65937167c17a",
+    "employeeCode": "MTPL/170",
+    "title": "Ms.",
+    "name": "NILANJANA DEY",
+    "email": "nilanjana.d@getsetlearn.info",
+    "phone": "+91-9093266162",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-04-01",
+    "status": "Active",
+    "confirmationDate": "2025-09-01",
+    "tenureYears": 1.1,
+    "dateOfBirth": "Thursday, October 4, 2001",
+    "age": 24.6,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Benda, Hat Krishnanagar, Patrasayer, Bankura, West Bengal,722206",
+    "personalEmail": "nilanjanadey.kdm@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/170",
+          "name": "NILANJANA DEY",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2c251e56-903f-5a06-b8cf-4d0462eaa0e3",
+    "employeeCode": "MTPL/172",
+    "title": "Ms.",
+    "name": "POOJA SOM",
+    "email": "pooja.s1@getsetlearn.info",
+    "phone": "+91-9634844981",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Meerut",
+    "dateOfJoining": "2025-04-15",
+    "status": "Active",
+    "confirmationDate": "2025-09-15",
+    "tenureYears": 1,
+    "dateOfBirth": "1999-10-28",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "718/1,Roshanpur Daurli Roorkee Road Meerut",
+    "personalEmail": "poojasom751@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/172",
+          "name": "POOJA SOM",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "c9367668-8b15-5d6c-7a3d-58f91c912233",
+    "employeeCode": "MTPL/173",
+    "title": "Mr.",
+    "name": "AJMAL HUSAIN",
+    "email": "ajmal.h@getsetlearn.info",
+    "phone": "+91-8340655508",
+    "designation": "Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Faridabad",
+    "dateOfJoining": "2025-04-15",
+    "status": "Active",
+    "confirmationDate": "2025-09-15",
+    "tenureYears": 1,
+    "dateOfBirth": "Thursday, February 14, 2002",
+    "age": 24.2,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "CCR8+PVQ, 281, Mission Pally, Narendrapur, Rajpur Sonarpur, West Bengal 700150",
+    "personalEmail": "techajmal1404@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/173",
+          "name": "AJMAL HUSAIN",
+          "designation": "Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "69362960-de90-587f-d116-6774a46fb352",
+    "employeeCode": "MTPL/175",
+    "title": "Ms.",
+    "name": "ANITA CHOUDHARY",
+    "email": "anita.c@getsetlearn.info",
+    "phone": "+91-8591099599",
+    "designation": "Executive - Admin & Accounts",
+    "department": "Finance & Accounts",
+    "reportingTo": "Pranav Bhardwaj",
+    "reportingManagerId": "3b3bd30c-827d-5b95-f981-d16897cdf7f9",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-04-28",
+    "status": "Active",
+    "confirmationDate": "2025-09-29",
+    "tenureYears": 1,
+    "dateOfBirth": "Tuesday, June 22, 2004",
+    "age": 21.9,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "5B/401 Paradise Park , Near New Viva College, Virar West- 401303",
+    "personalEmail": "shirvianita@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/175",
+          "name": "ANITA CHOUDHARY",
+          "designation": "Executive - Admin & Accounts",
+          "department": "Finance & Accounts"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2a9d38f1-e5e6-58fe-8ef2-e596af55e618",
+    "employeeCode": "MTPL/176",
+    "title": "Mr.",
+    "name": "ASHISH RANA",
+    "email": "ashish.r@getsetlearn.info",
+    "phone": "+91-8445950633",
+    "designation": "Executive - Sales",
+    "department": "Sales",
+    "reportingTo": "Roveena Verma",
+    "reportingManagerId": "e18b8664-7e8c-5d9e-895b-ae0d790ee455",
+    "location": "Delhi",
+    "dateOfJoining": "2025-05-01",
+    "status": "Active",
+    "confirmationDate": "2025-10-01",
+    "tenureYears": 1,
+    "dateOfBirth": "Thursday, April 12, 2001",
+    "age": 25,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "K69, Street 12, Krishna Park Extension,Tilak nagar,110018",
+    "personalEmail": "ashishranas99@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/176",
+          "name": "ASHISH RANA",
+          "designation": "Executive - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fa68fe81-9768-5f42-138e-8aaab76149e2",
+    "employeeCode": "MTPL/177",
+    "title": "Mr.",
+    "name": "SHYAM ROY",
+    "email": "shyam.r@getsetlearn.info",
+    "phone": "+91-9366466386",
+    "designation": "Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Prodipto Banerjee",
+    "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-05-01",
+    "status": "Active",
+    "confirmationDate": "2025-10-01",
+    "tenureYears": 1,
+    "dateOfBirth": "Friday, December 20, 1985",
+    "age": 40.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "Balijan,karagaon,Karbianglong,Assam",
+    "personalEmail": "ronakroy789@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/177",
+          "name": "SHYAM ROY",
+          "designation": "Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "27ff56ad-5969-5ae0-99d2-34904e26cdcd",
+    "employeeCode": "MTPL/179",
+    "title": "Ms.",
+    "name": "PRAJAKTA PATIL",
+    "email": "prajakta.p@getsetlearn.info",
+    "phone": "+91-9226868489",
+    "designation": "Executive - Marketing",
+    "department": "Marketing",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-05-21",
+    "status": "Active",
+    "confirmationDate": "2025-10-21",
+    "tenureYears": 0.9,
+    "dateOfBirth": "Saturday, January 10, 2004",
+    "age": 22.3,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "C-203, Saidham Apartments, Mohane Road, Near Sanjay Marbles, Shahad, Kalyan (W)",
+    "personalEmail": "prajaktaprakash004@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/179",
+          "name": "PRAJAKTA PATIL",
+          "designation": "Executive - Marketing",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "d0bac323-dc31-5151-b0bc-af54ca2b9cea",
+    "employeeCode": "MTPL/180",
+    "title": "Ms.",
+    "name": "MANALI BEHERE",
+    "email": "manali.b@getsetlearn.info",
+    "phone": "+91-8355809744",
+    "designation": "Deputy General Manager - Academics",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-05-26",
+    "status": "Active",
+    "confirmationDate": "2025-10-26",
+    "tenureYears": 0.9,
+    "dateOfBirth": "03.06.85",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "304, Janaki Raghunath Residency, Agarkar Road, Dombivali (East) - Kalyan - 421201",
+    "personalEmail": "beheremanalin@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/180",
+          "name": "MANALI BEHERE",
+          "designation": "Deputy General Manager - Academics",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "99cb8890-0271-5487-824a-0b594a5becb1",
+    "employeeCode": "MTPL/181",
+    "title": "Ms.",
+    "name": "PAYAL KUNDU DEY",
+    "email": "payal.d@getsetlearn.info",
+    "phone": "+91-9614232904",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Durgapur",
+    "dateOfJoining": "2025-06-01",
+    "status": "Active",
+    "confirmationDate": "2025-11-30",
+    "tenureYears": 0.9,
+    "dateOfBirth": "26.04.1984",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "Gulmohor Enclave,Block-4,F/2, Bata more, Burnpur,Asansol-713325",
+    "personalEmail": "kundu.payal@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/181",
+          "name": "PAYAL KUNDU DEY",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "1415f213-e192-58b3-e04f-58462d365385",
+    "employeeCode": "MTPL/183",
+    "title": "Ms.",
+    "name": "SAGUFA PRAVEEN",
+    "email": "sagufa.p@getsetlearn.info",
+    "phone": "+91-8305198004",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-06-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "Monday, April 10, 1995",
+    "age": 31.1,
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "address": "5A/13 Shanti Apartment Bedia Danga, 2nd Lane ,Kolkata-700039 West Bengal",
+    "personalEmail": "sagufanaaz786@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/183",
+          "name": "SAGUFA PRAVEEN",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "8dde00d7-0d7e-54f5-0a1d-5ef93b5a0b43",
+    "employeeCode": "MTPL/184",
+    "title": "Mr.",
+    "name": "UMESH BONAM",
+    "email": "umesh.b@getsetlearn.info",
+    "phone": "+91-8520076017",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Rucha Doifode",
+    "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
+    "location": "Hyderabad",
+    "dateOfJoining": "2025-06-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "12/20/1999",
+    "age": 26.4,
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "address": "77-133-12, sundarayya nagar, rajeev nagar, Prakash nagar, Vijayawada, Krishna, Andhra Pradesh, 520015",
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/184",
+          "name": "UMESH BONAM",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "bdde276f-f22d-5372-416d-bfff45756838",
+    "employeeCode": "MTPL/185",
+    "title": "Mr.",
+    "name": "ARPIT SRIVASTAVA",
+    "email": "arpit.srivastava@getsetlearn.info",
+    "phone": "+91-7068679579",
+    "designation": "Assistant Manager - Demonstrations",
+    "department": "Demonstration & Support",
+    "reportingTo": "Neeladri Sen",
+    "reportingManagerId": "9482d08f-da43-5d36-f277-ae04390220a7",
+    "location": "Delhi",
+    "dateOfJoining": "2025-06-10",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "2000-07-27",
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "address": "E1/1, ISRO Housing colony (Govt. of India), Jankipuram, Lucknow 226021",
+    "personalEmail": "arpittanmay84@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/185",
+          "name": "ARPIT SRIVASTAVA",
+          "designation": "Assistant Manager - Demonstrations",
+          "department": "Demonstration & Support"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0fd56219-b1a1-5b3b-74b9-eb2a11ffe313",
+    "employeeCode": "MTPL/186",
+    "title": "Mr.",
+    "name": "SONU KUMAR",
+    "email": "sonu.k@getsetlearn.info",
+    "phone": "+91-7808446833",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-06-16",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "Sunday, March 23, 2003",
+    "age": 23.1,
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "address": "Ashok Puram, opp Road No. 4, Ashok Nagar, Ranchi, Jharkhand",
+    "personalEmail": "sonukr11853@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/186",
+          "name": "SONU KUMAR",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "1c407da1-acf1-593b-40f9-e80b823f2c2f",
+    "employeeCode": "MTPL/188",
+    "title": "Mr.",
+    "name": "RAHUL PRASAD KESHRI",
+    "email": "rahul.k@getsetlearn.info",
+    "phone": "+91-8271235512",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-06-16",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "Monday, October 11, 2004",
+    "age": 21.5,
+    "gender": "MALE",
+    "maritalStatus": "SINGLE",
+    "address": "87, PATNA ROAD BARHI, UJJAINA, HAZARIBAGH, JHARKHAND, 825405",
+    "personalEmail": "rahulprasadkeshri11@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/188",
+          "name": "RAHUL PRASAD KESHRI",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "449d7ec4-4d6e-57d3-2f63-e5db5caaf8ce",
+    "employeeCode": "MTPL/189",
+    "title": "Mr.",
+    "name": "ANISH DUTTA",
+    "email": "anish.d@getsetlearn.info",
+    "phone": "+91-9686917041",
+    "designation": "Manager - Product",
+    "department": "Founder's Office",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2025-06-17",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.9,
+    "dateOfBirth": "Saturday, July 12, 1997",
+    "age": 28.8,
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "address": "B, 101 Ganapati Enclave 117A Santosh Roy Road",
+    "personalEmail": "anishdutta127@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/189",
+          "name": "ANISH DUTTA",
+          "designation": "Manager - Product",
+          "department": "Founder's Office"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "4e956307-58b5-5019-b0a1-5e8b6a3a863c",
+    "employeeCode": "MTPL/191",
+    "title": "Mr.",
+    "name": "SABYASACHI BANERJEE",
+    "email": "sabyasachi.b@getsetlearn.info",
+    "phone": "+91-7003481365",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Prodipto Banerjee",
+    "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-06-23",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.8,
+    "dateOfBirth": "1993-11-17",
+    "age": null,
+    "gender": "MALE",
+    "maritalStatus": "MARRIED",
+    "address": "33B, SOUTH PARK, BANSDRONI, KOLKATA - 700070",
+    "personalEmail": "sabya.banerjee93@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/191",
+          "name": "SABYASACHI BANERJEE",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ebf89067-2f50-5726-cc8a-7b8f4e9f5b96",
+    "employeeCode": "MTPL/192",
+    "title": "Ms.",
+    "name": "BIJAYATA SARKAR",
+    "email": "bijayata.s@getsetlearn.info",
+    "phone": "+91-8392072659",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Durgapur",
+    "dateOfJoining": "2025-07-02",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.8,
+    "dateOfBirth": "2002-12-19",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Single",
+    "address": "Boral, Tarangapur, Kaliyaganj, Uttar Dinajpur",
+    "personalEmail": "bijayatasarkar0@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/192",
+          "name": "BIJAYATA SARKAR",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "57873a98-aede-520c-3828-2d545c600f48",
+    "employeeCode": "MTPL/193",
+    "title": "Ms.",
+    "name": "ANGSHULIMA RAI CHAUDHURI",
+    "email": "angshulima.c@getsetlearn.info",
+    "phone": "+91-9647270087",
+    "designation": "Executive – STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Durgapur",
+    "dateOfJoining": "2025-07-02",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.8,
+    "dateOfBirth": "Monday, October 8, 2001",
+    "age": 24.6,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "144/A/1,AC road,Berhampore Murshidabad-742103,West Bengal",
+    "personalEmail": "pinruchowdhuryr2@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/193",
+          "name": "ANGSHULIMA RAI CHAUDHURI",
+          "designation": "Executive – STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "5593ce23-b4dc-51c8-8ce8-a6ac9d86cab6",
+    "employeeCode": "MTPL/194",
+    "title": "Mr.",
+    "name": "DARSHAN JOSHI",
+    "email": "darshan.j@getsetlearn.info",
+    "phone": "+91-8779761752",
+    "designation": "Manager - Competitions",
+    "department": "Product and Training",
+    "reportingTo": "Vishwanath Ghanekar",
+    "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-07-07",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.797260274,
+    "dateOfBirth": "1996-04-17",
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "801, Casa Foresta,",
+    "personalEmail": "darshan.joshi17@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/194",
+          "name": "DARSHAN JOSHI",
+          "designation": "Manager - Competitions",
+          "department": "Product and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "30a33797-510a-5639-9d5d-afd150d36f2a",
+    "employeeCode": "MTPL/195",
+    "title": "Mr.",
+    "name": "MUFADDAL KAGALWALA",
+    "email": "mufaddal.k@getsetlearn.info",
+    "phone": "+91-9920225127",
+    "designation": "Manager - VEX Product & Training",
+    "department": "Product and Training",
+    "reportingTo": "Vishwanath Ghanekar",
+    "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-07-07",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.797260274,
+    "dateOfBirth": "Saturday, March 4, 1989",
+    "age": 37.2,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "SBPT-1, Anjeerwadi, Mazgaon, Mumbai 400010.",
+    "personalEmail": "mufaddal.kagalwala@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/195",
+          "name": "MUFADDAL KAGALWALA",
+          "designation": "Manager - VEX Product & Training",
+          "department": "Product and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "3d9c7696-761d-5b81-7b0b-39993fcfa80a",
+    "employeeCode": "MTPL/197",
+    "title": "Mr.",
+    "name": "SAPTAK SARKAR",
+    "email": "saptak.s@getsetlearn.info",
+    "phone": "+91-7044509433",
+    "designation": "Executive - STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-07-31",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.731506849,
+    "dateOfBirth": "09.08.2002",
+    "age": 23,
+    "gender": "Male",
+    "maritalStatus": "Single",
+    "address": "30, Chanchal Sarani, Santoshpur",
+    "personalEmail": "saptaksarkar.2002@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/197",
+          "name": "SAPTAK SARKAR",
+          "designation": "Executive - STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2944d3e0-b5a2-5af8-f90d-e603f59141a4",
+    "employeeCode": "MTPL/198",
+    "title": "Ms.",
+    "name": "SUKHADA KARVE",
+    "email": "sukhada.k@getsetlearn.info",
+    "phone": "+91-7083730776",
+    "designation": "Junior Graphic Designer",
+    "department": "Marketing",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-08-04",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.720547945,
+    "dateOfBirth": "Monday, May 3, 2004",
+    "age": 22,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Mhada colony, Dadar E, Mumbai",
+    "personalEmail": "karvesukhada05@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/198",
+          "name": "SUKHADA KARVE",
+          "designation": "Junior Graphic Designer",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "e2cda8a9-393c-5acb-5c9c-cfe70e0fc4dd",
+    "employeeCode": "MTPL/199",
+    "title": "Ms.",
+    "name": "LARISA DABRE",
+    "email": "larisa.d@getsetlearn.info",
+    "phone": "85520844739370432536",
+    "designation": "Junior Instructional Designer",
+    "department": "Academics",
+    "reportingTo": "Tooba Mirza",
+    "reportingManagerId": "130579bf-447a-5bb8-57f1-03b5a58b994c",
+    "location": "Mumbai",
+    "dateOfJoining": "2025-08-04",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.720547945,
+    "dateOfBirth": "Tuesday, August 20, 2002",
+    "age": 23.7,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Ashirward', Bhuigaon, Samni, Near Jap Ali Road. Vasai (W) - 401201 , Mumbai - Maharashtra",
+    "personalEmail": "larisadabre20@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/199",
+          "name": "LARISA DABRE",
+          "designation": "Junior Instructional Designer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "9c9b0042-b87a-53f0-db69-d08d51d67f3d",
+    "employeeCode": "MTPL/200",
+    "title": "Mr.",
+    "name": "ANSHUMAN GUPTA",
+    "email": "anshuman.g@getsetlearn.info",
+    "phone": "+91-9110069298",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Prodipto Banerjee",
+    "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "location": "Jharkhand",
+    "dateOfJoining": "2025-08-08",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.709589041,
+    "dateOfBirth": "2000-07-21",
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "New Mahabir Colony, Samlong, Bhuiyantoli, Landmark - Near Ramhari Garden, Ranchi, Jharkhand, 834001",
+    "personalEmail": "anshuman21072000@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/200",
+          "name": "ANSHUMAN GUPTA",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b",
+    "employeeCode": "MTPL/201",
+    "title": "Mr.",
+    "name": "RAKESH R",
+    "email": "rakesh.r@getsetlearn.info",
+    "phone": "+91-9740177666",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Balachandra Bali",
+    "reportingManagerId": "b5a25060-d0ea-50b9-e15f-d6c131dcfe8d",
+    "location": "Bangalore",
+    "dateOfJoining": "2025-08-11",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.701369863,
+    "dateOfBirth": "Sunday, February 10, 1991",
+    "age": 35.2,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "No 11 2nd Cross, Amar joyothi layout, Thanisandra Main Road, Bangalore - 560077",
+    "personalEmail": "rrakesh441@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/201",
+          "name": "RAKESH R",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ac75706b-9175-5fb0-beb7-9882213db98b",
+    "employeeCode": "MTPL/202",
+    "title": "Mr.",
+    "name": "SUSHANTH JAIN",
+    "email": "sushanth.j@getsetlearn.info",
+    "phone": "+91-7338201978",
+    "designation": "Assistant Manager - Sales",
+    "department": "Sales",
+    "reportingTo": "Balachandra Bali",
+    "reportingManagerId": "b5a25060-d0ea-50b9-e15f-d6c131dcfe8d",
+    "location": "Bangalore",
+    "dateOfJoining": "2025-09-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.643835616,
+    "dateOfBirth": "Sunday, October 10, 1999",
+    "age": 26.6,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "4, Aditi enclave, 2nd cross road, Rajeshwari layout, Yelachenahalli, Kumaraswamy layout, Bengaluru, Karnataka- 560111",
+    "personalEmail": "sushanthjain03@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/202",
+          "name": "SUSHANTH JAIN",
+          "designation": "Assistant Manager - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "5f6e8235-308e-53b2-b6e1-a4979ed4b57b",
+    "employeeCode": "MTPL/203",
+    "title": "Mr.",
+    "name": "NAVEEN J KUMAR",
+    "email": "naveen.k@getsetlearn.info",
+    "phone": "+91-9944303860",
+    "designation": "Senior Executive - Sales",
+    "department": "Sales",
+    "reportingTo": "Balu R",
+    "reportingManagerId": "1584f525-bad3-5aa3-a9ca-a7a748543f6f",
+    "location": "Chennai",
+    "dateOfJoining": "2025-09-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.643835616,
+    "dateOfBirth": "1987-11-19",
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "No 290 Balunagar Virudhambattu Vellore -632006",
+    "personalEmail": "naveen5aknk@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/203",
+          "name": "NAVEEN J KUMAR",
+          "designation": "Senior Executive - Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "3655d7b3-8461-53da-06a7-ee160af28158",
+    "employeeCode": "MTPL/204",
+    "title": "Ms.",
+    "name": "LEKHA RAJESWARI",
+    "email": "lekha.r@getsetlearn.info",
+    "phone": "+91-7671879889",
+    "designation": "Executive - STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Chennai",
+    "dateOfJoining": "2025-09-15",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.605479452,
+    "dateOfBirth": "Sunday, April 14, 2002",
+    "age": 24,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "1/117, Padur physio clinic, Kanniamman koil street, Padur-603103",
+    "personalEmail": "lekharajeswarii144@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/204",
+          "name": "LEKHA RAJESWARI",
+          "designation": "Executive - STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "04e6bc2e-79de-501a-12c9-022958efcc9e",
+    "employeeCode": "MTPL/205",
+    "title": "Mr.",
+    "name": "CHETHAN HS",
+    "email": "chethan.h@getsetlearn.info",
+    "phone": "+91-7259763505",
+    "designation": "Manager - Product",
+    "department": "Product",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Bangalore",
+    "dateOfJoining": "2025-10-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.561643836,
+    "dateOfBirth": "Friday, December 6, 1991",
+    "age": 34.4,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "#36, 6th cross, Mari Gowda Layout, Mandya, Karnataka - 571401",
+    "personalEmail": "chethu2chethan@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/205",
+          "name": "CHETHAN HS",
+          "designation": "Manager - Product",
+          "department": "Product"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "6cbf4fdc-e511-52e9-7769-06fd48e59a9b",
+    "employeeCode": "MTPL/206",
+    "title": "Mr.",
+    "name": "VIVEK SHARMA",
+    "email": "vivek.s@getsetlearn.info",
+    "phone": "+91-9135617917",
+    "designation": "STEM Mentor",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Contai",
+    "dateOfJoining": "2025-10-13",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.528767123,
+    "dateOfBirth": "Monday, July 9, 2001",
+    "age": 24,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Q. NO-A/6, HEC COLONY, SECTOR-4, RANCHI ,JHARKHAND-834004",
+    "personalEmail": "sharmavivekhi@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/206",
+          "name": "VIVEK SHARMA",
+          "designation": "STEM Mentor",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "2d1cdfa0-6a0e-53bf-a940-7ba3e20c695f",
+    "employeeCode": "MTPL/207",
+    "title": "Mr.",
+    "name": "MAYANK SHARMA",
+    "email": "mayank.s@getsetlearn.info",
+    "phone": "+91-9582013221",
+    "designation": "Manager - Key Accounts",
+    "department": "Sales",
+    "reportingTo": "Vishwanath Ghanekar",
+    "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "location": "Delhi",
+    "dateOfJoining": "2025-11-03",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.471232877,
+    "dateOfBirth": "1985-11-08",
+    "age": 40.5,
+    "gender": "Male",
+    "maritalStatus": "Married",
+    "address": "F-1106, 11th Floor, Tower-18, River Heights, Rajangar Extension, Ghaziabad (U.P./Delhi NCR) - 201017",
+    "personalEmail": "mayshar.08@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/207",
+          "name": "MAYANK SHARMA",
+          "designation": "Manager - Key Accounts",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "f2e5f389-e26f-5205-eee6-e67e1312d3f8",
+    "employeeCode": "MTPL/208",
+    "title": "Mr.",
+    "name": "DEVASHISH KUMAR",
+    "email": "devashish.k@getsetlearn.info",
+    "phone": "+91-9801679010",
+    "designation": "STEM Mentor",
+    "department": "STEM and Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Bandel",
+    "dateOfJoining": "2025-11-24",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.41369863,
+    "dateOfBirth": "2003-02-26",
+    "age": 23.2,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "vill+post - Mirza Nagar, Dist - Vaishali,ps - Mahua, state - Bihar, pin code - 844139",
+    "personalEmail": "devashishkumar992@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/208",
+          "name": "DEVASHISH KUMAR",
+          "designation": "STEM Mentor",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fe18c4e8-d2ad-5533-e2e4-4255acebeae2",
+    "employeeCode": "MTPL/209",
+    "title": "Mr.",
+    "name": "ARUNABHA BHATTACHARJEE",
+    "email": "arunabha.b@getsetlearn.info",
+    "phone": "+91-7005156651",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Deepjyoti Das",
+    "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-11-27",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": null,
+    "dateOfBirth": "Saturday, November 14, 1998",
+    "age": 27.5,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/209",
+          "name": "ARUNABHA BHATTACHARJEE",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0ecb7b04-73cb-53c9-359c-8bfe9f57c4f1",
+    "employeeCode": "MTPL/210",
+    "title": "Mr.",
+    "name": "PRASATH P",
+    "email": "prasath.p@getsetlearn.info",
+    "phone": "+91-7871148331",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Chennai",
+    "dateOfJoining": "2025-12-04",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.38630137,
+    "dateOfBirth": "1997-12-21",
+    "age": 28.4,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Flat no. F3, GK Builders-14, Ambal Gajalakshmi nagar, Poonamalee. Chennai - 600122",
+    "personalEmail": "prasathmpragasam@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/210",
+          "name": "PRASATH P",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "da0dc0d6-89f4-52a7-a9d7-1c3e246baf2c",
+    "employeeCode": "MTPL/211",
+    "title": "Mr.",
+    "name": "PARTHIB PATRA",
+    "email": "parthib.p@getsetlearn.info",
+    "phone": "+91-8013283634",
+    "designation": "Assistant Manager - STEM & Training",
+    "department": "STEM and Training",
+    "reportingTo": "Deepjyoti Das",
+    "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "location": "Kolkata",
+    "dateOfJoining": "2025-12-04",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.38630137,
+    "dateOfBirth": "1989-06-06",
+    "age": 36.9,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "37/F JAN NAGAR ROAD, MAHESH, SERAMPORE, HOOGHLY, 712202",
+    "personalEmail": "senorparthib@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/211",
+          "name": "PARTHIB PATRA",
+          "designation": "Assistant Manager - STEM & Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "de076da4-669a-5ce7-4500-fd15724e7457",
+    "employeeCode": "MTPL/212",
+    "title": "Mr.",
+    "name": "AVI",
+    "email": "avi.k@getsetlearn.info",
+    "phone": null,
+    "designation": "Product Manager -AI",
+    "department": "Technology",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2025-12-05",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.383561644,
+    "dateOfBirth": "1995-01-01",
+    "age": 31.3,
+    "gender": "Male",
+    "maritalStatus": null,
+    "address": null,
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/212",
+          "name": "AVI",
+          "designation": "Product Manager -AI",
+          "department": "Technology"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fb5d8c80-fce8-57e8-9fc0-f40de9995cc9",
+    "employeeCode": "MTPL/213",
+    "title": "Mrs.",
+    "name": "PAVITHRA DHANEKAR",
+    "email": "pavithra.d@getsetlearn.info",
+    "phone": "+91-9514525514",
+    "designation": "Senior Executive - STEM and Training",
+    "department": "STEM and Training",
+    "reportingTo": "Pallavi Tatawati",
+    "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
+    "location": "Chennai",
+    "dateOfJoining": "2025-12-15",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.356164384,
+    "dateOfBirth": "1997-09-20",
+    "age": 28.6,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "No.5,20th steet,nehru colony, nanganallur, chennai-61",
+    "personalEmail": "pavithrad2097@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/213",
+          "name": "PAVITHRA DHANEKAR",
+          "designation": "Senior Executive - STEM and Training",
+          "department": "STEM and Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ae7f23f5-6bf9-5eb4-0253-c1649b6e335e",
+    "employeeCode": "MTPL/214",
+    "title": "Mr.",
+    "name": "BALAJI.S",
+    "email": "balaji.s@getsetlearn.info",
+    "phone": "+91-9176423485",
+    "designation": "Area Manager -Sales",
+    "department": "Sales",
+    "reportingTo": "BALU MAHENDRAN",
+    "reportingManagerId": "1584f525-bad3-5aa3-a9ca-a7a748543f6f",
+    "location": "Chennai",
+    "dateOfJoining": "2025-12-18",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.347945205,
+    "dateOfBirth": null,
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "SRP Colony Main Road, Peravllur, Chennai-600082.",
+    "personalEmail": "balajimsd36@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/214",
+          "name": "BALAJI.S",
+          "designation": "Area Manager -Sales",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "269956e2-7b5f-560e-f0c2-429bdcd6b86b",
+    "employeeCode": "MTPL/215",
+    "title": "Ms.",
+    "name": "RIDDHI SHETH",
+    "email": "hr@getsetlearn.info",
+    "phone": null,
+    "designation": "Sr. HRBP Lead",
+    "department": "Human Resources",
+    "reportingTo": "Ameet Zaveri",
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": "2026-01-19",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.25,
+    "dateOfBirth": "1998-07-03",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": null,
+    "address": null,
+    "personalEmail": null,
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/215",
+          "name": "RIDDHI SHETH",
+          "designation": "Sr. HRBP Lead",
+          "department": "Human Resources"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "fbf9c1ff-ef71-5c4e-9614-c587b4ede7dd",
+    "employeeCode": "MTPL/216",
+    "title": "Ms.",
+    "name": "SHRUTI PATKIE",
+    "email": "hiring@getsetlearn.info",
+    "phone": "+91-9820362829",
+    "designation": "Sr. Executive- Hr & Admin",
+    "department": "Human Resources",
+    "reportingTo": "Riddhi Sheth",
+    "reportingManagerId": "269956e2-7b5f-560e-f0c2-429bdcd6b86b",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-01-20",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.25,
+    "dateOfBirth": "1999-07-01",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "A-1302, Sainath Heights, Neelam Nagar, Phase 2, Mulund (E)",
+    "personalEmail": "patkie.shruti@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/216",
+          "name": "SHRUTI PATKIE",
+          "designation": "Sr. Executive- Hr & Admin",
+          "department": "Human Resources"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "354c030e-7d4a-5d1f-54cd-23fba729a562",
+    "employeeCode": "MTPL/217",
+    "title": "Ms.",
+    "name": "AAROHI BHARTI",
+    "email": "aarohi.b@getsetlearn.info",
+    "phone": "+91-7819964785",
+    "designation": "STEM Mentor",
+    "department": "STEM & Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Delhi",
+    "dateOfJoining": "2026-01-22",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.24,
+    "dateOfBirth": "2001-02-18",
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "Hn. 48, Krishna Nagar near 6th BN PAC Roorkee Rd., Meerut",
+    "personalEmail": "bhartiaarohi@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/217",
+          "name": "AAROHI BHARTI",
+          "designation": "STEM Mentor",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "4670d37f-7598-5511-66e6-83f15ee0822c",
+    "employeeCode": "MTPL/218",
+    "title": "Ms.",
+    "name": "SPOORTHI HONNATI",
+    "email": "spoorthi.h@getsetlearn.info",
+    "phone": "+91-7340000000",
+    "designation": "Key Accounts Manager",
+    "department": "Sales",
+    "reportingTo": "Vishwanath Ghanekar",
+    "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "location": "Bangalore",
+    "dateOfJoining": "2026-02-02",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.2,
+    "dateOfBirth": "1998-04-15",
+    "age": 27,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "210,2nd main road , Mahalakshmi Layout , Bangalore 560086",
+    "personalEmail": "spoorthispoo7366@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/218",
+          "name": "SPOORTHI HONNATI",
+          "designation": "Key Accounts Manager",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "7fb22281-1cbe-558f-65f9-095bf23c1298",
+    "employeeCode": "MTPL/219",
+    "title": "Ms",
+    "name": "SANA SHAIKH",
+    "email": "sana.s@getsetlearn.info",
+    "phone": "+91-9136594849",
+    "designation": "Sr. STEM Mentor",
+    "department": "STEM & Training",
+    "reportingTo": "Deepjyoti Das",
+    "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
+    "location": "Kolkata",
+    "dateOfJoining": "2026-02-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.2,
+    "dateOfBirth": "1993-06-12",
+    "age": 32,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "13/1A Pemantle Street, Kolkata, 700016",
+    "personalEmail": "nehaxshaikh1206@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/219",
+          "name": "SANA SHAIKH",
+          "designation": "Sr. STEM Mentor",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "add8f363-5ac0-53f8-ab2c-4358c11e11e5",
+    "employeeCode": "MTPL/220",
+    "title": "MR.",
+    "name": "PHM",
+    "email": "",
+    "phone": null,
+    "designation": "",
+    "department": "",
+    "reportingTo": null,
+    "reportingManagerId": null,
+    "location": "Mumbai",
+    "dateOfJoining": null,
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": null,
+    "dateOfBirth": null,
+    "age": null,
+    "gender": null,
+    "maritalStatus": null,
+    "address": null,
+    "personalEmail": null,
+    "officialEmailMissing": true,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/220",
+          "name": "PHM",
+          "designation": "",
+          "department": ""
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "555bdd65-5ce3-5292-d374-38d283f84850",
+    "employeeCode": "MTPL/221",
+    "title": "Mr",
+    "name": "ABHISHEK KODURU",
+    "email": "abhishek.k@getsetlearn.info",
+    "phone": "+91-6305521057",
+    "designation": "STEM Trainer",
+    "department": "STEM & Training",
+    "reportingTo": "Pooja Sharma",
+    "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
+    "location": "Hyderabad",
+    "dateOfJoining": "2026-02-13",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.145,
+    "dateOfBirth": "2000-06-07",
+    "age": 25,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": "Bhavya Enclaves, KPHB, Phase 3, Road No.4, Hyderabad",
+    "personalEmail": "benjaminabhishek81@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/221",
+          "name": "ABHISHEK KODURU",
+          "designation": "STEM Trainer",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "0f601e64-b127-50ab-6426-5ecdd7c01b3a",
+    "employeeCode": "MTPL/222",
+    "title": "Mr",
+    "name": "Subhash Jhagarala",
+    "email": "subhash199402@gmail.com",
+    "phone": null,
+    "designation": "Office Boy",
+    "department": "Admin",
+    "reportingTo": "Shubhangi",
+    "reportingManagerId": "2ed7ec2a-e2a6-508f-8c9b-1ba7c6fe680d",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-02-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.2,
+    "dateOfBirth": null,
+    "age": null,
+    "gender": null,
+    "maritalStatus": null,
+    "address": null,
+    "personalEmail": "subhash199402@gmail.com",
+    "officialEmailMissing": true,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/222",
+          "name": "Subhash Jhagarala",
+          "designation": "Office Boy",
+          "department": "Admin"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "17913e5f-0b2f-525a-1204-a6d8f755d744",
+    "employeeCode": "MTPL/223",
+    "title": "Mr",
+    "name": "Siddhesh Dhadam",
+    "email": "dhadamsiddhesh11@gmail.com",
+    "phone": null,
+    "designation": "Office Boy",
+    "department": "Admin",
+    "reportingTo": "Shubhangi",
+    "reportingManagerId": "2ed7ec2a-e2a6-508f-8c9b-1ba7c6fe680d",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-02-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.2,
+    "dateOfBirth": null,
+    "age": null,
+    "gender": null,
+    "maritalStatus": null,
+    "address": null,
+    "personalEmail": "dhadamsiddhesh11@gmail.com",
+    "officialEmailMissing": true,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/223",
+          "name": "Siddhesh Dhadam",
+          "designation": "Office Boy",
+          "department": "Admin"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "90103f02-c872-5117-80a1-2a7841a1d81c",
+    "employeeCode": "MTPL/224",
+    "title": "Mrs.",
+    "name": "VAIDEHI KUNTE",
+    "email": "vaidehi.k@getsetlearn.info",
+    "phone": "+91-9136654449",
+    "designation": "Operations Executive",
+    "department": "Sales",
+    "reportingTo": "Vishwanath Ghanekar",
+    "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-03-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.1,
+    "dateOfBirth": "1989-08-24",
+    "age": 32,
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": "504,B2 Wing,Garden Court CHS,Near Vasant Leela Complex,Waghbil,Ghodbunder Road,Thane West, 400615",
+    "personalEmail": "vdhbht@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/224",
+          "name": "VAIDEHI KUNTE",
+          "designation": "Operations Executive",
+          "department": "Sales"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "11cc5d27-b071-5d11-1ef6-0584d0437002",
+    "employeeCode": "MTPL/225",
+    "title": "Ms.",
+    "name": "SHUSHANKITA MISHRA",
+    "email": "shushankita.m@getsetlearn.info",
+    "phone": "+91-8452085782",
+    "designation": "Program Manager",
+    "department": "STEM & Training",
+    "reportingTo": "Shashank Sanas",
+    "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-03-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.1,
+    "dateOfBirth": "1997-07-08",
+    "age": 28,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": "C/32, Adarsh nagar, near ganesh chowk, Kandivali west, Mumbai 400067.",
+    "personalEmail": "shushankita6763@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/225",
+          "name": "SHUSHANKITA MISHRA",
+          "designation": "Program Manager",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "9e826d7a-92ea-521c-1d9d-778c77ee667a",
+    "employeeCode": "MTPL/226",
+    "title": "Mr.",
+    "name": "Prashanth MISHRA",
+    "email": "prashanth.m@getsetlearn.info",
+    "phone": null,
+    "designation": "Manager- Innovation & Implementation",
+    "department": "STEM & Training",
+    "reportingTo": "Shashank Sanas",
+    "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
+    "location": "Kolkata",
+    "dateOfJoining": "2026-03-23",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.075,
+    "dateOfBirth": "2002-11-15",
+    "age": null,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "prashu235913@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/226",
+          "name": "Prashanth MISHRA",
+          "designation": "Manager- Innovation & Implementation",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "72216e73-158d-52c2-7acc-854cd6a4555a",
+    "employeeCode": "MTPL/227",
+    "title": "Ms.",
+    "name": "Aakanksha Sharma",
+    "email": "aakanksha.s@getsetlearn.info",
+    "phone": null,
+    "designation": "Instructional Designer",
+    "department": "Academics",
+    "reportingTo": "Ritu Uppal",
+    "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-04-01",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0.01,
+    "dateOfBirth": null,
+    "age": null,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "aaku.sharma96@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/227",
+          "name": "Aakanksha Sharma",
+          "designation": "Instructional Designer",
+          "department": "Academics"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ad50bb4b-6fb4-5b70-7c47-ae710f6e9748",
+    "employeeCode": "MTPL/228",
+    "title": "Mr.",
+    "name": "Saikat Hazra",
+    "email": "saikat.h@getsetlearn.info",
+    "phone": null,
+    "designation": "Sr Innovation Mentor",
+    "department": "STEM & Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2026-04-06",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0,
+    "dateOfBirth": "2000-10-30",
+    "age": 23,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "saikathazra321@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/228",
+          "name": "Saikat Hazra",
+          "designation": "Sr Innovation Mentor",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "5f05b7a7-d4f9-5bee-421e-7d3c6fccc67b",
+    "employeeCode": "MTPL/229",
+    "title": "Ms.",
+    "name": "Pamela Majumder",
+    "email": "pamela.m@getsetlearn.info",
+    "phone": null,
+    "designation": "Innovation Caoch",
+    "department": "STEM & Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Durgapur",
+    "dateOfJoining": "2026-04-06",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0,
+    "dateOfBirth": "2003-09-08",
+    "age": 25,
+    "gender": "Female",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "pamelamajumder2003@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/229",
+          "name": "Pamela Majumder",
+          "designation": "Innovation Caoch",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "ece5e90b-b6ed-5f59-e789-db53c8eeb9b7",
+    "employeeCode": "MTPL/230",
+    "title": "Mr.",
+    "name": "Hashmi Haris",
+    "email": "haris.h@getsetlearn.info",
+    "phone": null,
+    "designation": "Sr Graphic Designer- AI & Creative",
+    "department": "Marketing",
+    "reportingTo": "Shubhra Rishi",
+    "reportingManagerId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "location": "Mumbai",
+    "dateOfJoining": "2026-04-09",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0,
+    "dateOfBirth": "2002-06-06",
+    "age": 24,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "harishashmi1181@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/230",
+          "name": "Hashmi Haris",
+          "designation": "Sr Graphic Designer- AI & Creative",
+          "department": "Marketing"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  },
+  {
+    "id": "cdd36624-067a-5aea-c2d4-b54c12a807fb",
+    "employeeCode": "MTPL/231",
+    "title": "Mr.",
+    "name": "Snehasish Mistri",
+    "email": "snehasish.m@getsetlearn.info",
+    "phone": null,
+    "designation": "Sr Innovation Mentor",
+    "department": "STEM & Training",
+    "reportingTo": "Avishek Dasgupta",
+    "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "location": "Kolkata",
+    "dateOfJoining": "2026-04-24",
+    "status": "Active",
+    "confirmationDate": null,
+    "tenureYears": 0,
+    "dateOfBirth": "1988-03-11",
+    "age": 37,
+    "gender": "Male",
+    "maritalStatus": "Unmarried",
+    "address": null,
+    "personalEmail": "sketh19@gmail.com",
+    "officialEmailMissing": false,
+    "createdAt": "2026-04-24T09:04:59.417Z",
+    "createdBy": "muster-import",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-24T09:04:59.417Z",
+        "user": "muster-import",
+        "action": "employee.create",
+        "after": {
+          "employeeCode": "MTPL/231",
+          "name": "Snehasish Mistri",
+          "designation": "Sr Innovation Mentor",
+          "department": "STEM & Training"
+        },
+        "notes": "Imported from Employee_Muster.xlsx"
+      }
+    ]
+  }
+]

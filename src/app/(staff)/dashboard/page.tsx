@@ -27,7 +27,9 @@ export default async function DashboardPage() {
   )
   const now = new Date()
   const thisMonth = employees.filter((e) => {
+    if (!e.dateOfJoining) return false
     const joined = new Date(e.dateOfJoining)
+    if (Number.isNaN(joined.getTime())) return false
     return (
       e.status === 'Active' &&
       joined.getFullYear() === now.getFullYear() &&

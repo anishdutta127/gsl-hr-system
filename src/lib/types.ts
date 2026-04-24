@@ -25,6 +25,28 @@ export const DEFAULT_PIPELINE_STAGES = [
   'Joined',
 ] as const
 
+/** Academics hires run through two HOD rounds (Manali round 1, Ritu round 2)
+ * before HR. Roles in the Academics department get this pipeline by default.
+ */
+export const ACADEMICS_PIPELINE_STAGES = [
+  'Sourced',
+  'Shortlisted',
+  'AssessmentSent',
+  'AssessmentDone',
+  'VideoSent',
+  'VideoDone',
+  'HODRoundScheduled',
+  'HODRoundDone',
+  'HOD2RoundScheduled',
+  'HOD2RoundDone',
+  'HRRoundScheduled',
+  'HRRoundDone',
+  'Offered',
+  'OfferAccepted',
+  'DocsCollected',
+  'Joined',
+] as const
+
 export const TERMINAL_STAGES = [
   'Rejected',
   'OnHold',
@@ -85,6 +107,9 @@ export interface Role {
   title: string
   department: string
   hodUserId?: string
+  /** Optional second HOD, used by Academics roles: Manali scores round 1,
+   * Ritu scores round 2. When unset, the role runs a single-HOD pipeline. */
+  hodRound2UserId?: string
   location: 'Mumbai' | 'Delhi' | 'Bengaluru' | 'Remote' | 'Hybrid' | string
   employmentType: 'Full-time' | 'Part-time' | 'Contract' | 'Internship'
   status: 'Open' | 'Closed' | 'Draft'
@@ -116,6 +141,20 @@ export interface Candidate {
   phone: string
   source: CandidateSource
   resumeFilePath?: string
+  /** Extracted text content for the resume; used for substring search on
+   * /candidates. Populated at seed time for legacy resumes; populated on
+   * upload for future /careers applications. */
+  searchableText?: string
+  /** Free-form tags on the candidate. `programmes` is the HR-delivered
+   * grouping used to route the candidate to matching open roles. */
+  tags?: {
+    programmes?: string[]
+    other?: string[]
+  }
+  status?: 'Active' | 'Archived'
+  /** When the candidate consented to data retention / publication. Null for
+   * legacy resumes that pre-date the /careers consent form. */
+  consentedAt?: string | null
   notes?: string
   createdAt: string
   createdBy: string
@@ -211,13 +250,29 @@ export interface Employee {
   candidateId?: string
   applicationId?: string
   name: string
+  /** Mr./Ms./Mrs./Dr. prefix from the muster. */
+  title?: string | null
   email: string
-  phone?: string
+  phone?: string | null
   designation: string
   department: string
-  reportingTo?: string
+  /** Free-text manager name as recorded on the muster. */
+  reportingTo?: string | null
+  /** Resolved on import by name-matching against other employees; null when the
+   * named manager is not in the system (e.g., founder, external). */
+  reportingManagerId?: string | null
   location: string
-  dateOfJoining: string
+  dateOfJoining: string | null
+  confirmationDate?: string | null
+  tenureYears?: number | null
+  dateOfBirth?: string | null
+  age?: number | null
+  gender?: string | null
+  maritalStatus?: string | null
+  address?: string | null
+  personalEmail?: string | null
+  /** Flagged during muster import when no Official Email ID was present. */
+  officialEmailMissing?: boolean
   status: 'Active' | 'Exited'
   ctcAnnual?: number
   exit?: {
