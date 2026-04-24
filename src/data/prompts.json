@@ -8,17 +8,52 @@
     "inputHint": "Paste the full resume text between the --- markers. Works with PDF-to-text copy or plain text.",
     "outputSchema": {
       "type": "object",
-      "required": ["name", "email", "phone", "yearsOfExperience", "currentRole", "skills", "education"],
+      "required": [
+        "name",
+        "email",
+        "phone",
+        "yearsOfExperience",
+        "currentRole",
+        "skills",
+        "education"
+      ],
       "properties": {
-        "name": { "type": "string", "description": "Full legal name" },
-        "email": { "type": "string", "description": "Primary email" },
-        "phone": { "type": "string", "description": "Primary phone with country code" },
-        "yearsOfExperience": { "type": "number", "description": "Total years, decimal" },
-        "currentRole": { "type": "string", "description": "Most recent title + company, or null" },
-        "skills": { "type": "array", "description": "Array of skill strings" },
-        "education": { "type": "array", "description": "Array of {degree, institution, year}" },
-        "expectedCtcLakhs": { "type": "number", "description": "Expected annual CTC in lakh, null if not stated" },
-        "noticePeriodDays": { "type": "number", "description": "Days required to serve" }
+        "name": {
+          "type": "string",
+          "description": "Full legal name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Primary email"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Primary phone with country code"
+        },
+        "yearsOfExperience": {
+          "type": "number",
+          "description": "Total years, decimal"
+        },
+        "currentRole": {
+          "type": "string",
+          "description": "Most recent title + company, or null"
+        },
+        "skills": {
+          "type": "array",
+          "description": "Array of skill strings"
+        },
+        "education": {
+          "type": "array",
+          "description": "Array of {degree, institution, year}"
+        },
+        "expectedCtcLakhs": {
+          "type": "number",
+          "description": "Expected annual CTC in lakh, null if not stated"
+        },
+        "noticePeriodDays": {
+          "type": "number",
+          "description": "Days required to serve"
+        }
       }
     },
     "exampleOutputs": [
@@ -28,8 +63,19 @@
         "phone": "+91-9876543210",
         "yearsOfExperience": 4.5,
         "currentRole": "Senior Instructional Designer at Byju's",
-        "skills": ["Instructional Design", "SCORM", "Articulate Storyline", "K-12 curriculum"],
-        "education": [{ "degree": "M.A. Education", "institution": "TISS Mumbai", "year": 2021 }],
+        "skills": [
+          "Instructional Design",
+          "SCORM",
+          "Articulate Storyline",
+          "K-12 curriculum"
+        ],
+        "education": [
+          {
+            "degree": "M.A. Education",
+            "institution": "TISS Mumbai",
+            "year": 2021
+          }
+        ],
         "expectedCtcLakhs": 14,
         "noticePeriodDays": 60
       }
@@ -47,16 +93,42 @@
     "inputHint": "Paste a 2-5 sentence description of the role: what the person does, who they report to, must-have skills.",
     "outputSchema": {
       "type": "object",
-      "required": ["title", "department", "location", "employmentType", "description", "responsibilities", "mustHaves", "niceToHaves"],
+      "required": [
+        "title",
+        "department",
+        "location",
+        "employmentType",
+        "description",
+        "responsibilities",
+        "mustHaves",
+        "niceToHaves"
+      ],
       "properties": {
-        "title": { "type": "string" },
-        "department": { "type": "string" },
-        "location": { "type": "string" },
-        "employmentType": { "type": "string" },
-        "description": { "type": "string", "description": "One-sentence what-you-will-do" },
-        "responsibilities": { "type": "array" },
-        "mustHaves": { "type": "array" },
-        "niceToHaves": { "type": "array" }
+        "title": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "employmentType": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string",
+          "description": "One-sentence what-you-will-do"
+        },
+        "responsibilities": {
+          "type": "array"
+        },
+        "mustHaves": {
+          "type": "array"
+        },
+        "niceToHaves": {
+          "type": "array"
+        }
       }
     },
     "exampleOutputs": [
@@ -97,30 +169,108 @@
     "inputHint": "Paste the rubric criteria (from the role page) followed by your raw notes from the interview.",
     "outputSchema": {
       "type": "object",
-      "required": ["scores", "summary", "recommendation", "redFlags", "strengths"],
+      "required": [
+        "scores",
+        "summary",
+        "recommendation",
+        "redFlags",
+        "strengths"
+      ],
       "properties": {
-        "scores": { "type": "array", "description": "Array of {criterionId, value}" },
-        "summary": { "type": "string", "description": "One paragraph, specific to this candidate" },
-        "recommendation": { "type": "string", "description": "proceed | hold | reject" },
-        "redFlags": { "type": "array" },
-        "strengths": { "type": "array" }
+        "scores": {
+          "type": "array",
+          "description": "Array of {criterionId, value}"
+        },
+        "summary": {
+          "type": "string",
+          "description": "One paragraph, specific to this candidate"
+        },
+        "recommendation": {
+          "type": "string",
+          "description": "proceed | hold | reject"
+        },
+        "redFlags": {
+          "type": "array"
+        },
+        "strengths": {
+          "type": "array"
+        }
       }
     },
     "exampleOutputs": [
       {
         "scores": [
-          { "criterionId": "content-depth", "value": 8 },
-          { "criterionId": "communication", "value": 7 },
-          { "criterionId": "team-fit", "value": 6 }
+          {
+            "criterionId": "content-depth",
+            "value": 8
+          },
+          {
+            "criterionId": "communication",
+            "value": 7
+          },
+          {
+            "criterionId": "team-fit",
+            "value": 6
+          }
         ],
         "summary": "Priya brought three specific examples of restructuring a Grade 9 Chemistry module after student feedback; clear ownership. Communication solid in English and Hindi. Hesitant on managing a team larger than 2.",
         "recommendation": "proceed",
-        "redFlags": ["No direct experience managing 3+ reports"],
-        "strengths": ["Iterative content improvement based on student signal", "Bilingual delivery"]
+        "redFlags": [
+          "No direct experience managing 3+ reports"
+        ],
+        "strengths": [
+          "Iterative content improvement based on student signal",
+          "Bilingual delivery"
+        ]
       }
     ],
     "createdAt": "2026-04-23T00:00:00.000Z",
     "validatedBy": "anish@gsl.edu.in",
     "validatedAt": "2026-04-23T00:00:00.000Z"
+  },
+  {
+    "id": "p-round1-email",
+    "title": "Draft a personalised Round 1 outreach email",
+    "useCase": "When the canned ROUND1-INVITE template feels too generic for a specific candidate. Paste the candidate summary + role context, get back a short email tailored to one or two specific hooks from the resume.",
+    "category": "other",
+    "body": "You are writing a warm, concise Round 1 outreach email on behalf of the HR team at {{COMPANY_NAME}} (EdTech, Mumbai). British English. No corporate filler. No exclamation marks except where it would feel actively rude not to have one. Keep the body under 180 words.\n\nGround rules:\n  - Open with one specific line that proves you read the resume (a project, a previous employer, a switch). Do not open with \"I hope this email finds you well\" or similar.\n  - State the role and why it might fit their arc in one sentence.\n  - Ask for 20 minutes and two or three times. Do not lock a time.\n  - Sign off warmly, do not oversell.\n\nReturn STRICT JSON. No preamble. No commentary.\n\nContext:\n---\nCandidate name: {{CANDIDATE_NAME}}\nCandidate resume (first 8000 chars): {{RESUME_TEXT}}\nRole: {{ROLE_TITLE}} in {{ROLE_DEPARTMENT}}\nRole must-haves: {{ROLE_MUST_HAVES}}\nHR signatory: {{HR_NAME}}, {{HR_EMAIL}}\n---",
+    "inputHint": "Replace the {{PLACEHOLDERS}} with real values from /candidates/[id] and the role. Resume text is on the candidate record as searchableText.",
+    "outputSchema": {
+      "type": "object",
+      "required": [
+        "subject",
+        "openingHook",
+        "body"
+      ],
+      "properties": {
+        "subject": {
+          "type": "string",
+          "description": "Email subject line"
+        },
+        "openingHook": {
+          "type": "string",
+          "description": "The single specific opener; surfaces separately so HR can sanity-check it"
+        },
+        "body": {
+          "type": "string",
+          "description": "Full email body, ready to paste into the Emails compose flow"
+        },
+        "riskNotes": {
+          "type": "string",
+          "description": "Any ambiguity in the resume the drafter noticed (null if none)"
+        }
+      }
+    },
+    "exampleOutputs": [
+      {
+        "subject": "Let's talk about Senior Content Lead at GSL",
+        "openingHook": "Saw in your resume that you re-structured the Grade 9 Chemistry module at Educohire after student feedback - that kind of close-loop instinct is exactly what we need for this role.",
+        "body": "Hi Priya,\n\nSaw in your resume that you re-structured the Grade 9 Chemistry module at Educohire after student feedback; that close-loop instinct is exactly what we need for the Senior Content Lead role at GSL.\n\nIt is a team-of-three sitting inside Academics, owning the secondary-science stack. You would be working with Manali and reporting into her on content direction.\n\nI would love 20 minutes to talk. Any of these work for you this week: Tuesday 4:30 PM IST, Wednesday 11:00 AM IST, or Thursday 5:00 PM IST? I will send a calendar invite the moment you confirm.\n\nWarm regards,\nShruti\nhiring@getsetlearn.info",
+        "riskNotes": null
+      }
+    ],
+    "createdAt": "2026-04-24T09:59:49.510Z",
+    "validatedBy": "anish.d@getsetlearn.info",
+    "validatedAt": "2026-04-24T09:59:49.510Z"
   }
 ]
