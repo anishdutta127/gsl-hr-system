@@ -5,7 +5,11 @@ import { formatDate, formatCount } from '@/lib/format'
 
 export const dynamic = 'force-dynamic'
 
-export default async function CandidatesPage() {
+export default async function CandidatesPage({
+  searchParams,
+}: {
+  searchParams: { programme?: string; q?: string }
+}) {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
   const allCandidates = loadCandidates()
   const allApplications = loadApplications()
@@ -18,69 +22,150 @@ export default async function CandidatesPage() {
       ? allApplications.filter((a) => roleById.get(a.roleId)?.hodUserId === session.sub)
       : allApplications
   const visibleCandidateIds = new Set(applications.map((a) => a.candidateId))
-  const candidates =
+  let candidates =
     session.role === 'HOD'
       ? allCandidates.filter((c) => visibleCandidateIds.has(c.id))
       : allCandidates
+
+  const programmes = Array.from(
+    new Set(candidates.flatMap((c) => c.tags?.programmes ?? [])),
+  ).sort()
+
+  const progFilter = searchParams.programme?.trim() ?? ''
+  const q = searchParams.q?.trim().toLowerCase() ?? ''
+
+  candidates = candidates.filter((c) => {
+    if (progFilter && !(c.tags?.programmes ?? []).includes(progFilter)) return false
+    if (q) {
+      const hay = [
+        c.name,
+        c.email,
+        c.source,
+        c.searchableText ?? '',
+        ...(c.tags?.programmes ?? []),
+      ]
+        .join(' ')
+        .toLowerCase()
+      if (!hay.includes(q)) return false
+    }
+    return true
+  })
 
   return (
     <div className="container-page py-8">
       <div className="mb-6">
         <h1 className="font-display text-2xl text-ink">Candidates</h1>
         <p className="mt-1 text-sm text-ink-2">
-          Everyone in the system. Add candidates to a role from that role's detail page.
+          {formatCount(candidates.length)} of {formatCount(allCandidates.length)} in the pool.
+          Search hits names, emails, and full resume text.
         </p>
       </div>
+
+      <form className="mb-6 flex flex-wrap items-end gap-3" role="search" aria-label="Filter candidates">
+        <div className="flex-1 min-w-[200px]">
+          <label htmlFor="q" className="block text-xs font-medium text-ink-2">
+            Search resume text
+          </label>
+          <input
+            id="q"
+            name="q"
+            type="search"
+            defaultValue={q}
+            placeholder="skill, school, company"
+            className="mt-1 block w-full rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+          />
+        </div>
+        <div>
+          <label htmlFor="programme" className="block text-xs font-medium text-ink-2">
+            Programme
+          </label>
+          <select
+            id="programme"
+            name="programme"
+            defaultValue={progFilter}
+            className="mt-1 block rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+          >
+            <option value="">All programmes</option>
+            {programmes.map((p) => (
+              <option key={p} value={p}>
+                {p}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button
+          type="submit"
+          className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
+        >
+          Apply
+        </button>
+        {(progFilter || q) && (
+          <Link href="/candidates" className="text-xs font-medium text-ink-2 hover:text-ink">
+            Clear
+          </Link>
+        )}
+      </form>
 
       {candidates.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
           <p className="text-sm text-ink-2">
-            No candidates yet. Add the first candidate from a role's detail page.
+            {allCandidates.length === 0
+              ? "No candidates yet. Add the first candidate from a role's detail page."
+              : 'No matches for the current filter.'}
           </p>
-          <Link
-            href="/roles"
-            className="mt-4 inline-flex items-center rounded bg-navy px-3 py-1.5 text-sm font-medium text-white hover:bg-navy-dark"
-          >
-            Go to Roles →
-          </Link>
         </div>
       ) : (
         <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
-          {candidates.map((c) => {
+          {candidates.slice(0, 200).map((c) => {
             const apps = applications.filter((a) => a.candidateId === c.id)
+            const prog = c.tags?.programmes ?? []
             return (
-              <li key={c.id} className="px-5 py-4 text-sm">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <div className="font-medium text-ink">{c.name}</div>
-                    <div className="text-xs text-ink-2">
-                      {c.email} · {c.source} · Added {formatDate(c.createdAt)}
-                    </div>
-                  </div>
-                  <div className="text-xs text-ink-3 tabular">
-                    {formatCount(apps.length)} {apps.length === 1 ? 'application' : 'applications'}
-                  </div>
-                </div>
-                {apps.length > 0 && (
-                  <ul className="mt-2 flex flex-wrap gap-2">
-                    {apps.map((a) => {
-                      const role = roleById.get(a.roleId)
-                      return (
-                        <li key={a.id}>
-                          <Link
-                            href={`/roles/${a.roleId}`}
-                            className="inline-block rounded bg-surface px-2 py-0.5 text-xs text-ink-2 hover:text-ink"
+              <li key={c.id}>
+                <Link
+                  href={`/candidates/${c.id}`}
+                  className="flex items-start justify-between gap-4 px-5 py-3 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+                >
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-medium text-ink">{c.name}</span>
+                    <span className="block text-xs text-ink-2">
+                      {c.email || 'no email on file'} · {c.source} · Added {formatDate(c.createdAt)}
+                    </span>
+                    {(prog.length > 0 || apps.length > 0) && (
+                      <span className="mt-1 flex flex-wrap gap-1">
+                        {prog.map((p) => (
+                          <span
+                            key={p}
+                            className="inline-flex items-center rounded bg-surface px-2 py-0.5 text-xs text-ink-2"
                           >
-                            {role?.title ?? '(unknown role)'} · {a.currentStage}
-                          </Link>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                )}
+                            {p}
+                          </span>
+                        ))}
+                        {apps.map((a) => {
+                          const role = roleById.get(a.roleId)
+                          return (
+                            <span
+                              key={a.id}
+                              className="inline-flex items-center rounded bg-teal-light px-2 py-0.5 text-xs text-teal-dark"
+                            >
+                              {role?.title ?? 'role'} · {a.currentStage}
+                            </span>
+                          )
+                        })}
+                      </span>
+                    )}
+                  </span>
+                  <span className="shrink-0 text-xs text-ink-3 tabular">
+                    {formatCount(apps.length)} {apps.length === 1 ? 'app' : 'apps'}
+                  </span>
+                </Link>
               </li>
             )
           })}
+          {candidates.length > 200 && (
+            <li className="px-5 py-2 text-xs text-ink-3">
+              Showing first 200 of {formatCount(candidates.length)}. Refine the filter to narrow the list.
+            </li>
+          )}
         </ul>
       )}
     </div>
