@@ -1,7 +1,11 @@
 import { loadPrompts } from '@/lib/prompts'
+import { requireRoles } from '@/lib/guards'
 import { PromptLibrary } from '@/components/prompts/PromptLibrary'
 
-export default function PromptsPage() {
+export const dynamic = 'force-dynamic'
+
+export default async function PromptsPage() {
+  await requireRoles(['Admin', 'HR', 'HOD'])
   const prompts = loadPrompts()
   return (
     <div className="container-page py-8">

@@ -6,12 +6,14 @@ import {
   findRoleById,
   findApplicationById,
 } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { OfferActions } from './OfferActions'
 
 export const dynamic = 'force-dynamic'
 
-export default function OfferDetailPage({ params }: { params: { id: string } }) {
+export default async function OfferDetailPage({ params }: { params: { id: string } }) {
+  await requireRoles(['Admin', 'HR'])
   const offer = findOfferById(params.id)
   if (!offer) notFound()
   const candidate = findCandidateById(offer.candidateId)

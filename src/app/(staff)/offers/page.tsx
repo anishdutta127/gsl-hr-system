@@ -5,11 +5,15 @@ import {
   loadOffers,
   loadRoles,
 } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
+
+export const dynamic = 'force-dynamic'
 
 const OFFER_READY_STAGES = new Set(['HRRoundDone', 'Offered', 'OfferAccepted'])
 
-export default function OffersPage() {
+export default async function OffersPage() {
+  await requireRoles(['Admin', 'HR'])
   const applications = loadApplications()
   const candidates = loadCandidates()
   const roles = loadRoles()

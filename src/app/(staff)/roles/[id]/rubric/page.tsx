@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { findRoleById } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { RubricEditor } from './RubricEditor'
 
 export const dynamic = 'force-dynamic'
 
-export default function RoleRubricPage({ params }: { params: { id: string } }) {
+export default async function RoleRubricPage({ params }: { params: { id: string } }) {
+  await requireRoles(['Admin', 'HR'])
   const role = findRoleById(params.id)
   if (!role) notFound()
   return (

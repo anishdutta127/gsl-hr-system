@@ -6,10 +6,14 @@ import {
   loadEmployees,
   loadOffers,
 } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { isTerminal } from '@/lib/pipeline'
 import { formatCount } from '@/lib/format'
 
-export default function DashboardPage() {
+export const dynamic = 'force-dynamic'
+
+export default async function DashboardPage() {
+  await requireRoles(['Admin', 'HR', 'Leadership'])
   const roles = loadRoles()
   const applications = loadApplications()
   const candidates = loadCandidates()

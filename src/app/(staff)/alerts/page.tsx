@@ -7,7 +7,7 @@ import {
   loadOffers,
   loadRoles,
 } from '@/lib/data'
-import { getCurrentSession } from '@/lib/identity'
+import { requireRoles } from '@/lib/guards'
 import { buildAttentionFeed, groupAttention, type AttentionAction } from '@/lib/needsAttention'
 import { formatRelative, formatDate } from '@/lib/format'
 
@@ -24,8 +24,7 @@ const ACTION_HEADINGS: Record<AttentionAction, string> = {
 }
 
 export default async function AlertsPage() {
-  const session = await getCurrentSession()
-  if (!session) return null
+  const session = await requireRoles(['Admin', 'HR', 'HOD'])
 
   const roles = loadRoles()
   const applications = loadApplications()

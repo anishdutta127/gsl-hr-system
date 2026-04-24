@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { loadEmployees } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate } from '@/lib/format'
 
 export const dynamic = 'force-dynamic'
 
-export default function ExitsPage() {
+export default async function ExitsPage() {
+  await requireRoles(['Admin', 'HR'])
   const employees = loadEmployees()
   const active = employees.filter((e) => e.status === 'Active')
   const exited = employees.filter((e) => e.status === 'Exited')

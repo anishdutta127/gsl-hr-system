@@ -1,8 +1,12 @@
 import { notFound } from 'next/navigation'
 import { findRoleById } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { AddCandidateForm } from './AddCandidateForm'
 
-export default function AddCandidatePage({ params }: { params: { id: string } }) {
+export const dynamic = 'force-dynamic'
+
+export default async function AddCandidatePage({ params }: { params: { id: string } }) {
+  await requireRoles(['Admin', 'HR'])
   const role = findRoleById(params.id)
   if (!role) notFound()
   return (

@@ -5,7 +5,7 @@ import {
   loadInterviews,
   loadRoles,
 } from '@/lib/data'
-import { getCurrentSession } from '@/lib/identity'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRelative } from '@/lib/format'
 import { isTerminal } from '@/lib/pipeline'
 
@@ -14,8 +14,7 @@ export const dynamic = 'force-dynamic'
 const AWAITING_SCORE_STAGES = new Set(['HODRoundScheduled', 'HRRoundScheduled'])
 
 export default async function InterviewsPage() {
-  const session = await getCurrentSession()
-  if (!session) return null
+  const session = await requireRoles(['Admin', 'HR', 'HOD'])
 
   const interviews = loadInterviews()
   const applications = loadApplications()

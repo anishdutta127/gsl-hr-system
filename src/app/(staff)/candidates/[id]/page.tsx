@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import {
   findCandidateById,
   loadApplications,
@@ -7,16 +7,27 @@ import {
   loadInterviews,
   loadOffers,
 } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRelative } from '@/lib/format'
 import { isTerminal } from '@/lib/pipeline'
 
-export default function CandidateDetailPage({ params }: { params: { id: string } }) {
+export const dynamic = 'force-dynamic'
+
+export default async function CandidateDetailPage({ params }: { params: { id: string } }) {
+  const session = await requireRoles(['Admin', 'HR', 'HOD'])
   const candidate = findCandidateById(params.id)
   if (!candidate) notFound()
 
   const apps = loadApplications().filter((a) => a.candidateId === candidate.id)
   const roles = loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
+
+  // HOD scoping: must own at least one of the roles this candidate applied to.
+  if (session.role === 'HOD') {
+    const owns = apps.some((a) => roleById.get(a.roleId)?.hodUserId === session.sub)
+    if (!owns) redirect('/candidates')
+  }
+
   const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
   const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
 

@@ -1,6 +1,10 @@
 import { NewRoleForm } from './NewRoleForm'
+import { requireRoles } from '@/lib/guards'
 
-export default function NewRolePage() {
+export const dynamic = 'force-dynamic'
+
+export default async function NewRolePage() {
+  await requireRoles(['Admin', 'HR'])
   return (
     <div className="container-page py-8">
       <h1 className="mb-2 font-display text-2xl text-ink">New role</h1>

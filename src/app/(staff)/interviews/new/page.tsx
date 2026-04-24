@@ -5,7 +5,7 @@ import {
   findCandidateById,
   findRoleById,
 } from '@/lib/data'
-import { getCurrentSession } from '@/lib/identity'
+import { requireRoles } from '@/lib/guards'
 import { InterviewForm } from './InterviewForm'
 
 export const dynamic = 'force-dynamic'
@@ -15,8 +15,7 @@ export default async function NewInterviewPage({
 }: {
   searchParams: { applicationId?: string; round?: string }
 }) {
-  const session = await getCurrentSession()
-  if (!session) redirect('/login')
+  const session = await requireRoles(['Admin', 'HR', 'HOD'])
 
   const applicationId = searchParams.applicationId
   if (!applicationId) notFound()
@@ -25,6 +24,10 @@ export default async function NewInterviewPage({
   const role = findRoleById(app.roleId)
   const candidate = findCandidateById(app.candidateId)
   if (!role || !candidate) notFound()
+
+  if (session.role === 'HOD' && role.hodUserId && role.hodUserId !== session.sub) {
+    redirect('/interviews')
+  }
 
   // Infer round from current stage if not explicit
   let round = searchParams.round

@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import { loadEmployees, loadApplications, loadCandidates } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 
-export default function EmployeesPage() {
+export const dynamic = 'force-dynamic'
+
+export default async function EmployeesPage() {
+  await requireRoles(['Admin', 'HR', 'Leadership'])
   const employees = loadEmployees()
   const applications = loadApplications()
   const candidates = loadCandidates()

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { findEmployeeById } from '@/lib/data'
-import { getCurrentSession } from '@/lib/identity'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { OnboardingChecklist } from './OnboardingChecklist'
 import { ExitInitiator } from './ExitInitiator'
@@ -9,8 +9,7 @@ import { ExitInitiator } from './ExitInitiator'
 export const dynamic = 'force-dynamic'
 
 export default async function EmployeeDetailPage({ params }: { params: { id: string } }) {
-  const session = await getCurrentSession()
-  if (!session) return null
+  const session = await requireRoles(['Admin', 'HR', 'Leadership'])
   const employee = findEmployeeById(params.id)
   if (!employee) notFound()
 

@@ -1,12 +1,27 @@
 import Link from 'next/link'
 import { loadCandidates, loadApplications, loadRoles } from '@/lib/data'
+import { requireRoles } from '@/lib/guards'
 import { formatDate, formatCount } from '@/lib/format'
 
-export default function CandidatesPage() {
-  const candidates = loadCandidates()
-  const applications = loadApplications()
+export const dynamic = 'force-dynamic'
+
+export default async function CandidatesPage() {
+  const session = await requireRoles(['Admin', 'HR', 'HOD'])
+  const allCandidates = loadCandidates()
+  const allApplications = loadApplications()
   const roles = loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
+
+  // HOD scoping: only candidates applied to roles this HOD owns.
+  const applications =
+    session.role === 'HOD'
+      ? allApplications.filter((a) => roleById.get(a.roleId)?.hodUserId === session.sub)
+      : allApplications
+  const visibleCandidateIds = new Set(applications.map((a) => a.candidateId))
+  const candidates =
+    session.role === 'HOD'
+      ? allCandidates.filter((c) => visibleCandidateIds.has(c.id))
+      : allCandidates
 
   return (
     <div className="container-page py-8">

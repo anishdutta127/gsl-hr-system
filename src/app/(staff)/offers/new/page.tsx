@@ -1,11 +1,11 @@
-import { notFound, redirect } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import {
   findApplicationById,
   findCandidateById,
   findRoleById,
 } from '@/lib/data'
-import { getCurrentSession } from '@/lib/identity'
+import { requireRoles } from '@/lib/guards'
 import { OfferDraftForm } from './OfferDraftForm'
 
 export const dynamic = 'force-dynamic'
@@ -15,8 +15,7 @@ export default async function NewOfferPage({
 }: {
   searchParams: { applicationId?: string }
 }) {
-  const session = await getCurrentSession()
-  if (!session) redirect('/login')
+  await requireRoles(['Admin', 'HR'])
 
   const applicationId = searchParams.applicationId
   if (!applicationId) notFound()
