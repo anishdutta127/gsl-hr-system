@@ -10,6 +10,8 @@ import {
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRelative } from '@/lib/format'
 import { isTerminal } from '@/lib/pipeline'
+import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
+import { ReplyWidget } from './ReplyWidget'
 
 export const dynamic = 'force-dynamic'
 
@@ -30,6 +32,19 @@ export default async function CandidateDetailPage({ params }: { params: { id: st
 
   const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
   const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
+
+  // Latest non-terminal application gives the reply-widget its stage + role context.
+  const latestActiveApp = [...apps]
+    .filter((a) => !isTerminal(a.currentStage))
+    .sort((a, b) => b.stageEnteredAt.localeCompare(a.stageEnteredAt))[0]
+  const currentStage = latestActiveApp?.currentStage ?? null
+  const activeRoleId = latestActiveApp?.roleId ?? ''
+  const canEmail = session.role === 'Admin' || session.role === 'HR'
+  const suggested = currentStage
+    ? EMAIL_TEMPLATES.filter((t) => t.stagesApplicable.includes(currentStage))
+    : []
+  const suggestedIds = new Set(suggested.map((t) => t.id))
+  const others = EMAIL_TEMPLATES.filter((t) => !suggestedIds.has(t.id))
 
   return (
     <div className="container-page py-8">
@@ -56,6 +71,29 @@ export default async function CandidateDetailPage({ params }: { params: { id: st
         <section className="mb-6 rounded-lg border border-line bg-card p-4">
           <h2 className="mb-1 text-sm font-medium text-ink-2">Notes</h2>
           <p className="whitespace-pre-wrap text-sm text-ink">{candidate.notes}</p>
+        </section>
+      )}
+
+      {canEmail && (
+        <section className="mb-6">
+          <ReplyWidget
+            candidateId={candidate.id}
+            candidateName={candidate.name}
+            candidateEmail={candidate.email}
+            roleId={activeRoleId}
+            stageApplicable={suggested.map((t) => ({
+              id: t.id,
+              title: t.title,
+              tone: t.tone,
+              description: t.description,
+            }))}
+            allOthers={others.map((t) => ({
+              id: t.id,
+              title: t.title,
+              tone: t.tone,
+              description: t.description,
+            }))}
+          />
         </section>
       )}
 
