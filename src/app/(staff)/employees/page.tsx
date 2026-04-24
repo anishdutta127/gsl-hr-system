@@ -102,7 +102,7 @@ function EmployeeSection({
                 </span>
               </span>
               <span className="text-xs text-ink-3 tabular">
-                {e.ctcAnnual != null ? formatRs(e.ctcAnnual, { compact: true }) : '—'}
+                {e.ctcAnnual != null ? formatRs(e.ctcAnnual, { compact: true }) : '-'}
               </span>
             </Link>
           </li>

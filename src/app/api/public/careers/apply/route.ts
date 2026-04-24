@@ -65,7 +65,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
   }
 
-  // Honeypot — silently swallow
+  // Honeypot: silently swallow
   if (typeof body.website === 'string' && body.website.trim().length > 0) {
     return NextResponse.json({ ok: true })
   }
@@ -152,7 +152,7 @@ export async function POST(request: Request) {
 
     await deliverEmail({
       to: email,
-      subject: `We received your application — ${role.title} at ${company.name}`,
+      subject: `We received your application for ${role.title} at ${company.name}`,
       body: [
         `Hi ${name.split(' ')[0]},`,
         '',
@@ -163,12 +163,12 @@ export async function POST(request: Request) {
         '',
         'The link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.',
         '',
-        `— ${company.hrContact.name}, ${company.hrContact.title}`,
+        `- ${company.hrContact.name}, ${company.hrContact.title}`,
       ].join('\n'),
       context: `welcome magic link for candidate ${candidateId}`,
     })
   } catch (err) {
-    // Mail failure should not block the response — the queued entry still creates
+    // Mail failure should not block the response: the queued entry still creates
     // the candidate record and Shruti can manually send a fresh link.
     console.error('Magic link email failed:', err)
   }

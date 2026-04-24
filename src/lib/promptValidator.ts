@@ -1,5 +1,5 @@
 /*
- * Pure paste-back validator. Isomorphic — safe to import from client
+ * Pure paste-back validator. Isomorphic: safe to import from client
  * components. No node:* imports; lives separately from prompts.ts (which
  * reads the JSON from disk on the server) so the client bundle stays clean.
  */

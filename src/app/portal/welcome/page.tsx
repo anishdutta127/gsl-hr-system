@@ -2,7 +2,7 @@
  * Keystone moment (phase-1-design.md Pass 2): Fraunces greeting, first-name
  * personalisation, current-stage plain-English summary, recruiter contact,
  * single primary CTA. Nothing else on screen. Designed for the 5-second
- * visceral test — "they treated me like a human."
+ * visceral test: "they treated me like a human."
  */
 
 import Link from 'next/link'

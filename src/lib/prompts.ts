@@ -5,7 +5,7 @@
  * declaring required keys + their types. The validator is deliberately
  * strict: a malformed paste-back loudly fails instead of silently losing
  * data. Quality floor (CP5): a prompt ships only when `validatedBy` +
- * `validatedAt` are populated — skeletons are filtered out.
+ * `validatedAt` are populated; skeletons are filtered out.
  */
 
 import fs from 'node:fs'

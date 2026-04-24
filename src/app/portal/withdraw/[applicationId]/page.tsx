@@ -31,7 +31,7 @@ export default async function WithdrawPage({ params }: { params: { applicationId
         <h1 className="font-display text-2xl text-ink">Withdraw application?</h1>
         <p className="mt-3 text-sm text-ink-2">
           You can withdraw your application for <span className="font-medium">{role.title}</span>{' '}
-          at any point. This is final — we will close your file and stop reaching out.
+          at any point. This is final: we will close your file and stop reaching out.
         </p>
         <WithdrawForm applicationId={app.id} />
       </div>

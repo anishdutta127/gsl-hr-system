@@ -39,8 +39,8 @@ export default async function ExitsPage() {
                   <span>
                     <span className="block font-medium text-ink">{e.name}</span>
                     <span className="block text-xs text-ink-2">
-                      {e.designation} · LWD {e.exit ? formatDate(e.exit.lastWorkingDay) : '—'} ·{' '}
-                      {e.exit?.reason ?? '—'}
+                      {e.designation} · LWD {e.exit ? formatDate(e.exit.lastWorkingDay) : '-'} ·{' '}
+                      {e.exit?.reason ?? '-'}
                     </span>
                   </span>
                   <span className="flex gap-2">

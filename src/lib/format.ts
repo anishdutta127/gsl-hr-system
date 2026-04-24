@@ -1,5 +1,5 @@
 /*
- * Locale and format helpers — British English, Indian context.
+ * Locale and format helpers - British English, Indian context.
  *
  * Money: Indian comma placement (Rs 1,50,000); compact form (Rs 1.50 L, Rs 7.05 Cr).
  * Dates: DD-MMM-YYYY (15-Apr-2026), never ambiguous MM/DD/YYYY.
@@ -18,7 +18,7 @@ export interface MoneyOptions {
 
 export function formatRs(amount: number | null | undefined, opts: MoneyOptions = {}): string {
   if (amount === null || amount === undefined || !Number.isFinite(amount)) {
-    return opts.bare ? '—' : 'Rs —'
+    return opts.bare ? '-' : 'Rs -'
   }
   if (opts.compact) return formatCompactRs(amount, opts.bare ?? false)
   const decimals = opts.decimals ?? 0
@@ -39,7 +39,7 @@ function formatCompactRs(amount: number, bare: boolean): string {
 }
 
 export function formatDate(iso: string | null | undefined): string {
-  if (!iso) return '—'
+  if (!iso) return '-'
   try {
     return format(parseISO(iso), 'dd-MMM-yyyy')
   } catch {
@@ -51,7 +51,7 @@ export function formatRelative(
   iso: string | null | undefined,
   opts: { addSuffix?: boolean } = {},
 ): string {
-  if (!iso) return '—'
+  if (!iso) return '-'
   try {
     return formatDistanceToNowStrict(parseISO(iso), { addSuffix: opts.addSuffix ?? true })
   } catch {
@@ -60,17 +60,17 @@ export function formatRelative(
 }
 
 export function formatCount(n: number | null | undefined): string {
-  if (n === null || n === undefined || !Number.isFinite(n)) return '—'
+  if (n === null || n === undefined || !Number.isFinite(n)) return '-'
   return n.toLocaleString(INDIAN_LOCALE)
 }
 
 /** Days in stage as "3d" / "12d" for Kanban card display. */
 export function formatDaysInStage(enteredAt: string | null | undefined): string {
-  if (!enteredAt) return '—'
+  if (!enteredAt) return '-'
   try {
     const days = Math.floor((Date.now() - parseISO(enteredAt).getTime()) / 86_400_000)
     return `${days}d`
   } catch {
-    return '—'
+    return '-'
   }
 }

@@ -1,5 +1,5 @@
 /*
- * GSL HR System — design tokens
+ * GSL HR System: design tokens
  *
  * All visual primitives live here as CSS custom properties.
  * Tailwind config extends from these so utility classes (bg-teal, text-ink-2,

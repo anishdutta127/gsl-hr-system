@@ -5,6 +5,13 @@ const nextConfig = {
   // No `output: 'export'`: middleware (auth, magic-link candidate portal)
   // cannot run in pure static export. Pages remain effectively static so cold
   // starts on the Vercel Hobby tier stay near zero.
+  async redirects() {
+    return [
+      // /home is a convention from several staff members; alias to / so
+      // bookmarks and muscle memory both work.
+      { source: '/home', destination: '/', permanent: false },
+    ]
+  },
   experimental: {
     typedRoutes: false,
     // Files under public/ are served as CDN assets but are NOT bundled into

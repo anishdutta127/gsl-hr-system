@@ -5,7 +5,7 @@
  * self-hosted sync runner writes it to src/data/_outbound_mail.json through
  * the same queue path as every other write. Anish forwards links manually at
  * pilot volume. When volume grows or HR asks, we swap this for Resend by
- * adding RESEND_API_KEY and calling their API here — the queue log becomes
+ * adding RESEND_API_KEY and calling their API here; the queue log becomes
  * the audit trail.
  *
  * Never returns a failure to the caller: mail delivery should not block a

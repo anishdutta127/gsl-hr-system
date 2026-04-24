@@ -1,6 +1,6 @@
 /*
  * Candidate-facing copy for portal surfaces. Plain English. No corporate
- * softening (DESIGN.md — AI slop blacklist). Every sentence passes the
+ * softening (DESIGN.md AI slop blacklist). Every sentence passes the
  * 5-second test: would a 22-year-old recommend this process to a friend?
  */
 

@@ -20,7 +20,7 @@ export default function CareersRolePage({ params }: { params: { roleId: string }
 
   const salary =
     role.salaryRange && role.salaryRange.disclose
-      ? `${formatRs(role.salaryRange.min, { compact: true })} — ${formatRs(role.salaryRange.max, { compact: true })} per ${role.salaryRange.period === 'annual' ? 'year' : 'month'}`
+      ? `${formatRs(role.salaryRange.min, { compact: true })} to ${formatRs(role.salaryRange.max, { compact: true })} per ${role.salaryRange.period === 'annual' ? 'year' : 'month'}`
       : 'Shared at first interview.'
 
   return (

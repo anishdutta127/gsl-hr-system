@@ -47,7 +47,7 @@ export default async function VideoPage({ params }: { params: { id: string } }) 
                 role="status"
                 className="mt-6 rounded-lg border border-success bg-success-bg p-6 text-sm text-ink"
               >
-                Thanks — your video is in. The team will review it shortly.
+                Thanks. Your video is in. The team will review it shortly.
               </div>
             ) : (
               <section className="mt-6 rounded-lg border border-line bg-card p-6">

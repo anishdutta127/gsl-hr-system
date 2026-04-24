@@ -52,10 +52,10 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
           </h2>
           <dl className="grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-line bg-card p-5 text-sm">
             <Term label="Email">{employee.email}</Term>
-            <Term label="Phone">{employee.phone ?? '—'}</Term>
-            <Term label="Reporting to">{employee.reportingTo ?? '—'}</Term>
+            <Term label="Phone">{employee.phone ?? '-'}</Term>
+            <Term label="Reporting to">{employee.reportingTo ?? '-'}</Term>
             <Term label="Annual CTC">
-              {employee.ctcAnnual != null ? formatRs(employee.ctcAnnual) : '—'}
+              {employee.ctcAnnual != null ? formatRs(employee.ctcAnnual) : '-'}
             </Term>
             <Term label="Created">
               {formatDate(employee.createdAt)} by {employee.createdBy}

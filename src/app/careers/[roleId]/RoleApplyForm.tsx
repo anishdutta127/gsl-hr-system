@@ -18,7 +18,7 @@ export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle
       email: String(data.get('email') ?? '').trim(),
       phone: String(data.get('phone') ?? '').trim(),
       coverNote: String(data.get('coverNote') ?? '').trim(),
-      /** honeypot — bots fill, humans don't see it */
+      /** honeypot: bots fill, humans don't see it */
       website: String(data.get('website') ?? '').trim(),
     }
     try {
@@ -48,7 +48,7 @@ export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle
         aria-live="polite"
         className="rounded bg-success-bg px-4 py-4 text-sm text-ink"
       >
-        <p className="font-medium text-ink">Thanks — we've got your application for {roleTitle}.</p>
+        <p className="font-medium text-ink">Thanks. We've got your application for {roleTitle}.</p>
         <p className="mt-2 text-sm text-ink-2">
           You'll get a confirmation email within a few minutes. We reply to every application,
           even if it's a no: typically within two weeks.
@@ -85,7 +85,7 @@ export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle
         />
       </div>
 
-      {/* Honeypot — hidden from humans + screen readers via aria-hidden */}
+      {/* Honeypot: hidden from humans + screen readers via aria-hidden */}
       <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}>
         <label htmlFor="website">Website (leave empty)</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />

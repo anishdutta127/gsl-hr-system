@@ -43,7 +43,7 @@ export default async function OfferDetailPage({ params }: { params: { id: string
           <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
             <Term label="Designation">{offer.designation}</Term>
             <Term label="Location">{offer.location}</Term>
-            <Term label="Reports to">{offer.reportingTo ?? '—'}</Term>
+            <Term label="Reports to">{offer.reportingTo ?? '-'}</Term>
             <Term label="Annual CTC">{formatRs(offer.compensation.ctcAnnual)}</Term>
             {offer.compensation.fixedMonthly ? (
               <Term label="Fixed monthly">{formatRs(offer.compensation.fixedMonthly)}</Term>
@@ -53,12 +53,12 @@ export default async function OfferDetailPage({ params }: { params: { id: string
             ) : null}
             <Term label="Notice period">{offer.compensation.noticePeriodDays} days</Term>
             <Term label="Proposed joining">
-              {offer.proposedJoiningDate ? formatDate(offer.proposedJoiningDate) : '—'}
+              {offer.proposedJoiningDate ? formatDate(offer.proposedJoiningDate) : '-'}
             </Term>
             <Term label="Created">{formatDate(offer.createdAt)} by {offer.createdBy}</Term>
             {offer.approvedAt ? (
               <Term label="Approved">
-                {formatDate(offer.approvedAt)} by {offer.approvedBy ?? '—'}
+                {formatDate(offer.approvedAt)} by {offer.approvedBy ?? '-'}
               </Term>
             ) : null}
             {offer.sentAt ? <Term label="Sent">{formatDate(offer.sentAt)}</Term> : null}

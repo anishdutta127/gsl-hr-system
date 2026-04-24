@@ -63,7 +63,7 @@ export async function POST(
             notes: notes || undefined,
           },
         },
-        notes: `Exit initiated by ${session.email} — LWD ${lastWorkingDay}.`,
+        notes: `Exit initiated by ${session.email}, LWD ${lastWorkingDay}.`,
       },
     })
   } catch (err) {

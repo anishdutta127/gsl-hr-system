@@ -37,7 +37,7 @@ export default async function SettingsPage() {
             {company.signatory.name} ({company.signatory.title})
           </Term>
           <Term label="HR contact">
-            {company.hrContact.name} — {company.hrContact.email}
+            {company.hrContact.name} / {company.hrContact.email}
           </Term>
         </dl>
         <p className="mt-4 text-xs text-ink-3">

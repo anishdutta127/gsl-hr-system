@@ -61,7 +61,7 @@ export default async function UsersPage() {
                   <td className="px-5 py-3 text-ink-2">
                     {(u.ownedRoleIds ?? [])
                       .map((rid) => roleById.get(rid)?.title ?? rid)
-                      .join(', ') || '—'}
+                      .join(', ') || '-'}
                   </td>
                   <td className="px-5 py-3">
                     <span
@@ -75,7 +75,7 @@ export default async function UsersPage() {
                     </span>
                   </td>
                   <td className="px-5 py-3 text-xs text-ink-3 tabular">
-                    {u.lastLoginAt ? formatDate(u.lastLoginAt) : '—'}
+                    {u.lastLoginAt ? formatDate(u.lastLoginAt) : '-'}
                   </td>
                   <td className="px-5 py-3 text-right">
                     <Link

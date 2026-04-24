@@ -4,7 +4,7 @@
     "title": "Parse a resume into structured JSON",
     "useCase": "Paste a candidate's resume. Get back a structured record ready to paste into the candidate intake form.",
     "category": "resume",
-    "body": "You are reviewing a candidate resume for GSL (EdTech, Mumbai). Extract the following into strict JSON matching the schema below. If a field is genuinely missing from the resume, use null — never fabricate. British English. Indian number formatting for any compensation figures (lakh, crore). Years of experience as a decimal number (e.g., 3.5). Do not include any commentary outside the JSON block.\n\nResume text:\n---\n{{PASTE_RESUME_HERE}}\n---",
+    "body": "You are reviewing a candidate resume for GSL (EdTech, Mumbai). Extract the following into strict JSON matching the schema below. If a field is genuinely missing from the resume, use null; never fabricate. British English. Indian number formatting for any compensation figures (lakh, crore). Years of experience as a decimal number (e.g., 3.5). Do not include any commentary outside the JSON block.\n\nResume text:\n---\n{{PASTE_RESUME_HERE}}\n---",
     "inputHint": "Paste the full resume text between the --- markers. Works with PDF-to-text copy or plain text.",
     "outputSchema": {
       "type": "object",
@@ -61,7 +61,7 @@
     },
     "exampleOutputs": [
       {
-        "title": "Content Lead — Secondary Science",
+        "title": "Content Lead, Secondary Science",
         "department": "Academics",
         "location": "Mumbai",
         "employmentType": "Full-time",
@@ -113,7 +113,7 @@
           { "criterionId": "communication", "value": 7 },
           { "criterionId": "team-fit", "value": 6 }
         ],
-        "summary": "Priya brought three specific examples of restructuring a Grade 9 Chemistry module after student feedback — clear ownership. Communication solid in English and Hindi. Hesitant on managing a team larger than 2.",
+        "summary": "Priya brought three specific examples of restructuring a Grade 9 Chemistry module after student feedback; clear ownership. Communication solid in English and Hindi. Hesitant on managing a team larger than 2.",
         "recommendation": "proceed",
         "redFlags": ["No direct experience managing 3+ reports"],
         "strengths": ["Iterative content improvement based on student signal", "Bilingual delivery"]

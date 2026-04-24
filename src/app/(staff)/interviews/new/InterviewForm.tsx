@@ -139,7 +139,7 @@ export function InterviewForm({
             <div className="mt-1">
               Aggregate score:{' '}
               <span className="font-medium text-ink tabular">
-                {aggregate != null ? `${aggregate} / 10` : '—'}
+                {aggregate != null ? `${aggregate} / 10` : '-'}
               </span>
             </div>
             <div className="mt-1">

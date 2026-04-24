@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
   const user = findUserByEmail(email)
   if (!user) {
-    // Intentionally generic message — don't confirm email existence.
+    // Intentionally generic message: don't confirm email existence.
     return NextResponse.json({ message: 'Invalid credentials.' }, { status: 401 })
   }
 

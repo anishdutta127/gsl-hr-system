@@ -2,14 +2,14 @@
  * Auth middleware.
  *
  * Route scopes:
- *   /login, /api/login, /api/logout, /api/health   — public
- *   /careers/**                                    — public (candidate-facing)
- *   /api/public/**                                 — public
- *   /portal/**                                     — candidate session cookie required
+ *   /login, /api/login, /api/logout, /api/health   : public
+ *   /careers/**                                    : public (candidate-facing)
+ *   /api/public/**                                 : public
+ *   /portal/**                                     : candidate session cookie required
  *                                                    (magic-link exchange sets it)
- *   /portal/request-new-link                       — public (recovery surface)
- *   /portal/exchange                               — public (magic-link landing)
- *   everything else                                — staff JWT required
+ *   /portal/request-new-link                       : public (recovery surface)
+ *   /portal/exchange                               : public (magic-link landing)
+ *   everything else                                : staff JWT required
  */
 
 import { NextResponse } from 'next/server'

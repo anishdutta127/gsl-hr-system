@@ -30,7 +30,7 @@ export async function AppShell({ children }: { children: React.ReactNode }) {
             <span aria-hidden="true" className="inline-block h-6 w-6 rounded bg-teal" />
             GSL HR
           </Link>
-          <div className="text-sm text-ink-2">{session?.name ?? '—'}</div>
+          <div className="text-sm text-ink-2">{session?.name ?? '-'}</div>
         </header>
         <main className="flex-1 overflow-auto">{children}</main>
       </div>

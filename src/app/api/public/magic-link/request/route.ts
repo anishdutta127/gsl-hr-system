@@ -37,7 +37,7 @@ function portalBaseUrl(request: Request): string {
 export async function POST(request: Request) {
   const ip = ipOf(request)
   if (rateLimited(`magic-link:${ip}`, 5, 60 * 60)) {
-    return NextResponse.json({ ok: true }) // silent cap — same response as success
+    return NextResponse.json({ ok: true }) // silent cap: same response as success
   }
 
   let body: { email?: unknown }
@@ -74,7 +74,7 @@ export async function POST(request: Request) {
         '',
         link,
         '',
-        `— ${company.hrContact.name}, ${company.hrContact.title}`,
+        `- ${company.hrContact.name}, ${company.hrContact.title}`,
       ].join('\n'),
       context: `reissued magic link for candidate ${candidate.id}`,
     })

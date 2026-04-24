@@ -54,7 +54,7 @@ export default async function AssessmentPage({ params }: { params: { id: string 
                 role="status"
                 className="mt-6 rounded-lg border border-success bg-success-bg p-6 text-sm text-ink"
               >
-                Thanks — we've marked your assessment complete. HR will review it and follow up.
+                Thanks. We've marked your assessment complete. HR will review it and follow up.
               </div>
             ) : (
               <section className="mt-6 rounded-lg border border-line bg-card p-6">

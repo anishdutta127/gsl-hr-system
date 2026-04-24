@@ -135,11 +135,37 @@ See inherited MOU pattern at `gsl-mou-system/docs/SECRETS.md`. Three secrets to 
 
 Always scope new token before revoking old. Short overlap window = zero downtime.
 
+## Queue applier
+
+**What it is:** `.github/workflows/apply-queue.yml` runs every 10 min
+(IST business hours, Mon-Fri) on a hosted ubuntu runner. Consumes
+`src/data/pending_updates.json`, applies each entry to the matching
+entity file, commits as `chore(apply): drain queue <ts>`, pushes.
+Vercel rebuilds on the apply commit so the UI surfaces the change.
+
+**Latency:** writes visible within 10-15 min of submission. Acceptable
+for an internal HR tool at pilot volume. If HR needs it faster, the
+workflow can be kicked manually from the GitHub Actions tab
+("Run workflow").
+
+**If the applier is stuck:**
+1. Open Actions tab, find the latest `Apply Pending Queue` run.
+2. If red: inspect logs. Most likely an unknown `operation` value in
+   a queue entry -> `scripts/apply_queue.py` needs a handler added.
+3. Failed entries go to `src/data/failed_updates.json` with the
+   reason. The entry stays in the queue until handled.
+4. Manual drain: on a local checkout, run `python3 scripts/apply_queue.py`
+   then commit + push. Only do this if the hosted runner is down.
+
+**Testing surface awareness:** when no applier run has happened yet,
+writes queue but don't surface. Check Actions tab if a tester reports
+"I added X but I don't see it." Typical wait: up to 10 min.
+
 ## Monitoring (Phase 1 — manual)
 
 No pager duty. Anish monitors manually via:
 - Vercel dashboard deploy status
-- GitHub Actions tab for sync-runner health
+- GitHub Actions tab for sync-runner + queue-applier health
 - `src/data/failed_updates.json` file size (shouldn't grow)
 
 **Automation trigger (TODO in `docs/TODOS.md`):** when any sustained incident class takes > 30 min to detect, invest in an `/admin/health` dashboard + webhook alerting.

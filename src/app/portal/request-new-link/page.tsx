@@ -4,7 +4,7 @@ import { RequestLinkForm } from './RequestLinkForm'
 export const dynamic = 'force-dynamic'
 
 const REASON_COPY: Record<string, string> = {
-  expired: 'Your previous link expired — here is a fresh one.',
+  expired: 'Your previous link expired. Here is a fresh one.',
   invalid: "That link isn't recognised. Let's send you a new one.",
   missing: 'No link found in that URL. Drop your email and we will send a fresh one.',
   notfound: 'We could not find that application. Try again with the email you used to apply.',

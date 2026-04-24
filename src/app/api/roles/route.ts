@@ -81,7 +81,7 @@ export async function POST(request: Request) {
     })
   } catch (err) {
     const message =
-      err instanceof Error ? err.message : 'Could not save — queue write failed.'
+      err instanceof Error ? err.message : 'Could not save: queue write failed.'
     return NextResponse.json({ message }, { status: 503 })
   }
 

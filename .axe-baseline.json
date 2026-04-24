@@ -1,0 +1,6 @@
+{
+  "_comment": "Shrinking a11y baseline. One entry per URL tested. Value is the count of violations at or above 'serious' severity. CI fails if actual > baseline. Lower the number as violations get fixed; never raise without a written justification in the PR description.",
+  "/careers": 0,
+  "/login": 0,
+  "/portal/request-new-link": 0
+}

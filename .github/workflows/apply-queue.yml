@@ -1,0 +1,77 @@
+name: Apply Pending Queue
+
+# Every 10 min during IST business hours + manual dispatch.
+# Consumes src/data/pending_updates.json and applies each write intent
+# to the corresponding entity file. Commits non-`chore(queue):` so
+# Vercel rebuilds and the UI surfaces the change.
+#
+# Hosted runner (ubuntu-latest). Total run usage stays well under the
+# free-tier cap: ~60 minutes/day across ~60 runs.
+
+on:
+  schedule:
+    # Every 10 min, IST 09:00-19:00 Mon-Fri = UTC 03:30-13:30
+    - cron: '*/10 3-13 * * 1-5'
+  workflow_dispatch: {}
+
+concurrency:
+  group: apply-queue
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Check queue has entries
+        id: check
+        run: |
+          if [ ! -f src/data/pending_updates.json ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          count=$(python3 -c "import json; print(len(json.load(open('src/data/pending_updates.json'))))")
+          echo "Queue has $count entries."
+          if [ "$count" = "0" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Apply queue
+        if: steps.check.outputs.skip != 'true'
+        run: python3 scripts/apply_queue.py
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          set -e
+          git config user.email "apply-bot@gsl-hr.local"
+          git config user.name "HR Queue Applier"
+          git add src/data/
+          if git diff --staged --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          ts=$(date -u +"%Y-%m-%dT%H:%MZ")
+          git commit -m "chore(apply): drain queue ${ts}"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0 || true
+            echo "push attempt $i failed, retrying"
+            sleep 5
+          done
+          echo "push failed after 3 attempts"
+          exit 1
