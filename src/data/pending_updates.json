@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "aabc3ae1-bcf6-4d64-b5bd-a550fe22a0db",
+    "queuedAt": "2026-04-24T09:22:59.650Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "RELIEVING-v1",
+        "templateTitle": "Relieving Letter"
+      },
+      "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
+    },
+    "retryCount": 0
+  }
+]
