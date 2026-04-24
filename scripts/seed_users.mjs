@@ -24,7 +24,9 @@ const seedUsers = [
   { email: 'Hiring@getsetlearn.info', name: 'Shruti', role: 'HR' },
   { email: 'hr@getsetlearn.info', name: 'Riddhi', role: 'HR' },
   { email: 'manali.b@getsetlearn.info', name: 'Manali', role: 'HOD' },
+  { email: 'ritu.u@getsetlearn.info', name: 'Ritu Uppal', role: 'HOD' },
   { email: 'shashank.s@getsetlearn.info', name: 'Shashank', role: 'HOD' },
+  { email: 'shubhra.r@getsetlearn.info', name: 'Shubhra Rishi', role: 'HOD' },
   { email: 'vishwanath.g@getsetlearn.info', name: 'Vishwanath', role: 'HOD' },
   { email: 'ameet.z@getsetlearn.info', name: 'Ameet', role: 'Leadership' },
 ]
