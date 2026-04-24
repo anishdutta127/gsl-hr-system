@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import { loadCandidates, loadApplications, loadRoles } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
-import { formatDate, formatCount } from '@/lib/format'
+import { formatCount } from '@/lib/format'
+import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
+import { CandidateList, type CandidateRow } from './CandidateList'
 
 export const dynamic = 'force-dynamic'
 
@@ -27,6 +29,9 @@ export default async function CandidatesPage({
       ? allCandidates.filter((c) => visibleCandidateIds.has(c.id))
       : allCandidates
 
+  // Hide archived unless the filter explicitly asks for them.
+  candidates = candidates.filter((c) => c.status !== 'Archived')
+
   const programmes = Array.from(
     new Set(candidates.flatMap((c) => c.tags?.programmes ?? [])),
   ).sort()
@@ -51,12 +56,35 @@ export default async function CandidatesPage({
     return true
   })
 
+  const rows: CandidateRow[] = candidates.map((c) => {
+    const apps = applications.filter((a) => a.candidateId === c.id)
+    return {
+      id: c.id,
+      name: c.name,
+      email: c.email,
+      source: c.source,
+      createdAt: c.createdAt,
+      programmes: c.tags?.programmes ?? [],
+      appCount: apps.length,
+      appSummaries: apps.slice(0, 2).map((a) => ({
+        roleTitle: roleById.get(a.roleId)?.title ?? 'role',
+        stage: a.currentStage as string,
+      })),
+    }
+  })
+
+  const openRoleOptions = roles
+    .filter((r) => r.status === 'Open')
+    .map((r) => ({ id: r.id, label: `${r.title} · ${r.department}` }))
+
+  const canBulk = session.role === 'Admin' || session.role === 'HR'
+
   return (
     <div className="container-page py-8">
       <div className="mb-6">
         <h1 className="font-display text-2xl text-ink">Candidates</h1>
         <p className="mt-1 text-sm text-ink-2">
-          {formatCount(candidates.length)} of {formatCount(allCandidates.length)} in the pool.
+          {formatCount(candidates.length)} of {formatCount(allCandidates.filter((c) => c.status !== 'Archived').length)} in the pool.
           Search hits names, emails, and full resume text.
         </p>
       </div>
@@ -106,67 +134,41 @@ export default async function CandidatesPage({
         )}
       </form>
 
-      {candidates.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
-          <p className="text-sm text-ink-2">
-            {allCandidates.length === 0
-              ? "No candidates yet. Add the first candidate from a role's detail page."
-              : 'No matches for the current filter.'}
-          </p>
-        </div>
+      {canBulk ? (
+        <CandidateList
+          rows={rows}
+          totalCount={rows.length}
+          templateOptions={EMAIL_TEMPLATES.map((t) => ({ id: t.id, title: t.title }))}
+          openRoleOptions={openRoleOptions}
+        />
       ) : (
-        <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
-          {candidates.slice(0, 200).map((c) => {
-            const apps = applications.filter((a) => a.candidateId === c.id)
-            const prog = c.tags?.programmes ?? []
-            return (
+        // HOD view: read-only list without bulk toolbar.
+        rows.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
+            <p className="text-sm text-ink-2">No candidates match.</p>
+          </div>
+        ) : (
+          <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
+            {rows.slice(0, 200).map((c) => (
               <li key={c.id}>
                 <Link
                   href={`/candidates/${c.id}`}
-                  className="flex items-start justify-between gap-4 px-5 py-3 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+                  className="flex items-start justify-between gap-4 px-5 py-3 text-sm hover:bg-surface"
                 >
                   <span className="min-w-0 flex-1">
                     <span className="block font-medium text-ink">{c.name}</span>
                     <span className="block text-xs text-ink-2">
-                      {c.email || 'no email on file'} · {c.source} · Added {formatDate(c.createdAt)}
+                      {c.email || 'no email on file'} · {c.source}
                     </span>
-                    {(prog.length > 0 || apps.length > 0) && (
-                      <span className="mt-1 flex flex-wrap gap-1">
-                        {prog.map((p) => (
-                          <span
-                            key={p}
-                            className="inline-flex items-center rounded bg-surface px-2 py-0.5 text-xs text-ink-2"
-                          >
-                            {p}
-                          </span>
-                        ))}
-                        {apps.map((a) => {
-                          const role = roleById.get(a.roleId)
-                          return (
-                            <span
-                              key={a.id}
-                              className="inline-flex items-center rounded bg-teal-light px-2 py-0.5 text-xs text-teal-dark"
-                            >
-                              {role?.title ?? 'role'} · {a.currentStage}
-                            </span>
-                          )
-                        })}
-                      </span>
-                    )}
                   </span>
                   <span className="shrink-0 text-xs text-ink-3 tabular">
-                    {formatCount(apps.length)} {apps.length === 1 ? 'app' : 'apps'}
+                    {c.appCount} {c.appCount === 1 ? 'app' : 'apps'}
                   </span>
                 </Link>
               </li>
-            )
-          })}
-          {candidates.length > 200 && (
-            <li className="px-5 py-2 text-xs text-ink-3">
-              Showing first 200 of {formatCount(candidates.length)}. Refine the filter to narrow the list.
-            </li>
-          )}
-        </ul>
+            ))}
+          </ul>
+        )
       )}
     </div>
   )
