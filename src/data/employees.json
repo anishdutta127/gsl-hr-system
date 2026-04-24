@@ -22,12 +22,12 @@
     "address": "KANCHAN FLAT NO - 8, ANKUR SOCIETY,BEST NAGAR, GOREGAON WEST, MUMBAI 400104",
     "personalEmail": "nair.ajith76@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/004",
@@ -35,7 +35,7 @@
           "designation": "Senior Manager - Technology",
           "department": "Technology"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -62,12 +62,12 @@
     "address": "401 / 402, NANDADEEP, VIDHYANIDHI MARG, OPP. KAIFI AZMI PARK, JUHU, VILE-PARLE (EAST), MUMBAI - 400 049, MAHARASHTRA",
     "personalEmail": "amitzave@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/014",
@@ -75,7 +75,7 @@
           "designation": "Chief Executive Officer",
           "department": "Founder's Office"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -102,12 +102,12 @@
     "address": "ARIHANTCOMPLEX BLDG NO-4, ROOM NO 3O4,NEAR RAM NAGAR,OLD VIVA COLLEGE ROAD, VIRAR - WEST - 401303",
     "personalEmail": "gajakosh.shubhangi@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/016",
@@ -115,7 +115,7 @@
           "designation": "Chief Manager - Finance & Accounts",
           "department": "Finance & Accounts"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -142,12 +142,12 @@
     "address": "#199, 1st Floor, Near Anugraha College of Nursing 560049",
     "personalEmail": "vidyashreebm55@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/020",
@@ -155,7 +155,7 @@
           "designation": "Manager - Marketing & Operations",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -182,12 +182,12 @@
     "address": "#311,GF,SUKHI, 5TH MAIN,6TH CROSS, RHCS 2ND STAGE, SRIGANDHAKAVALU,BENGALURU NORTH,KARNATAKA",
     "personalEmail": "pradeepragav@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/022",
@@ -195,7 +195,7 @@
           "designation": "Chief Manager - Operations",
           "department": "Operations"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -222,12 +222,12 @@
     "address": "A-503, Shri Hari CHS, RTO Lane Near Babasaheb Gaikwad Hall, 4 Bunglows, Andheri West, Mumbai 400053",
     "personalEmail": "swati.phutane@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/027",
@@ -235,7 +235,7 @@
           "designation": "Senior Vice President - Operations",
           "department": "Operations"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -262,12 +262,12 @@
     "address": "B1002 Raj Hill Dattapada Road Rai Dongri Opp Lohar Sutar Wadi, Borivali East Mumbai 400066",
     "personalEmail": "saurabhagrawal_123@yahoo.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/015",
@@ -275,7 +275,7 @@
           "designation": "Chief Financial Officer",
           "department": "Finance & Accounts"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -302,12 +302,12 @@
     "address": "PLOT NO. 22, DHANWANTARI NAGAR, RAMNA MAROTI, NEAR JYOTI SCHOOL, NAGPUR - 440024",
     "personalEmail": "capranavbhardwaj@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/028",
@@ -315,7 +315,7 @@
           "designation": "Senior Manager - Finance & Accounts",
           "department": "Finance & Accounts"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -342,12 +342,12 @@
     "address": "L-204 MAYURESH SRISHTI ,LBS MARG,OPPO ASIAN PAINTS,BHANDUP WEST,MUMBAI 400078",
     "personalEmail": "gow302000@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/036",
@@ -355,7 +355,7 @@
           "designation": "Assistant Manager - Platform and Implementation",
           "department": "Operations"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -382,12 +382,12 @@
     "address": "C-6/01, NILE CHS, GODREJ HILL KHADAKPADA, NEAR MADHAV SHRUSTHI, KALYAN WEST, 421301",
     "personalEmail": "shashanksanas@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/037",
@@ -395,7 +395,7 @@
           "designation": "Head - Training (India)",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -422,12 +422,12 @@
     "address": "21, Sunanda, 25 Crossing of Juhu & Tagore Road, Santacruz West, Mumbai 400054",
     "personalEmail": "rituuppal3@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/038",
@@ -435,7 +435,7 @@
           "designation": "Chief Academics Officer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -462,12 +462,12 @@
     "address": "ABANTIKA APARTMENT, 40 A (N) PURBACHAL KALITALA LINK ROAD 700078",
     "personalEmail": "pratikgd@googlemail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/041",
@@ -475,7 +475,7 @@
           "designation": "President - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -502,12 +502,12 @@
     "address": "B-502, SHAKTISADAN APARTMENTS, KHERWADI, BANDRA (EAST) MUMBAI 400051",
     "personalEmail": "shubhra.rishi@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/043",
@@ -515,7 +515,7 @@
           "designation": "President - Marketing",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -542,12 +542,12 @@
     "address": "FLAT NO. 604 SAI BHAKTI CHS PLOT NO 129A SECTOR 13, KHARGHAR, NAVI MUMBAI  410210",
     "personalEmail": "reemajaiswal2011@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/047",
@@ -555,7 +555,7 @@
           "designation": "Chief Manager - Product and Implementation",
           "department": "Product"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -567,7 +567,7 @@
     "email": "deepjyoti.d@getsetlearn.info",
     "phone": "+91-8876695518",
     "designation": "Zonal Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Shashank Sanas",
     "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
     "location": "Guwahati",
@@ -582,20 +582,20 @@
     "address": "HOUSE NO :62,BHUGARGAON, KK HANDIQUE PATH, DPI, KAHILIPARA,GUWAHATI. PIN: 781019",
     "personalEmail": "jorn.deep@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/049",
           "name": "DEEPJYOTI DAS",
           "designation": "Zonal Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -607,7 +607,7 @@
     "email": "avishek.d@getsetlearn.info",
     "phone": "+91-9830166457",
     "designation": "Deputy Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Deepjyoti Das",
     "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
     "location": "Kolkata",
@@ -622,20 +622,20 @@
     "address": "171 Bidhan Park, P.O. Noapara, P.S. Baranagar,Kolkata – 700090,North 24 Parganas.",
     "personalEmail": "avishek.dasgupta@outlook.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/051",
           "name": "AVISHEK DASGUPTA",
           "designation": "Deputy Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -662,12 +662,12 @@
     "address": "Kolkata – 700090,",
     "personalEmail": "pkmisba@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/056",
@@ -675,7 +675,7 @@
           "designation": "Assistant Manager - Planning and Implementation",
           "department": "Operations"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -702,12 +702,12 @@
     "address": "North 24 Parganas.",
     "personalEmail": "bvp1144@yahoo.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/057",
@@ -715,7 +715,7 @@
           "designation": "Frontend Developer",
           "department": "Technology"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -742,12 +742,12 @@
     "address": "J-52, Dal and Roti Building, Old double storey, Lajpat Nagar 4 Pin: 110024",
     "personalEmail": "roveenaverma1@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/063",
@@ -755,7 +755,7 @@
           "designation": "Zonal Sales Manager",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -782,12 +782,12 @@
     "address": "Plot no 90, Road no 3, Louthkunta, Tirumalgiri, Secunderabad 500015",
     "personalEmail": "kranthilucky31@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/064",
@@ -795,7 +795,7 @@
           "designation": "Area Sales Manager",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -822,12 +822,12 @@
     "address": "Subrata Abasan, 2nd floor, Premkendra Mitra Path, South Babupara, Siliguri, Darjeeling Pin: 724004",
     "personalEmail": "hirakthakur69@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/065",
@@ -835,7 +835,7 @@
           "designation": "Area Sales Manager",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -862,12 +862,12 @@
     "address": "Krishna Villa, Flat No. 2, 37, Patoary Para, P. S. - Survey Park, Kolkata- 700075, Near-Bhatkhande",
     "personalEmail": "prodiptobanerjee07@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/066",
@@ -875,7 +875,7 @@
           "designation": "Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -902,12 +902,12 @@
     "address": "No. 68/208, Vilage Street Sathuma Nagar, Thiruvottiyur, Chennai Pin: 600019",
     "personalEmail": "ezhile2luvhart@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/070",
@@ -915,7 +915,7 @@
           "designation": "Executive - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -927,7 +927,7 @@
     "email": "kunal.s@getsetlearn.info",
     "phone": "+91-7091878999",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Ranchi",
@@ -942,20 +942,20 @@
     "address": "SHARMA COLONY TATISILWAI RANCHI JHARKHAND  835103",
     "personalEmail": "kunalsharmacse2021@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/076",
           "name": "KUNAL SHARMA",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -982,12 +982,12 @@
     "address": "27A, FLAT NO 5, NAVJIVAN SOCIETY, RC MARG, CHEMBUR (E) 400074",
     "personalEmail": "tamanna.jaisinghani@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/078",
@@ -995,7 +995,7 @@
           "designation": "Senior Manager - Product & Partnerships",
           "department": "Partnerships"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1007,7 +1007,7 @@
     "email": "dipanjan@getsetlearn.info",
     "phone": "+91-7384252504",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -1022,20 +1022,20 @@
     "address": "VILL- NAIHATI,PO-BADARTALA,PS-BASIRHAT,NORTH 24 PARGANAS WEST BENGAL - 743292",
     "personalEmail": "dipanjankarmakarsit@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/079",
           "name": "DIPANJAN KARMAKAR",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1062,12 +1062,12 @@
     "address": "No:10-B PERUMAL KOVIL STREET,VILLUPURAM 605602",
     "personalEmail": "gogulbaskaran01@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/080",
@@ -1075,7 +1075,7 @@
           "designation": "Jr. RoR Developer",
           "department": "Technology"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1102,12 +1102,12 @@
     "address": "A-404, KALPVRUKSH HEIGHTS, NEW LINK ROAD KANDiVILI WEST MUMBAI 400067",
     "personalEmail": "ashwinadhikari@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/081",
@@ -1115,7 +1115,7 @@
           "designation": "Senior Vice President - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1142,12 +1142,12 @@
     "address": "B6-903, B6 BLOCK, L&T SOUTH CITY APARTMENTS, AREKERE MICO LAYOUT, BENGALURU, KARNATAKA, 560076",
     "personalEmail": "joannadias.work@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/083",
@@ -1155,7 +1155,7 @@
           "designation": "Asst. Manager - Marketing",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1167,7 +1167,7 @@
     "email": "rucha.d@getsetlearn.info",
     "phone": "+91-7447766246",
     "designation": "Chief Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Shashank Sanas",
     "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
     "location": "Pune",
@@ -1182,20 +1182,20 @@
     "address": "B-303,LAKE PARADISE,OPP.CRPF, OLD PUNE- BOMBAY HIGHWAY,TALEGAON DABHADE, TAL MAWAL,PUNE-410506",
     "personalEmail": "ruchasarwadnya@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/084",
           "name": "RUCHA DOIFODE",
           "designation": "Chief Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1207,7 +1207,7 @@
     "email": "koushiki.m@getsetlearn.info",
     "phone": "+91-7300147882",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -1222,20 +1222,20 @@
     "address": "87,WOMEN'S COLLEGE LANE,PEROZPUR,MALDA,732101",
     "personalEmail": "koushikimisra28@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/086",
           "name": "KOUSHIKI MISRA",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1262,12 +1262,12 @@
     "address": "D-1,604 Wafa Hills, Almas Colony, Kausa, Mumbra, Thane",
     "personalEmail": "tuba.mirza1407@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/087",
@@ -1275,7 +1275,7 @@
           "designation": "Instructional Designer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1287,7 +1287,7 @@
     "email": "rishek.r@getsetlearn.info",
     "phone": "+91-7091878999",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pooja Sharma",
     "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
     "location": "Ranchi",
@@ -1302,20 +1302,20 @@
     "address": "NAMKOM ROAD, PIPRA TOLI, KHUNTO (JHARKHAND)",
     "personalEmail": "jhaa9085@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/088",
           "name": "RISHEK RANJAN",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1342,12 +1342,12 @@
     "address": "34 A DOCTOR RAJENDRA ROAD, KOLKATA 700020",
     "personalEmail": "krishworah@yahoo.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/093",
@@ -1355,7 +1355,7 @@
           "designation": "Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1367,7 +1367,7 @@
     "email": "priya.v@getsetlearn.info",
     "phone": "+91-7000206457",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Raipur",
@@ -1382,20 +1382,20 @@
     "address": "Q.NO 10/D STREET 25 SECTOR  BHILAI PIN 490006",
     "personalEmail": "vpriyaangle@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/096",
           "name": "PRIYA VERMA",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1407,7 +1407,7 @@
     "email": "yash.k@getsetlearn.info",
     "phone": "+91-8529870792",
     "designation": "Assistant Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Pune",
@@ -1422,20 +1422,20 @@
     "address": "Flat-105, E3 Wing, Sunshine Nagar, Nakhate Wasti, Rahatni-Kalewadi road, Rahatni, Pune, Maharashtra, 411017.",
     "personalEmail": "kapooryash555@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/100",
           "name": "YASH KAPOOR",
           "designation": "Assistant Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1447,7 +1447,7 @@
     "email": "sangeetha.n@getsetlearn.info",
     "phone": "+91-8919814135",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Secunderabad",
@@ -1462,20 +1462,20 @@
     "address": "1-77 VKITCHEN,LAXMAREDDY COLONY,UPPAL,HYDERABAD,500039",
     "personalEmail": "nannasangeethans@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/101",
           "name": "SANGEETHA NANNA",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1487,7 +1487,7 @@
     "email": "likhitha.c@getsetlearn.info",
     "phone": "+91-8179833959",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Hyderabad",
@@ -1502,20 +1502,20 @@
     "address": "304 Kamala Nivas, Kamala Nagar, Beside Lalitha jewellers pillar no 1558  Chaitanya Pur, Hyderabad 500060, Telangana",
     "personalEmail": "likhitha018@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/102",
           "name": "LIKHITHA KOMIRISHETTY",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1542,12 +1542,12 @@
     "address": "302,AARYA RESIDENCY,PRAYEJA CITY ROAD , PUNE-411041",
     "personalEmail": "tteldhune@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/106",
@@ -1555,7 +1555,7 @@
           "designation": "Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1567,7 +1567,7 @@
     "email": "pallavi.t@getsetlearn.info",
     "phone": "+91-9945388599",
     "designation": "Deputy Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Swati Phutane",
     "reportingManagerId": "7ae15f47-5f1c-5ff0-83f4-6d96a97452f2",
     "location": "Bangalore",
@@ -1582,20 +1582,20 @@
     "address": "Shravanti Paramount apartment flat no. 327 Hulimavu Bangalore- 560068",
     "personalEmail": "paa1315169@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/107",
           "name": "PALLAVI TATAWATI",
           "designation": "Deputy Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1607,7 +1607,7 @@
     "email": "shruti.r@getsetlearn.info",
     "phone": "+91-7676703200",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Belgaum",
@@ -1622,20 +1622,20 @@
     "address": "H.NO 146 BHARAT NAGAR 1ST CROSS SHAHAPUR BELAGAVI-590003",
     "personalEmail": "girigoudarshruti4@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/108",
           "name": "SHRUTI RAWUL",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1647,7 +1647,7 @@
     "email": "pooja.s@getsetlearn.info",
     "phone": "+91-8871565200",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Deepjyoti Das",
     "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
     "location": "Indore",
@@ -1662,20 +1662,20 @@
     "address": "75-B, TIRUPATI PALACE NIPANIYA, INDORE-452010",
     "personalEmail": "pooja.sharma.020492@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/111",
           "name": "POOJA SHARMA",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1687,7 +1687,7 @@
     "email": "priyanka.p@getsetlearn.info",
     "phone": "+91-8789337088",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Pune",
@@ -1702,20 +1702,20 @@
     "address": "C-602, Silver Stone Society, Handewadi Chowk, Pune-412308",
     "personalEmail": "priyanka.sinha0401@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/112",
           "name": "PRIYANKA PUSHKER",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1727,7 +1727,7 @@
     "email": "sarika.c@getsetlearn.info",
     "phone": "+91-9833086774",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Mumbai",
@@ -1742,20 +1742,20 @@
     "address": "B-104,SAIRAJ CHS,NEAR KENDRIYA VIHAR,PLOT NO 51A, SECTOR 11, KHARGHAR,NAVI MUMBAI - 410210",
     "personalEmail": "sarika.chandratre@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/115",
           "name": "SARIKA CHANDRATRE",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1767,7 +1767,7 @@
     "email": "sneha.p@getsetlearn.info",
     "phone": "+91-9743789493",
     "designation": "Assistant Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Belgaum",
@@ -1782,20 +1782,20 @@
     "address": "Plot no 1895,CTS no 6794,sector no 9, 1st floor, Malmaruti Extension, Mahantesh Nagar, Belagavi,590016",
     "personalEmail": "snehapatil12324@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/117",
           "name": "SNEHA PATIL",
           "designation": "Assistant Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1807,7 +1807,7 @@
     "email": "paulamee.p@getsetlearn.info",
     "phone": "+91-7439577792",
     "designation": "Assistant Manager - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -1822,20 +1822,20 @@
     "address": "6/141, BALIRMORE, KALITALA, HOOGHLY- 712103, KOLKATA",
     "personalEmail": "paulameepaul2@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/119",
           "name": "PAULAMEE PAUL",
           "designation": "Assistant Manager - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1847,7 +1847,7 @@
     "email": "vaishnav.v@getsetlearn.info",
     "phone": "+91-8547804560",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Bangalore",
@@ -1862,20 +1862,20 @@
     "address": "Sri Vinayaka New PG for Gents, No 16. Keerthi Nilaya, 5th main 4th cross, Badrappa layout, Nagashetty Halli, Bengaluru, Karnataka 560094",
     "personalEmail": "vaishnavgangadharan@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/122",
           "name": "VAISHNAV V",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1902,12 +1902,12 @@
     "address": "HNO 137 NEAR CIVIL HOSPITAL SECTOR 10 GURGAON-122001",
     "personalEmail": "kmohit267@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/130",
@@ -1915,7 +1915,7 @@
           "designation": "Manager- Business Development",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1927,7 +1927,7 @@
     "email": "rajesh.p@getsetlearn.info",
     "phone": "+91-9884201671",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Chennai",
@@ -1942,20 +1942,20 @@
     "address": "1102/5 ROAD STREET VADUGASATHU VILLAGE,ARANI -632316,TIRUVANNAMALAI DISTRICT",
     "personalEmail": "sabthagiri13@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/131",
           "name": "RAJESH PERUMAL",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -1967,7 +1967,7 @@
     "email": "vivek.j@getsetlearn.info",
     "phone": "+91-8652446582",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Shashank Sanas",
     "reportingManagerId": "5ac5059f-55f3-5738-6e74-a212f3ecfaf2",
     "location": "Mumbai",
@@ -1982,20 +1982,20 @@
     "address": "Room No 847, Indra Nagar, Rhivasi Seva Sangh, J.B. Marg Mumbai PO: TF Donar Maharashtra 400088",
     "personalEmail": "jaiswarvivek253@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/132",
           "name": "VIVEK JAISWAR",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2022,12 +2022,12 @@
     "address": "H. No-482, Vill+Post- Kalandi, Tehsil- Sardana, district - Meerut , Uttar Pradesh. PIN - 250342",
     "personalEmail": "tanujrajpoot1212@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/135",
@@ -2035,7 +2035,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2062,12 +2062,12 @@
     "address": "D-212, 2ND FLOOR, MOHAN GARDEN, NEW DELHI-110059",
     "personalEmail": "sahilsharma076@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/138",
@@ -2075,7 +2075,7 @@
           "designation": "Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2087,7 +2087,7 @@
     "email": "shiva.e@getsetlearn.info",
     "phone": "+91-6303451669",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Hyderabad",
@@ -2102,20 +2102,20 @@
     "address": "Flat No 302, Shiva Sai Pramukha Nilayam, Sathyanarayanapuram Colony, Chaithanayapuri, Hyderabad, 500060",
     "personalEmail": "shivaeppa1234@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/139",
           "name": "SHIVA EPPA",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2127,7 +2127,7 @@
     "email": "sundeep.m@getsetlearn.info",
     "phone": "+91-9538351035",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Belgaum",
@@ -2142,20 +2142,20 @@
     "address": "Flat no-301, 4th floor, Shivsai Apt, Bauxite road, vidyagiri, belgaum- 590010",
     "personalEmail": "sundeepmadalagi@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/141",
           "name": "SUNDEEP MADALAGI",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2182,12 +2182,12 @@
     "address": "L-2/10, Spaghetti, Sector 15, Kharghar, Navi Mumbai Pin 410210",
     "personalEmail": "sumitmajumdar81@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/143",
@@ -2195,7 +2195,7 @@
           "designation": "Deputy Vice President - Academics",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2222,12 +2222,12 @@
     "address": "JUILEE, MOTHER TERESA SEJOL, LAST STOP, GASS, NALLASOPARA (W),   TAL- VASAI, DIS- Palghar - 401203",
     "personalEmail": "sararumao2410@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/144",
@@ -2235,7 +2235,7 @@
           "designation": "Executive – Instructional Designer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2262,12 +2262,12 @@
     "address": "GURUKRUPA PARAM, 'A' WING, FLAT NO. 801, KANNAMWAR NAGAR 2,VIKHROLI (EAST), MUMBAI- 400083",
     "personalEmail": "siddhigawade59@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/145",
@@ -2275,7 +2275,7 @@
           "designation": "Executive – Instructional Designer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2302,12 +2302,12 @@
     "address": "1484, DEB BANNERJEE ROAD, KOL-700039",
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/146",
@@ -2315,7 +2315,7 @@
           "designation": "Manager - Demonstrations and Support",
           "department": "Demonstration & Support"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2342,12 +2342,12 @@
     "address": "265/B, Maharani Indira Devi Road, Behala Parnashree, Kolkata - 700060",
     "personalEmail": "ranotosh.ghosh@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/149",
@@ -2355,7 +2355,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2382,12 +2382,12 @@
     "address": "B/603 Bhakti Ornate, Plot No. 71, Sector - 35, Kamothe, Mansarovar, Navi Mumbai- 410206.",
     "personalEmail": "namrata198259@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/150",
@@ -2395,7 +2395,7 @@
           "designation": "Chief Manager - Operations",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2422,12 +2422,12 @@
     "address": "C-1001,Phase-II, Grande View-7, Ambegaon Budruk, Pune-411046",
     "personalEmail": "sur_mah@yahoo.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/152",
@@ -2435,7 +2435,7 @@
           "designation": "Zonal Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2462,12 +2462,12 @@
     "address": "101, MARS ENCLAVE, BESIDE RELIANCEMART POINT, DODDABOMMASANDRA ROAD, VIDYARANYAPURA, BENAGALURU - 560097",
     "personalEmail": "bpbali@yahoo.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/156",
@@ -2475,7 +2475,7 @@
           "designation": "Area Sales Manager",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2502,12 +2502,12 @@
     "address": "6/302, Devdarshan CHS, Dongripada, Ghodbunder Road, Thane (w) PIN: 400615",
     "personalEmail": "vishwanath.ghanekar@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/158",
@@ -2515,7 +2515,7 @@
           "designation": "GM - Key accounts",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2542,12 +2542,12 @@
     "address": null,
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/160",
@@ -2555,7 +2555,7 @@
           "designation": "",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2582,12 +2582,12 @@
     "address": "H.R.nyamagoudra,malali,tq: mudhol, di: bagalkot",
     "personalEmail": "d.h.nyamagoudra@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/161",
@@ -2595,7 +2595,7 @@
           "designation": "ROR Developer",
           "department": "Technology"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2622,12 +2622,12 @@
     "address": "Mannveedu 9C1, 24/72 Irudhayapuram Main Road, Shenbaganur, Kodaikanal, Tamil Nadu, India",
     "personalEmail": "nandaneswar@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/162",
@@ -2635,7 +2635,7 @@
           "designation": "Assistant - Product Manager",
           "department": "Product"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2647,7 +2647,7 @@
     "email": "zeeshan.q@getsetlearn.info",
     "phone": "+91-8447170834",
     "designation": "Senior Exceutive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pooja Sharma",
     "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
     "location": "Delhi",
@@ -2662,20 +2662,20 @@
     "address": "J-19/D Abulfazal Enclave Jamia Nagar Okhla New Delhi-25",
     "personalEmail": "zshan3122@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/165",
           "name": "ZEESHAN QUADRI",
           "designation": "Senior Exceutive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2687,7 +2687,7 @@
     "email": "prity.m@getsetlearn.info",
     "phone": "+91-8240716023",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -2702,20 +2702,20 @@
     "address": "Uttar Maheshtala , Natun para. P.S: Maheshtala , P.O: Dhakghar, District : South 24 Parganas, State : West Bengal, PIN Code: 700141",
     "personalEmail": "pritymandal2016@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/167",
           "name": "PRITY MANDAL",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2727,7 +2727,7 @@
     "email": "nilanjana.d@getsetlearn.info",
     "phone": "+91-9093266162",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -2742,20 +2742,20 @@
     "address": "Benda, Hat Krishnanagar, Patrasayer, Bankura, West Bengal,722206",
     "personalEmail": "nilanjanadey.kdm@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/170",
           "name": "NILANJANA DEY",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2767,7 +2767,7 @@
     "email": "pooja.s1@getsetlearn.info",
     "phone": "+91-9634844981",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pooja Sharma",
     "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
     "location": "Meerut",
@@ -2782,20 +2782,20 @@
     "address": "718/1,Roshanpur Daurli Roorkee Road Meerut",
     "personalEmail": "poojasom751@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/172",
           "name": "POOJA SOM",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2807,7 +2807,7 @@
     "email": "ajmal.h@getsetlearn.info",
     "phone": "+91-8340655508",
     "designation": "Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pooja Sharma",
     "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
     "location": "Faridabad",
@@ -2822,20 +2822,20 @@
     "address": "CCR8+PVQ, 281, Mission Pally, Narendrapur, Rajpur Sonarpur, West Bengal 700150",
     "personalEmail": "techajmal1404@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/173",
           "name": "AJMAL HUSAIN",
           "designation": "Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2862,12 +2862,12 @@
     "address": "5B/401 Paradise Park , Near New Viva College, Virar West- 401303",
     "personalEmail": "shirvianita@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/175",
@@ -2875,7 +2875,7 @@
           "designation": "Executive - Admin & Accounts",
           "department": "Finance & Accounts"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2902,12 +2902,12 @@
     "address": "K69, Street 12, Krishna Park Extension,Tilak nagar,110018",
     "personalEmail": "ashishranas99@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/176",
@@ -2915,7 +2915,7 @@
           "designation": "Executive - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2942,12 +2942,12 @@
     "address": "Balijan,karagaon,Karbianglong,Assam",
     "personalEmail": "ronakroy789@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/177",
@@ -2955,7 +2955,7 @@
           "designation": "Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -2982,12 +2982,12 @@
     "address": "C-203, Saidham Apartments, Mohane Road, Near Sanjay Marbles, Shahad, Kalyan (W)",
     "personalEmail": "prajaktaprakash004@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/179",
@@ -2995,7 +2995,7 @@
           "designation": "Executive - Marketing",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3022,12 +3022,12 @@
     "address": "304, Janaki Raghunath Residency, Agarkar Road, Dombivali (East) - Kalyan - 421201",
     "personalEmail": "beheremanalin@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/180",
@@ -3035,7 +3035,7 @@
           "designation": "Deputy General Manager - Academics",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3047,7 +3047,7 @@
     "email": "payal.d@getsetlearn.info",
     "phone": "+91-9614232904",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Durgapur",
@@ -3062,20 +3062,20 @@
     "address": "Gulmohor Enclave,Block-4,F/2, Bata more, Burnpur,Asansol-713325",
     "personalEmail": "kundu.payal@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/181",
           "name": "PAYAL KUNDU DEY",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3087,7 +3087,7 @@
     "email": "sagufa.p@getsetlearn.info",
     "phone": "+91-8305198004",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -3102,20 +3102,20 @@
     "address": "5A/13 Shanti Apartment Bedia Danga, 2nd Lane ,Kolkata-700039 West Bengal",
     "personalEmail": "sagufanaaz786@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/183",
           "name": "SAGUFA PRAVEEN",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3127,7 +3127,7 @@
     "email": "umesh.b@getsetlearn.info",
     "phone": "+91-8520076017",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Rucha Doifode",
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Hyderabad",
@@ -3142,20 +3142,20 @@
     "address": "77-133-12, sundarayya nagar, rajeev nagar, Prakash nagar, Vijayawada, Krishna, Andhra Pradesh, 520015",
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/184",
           "name": "UMESH BONAM",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3182,12 +3182,12 @@
     "address": "E1/1, ISRO Housing colony (Govt. of India), Jankipuram, Lucknow 226021",
     "personalEmail": "arpittanmay84@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/185",
@@ -3195,7 +3195,7 @@
           "designation": "Assistant Manager - Demonstrations",
           "department": "Demonstration & Support"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3207,7 +3207,7 @@
     "email": "sonu.k@getsetlearn.info",
     "phone": "+91-7808446833",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -3222,20 +3222,20 @@
     "address": "Ashok Puram, opp Road No. 4, Ashok Nagar, Ranchi, Jharkhand",
     "personalEmail": "sonukr11853@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/186",
           "name": "SONU KUMAR",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3247,7 +3247,7 @@
     "email": "rahul.k@getsetlearn.info",
     "phone": "+91-8271235512",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -3262,20 +3262,20 @@
     "address": "87, PATNA ROAD BARHI, UJJAINA, HAZARIBAGH, JHARKHAND, 825405",
     "personalEmail": "rahulprasadkeshri11@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/188",
           "name": "RAHUL PRASAD KESHRI",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3302,12 +3302,12 @@
     "address": "B, 101 Ganapati Enclave 117A Santosh Roy Road",
     "personalEmail": "anishdutta127@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/189",
@@ -3315,7 +3315,7 @@
           "designation": "Manager - Product",
           "department": "Founder's Office"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3342,12 +3342,12 @@
     "address": "33B, SOUTH PARK, BANSDRONI, KOLKATA - 700070",
     "personalEmail": "sabya.banerjee93@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/191",
@@ -3355,7 +3355,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3367,7 +3367,7 @@
     "email": "bijayata.s@getsetlearn.info",
     "phone": "+91-8392072659",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Durgapur",
@@ -3382,20 +3382,20 @@
     "address": "Boral, Tarangapur, Kaliyaganj, Uttar Dinajpur",
     "personalEmail": "bijayatasarkar0@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/192",
           "name": "BIJAYATA SARKAR",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3407,7 +3407,7 @@
     "email": "angshulima.c@getsetlearn.info",
     "phone": "+91-9647270087",
     "designation": "Executive – STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Durgapur",
@@ -3422,20 +3422,20 @@
     "address": "144/A/1,AC road,Berhampore Murshidabad-742103,West Bengal",
     "personalEmail": "pinruchowdhuryr2@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/193",
           "name": "ANGSHULIMA RAI CHAUDHURI",
           "designation": "Executive – STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3462,12 +3462,12 @@
     "address": "801, Casa Foresta,",
     "personalEmail": "darshan.joshi17@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/194",
@@ -3475,7 +3475,7 @@
           "designation": "Manager - Competitions",
           "department": "Product and Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3502,12 +3502,12 @@
     "address": "SBPT-1, Anjeerwadi, Mazgaon, Mumbai 400010.",
     "personalEmail": "mufaddal.kagalwala@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/195",
@@ -3515,7 +3515,7 @@
           "designation": "Manager - VEX Product & Training",
           "department": "Product and Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3527,7 +3527,7 @@
     "email": "saptak.s@getsetlearn.info",
     "phone": "+91-7044509433",
     "designation": "Executive - STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
@@ -3542,20 +3542,20 @@
     "address": "30, Chanchal Sarani, Santoshpur",
     "personalEmail": "saptaksarkar.2002@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/197",
           "name": "SAPTAK SARKAR",
           "designation": "Executive - STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3582,12 +3582,12 @@
     "address": "Mhada colony, Dadar E, Mumbai",
     "personalEmail": "karvesukhada05@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/198",
@@ -3595,7 +3595,7 @@
           "designation": "Junior Graphic Designer",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3622,12 +3622,12 @@
     "address": "Ashirward', Bhuigaon, Samni, Near Jap Ali Road. Vasai (W) - 401201 , Mumbai - Maharashtra",
     "personalEmail": "larisadabre20@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/199",
@@ -3635,7 +3635,7 @@
           "designation": "Junior Instructional Designer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3662,12 +3662,12 @@
     "address": "New Mahabir Colony, Samlong, Bhuiyantoli, Landmark - Near Ramhari Garden, Ranchi, Jharkhand, 834001",
     "personalEmail": "anshuman21072000@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/200",
@@ -3675,7 +3675,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3702,12 +3702,12 @@
     "address": "No 11 2nd Cross, Amar joyothi layout, Thanisandra Main Road, Bangalore - 560077",
     "personalEmail": "rrakesh441@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/201",
@@ -3715,7 +3715,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3742,12 +3742,12 @@
     "address": "4, Aditi enclave, 2nd cross road, Rajeshwari layout, Yelachenahalli, Kumaraswamy layout, Bengaluru, Karnataka- 560111",
     "personalEmail": "sushanthjain03@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/202",
@@ -3755,7 +3755,7 @@
           "designation": "Assistant Manager - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3782,12 +3782,12 @@
     "address": "No 290 Balunagar Virudhambattu Vellore -632006",
     "personalEmail": "naveen5aknk@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/203",
@@ -3795,7 +3795,7 @@
           "designation": "Senior Executive - Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3807,7 +3807,7 @@
     "email": "lekha.r@getsetlearn.info",
     "phone": "+91-7671879889",
     "designation": "Executive - STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Chennai",
@@ -3822,20 +3822,20 @@
     "address": "1/117, Padur physio clinic, Kanniamman koil street, Padur-603103",
     "personalEmail": "lekharajeswarii144@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/204",
           "name": "LEKHA RAJESWARI",
           "designation": "Executive - STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3862,12 +3862,12 @@
     "address": "#36, 6th cross, Mari Gowda Layout, Mandya, Karnataka - 571401",
     "personalEmail": "chethu2chethan@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/205",
@@ -3875,7 +3875,7 @@
           "designation": "Manager - Product",
           "department": "Product"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3887,7 +3887,7 @@
     "email": "vivek.s@getsetlearn.info",
     "phone": "+91-9135617917",
     "designation": "STEM Mentor",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Contai",
@@ -3902,20 +3902,20 @@
     "address": "Q. NO-A/6, HEC COLONY, SECTOR-4, RANCHI ,JHARKHAND-834004",
     "personalEmail": "sharmavivekhi@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/206",
           "name": "VIVEK SHARMA",
           "designation": "STEM Mentor",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3942,12 +3942,12 @@
     "address": "F-1106, 11th Floor, Tower-18, River Heights, Rajangar Extension, Ghaziabad (U.P./Delhi NCR) - 201017",
     "personalEmail": "mayshar.08@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/207",
@@ -3955,7 +3955,7 @@
           "designation": "Manager - Key Accounts",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -3967,7 +3967,7 @@
     "email": "devashish.k@getsetlearn.info",
     "phone": "+91-9801679010",
     "designation": "STEM Mentor",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Avishek Dasgupta",
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Bandel",
@@ -3982,20 +3982,20 @@
     "address": "vill+post - Mirza Nagar, Dist - Vaishali,ps - Mahua, state - Bihar, pin code - 844139",
     "personalEmail": "devashishkumar992@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/208",
           "name": "DEVASHISH KUMAR",
           "designation": "STEM Mentor",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4007,7 +4007,7 @@
     "email": "arunabha.b@getsetlearn.info",
     "phone": "+91-7005156651",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Deepjyoti Das",
     "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
     "location": "Kolkata",
@@ -4022,20 +4022,20 @@
     "address": null,
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/209",
           "name": "ARUNABHA BHATTACHARJEE",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4047,7 +4047,7 @@
     "email": "prasath.p@getsetlearn.info",
     "phone": "+91-7871148331",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Chennai",
@@ -4062,20 +4062,20 @@
     "address": "Flat no. F3, GK Builders-14, Ambal Gajalakshmi nagar, Poonamalee. Chennai - 600122",
     "personalEmail": "prasathmpragasam@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/210",
           "name": "PRASATH P",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4087,7 +4087,7 @@
     "email": "parthib.p@getsetlearn.info",
     "phone": "+91-8013283634",
     "designation": "Assistant Manager - STEM & Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Deepjyoti Das",
     "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
     "location": "Kolkata",
@@ -4102,20 +4102,20 @@
     "address": "37/F JAN NAGAR ROAD, MAHESH, SERAMPORE, HOOGHLY, 712202",
     "personalEmail": "senorparthib@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/211",
           "name": "PARTHIB PATRA",
           "designation": "Assistant Manager - STEM & Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4142,12 +4142,12 @@
     "address": null,
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/212",
@@ -4155,7 +4155,7 @@
           "designation": "Product Manager -AI",
           "department": "Technology"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4167,7 +4167,7 @@
     "email": "pavithra.d@getsetlearn.info",
     "phone": "+91-9514525514",
     "designation": "Senior Executive - STEM and Training",
-    "department": "STEM and Training",
+    "department": "STEM & Training",
     "reportingTo": "Pallavi Tatawati",
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Chennai",
@@ -4182,20 +4182,20 @@
     "address": "No.5,20th steet,nehru colony, nanganallur, chennai-61",
     "personalEmail": "pavithrad2097@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/213",
           "name": "PAVITHRA DHANEKAR",
           "designation": "Senior Executive - STEM and Training",
-          "department": "STEM and Training"
+          "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4222,12 +4222,12 @@
     "address": "SRP Colony Main Road, Peravllur, Chennai-600082.",
     "personalEmail": "balajimsd36@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/214",
@@ -4235,7 +4235,7 @@
           "designation": "Area Manager -Sales",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4262,12 +4262,12 @@
     "address": null,
     "personalEmail": null,
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/215",
@@ -4275,7 +4275,7 @@
           "designation": "Sr. HRBP Lead",
           "department": "Human Resources"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4302,12 +4302,12 @@
     "address": "A-1302, Sainath Heights, Neelam Nagar, Phase 2, Mulund (E)",
     "personalEmail": "patkie.shruti@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/216",
@@ -4315,7 +4315,7 @@
           "designation": "Sr. Executive- Hr & Admin",
           "department": "Human Resources"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4342,12 +4342,12 @@
     "address": "Hn. 48, Krishna Nagar near 6th BN PAC Roorkee Rd., Meerut",
     "personalEmail": "bhartiaarohi@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/217",
@@ -4355,7 +4355,7 @@
           "designation": "STEM Mentor",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4382,12 +4382,12 @@
     "address": "210,2nd main road , Mahalakshmi Layout , Bangalore 560086",
     "personalEmail": "spoorthispoo7366@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/218",
@@ -4395,7 +4395,7 @@
           "designation": "Key Accounts Manager",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4422,12 +4422,12 @@
     "address": "13/1A Pemantle Street, Kolkata, 700016",
     "personalEmail": "nehaxshaikh1206@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/219",
@@ -4435,7 +4435,7 @@
           "designation": "Sr. STEM Mentor",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4462,12 +4462,12 @@
     "address": null,
     "personalEmail": null,
     "officialEmailMissing": true,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/220",
@@ -4475,7 +4475,7 @@
           "designation": "",
           "department": ""
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4502,12 +4502,12 @@
     "address": "Bhavya Enclaves, KPHB, Phase 3, Road No.4, Hyderabad",
     "personalEmail": "benjaminabhishek81@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/221",
@@ -4515,7 +4515,7 @@
           "designation": "STEM Trainer",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4542,12 +4542,12 @@
     "address": null,
     "personalEmail": "subhash199402@gmail.com",
     "officialEmailMissing": true,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/222",
@@ -4555,7 +4555,7 @@
           "designation": "Office Boy",
           "department": "Admin"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4582,12 +4582,12 @@
     "address": null,
     "personalEmail": "dhadamsiddhesh11@gmail.com",
     "officialEmailMissing": true,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/223",
@@ -4595,7 +4595,7 @@
           "designation": "Office Boy",
           "department": "Admin"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4622,12 +4622,12 @@
     "address": "504,B2 Wing,Garden Court CHS,Near Vasant Leela Complex,Waghbil,Ghodbunder Road,Thane West, 400615",
     "personalEmail": "vdhbht@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/224",
@@ -4635,7 +4635,7 @@
           "designation": "Operations Executive",
           "department": "Sales"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4662,12 +4662,12 @@
     "address": "C/32, Adarsh nagar, near ganesh chowk, Kandivali west, Mumbai 400067.",
     "personalEmail": "shushankita6763@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/225",
@@ -4675,7 +4675,7 @@
           "designation": "Program Manager",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4702,12 +4702,12 @@
     "address": null,
     "personalEmail": "prashu235913@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/226",
@@ -4715,7 +4715,7 @@
           "designation": "Manager- Innovation & Implementation",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4742,12 +4742,12 @@
     "address": null,
     "personalEmail": "aaku.sharma96@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/227",
@@ -4755,7 +4755,7 @@
           "designation": "Instructional Designer",
           "department": "Academics"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4782,12 +4782,12 @@
     "address": null,
     "personalEmail": "saikathazra321@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/228",
@@ -4795,7 +4795,7 @@
           "designation": "Sr Innovation Mentor",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4822,12 +4822,12 @@
     "address": null,
     "personalEmail": "pamelamajumder2003@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/229",
@@ -4835,7 +4835,7 @@
           "designation": "Innovation Caoch",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4862,12 +4862,12 @@
     "address": null,
     "personalEmail": "harishashmi1181@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/230",
@@ -4875,7 +4875,7 @@
           "designation": "Sr Graphic Designer- AI & Creative",
           "department": "Marketing"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   },
@@ -4902,12 +4902,12 @@
     "address": null,
     "personalEmail": "sketh19@gmail.com",
     "officialEmailMissing": false,
-    "createdAt": "2026-04-24T09:04:59.417Z",
-    "createdBy": "muster-import",
+    "createdAt": "2026-04-24T09:35:32.242Z",
+    "createdBy": "master-import",
     "auditLog": [
       {
-        "timestamp": "2026-04-24T09:04:59.417Z",
-        "user": "muster-import",
+        "timestamp": "2026-04-24T09:35:32.242Z",
+        "user": "master-import",
         "action": "employee.create",
         "after": {
           "employeeCode": "MTPL/231",
@@ -4915,7 +4915,7 @@
           "designation": "Sr Innovation Mentor",
           "department": "STEM & Training"
         },
-        "notes": "Imported from Employee_Muster.xlsx"
+        "notes": "Imported from Employee_Master.xlsx"
       }
     ]
   }

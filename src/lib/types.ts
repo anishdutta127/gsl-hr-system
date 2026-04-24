@@ -250,13 +250,13 @@ export interface Employee {
   candidateId?: string
   applicationId?: string
   name: string
-  /** Mr./Ms./Mrs./Dr. prefix from the muster. */
+  /** Mr./Ms./Mrs./Dr. prefix from the master roster. */
   title?: string | null
   email: string
   phone?: string | null
   designation: string
   department: string
-  /** Free-text manager name as recorded on the muster. */
+  /** Free-text manager name as recorded on the master roster. */
   reportingTo?: string | null
   /** Resolved on import by name-matching against other employees; null when the
    * named manager is not in the system (e.g., founder, external). */
@@ -271,7 +271,7 @@ export interface Employee {
   maritalStatus?: string | null
   address?: string | null
   personalEmail?: string | null
-  /** Flagged during muster import when no Official Email ID was present. */
+  /** Flagged during master-roster import when no Official Email ID was present. */
   officialEmailMissing?: boolean
   status: 'Active' | 'Exited'
   ctcAnnual?: number

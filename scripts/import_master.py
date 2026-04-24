@@ -1,5 +1,5 @@
 """
-Import Employee_Muster.xlsx into src/data/employees.json.
+Import Employee_Master.xlsx into src/data/employees.json.
 
 Seed-style: writes the final JSON directly (commits via git, not queue).
 The runtime queue pattern is for user-originated writes; 126 pre-existing
@@ -11,7 +11,7 @@ Two-pass:
      Unmatched rows (e.g., CEO reports to 'PHM') leave id null and log.
 
 Rows with no Official Email ID are still imported as Employee records
-(they can't log in but they do exist on the muster).
+(they can't log in but they do exist on the master roster).
 """
 
 from __future__ import annotations
@@ -27,9 +27,9 @@ from typing import Any
 from openpyxl import load_workbook
 
 
-MUSTER_PATH = Path("onedrive-data/seed/Employee_Muster.xlsx")
+MASTER_PATH = Path("onedrive-data/seed/Employee_Master.xlsx")
 OUT_PATH = Path("src/data/employees.json")
-LOG_PATH = Path("logs/muster_import.log")
+LOG_PATH = Path("logs/master_import.log")
 
 
 def now_iso() -> str:
@@ -37,7 +37,7 @@ def now_iso() -> str:
 
 
 def stable_uuid(employee_code: str) -> str:
-    """Deterministic UUIDv5-ish id from employee code. Re-importing the muster
+    """Deterministic UUIDv5-ish id from employee code. Re-importing the master roster
     produces the same id, so an apply-queue cycle does not duplicate rows."""
     h = hashlib.sha1(f"gsl-employee:{employee_code}".encode("utf-8")).hexdigest()
     return f"{h[0:8]}-{h[8:12]}-5{h[13:16]}-{h[16:20]}-{h[20:32]}"
@@ -72,7 +72,7 @@ def clean_phone(value: Any) -> str:
     return s
 
 
-def parse_muster(path: Path) -> list[dict]:
+def parse_master(path: Path) -> list[dict]:
     wb = load_workbook(str(path), read_only=True, data_only=True)
     ws = wb.active
     now = now_iso()
@@ -94,6 +94,11 @@ def parse_muster(path: Path) -> list[dict]:
         tenure = row[6]
         designation = clean(row[7])
         department = clean(row[8])
+        # Canonicalise department spelling: the master has both "STEM and Training"
+        # and "STEM & Training" for the same team. Standard spelling is the
+        # ampersand form; collapse the 'and' variant into it.
+        if department.lower() == "stem and training":
+            department = "STEM & Training"
         reporting_manager = clean(row[9])
         confirm_date = iso_date(row[10])
         location = clean(row[11]) or "Mumbai"
@@ -133,10 +138,10 @@ def parse_muster(path: Path) -> list[dict]:
             "personalEmail": personal_email or None,
             "officialEmailMissing": not bool(official_email),
             "createdAt": now,
-            "createdBy": "muster-import",
+            "createdBy": "master-import",
             "auditLog": [{
                 "timestamp": now,
-                "user": "muster-import",
+                "user": "master-import",
                 "action": "employee.create",
                 "after": {
                     "employeeCode": employee_code,
@@ -144,7 +149,7 @@ def parse_muster(path: Path) -> list[dict]:
                     "designation": designation,
                     "department": department,
                 },
-                "notes": "Imported from Employee_Muster.xlsx",
+                "notes": "Imported from Employee_Master.xlsx",
             }],
         })
 
@@ -153,7 +158,7 @@ def parse_muster(path: Path) -> list[dict]:
 
 def resolve_managers(employees: list[dict]) -> list[str]:
     """Match reportingTo name against employees.name with a first-name fallback.
-    The muster uses casual names like 'Balu R' / 'Shubhangi' for references but
+    The master uses casual names like 'Balu R' / 'Shubhangi' for references but
     full names for rows; a first-name-exact match catches those cases."""
     by_name: dict[str, str] = {}
     by_first: dict[str, list[str]] = {}
@@ -184,11 +189,11 @@ def resolve_managers(employees: list[dict]) -> list[str]:
 
 
 def main() -> int:
-    if not MUSTER_PATH.exists():
-        print(f"Not found: {MUSTER_PATH}", file=sys.stderr)
+    if not MASTER_PATH.exists():
+        print(f"Not found: {MASTER_PATH}", file=sys.stderr)
         return 1
 
-    employees, missing_email = parse_muster(MUSTER_PATH)
+    employees, missing_email = parse_master(MASTER_PATH)
     unresolved = resolve_managers(employees)
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -196,7 +201,7 @@ def main() -> int:
 
     LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
     with LOG_PATH.open("w", encoding="utf-8") as f:
-        f.write(f"Muster import run at {now_iso()}\n")
+        f.write(f"Master import run at {now_iso()}\n")
         f.write(f"Employees imported: {len(employees)}\n")
         f.write(f"Missing official email ({len(missing_email)}):\n")
         for line in missing_email:
