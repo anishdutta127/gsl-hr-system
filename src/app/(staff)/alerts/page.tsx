@@ -10,8 +10,27 @@ import {
 import { requireRoles } from '@/lib/guards'
 import { buildAttentionFeed, groupAttention, type AttentionAction } from '@/lib/needsAttention'
 import { formatRelative, formatDate } from '@/lib/format'
+import { isTerminal } from '@/lib/pipeline'
 
 export const dynamic = 'force-dynamic'
+
+// Stagnation thresholds per stage, in days. Kept intentionally conservative:
+// we'd rather nudge twice than annoy, so these thresholds mean "definitely
+// past time", not "getting close".
+const STAGNATION_THRESHOLDS: Record<string, { days: number; label: string }> = {
+  AssessmentSent: { days: 5, label: 'Candidate has not submitted the assessment' },
+  VideoSent: { days: 5, label: 'Candidate has not submitted their video' },
+  HODRoundScheduled: { days: 3, label: 'HOD has not scored the interview yet' },
+  HOD2RoundScheduled: { days: 3, label: 'HOD round 2 not scored yet' },
+  HRRoundScheduled: { days: 3, label: 'HR has not scored the interview yet' },
+  Offered: { days: 7, label: 'Offer sent but no response' },
+  OfferAccepted: { days: 14, label: 'Accepted offer but docs not collected' },
+  DocsCollected: { days: 21, label: 'Docs collected but not yet joined' },
+}
+
+function daysSince(iso: string): number {
+  return Math.floor((Date.now() - new Date(iso).getTime()) / 86_400_000)
+}
 
 const ACTION_HEADINGS: Record<AttentionAction, string> = {
   'review-assessment': 'Assessments awaiting review',
@@ -55,6 +74,23 @@ export default async function AlertsPage() {
         )
       : []
 
+  // H6: surface applications stuck at the same stage past threshold.
+  // HOD-scoped same as the attention feed.
+  const roleById = new Map(roles.map((r) => [r.id, r] as const))
+  const stagnant = applications
+    .filter((a) => !isTerminal(a.currentStage))
+    .filter((a) => {
+      const threshold = STAGNATION_THRESHOLDS[a.currentStage as string]
+      if (!threshold) return false
+      return daysSince(a.stageEnteredAt) >= threshold.days
+    })
+    .filter((a) => {
+      if (session.role !== 'HOD') return true
+      const role = roleById.get(a.roleId)
+      return role?.hodUserId === session.sub || role?.hodRound2UserId === session.sub
+    })
+    .sort((a, b) => a.stageEnteredAt.localeCompare(b.stageEnteredAt))
+
   const actionOrder: AttentionAction[] = [
     'review-assessment',
     'score-interview',
@@ -66,7 +102,7 @@ export default async function AlertsPage() {
   ]
 
   const total =
-    attention.length + staleOffersShown.length + pendingActivation.length
+    attention.length + staleOffersShown.length + pendingActivation.length + stagnant.length
 
   return (
     <div className="container-page py-8">
@@ -140,6 +176,47 @@ export default async function AlertsPage() {
                           </span>
                         </span>
                         <span className="text-xs text-ink-3">Open offer →</span>
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </section>
+          )}
+
+          {stagnant.length > 0 && (
+            <section>
+              <h2 className="mb-2 font-display text-lg text-ink">
+                Stagnant, past threshold ({stagnant.length})
+              </h2>
+              <p className="mb-2 text-xs text-ink-3">
+                Candidates sitting at the same stage past the nudge threshold. Open the candidate to
+                use the ghost-follow-up email template or move them along.
+              </p>
+              <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
+                {stagnant.map((a) => {
+                  const candidate = candidates.find((c) => c.id === a.candidateId)
+                  const role = roleById.get(a.roleId)
+                  const threshold = STAGNATION_THRESHOLDS[a.currentStage as string]
+                  const days = daysSince(a.stageEnteredAt)
+                  return (
+                    <li key={a.id}>
+                      <Link
+                        href={`/candidates/${a.candidateId}`}
+                        className="flex items-center justify-between gap-4 px-5 py-3 text-sm hover:bg-surface"
+                      >
+                        <span>
+                          <span className="block font-medium text-ink">
+                            {candidate?.name ?? '(unknown)'}
+                          </span>
+                          <span className="block text-xs text-ink-2">
+                            {role?.title ?? 'role'} · {a.currentStage}
+                            {threshold ? ` · ${threshold.label}` : ''}
+                          </span>
+                        </span>
+                        <span className="shrink-0 text-xs text-ink-3 tabular">
+                          {days}d
+                        </span>
                       </Link>
                     </li>
                   )

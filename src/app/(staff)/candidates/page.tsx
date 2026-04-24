@@ -81,12 +81,22 @@ export default async function CandidatesPage({
 
   return (
     <div className="container-page py-8">
-      <div className="mb-6">
-        <h1 className="font-display text-2xl text-ink">Candidates</h1>
-        <p className="mt-1 text-sm text-ink-2">
-          {formatCount(candidates.length)} of {formatCount(allCandidates.filter((c) => c.status !== 'Archived').length)} in the pool.
-          Search hits names, emails, and full resume text.
-        </p>
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl text-ink">Candidates</h1>
+          <p className="mt-1 text-sm text-ink-2">
+            {formatCount(candidates.length)} of {formatCount(allCandidates.filter((c) => c.status !== 'Archived').length)} in the pool.
+            Search hits names, emails, and full resume text.
+          </p>
+        </div>
+        {canBulk && (
+          <Link
+            href="/candidates/import"
+            className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface"
+          >
+            Quick paste-in
+          </Link>
+        )}
       </div>
 
       <form className="mb-6 flex flex-wrap items-end gap-3" role="search" aria-label="Filter candidates">
