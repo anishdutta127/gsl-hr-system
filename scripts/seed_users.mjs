@@ -28,7 +28,7 @@ const seedUsers = [
   { email: 'shashank.s@getsetlearn.info', name: 'Shashank', role: 'HOD' },
   { email: 'shubhra.r@getsetlearn.info', name: 'Shubhra Rishi', role: 'HOD' },
   { email: 'vishwanath.g@getsetlearn.info', name: 'Vishwanath', role: 'HOD' },
-  { email: 'ameet.z@getsetlearn.info', name: 'Ameet', role: 'Leadership' },
+  { email: 'ameet.z@getsetlearn.info', name: 'Ameet', role: 'Admin' },
 ]
 
 async function main() {
