@@ -16,5 +16,23 @@
       "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
     },
     "retryCount": 0
+  },
+  {
+    "id": "b5908131-13c6-44b6-abd0-7071652703c5",
+    "queuedAt": "2026-04-24T09:26:13.484Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "NO-DUES-v1",
+        "templateTitle": "No Dues Letter"
+      },
+      "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
+    },
+    "retryCount": 0
   }
 ]
