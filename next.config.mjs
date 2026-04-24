@@ -23,8 +23,9 @@ const nextConfig = {
     // Next 14 silently strips it when it's top-level. We saw production
     // breakage on MOU from this exact regression. Do not move.
     outputFileTracingIncludes: {
-      '/api/offer/preview': ['./public/hr-templates/**/*'],
-      '/api/appointment/preview': ['./public/hr-templates/**/*'],
+      // MUST stay nested under `experimental` in Next 14.2.x; silently
+      // stripped at top-level. Do not move (see CLAUDE.md non-negotiables).
+      '/api/letters/[id]/generate': ['./public/hr-templates/**/*'],
     },
   },
 }
