@@ -51,5 +51,58 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "2adc25ba-b75b-407c-826b-1868c4d33273",
+    "queuedAt": "2026-04-24T07:13:45.964Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "ec254678-ad4d-4240-ad9a-1e4c8713d9d1",
+      "title": "SMOKE_SWEEP_20260424 Validation",
+      "department": "QA",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-04-24T07:13:45.962Z",
+      "createdBy": "anish.d@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-24T07:13:45.962Z",
+          "user": "anish.d@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "SMOKE_SWEEP_20260424 Validation",
+            "department": "QA",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
