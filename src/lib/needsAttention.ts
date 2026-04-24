@@ -62,10 +62,20 @@ const STAGE_TO_ACTION: Partial<Record<string, { action: AttentionAction; label: 
   },
   HODRoundScheduled: {
     action: 'score-interview',
-    label: 'Score HOD interview',
+    label: 'Score HOD round 1 interview',
     roles: ['Admin', 'HOD'],
   },
   HODRoundDone: {
+    action: 'schedule-hr-round',
+    label: 'Schedule HR round (or HOD round 2 for Academics)',
+    roles: ['Admin', 'HR'],
+  },
+  HOD2RoundScheduled: {
+    action: 'score-interview',
+    label: 'Score HOD round 2 interview',
+    roles: ['Admin', 'HOD'],
+  },
+  HOD2RoundDone: {
     action: 'schedule-hr-round',
     label: 'Schedule HR round',
     roles: ['Admin', 'HR'],
@@ -110,9 +120,19 @@ export function buildAttentionFeed(ctx: Context): AttentionItem[] {
     const candidate = candidateById.get(app.candidateId)
     if (!candidate) continue
 
-    // HOD-scoped: only show items for roles this HOD owns
+    // HOD-scoped: only show items for roles this HOD owns. HOD2 round is
+    // restricted to the second HOD on Academics-style roles.
     if (session.role === 'HOD') {
-      if (role.hodUserId !== session.sub) continue
+      const isHod1Round = app.currentStage === 'HODRoundScheduled'
+      const isHod2Round = app.currentStage === 'HOD2RoundScheduled'
+      if (isHod2Round) {
+        if (role.hodRound2UserId !== session.sub) continue
+      } else if (isHod1Round) {
+        if (role.hodUserId !== session.sub) continue
+      } else {
+        // Non-interview HOD-visible items (rare) still use round-1 ownership
+        if (role.hodUserId !== session.sub) continue
+      }
     }
 
     items.push({

@@ -42,6 +42,7 @@ export function inferNextStage(round: string, recommendation: 'proceed' | 'hold'
   if (recommendation === 'hold') return { stage: 'OnHold', terminal: true }
   // proceed: move to the "Done" variant of this round
   if (round === 'HOD') return { stage: 'HODRoundDone', terminal: false }
+  if (round === 'HOD2') return { stage: 'HOD2RoundDone', terminal: false }
   if (round === 'HR') return { stage: 'HRRoundDone', terminal: false }
   return null
 }

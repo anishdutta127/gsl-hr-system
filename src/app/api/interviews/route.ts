@@ -60,6 +60,10 @@ export async function POST(request: Request) {
   if (round === 'HOD' && session.role === 'HOD' && role.hodUserId !== session.sub) {
     return NextResponse.json({ message: 'You do not own this role.' }, { status: 403 })
   }
+  // HOD round 2 (Academics): only the role's second HOD.
+  if (round === 'HOD2' && session.role === 'HOD' && role.hodRound2UserId !== session.sub) {
+    return NextResponse.json({ message: 'You do not own round 2 for this role.' }, { status: 403 })
+  }
 
   const now = new Date().toISOString()
   const interviewId = crypto.randomUUID()

@@ -11,7 +11,7 @@ import { isTerminal } from '@/lib/pipeline'
 
 export const dynamic = 'force-dynamic'
 
-const AWAITING_SCORE_STAGES = new Set(['HODRoundScheduled', 'HRRoundScheduled'])
+const AWAITING_SCORE_STAGES = new Set(['HODRoundScheduled', 'HOD2RoundScheduled', 'HRRoundScheduled'])
 
 export default async function InterviewsPage() {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
@@ -72,7 +72,12 @@ export default async function InterviewsPage() {
             {awaiting.map((app) => {
               const candidate = candidateById.get(app.candidateId)
               const role = roleById.get(app.roleId)
-              const round = app.currentStage === 'HODRoundScheduled' ? 'HOD' : 'HR'
+              const round =
+                app.currentStage === 'HODRoundScheduled'
+                  ? 'HOD'
+                  : app.currentStage === 'HOD2RoundScheduled'
+                    ? 'HOD2'
+                    : 'HR'
               return (
                 <li key={app.id}>
                   <Link

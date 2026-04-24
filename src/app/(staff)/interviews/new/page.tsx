@@ -25,16 +25,24 @@ export default async function NewInterviewPage({
   const candidate = findCandidateById(app.candidateId)
   if (!role || !candidate) notFound()
 
-  if (session.role === 'HOD' && role.hodUserId && role.hodUserId !== session.sub) {
-    redirect('/interviews')
-  }
-
   // Infer round from current stage if not explicit
   let round = searchParams.round
   if (!round) {
     if (app.currentStage === 'HODRoundScheduled' || app.currentStage === 'VideoDone') round = 'HOD'
-    else if (app.currentStage === 'HRRoundScheduled' || app.currentStage === 'HODRoundDone') round = 'HR'
+    else if (app.currentStage === 'HOD2RoundScheduled' || app.currentStage === 'HODRoundDone') {
+      // On an Academics pipeline (hodRound2UserId set), HODRoundDone routes to round 2.
+      round = role.hodRound2UserId ? 'HOD2' : 'HR'
+    } else if (app.currentStage === 'HRRoundScheduled' || app.currentStage === 'HOD2RoundDone') round = 'HR'
     else round = 'HOD'
+  }
+
+  if (session.role === 'HOD') {
+    if (round === 'HOD' && role.hodUserId && role.hodUserId !== session.sub) {
+      redirect('/interviews')
+    }
+    if (round === 'HOD2' && role.hodRound2UserId && role.hodRound2UserId !== session.sub) {
+      redirect('/interviews')
+    }
   }
 
   const hasRubric = role.rubric && role.rubric.length > 0

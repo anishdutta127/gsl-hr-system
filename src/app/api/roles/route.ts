@@ -2,7 +2,7 @@ import crypto from 'node:crypto'
 import { NextResponse } from 'next/server'
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
-import { DEFAULT_PIPELINE_STAGES } from '@/lib/types'
+import { ACADEMICS_PIPELINE_STAGES, DEFAULT_PIPELINE_STAGES } from '@/lib/types'
 
 export const runtime = 'nodejs'
 
@@ -46,6 +46,9 @@ export async function POST(request: Request) {
   const roleId = crypto.randomUUID()
   const now = new Date().toISOString()
 
+  const isAcademics = department.trim().toLowerCase() === 'academics'
+  const pipelineStages = isAcademics ? ACADEMICS_PIPELINE_STAGES : DEFAULT_PIPELINE_STAGES
+
   const payload = {
     id: roleId,
     title,
@@ -53,7 +56,7 @@ export async function POST(request: Request) {
     location,
     employmentType,
     status: 'Open',
-    pipelineStages: DEFAULT_PIPELINE_STAGES,
+    pipelineStages,
     rubric: [],
     description,
     responsibilities: [],
