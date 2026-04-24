@@ -118,5 +118,65 @@
     "retryCount": 0,
     "failedAt": "2026-04-24T11:46:05.984Z",
     "failureReason": "Unknown update operation: letter.generated"
+  },
+  {
+    "id": "aabc3ae1-bcf6-4d64-b5bd-a550fe22a0db",
+    "queuedAt": "2026-04-24T09:22:59.650Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "RELIEVING-v1",
+        "templateTitle": "Relieving Letter"
+      },
+      "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
+    },
+    "retryCount": 0,
+    "failedAt": "2026-04-24T12:45:31.077Z",
+    "failureReason": "Unknown update operation: letter.generated"
+  },
+  {
+    "id": "b5908131-13c6-44b6-abd0-7071652703c5",
+    "queuedAt": "2026-04-24T09:26:13.484Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "NO-DUES-v1",
+        "templateTitle": "No Dues Letter"
+      },
+      "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
+    },
+    "retryCount": 0,
+    "failedAt": "2026-04-24T12:45:31.078Z",
+    "failureReason": "Unknown update operation: letter.generated"
+  },
+  {
+    "id": "72c036cf-a712-4056-b126-05e66ed2107b",
+    "queuedAt": "2026-04-24T10:17:53.648Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "b18ea4d9-8356-59d5-da63-da7655188fcd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "NO-DUES-v1",
+        "templateTitle": "No Dues Letter"
+      },
+      "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
+    },
+    "retryCount": 0,
+    "failedAt": "2026-04-24T12:45:31.079Z",
+    "failureReason": "Unknown update operation: letter.generated"
   }
 ]
