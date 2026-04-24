@@ -31,6 +31,12 @@ export default function RoleDetailPage({ params }: { params: { id: string } }) {
           </div>
           <div className="flex gap-2">
             <Link
+              href={`/roles/${role.id}/match`}
+              className="inline-flex items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
+            >
+              Find matches
+            </Link>
+            <Link
               href={`/roles/${role.id}/add-candidate`}
               className="inline-flex items-center rounded bg-navy px-3 py-1.5 text-sm font-medium text-white hover:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
             >
