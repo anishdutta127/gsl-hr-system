@@ -156,5 +156,58 @@
       "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
     },
     "retryCount": 0
+  },
+  {
+    "id": "1c45c4cd-212b-4187-a6ab-2f151afdfb83",
+    "queuedAt": "2026-04-27T10:52:06.026Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "7804934c-1226-40fb-86a2-6345ef68c3fd",
+      "title": "Pre-Sales Intern",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "Work on Cold Calls\nKeep track of kits\nCoordinate with the reporting head\nReport pre-sales to the respective heads",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-04-27T10:52:06.026Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-27T10:52:06.026Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Pre-Sales Intern",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
