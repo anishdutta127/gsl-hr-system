@@ -333,5 +333,23 @@
       "notes": "Bulk-send: \"Round 1 invite (Shruti to candidate)\" logged for 26 Shubham Maurya."
     },
     "retryCount": 0
+  },
+  {
+    "id": "7090a39c-f3a5-424f-afbc-7b7c3e7585e4",
+    "queuedAt": "2026-04-27T11:11:12.868Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "05d927d2-16ab-5c02-64e3-4290bfc3cb04",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "OFFER-ANNOUNCE",
+        "templateTitle": "Offer email (with letter attached)"
+      },
+      "notes": "Bulk-send: \"Offer email (with letter attached)\" logged for Cvaishashafiqurrehman."
+    },
+    "retryCount": 0
   }
 ]
