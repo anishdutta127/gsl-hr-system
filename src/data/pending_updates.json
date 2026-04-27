@@ -262,5 +262,58 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "e31f5e5b-6368-4020-a969-da30b9c2614c",
+    "queuedAt": "2026-04-27T11:02:16.369Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
+      "title": "Pre-Sales Intern",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "Work on leads\nKeep track of kits\nReport to your manager\nWork on targets assigned",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-04-27T11:02:16.369Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-27T11:02:16.369Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Pre-Sales Intern",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
