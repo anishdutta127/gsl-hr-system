@@ -5893,5 +5893,39 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "5933a991-d995-4387-ba4e-7c4b204d4a9b",
+    "name": "Ashish Mane",
+    "email": "ashishm@gmail.com",
+    "phone": "896236798",
+    "source": "HRTeam",
+    "searchableText": "Zee Learn Ltd. Area Business Manager February 2025 to Current Program : Scholastic & Co-scholastic JOB RESPONSIBILITY : Identify the target market in Mumbai sub-region as per company policies. Set up and execute visit plan for schools. Deliver presentations to principals/management. Raise furnished proposals. Handle influential negotiations. Data Management. BeyondSkool Sales Director – School Partnerships October, 2023 to February, 2025 Program : Skills Enhancement JOB RESPONSIBILITY : Set up and execute visit plan for schools in Mumbai sub-region. Pitch the respective programs to principals/management. Schedule students demo. Raise furnished proposals. Handle influential negotiations. Holding renewals. Karadi Path Education Company Pvt. Ltd. Senior Area Sales Manager February, 2017 – October, 2023 Program : English Enhancement & Books JOB RESPONSIBILITY : Set up a sales strategy & executive the same within the prescribed sub region. Sampling of Karadi Tales books. Presenting books & its features to principals & teachers. Follow up for books orders. Ensuring timely collections of books/titles sold. Develop & deliver presentations and workshops to principals, teachers and management. Handling negotiations & closing orders. Ensuring timely collections. Develop various reports & conferring them it in review meetings to management. Actively plan and manage companyʼs marketing events. Cultivating good customer relationships. Working in close coordination with the training team & ensure strong symbiosis. Navneet Toptech Territory Sales Manager February, 2015 – January, 2017 Program : Digital Classrooms JOB RESPONSIBILITY: Manage a team of 3 Sales executives & customer care executives within the prescribed. Providing on-field support & motivating the team to achieve individual & team targets. Set up a sales plan for the team by preparing weekly journey plans & action plans. Daily monitoring. Developing various reports & conferring them it in review meetings. Preparing weekly journey plans for customer care executives in order to ensure timely & effective service. Holding renewal business. Navneet Toptech Territory Sales Incharge December, 2011 – January, 2015 Program : Digital Classrooms JOB RESPONSIBILITY : Plan and visit only state board schools within the prescribed territory. Develop & execute product demonstrations to school teachers, principals & management. Raising furnished proposals. Handling negotiations & closures. Holding renewal business.",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Reference from Vishwanath",
+    "createdAt": "2026-04-27T10:41:07.250Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-27T10:41:07.250Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ashish Mane",
+          "email": "ashishm@gmail.com",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
