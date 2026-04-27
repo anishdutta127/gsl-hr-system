@@ -137,5 +137,24 @@
       "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
     },
     "retryCount": 0
+  },
+  {
+    "id": "49fd87fc-c0c8-45fd-a3e5-077c90773607",
+    "queuedAt": "2026-04-27T10:49:51.023Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "ROUND1-INVITE",
+        "templateTitle": "Round 1 invite (Shruti to candidate)",
+        "subject": "Let's talk about  at GSL"
+      },
+      "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
+    },
+    "retryCount": 0
   }
 ]
