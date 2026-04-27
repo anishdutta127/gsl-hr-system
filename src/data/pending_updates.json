@@ -100,5 +100,23 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "f81b1089-bd37-4f60-a795-3983751446a0",
+    "queuedAt": "2026-04-27T10:48:11.058Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "fbf9c1ff-ef71-5c4e-9614-c587b4ede7dd",
+      "operation": "letter.generated",
+      "before": {},
+      "after": {
+        "templateId": "APPOINTMENT-SALES-v1",
+        "templateTitle": "Appointment Letter (Sales & STEM)"
+      },
+      "notes": "Hiring@getsetlearn.info generated Appointment Letter (Sales & STEM) for SHRUTI PATKIE."
+    },
+    "retryCount": 0
   }
 ]
