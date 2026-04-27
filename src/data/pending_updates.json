@@ -118,5 +118,24 @@
       "notes": "Hiring@getsetlearn.info generated Appointment Letter (Sales & STEM) for SHRUTI PATKIE."
     },
     "retryCount": 0
+  },
+  {
+    "id": "2904ba38-55f7-4794-b6ba-4067484ab2e5",
+    "queuedAt": "2026-04-27T10:49:49.628Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "ROUND1-INVITE",
+        "templateTitle": "Round 1 invite (Shruti to candidate)",
+        "subject": "Let's talk about  at GSL"
+      },
+      "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
+    },
+    "retryCount": 0
   }
 ]
