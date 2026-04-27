@@ -315,5 +315,23 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "19af01a3-9af6-4f13-bc6a-7dce1fced76e",
+    "queuedAt": "2026-04-27T11:10:46.925Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "ROUND1-INVITE",
+        "templateTitle": "Round 1 invite (Shruti to candidate)"
+      },
+      "notes": "Bulk-send: \"Round 1 invite (Shruti to candidate)\" logged for 26 Shubham Maurya."
+    },
+    "retryCount": 0
   }
 ]
