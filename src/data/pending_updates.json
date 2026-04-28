@@ -16,7 +16,7 @@
       "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.582Z",
+    "failedAt": "2026-04-28T05:48:42.291Z",
     "failureReason": "Unknown update operation: letter.generated"
   },
   {
@@ -36,7 +36,7 @@
       "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.583Z",
+    "failedAt": "2026-04-28T05:48:42.292Z",
     "failureReason": "Unknown update operation: letter.generated"
   },
   {
@@ -56,7 +56,7 @@
       "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.584Z",
+    "failedAt": "2026-04-28T05:48:42.292Z",
     "failureReason": "Unknown update operation: letter.generated"
   },
   {
@@ -76,7 +76,7 @@
       "notes": "Hiring@getsetlearn.info generated Appointment Letter (Sales & STEM) for SHRUTI PATKIE."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.585Z",
+    "failedAt": "2026-04-28T05:48:42.293Z",
     "failureReason": "Unknown update operation: letter.generated"
   },
   {
@@ -97,7 +97,7 @@
       "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.590Z",
+    "failedAt": "2026-04-28T05:48:42.298Z",
     "failureReason": "Unknown update operation: email.sent"
   },
   {
@@ -118,7 +118,7 @@
       "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.594Z",
+    "failedAt": "2026-04-28T05:48:42.303Z",
     "failureReason": "Unknown update operation: email.sent"
   },
   {
@@ -138,7 +138,7 @@
       "notes": "Bulk-send: \"Round 1 invite (Shruti to candidate)\" logged for 26 Shubham Maurya."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.599Z",
+    "failedAt": "2026-04-28T05:48:42.307Z",
     "failureReason": "Unknown update operation: email.sent"
   },
   {
@@ -158,7 +158,7 @@
       "notes": "Bulk-send: \"Offer email (with letter attached)\" logged for Cvaishashafiqurrehman."
     },
     "retryCount": 0,
-    "failedAt": "2026-04-27T15:21:53.602Z",
+    "failedAt": "2026-04-28T05:48:42.311Z",
     "failureReason": "Unknown update operation: email.sent"
   }
 ]
