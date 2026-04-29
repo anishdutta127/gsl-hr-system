@@ -31,6 +31,41 @@
           "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/25_26_Shubham_MauryaUPDATED_CV.pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.399Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "email.sent",
+        "before": {},
+        "after": {
+          "templateId": "ROUND1-INVITE",
+          "templateTitle": "Round 1 invite (Shruti to candidate)",
+          "subject": "Let's talk about  at GSL"
+        },
+        "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.417Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "email.sent",
+        "before": {},
+        "after": {
+          "templateId": "ROUND1-INVITE",
+          "templateTitle": "Round 1 invite (Shruti to candidate)",
+          "subject": "Let's talk about  at GSL"
+        },
+        "notes": "Hiring@getsetlearn.info sent \"Round 1 invite (Shruti to candidate)\" to 26 Shubham Maurya."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.435Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "email.sent",
+        "before": {},
+        "after": {
+          "templateId": "ROUND1-INVITE",
+          "templateTitle": "Round 1 invite (Shruti to candidate)"
+        },
+        "notes": "Bulk-send: \"Round 1 invite (Shruti to candidate)\" logged for 26 Shubham Maurya."
       }
     ]
   },
@@ -136,6 +171,17 @@
           "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/CVAISHASHAFIQURREHMAN.pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.453Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "email.sent",
+        "before": {},
+        "after": {
+          "templateId": "OFFER-ANNOUNCE",
+          "templateTitle": "Offer email (with letter attached)"
+        },
+        "notes": "Bulk-send: \"Offer email (with letter attached)\" logged for Cvaishashafiqurrehman."
       }
     ]
   },

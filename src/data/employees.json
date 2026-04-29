@@ -36,6 +36,39 @@
           "department": "Technology"
         },
         "notes": "Imported from Employee_Master.xlsx"
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.367Z",
+        "user": "anish.d@getsetlearn.info",
+        "action": "letter.generated",
+        "before": {},
+        "after": {
+          "templateId": "RELIEVING-v1",
+          "templateTitle": "Relieving Letter"
+        },
+        "notes": "anish.d@getsetlearn.info generated Relieving Letter for AJITH NAIR."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.376Z",
+        "user": "anish.d@getsetlearn.info",
+        "action": "letter.generated",
+        "before": {},
+        "after": {
+          "templateId": "NO-DUES-v1",
+          "templateTitle": "No Dues Letter"
+        },
+        "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.383Z",
+        "user": "anish.d@getsetlearn.info",
+        "action": "letter.generated",
+        "before": {},
+        "after": {
+          "templateId": "NO-DUES-v1",
+          "templateTitle": "No Dues Letter"
+        },
+        "notes": "anish.d@getsetlearn.info generated No Dues Letter for AJITH NAIR."
       }
     ]
   },
@@ -4316,6 +4349,17 @@
           "department": "Human Resources"
         },
         "notes": "Imported from Employee_Master.xlsx"
+      },
+      {
+        "timestamp": "2026-04-29T09:55:34.388Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "letter.generated",
+        "before": {},
+        "after": {
+          "templateId": "APPOINTMENT-SALES-v1",
+          "templateTitle": "Appointment Letter (Sales & STEM)"
+        },
+        "notes": "Hiring@getsetlearn.info generated Appointment Letter (Sales & STEM) for SHRUTI PATKIE."
       }
     ]
   },
