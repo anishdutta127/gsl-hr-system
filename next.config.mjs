@@ -26,6 +26,10 @@ const nextConfig = {
       // MUST stay nested under `experimental` in Next 14.2.x; silently
       // stripped at top-level. Do not move (see CLAUDE.md non-negotiables).
       '/api/letters/[id]/generate': ['./public/hr-templates/**/*'],
+      // Resumes live outside public/ so they can't be fetched directly;
+      // /api/resumes/[id] streams them after auth check. Total size today
+      // is ~40MB, well inside Vercel's 250MB compressed function limit.
+      '/api/resumes/[candidateId]': ['./onedrive-data/seed/resumes/**/*'],
     },
   },
 }

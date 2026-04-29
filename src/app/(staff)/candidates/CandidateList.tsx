@@ -13,6 +13,7 @@ export interface CandidateRow {
   programmes: string[]
   appCount: number
   appSummaries: Array<{ roleTitle: string; stage: string }>
+  hasResume: boolean
 }
 
 export interface TemplateOption {
@@ -233,8 +234,22 @@ export function CandidateList({
                     </span>
                   )}
                 </Link>
-                <span className="shrink-0 text-xs text-ink-3 tabular">
-                  {c.appCount} {c.appCount === 1 ? 'app' : 'apps'}
+                <span className="shrink-0 flex items-center gap-2 text-xs text-ink-3 tabular">
+                  {c.hasResume && (
+                    <a
+                      href={`/api/resumes/${c.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center rounded border border-line-strong bg-card px-2 py-0.5 text-xs font-medium text-ink-2 hover:bg-surface hover:text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                      title="Open resume in new tab"
+                    >
+                      CV
+                    </a>
+                  )}
+                  <span>
+                    {c.appCount} {c.appCount === 1 ? 'app' : 'apps'}
+                  </span>
                 </span>
               </div>
             </li>

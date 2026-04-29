@@ -13,6 +13,7 @@ import { isTerminal } from '@/lib/pipeline'
 import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
 import { ReplyWidget } from './ReplyWidget'
 import { UnarchiveButton } from './UnarchiveButton'
+import { ResumeUpload } from './ResumeUpload'
 
 export const dynamic = 'force-dynamic'
 
@@ -108,6 +109,39 @@ export default async function CandidateDetailPage({
           <UnarchiveButton candidateId={candidate.id} />
         )}
       </div>
+
+      <section className="mb-6 rounded-lg border border-line bg-card p-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-sm font-medium text-ink-2">Resume</h2>
+          <div className="flex items-center gap-2">
+            {candidate.resumeFilePath ? (
+              <>
+                <a
+                  href={`/api/resumes/${candidate.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                >
+                  View resume
+                </a>
+                {(session.role === 'Admin' || session.role === 'HR') && (
+                  <ResumeUpload candidateId={candidate.id} />
+                )}
+              </>
+            ) : (
+              <>
+                <span className="text-xs text-ink-3">No resume on file.</span>
+                {(session.role === 'Admin' || session.role === 'HR') && (
+                  <ResumeUpload candidateId={candidate.id} />
+                )}
+              </>
+            )}
+          </div>
+        </div>
+        {candidate.resumeFilePath && (
+          <p className="mt-2 break-all text-xs text-ink-3">{candidate.resumeFilePath}</p>
+        )}
+      </section>
 
       {candidate.notes && (
         <section className="mb-6 rounded-lg border border-line bg-card p-4">

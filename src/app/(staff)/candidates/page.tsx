@@ -72,6 +72,7 @@ export default async function CandidatesPage({
         roleTitle: roleById.get(a.roleId)?.title ?? 'role',
         stage: a.currentStage as string,
       })),
+      hasResume: Boolean(c.resumeFilePath),
     }
   })
 
@@ -191,21 +192,31 @@ export default async function CandidatesPage({
         ) : (
           <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
             {rows.slice(0, 200).map((c) => (
-              <li key={c.id}>
+              <li key={c.id} className="flex items-start gap-2 px-5 py-3 text-sm">
                 <Link
                   href={`/candidates/${c.id}`}
-                  className="flex items-start justify-between gap-4 px-5 py-3 text-sm hover:bg-surface"
+                  className="flex-1 min-w-0 hover:text-navy"
                 >
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-medium text-ink">{c.name}</span>
-                    <span className="block text-xs text-ink-2">
-                      {c.email || 'no email on file'} · {c.source}
-                    </span>
-                  </span>
-                  <span className="shrink-0 text-xs text-ink-3 tabular">
-                    {c.appCount} {c.appCount === 1 ? 'app' : 'apps'}
+                  <span className="block font-medium text-ink">{c.name}</span>
+                  <span className="block text-xs text-ink-2">
+                    {c.email || 'no email on file'} · {c.source}
                   </span>
                 </Link>
+                <span className="shrink-0 flex items-center gap-2 text-xs text-ink-3 tabular">
+                  {c.hasResume && (
+                    <a
+                      href={`/api/resumes/${c.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded border border-line-strong bg-card px-2 py-0.5 text-xs font-medium text-ink-2 hover:bg-surface hover:text-navy"
+                    >
+                      CV
+                    </a>
+                  )}
+                  <span>
+                    {c.appCount} {c.appCount === 1 ? 'app' : 'apps'}
+                  </span>
+                </span>
               </li>
             ))}
           </ul>

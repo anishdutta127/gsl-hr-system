@@ -160,6 +160,35 @@ export async function atomicUpdateJson<T>(
 
 const PENDING_UPDATES_PATH = 'src/data/pending_updates.json'
 
+/** Write a binary blob (PDF, DOCX, etc.) to a path in the repo. Used by
+ * the resume upload endpoint; the queue runner is not involved because
+ * the file lands directly via the Contents API and the deploy follows
+ * automatically once a non-`chore(queue):` commit lands. */
+export async function putBinaryFile(
+  path: string,
+  bytes: Buffer,
+  commitMessage: string,
+): Promise<{ commitSha: string }> {
+  const url = `https://api.github.com/repos/${githubRepo()}/contents/${encodeURIComponent(path)}`
+  const existing = await getFile(path).catch(() => null)
+  const payload: Record<string, string> = {
+    message: commitMessage,
+    content: bytes.toString('base64'),
+    branch: githubBranch(),
+  }
+  if (existing?.sha) payload.sha = existing.sha
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+  if (res.status !== 200 && res.status !== 201) {
+    throw new QueueUpstreamError(path, res.status, await res.text())
+  }
+  const parsedBody = (await res.json()) as { commit?: { sha?: string } }
+  return { commitSha: parsedBody.commit?.sha ?? '' }
+}
+
 export async function appendToQueue(entry: PendingUpdate): Promise<{ commitSha: string }> {
   const { commitSha } = await atomicUpdateJson<PendingUpdate[]>(
     PENDING_UPDATES_PATH,
