@@ -8,6 +8,15 @@ interface EmployeeOption {
   label: string
 }
 
+const APPOINTMENT_TEMPLATE_ID = 'APPOINTMENT-SALES-v1'
+
+function parseRupees(s: string | undefined): number {
+  if (!s) return 0
+  const cleaned = String(s).replace(/[,\s]/g, '')
+  const n = Number(cleaned)
+  return Number.isFinite(n) && n >= 0 ? Math.round(n) : 0
+}
+
 export function GenerateLetterForm({
   template,
   employees,
@@ -19,11 +28,18 @@ export function GenerateLetterForm({
   const [values, setValues] = useState<Record<string, string>>({})
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [hasStoredStructure, setHasStoredStructure] = useState(false)
+  const [saveStructure, setSaveStructure] = useState(false)
+
+  const showStructurePrompt =
+    template.id === APPOINTMENT_TEMPLATE_ID && employeeId !== '' && !hasStoredStructure
 
   async function loadDefaults(id: string) {
     setEmployeeId(id)
+    setSaveStructure(false)
     if (!id) {
       setValues({})
+      setHasStoredStructure(false)
       return
     }
     setBusy(true)
@@ -32,15 +48,51 @@ export function GenerateLetterForm({
       const res = await fetch(`/api/letters/${template.id}/generate/preview?employeeId=${encodeURIComponent(id)}`, {
         method: 'GET',
       })
-      // Preview route is optional; if not present, just keep current values.
       if (res.ok) {
-        const data = (await res.json()) as { values?: Record<string, string> }
+        const data = (await res.json()) as { values?: Record<string, string>; hasSalaryStructure?: boolean }
         if (data.values) setValues(data.values)
+        setHasStoredStructure(Boolean(data.hasSalaryStructure))
+      } else {
+        setHasStoredStructure(false)
       }
     } catch {
       /* fall through */
     } finally {
       setBusy(false)
+    }
+  }
+
+  async function maybePersistStructure() {
+    // Heuristic: derive an 8-field structure from the rupee-string tokens the
+    // user typed. The letter doesn't separately capture conveyance vs other
+    // allowances, so we collapse both into otherAllowances and leave
+    // conveyance at 0. HR can refine via the employee detail page later.
+    const basicAnnual = parseRupees(values.basicAnnual)
+    const hraAnnual = parseRupees(values.hraAnnual)
+    const grossAnnual = parseRupees(values.grossAnnual)
+    const otherAllowances = Math.max(0, grossAnnual - basicAnnual - hraAnnual)
+    const ptMonthly = parseRupees(values.ptMonthly)
+    const pfEmployee = parseRupees(values.pfAnnual)
+    const netTakeHome = parseRupees(values.netAnnual)
+    const ctc = parseRupees(values.ctcAnnual)
+    const payload = {
+      ctc,
+      basic: basicAnnual,
+      hra: hraAnnual,
+      conveyance: 0,
+      otherAllowances,
+      pfEmployee,
+      ptMonthly,
+      netTakeHome,
+    }
+    try {
+      await fetch(`/api/employees/${employeeId}/salary-structure`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+    } catch {
+      // Non-fatal: letter has already generated; structure save is opportunistic.
     }
   }
 
@@ -69,6 +121,9 @@ export function GenerateLetterForm({
       a.download = match?.[1] ?? `${template.id}.docx`
       a.click()
       URL.revokeObjectURL(url)
+      if (saveStructure && showStructurePrompt) {
+        void maybePersistStructure()
+      }
     } catch {
       setError("We couldn't reach our server. Try again in a moment.")
     } finally {
@@ -133,6 +188,27 @@ export function GenerateLetterForm({
             </div>
           ))}
         </fieldset>
+
+        {showStructurePrompt && (
+          <label className="flex items-start gap-2 rounded border border-line bg-card px-3 py-2 text-xs text-ink-2">
+            <input
+              type="checkbox"
+              checked={saveStructure}
+              onChange={(e) => setSaveStructure(e.target.checked)}
+              className="mt-0.5 h-4 w-4 rounded border-line-strong text-navy focus-visible:ring-2 focus-visible:ring-teal"
+            />
+            <span>
+              Save these salary values to the employee record for future letters. Conveyance and Other
+              Allowances are collapsed into one field; refine on the employee page if needed.
+            </span>
+          </label>
+        )}
+        {hasStoredStructure && template.id === APPOINTMENT_TEMPLATE_ID && (
+          <p className="text-xs text-ink-3">
+            PF / PT block auto-filled from this employee&apos;s stored salary structure. Edit per-letter
+            if a special case requires it.
+          </p>
+        )}
 
         {error && (
           <div role="alert" className="rounded border border-danger bg-danger-bg px-3 py-2 text-sm text-danger">

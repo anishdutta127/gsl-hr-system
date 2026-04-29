@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { getCurrentSession } from '@/lib/identity'
 import { loadCompany } from '@/lib/company'
+import { SalaryImport } from './SalaryImport'
 
 export const dynamic = 'force-dynamic'
 
@@ -44,6 +45,13 @@ export default async function SettingsPage() {
           To edit, update <code className="rounded bg-surface px-1 py-0.5">config/company.json</code> and redeploy.
           This file is committed configuration, not runtime-editable.
         </p>
+      </section>
+
+      <section className="mb-6 rounded-lg border border-line bg-card p-5">
+        <h2 className="font-display text-lg text-ink">Bulk salary import</h2>
+        <div className="mt-4">
+          <SalaryImport />
+        </div>
       </section>
 
       <section className="rounded-lg border border-line bg-card p-5">

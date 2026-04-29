@@ -9,6 +9,7 @@ import { findEmployeeById } from '@/lib/data'
 import { loadCompany } from '@/lib/company'
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
+import { deriveSalaryTokens } from '@/lib/salaryTokens'
 
 export const runtime = 'nodejs'
 
@@ -63,11 +64,17 @@ export async function POST(
   const employee = employeeId ? findEmployeeById(employeeId) : undefined
   const company = loadCompany()
 
-  // Merge: start with defaults, override with provided values
+  // Merge: start with defaults, overlay derived salary tokens, then provided values.
   const merged: Record<string, string> = {}
   for (const v of template.variables) {
     const def = resolveDefault(v.defaultFrom, { employee, company })
     merged[v.token] = def
+  }
+  if (employee?.salaryStructure) {
+    const sal = deriveSalaryTokens(employee.salaryStructure)
+    for (const v of template.variables) {
+      if (v.token in sal) merged[v.token] = sal[v.token as keyof typeof sal]
+    }
   }
   for (const [k, val] of Object.entries(providedValues)) {
     if (typeof val === 'string') merged[k] = val

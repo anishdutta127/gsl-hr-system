@@ -3,86 +3,107 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Offer } from '@/lib/types'
+import { useOptimisticAction } from '@/lib/hooks/useOptimisticAction'
+
+type Action = 'approve' | 'send' | 'accept' | 'decline' | 'withdraw'
+
+const NEXT_STATUS: Record<Action, Offer['status']> = {
+  approve: 'Approved',
+  send: 'Sent',
+  accept: 'Accepted',
+  decline: 'Declined',
+  withdraw: 'Withdrawn',
+}
 
 export function OfferActions({ offer }: { offer: Offer }) {
   const router = useRouter()
-  const [busy, setBusy] = useState<string | null>(null)
-  const [error, setError] = useState<string | null>(null)
+  const action = useOptimisticAction<Offer['status']>(offer.status)
+  const [busy, setBusy] = useState<Action | null>(null)
+  const [success, setSuccess] = useState<string | null>(null)
 
-  async function act(action: 'approve' | 'send' | 'accept' | 'decline' | 'withdraw', notes?: string) {
-    setBusy(action)
-    setError(null)
-    try {
-      const res = await fetch(`/api/offers/${offer.id}/${action}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ notes: notes ?? '' }),
-      })
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({ message: 'Failed.' }))
-        setError(body.message ?? 'Failed.')
-        setBusy(null)
-        return
-      }
+  async function act(a: Action, notes?: string) {
+    setBusy(a)
+    const res = await action.run({
+      optimistic: NEXT_STATUS[a],
+      perform: async () => {
+        const r = await fetch(`/api/offers/${offer.id}/${a}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ notes: notes ?? '' }),
+        })
+        if (!r.ok) {
+          const b = (await r.json().catch(() => ({}))) as { message?: string }
+          throw new Error(b.message ?? 'Could not update offer.')
+        }
+        return r.json()
+      },
+    })
+    setBusy(null)
+    if (res.ok) {
+      setSuccess('Offer updated. Will reflect everywhere within ~1 minute.')
       router.refresh()
-    } catch {
-      setError("We couldn't reach our server. Try again in a moment.")
-    } finally {
-      setBusy(null)
+      setTimeout(() => setSuccess(null), 4000)
     }
   }
 
-  const canApprove = offer.status === 'Draft'
-  const canSend = offer.status === 'Approved'
-  const canRespond = offer.status === 'Sent'
-  const canWithdraw = offer.status === 'Draft' || offer.status === 'Approved' || offer.status === 'Sent'
+  const status = action.current
+  const canApprove = status === 'Draft'
+  const canSend = status === 'Approved'
+  const canRespond = status === 'Sent'
+  const canWithdraw = status === 'Draft' || status === 'Approved' || status === 'Sent'
 
   return (
     <aside className="rounded-lg border border-line bg-card p-5">
       <h2 className="font-display text-lg text-ink">Actions</h2>
       <p className="mt-1 text-xs text-ink-2">
-        Current status: <span className="font-medium text-ink">{offer.status}</span>
+        Current status: <span className="font-medium text-ink">{status}</span>
+        {action.busy && <span className="ml-2 text-ink-3">saving…</span>}
       </p>
-      {error && (
+      {action.error && (
         <div
           role="alert"
           className="mt-3 rounded border border-danger bg-danger-bg px-3 py-2 text-sm text-danger"
         >
-          {error}
+          {action.error}
+        </div>
+      )}
+      {success && (
+        <div role="status" aria-live="polite" className="mt-3 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink">
+          {success}
         </div>
       )}
       <div className="mt-4 space-y-2">
         <ActionButton
           label="Approve"
-          disabled={!canApprove || busy !== null}
+          disabled={!canApprove || action.busy}
           busy={busy === 'approve'}
           onClick={() => act('approve')}
           variant="primary"
         />
         <ActionButton
           label="Mark sent"
-          disabled={!canSend || busy !== null}
+          disabled={!canSend || action.busy}
           busy={busy === 'send'}
           onClick={() => act('send', 'Offer letter sent to candidate.')}
           variant="primary"
         />
         <ActionButton
           label="Mark accepted"
-          disabled={!canRespond || busy !== null}
+          disabled={!canRespond || action.busy}
           busy={busy === 'accept'}
           onClick={() => act('accept')}
           variant="primary"
         />
         <ActionButton
           label="Mark declined"
-          disabled={!canRespond || busy !== null}
+          disabled={!canRespond || action.busy}
           busy={busy === 'decline'}
           onClick={() => act('decline')}
           variant="secondary"
         />
         <ActionButton
           label="Withdraw offer"
-          disabled={!canWithdraw || busy !== null}
+          disabled={!canWithdraw || action.busy}
           busy={busy === 'withdraw'}
           onClick={() => act('withdraw')}
           variant="danger"

@@ -5,6 +5,7 @@ import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { OnboardingChecklist } from './OnboardingChecklist'
 import { ExitInitiator } from './ExitInitiator'
+import { SalaryStructureForm } from './SalaryStructureForm'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,6 +15,9 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
   if (!employee) notFound()
 
   const canEdit = session.role === 'Admin' || session.role === 'HR'
+  // Leadership reads the page but does not see the salary breakdown - kept to
+  // HR + Admin only per Phase 3 R2 spec.
+  const canSeeSalary = session.role === 'Admin' || session.role === 'HR'
 
   return (
     <div className="container-page py-8">
@@ -54,13 +58,53 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
             <Term label="Email">{employee.email}</Term>
             <Term label="Phone">{employee.phone ?? '-'}</Term>
             <Term label="Reporting to">{employee.reportingTo ?? '-'}</Term>
-            <Term label="Annual CTC">
-              {employee.ctcAnnual != null ? formatRs(employee.ctcAnnual) : '-'}
-            </Term>
+            {canSeeSalary && (
+              <Term label="Annual CTC">
+                {employee.ctcAnnual != null ? formatRs(employee.ctcAnnual) : '-'}
+              </Term>
+            )}
             <Term label="Created">
               {formatDate(employee.createdAt)} by {employee.createdBy}
             </Term>
           </dl>
+
+          {canSeeSalary && (
+            <section className="mt-6 rounded-lg border border-line bg-card p-5">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h2 className="font-display text-lg text-ink">Salary structure</h2>
+                  <p className="mt-1 text-xs text-ink-3">
+                    Powers PF / PT auto-fill on the appointment letter. Indian rupees, annual amounts
+                    unless marked monthly.
+                  </p>
+                </div>
+                {canEdit && (
+                  <div className="shrink-0">
+                    <SalaryStructureForm
+                      employeeId={employee.id}
+                      initial={employee.salaryStructure ?? null}
+                    />
+                  </div>
+                )}
+              </div>
+              {employee.salaryStructure ? (
+                <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+                  <Term label="CTC (annual)">{formatRs(employee.salaryStructure.ctc)}</Term>
+                  <Term label="Basic (annual)">{formatRs(employee.salaryStructure.basic)}</Term>
+                  <Term label="HRA (annual)">{formatRs(employee.salaryStructure.hra)}</Term>
+                  <Term label="Conveyance (annual)">{formatRs(employee.salaryStructure.conveyance)}</Term>
+                  <Term label="Other Allowances (annual)">{formatRs(employee.salaryStructure.otherAllowances)}</Term>
+                  <Term label="PF Employee (annual)">{formatRs(employee.salaryStructure.pfEmployee)}</Term>
+                  <Term label="PT (per month)">{formatRs(employee.salaryStructure.ptMonthly)}</Term>
+                  <Term label="Net Take Home (annual)">{formatRs(employee.salaryStructure.netTakeHome)}</Term>
+                </dl>
+              ) : (
+                <p className="mt-3 text-sm text-ink-2">
+                  No salary structure stored. Letters will require manual entry until added.
+                </p>
+              )}
+            </section>
+          )}
 
           {employee.status === 'Active' ? (
             <div className="mt-6">

@@ -15,7 +15,7 @@ export const runtime = 'nodejs'
 type BulkAction =
   | { type: 'add-to-pipeline'; roleId: string }
   | { type: 'archive' }
-  | { type: 'log-email'; templateId: string }
+  | { type: 'log-email'; templateId: string; via?: 'log-only' | 'outlook' }
 
 /**
  * Bulk candidate ops. One request, one queue entry per candidate, atomic
@@ -143,6 +143,8 @@ export async function POST(request: Request) {
   } else if (action.type === 'log-email') {
     const template = findEmailTemplateById(action.templateId)
     if (!template) return NextResponse.json({ message: 'Template not found.' }, { status: 404 })
+    const via = action.via === 'outlook' ? 'outlook' : 'log-only'
+    const noteSuffix = via === 'outlook' ? ' Composed in Outlook (mailto).' : ''
     for (const cid of candidateIds) {
       const candidate = findCandidateById(cid)
       if (!candidate) {
@@ -158,8 +160,8 @@ export async function POST(request: Request) {
             id: cid,
             operation: 'email.sent',
             before: {},
-            after: { templateId: template.id, templateTitle: template.title },
-            notes: `Bulk-send: "${template.title}" logged for ${candidate.name}.`,
+            after: { templateId: template.id, templateTitle: template.title, via },
+            notes: `Bulk-send: "${template.title}" logged for ${candidate.name}.${noteSuffix}`,
           },
         })
         results.push({ candidateId: cid, status: 'ok' })

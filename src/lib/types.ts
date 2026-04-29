@@ -281,6 +281,20 @@ export interface Employee {
   officialEmailMissing?: boolean
   status: 'Active' | 'Exited'
   ctcAnnual?: number
+  /** Detailed salary breakdown for appointment letter PF/PT rendering. All
+   * amounts in INR. CTC/Basic/HRA/Conveyance/OtherAllowances/PFEmployee/NetTakeHome
+   * are annual; PT is per-month (the way HR records it). Optional: legacy
+   * employees have it absent and HR fills the form per-letter. */
+  salaryStructure?: {
+    ctc: number
+    basic: number
+    hra: number
+    conveyance: number
+    otherAllowances: number
+    pfEmployee: number
+    ptMonthly: number
+    netTakeHome: number
+  }
   exit?: {
     lastWorkingDay: string
     reason: string

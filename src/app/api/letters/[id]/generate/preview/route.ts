@@ -3,6 +3,7 @@ import { findTemplateById, todayLongEnGB } from '@/lib/letterTemplates'
 import { findEmployeeById } from '@/lib/data'
 import { loadCompany } from '@/lib/company'
 import { getCurrentSession } from '@/lib/identity'
+import { deriveSalaryTokens } from '@/lib/salaryTokens'
 
 export const runtime = 'nodejs'
 
@@ -45,5 +46,18 @@ export async function GET(
     values[v.token] = val
   }
 
-  return NextResponse.json({ values })
+  // Salary block: overlay derived PF/PT tokens when the employee has the
+  // structure stored. Token names match the appointment letter's variables.
+  if (employee?.salaryStructure) {
+    const sal = deriveSalaryTokens(employee.salaryStructure)
+    for (const [k, v] of Object.entries(sal)) {
+      if (k in values || templateHasToken(template.variables, k)) values[k] = v
+    }
+  }
+
+  return NextResponse.json({ values, hasSalaryStructure: Boolean(employee?.salaryStructure) })
+}
+
+function templateHasToken(vars: ReadonlyArray<{ token: string }>, token: string): boolean {
+  return vars.some((v) => v.token === token)
 }
