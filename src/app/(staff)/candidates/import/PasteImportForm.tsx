@@ -52,8 +52,22 @@ export function PasteImportForm() {
         setBusy(false)
         return
       }
-      const data = (await res.json()) as { candidateId: string }
-      router.push(`/candidates/${data.candidateId}`)
+      const data = (await res.json()) as {
+        candidateId: string
+        duplicate?: boolean
+        archived?: boolean
+        queued?: boolean
+      }
+      if (data.duplicate) {
+        const flag = data.archived ? 'duplicate-archived' : 'duplicate'
+        router.push(`/candidates/${data.candidateId}?notice=${flag}`)
+      } else {
+        // Brand-new candidate: the queue runner has the write but the
+        // candidate isn't yet on disk, so /candidates/[id] would 404.
+        // Land on the pool with a banner; the record appears once the
+        // runner syncs.
+        router.push(`/candidates?notice=queued&name=${encodeURIComponent(name.trim())}`)
+      }
       router.refresh()
     } catch {
       setError("We couldn't reach our server.")

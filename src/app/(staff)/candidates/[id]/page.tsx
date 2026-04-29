@@ -12,13 +12,21 @@ import { formatDate, formatRelative } from '@/lib/format'
 import { isTerminal } from '@/lib/pipeline'
 import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
 import { ReplyWidget } from './ReplyWidget'
+import { UnarchiveButton } from './UnarchiveButton'
 
 export const dynamic = 'force-dynamic'
 
-export default async function CandidateDetailPage({ params }: { params: { id: string } }) {
+export default async function CandidateDetailPage({
+  params,
+  searchParams,
+}: {
+  params: { id: string }
+  searchParams: { notice?: string }
+}) {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
   const candidate = findCandidateById(params.id)
   if (!candidate) notFound()
+  const notice = searchParams.notice ?? ''
 
   const apps = loadApplications().filter((a) => a.candidateId === candidate.id)
   const roles = loadRoles()
@@ -54,17 +62,51 @@ export default async function CandidateDetailPage({ params }: { params: { id: st
         </Link>{' '}
         / {candidate.name}
       </div>
+
+      {notice === 'duplicate' && (
+        <div
+          role="status"
+          className="mb-4 rounded border border-warning bg-warning-bg px-3 py-2 text-sm text-ink"
+        >
+          This candidate already exists in the pool. Showing the existing record.
+        </div>
+      )}
+      {notice === 'duplicate-archived' && (
+        <div
+          role="status"
+          className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded border border-warning bg-warning-bg px-3 py-2 text-sm text-ink"
+        >
+          <span>
+            A candidate with this email exists in the archive. Open the existing record below or
+            unarchive to bring them back into the pool.
+          </span>
+          {(session.role === 'Admin' || session.role === 'HR') && (
+            <UnarchiveButton candidateId={candidate.id} />
+          )}
+        </div>
+      )}
+
       <div className="mb-6 flex items-start justify-between gap-4">
         <div>
-          <h1 className="font-display text-2xl text-ink">{candidate.name}</h1>
+          <div className="flex flex-wrap items-center gap-2">
+            <h1 className="font-display text-2xl text-ink">{candidate.name}</h1>
+            {candidate.status === 'Archived' && (
+              <span className="inline-flex items-center rounded bg-surface px-2 py-0.5 text-xs font-medium text-ink-2">
+                Archived
+              </span>
+            )}
+          </div>
           <p className="mt-1 text-sm text-ink-2">
-            {candidate.email}
+            {candidate.email || 'no email on file'}
             {candidate.phone ? ` · ${candidate.phone}` : ''} · Source: {candidate.source}
           </p>
           <p className="mt-1 text-xs text-ink-3">
             Added {formatDate(candidate.createdAt)} by {candidate.createdBy}
           </p>
         </div>
+        {candidate.status === 'Archived' && (session.role === 'Admin' || session.role === 'HR') && (
+          <UnarchiveButton candidateId={candidate.id} />
+        )}
       </div>
 
       {candidate.notes && (

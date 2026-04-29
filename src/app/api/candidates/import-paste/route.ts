@@ -1,5 +1,6 @@
 import crypto from 'node:crypto'
 import { NextResponse } from 'next/server'
+import { loadCandidates } from '@/lib/data'
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
 import { CANDIDATE_SOURCES, type CandidateSource } from '@/lib/types'
@@ -65,6 +66,25 @@ export async function POST(request: Request) {
     )
   }
 
+  // Duplicate detection: if email is supplied and matches an existing candidate
+  // (case-insensitive), short-circuit. HR lands on the existing record and
+  // never sees a 404 from a stale queue-create.
+  if (email) {
+    const lowered = email.toLowerCase()
+    const existing = loadCandidates().find(
+      (c) => c.email && c.email.trim().toLowerCase() === lowered,
+    )
+    if (existing) {
+      return NextResponse.json({
+        ok: true,
+        duplicate: true,
+        candidateId: existing.id,
+        archived: existing.status === 'Archived',
+        name: existing.name,
+      })
+    }
+  }
+
   const candidateId = crypto.randomUUID()
   const now = new Date().toISOString()
 
@@ -103,5 +123,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ message }, { status: 503 })
   }
 
-  return NextResponse.json({ ok: true, candidateId })
+  return NextResponse.json({ ok: true, duplicate: false, candidateId, queued: true })
 }

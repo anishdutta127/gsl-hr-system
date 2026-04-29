@@ -12,7 +12,7 @@ export const dynamic = 'force-dynamic'
 export default async function CandidatesPage({
   searchParams,
 }: {
-  searchParams: { programme?: string; q?: string }
+  searchParams: { programme?: string; q?: string; notice?: string; name?: string }
 }) {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
   const allCandidates = loadCandidates()
@@ -96,8 +96,22 @@ export default async function CandidatesPage({
 
   const canBulk = session.role === 'Admin' || session.role === 'HR'
 
+  const queuedNoticeName =
+    searchParams.notice === 'queued' && typeof searchParams.name === 'string'
+      ? searchParams.name
+      : ''
+
   return (
     <div className="container-page py-8">
+      {queuedNoticeName && (
+        <div
+          role="status"
+          className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
+        >
+          {queuedNoticeName} is queued. The record appears in the pool within a few minutes once
+          the sync runner picks it up.
+        </div>
+      )}
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
         <div>
           <h1 className="font-display text-2xl text-ink">Candidates</h1>

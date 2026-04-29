@@ -187,6 +187,23 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
+    # Candidate archive / unarchive: flip status field, audit.
+    if op == "candidate.archive":
+        entity["status"] = "Archived"
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+    if op == "candidate.unarchive":
+        entity["status"] = "Active"
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Audit-only operations: no field change, just append an audit entry.
+    # email.sent: HR logged that they sent an external email via Outlook/Gmail.
+    # letter.generated: HR generated an offer/relieving/no-dues letter document.
+    if op in ("email.sent", "letter.generated"):
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
     raise RuntimeError(f"Unknown update operation: {op}")
 
 
