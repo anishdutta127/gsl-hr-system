@@ -205,5 +205,52 @@
     ],
     "closeOutcome": "Cancelled",
     "closeNotes": null
+  },
+  {
+    "id": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "title": "Senior Academics Manager",
+    "department": "Academics",
+    "location": "Mumbai",
+    "employmentType": "Full-time",
+    "status": "Open",
+    "pipelineStages": [
+      "Sourced",
+      "Shortlisted",
+      "AssessmentSent",
+      "AssessmentDone",
+      "VideoSent",
+      "VideoDone",
+      "HODRoundScheduled",
+      "HODRoundDone",
+      "HOD2RoundScheduled",
+      "HOD2RoundDone",
+      "HRRoundScheduled",
+      "HRRoundDone",
+      "Offered",
+      "OfferAccepted",
+      "DocsCollected",
+      "Joined"
+    ],
+    "rubric": [],
+    "description": "Role Purpose: \nTo lead the design, structuring, and quality governance of K–12 instructional and \ncurriculum frameworks in STEM, Robotics, Coding, Artificial Intelligence, etc., translating \nacademic content into coherent, age-appropriate, and classroom-ready learning \nresources that are pedagogically robust, consistent, and implementation-feasible. \n\nKey Responsibilities: \n• Structure end-to-end curriculum frameworks and learning progressions across K–12 \nin STEM, Robotics, Coding, and AI. \n• Ensure strong alignment between curriculum intent, instructional design \nmethodology, hands-on activities, projects, and assessment strategies. \n• Embed experiential, inquiry-based, problem-solving, and learner-centric \npedagogical approaches within curriculum designs. \n• Be responsible for design and development of teaching – learning resources, to \nensure academic accuracy, conceptual clarity, consistency across grades and \nalignment with NEP 2020 recommendations, NCF guidelines and SDG goals. \n• Ensure age-appropriateness, cognitive load balance, and practical classroom \nfeasibility of learning designs, including lab and activity components. \n• Identify design gaps, redundancies, or misalignments and recommend data\ninformed improvements to enhance learning effectiveness. \n• Collaborate closely with academic, product, and delivery teams to ensure \ncurriculum/ content usability, teacher readiness, and smooth classroom \nimplementation. \n• Be responsible for the design, development and quality of teacher training design. \n\nQualifications: \nB.Tech / M.Tech in Engineering, Technology, or a related STEM discipline \nExperience:  \n• Minimum 5 years of experience in K–12 curriculum and content design for STEM, \nRobotics, Coding, and AI. \n• Exposure to classroom implementation, pilots, or teacher training is preferred. \n\nCore Competencies: \n• Strong understanding of STEM, Robotics, Coding, and AI concepts at the K–12 level. \n• Solid grounding in K–12 pedagogy and curriculum structuring. \n• Clear understanding of school board alignment requirements for STEM, Robotics, and \nAI. \n• Ability to guide teams, maintain design standards, and ensure consistency across \ngrades. \n• Strong attention to academic accuracy, design quality, and classroom feasibility.",
+    "responsibilities": [],
+    "mustHaves": [],
+    "niceToHaves": [],
+    "createdAt": "2026-04-29T12:03:23.517Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-29T12:03:23.517Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.create",
+        "after": {
+          "title": "Senior Academics Manager",
+          "department": "Academics",
+          "location": "Mumbai",
+          "employmentType": "Full-time"
+        },
+        "notes": "Created via UI"
+      }
+    ]
   }
 ]
