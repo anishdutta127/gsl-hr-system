@@ -416,5 +416,290 @@
     "failedAt": "2026-04-29T07:50:48.619Z",
     "failureReason": "Unknown update operation: email.sent",
     "appliedAt": "2026-04-29T09:55:34.466Z"
+  },
+  {
+    "id": "5dd44bd6-464a-46e7-9909-2b11976d0d8f",
+    "queuedAt": "2026-04-29T10:49:05.396Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "309952f2-092f-49af-9fb3-49976d230e76",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.733Z"
+  },
+  {
+    "id": "27e69a67-23bf-41e0-9837-204c386c19b3",
+    "queuedAt": "2026-04-29T10:49:19.375Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.733Z"
+  },
+  {
+    "id": "28f3c113-2203-4cde-9fdd-7836e85061b0",
+    "queuedAt": "2026-04-29T10:50:56.342Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "04e1c341-41c4-42e6-9e4e-6a104124ef80",
+      "name": "Ashish Mane",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Bright Champs",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+      "createdAt": "2026-04-29T10:50:56.342Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T10:50:56.342Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ashish Mane",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.753Z"
+  },
+  {
+    "id": "2074ed59-0657-4498-aa98-1c2ec69077e0",
+    "queuedAt": "2026-04-29T10:59:23.280Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+      "name": "Vishal Mane",
+      "email": "vishalspatil.695@gmail.com",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Content Developer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+      "createdAt": "2026-04-29T10:59:23.280Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T10:59:23.280Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vishal Mane",
+            "email": "vishalspatil.695@gmail.com",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.770Z"
+  },
+  {
+    "id": "20520cc7-8cc8-4d7c-8bd9-80172a7e38b0",
+    "queuedAt": "2026-04-29T11:02:39.106Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "ASSESSMENT-INVITE",
+        "templateTitle": "Assessment invite"
+      },
+      "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.787Z"
+  },
+  {
+    "id": "b5702292-91a8-4a28-a217-932c9fa52eaf",
+    "queuedAt": "2026-04-29T11:09:34.452Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "309952f2-092f-49af-9fb3-49976d230e76",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.787Z"
+  },
+  {
+    "id": "0d565611-ce3b-4930-86ef-3e80e45a0fa0",
+    "queuedAt": "2026-04-29T11:09:45.591Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.788Z"
+  },
+  {
+    "id": "8ff778e0-08b0-48fa-899f-7633138dcaa5",
+    "queuedAt": "2026-04-29T11:22:20.727Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e5121645-5147-4b31-bcf3-cc35de473811",
+      "name": "Shruti Patkie",
+      "email": "sup0107@gmail.com",
+      "phone": "9820362829",
+      "source": "Application",
+      "notes": "The work culture.",
+      "createdAt": "2026-04-29T11:22:20.726Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T11:22:20.726Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shruti Patkie",
+            "email": "sup0107@gmail.com",
+            "source": "Application",
+            "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.805Z"
+  },
+  {
+    "id": "c7953ab7-d407-4093-a75f-9fb6fb1509df",
+    "queuedAt": "2026-04-29T11:22:21.643Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "db941086-6481-4209-9990-cdad0dcd4b4c",
+      "candidateId": "e5121645-5147-4b31-bcf3-cc35de473811",
+      "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-04-29T11:22:20.726Z",
+      "createdAt": "2026-04-29T11:22:20.726Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T11:22:20.726Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "e5121645-5147-4b31-bcf3-cc35de473811",
+            "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.805Z"
+  },
+  {
+    "id": "d1cee6b4-cf59-470e-93ae-dfc06abf7d55",
+    "queuedAt": "2026-04-29T11:22:22.508Z",
+    "queuedBy": "system",
+    "entity": "careers_application",
+    "operation": "create",
+    "payload": {
+      "_kind": "outbound-mail",
+      "to": "sup0107@gmail.com",
+      "subject": "We received your application for Pre-Sales Intern at GSL",
+      "body": "Hi Shruti,\n\nThanks for applying for Pre-Sales Intern at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzQ2MTc0MiwiZXhwaXJlc0F0IjoxNzc3NDYyNjQyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUxMjE2NDUtNTE0Ny00YjMxLWJjZjMtY2MzNWRlNDczODExIiwiYXBwbGljYXRpb25JZCI6ImRiOTQxMDg2LTY0ODEtNDIwOS05OTkwLWNkYWQwZGNkNGI0YyIsIm5vbmNlIjoiZDE4NGY3NzQtYjY3ZS00MDQ1LWJiNGUtZjcyZTcyNDQwZjdmIn19.UnYolQxkrDrCpzDHxIhybTieEmy0mhAqsbh7gx4NFVU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate e5121645-5147-4b31-bcf3-cc35de473811",
+      "createdAt": "2026-04-29T11:22:22.508Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-29T11:23:35.828Z"
   }
 ]

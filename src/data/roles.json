@@ -50,7 +50,7 @@
     "department": "Premium Sales",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -86,8 +86,44 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-04-29T11:23:35.733Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Cancelled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+      },
+      {
+        "timestamp": "2026-04-29T11:23:35.787Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Cancelled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
       }
-    ]
+    ],
+    "closeOutcome": "Cancelled",
+    "closeNotes": null
   },
   {
     "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
@@ -95,7 +131,7 @@
     "department": "Premium Sales",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -131,7 +167,43 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-04-29T11:23:35.733Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Cancelled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+      },
+      {
+        "timestamp": "2026-04-29T11:23:35.787Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Cancelled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
       }
-    ]
+    ],
+    "closeOutcome": "Cancelled",
+    "closeNotes": null
   }
 ]

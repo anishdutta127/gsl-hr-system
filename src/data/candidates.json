@@ -66,6 +66,17 @@
           "templateTitle": "Round 1 invite (Shruti to candidate)"
         },
         "notes": "Bulk-send: \"Round 1 invite (Shruti to candidate)\" logged for 26 Shubham Maurya."
+      },
+      {
+        "timestamp": "2026-04-29T11:23:35.776Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "email.sent",
+        "before": {},
+        "after": {
+          "templateId": "ASSESSMENT-INVITE",
+          "templateTitle": "Assessment invite"
+        },
+        "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
       }
     ]
   },
@@ -5973,5 +5984,105 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "04e1c341-41c4-42e6-9e4e-6a104124ef80",
+    "name": "Ashish Mane",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Bright Champs",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+    "createdAt": "2026-04-29T10:50:56.342Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-29T10:50:56.342Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ashish Mane",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+    "name": "Vishal Mane",
+    "email": "vishalspatil.695@gmail.com",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Content Developer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+    "createdAt": "2026-04-29T10:59:23.280Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-29T10:59:23.280Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Vishal Mane",
+          "email": "vishalspatil.695@gmail.com",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "e5121645-5147-4b31-bcf3-cc35de473811",
+    "name": "Shruti Patkie",
+    "email": "sup0107@gmail.com",
+    "phone": "9820362829",
+    "source": "Application",
+    "notes": "The work culture.",
+    "createdAt": "2026-04-29T11:22:20.726Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-29T11:22:20.726Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Shruti Patkie",
+          "email": "sup0107@gmail.com",
+          "source": "Application",
+          "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd"
+        },
+        "notes": "Self-applied via /careers"
+      }
+    ]
+  },
+  {
+    "_kind": "outbound-mail",
+    "to": "sup0107@gmail.com",
+    "subject": "We received your application for Pre-Sales Intern at GSL",
+    "body": "Hi Shruti,\n\nThanks for applying for Pre-Sales Intern at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzQ2MTc0MiwiZXhwaXJlc0F0IjoxNzc3NDYyNjQyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUxMjE2NDUtNTE0Ny00YjMxLWJjZjMtY2MzNWRlNDczODExIiwiYXBwbGljYXRpb25JZCI6ImRiOTQxMDg2LTY0ODEtNDIwOS05OTkwLWNkYWQwZGNkNGI0YyIsIm5vbmNlIjoiZDE4NGY3NzQtYjY3ZS00MDQ1LWJiNGUtZjcyZTcyNDQwZjdmIn19.UnYolQxkrDrCpzDHxIhybTieEmy0mhAqsbh7gx4NFVU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+    "context": "welcome magic link for candidate e5121645-5147-4b31-bcf3-cc35de473811",
+    "createdAt": "2026-04-29T11:22:22.508Z"
   }
 ]
