@@ -130,5 +130,23 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "20520cc7-8cc8-4d7c-8bd9-80172a7e38b0",
+    "queuedAt": "2026-04-29T11:02:39.106Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "email.sent",
+      "before": {},
+      "after": {
+        "templateId": "ASSESSMENT-INVITE",
+        "templateTitle": "Assessment invite"
+      },
+      "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
+    },
+    "retryCount": 0
   }
 ]
