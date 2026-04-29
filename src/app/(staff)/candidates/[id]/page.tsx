@@ -14,6 +14,7 @@ import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
 import { ReplyWidget } from './ReplyWidget'
 import { UnarchiveButton } from './UnarchiveButton'
 import { ResumeUpload } from './ResumeUpload'
+import { StagePill } from '@/components/StagePill'
 
 export const dynamic = 'force-dynamic'
 
@@ -205,15 +206,9 @@ export default async function CandidateDetailPage({
                         {role?.department} · Applied {formatDate(app.createdAt)}
                       </div>
                     </div>
-                    <span
-                      className={
-                        terminal
-                          ? 'inline-flex items-center rounded bg-surface px-2 py-1 text-xs text-ink-2'
-                          : 'inline-flex items-center rounded bg-teal-light px-2 py-1 text-xs font-medium text-teal-dark'
-                      }
-                    >
-                      {app.currentStage}
-                    </span>
+                    <StagePill stage={app.currentStage} />
+                    {/* terminal styling now derived inside StagePill */}
+                    <span className="sr-only">{terminal ? 'Terminal' : 'Active'}</span>
                   </div>
 
                   <div className="mt-3 text-xs text-ink-3">

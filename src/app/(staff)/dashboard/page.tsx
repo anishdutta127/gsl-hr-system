@@ -66,10 +66,14 @@ export default async function DashboardPage() {
       </div>
 
       <section aria-label="Key figures" className="mb-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <Kpi label="Open roles" value={formatCount(openRoles.length)} />
-        <Kpi label="Candidates in flight" value={formatCount(inFlight.length)} />
-        <Kpi label="Open offers" value={formatCount(openOffers.length)} />
-        <Kpi label="Joined this month" value={formatCount(thisMonth.length)} />
+        <Kpi label="Open roles" value={formatCount(openRoles.length)} tint="success" />
+        <Kpi label="Candidates in flight" value={formatCount(inFlight.length)} tint="info" />
+        <Kpi
+          label="Open offers"
+          value={formatCount(openOffers.length)}
+          tint={openOffers.length > 0 ? 'warning' : 'neutral'}
+        />
+        <Kpi label="Joined this month" value={formatCount(thisMonth.length)} tint="success" />
       </section>
 
       <section aria-labelledby="stage-heading" className="mb-10">
@@ -150,9 +154,18 @@ export default async function DashboardPage() {
   )
 }
 
-function Kpi({ label, value }: { label: string; value: string }) {
+type KpiTint = 'success' | 'warning' | 'info' | 'neutral'
+
+const KPI_TINT_CLASSES: Record<KpiTint, string> = {
+  success: 'border-success bg-success-bg/50',
+  warning: 'border-warning bg-warning-bg',
+  info: 'border-navy/30 bg-navy-light/40',
+  neutral: 'border-line bg-card',
+}
+
+function Kpi({ label, value, tint = 'neutral' }: { label: string; value: string; tint?: KpiTint }) {
   return (
-    <div className="rounded-lg border border-line bg-card p-4">
+    <div className={`rounded-lg border p-4 ${KPI_TINT_CLASSES[tint]}`}>
       <div className="text-xs uppercase tracking-wider text-ink-3">{label}</div>
       <div className="mt-1 font-display text-2xl text-ink tabular">{value}</div>
     </div>

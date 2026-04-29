@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { StagePill } from '@/components/StagePill'
 
 export interface CandidateRow {
   id: string
@@ -226,9 +227,9 @@ export function CandidateList({
                       {c.appSummaries.map((a, i) => (
                         <span
                           key={i}
-                          className="inline-flex items-center rounded bg-teal-light px-2 py-0.5 text-xs text-teal-dark"
+                          className="inline-flex items-center gap-1 rounded bg-surface px-2 py-0.5 text-xs text-ink-2"
                         >
-                          {a.roleTitle} · {a.stage}
+                          {a.roleTitle} · <StagePill stage={a.stage} size="xs" />
                         </span>
                       ))}
                     </span>
