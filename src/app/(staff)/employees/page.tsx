@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 export default async function EmployeesPage({
   searchParams,
 }: {
-  searchParams: { department?: string; q?: string }
+  searchParams: { department?: string; q?: string; notice?: string }
 }) {
   await requireRoles(['Admin', 'HR', 'Leadership'])
   const employees = loadEmployees()
@@ -41,6 +41,14 @@ export default async function EmployeesPage({
 
   return (
     <div className="container-page py-8">
+      {searchParams.notice === 'activated' && (
+        <div
+          role="status"
+          className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
+        >
+          Employee record queued. They appear in the active list within a few minutes once the sync runner picks them up.
+        </div>
+      )}
       <div className="mb-6">
         <h1 className="font-display text-2xl text-ink">Employees</h1>
         <p className="mt-1 text-sm text-ink-2">

@@ -74,8 +74,9 @@ export function OfferDraftForm({
         setBusy(false)
         return
       }
-      const data = (await res.json()) as { offerId: string }
-      router.push(`/offers/${data.offerId}`)
+      // Drafted offer is in the queue; the detail page would 404 until the
+      // runner syncs. Land on /offers list with a banner instead.
+      router.push('/offers?notice=drafted')
       router.refresh()
     } catch {
       setError("We couldn't reach our server. Try again in a moment.")

@@ -70,8 +70,9 @@ export function EmployeeActivationForm({
         setBusy(false)
         return
       }
-      const data = (await res.json()) as { employeeId: string }
-      router.push(`/employees/${data.employeeId}`)
+      // Newly activated employee lives in the queue; the detail page would
+      // 404 until the runner syncs. Land on /employees list instead.
+      router.push('/employees?notice=activated')
       router.refresh()
     } catch {
       setError("We couldn't reach our server. Try again in a moment.")

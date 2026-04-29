@@ -41,7 +41,7 @@ export default async function ComposeEmailPage({
     }))
 
   const roleOptions = roles
-    .filter((r) => r.status === 'Open')
+    .filter((r) => r.status === 'Open' || r.status === 'Paused' || r.status === 'Draft')
     .map((r) => ({ id: r.id, label: `${r.title} · ${r.department}` }))
 
   return (

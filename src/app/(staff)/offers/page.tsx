@@ -12,7 +12,11 @@ export const dynamic = 'force-dynamic'
 
 const OFFER_READY_STAGES = new Set(['HRRoundDone', 'Offered', 'OfferAccepted'])
 
-export default async function OffersPage() {
+export default async function OffersPage({
+  searchParams,
+}: {
+  searchParams: { notice?: string }
+}) {
   await requireRoles(['Admin', 'HR'])
   const applications = loadApplications()
   const candidates = loadCandidates()
@@ -26,6 +30,14 @@ export default async function OffersPage() {
 
   return (
     <div className="container-page py-8">
+      {searchParams.notice === 'drafted' && (
+        <div
+          role="status"
+          className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
+        >
+          Offer drafted. It appears in the list within a few minutes once the sync runner picks it up.
+        </div>
+      )}
       <div className="mb-6">
         <h1 className="font-display text-2xl text-ink">Offers</h1>
         <p className="mt-1 text-sm text-ink-2">
