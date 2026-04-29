@@ -3,6 +3,8 @@ import { loadCandidates, loadApplications, loadRoles } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatCount } from '@/lib/format'
 import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
+import { canAcceptNewCandidates } from '@/lib/roleStatus'
+import { isTerminal } from '@/lib/pipeline'
 import { CandidateList, type CandidateRow } from './CandidateList'
 
 export const dynamic = 'force-dynamic'
@@ -73,9 +75,24 @@ export default async function CandidatesPage({
     }
   })
 
+  const inFlightByRole = new Map<string, number>()
+  for (const a of allApplications) {
+    if (!isTerminal(a.currentStage)) {
+      inFlightByRole.set(a.roleId, (inFlightByRole.get(a.roleId) ?? 0) + 1)
+    }
+  }
   const openRoleOptions = roles
-    .filter((r) => r.status === 'Open')
-    .map((r) => ({ id: r.id, label: `${r.title} · ${r.department}` }))
+    .filter(canAcceptNewCandidates)
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    .map((r) => {
+      const count = inFlightByRole.get(r.id) ?? 0
+      const statusSuffix = r.status === 'Open' ? '' : ` · ${r.status}`
+      const countSuffix = count > 0 ? ` · ${count} in pipeline` : ''
+      return {
+        id: r.id,
+        label: `${r.title} · ${r.department}${statusSuffix}${countSuffix}`,
+      }
+    })
 
   const canBulk = session.role === 'Admin' || session.role === 'HR'
 

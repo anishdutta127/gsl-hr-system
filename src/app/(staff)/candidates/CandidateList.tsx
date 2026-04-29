@@ -258,22 +258,38 @@ export function CandidateList({
                   They will land at Sourced in the selected role. Candidates already active in that
                   pipeline are skipped.
                 </p>
-                <label htmlFor="bulk-role" className="mt-4 block text-xs font-medium text-ink-2">
-                  Role
-                </label>
-                <select
-                  id="bulk-role"
-                  value={addRoleId}
-                  onChange={(e) => setAddRoleId(e.target.value)}
-                  className="mt-1 block w-full rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
-                >
-                  <option value="">Select a role</option>
-                  {openRoleOptions.map((r) => (
-                    <option key={r.id} value={r.id}>
-                      {r.label}
-                    </option>
-                  ))}
-                </select>
+                {openRoleOptions.length === 0 ? (
+                  <div className="mt-4 rounded border border-dashed border-line-strong bg-surface px-3 py-3 text-sm text-ink-2">
+                    No open roles. Create one first.
+                    <div className="mt-2">
+                      <Link
+                        href="/roles/new"
+                        className="inline-flex min-h-[36px] items-center rounded bg-navy px-3 py-1.5 text-sm font-medium text-white hover:bg-navy-dark"
+                      >
+                        Create role
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <label htmlFor="bulk-role" className="mt-4 block text-xs font-medium text-ink-2">
+                      Role
+                    </label>
+                    <select
+                      id="bulk-role"
+                      value={addRoleId}
+                      onChange={(e) => setAddRoleId(e.target.value)}
+                      className="mt-1 block w-full rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                    >
+                      <option value="">Select a role</option>
+                      {openRoleOptions.map((r) => (
+                        <option key={r.id} value={r.id}>
+                          {r.label}
+                        </option>
+                      ))}
+                    </select>
+                  </>
+                )}
               </>
             )}
 
