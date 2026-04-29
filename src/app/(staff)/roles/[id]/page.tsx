@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { findRoleById, loadApplicationsForRole } from '@/lib/data'
 import { orderedStages } from '@/lib/pipeline'
+import { isPubliclyVisible } from '@/lib/roleStatus'
 import { Kanban } from '@/components/kanban/Kanban'
 import { formatDate } from '@/lib/format'
 
@@ -10,6 +11,7 @@ export default function RoleDetailPage({ params }: { params: { id: string } }) {
   if (!role) notFound()
   const applications = loadApplicationsForRole(role.id)
   const stages = orderedStages(role)
+  const careersVisible = isPubliclyVisible(role)
 
   return (
     <div className="flex min-h-[calc(100vh-4rem)] flex-col">
@@ -29,7 +31,17 @@ export default function RoleDetailPage({ params }: { params: { id: string } }) {
               {formatDate(role.createdAt)} · Status: {role.status}
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
+            {careersVisible && (
+              <Link
+                href={`/careers/${role.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
+              >
+                View on careers page
+              </Link>
+            )}
             <Link
               href={`/roles/${role.id}/match`}
               className="inline-flex items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"

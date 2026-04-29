@@ -1,10 +1,43 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { findRoleById } from '@/lib/data'
 import { formatRs } from '@/lib/format'
+import { isPubliclyVisible } from '@/lib/roleStatus'
 import { RoleApplyForm } from './RoleApplyForm'
 
 export const dynamic = 'force-dynamic'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { roleId: string }
+}): Promise<Metadata> {
+  const role = findRoleById(params.roleId)
+  if (!role) return { title: 'Role · GSL Careers' }
+  const title = `${role.title} · GSL Careers`
+  const description =
+    role.description?.slice(0, 200) ?? `Open role at GSL: ${role.title}, ${role.department}.`
+  return {
+    title,
+    description,
+    alternates: { canonical: `/careers/${role.id}` },
+    openGraph: {
+      title,
+      description,
+      url: `/careers/${role.id}`,
+      siteName: 'GSL · Get Set Learn',
+      type: 'website',
+      images: ['/brand/gsl-og.png'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/brand/gsl-og.png'],
+    },
+  }
+}
 
 const TIMELINE_STEPS = [
   { label: 'Apply', description: 'Send us your details.' },
@@ -16,7 +49,7 @@ const TIMELINE_STEPS = [
 
 export default function CareersRolePage({ params }: { params: { roleId: string } }) {
   const role = findRoleById(params.roleId)
-  if (!role || role.status !== 'Open') notFound()
+  if (!role || !isPubliclyVisible(role)) notFound()
 
   const salary =
     role.salaryRange && role.salaryRange.disclose
