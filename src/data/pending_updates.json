@@ -22,5 +22,29 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
     },
     "retryCount": 0
+  },
+  {
+    "id": "27e69a67-23bf-41e0-9837-204c386c19b3",
+    "queuedAt": "2026-04-29T10:49:19.375Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0
   }
 ]
