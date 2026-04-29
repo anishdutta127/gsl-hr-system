@@ -209,6 +209,16 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
+    # Role lifecycle transitions: publish/pause/resume/close/reopen/archive/discard.
+    # All write the new status + lifecycle fields and append an audit entry.
+    if isinstance(op, str) and op.startswith("role."):
+        if isinstance(after, dict):
+            for key in ("status", "pauseReason", "closeOutcome", "closeNotes"):
+                if key in after:
+                    entity[key] = after[key]
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
     raise RuntimeError(f"Unknown update operation: {op}")
 
 

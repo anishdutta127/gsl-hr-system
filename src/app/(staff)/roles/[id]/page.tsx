@@ -1,17 +1,28 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { findRoleById, loadApplicationsForRole } from '@/lib/data'
-import { orderedStages } from '@/lib/pipeline'
-import { isPubliclyVisible } from '@/lib/roleStatus'
+import { findRoleById, loadApplicationsForRole, loadOffers } from '@/lib/data'
+import { isTerminal, orderedStages } from '@/lib/pipeline'
+import { availableActions, isPubliclyVisible } from '@/lib/roleStatus'
 import { Kanban } from '@/components/kanban/Kanban'
 import { formatDate } from '@/lib/format'
+import { requireRoles } from '@/lib/guards'
+import { RoleStatusPill } from '@/components/RoleStatusPill'
+import { RoleStatusActions } from './RoleStatusActions'
 
-export default function RoleDetailPage({ params }: { params: { id: string } }) {
+export default async function RoleDetailPage({ params }: { params: { id: string } }) {
+  const session = await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
   const role = findRoleById(params.id)
   if (!role) notFound()
   const applications = loadApplicationsForRole(role.id)
   const stages = orderedStages(role)
   const careersVisible = isPubliclyVisible(role)
+  const canManageStatus = session.role === 'Admin' || session.role === 'HR'
+  const lifecycleActions = canManageStatus ? availableActions(role) : []
+
+  const activeCandidates = applications.filter((a) => !isTerminal(a.currentStage)).length
+  const activeOffers = loadOffers().filter(
+    (o) => o.roleId === role.id && !['Accepted', 'Declined', 'Withdrawn'].includes(o.status),
+  ).length
 
   return (
     <div className="flex min-h-[calc(100vh-4rem)] flex-col">
@@ -25,11 +36,23 @@ export default function RoleDetailPage({ params }: { params: { id: string } }) {
               <span>/</span>
               <span>{role.title}</span>
             </div>
-            <h1 className="mt-1 font-display text-xl text-ink">{role.title}</h1>
+            <div className="mt-1 flex flex-wrap items-center gap-2">
+              <h1 className="font-display text-xl text-ink">{role.title}</h1>
+              <RoleStatusPill status={role.status} />
+            </div>
             <p className="mt-1 text-sm text-ink-2">
               {role.department} · {role.location} · {role.employmentType} · Created{' '}
-              {formatDate(role.createdAt)} · Status: {role.status}
+              {formatDate(role.createdAt)}
             </p>
+            {role.status === 'Paused' && role.pauseReason && (
+              <p className="mt-1 text-xs text-ink-3">Paused: {role.pauseReason}</p>
+            )}
+            {role.status === 'Closed' && role.closeOutcome && (
+              <p className="mt-1 text-xs text-ink-3">
+                Closed: {role.closeOutcome}
+                {role.closeNotes ? ` · ${role.closeNotes}` : ''}
+              </p>
+            )}
           </div>
           <div className="flex flex-wrap gap-2">
             {careersVisible && (
@@ -56,6 +79,16 @@ export default function RoleDetailPage({ params }: { params: { id: string } }) {
             </Link>
           </div>
         </div>
+        {lifecycleActions.length > 0 && (
+          <div className="mt-3">
+            <RoleStatusActions
+              roleId={role.id}
+              actions={lifecycleActions}
+              activeCandidates={activeCandidates}
+              activeOffers={activeOffers}
+            />
+          </div>
+        )}
       </div>
 
       <Kanban role={role} applications={applications} stages={stages} />

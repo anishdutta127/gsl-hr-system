@@ -3,6 +3,7 @@ import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
 import { loadApplications, findRoleById } from '@/lib/data'
 import { canTransition } from '@/lib/pipeline'
+import { isPipelineReadOnly } from '@/lib/roleStatus'
 
 export const runtime = 'nodejs'
 
@@ -36,6 +37,15 @@ export async function POST(
   const role = findRoleById(application.roleId)
   if (!role) {
     return NextResponse.json({ message: 'Role not found for this application.' }, { status: 404 })
+  }
+
+  if (isPipelineReadOnly(role)) {
+    return NextResponse.json(
+      {
+        message: `Pipeline is read-only because the role is ${role.status}. Reopen the role to move candidates again.`,
+      },
+      { status: 400 },
+    )
   }
 
   const { valid, reason } = canTransition(role, application.currentStage, targetStage)

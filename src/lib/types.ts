@@ -112,7 +112,13 @@ export interface Role {
   hodRound2UserId?: string
   location: 'Mumbai' | 'Delhi' | 'Bengaluru' | 'Remote' | 'Hybrid' | string
   employmentType: 'Full-time' | 'Part-time' | 'Contract' | 'Internship'
-  status: 'Open' | 'Closed' | 'Draft'
+  status: 'Draft' | 'Open' | 'Paused' | 'Closed' | 'Archived'
+  /** Free-text reason captured when the role was paused. Null/undef when not paused or not provided. */
+  pauseReason?: string | null
+  /** Outcome captured when the role was closed. */
+  closeOutcome?: 'Position Filled' | 'No Suitable Candidate' | 'Cancelled' | 'Other' | null
+  /** Optional notes alongside closeOutcome (e.g., the chosen candidate's name). */
+  closeNotes?: string | null
   pipelineStages: Stage[]
   rubric: RubricCriterion[]
   salaryRange?: {

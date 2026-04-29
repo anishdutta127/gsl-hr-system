@@ -8,6 +8,7 @@ import {
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
 import { findEmailTemplateById } from '@/lib/emailTemplates'
+import { canAcceptNewCandidates } from '@/lib/roleStatus'
 
 export const runtime = 'nodejs'
 
@@ -62,6 +63,12 @@ export async function POST(request: Request) {
   if (action.type === 'add-to-pipeline') {
     const role = findRoleById(action.roleId)
     if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
+    if (!canAcceptNewCandidates(role)) {
+      return NextResponse.json(
+        { message: `Role is ${role.status}; reopen it before adding candidates.` },
+        { status: 400 },
+      )
+    }
 
     const existingApps = loadApplications()
     for (const cid of candidateIds) {
