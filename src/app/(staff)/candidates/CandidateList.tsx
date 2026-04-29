@@ -89,12 +89,23 @@ export function CandidateList({
         return
       }
       const data = (await res.json()) as { applied: number; skipped: number; errors: number }
-      const msg = `Applied to ${data.applied}${data.skipped > 0 ? `, skipped ${data.skipped}` : ''}${data.errors > 0 ? `, errors ${data.errors}` : ''}.`
+      const tail = `${data.skipped > 0 ? `, skipped ${data.skipped}` : ''}${data.errors > 0 ? `, errors ${data.errors}` : ''}`
+      let msg: string
+      const actionType = (action as { type?: string }).type
+      if (actionType === 'log-email') {
+        msg = `Logged email for ${data.applied} candidate${data.applied === 1 ? '' : 's'}. Audit entries created${tail}.`
+      } else if (actionType === 'add-to-pipeline') {
+        msg = `Added ${data.applied} candidate${data.applied === 1 ? '' : 's'} to the pipeline${tail}.`
+      } else if (actionType === 'archive') {
+        msg = `Archived ${data.applied} candidate${data.applied === 1 ? '' : 's'}${tail}.`
+      } else {
+        msg = `Applied to ${data.applied}${tail}.`
+      }
       setSuccess(msg)
       setSelected(new Set())
       closeModal()
       router.refresh()
-      setTimeout(() => setSuccess(null), 3500)
+      setTimeout(() => setSuccess(null), 4000)
     } catch {
       setError("We couldn't reach our server.")
     } finally {
@@ -112,7 +123,11 @@ export function CandidateList({
   return (
     <>
       {success && (
-        <div role="status" className="mb-4 rounded border border-teal bg-teal-light px-3 py-2 text-sm text-teal-dark">
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed right-4 top-4 z-[60] max-w-sm rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink shadow-lg"
+        >
           {success}
         </div>
       )}
