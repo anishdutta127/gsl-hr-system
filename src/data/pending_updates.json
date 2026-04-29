@@ -196,5 +196,37 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
     },
     "retryCount": 0
+  },
+  {
+    "id": "8ff778e0-08b0-48fa-899f-7633138dcaa5",
+    "queuedAt": "2026-04-29T11:22:20.727Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e5121645-5147-4b31-bcf3-cc35de473811",
+      "name": "Shruti Patkie",
+      "email": "sup0107@gmail.com",
+      "phone": "9820362829",
+      "source": "Application",
+      "notes": "The work culture.",
+      "createdAt": "2026-04-29T11:22:20.726Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T11:22:20.726Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shruti Patkie",
+            "email": "sup0107@gmail.com",
+            "source": "Application",
+            "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
