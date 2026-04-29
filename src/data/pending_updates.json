@@ -46,5 +46,47 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
     },
     "retryCount": 0
+  },
+  {
+    "id": "28f3c113-2203-4cde-9fdd-7836e85061b0",
+    "queuedAt": "2026-04-29T10:50:56.342Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "04e1c341-41c4-42e6-9e4e-6a104124ef80",
+      "name": "Ashish Mane",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Bright Champs",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+      "createdAt": "2026-04-29T10:50:56.342Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T10:50:56.342Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ashish Mane",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
