@@ -148,5 +148,29 @@
       "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
     },
     "retryCount": 0
+  },
+  {
+    "id": "b5702292-91a8-4a28-a217-932c9fa52eaf",
+    "queuedAt": "2026-04-29T11:09:34.452Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "309952f2-092f-49af-9fb3-49976d230e76",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0
   }
 ]
