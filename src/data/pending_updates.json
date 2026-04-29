@@ -88,5 +88,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "2074ed59-0657-4498-aa98-1c2ec69077e0",
+    "queuedAt": "2026-04-29T10:59:23.280Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+      "name": "Vishal Mane",
+      "email": "vishalspatil.695@gmail.com",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Content Developer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
+      "createdAt": "2026-04-29T10:59:23.280Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-29T10:59:23.280Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vishal Mane",
+            "email": "vishalspatil.695@gmail.com",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
