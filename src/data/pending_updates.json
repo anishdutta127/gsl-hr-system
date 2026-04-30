@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "03686e55-e998-4a01-a23f-52e58b73a53b",
+    "queuedAt": "2026-04-30T09:12:56.010Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "81f3ee04-75ad-4da0-ae1b-1ce0e15213a9",
+      "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-04-30T09:12:55.991Z",
+      "createdAt": "2026-04-30T09:12:55.991Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-30T09:12:55.991Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Senior Academics Manager pipeline."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
