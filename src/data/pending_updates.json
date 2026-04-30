@@ -28,5 +28,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "d679c751-1897-4ea3-83af-64654b1e471f",
+    "queuedAt": "2026-04-30T06:39:50.251Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "450078a1-00ed-49bf-b936-6e3085b5f149",
+      "name": "Akshay Tawde",
+      "email": "aki.agenious@gmail.com",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "LEAD School - Academic Advisor",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-30.",
+      "createdAt": "2026-04-30T06:39:50.251Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-30T06:39:50.251Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Akshay Tawde",
+            "email": "aki.agenious@gmail.com",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
