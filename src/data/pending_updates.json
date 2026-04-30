@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "fbc2a026-12fe-4222-804a-742b39a08513",
+    "queuedAt": "2026-04-30T13:38:43.857Z",
+    "queuedBy": "anish.d@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "candidate.update",
+      "before": {
+        "name": "26 Shubham Maurya"
+      },
+      "after": {
+        "name": "26 Shubham Maurya (smoke-test-133841)"
+      },
+      "notes": "Edited by anish.d@getsetlearn.info."
+    },
+    "retryCount": 0
+  }
+]
