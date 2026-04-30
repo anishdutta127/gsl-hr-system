@@ -757,5 +757,79 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-04-29T13:00:59.653Z"
+  },
+  {
+    "id": "85a29f7e-8eee-4600-9cbc-d825895347f0",
+    "queuedAt": "2026-04-30T06:38:26.968Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "9056ef85-77cb-4d82-8cdc-686416ee336e",
+      "candidateId": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-04-30T06:38:26.951Z",
+      "createdAt": "2026-04-30T06:38:26.951Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-30T06:38:26.951Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Senior Academics Manager pipeline."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-30T07:54:22.048Z"
+  },
+  {
+    "id": "d679c751-1897-4ea3-83af-64654b1e471f",
+    "queuedAt": "2026-04-30T06:39:50.251Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "450078a1-00ed-49bf-b936-6e3085b5f149",
+      "name": "Akshay Tawde",
+      "email": "aki.agenious@gmail.com",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "LEAD School - Academic Advisor",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-30.",
+      "createdAt": "2026-04-30T06:39:50.251Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-30T06:39:50.251Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Akshay Tawde",
+            "email": "aki.agenious@gmail.com",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-30T07:54:22.068Z"
   }
 ]

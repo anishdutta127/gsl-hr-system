@@ -6084,5 +6084,39 @@
     "body": "Hi Shruti,\n\nThanks for applying for Pre-Sales Intern at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzQ2MTc0MiwiZXhwaXJlc0F0IjoxNzc3NDYyNjQyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUxMjE2NDUtNTE0Ny00YjMxLWJjZjMtY2MzNWRlNDczODExIiwiYXBwbGljYXRpb25JZCI6ImRiOTQxMDg2LTY0ODEtNDIwOS05OTkwLWNkYWQwZGNkNGI0YyIsIm5vbmNlIjoiZDE4NGY3NzQtYjY3ZS00MDQ1LWJiNGUtZjcyZTcyNDQwZjdmIn19.UnYolQxkrDrCpzDHxIhybTieEmy0mhAqsbh7gx4NFVU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
     "context": "welcome magic link for candidate e5121645-5147-4b31-bcf3-cc35de473811",
     "createdAt": "2026-04-29T11:22:22.508Z"
+  },
+  {
+    "id": "450078a1-00ed-49bf-b936-6e3085b5f149",
+    "name": "Akshay Tawde",
+    "email": "aki.agenious@gmail.com",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "LEAD School - Academic Advisor",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-30.",
+    "createdAt": "2026-04-30T06:39:50.251Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-04-30T06:39:50.251Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Akshay Tawde",
+          "email": "aki.agenious@gmail.com",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
