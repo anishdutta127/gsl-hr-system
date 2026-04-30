@@ -4,7 +4,7 @@
     "email": "anish.d@getsetlearn.info",
     "name": "Anish Dutta",
     "role": "Admin",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -47,6 +47,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "anish.d@getsetlearn.info",
+          "name": "Anish Dutta",
+          "role": "Admin",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -64,7 +76,7 @@
     "email": "Hiring@getsetlearn.info",
     "name": "Shruti",
     "role": "HR",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -107,6 +119,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "Hiring@getsetlearn.info",
+          "name": "Shruti",
+          "role": "HR",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -124,7 +148,7 @@
     "email": "hr@getsetlearn.info",
     "name": "Riddhi",
     "role": "HR",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -167,6 +191,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "hr@getsetlearn.info",
+          "name": "Riddhi",
+          "role": "HR",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -184,7 +220,7 @@
     "email": "manali.b@getsetlearn.info",
     "name": "Manali",
     "role": "HOD",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -227,6 +263,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "manali.b@getsetlearn.info",
+          "name": "Manali",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -244,7 +292,7 @@
     "email": "ritu.u@getsetlearn.info",
     "name": "Ritu Uppal",
     "role": "HOD",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T09:09:17.418Z",
     "active": true,
     "ownedRoleIds": [],
@@ -263,6 +311,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "ritu.u@getsetlearn.info",
+          "name": "Ritu Uppal",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -280,7 +340,7 @@
     "email": "shashank.s@getsetlearn.info",
     "name": "Shashank",
     "role": "HOD",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -332,6 +392,18 @@
           "active": true
         },
         "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "shashank.s@getsetlearn.info",
+          "name": "Shashank",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
       }
     ]
   },
@@ -340,7 +412,7 @@
     "email": "shubhra.r@getsetlearn.info",
     "name": "Shubhra Rishi",
     "role": "HOD",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T09:09:17.418Z",
     "active": true,
     "ownedRoleIds": [],
@@ -368,6 +440,18 @@
           "active": true
         },
         "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "shubhra.r@getsetlearn.info",
+          "name": "Shubhra Rishi",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
       }
     ]
   },
@@ -376,7 +460,7 @@
     "email": "vishwanath.g@getsetlearn.info",
     "name": "Vishwanath",
     "role": "HOD",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -419,6 +503,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "vishwanath.g@getsetlearn.info",
+          "name": "Vishwanath",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
@@ -432,11 +528,59 @@
     ]
   },
   {
+    "id": "12ac1b75-edda-4a02-9a16-f8b8b52bcb95",
+    "email": "sumit.m@getsetlearn.info",
+    "name": "Sumit",
+    "role": "HOD",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
+    "createdAt": "2026-04-30T13:29:00.619Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "sumit.m@getsetlearn.info",
+          "name": "Sumit",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Seeded with starter password."
+      }
+    ]
+  },
+  {
+    "id": "30eca282-697e-438a-8693-ed88e38c939d",
+    "email": "pratik.d@getsetlearn.info",
+    "name": "Pratik",
+    "role": "HOD",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
+    "createdAt": "2026-04-30T13:29:00.619Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
+        "user": "seed-script",
+        "action": "user.create",
+        "after": {
+          "email": "pratik.d@getsetlearn.info",
+          "name": "Pratik",
+          "role": "HOD",
+          "active": true
+        },
+        "notes": "Seeded with starter password."
+      }
+    ]
+  },
+  {
     "id": "75e5bbcc-ad5d-4863-8f74-faba55657fc2",
     "email": "ameet.z@getsetlearn.info",
     "name": "Ameet",
     "role": "Admin",
-    "bcryptHash": "$2b$12$3TXF/k/wXELIegwjEjiuAObtUe/RuLgtJSh4NK/FZ7ryAEO11iuCq",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
     "createdAt": "2026-04-24T06:52:33.725Z",
     "active": true,
     "ownedRoleIds": [],
@@ -479,6 +623,18 @@
       },
       {
         "timestamp": "2026-04-24T09:36:06.228Z",
+        "user": "seed-script",
+        "action": "user.update",
+        "after": {
+          "email": "ameet.z@getsetlearn.info",
+          "name": "Ameet",
+          "role": "Admin",
+          "active": true
+        },
+        "notes": "Re-seeded by seed_users.mjs — password reset to starter."
+      },
+      {
+        "timestamp": "2026-04-30T13:29:00.619Z",
         "user": "seed-script",
         "action": "user.update",
         "after": {
