@@ -29,7 +29,15 @@ const nextConfig = {
       // Resumes live outside public/ so they can't be fetched directly;
       // /api/resumes/[id] streams them after auth check. Total size today
       // is ~40MB, well inside Vercel's 250MB compressed function limit.
-      '/api/resumes/[candidateId]': ['./onedrive-data/seed/resumes/**/*'],
+      // Two roots: seed/ holds the one-time bulk import (read from the
+      // OneDrive symlink locally; bundled by trace in prod). uploads/ is
+      // a real git tree where live uploads land — onedrive-data is a
+      // symlink in the repo and rejects sub-path writes from the GitHub
+      // Contents API with 409.
+      '/api/resumes/[candidateId]': [
+        './onedrive-data/seed/resumes/**/*',
+        './data/resumes/uploads/**/*',
+      ],
     },
   },
 }

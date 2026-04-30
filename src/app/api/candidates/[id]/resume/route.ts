@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server'
 import { findCandidateById } from '@/lib/data'
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
-import { putBinaryFile } from '@/lib/queue/githubQueue'
+import { putBinaryFile, QueueUpstreamError } from '@/lib/queue/githubQueue'
+import { buildResumeRepoPath } from '@/lib/resumePath'
 
 export const runtime = 'nodejs'
 
@@ -38,14 +39,24 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return NextResponse.json({ message: 'File exceeds 10 MB limit.' }, { status: 413 })
   }
 
+  // Reject path-traversal characters in the upload filename. The filename is
+  // never used for the on-disk path (we generate that from candidate ID), but
+  // we strip-test as defence in depth.
+  if (file.name.includes('..') || file.name.includes('/') || file.name.includes('\\')) {
+    return NextResponse.json({ message: 'Filename contains illegal characters.' }, { status: 400 })
+  }
+
   const ext = path.extname(file.name).toLowerCase()
   if (!ALLOWED_EXTS.has(ext)) {
     return NextResponse.json({ message: 'Only .pdf or .docx allowed.' }, { status: 400 })
   }
 
-  // Path: onedrive-data/seed/resumes/uploaded/{candidateId}{ext}
-  // Predictable path means re-upload overwrites cleanly via the same sha+PUT.
-  const repoPath = `onedrive-data/seed/resumes/uploaded/${candidate.id}${ext}`
+  // Year/month subfoldering avoids the GitHub "too many files in one folder"
+  // performance ceiling at scale. Path lives under data/ (a real tree) — NOT
+  // under the onedrive-data symlink, which would 409 on every Contents API
+  // write because GitHub sees the first segment as a blob (the symlink) not
+  // a tree. See docs/RUNBOOK.md "Resume upload 409" for the full root cause.
+  const repoPath = buildResumeRepoPath(candidate.id, ext)
   const bytes = Buffer.from(await file.arrayBuffer())
 
   try {
@@ -67,6 +78,18 @@ export async function POST(request: Request, { params }: { params: { id: string 
       },
     })
   } catch (err) {
+    if (err instanceof QueueUpstreamError && err.status === 409) {
+      // Don't leak the raw GitHub API body to staff. Audit log via console
+      // captures the underlying error so we can debug.
+      console.error('[resume-upload] 409 path conflict on', repoPath, err.body)
+      return NextResponse.json(
+        {
+          message:
+            'Upload could not be saved due to a path conflict. Please contact support — this is a known fix-on-our-end issue.',
+        },
+        { status: 503 },
+      )
+    }
     const message = err instanceof Error ? err.message : 'Upload failed.'
     return NextResponse.json({ message }, { status: 503 })
   }

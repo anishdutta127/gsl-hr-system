@@ -3,10 +3,14 @@ import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { findCandidateById } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
+import { isAllowedResumePath, RESUME_SEED_ROOT, RESUME_UPLOAD_ROOT } from '@/lib/resumePath'
 
 export const runtime = 'nodejs'
 
-const ALLOWED_ROOT = path.resolve(process.cwd(), 'onedrive-data', 'seed', 'resumes')
+const ALLOWED_ROOTS = [
+  path.resolve(process.cwd(), ...RESUME_SEED_ROOT.split('/')),
+  path.resolve(process.cwd(), ...RESUME_UPLOAD_ROOT.split('/')),
+]
 
 export async function GET(
   _request: Request,
@@ -22,12 +26,19 @@ export async function GET(
     return NextResponse.json({ message: 'No resume on file.' }, { status: 404 })
   }
 
-  // Defence-in-depth: resolve and confirm the file lives under the resumes
-  // dir. Even if a candidate record's resumeFilePath were corrupted to
-  // ../../etc/passwd, the resolve+startsWith check rejects the read.
+  // Defence-in-depth: check the stored repo path is under one of the two
+  // sanctioned roots BEFORE filesystem resolution. Then resolve and confirm
+  // the absolute path stays within the corresponding root, defeating any
+  // ../../ attempt that survived JSON parsing.
   const candidatePath = candidate.resumeFilePath
+  if (!isAllowedResumePath(candidatePath)) {
+    return NextResponse.json({ message: 'Resume path is outside the resumes root.' }, { status: 400 })
+  }
   const absolute = path.resolve(process.cwd(), candidatePath)
-  if (!absolute.startsWith(ALLOWED_ROOT + path.sep) && absolute !== ALLOWED_ROOT) {
+  const insideAnyRoot = ALLOWED_ROOTS.some(
+    (root) => absolute === root || absolute.startsWith(root + path.sep),
+  )
+  if (!insideAnyRoot) {
     return NextResponse.json({ message: 'Resume path is outside the resumes root.' }, { status: 400 })
   }
   if (!fs.existsSync(absolute)) {
