@@ -7,6 +7,7 @@ import { Kanban } from '@/components/kanban/Kanban'
 import { formatDate } from '@/lib/format'
 import { requireRoles } from '@/lib/guards'
 import { RoleStatusPanel } from './RoleStatusPanel'
+import { RoleDescriptionEdit } from './RoleDescriptionEdit'
 
 export default async function RoleDetailPage({ params }: { params: { id: string } }) {
   const session = await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
@@ -56,6 +57,9 @@ export default async function RoleDetailPage({ params }: { params: { id: string 
               >
                 View on careers page
               </Link>
+            )}
+            {canManageStatus && (
+              <RoleDescriptionEdit roleId={role.id} initialDescription={role.description ?? ''} />
             )}
             <Link
               href={`/roles/${role.id}/match`}

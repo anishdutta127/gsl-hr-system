@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { findRoleById } from '@/lib/data'
 import { formatRs } from '@/lib/format'
 import { isPubliclyVisible } from '@/lib/roleStatus'
+import { plainTextToHtml, sanitiseRoleHtml } from '@/lib/sanitiseHtml'
 import { RoleApplyForm } from './RoleApplyForm'
 
 export const dynamic = 'force-dynamic'
@@ -16,8 +17,10 @@ export async function generateMetadata({
   const role = findRoleById(params.roleId)
   if (!role) return { title: 'Role · GSL Careers' }
   const title = `${role.title} · GSL Careers`
+  // Strip HTML tags for the meta description so OG previews are plain text.
+  const plainDescription = (role.description ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()
   const description =
-    role.description?.slice(0, 200) ?? `Open role at GSL: ${role.title}, ${role.department}.`
+    plainDescription.slice(0, 200) || `Open role at GSL: ${role.title}, ${role.department}.`
   return {
     title,
     description,
@@ -72,7 +75,10 @@ export default function CareersRolePage({ params }: { params: { roleId: string }
       </header>
 
       {role.description && (
-        <p className="mb-8 text-base text-ink">{role.description}</p>
+        <div
+          className="prose prose-sm mb-8 max-w-none text-ink prose-headings:font-display prose-headings:text-ink prose-h2:text-xl prose-h3:text-lg prose-strong:text-ink prose-a:text-navy prose-a:underline prose-ul:list-disc prose-ol:list-decimal prose-li:text-ink"
+          dangerouslySetInnerHTML={{ __html: sanitiseRoleHtml(plainTextToHtml(role.description)) }}
+        />
       )}
 
       <div className="grid gap-10 lg:grid-cols-[1fr_420px]">

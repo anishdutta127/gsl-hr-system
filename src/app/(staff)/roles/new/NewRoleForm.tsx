@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
+import { RichTextEditor } from '@/components/RichTextEditor'
 
 const DEPARTMENTS = ['Academics', 'Premium Sales', 'Operations', 'STEM', 'Marketing', 'Instructional Design', 'Other']
 const LOCATIONS = ['Mumbai', 'Delhi', 'Bengaluru', 'Remote', 'Hybrid']
@@ -109,16 +110,16 @@ export function NewRoleForm() {
         </select>
       </Field>
 
-      <Field label="Description" htmlFor="description">
-        <textarea
-          id="description"
+      <div role="group" aria-labelledby="role-description-label">
+        <span id="role-description-label" className="mb-1 block text-sm font-medium text-ink">
+          Description
+        </span>
+        <RichTextEditor
+          ariaLabel="Role description"
           value={form.description}
-          onChange={(e) => setForm({ ...form, description: e.target.value })}
-          rows={4}
-          placeholder="What the person will do, what success looks like in the first 90 days."
-          className="block w-full rounded border border-line-strong bg-card px-3 py-2 text-base text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+          onChange={(html) => setForm({ ...form, description: html })}
         />
-      </Field>
+      </div>
 
       <div className="flex items-center gap-3 pt-2">
         <button
