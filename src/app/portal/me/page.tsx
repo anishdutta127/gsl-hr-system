@@ -10,6 +10,7 @@ import { loadCompany } from '@/lib/company'
 import { nextCandidateAction, stagePlainEnglish } from '@/lib/portalCopy'
 import { isTerminal } from '@/lib/pipeline'
 import { formatDate, formatRelative } from '@/lib/format'
+import { PortalResumeUpload } from './PortalResumeUpload'
 
 export const dynamic = 'force-dynamic'
 
@@ -35,6 +36,10 @@ export default async function PortalMePage() {
           {candidate.name} · {candidate.email}
         </p>
       </header>
+
+      <div className="mb-8">
+        <PortalResumeUpload hasExistingResume={Boolean(candidate.resumeFilePath)} />
+      </div>
 
       {apps.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
