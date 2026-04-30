@@ -936,5 +936,59 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-04-30T09:56:06.868Z"
+  },
+  {
+    "id": "a708ba86-3322-4cfd-9d72-2d1363193b91",
+    "queuedAt": "2026-04-30T10:18:51.045Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "title": "Sales Executive",
+      "department": "Other",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "Job Responsibilities:\n\nAcquire and convert schools into long-term partners for Robotics, AI & STEM programs\nOwn the full sales cycle — lead generation to closure\nDeliver demos and presentations to school decision-makers\nManage relationships with existing partner schools to drive retention and cross-sell\nGenerate leads via field visits, referrals, and events\nCoordinate smooth program onboarding with academic and ops teams\nMaintain daily visit logs and weekly sales reports",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-04-30T10:18:51.044Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-04-30T10:18:51.044Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Sales Executive",
+            "department": "Other",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-04-30T11:23:05.718Z"
   }
 ]
