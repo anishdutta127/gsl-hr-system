@@ -14,6 +14,7 @@ import { EMAIL_TEMPLATES } from '@/lib/emailTemplates'
 import { ReplyWidget } from './ReplyWidget'
 import { UnarchiveButton } from './UnarchiveButton'
 import { ResumeUpload } from './ResumeUpload'
+import { CandidateEdit } from './CandidateEdit'
 import { StagePill } from '@/components/StagePill'
 
 export const dynamic = 'force-dynamic'
@@ -102,13 +103,33 @@ export default async function CandidateDetailPage({
             {candidate.email || 'no email on file'}
             {candidate.phone ? ` · ${candidate.phone}` : ''} · Source: {candidate.source}
           </p>
+          {(candidate.tags?.programmes?.length ?? 0) > 0 && (
+            <p className="mt-1 text-xs text-ink-2">
+              Programmes: {(candidate.tags?.programmes ?? []).join(', ')}
+            </p>
+          )}
           <p className="mt-1 text-xs text-ink-3">
             Added {formatDate(candidate.createdAt)} by {candidate.createdBy}
           </p>
         </div>
-        {candidate.status === 'Archived' && (session.role === 'Admin' || session.role === 'HR') && (
-          <UnarchiveButton candidateId={candidate.id} />
-        )}
+        <div className="flex flex-shrink-0 items-center gap-2">
+          {(session.role === 'Admin' || session.role === 'HR') && (
+            <CandidateEdit
+              candidateId={candidate.id}
+              initial={{
+                name: candidate.name,
+                email: candidate.email,
+                phone: candidate.phone ?? '',
+                source: candidate.source,
+                notes: candidate.notes ?? '',
+                programmes: candidate.tags?.programmes ?? [],
+              }}
+            />
+          )}
+          {candidate.status === 'Archived' && (session.role === 'Admin' || session.role === 'HR') && (
+            <UnarchiveButton candidateId={candidate.id} />
+          )}
+        </div>
       </div>
 
       <section className="mb-6 rounded-lg border border-line bg-card p-4">

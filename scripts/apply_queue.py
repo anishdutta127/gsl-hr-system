@@ -202,6 +202,22 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
+    # Generic candidate field edits from the candidate detail page editor.
+    # Whitelist of editable fields; programmes lives under tags.programmes.
+    if op == "candidate.update":
+        if isinstance(after, dict):
+            for key in ("name", "email", "phone", "source", "notes"):
+                if key in after:
+                    entity[key] = after[key]
+            if "programmes" in after:
+                tags = entity.setdefault("tags", {})
+                if not isinstance(tags, dict):
+                    tags = {}
+                    entity["tags"] = tags
+                tags["programmes"] = after["programmes"]
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
     # Audit-only operations: no field change, just append an audit entry.
     # email.sent: HR logged that they sent an external email via Outlook/Gmail.
     # letter.generated: HR generated an offer/relieving/no-dues letter document.
@@ -210,10 +226,20 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         return
 
     # Role lifecycle transitions: publish/pause/resume/close/reopen/archive/discard.
-    # All write the new status + lifecycle fields and append an audit entry.
+    # role.edit edits the JD body (description, plus eventually responsibilities/etc).
+    # All write the relevant fields and append an audit entry.
     if isinstance(op, str) and op.startswith("role."):
         if isinstance(after, dict):
-            for key in ("status", "pauseReason", "closeOutcome", "closeNotes"):
+            for key in (
+                "status",
+                "pauseReason",
+                "closeOutcome",
+                "closeNotes",
+                "description",
+                "responsibilities",
+                "mustHaves",
+                "niceToHaves",
+            ):
                 if key in after:
                     entity[key] = after[key]
         append_audit(entity, queued_by, op, before, after, notes)
