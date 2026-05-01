@@ -6176,5 +6176,53 @@
         "notes": "Self-applied via /careers"
       }
     ]
+  },
+  {
+    "id": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+    "name": "Muzammil Khan",
+    "email": "muzammilkhan4911@gmail.com",
+    "phone": "8080580031",
+    "source": "Application",
+    "notes": "",
+    "createdAt": "2026-05-01T12:33:40.177Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-01T12:33:40.177Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Muzammil Khan",
+          "email": "muzammilkhan4911@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+        },
+        "notes": "Self-applied via /careers"
+      }
+    ]
+  },
+  {
+    "id": "97ac7b63-cbbb-46a6-8dd5-da191f33be52",
+    "name": "AKSHAY SUNIL TAWDE",
+    "email": "aki.agenious@gmail.com",
+    "phone": "90041-09502",
+    "source": "Application",
+    "notes": "New venture and new opportunities to explore.",
+    "createdAt": "2026-05-01T13:12:05.249Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-01T13:12:05.249Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "AKSHAY SUNIL TAWDE",
+          "email": "aki.agenious@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+        },
+        "notes": "Self-applied via /careers"
+      }
+    ]
   }
 ]
