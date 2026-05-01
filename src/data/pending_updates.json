@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "d2599a96-200f-4580-9cec-19a704300b23",
+    "queuedAt": "2026-05-01T12:33:40.180Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+      "name": "Muzammil Khan",
+      "email": "muzammilkhan4911@gmail.com",
+      "phone": "8080580031",
+      "source": "Application",
+      "notes": "",
+      "createdAt": "2026-05-01T12:33:40.177Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-01T12:33:40.177Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Muzammil Khan",
+            "email": "muzammilkhan4911@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
