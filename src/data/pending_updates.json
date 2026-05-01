@@ -75,5 +75,37 @@
       "createdAt": "2026-05-01T12:33:41.648Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "5e1beed6-8e2a-4439-8365-04e0d775c499",
+    "queuedAt": "2026-05-01T13:12:05.252Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "97ac7b63-cbbb-46a6-8dd5-da191f33be52",
+      "name": "AKSHAY SUNIL TAWDE",
+      "email": "aki.agenious@gmail.com",
+      "phone": "90041-09502",
+      "source": "Application",
+      "notes": "New venture and new opportunities to explore.",
+      "createdAt": "2026-05-01T13:12:05.249Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-01T13:12:05.249Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "AKSHAY SUNIL TAWDE",
+            "email": "aki.agenious@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
