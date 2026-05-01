@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "9cd5e210-d89d-46a7-bce9-a73d0b5f9601",
+    "queuedAt": "2026-05-01T10:40:42.053Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+      "name": "Sourabh Naresh Pithode",
+      "email": "spithode008@gmail.com",
+      "phone": "8888641148",
+      "source": "Application",
+      "notes": "As I have 9+ years of experience and that to 6+ dedicated to this field , so I think I am right feet to this role",
+      "createdAt": "2026-05-01T10:40:42.051Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-01T10:40:42.051Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Sourabh Naresh Pithode",
+            "email": "spithode008@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
