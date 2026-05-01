@@ -990,5 +990,85 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-04-30T11:23:05.718Z"
+  },
+  {
+    "id": "9cd5e210-d89d-46a7-bce9-a73d0b5f9601",
+    "queuedAt": "2026-05-01T10:40:42.053Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+      "name": "Sourabh Naresh Pithode",
+      "email": "spithode008@gmail.com",
+      "phone": "8888641148",
+      "source": "Application",
+      "notes": "As I have 9+ years of experience and that to 6+ dedicated to this field , so I think I am right feet to this role",
+      "createdAt": "2026-05-01T10:40:42.051Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-01T10:40:42.051Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Sourabh Naresh Pithode",
+            "email": "spithode008@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
+          },
+          "notes": "Self-applied via /careers"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-01T11:01:34.721Z"
+  },
+  {
+    "id": "0b38814b-3761-4827-8725-5c531dc2d526",
+    "queuedAt": "2026-05-01T10:40:42.821Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "b0902fcd-78e6-457f-9bd7-18881e7ede9d",
+      "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-01T10:40:42.051Z",
+      "createdAt": "2026-05-01T10:40:42.051Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-01T10:40:42.051Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-01T11:01:34.721Z"
+  },
+  {
+    "id": "ba1b0092-53ba-4a81-904e-dffd6924e815",
+    "queuedAt": "2026-05-01T10:40:43.519Z",
+    "queuedBy": "system",
+    "entity": "careers_application",
+    "operation": "create",
+    "payload": {
+      "_kind": "outbound-mail",
+      "to": "spithode008@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Sourabh,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzYzMjA0MywiZXhwaXJlc0F0IjoxNzc3NjMyOTQzLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTc0ZTY5ZDYtYzIzZi00ZWNiLThiMDYtMDVkZWUyMzY2NTkwIiwiYXBwbGljYXRpb25JZCI6ImIwOTAyZmNkLTc4ZTYtNDU3Zi05YmQ3LTE4ODgxZTdlZGU5ZCIsIm5vbmNlIjoiNWU5MWI5OGQtYWYwNy00NzMxLWJlN2YtNjUyYjU4NjIzY2M4In19.eLszzXN03CvZvx0drwr-FnbxMmK7YhXvM1a4vABPXAQ\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate e74e69d6-c23f-4ecb-8b06-05dee2366590",
+      "createdAt": "2026-05-01T10:40:43.519Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-01T11:01:34.738Z"
   }
 ]

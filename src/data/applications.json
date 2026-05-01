@@ -85,5 +85,26 @@
         "notes": "Bulk-added to Senior Academics Manager pipeline."
       }
     ]
+  },
+  {
+    "id": "b0902fcd-78e6-457f-9bd7-18881e7ede9d",
+    "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-01T10:40:42.051Z",
+    "createdAt": "2026-05-01T10:40:42.051Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-01T10:40:42.051Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]
