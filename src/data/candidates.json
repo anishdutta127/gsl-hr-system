@@ -6021,7 +6021,7 @@
   },
   {
     "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
-    "name": "Vishal Mane",
+    "name": "Vishal Patil",
     "email": "vishalspatil.695@gmail.com",
     "phone": "",
     "source": "HRTeam",
@@ -6050,8 +6050,45 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-04T05:53:21.654Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/00a56c80-3b7d-40eb-a734-3bd39a94f71e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Vishal_Patil_Resume (1).pdf, 120 KB)."
+      },
+      {
+        "timestamp": "2026-05-04T05:53:21.672Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/00a56c80-3b7d-40eb-a734-3bd39a94f71e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Vishal_Patil_Resume.pdf, 120 KB)."
+      },
+      {
+        "timestamp": "2026-05-04T05:53:21.690Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "name": "Vishal Mane"
+        },
+        "after": {
+          "name": "Vishal Patil"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/00a56c80-3b7d-40eb-a734-3bd39a94f71e.pdf"
   },
   {
     "id": "e5121645-5147-4b31-bcf3-cc35de473811",
