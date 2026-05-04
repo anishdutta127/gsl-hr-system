@@ -32,8 +32,8 @@ export default async function UsersPage() {
         </Link>
       </div>
 
-      <div className="overflow-hidden rounded-lg border border-line bg-card">
-        <table className="w-full text-sm">
+      <div className="overflow-x-auto rounded-lg border border-line bg-card">
+        <table className="w-full min-w-[720px] text-sm">
           <thead className="bg-surface text-left text-xs uppercase tracking-wider text-ink-3">
             <tr>
               <th className="px-5 py-3 font-medium">Name</th>
