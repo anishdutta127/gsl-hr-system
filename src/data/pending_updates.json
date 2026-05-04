@@ -36,5 +36,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Vishal_Patil_Resume.pdf, 120 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "3d2a9e35-30f1-42ab-b806-45b903d73755",
+    "queuedAt": "2026-05-04T05:30:11.214Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+      "operation": "candidate.update",
+      "before": {
+        "name": "Vishal Mane"
+      },
+      "after": {
+        "name": "Vishal Patil"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
