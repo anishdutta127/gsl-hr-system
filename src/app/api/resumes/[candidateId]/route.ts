@@ -3,14 +3,9 @@ import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { findCandidateById } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
-import { isAllowedResumePath, RESUME_SEED_ROOT, RESUME_UPLOAD_ROOT } from '@/lib/resumePath'
+import { assertInsideResumeRoot } from '@/lib/resumePath'
 
 export const runtime = 'nodejs'
-
-const ALLOWED_ROOTS = [
-  path.resolve(process.cwd(), ...RESUME_SEED_ROOT.split('/')),
-  path.resolve(process.cwd(), ...RESUME_UPLOAD_ROOT.split('/')),
-]
 
 export async function GET(
   _request: Request,
@@ -26,25 +21,12 @@ export async function GET(
     return NextResponse.json({ message: 'No resume on file.' }, { status: 404 })
   }
 
-  // Defence-in-depth: check the stored repo path is under one of the two
-  // sanctioned roots BEFORE filesystem resolution. Then resolve and confirm
-  // the absolute path stays within the corresponding root, defeating any
-  // ../../ attempt that survived JSON parsing.
-  const candidatePath = candidate.resumeFilePath
-  if (!isAllowedResumePath(candidatePath)) {
-    return NextResponse.json({ message: 'Resume path is outside the resumes root.' }, { status: 400 })
-  }
-  const absolute = path.resolve(process.cwd(), candidatePath)
-  const insideAnyRoot = ALLOWED_ROOTS.some(
-    (root) => absolute === root || absolute.startsWith(root + path.sep),
-  )
-  if (!insideAnyRoot) {
-    return NextResponse.json({ message: 'Resume path is outside the resumes root.' }, { status: 400 })
-  }
-  if (!fs.existsSync(absolute)) {
-    return NextResponse.json({ message: 'Resume file is missing on disk.' }, { status: 404 })
+  const check = assertInsideResumeRoot(candidate.resumeFilePath)
+  if (!check.ok) {
+    return NextResponse.json({ message: check.message }, { status: check.status })
   }
 
+  const absolute = check.absolute
   const filename = path.basename(absolute)
   const ext = path.extname(absolute).toLowerCase()
   const buffer = fs.readFileSync(absolute)

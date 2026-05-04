@@ -1,31 +1,120 @@
 /*
- * Resume storage path builder.
+ * Resume storage path helpers.
  *
- * Live uploads land under data/resumes/uploads/[YYYY]/[MM]/[uuid].pdf.
- * The `data/` root is a real git tree, so the GitHub Contents API can PUT
- * files into it. The `onedrive-data/` symlink (used for the seed import)
- * is mode 120000 in the repo and rejects any sub-path PUT with 409.
+ * Two roots only — the reader does not know about subdirectories:
+ *   - data/resumes/             (live uploads, public applications, future imports)
+ *   - onedrive-data/seed/resumes/ (immutable legacy 156-resume seed corpus)
  *
- * Year/month subfoldering caps per-directory file count well below the
- * GitHub Contents API listing soft-limit (~1000) at our hiring volumes.
+ * Subdirectory structure under data/resumes/ is informational. Adding a new
+ * subdirectory (e.g. data/resumes/imports/...) needs ZERO reader changes —
+ * the reader validates that the resolved real path stays under one of the
+ * two roots, nothing else. See assertInsideResumeRoot below.
+ *
+ * Adding a brand-new top-level root requires:
+ *   (a) appending to RESUME_ROOTS
+ *   (b) updating outputFileTracingIncludes in next.config.mjs
  */
 
-const UPLOAD_ROOT = 'data/resumes/uploads'
-const SEED_ROOT = 'onedrive-data/seed/resumes'
+import fs from 'node:fs'
+import path from 'node:path'
 
-export function buildResumeRepoPath(candidateId: string, extWithDot: string): string {
+const UPLOAD_SUBPATH = 'data/resumes/uploads'
+const APPLICATION_SUBPATH = 'data/resumes/applications'
+
+// Repo-relative roots. Order is informational; both are equally trusted.
+export const RESUME_ROOTS = ['data/resumes', 'onedrive-data/seed/resumes'] as const
+
+function yyyymm(): { yyyy: string; mm: string } {
   const now = new Date()
-  const yyyy = now.getUTCFullYear().toString()
-  const mm = String(now.getUTCMonth() + 1).padStart(2, '0')
-  return `${UPLOAD_ROOT}/${yyyy}/${mm}/${candidateId}${extWithDot.toLowerCase()}`
+  return {
+    yyyy: now.getUTCFullYear().toString(),
+    mm: String(now.getUTCMonth() + 1).padStart(2, '0'),
+  }
 }
 
-export function isAllowedResumePath(p: string): boolean {
-  // Normalised: forward slashes only; no `..` segments; under one of the two roots.
-  if (p.includes('..')) return false
-  const normalised = p.replace(/\\/g, '/')
-  return normalised.startsWith(`${UPLOAD_ROOT}/`) || normalised.startsWith(`${SEED_ROOT}/`)
+/** Path for staff-side or candidate-portal self-uploads. */
+export function buildResumeRepoPath(candidateId: string, extWithDot: string): string {
+  const { yyyy, mm } = yyyymm()
+  return `${UPLOAD_SUBPATH}/${yyyy}/${mm}/${candidateId}${extWithDot.toLowerCase()}`
 }
 
-export const RESUME_UPLOAD_ROOT = UPLOAD_ROOT
-export const RESUME_SEED_ROOT = SEED_ROOT
+/** Path for resumes attached to public /careers applications. */
+export function buildApplicationResumePath(candidateId: string, extWithDot: string): string {
+  const { yyyy, mm } = yyyymm()
+  return `${APPLICATION_SUBPATH}/${yyyy}/${mm}/${candidateId}${extWithDot.toLowerCase()}`
+}
+
+export type ResumePathCheck =
+  | { ok: true; absolute: string }
+  | { ok: false; status: 400 | 403 | 404; message: string }
+
+/**
+ * Resolve a candidate.resumeFilePath against the repo root and confirm it
+ * lives inside one of RESUME_ROOTS. Defeats `..` traversal, absolute path
+ * injection, and symlink escape (via fs.realpathSync).
+ *
+ * The seed root is itself a symlink on disk; that's fine — both the input
+ * path and the roots are realpath'd before comparison, so a request that
+ * traverses through the symlink to a file inside the real OneDrive seed
+ * folder is allowed, but a symlink that points OUTSIDE the seed folder is
+ * rejected.
+ */
+export function assertInsideResumeRoot(
+  resumeFilePath: string,
+  cwd: string = process.cwd(),
+): ResumePathCheck {
+  if (!resumeFilePath || resumeFilePath.includes('\0')) {
+    return { ok: false, status: 400, message: 'Resume path is malformed.' }
+  }
+  // Reject `..` segments before resolution. path.resolve would silently
+  // collapse them; we want to fail loudly so a future bug that injects
+  // traversal into a stored path can't slip past.
+  const normalisedSlashes = resumeFilePath.replace(/\\/g, '/')
+  if (normalisedSlashes.split('/').some((seg) => seg === '..')) {
+    return { ok: false, status: 403, message: 'Resume path contains traversal segments.' }
+  }
+  if (path.isAbsolute(resumeFilePath)) {
+    return { ok: false, status: 403, message: 'Resume path must be repo-relative.' }
+  }
+
+  const absolute = path.resolve(cwd, resumeFilePath)
+
+  if (!fs.existsSync(absolute)) {
+    return {
+      ok: false,
+      status: 404,
+      message: 'Resume file not found at expected path. Contact admin.',
+    }
+  }
+
+  let realFile: string
+  try {
+    realFile = fs.realpathSync(absolute)
+  } catch {
+    return {
+      ok: false,
+      status: 404,
+      message: 'Resume file not found at expected path. Contact admin.',
+    }
+  }
+
+  for (const root of RESUME_ROOTS) {
+    const rootAbs = path.resolve(cwd, root)
+    let realRoot: string
+    try {
+      realRoot = fs.realpathSync(rootAbs)
+    } catch {
+      // Root doesn't exist (e.g. seed symlink missing in some envs). Skip.
+      continue
+    }
+    if (realFile === realRoot || realFile.startsWith(realRoot + path.sep)) {
+      return { ok: true, absolute }
+    }
+  }
+
+  return {
+    ok: false,
+    status: 403,
+    message: 'Resume path is outside the resumes root.',
+  }
+}

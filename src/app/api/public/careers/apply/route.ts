@@ -1,17 +1,27 @@
 /*
  * Public candidate application intake. Creates a Candidate + Application,
- * issues the first magic link, and emails it to the candidate.
+ * optionally stores a resume PDF, issues the first magic link, and emails
+ * it to the candidate.
+ *
+ * Multipart/form-data input:
+ *   roleId, name, email, phone, coverNote, website (honeypot), resume (file)
  *
  * Safeguards:
  *   - honeypot field `website` (must be empty)
  *   - IP-keyed rate limit: 5 per hour
  *   - role must exist and be Open
+ *   - resume file optional; if present: PDF only, 5 MB cap
+ *
+ * Resume lands at data/resumes/applications/[YYYY]/[MM]/[candidateId].pdf —
+ * a fresh subtree under the data/resumes root so the reader's traversal
+ * guard accepts it without a config patch. See src/lib/resumePath.ts.
  *
  * When abuse logs cross the threshold, the TODOS entry promotes this to
  * hCaptcha. Until then, friction stays earned-by-threat only.
  */
 
 import crypto from 'node:crypto'
+import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
 import { findRoleById } from '@/lib/data'
@@ -19,10 +29,14 @@ import { mintMagicLink } from '@/lib/candidateAuth'
 import { deliverEmail } from '@/lib/mail'
 import { loadCompany } from '@/lib/company'
 import { rateLimited } from '@/lib/rateLimit'
+import { putBinaryFile, QueueUpstreamError } from '@/lib/queue/githubQueue'
+import { buildApplicationResumePath } from '@/lib/resumePath'
 
 export const runtime = 'nodejs'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+const RESUME_MAX_BYTES = 5 * 1024 * 1024
+const RESUME_ALLOWED_EXTS = new Set(['.pdf'])
 
 function ipOf(request: Request): string {
   const fwd = request.headers.get('x-forwarded-for')
@@ -42,6 +56,11 @@ function portalBaseUrl(request: Request): string {
   return 'https://gsl-hr-system.vercel.app'
 }
 
+function strField(form: FormData, name: string): string {
+  const v = form.get(name)
+  return typeof v === 'string' ? v.trim() : ''
+}
+
 export async function POST(request: Request) {
   const ip = ipOf(request)
   if (rateLimited(`apply:${ip}`, 5, 60 * 60)) {
@@ -51,46 +70,122 @@ export async function POST(request: Request) {
     )
   }
 
-  let body: {
-    roleId?: unknown
-    name?: unknown
-    email?: unknown
-    phone?: unknown
-    coverNote?: unknown
-    website?: unknown
-  }
-  try {
-    body = await request.json()
-  } catch {
-    return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
+  // Accept either multipart/form-data (with optional resume file) or
+  // legacy JSON (no resume). Browsers from the new RoleApplyForm always
+  // send multipart; JSON path retained as a defensive fallback.
+  const contentType = request.headers.get('content-type') ?? ''
+  let roleId: string, name: string, email: string, phone: string, coverNote: string, website: string
+  let resumeFile: File | null = null
+
+  if (contentType.startsWith('multipart/form-data')) {
+    let form: FormData
+    try {
+      form = await request.formData()
+    } catch {
+      return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
+    }
+    roleId = strField(form, 'roleId')
+    name = strField(form, 'name')
+    email = strField(form, 'email')
+    phone = strField(form, 'phone')
+    coverNote = strField(form, 'coverNote')
+    website = strField(form, 'website')
+    const f = form.get('resume')
+    if (f instanceof File && f.size > 0) resumeFile = f
+  } else {
+    let body: Record<string, unknown>
+    try {
+      body = (await request.json()) as Record<string, unknown>
+    } catch {
+      return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
+    }
+    roleId = typeof body.roleId === 'string' ? body.roleId : ''
+    name = typeof body.name === 'string' ? body.name.trim() : ''
+    email = typeof body.email === 'string' ? body.email.trim() : ''
+    phone = typeof body.phone === 'string' ? body.phone.trim() : ''
+    coverNote = typeof body.coverNote === 'string' ? body.coverNote.trim() : ''
+    website = typeof body.website === 'string' ? body.website.trim() : ''
   }
 
   // Honeypot: silently swallow
-  if (typeof body.website === 'string' && body.website.trim().length > 0) {
+  if (website.length > 0) {
     return NextResponse.json({ ok: true })
   }
 
-  const roleId = typeof body.roleId === 'string' ? body.roleId : ''
-  const name = typeof body.name === 'string' ? body.name.trim() : ''
-  const email = typeof body.email === 'string' ? body.email.trim() : ''
-  const phone = typeof body.phone === 'string' ? body.phone.trim() : ''
-  const coverNote = typeof body.coverNote === 'string' ? body.coverNote.trim() : ''
-
   if (!roleId) return NextResponse.json({ message: 'Role missing.' }, { status: 400 })
-  if (!name || name.length > 120) return NextResponse.json({ message: 'Name required (up to 120 characters).' }, { status: 400 })
-  if (!EMAIL_RE.test(email)) return NextResponse.json({ message: 'Valid email required.' }, { status: 400 })
+  if (!name || name.length > 120) {
+    return NextResponse.json({ message: 'Name required (up to 120 characters).' }, { status: 400 })
+  }
+  if (!EMAIL_RE.test(email)) {
+    return NextResponse.json({ message: 'Valid email required.' }, { status: 400 })
+  }
   if (!phone) return NextResponse.json({ message: 'Phone required.' }, { status: 400 })
-  if (coverNote.length > 2000) return NextResponse.json({ message: 'Cover note too long.' }, { status: 400 })
+  if (coverNote.length > 2000) {
+    return NextResponse.json({ message: 'Cover note too long.' }, { status: 400 })
+  }
 
   const role = findRoleById(roleId)
   if (!role || role.status !== 'Open') {
-    return NextResponse.json({ message: 'That role is not accepting applications right now.' }, { status: 400 })
+    return NextResponse.json(
+      { message: 'That role is not accepting applications right now.' },
+      { status: 400 },
+    )
+  }
+
+  if (resumeFile) {
+    if (resumeFile.size > RESUME_MAX_BYTES) {
+      return NextResponse.json(
+        { message: 'Resume file exceeds the 5 MB limit.' },
+        { status: 413 },
+      )
+    }
+    const ext = path.extname(resumeFile.name).toLowerCase()
+    if (!RESUME_ALLOWED_EXTS.has(ext)) {
+      return NextResponse.json(
+        { message: 'Resume must be a PDF.' },
+        { status: 400 },
+      )
+    }
+    if (
+      resumeFile.name.includes('..') ||
+      resumeFile.name.includes('/') ||
+      resumeFile.name.includes('\\')
+    ) {
+      return NextResponse.json(
+        { message: 'Resume filename contains illegal characters.' },
+        { status: 400 },
+      )
+    }
   }
 
   const now = new Date().toISOString()
   const candidateId = crypto.randomUUID()
   const applicationId = crypto.randomUUID()
   const company = loadCompany()
+
+  let resumeRepoPath: string | undefined
+  if (resumeFile) {
+    const ext = path.extname(resumeFile.name).toLowerCase()
+    resumeRepoPath = buildApplicationResumePath(candidateId, ext)
+    const bytes = Buffer.from(await resumeFile.arrayBuffer())
+    try {
+      await putBinaryFile(
+        resumeRepoPath,
+        bytes,
+        `feat(resumes): public application from ${name.slice(0, 40)} (${candidateId.slice(0, 8)})`,
+      )
+    } catch (err) {
+      if (err instanceof QueueUpstreamError && err.status === 409) {
+        console.error('[public-apply-resume] 409 path conflict on', resumeRepoPath, err.body)
+        return NextResponse.json(
+          { message: 'Could not store your resume. Please try again in a minute.' },
+          { status: 503 },
+        )
+      }
+      const message = err instanceof Error ? err.message : 'Resume upload failed.'
+      return NextResponse.json({ message }, { status: 503 })
+    }
+  }
 
   try {
     await enqueueUpdate({
@@ -104,6 +199,7 @@ export async function POST(request: Request) {
         phone,
         source: 'Application',
         notes: coverNote,
+        resumeFilePath: resumeRepoPath,
         createdAt: now,
         createdBy: 'public:careers',
         auditLog: [
@@ -111,8 +207,16 @@ export async function POST(request: Request) {
             timestamp: now,
             user: 'public:careers',
             action: 'candidate.create',
-            after: { name, email, source: 'Application', roleId },
-            notes: 'Self-applied via /careers',
+            after: {
+              name,
+              email,
+              source: 'Application',
+              roleId,
+              ...(resumeRepoPath ? { resumeFilePath: resumeRepoPath } : {}),
+            },
+            notes: resumeRepoPath
+              ? 'Self-applied via /careers with resume.'
+              : 'Self-applied via /careers (no resume attached).',
           },
         ],
       },

@@ -41,6 +41,25 @@ MOU uses single-user basic auth. HR has real users and candidates:
 - **Staff accounts**: `users.json` queue-managed. bcrypt hashes, JWT httpOnly cookies, 7-day expiry, refreshed on activity. Roles: Admin, HR, HOD, Leadership.
 - **Candidate access: magic link + session cookie.** First visit: candidate receives a signed HMAC magic link (single-use, 15-minute expiry). Server validates and exchanges the link for an httpOnly SameSite=Strict session cookie scoped to that candidate's record, 30-day expiry, rolling refresh on activity. Return visits: cookie active lands in portal. Cookie expired lands on "check your email for a fresh link" page; we issue a new magic link. The same `GSL_SNAPSHOT_SIGNING_KEY` HMAC signs both. No passwords, no accounts.
 
+## Resume file paths
+
+All resume files live under one of two roots:
+
+- `data/resumes/**` — live data (uploads, applications, future imports)
+- `onedrive-data/seed/resumes/**` — legacy 156-resume seed corpus, immutable
+
+Subdirectory structure under `data/resumes/` is informational, not enforced by the reader. Suggested organisation:
+
+- `data/resumes/uploads/[YYYY]/[MM]/[uuid].pdf` — staff or self-upload (via `buildResumeRepoPath`)
+- `data/resumes/applications/[YYYY]/[MM]/[uuid].pdf` — public `/careers` apply (via `buildApplicationResumePath`)
+- `data/resumes/imports/[batch-id]/[uuid].pdf` — future bulk imports
+
+The reader (`/api/resumes/[candidateId]`) does NOT need updates when new subdirectories are added. It validates that the resolved real path stays within one of the two roots, using `path.resolve` + `fs.realpathSync` to defeat `..` traversal, absolute path injection, and symlink escape. See `src/lib/resumePath.ts:assertInsideResumeRoot`.
+
+Adding a brand-new top-level root requires:
+(a) appending to `RESUME_ROOTS` in `src/lib/resumePath.ts`
+(b) updating `outputFileTracingIncludes` in `next.config.mjs`
+
 ## Data boundaries
 
 - **Resumes** stay in our system — small, text-searchable, the core repository value we're building.

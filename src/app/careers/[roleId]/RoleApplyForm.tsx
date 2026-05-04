@@ -2,30 +2,47 @@
 
 import { useState } from 'react'
 
+const RESUME_MAX_BYTES = 5 * 1024 * 1024
+
 export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle: string }) {
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const [resumeName, setResumeName] = useState<string>('')
+
+  function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.currentTarget.files?.[0]
+    if (!file) {
+      setResumeName('')
+      return
+    }
+    if (file.size > RESUME_MAX_BYTES) {
+      setError('Resume file exceeds the 5 MB limit.')
+      e.currentTarget.value = ''
+      setResumeName('')
+      return
+    }
+    if (!file.name.toLowerCase().endsWith('.pdf')) {
+      setError('Resume must be a PDF.')
+      e.currentTarget.value = ''
+      setResumeName('')
+      return
+    }
+    setError(null)
+    setResumeName(file.name)
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setError(null)
     setBusy(true)
-    const data = new FormData(e.currentTarget)
-    const payload = {
-      roleId,
-      name: String(data.get('name') ?? '').trim(),
-      email: String(data.get('email') ?? '').trim(),
-      phone: String(data.get('phone') ?? '').trim(),
-      coverNote: String(data.get('coverNote') ?? '').trim(),
-      /** honeypot: bots fill, humans don't see it */
-      website: String(data.get('website') ?? '').trim(),
-    }
+    const form = e.currentTarget
+    const data = new FormData(form)
+    data.set('roleId', roleId)
     try {
       const res = await fetch('/api/public/careers/apply', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        body: data,
       })
       if (!res.ok) {
         const body = await res.json().catch(() => ({ message: 'Could not send.' }))
@@ -58,7 +75,7 @@ export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle
   }
 
   return (
-    <form onSubmit={handleSubmit} aria-label={`Apply for ${roleTitle}`}>
+    <form onSubmit={handleSubmit} aria-label={`Apply for ${roleTitle}`} encType="multipart/form-data">
       {error && (
         <div
           role="alert"
@@ -71,6 +88,23 @@ export function RoleApplyForm({ roleId, roleTitle }: { roleId: string; roleTitle
       <FormField id="name" label="Full name" type="text" required autoComplete="name" />
       <FormField id="email" label="Email" type="email" required autoComplete="email" />
       <FormField id="phone" label="Phone" type="tel" required autoComplete="tel" />
+
+      <div className="mt-4">
+        <label htmlFor="resume" className="block text-sm font-medium text-ink">
+          Resume (PDF, optional but recommended)
+        </label>
+        <input
+          id="resume"
+          name="resume"
+          type="file"
+          accept="application/pdf,.pdf"
+          onChange={handleFileChange}
+          className="mt-1 block w-full rounded border border-line-strong bg-card px-3 py-3 text-base text-ink file:mr-3 file:rounded file:border-0 file:bg-navy file:px-3 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-navy-dark focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+        />
+        <p className="mt-1 text-xs text-ink-3">
+          {resumeName ? `Selected: ${resumeName}` : 'PDF only. Up to 5 MB.'}
+        </p>
+      </div>
 
       <div className="mt-4">
         <label htmlFor="coverNote" className="block text-sm font-medium text-ink">
