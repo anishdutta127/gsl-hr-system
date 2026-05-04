@@ -68,9 +68,9 @@ export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="role-desc-edit-heading"
-          className="fixed inset-0 z-40 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 sm:items-center"
+          className="fixed inset-0 z-40 flex items-start justify-center overflow-y-auto bg-ink/40 p-2 sm:items-center sm:p-4"
         >
-          <div className="w-full max-w-3xl rounded-lg border border-line bg-card p-6 shadow-lg">
+          <div className="w-full max-w-3xl rounded-lg border border-line bg-card p-4 shadow-lg sm:p-6">
             <div className="mb-4 flex items-start justify-between gap-3">
               <h2 id="role-desc-edit-heading" className="font-display text-lg text-ink">
                 Edit role description

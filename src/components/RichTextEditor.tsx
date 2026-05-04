@@ -76,11 +76,16 @@ export function RichTextEditor({ value, onChange, ariaLabel = 'Rich text editor'
   }
 
   return (
-    <div className="overflow-hidden rounded border border-line-strong bg-card focus-within:border-teal focus-within:ring-2 focus-within:ring-teal">
+    // No `overflow-hidden`: it would clip the sticky toolbar inside the
+    // editor's bounding box. Sticky needs a non-overflow-hidden chain up to
+    // the scroll container (the modal in RoleDescriptionEdit, or the page
+    // in NewRoleForm). Rounded corners still look fine because the toolbar
+    // and EditorContent paint flush to the border.
+    <div className="rounded border border-line-strong bg-card focus-within:border-teal focus-within:ring-2 focus-within:ring-teal">
       <div
         role="toolbar"
         aria-label="Formatting"
-        className="flex flex-wrap items-center gap-1 border-b border-line bg-surface px-2 py-1.5"
+        className="sticky top-0 z-10 flex flex-wrap items-center gap-1 rounded-t border-b border-line bg-surface px-2 py-1.5"
       >
         <ToolbarButton
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -177,8 +182,8 @@ function ToolbarButton({
       aria-pressed={isActive}
       className={
         isActive
-          ? 'inline-flex min-h-[32px] min-w-[32px] items-center justify-center rounded bg-navy px-2 py-1 text-xs font-medium text-white'
-          : 'inline-flex min-h-[32px] min-w-[32px] items-center justify-center rounded border border-line-strong bg-card px-2 py-1 text-xs text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal'
+          ? 'inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded bg-navy px-2 py-1 text-sm font-medium text-white'
+          : 'inline-flex min-h-[40px] min-w-[40px] items-center justify-center rounded border border-line-strong bg-card px-2 py-1 text-sm text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal'
       }
     >
       {children}
