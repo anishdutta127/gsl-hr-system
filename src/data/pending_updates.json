@@ -17,5 +17,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Vishal_Patil_Resume (1).pdf, 120 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "7311e378-b534-4a99-bb4e-96d5c8488ffd",
+    "queuedAt": "2026-05-04T05:29:55.826Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/00a56c80-3b7d-40eb-a734-3bd39a94f71e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Vishal_Patil_Resume.pdf, 120 KB)."
+    },
+    "retryCount": 0
   }
 ]
