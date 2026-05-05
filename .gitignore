@@ -51,6 +51,7 @@ coverage/
 playwright-report/
 test-results/
 .vitest-cache/
+scripts/verify_*_output/
 
 # Don't accidentally commit OneDrive contents (the symlink itself is fine,
 # but anything under it is the source of truth, not part of the repo)
