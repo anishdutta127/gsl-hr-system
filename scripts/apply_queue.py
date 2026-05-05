@@ -22,7 +22,7 @@ Operations handled:
   employee.update [onboarding.toggle, exit.initiate]
   user.create
   user.update [user.update, user.password-change]
-  careers_application.create  (same as candidate.create)
+  outbound_mail.create  (logs an outbound email; routed to _outbound_mail.json)
 
 Safety:
 - Fails loudly on unknown entity/operation pairs. An unhandled queue entry
@@ -54,7 +54,7 @@ ENTITY_FILES = {
     "interview": DATA_DIR / "interviews.json",
     "offer": DATA_DIR / "offers.json",
     "employee": DATA_DIR / "employees.json",
-    "careers_application": DATA_DIR / "candidates.json",
+    "outbound_mail": DATA_DIR / "_outbound_mail.json",
 }
 
 

@@ -1,7 +1,7 @@
 /*
  * Email delivery for candidate magic links.
  *
- * Phase 1: queue every outgoing email as a "careers_application" entry so the
+ * Phase 1: queue every outgoing email as an "outbound_mail" entry so the
  * self-hosted sync runner writes it to src/data/_outbound_mail.json through
  * the same queue path as every other write. Anish forwards links manually at
  * pilot volume. When volume grows or HR asks, we swap this for Resend by
@@ -13,6 +13,7 @@
  * again on the next tick.
  */
 
+import crypto from 'node:crypto'
 import { enqueueUpdate } from './queue/pendingUpdates'
 
 export interface OutboundEmail {
@@ -37,10 +38,10 @@ export async function deliverEmail(email: OutboundEmail): Promise<void> {
   try {
     await enqueueUpdate({
       queuedBy: 'system',
-      entity: 'careers_application',
+      entity: 'outbound_mail',
       operation: 'create',
       payload: {
-        _kind: 'outbound-mail',
+        id: crypto.randomUUID(),
         to: email.to,
         subject: email.subject,
         body: email.body,

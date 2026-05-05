@@ -353,7 +353,7 @@ export type PendingUpdateEntity =
   | 'interview'
   | 'offer'
   | 'employee'
-  | 'careers_application'
+  | 'outbound_mail'
 
 export interface PendingUpdate {
   id: string

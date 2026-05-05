@@ -41,7 +41,17 @@ export function loadRoles(): Role[] {
 }
 
 export function loadCandidates(): Candidate[] {
-  return readJson<Candidate[]>('candidates.json', [])
+  const raw = readJson<unknown[]>('candidates.json', [])
+  // Boundary filter: drop records that don't satisfy the Candidate shape.
+  // Why: the queue applier has historically mis-routed outbound-mail records
+  // into candidates.json (entity name collision, fixed in mail.ts). Anything
+  // missing id+name would crash downstream consumers like the /emails/[id]
+  // sort and the magic-link email lookup.
+  return raw.filter((c): c is Candidate => {
+    if (!c || typeof c !== 'object') return false
+    const r = c as Record<string, unknown>
+    return typeof r.id === 'string' && typeof r.name === 'string'
+  })
 }
 
 export function loadApplications(): Application[] {

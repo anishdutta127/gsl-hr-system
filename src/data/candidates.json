@@ -6115,14 +6115,6 @@
     ]
   },
   {
-    "_kind": "outbound-mail",
-    "to": "sup0107@gmail.com",
-    "subject": "We received your application for Pre-Sales Intern at GSL",
-    "body": "Hi Shruti,\n\nThanks for applying for Pre-Sales Intern at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzQ2MTc0MiwiZXhwaXJlc0F0IjoxNzc3NDYyNjQyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUxMjE2NDUtNTE0Ny00YjMxLWJjZjMtY2MzNWRlNDczODExIiwiYXBwbGljYXRpb25JZCI6ImRiOTQxMDg2LTY0ODEtNDIwOS05OTkwLWNkYWQwZGNkNGI0YyIsIm5vbmNlIjoiZDE4NGY3NzQtYjY3ZS00MDQ1LWJiNGUtZjcyZTcyNDQwZjdmIn19.UnYolQxkrDrCpzDHxIhybTieEmy0mhAqsbh7gx4NFVU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-    "context": "welcome magic link for candidate e5121645-5147-4b31-bcf3-cc35de473811",
-    "createdAt": "2026-04-29T11:22:22.508Z"
-  },
-  {
     "id": "450078a1-00ed-49bf-b936-6e3085b5f149",
     "name": "Akshay Tawde",
     "email": "aki.agenious@gmail.com",
