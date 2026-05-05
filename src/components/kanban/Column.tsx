@@ -8,9 +8,10 @@ import type { ApplicationWithCandidate } from '@/lib/data'
 interface Props {
   stage: Stage
   applications: ApplicationWithCandidate[]
+  onSelect?: (applicationId: string) => void
 }
 
-export function Column({ stage, applications }: Props) {
+export function Column({ stage, applications, onSelect }: Props) {
   const { isOver, setNodeRef } = useDroppable({ id: stage })
   return (
     <div
@@ -33,7 +34,9 @@ export function Column({ stage, applications }: Props) {
         {applications.length === 0 ? (
           <div className="py-6 text-center text-xs text-ink-3">No candidates</div>
         ) : (
-          applications.map((a) => <CandidateCard key={a.id} application={a} />)
+          applications.map((a) => (
+            <CandidateCard key={a.id} application={a} onSelect={onSelect} />
+          ))
         )}
       </div>
     </div>

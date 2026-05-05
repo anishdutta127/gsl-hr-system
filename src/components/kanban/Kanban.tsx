@@ -13,16 +13,33 @@ import {
 } from '@dnd-kit/core'
 import { Column } from './Column'
 import { CandidateCard } from './CandidateCard'
+import { CandidateSidePanel, type SidePanelCandidate } from './CandidateSidePanel'
 import type { Role, Stage } from '@/lib/types'
 import type { ApplicationWithCandidate } from '@/lib/data'
+import type { CurrentMembership, OpenRoleOption } from '@/components/PipelineActions'
 
 interface Props {
   role: Role
   applications: ApplicationWithCandidate[]
   stages: Stage[]
+  /** All applications for this candidate across roles, used by the side
+   * panel's Move/Add controls. Keyed by candidateId for O(1) lookup. */
+  membershipsByCandidate?: Record<string, CurrentMembership[]>
+  /** All roles eligible to receive a new application (Open / Draft / Paused). */
+  openRoles?: OpenRoleOption[]
+  /** Whether the current viewer can edit (Admin/HR only). Hides resume upload
+   * and Move/Add controls in the side panel for HOD/Leadership. */
+  canEdit?: boolean
 }
 
-export function Kanban({ role, applications, stages }: Props) {
+export function Kanban({
+  role,
+  applications,
+  stages,
+  membershipsByCandidate = {},
+  openRoles = [],
+  canEdit = false,
+}: Props) {
   const [optimistic, setOptimistic] = useOptimistic(
     applications,
     (state, update: { applicationId: string; targetStage: Stage }) =>
@@ -33,6 +50,7 @@ export function Kanban({ role, applications, stages }: Props) {
 
   const [, startTransition] = useTransition()
   const [activeId, setActiveId] = useState<string | null>(null)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
   const [errorToast, setErrorToast] = useState<string | null>(null)
   const [successToast, setSuccessToast] = useState<string | null>(null)
 
@@ -92,6 +110,7 @@ export function Kanban({ role, applications, stages }: Props) {
               key={stage}
               stage={stage}
               applications={byStage[stage] ?? []}
+              onSelect={setSelectedId}
             />
           ))}
         </div>
@@ -110,6 +129,35 @@ export function Kanban({ role, applications, stages }: Props) {
           {successToast}
         </div>
       )}
+      {selectedId && (() => {
+        const app = optimistic.find((a) => a.id === selectedId)
+        const cand = app?.candidate
+        const sidePanelCandidate: SidePanelCandidate | null = cand
+          ? {
+              id: cand.id,
+              name: cand.name,
+              email: cand.email,
+              phone: cand.phone ?? '',
+              source: cand.source,
+              programmes: cand.tags?.programmes ?? [],
+              notes: cand.notes ?? '',
+              resumeFilePath: cand.resumeFilePath,
+            }
+          : null
+        return (
+          <CandidateSidePanel
+            open
+            onClose={() => setSelectedId(null)}
+            candidate={sidePanelCandidate}
+            applicationId={app?.id ?? ''}
+            currentStage={(app?.currentStage as string) ?? ''}
+            memberships={cand ? membershipsByCandidate[cand.id] ?? [] : []}
+            openRoles={openRoles}
+            canEdit={canEdit}
+          />
+        )
+      })()}
+
       {errorToast && (
         <div
           role="alert"
