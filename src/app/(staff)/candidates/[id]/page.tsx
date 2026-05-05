@@ -16,6 +16,8 @@ import { UnarchiveButton } from './UnarchiveButton'
 import { ResumeUpload } from './ResumeUpload'
 import { CandidateEdit } from './CandidateEdit'
 import { StagePill } from '@/components/StagePill'
+import { PipelineActions } from '@/components/PipelineActions'
+import { canAcceptNewCandidates } from '@/lib/roleStatus'
 
 export const dynamic = 'force-dynamic'
 
@@ -43,6 +45,17 @@ export default async function CandidateDetailPage({
 
   const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
   const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
+
+  const canManagePipeline = session.role === 'Admin' || session.role === 'HR'
+  const memberships = apps.map((a) => ({
+    applicationId: a.id,
+    roleId: a.roleId,
+    roleTitle: roleById.get(a.roleId)?.title ?? '(role removed)',
+    currentStage: a.currentStage as string,
+  }))
+  const openRoleOptions = roles
+    .filter((r) => canAcceptNewCandidates(r))
+    .map((r) => ({ id: r.id, label: `${r.title} (${r.department})` }))
 
   // Latest non-terminal application gives the reply-widget its stage + role context.
   const latestActiveApp = [...apps]
@@ -196,9 +209,19 @@ export default async function CandidateDetailPage({
       )}
 
       <section aria-labelledby="apps-heading" className="mb-6">
-        <h2 id="apps-heading" className="mb-3 font-display text-lg text-ink">
-          Applications ({apps.length})
-        </h2>
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h2 id="apps-heading" className="font-display text-lg text-ink">
+            Applications ({apps.length})
+          </h2>
+          {canManagePipeline && (
+            <PipelineActions
+              candidateId={candidate.id}
+              candidateName={candidate.name}
+              memberships={memberships}
+              openRoles={openRoleOptions}
+            />
+          )}
+        </div>
         {apps.length === 0 ? (
           <div className="rounded-lg border border-dashed border-line-strong bg-card p-6 text-center text-sm text-ink-2">
             No applications yet.
