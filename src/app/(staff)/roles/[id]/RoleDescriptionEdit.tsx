@@ -9,6 +9,25 @@ interface Props {
   initialDescription: string
 }
 
+/**
+ * Modal for editing a role JD.
+ *
+ * Layout: fixed-height shell with three rows — header / scrolling body /
+ * footer. The body is the dialog's own scroll container (not the page, not
+ * the outer overlay), so:
+ *   1. The sticky toolbar inside RichTextEditor pins to the top of the
+ *      *body*, not the viewport. With long JDs (3000+ words), the toolbar
+ *      stays in reach even after scrolling several screens of content.
+ *   2. The Save / Cancel footer stays visible regardless of content height.
+ *      Round 3's outer-overflow approach pushed the footer below the fold
+ *      with long content; this is the proper modal-with-scrollable-body
+ *      pattern that doesn't.
+ *   3. Mobile (375px) gets the same behaviour — the dialog is bottom-anchored
+ *      with a 92vh max-height so the footer is always tappable.
+ *
+ * Background scroll lock is applied while the dialog is open so iOS Safari
+ * doesn't bleed page-level scroll into the dialog body.
+ */
 export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -22,7 +41,14 @@ export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
       if (e.key === 'Escape') setOpen(false)
     }
     document.addEventListener('keydown', onKey)
-    return () => document.removeEventListener('keydown', onKey)
+    // Lock background scroll while modal is open. Restoring on unmount
+    // prevents the lock leaking if the user closes via Escape mid-typing.
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = previousOverflow
+    }
   }, [open])
 
   async function handleSave() {
@@ -68,10 +94,12 @@ export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
           role="dialog"
           aria-modal="true"
           aria-labelledby="role-desc-edit-heading"
-          className="fixed inset-0 z-40 flex items-start justify-center overflow-y-auto bg-ink/40 p-2 sm:items-center sm:p-4"
+          className="fixed inset-0 z-40 flex items-end justify-center bg-ink/40 sm:items-center sm:p-4"
         >
-          <div className="w-full max-w-3xl rounded-lg border border-line bg-card p-4 shadow-lg sm:p-6">
-            <div className="mb-4 flex items-start justify-between gap-3">
+          <div
+            className="flex h-[92vh] w-full max-w-3xl flex-col rounded-t-lg border border-line bg-card shadow-lg sm:h-[min(85vh,720px)] sm:rounded-lg"
+          >
+            <header className="flex shrink-0 items-start justify-between gap-3 border-b border-line px-4 py-3 sm:px-6">
               <h2 id="role-desc-edit-heading" className="font-display text-lg text-ink">
                 Edit role description
               </h2>
@@ -83,17 +111,18 @@ export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
               >
                 ×
               </button>
+            </header>
+
+            <div className="flex flex-1 min-h-0 flex-col overflow-y-auto px-4 py-3 sm:px-6">
+              {error && (
+                <div role="alert" className="mb-3 rounded border border-danger-bg bg-danger-bg px-3 py-2 text-sm text-danger">
+                  {error}
+                </div>
+              )}
+              <RichTextEditor ariaLabel="Role description" value={html} onChange={setHtml} />
             </div>
 
-            {error && (
-              <div role="alert" className="mb-3 rounded border border-danger-bg bg-danger-bg px-3 py-2 text-sm text-danger">
-                {error}
-              </div>
-            )}
-
-            <RichTextEditor ariaLabel="Role description" value={html} onChange={setHtml} />
-
-            <div className="mt-4 flex items-center justify-end gap-2">
+            <footer className="flex shrink-0 items-center justify-end gap-2 border-t border-line bg-surface px-4 py-3 sm:px-6">
               <button
                 type="button"
                 onClick={() => setOpen(false)}
@@ -109,7 +138,7 @@ export function RoleDescriptionEdit({ roleId, initialDescription }: Props) {
               >
                 {busy ? 'Saving…' : 'Save changes'}
               </button>
-            </div>
+            </footer>
           </div>
         </div>
       )}
