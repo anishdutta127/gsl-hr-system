@@ -6253,5 +6253,73 @@
         "notes": "Self-applied via /careers"
       }
     ]
+  },
+  {
+    "id": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
+    "name": "Pavan Namdar",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Inside Sales",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-05.",
+    "createdAt": "2026-05-05T11:15:10.482Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-05T11:15:10.482Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Pavan Namdar",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+    "name": "Faizan",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sales",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-05.",
+    "createdAt": "2026-05-05T11:17:07.984Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-05T11:17:07.984Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Faizan",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]

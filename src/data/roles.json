@@ -5,7 +5,7 @@
     "department": "Premium Sales",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -41,8 +41,27 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-05-05T12:10:25.487Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Position Filled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Position Filled"
       }
-    ]
+    ],
+    "closeOutcome": "Position Filled",
+    "closeNotes": null
   },
   {
     "id": "309952f2-092f-49af-9fb3-49976d230e76",
