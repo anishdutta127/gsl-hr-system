@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "e6bd8683-a2f5-496d-a9a1-c70ca65d3722",
+    "queuedAt": "2026-05-05T11:15:10.484Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
+      "name": "Pavan Namdar",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Inside Sales",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-05.",
+      "createdAt": "2026-05-05T11:15:10.482Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-05T11:15:10.482Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Pavan Namdar",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
