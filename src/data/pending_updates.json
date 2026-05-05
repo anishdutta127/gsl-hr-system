@@ -82,5 +82,29 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "1092fc17-d898-4ab2-8c72-60799bc96afb",
+    "queuedAt": "2026-05-05T11:24:54.359Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "7804934c-1226-40fb-86a2-6345ef68c3fd",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Position Filled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Position Filled"
+    },
+    "retryCount": 0
   }
 ]
