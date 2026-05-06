@@ -2,12 +2,22 @@
 
 import { useDraggable } from '@dnd-kit/core'
 import type { ApplicationWithCandidate } from '@/lib/data'
+import type { Role } from '@/lib/types'
 import { formatDaysInStage } from '@/lib/format'
+import { StageTransitionButtons } from '@/components/stageTransition/StageTransitionButtons'
+import type { TransitionIntent } from '@/components/stageTransition/StageTransitionButtons'
 
 interface Props {
   application: ApplicationWithCandidate
+  /** Required when actions are shown (forward/back labels read pipelineStages). */
+  role?: Role
   isDragging?: boolean
   onSelect?: (applicationId: string) => void
+  selected?: boolean
+  onToggleSelect?: (applicationId: string) => void
+  onIntent?: (applicationId: string, intent: TransitionIntent) => void
+  busy?: boolean
+  showActions?: boolean
 }
 
 const SOURCE_COLOR_CLASSES: Record<string, string> = {
@@ -21,7 +31,17 @@ const SOURCE_COLOR_CLASSES: Record<string, string> = {
   Other: 'bg-surface text-ink-3',
 }
 
-export function CandidateCard({ application, isDragging = false, onSelect }: Props) {
+export function CandidateCard({
+  application,
+  role,
+  isDragging = false,
+  onSelect,
+  selected = false,
+  onToggleSelect,
+  onIntent,
+  busy = false,
+  showActions = false,
+}: Props) {
   const { attributes, listeners, setNodeRef, isDragging: isActiveDrag } = useDraggable({
     id: application.id,
   })
@@ -30,16 +50,10 @@ export function CandidateCard({ application, isDragging = false, onSelect }: Pro
     ? SOURCE_COLOR_CLASSES[candidate.source] ?? SOURCE_COLOR_CLASSES.Other
     : SOURCE_COLOR_CLASSES.Other
 
-  // Pointer-up that hasn't passed dnd-kit's 5px drag-activation distance fires
-  // a click. We open the side panel from that click. We deliberately don't
-  // wrap the whole card in a button — the drag handle and aria-label are
-  // already on this div. Keyboard parity is provided by the explicit "Open"
-  // button below.
   function handleCardClick(e: React.MouseEvent) {
     if (isActiveDrag || !onSelect) return
-    // Avoid firing when the click originated on the inner Open button
-    // (that already calls onSelect itself and stops propagation).
     if ((e.target as HTMLElement).closest('[data-card-action]')) return
+    if ((e.target as HTMLElement).closest('[data-card-select]')) return
     onSelect(application.id)
   }
 
@@ -50,15 +64,29 @@ export function CandidateCard({ application, isDragging = false, onSelect }: Pro
       {...listeners}
       onClick={handleCardClick}
       aria-label={`Candidate ${candidate?.name ?? 'unknown'}, stage ${application.currentStage}`}
-      className={
+      className={`group ${
         isDragging || isActiveDrag
           ? 'cursor-grabbing rounded border border-teal bg-card px-3 py-2 shadow-lg'
           : 'cursor-grab rounded border border-line bg-card px-3 py-2 hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal'
-      }
+      } ${busy ? 'opacity-70' : ''} ${selected ? 'ring-2 ring-teal/60' : ''}`}
     >
       <div className="flex items-start justify-between gap-2">
-        <div className="text-sm font-medium text-ink leading-tight">
-          {candidate?.name ?? '(candidate removed)'}
+        <div className="flex min-w-0 items-start gap-2">
+          {onToggleSelect && (
+            <input
+              data-card-select
+              type="checkbox"
+              checked={selected}
+              onChange={() => onToggleSelect(application.id)}
+              onClick={(e) => e.stopPropagation()}
+              onPointerDown={(e) => e.stopPropagation()}
+              aria-label={`Select ${candidate?.name ?? 'candidate'}`}
+              className="mt-0.5 h-4 w-4 shrink-0 rounded border-line-strong text-navy focus-visible:ring-2 focus-visible:ring-teal"
+            />
+          )}
+          <div className="min-w-0 text-sm font-medium text-ink leading-tight">
+            {candidate?.name ?? '(candidate removed)'}
+          </div>
         </div>
         {onSelect && (
           <button
@@ -86,6 +114,19 @@ export function CandidateCard({ application, isDragging = false, onSelect }: Pro
           <span className="text-[11px] text-ink-3 tabular">
             {formatDaysInStage(application.stageEnteredAt)}
           </span>
+        </div>
+      )}
+      {showActions && role && onIntent && (
+        <div className="mt-2">
+          <StageTransitionButtons
+            role={role}
+            applicationId={application.id}
+            currentStage={application.currentStage}
+            disabled={busy}
+            visibility="hover-desktop"
+            compact
+            onIntent={onIntent}
+          />
         </div>
       )}
     </div>

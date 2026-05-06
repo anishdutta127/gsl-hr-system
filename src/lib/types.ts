@@ -178,6 +178,16 @@ export interface Application {
   createdAt: string
   createdBy: string
   auditLog: AuditEntry[]
+  /** Captured when the application transitions to Rejected. Used for "why
+   * we lose candidates" analysis on the candidate detail page. Cleared if the
+   * application is re-opened (transition out of Rejected). */
+  rejectionReason?:
+    | 'Not Qualified for Role'
+    | 'Position Filled'
+    | 'Withdrew'
+    | 'Better Match Elsewhere'
+    | 'Other'
+  rejectionNotes?: string
   /** Stage transition history as queue writes land, newest first in each entry's auditLog. */
 }
 

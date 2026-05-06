@@ -2,16 +2,33 @@
 
 import { useDroppable } from '@dnd-kit/core'
 import { CandidateCard } from './CandidateCard'
-import type { Stage } from '@/lib/types'
+import type { Role, Stage } from '@/lib/types'
 import type { ApplicationWithCandidate } from '@/lib/data'
+import type { TransitionIntent } from '@/components/stageTransition/StageTransitionButtons'
 
 interface Props {
   stage: Stage
+  role: Role
   applications: ApplicationWithCandidate[]
   onSelect?: (applicationId: string) => void
+  busyApplicationIds?: Set<string>
+  selectedIds?: Set<string>
+  onToggleSelect?: (applicationId: string) => void
+  onIntent?: (applicationId: string, intent: TransitionIntent) => void
+  showActions?: boolean
 }
 
-export function Column({ stage, applications, onSelect }: Props) {
+export function Column({
+  stage,
+  role,
+  applications,
+  onSelect,
+  busyApplicationIds,
+  selectedIds,
+  onToggleSelect,
+  onIntent,
+  showActions = false,
+}: Props) {
   const { isOver, setNodeRef } = useDroppable({ id: stage })
   return (
     <div
@@ -35,7 +52,17 @@ export function Column({ stage, applications, onSelect }: Props) {
           <div className="py-6 text-center text-xs text-ink-3">No candidates</div>
         ) : (
           applications.map((a) => (
-            <CandidateCard key={a.id} application={a} onSelect={onSelect} />
+            <CandidateCard
+              key={a.id}
+              application={a}
+              role={role}
+              onSelect={onSelect}
+              selected={selectedIds?.has(a.id) ?? false}
+              onToggleSelect={onToggleSelect}
+              onIntent={onIntent}
+              busy={busyApplicationIds?.has(a.id) ?? false}
+              showActions={showActions}
+            />
           ))
         )}
       </div>

@@ -17,7 +17,8 @@ import { ResumeUpload } from './ResumeUpload'
 import { CandidateEdit } from './CandidateEdit'
 import { StagePill } from '@/components/StagePill'
 import { PipelineActions } from '@/components/PipelineActions'
-import { canAcceptNewCandidates } from '@/lib/roleStatus'
+import { canAcceptNewCandidates, isPipelineReadOnly } from '@/lib/roleStatus'
+import { ApplicationStageActions } from './ApplicationStageActions'
 
 export const dynamic = 'force-dynamic'
 
@@ -259,6 +260,14 @@ export default async function CandidateDetailPage({
                     In stage for {formatRelative(app.stageEnteredAt, { addSuffix: false })}
                   </div>
 
+                  {app.currentStage === 'Rejected' && app.rejectionReason && (
+                    <div className="mt-2 rounded border border-line bg-surface px-3 py-2 text-xs text-ink-2">
+                      <span className="font-medium text-ink">Reason:</span>{' '}
+                      {app.rejectionReason}
+                      {app.rejectionNotes ? ` · ${app.rejectionNotes}` : ''}
+                    </div>
+                  )}
+
                   {(appInterviews.length > 0 || appOffers.length > 0) && (
                     <div className="mt-3 border-t border-line pt-3 text-xs text-ink-2">
                       {appInterviews.length > 0 && (
@@ -308,6 +317,21 @@ export default async function CandidateDetailPage({
                           Draft offer
                         </Link>
                       )}
+                    </div>
+                  )}
+                  {!terminal && canManagePipeline && role && (
+                    <div className="mt-3 border-t border-line pt-3">
+                      <ApplicationStageActions
+                        role={role}
+                        applicationId={app.id}
+                        candidateId={candidate.id}
+                        candidateName={candidate.name}
+                        currentStage={app.currentStage}
+                        createdAt={app.createdAt}
+                        createdBy={app.createdBy}
+                        stageEnteredAt={app.stageEnteredAt}
+                        disabled={isPipelineReadOnly(role)}
+                      />
                     </div>
                   )}
                 </li>

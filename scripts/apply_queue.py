@@ -120,6 +120,18 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
                 entity["currentStage"] = after["currentStage"]
             if "stageEnteredAt" in after:
                 entity["stageEnteredAt"] = after["stageEnteredAt"]
+            # Reject capture: stamp the reason on the application record so
+            # the "why we lose candidates" view doesn't have to scrape the
+            # audit log every render. Cleared when the candidate is moved
+            # back out of Rejected (rare, but the app state should match).
+            if after.get("currentStage") == "Rejected":
+                if "rejectionReason" in after:
+                    entity["rejectionReason"] = after["rejectionReason"]
+                if "rejectionNotes" in after:
+                    entity["rejectionNotes"] = after["rejectionNotes"]
+            else:
+                entity.pop("rejectionReason", None)
+                entity.pop("rejectionNotes", None)
         append_audit(entity, queued_by, op, before, after, notes)
         return
 

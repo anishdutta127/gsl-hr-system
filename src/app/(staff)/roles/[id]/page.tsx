@@ -10,13 +10,20 @@ import {
 import { isTerminal, orderedStages } from '@/lib/pipeline'
 import { canAcceptNewCandidates, isPubliclyVisible } from '@/lib/roleStatus'
 import { Kanban } from '@/components/kanban/Kanban'
+import { parseFiltersFromQuery } from '@/lib/kanbanFilters'
 import { formatDate } from '@/lib/format'
 import { requireRoles } from '@/lib/guards'
 import { RoleStatusPanel } from './RoleStatusPanel'
 import { RoleDescriptionEdit } from './RoleDescriptionEdit'
 import type { CurrentMembership } from '@/components/PipelineActions'
 
-export default async function RoleDetailPage({ params }: { params: { id: string } }) {
+export default async function RoleDetailPage({
+  params,
+  searchParams,
+}: {
+  params: { id: string }
+  searchParams?: { filters?: string | string[] }
+}) {
   const session = await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
   const role = findRoleById(params.id)
   if (!role) notFound()
@@ -116,6 +123,8 @@ export default async function RoleDetailPage({ params }: { params: { id: string 
         membershipsByCandidate={membershipsByCandidate}
         openRoles={openRoleOptions}
         canEdit={canEdit}
+        currentUserEmail={session.email}
+        initialFilters={parseFiltersFromQuery(searchParams?.filters)}
       />
     </div>
   )
