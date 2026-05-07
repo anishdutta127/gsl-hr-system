@@ -438,5 +438,35 @@
       "notes": "Moved to Sales Executive. Notes: Better fit for that role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "45e6f337-51b8-4d1d-8122-6e63b3de36ef",
+    "queuedAt": "2026-05-07T07:35:02.412Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "1095426f-a125-4327-851f-264e823e5a4a",
+      "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-07T07:35:01.561Z",
+      "createdAt": "2026-05-07T07:35:01.561Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-07T07:35:01.561Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager. Notes: Better fit for that role"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
