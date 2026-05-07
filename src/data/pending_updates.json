@@ -238,5 +238,47 @@
       "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
     },
     "retryCount": 0
+  },
+  {
+    "id": "6fd0b951-69c8-4b4e-9c5a-890ee5e5c42f",
+    "queuedAt": "2026-05-07T07:29:45.876Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e26c8815-43c1-47fa-b292-8aee7b58e9c6",
+      "name": "Komal Hinduja",
+      "email": "kkomalhinduja@gmail.com",
+      "phone": "8599900082",
+      "source": "HRTeam",
+      "searchableText": "Instructional Designer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-07.",
+      "createdAt": "2026-05-07T07:29:45.876Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-07T07:29:45.876Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Komal Hinduja",
+            "email": "kkomalhinduja@gmail.com",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
