@@ -367,5 +367,35 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (CVPavanNamdar.pdf, 76 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "28b50645-f252-4c36-b05b-b969df10c227",
+    "queuedAt": "2026-05-07T07:32:08.274Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "34eed21d-7438-40f4-ac42-50e65b06d37d",
+      "candidateId": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
+      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-07T07:32:08.256Z",
+      "createdAt": "2026-05-07T07:32:08.256Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-07T07:32:08.256Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Sales Executive pipeline."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
