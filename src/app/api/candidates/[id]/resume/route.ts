@@ -46,6 +46,12 @@ export async function POST(request: Request, { params }: { params: { id: string 
   const fileSize = (file as File).size
 
   let fileWritten = false
+  // Same-month re-uploads land at the same path as the prior upload, so the
+  // PUT overwrites instead of creating a fresh file. In that case the
+  // candidate record already points at this path and a cleanup-on-enqueue-
+  // failure would *destroy* the candidate's existing resume — far worse than
+  // an orphan audit entry. Skip cleanup when the path was already in use.
+  const wasOverwrite = candidate.resumeFilePath === repoPath
   try {
     await putBinaryFile(
       repoPath,
@@ -66,10 +72,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
       },
     })
   } catch (err) {
-    if (fileWritten) {
-      // Orphan cleanup: file landed but the record-update enqueue failed.
-      // Without this, the candidate record never points at the file and the
-      // resume sits in the repo unreferenced.
+    if (fileWritten && !wasOverwrite) {
       await deleteBinaryFile(repoPath, 'enqueue failed for candidate.set-resume')
     }
     if (err instanceof QueueUpstreamError && err.status === 409) {

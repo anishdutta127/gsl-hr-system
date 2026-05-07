@@ -47,6 +47,10 @@ export async function POST(request: Request) {
   const fileSize = (file as File).size
 
   let fileWritten = false
+  // See HR-side route for the rationale: same-month re-upload reuses the
+  // exact path, so cleanup on enqueue failure must skip the overwrite case
+  // or it deletes the candidate's existing resume.
+  const wasOverwrite = candidate.resumeFilePath === repoPath
   try {
     await putBinaryFile(
       repoPath,
@@ -67,7 +71,7 @@ export async function POST(request: Request) {
       },
     })
   } catch (err) {
-    if (fileWritten) {
+    if (fileWritten && !wasOverwrite) {
       await deleteBinaryFile(repoPath, 'enqueue failed for candidate.set-resume (portal)')
     }
     if (err instanceof QueueUpstreamError && err.status === 409) {

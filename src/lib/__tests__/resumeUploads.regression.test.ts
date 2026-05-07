@@ -394,6 +394,45 @@ describe('HR-side upload route — POST /api/candidates/[id]/resume', () => {
     const writePath = mockPutBinary.mock.calls[0]?.[0]
     expect(cleanupPath).toBe(writePath)
   })
+
+  it('does NOT delete on enqueue failure when the upload was an overwrite of an existing path (would destroy the prior resume)', async () => {
+    mockGetSession.mockResolvedValue({
+      sub: 'u1',
+      email: 'shruti@gsl.test',
+      name: 'Shruti',
+      role: 'HR',
+      issuedAt: 0,
+      expiresAt: 0,
+    } as never)
+    // Candidate already has a resume at the path that buildResumeRepoPath
+    // would produce for this candidate id + .pdf in the current month.
+    // Compute it the way the route does so we stay in sync if month rolls over.
+    const { buildResumeRepoPath } = await import('@/lib/resumePath')
+    const existingPath = buildResumeRepoPath('c-overwrite', '.pdf')
+    mockFindCandidate.mockReturnValue({
+      id: 'c-overwrite',
+      name: 'Z',
+      email: '',
+      phone: '',
+      source: 'HRTeam',
+      createdAt: '2026-05-01',
+      createdBy: 's',
+      auditLog: [],
+      resumeFilePath: existingPath,
+    } as never)
+    mockEnqueue.mockRejectedValueOnce(new Error('queue down'))
+    const { POST } = await import('@/app/api/candidates/[id]/resume/route')
+    const res = await postFormData(
+      POST,
+      'https://x/api/candidates/c-overwrite/resume',
+      pdfFormData(),
+      { id: 'c-overwrite' },
+    )
+    expect(res.status).toBe(503)
+    expect(mockPutBinary).toHaveBeenCalledTimes(1)
+    // No cleanup — the candidate record still points at this path.
+    expect(mockDeleteBinary).not.toHaveBeenCalled()
+  })
 })
 
 describe('Candidate-portal upload route — POST /api/portal/resume', () => {
