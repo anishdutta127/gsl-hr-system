@@ -17,5 +17,27 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "6b3f16ba-fbe7-488d-9ac8-cb384d49c770",
+    "queuedAt": "2026-05-07T09:55:55.798Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "09cff290-1c92-4e61-af51-4b9c1f05ec03",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:27:16.086Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-07T09:55:55.797Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
   }
 ]
