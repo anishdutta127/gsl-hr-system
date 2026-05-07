@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getCurrentSession } from '@/lib/identity'
 import { LogoutButton } from './LogoutButton'
 import { SidebarNav } from './SidebarNav'
+import { SyncNowButton } from './SyncNowButton'
 
 export async function AppShell({ children }: { children: React.ReactNode }) {
   const session = await getCurrentSession()
@@ -21,6 +22,7 @@ export async function AppShell({ children }: { children: React.ReactNode }) {
             <span className="text-ink font-medium">{session?.name ?? 'Unknown'}</span>
             <span className="ml-1 text-ink-2">({session?.role})</span>
           </div>
+          {session?.role === 'Admin' && <SyncNowButton />}
           <LogoutButton />
         </div>
       </aside>

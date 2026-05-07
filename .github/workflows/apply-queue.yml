@@ -1,17 +1,19 @@
 name: Apply Pending Queue
 
-# Every 10 min during IST business hours + manual dispatch.
-# Consumes src/data/pending_updates.json and applies each write intent
-# to the corresponding entity file. Commits non-`chore(queue):` so
-# Vercel rebuilds and the UI surfaces the change.
+# Every 5 min during IST business hours + manual dispatch (used by the
+# admin Sync now button). Consumes src/data/pending_updates.json and
+# applies each write intent to the corresponding entity file. Commits
+# non-`chore(queue):` so Vercel rebuilds and the UI surfaces the change.
 #
-# Hosted runner (ubuntu-latest). Total run usage stays well under the
-# free-tier cap: ~60 minutes/day across ~60 runs.
+# Hosted runner (ubuntu-latest). Total run usage stays under the free-tier
+# cap: ~120 runs/day, each ~30s = ~60 minutes/day. GitHub schedules can
+# be delayed up to 15 min during high load — that's the floor end users
+# perceive even with cron='*/5'. Sync now bypasses the cron entirely.
 
 on:
   schedule:
-    # Every 10 min, IST 09:00-19:00 Mon-Fri = UTC 03:30-13:30
-    - cron: '*/10 3-13 * * 1-5'
+    # Every 5 min, IST 09:00-19:00 Mon-Fri = UTC 03:30-13:30
+    - cron: '*/5 3-13 * * 1-5'
   workflow_dispatch: {}
 
 concurrency:

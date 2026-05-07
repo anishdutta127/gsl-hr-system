@@ -132,7 +132,7 @@ export function PipelineActions({
         return
       }
       const destLabel = openRoles.find((r) => r.id === destRoleId)?.label ?? 'destination role'
-      setSuccess(`${candidateName} moved to ${destLabel}. Reflects in ~1 minute.`)
+      setSuccess(`${candidateName} moved to ${destLabel}. Will appear within ~10 minutes once the apply runner picks up the queue. Admins can use Sync now to force it.`)
       closeModal()
       router.refresh()
       setTimeout(() => setSuccess(null), 4000)
@@ -171,7 +171,7 @@ export function PipelineActions({
         return
       }
       const destLabel = openRoles.find((r) => r.id === destRoleId)?.label ?? 'destination role'
-      setSuccess(`${candidateName} added to ${destLabel}. Reflects in ~1 minute.`)
+      setSuccess(`${candidateName} added to ${destLabel}. Will appear within ~10 minutes once the apply runner picks up the queue. Admins can use Sync now to force it.`)
       closeModal()
       router.refresh()
       setTimeout(() => setSuccess(null), 4000)

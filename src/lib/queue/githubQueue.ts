@@ -189,6 +189,52 @@ export async function putBinaryFile(
   return { commitSha: parsedBody.commit?.sha ?? '' }
 }
 
+/**
+ * Best-effort delete of a binary file. Used to clean up orphans when the
+ * record-update queue write fails after the file write succeeded. Failures
+ * are swallowed (logged) — the orphan is recoverable manually, but a delete
+ * exception must not mask the original upload error to the user.
+ */
+export async function deleteBinaryFile(path: string, reason: string): Promise<void> {
+  try {
+    const existing = await getFile(path)
+    if (!existing) return
+    const url = `https://api.github.com/repos/${githubRepo()}/contents/${encodeURIComponent(path)}`
+    await fetch(url, {
+      method: 'DELETE',
+      headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: `chore(resumes): cleanup orphan after ${reason}`,
+        sha: existing.sha,
+        branch: githubBranch(),
+      }),
+    })
+  } catch (err) {
+    console.error('[deleteBinaryFile] cleanup failed for', path, err)
+  }
+}
+
+/**
+ * Trigger a workflow_dispatch GitHub Action. Used by the admin "Sync now"
+ * button to force the apply-queue workflow to run immediately instead of
+ * waiting for the next 5-minute cron tick. Requires the queue PAT to have
+ * `actions:write` scope on the repo; if it does not, GitHub returns 403
+ * and we surface a clear configuration error rather than retrying.
+ */
+export async function dispatchWorkflow(workflowFileName: string): Promise<void> {
+  const url =
+    `https://api.github.com/repos/${githubRepo()}/actions/workflows/` +
+    `${encodeURIComponent(workflowFileName)}/dispatches`
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { ...authHeaders(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ref: githubBranch() }),
+  })
+  if (res.status === 204) return
+  const body = await res.text()
+  throw new QueueUpstreamError(workflowFileName, res.status, body)
+}
+
 export async function appendToQueue(entry: PendingUpdate): Promise<{ commitSha: string }> {
   const { commitSha } = await atomicUpdateJson<PendingUpdate[]>(
     PENDING_UPDATES_PATH,
