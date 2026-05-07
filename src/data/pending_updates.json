@@ -101,5 +101,24 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "7a74a44d-8ca4-40b5-b6fc-081a3de078d8",
+    "queuedAt": "2026-05-07T09:57:18.172Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "e26c8815-43c1-47fa-b292-8aee7b58e9c6",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/e26c8815-43c1-47fa-b292-8aee7b58e9c6.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVKOMALHINDUJA.pdf, 145 KB)."
+    },
+    "retryCount": 0
   }
 ]
