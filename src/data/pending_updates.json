@@ -571,5 +571,24 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "fc2cacb3-f3f7-4818-9baa-c66c68f5cb26",
+    "queuedAt": "2026-05-07T07:43:12.492Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+    },
+    "retryCount": 0
   }
 ]
