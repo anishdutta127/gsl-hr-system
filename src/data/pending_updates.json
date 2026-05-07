@@ -397,5 +397,25 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "148704d3-8861-4a7e-bee6-e23f887abd6c",
+    "queuedAt": "2026-05-07T07:34:41.768Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "b0902fcd-78e6-457f-9bd7-18881e7ede9d",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-01T10:40:42.051Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-07T07:34:41.767Z"
+      }
+    },
+    "retryCount": 0
   }
 ]
