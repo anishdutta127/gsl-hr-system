@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "1403c8d6-28cb-45f8-8466-b31a50c79c60",
+    "queuedAt": "2026-05-07T10:42:14.680Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+      "name": "Huda",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Curriculum developer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-07.",
+      "createdAt": "2026-05-07T10:42:14.678Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-07T10:42:14.678Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Huda",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
