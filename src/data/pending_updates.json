@@ -318,5 +318,35 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "cd71b8aa-fa9a-4925-9888-e4f8d05c5142",
+    "queuedAt": "2026-05-07T07:31:18.195Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "f4120b4d-0aa0-46e3-bf9d-7b8d0b3e9807",
+      "candidateId": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-07T07:31:18.176Z",
+      "createdAt": "2026-05-07T07:31:18.176Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-07T07:31:18.176Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Sales Executive pipeline."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
