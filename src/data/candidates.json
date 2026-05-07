@@ -6227,6 +6227,30 @@
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
         },
         "notes": "Self-applied via /careers"
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.727Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.748Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.840Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive. Notes: Better fit for that role"
       }
     ]
   },
@@ -6285,8 +6309,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.820Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/705c39b1-6c1c-4e9f-b3e9-a3c64f423509.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVPavanNamdar.pdf, 76 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/705c39b1-6c1c-4e9f-b3e9-a3c64f423509.pdf"
   },
   {
     "id": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
@@ -6316,6 +6353,77 @@
           "source": "HRTeam",
           "programmes": [
             "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.784Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.801Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+      },
+      {
+        "timestamp": "2026-05-07T08:10:21.861Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+      }
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+  },
+  {
+    "id": "e26c8815-43c1-47fa-b292-8aee7b58e9c6",
+    "name": "Komal Hinduja",
+    "email": "kkomalhinduja@gmail.com",
+    "phone": "8599900082",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-07.",
+    "createdAt": "2026-05-07T07:29:45.876Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-07T07:29:45.876Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Komal Hinduja",
+          "email": "kkomalhinduja@gmail.com",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
           ]
         },
         "notes": "Created via paste-in import."
