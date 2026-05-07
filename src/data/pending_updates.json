@@ -483,5 +483,27 @@
       "notes": "Pipeline move: Senior Academics Manager → Sales Executive. Notes: Better fit for that role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "49b7e539-38b6-4c7a-ac5f-fe22b25053d5",
+    "queuedAt": "2026-05-07T07:35:18.145Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "778bff34-b377-43b2-8540-1c74e24f5b8d",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-01T13:12:05.249Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-07T07:35:18.145Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
   }
 ]
