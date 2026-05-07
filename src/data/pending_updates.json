@@ -348,5 +348,24 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "efffbbb7-2c57-41f0-8d75-60ddecd7d9d5",
+    "queuedAt": "2026-05-07T07:31:43.589Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/705c39b1-6c1c-4e9f-b3e9-a3c64f423509.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVPavanNamdar.pdf, 76 KB)."
+    },
+    "retryCount": 0
   }
 ]
