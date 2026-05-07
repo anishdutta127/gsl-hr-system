@@ -299,5 +299,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "62da08fc-8d93-4a23-95cc-fb58d593b281",
+    "queuedAt": "2026-05-07T07:30:47.613Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+    },
+    "retryCount": 0
   }
 ]
