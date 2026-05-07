@@ -6454,5 +6454,39 @@
       }
     ],
     "resumeFilePath": "data/resumes/uploads/2026/05/e26c8815-43c1-47fa-b292-8aee7b58e9c6.pdf"
+  },
+  {
+    "id": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+    "name": "Huda",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Curriculum developer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-07.",
+    "createdAt": "2026-05-07T10:42:14.678Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-07T10:42:14.678Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Huda",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
