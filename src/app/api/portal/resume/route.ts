@@ -1,15 +1,19 @@
-import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { findCandidateById } from '@/lib/data'
 import { getCurrentCandidateId } from '@/lib/candidateIdentity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
-import { putBinaryFile, QueueUpstreamError } from '@/lib/queue/githubQueue'
+import {
+  deleteBinaryFile,
+  putBinaryFile,
+  QueueUpstreamError,
+} from '@/lib/queue/githubQueue'
 import { buildResumeRepoPath } from '@/lib/resumePath'
+import {
+  CANDIDATE_UPLOAD_PROFILE,
+  validateUploadedResume,
+} from '@/lib/resumeUpload'
 
 export const runtime = 'nodejs'
-
-const MAX_BYTES = 5 * 1024 * 1024 // 5 MB — tighter than staff upload, candidates send PDFs only.
-const ALLOWED_EXTS = new Set(['.pdf'])
 
 export async function POST(request: Request) {
   const candidateId = await getCurrentCandidateId()
@@ -32,33 +36,24 @@ export async function POST(request: Request) {
   }
 
   const file = formData.get('file')
-  if (!(file instanceof File)) {
-    return NextResponse.json({ message: 'No file provided.' }, { status: 400 })
-  }
-  if (file.size === 0) {
-    return NextResponse.json({ message: 'File is empty.' }, { status: 400 })
-  }
-  if (file.size > MAX_BYTES) {
-    return NextResponse.json({ message: 'File exceeds 5 MB limit.' }, { status: 413 })
-  }
-  if (file.name.includes('..') || file.name.includes('/') || file.name.includes('\\')) {
-    return NextResponse.json({ message: 'Filename contains illegal characters.' }, { status: 400 })
+  const check = validateUploadedResume(file, CANDIDATE_UPLOAD_PROFILE)
+  if (!check.ok) {
+    return NextResponse.json({ message: check.message }, { status: check.status })
   }
 
-  const ext = path.extname(file.name).toLowerCase()
-  if (!ALLOWED_EXTS.has(ext)) {
-    return NextResponse.json({ message: 'Please upload a PDF.' }, { status: 400 })
-  }
+  const repoPath = buildResumeRepoPath(candidate.id, check.ext)
+  const bytes = Buffer.from(await (file as File).arrayBuffer())
+  const fileName = (file as File).name
+  const fileSize = (file as File).size
 
-  const repoPath = buildResumeRepoPath(candidate.id, ext)
-  const bytes = Buffer.from(await file.arrayBuffer())
-
+  let fileWritten = false
   try {
     await putBinaryFile(
       repoPath,
       bytes,
       `feat(resumes): self-upload by ${candidate.name.slice(0, 40)} (${candidate.id.slice(0, 8)})`,
     )
+    fileWritten = true
     await enqueueUpdate({
       queuedBy: `candidate:${candidate.email}`,
       entity: 'candidate',
@@ -68,10 +63,13 @@ export async function POST(request: Request) {
         operation: 'candidate.set-resume',
         before: { resumeFilePath: candidate.resumeFilePath ?? null },
         after: { resumeFilePath: repoPath },
-        notes: `Resume self-uploaded via candidate portal (${file.name}, ${(file.size / 1024).toFixed(0)} KB).`,
+        notes: `Resume self-uploaded via candidate portal (${fileName}, ${(fileSize / 1024).toFixed(0)} KB).`,
       },
     })
   } catch (err) {
+    if (fileWritten) {
+      await deleteBinaryFile(repoPath, 'enqueue failed for candidate.set-resume (portal)')
+    }
     if (err instanceof QueueUpstreamError && err.status === 409) {
       console.error('[portal-resume-upload] 409 path conflict on', repoPath, err.body)
       return NextResponse.json(
@@ -83,5 +81,5 @@ export async function POST(request: Request) {
     return NextResponse.json({ message }, { status: 503 })
   }
 
-  return NextResponse.json({ ok: true })
+  return NextResponse.json({ ok: true, queued: true })
 }

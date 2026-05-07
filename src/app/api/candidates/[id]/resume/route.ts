@@ -1,15 +1,16 @@
-import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { findCandidateById } from '@/lib/data'
 import { getCurrentSession } from '@/lib/identity'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
-import { putBinaryFile, QueueUpstreamError } from '@/lib/queue/githubQueue'
+import {
+  deleteBinaryFile,
+  putBinaryFile,
+  QueueUpstreamError,
+} from '@/lib/queue/githubQueue'
 import { buildResumeRepoPath } from '@/lib/resumePath'
+import { HR_UPLOAD_PROFILE, validateUploadedResume } from '@/lib/resumeUpload'
 
 export const runtime = 'nodejs'
-
-const MAX_BYTES = 10 * 1024 * 1024 // 10 MB
-const ALLOWED_EXTS = new Set(['.pdf', '.docx'])
 
 export async function POST(request: Request, { params }: { params: { id: string } }) {
   const session = await getCurrentSession()
@@ -29,26 +30,9 @@ export async function POST(request: Request, { params }: { params: { id: string 
   }
 
   const file = formData.get('file')
-  if (!(file instanceof File)) {
-    return NextResponse.json({ message: 'No file provided.' }, { status: 400 })
-  }
-  if (file.size === 0) {
-    return NextResponse.json({ message: 'File is empty.' }, { status: 400 })
-  }
-  if (file.size > MAX_BYTES) {
-    return NextResponse.json({ message: 'File exceeds 10 MB limit.' }, { status: 413 })
-  }
-
-  // Reject path-traversal characters in the upload filename. The filename is
-  // never used for the on-disk path (we generate that from candidate ID), but
-  // we strip-test as defence in depth.
-  if (file.name.includes('..') || file.name.includes('/') || file.name.includes('\\')) {
-    return NextResponse.json({ message: 'Filename contains illegal characters.' }, { status: 400 })
-  }
-
-  const ext = path.extname(file.name).toLowerCase()
-  if (!ALLOWED_EXTS.has(ext)) {
-    return NextResponse.json({ message: 'Only .pdf or .docx allowed.' }, { status: 400 })
+  const check = validateUploadedResume(file, HR_UPLOAD_PROFILE)
+  if (!check.ok) {
+    return NextResponse.json({ message: check.message }, { status: check.status })
   }
 
   // Year/month subfoldering avoids the GitHub "too many files in one folder"
@@ -56,15 +40,19 @@ export async function POST(request: Request, { params }: { params: { id: string 
   // under the onedrive-data symlink, which would 409 on every Contents API
   // write because GitHub sees the first segment as a blob (the symlink) not
   // a tree. See docs/RUNBOOK.md "Resume upload 409" for the full root cause.
-  const repoPath = buildResumeRepoPath(candidate.id, ext)
-  const bytes = Buffer.from(await file.arrayBuffer())
+  const repoPath = buildResumeRepoPath(candidate.id, check.ext)
+  const bytes = Buffer.from(await (file as File).arrayBuffer())
+  const fileName = (file as File).name
+  const fileSize = (file as File).size
 
+  let fileWritten = false
   try {
     await putBinaryFile(
       repoPath,
       bytes,
       `feat(resumes): upload for ${candidate.name.slice(0, 40)} (${candidate.id.slice(0, 8)})`,
     )
+    fileWritten = true
     await enqueueUpdate({
       queuedBy: session.email,
       entity: 'candidate',
@@ -74,13 +62,17 @@ export async function POST(request: Request, { params }: { params: { id: string 
         operation: 'candidate.set-resume',
         before: { resumeFilePath: candidate.resumeFilePath ?? null },
         after: { resumeFilePath: repoPath },
-        notes: `Resume uploaded by ${session.email} (${file.name}, ${(file.size / 1024).toFixed(0)} KB).`,
+        notes: `Resume uploaded by ${session.email} (${fileName}, ${(fileSize / 1024).toFixed(0)} KB).`,
       },
     })
   } catch (err) {
+    if (fileWritten) {
+      // Orphan cleanup: file landed but the record-update enqueue failed.
+      // Without this, the candidate record never points at the file and the
+      // resume sits in the repo unreferenced.
+      await deleteBinaryFile(repoPath, 'enqueue failed for candidate.set-resume')
+    }
     if (err instanceof QueueUpstreamError && err.status === 409) {
-      // Don't leak the raw GitHub API body to staff. Audit log via console
-      // captures the underlying error so we can debug.
       console.error('[resume-upload] 409 path conflict on', repoPath, err.body)
       return NextResponse.json(
         {
@@ -94,5 +86,11 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return NextResponse.json({ message }, { status: 503 })
   }
 
-  return NextResponse.json({ ok: true, resumeFilePath: repoPath })
+  return NextResponse.json({
+    ok: true,
+    resumeFilePath: repoPath,
+    queued: true,
+    note:
+      'Resume saved. The candidate record will reflect within ~10 minutes once the apply runner picks up the queue. Use Sync now (Admin) to force it.',
+  })
 }

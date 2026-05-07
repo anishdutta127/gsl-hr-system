@@ -21,7 +21,6 @@
  */
 
 import crypto from 'node:crypto'
-import path from 'node:path'
 import { NextResponse } from 'next/server'
 import { enqueueUpdate } from '@/lib/queue/pendingUpdates'
 import { findRoleById } from '@/lib/data'
@@ -29,14 +28,20 @@ import { mintMagicLink } from '@/lib/candidateAuth'
 import { deliverEmail } from '@/lib/mail'
 import { loadCompany } from '@/lib/company'
 import { rateLimited } from '@/lib/rateLimit'
-import { putBinaryFile, QueueUpstreamError } from '@/lib/queue/githubQueue'
+import {
+  deleteBinaryFile,
+  putBinaryFile,
+  QueueUpstreamError,
+} from '@/lib/queue/githubQueue'
 import { buildApplicationResumePath } from '@/lib/resumePath'
+import {
+  PUBLIC_APPLY_PROFILE,
+  validateUploadedResume,
+} from '@/lib/resumeUpload'
 
 export const runtime = 'nodejs'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-const RESUME_MAX_BYTES = 5 * 1024 * 1024
-const RESUME_ALLOWED_EXTS = new Set(['.pdf'])
 
 function ipOf(request: Request): string {
   const fwd = request.headers.get('x-forwarded-for')
@@ -132,30 +137,13 @@ export async function POST(request: Request) {
     )
   }
 
+  let resumeExt: string | undefined
   if (resumeFile) {
-    if (resumeFile.size > RESUME_MAX_BYTES) {
-      return NextResponse.json(
-        { message: 'Resume file exceeds the 5 MB limit.' },
-        { status: 413 },
-      )
+    const check = validateUploadedResume(resumeFile, PUBLIC_APPLY_PROFILE)
+    if (!check.ok) {
+      return NextResponse.json({ message: check.message }, { status: check.status })
     }
-    const ext = path.extname(resumeFile.name).toLowerCase()
-    if (!RESUME_ALLOWED_EXTS.has(ext)) {
-      return NextResponse.json(
-        { message: 'Resume must be a PDF.' },
-        { status: 400 },
-      )
-    }
-    if (
-      resumeFile.name.includes('..') ||
-      resumeFile.name.includes('/') ||
-      resumeFile.name.includes('\\')
-    ) {
-      return NextResponse.json(
-        { message: 'Resume filename contains illegal characters.' },
-        { status: 400 },
-      )
-    }
+    resumeExt = check.ext
   }
 
   const now = new Date().toISOString()
@@ -164,9 +152,8 @@ export async function POST(request: Request) {
   const company = loadCompany()
 
   let resumeRepoPath: string | undefined
-  if (resumeFile) {
-    const ext = path.extname(resumeFile.name).toLowerCase()
-    resumeRepoPath = buildApplicationResumePath(candidateId, ext)
+  if (resumeFile && resumeExt) {
+    resumeRepoPath = buildApplicationResumePath(candidateId, resumeExt)
     const bytes = Buffer.from(await resumeFile.arrayBuffer())
     try {
       await putBinaryFile(
@@ -187,6 +174,7 @@ export async function POST(request: Request) {
     }
   }
 
+  let recordsQueued = false
   try {
     await enqueueUpdate({
       queuedBy: 'public:careers',
@@ -243,7 +231,14 @@ export async function POST(request: Request) {
         ],
       },
     })
+    recordsQueued = true
   } catch (err) {
+    if (resumeRepoPath && !recordsQueued) {
+      // Orphan cleanup: file landed but we couldn't queue the candidate +
+      // application records. Drop the PDF so the repo doesn't accumulate
+      // unreferenced uploads. Best-effort; logged on failure.
+      await deleteBinaryFile(resumeRepoPath, 'enqueue failed for public application')
+    }
     const message = err instanceof Error ? err.message : 'Could not save.'
     return NextResponse.json({ message }, { status: 503 })
   }

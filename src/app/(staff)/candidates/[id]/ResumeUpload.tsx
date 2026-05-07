@@ -8,9 +8,11 @@ export function ResumeUpload({ candidateId }: { candidateId: string }) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [queuedNote, setQueuedNote] = useState<string | null>(null)
 
   async function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setError(null)
+    setQueuedNote(null)
     const file = e.target.files?.[0]
     if (!file) return
     setBusy(true)
@@ -27,8 +29,13 @@ export function ResumeUpload({ candidateId }: { candidateId: string }) {
         setBusy(false)
         return
       }
+      // The file commits immediately, but the candidate record's
+      // resumeFilePath update goes through the queue — the page will keep
+      // showing "no resume" until the apply runner picks up. Be honest.
+      setQueuedNote(
+        'Resume saved. The candidate record updates within ~10 minutes; admins can use Sync now to force it.',
+      )
       router.refresh()
-      // Reset the input so re-uploading the same filename re-triggers change.
       if (inputRef.current) inputRef.current.value = ''
     } catch {
       setError("We couldn't reach our server.")
@@ -51,6 +58,11 @@ export function ResumeUpload({ candidateId }: { candidateId: string }) {
         />
       </label>
       {error && <span className="text-xs text-danger">{error}</span>}
+      {queuedNote && (
+        <span role="status" aria-live="polite" className="max-w-xs text-right text-xs text-ink-2">
+          {queuedNote}
+        </span>
+      )}
     </span>
   )
 }
