@@ -6392,6 +6392,18 @@
           "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
         },
         "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+      },
+      {
+        "timestamp": "2026-05-07T10:38:38.488Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
       }
     ],
     "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
@@ -6427,7 +6439,20 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-07T10:38:38.511Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/e26c8815-43c1-47fa-b292-8aee7b58e9c6.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CVKOMALHINDUJA.pdf, 145 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/e26c8815-43c1-47fa-b292-8aee7b58e9c6.pdf"
   }
 ]

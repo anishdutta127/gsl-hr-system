@@ -2039,5 +2039,133 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-07T08:10:21.874Z"
+  },
+  {
+    "id": "d1174522-0ff8-4714-a5b5-de9ced2bace0",
+    "queuedAt": "2026-05-07T09:54:11.341Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "7f5b90be-140d-4419-bbd6-e2e1338bd44e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/7f5b90be-140d-4419-bbd6-e2e1338bd44e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVMohdFaizanFirozShaikh (1).pdf, 62 KB)."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.502Z"
+  },
+  {
+    "id": "6b3f16ba-fbe7-488d-9ac8-cb384d49c770",
+    "queuedAt": "2026-05-07T09:55:55.798Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "09cff290-1c92-4e61-af51-4b9c1f05ec03",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:27:16.086Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-07T09:55:55.797Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.503Z"
+  },
+  {
+    "id": "a5d419c1-9636-409b-bc50-2be25496925b",
+    "queuedAt": "2026-05-07T09:56:10.772Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "517c864c-d69f-43f9-9c03-8fd454123841",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:26:57.418Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-07T09:56:10.771Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.504Z"
+  },
+  {
+    "id": "6409ca55-4140-4f04-a201-476e0d170cfe",
+    "queuedAt": "2026-05-07T09:56:49.638Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "34eed21d-7438-40f4-ac42-50e65b06d37d",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:32:08.256Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-07T09:56:49.638Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.504Z"
+  },
+  {
+    "id": "3630f0d6-6a6a-4d86-b542-c499a5b3bc7c",
+    "queuedAt": "2026-05-07T09:56:52.143Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "1095426f-a125-4327-851f-264e823e5a4a",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:35:01.561Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-07T09:56:52.143Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.505Z"
+  },
+  {
+    "id": "7a74a44d-8ca4-40b5-b6fc-081a3de078d8",
+    "queuedAt": "2026-05-07T09:57:18.172Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "e26c8815-43c1-47fa-b292-8aee7b58e9c6",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/e26c8815-43c1-47fa-b292-8aee7b58e9c6.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CVKOMALHINDUJA.pdf, 145 KB)."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-07T10:38:38.524Z"
   }
 ]
