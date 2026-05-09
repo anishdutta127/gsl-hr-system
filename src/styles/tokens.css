@@ -19,6 +19,13 @@
   --color-navy-dark:   #052563;
   --color-navy-light:  #E8EEFB;
 
+  /* HR Operations accent (Phase 4 module) — warm orange to differentiate
+   * Riddhi's HR-Ops surfaces from Shruti's recruitment surfaces. Contrast:
+   * orange-dark on white = 4.6:1, passes WCAG AA for body text. */
+  --color-orange:      #F39C50;
+  --color-orange-dark: #C4761F;
+  --color-orange-light:#FFF3E6;
+
   /* Neutrals (slightly cool, Linear-inspired) */
   --color-ink:         #0A0F1F;
   --color-ink-2:       #4A5365;

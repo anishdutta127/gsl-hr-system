@@ -16,6 +16,11 @@ const config: Config = {
           dark: 'var(--color-navy-dark)',
           light: 'var(--color-navy-light)',
         },
+        orange: {
+          DEFAULT: 'var(--color-orange)',
+          dark: 'var(--color-orange-dark)',
+          light: 'var(--color-orange-light)',
+        },
         ink: {
           DEFAULT: 'var(--color-ink)',
           2: 'var(--color-ink-2)',
