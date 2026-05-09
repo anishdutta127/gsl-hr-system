@@ -282,13 +282,18 @@ export function applyOffboardingTaskStatusChange({
   return next
 }
 
-/** Permission gate for the exit interview. Stricter than tasks: only
- *  HR + Admin + GSL_INTERVIEW_VIEWERS allowlist (Leadership). HOD never
- *  sees it. Reporting Manager never sees it.
+/** Permission gate for the exit interview. HR + Admin always; Leadership
+ *  per the testing-vs-production access posture (see CLAUDE.md).
  *
- *  TESTING_OPEN_ACCESS=true bypasses the Leadership allowlist for the
- *  pre-launch testing pass with Riddhi. REMOVE BEFORE PRODUCTION (env
- *  flip — no code change). */
+ *  HOD never sees the exit interview content even for their direct
+ *  reports — that's a role-correctness gate that STAYS enforced
+ *  regardless of TESTING_OPEN_ACCESS or GSL_INTERVIEW_VIEWERS.
+ *
+ *  TESTING DEFAULT: open access for HR + Admin + Leadership.
+ *  Set TESTING_OPEN_ACCESS=false on production to enforce strict
+ *  allowlists. When GSL_INTERVIEW_VIEWERS is unset/empty, every
+ *  Leadership user is implicitly on the allowlist; set it to a
+ *  comma-separated email list to lock down. */
 export function canViewExitInterview(session: {
   role: string
   email: string
@@ -296,12 +301,18 @@ export function canViewExitInterview(session: {
   if (!session) return false
   if (session.role === 'Admin' || session.role === 'HR') return true
   if (session.role === 'Leadership') {
-    if (process.env.TESTING_OPEN_ACCESS === 'true') return true
-    const allow = (process.env.GSL_INTERVIEW_VIEWERS ?? '')
+    const flag = process.env.TESTING_OPEN_ACCESS
+    const testingOpen = flag === undefined || flag === '' ? true : flag !== 'false'
+    if (testingOpen) return true
+    // GSL_INTERVIEW_VIEWERS unset = treat every Leadership user as on the
+    // allowlist. Set explicitly on production to lock down.
+    const raw = process.env.GSL_INTERVIEW_VIEWERS
+    if (raw === undefined || raw.trim() === '') return true
+    return raw
       .split(',')
       .map((s) => s.trim().toLowerCase())
       .filter(Boolean)
-    return allow.includes(session.email.toLowerCase())
+      .includes(session.email.toLowerCase())
   }
   return false
 }

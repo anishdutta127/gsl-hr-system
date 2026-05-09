@@ -65,9 +65,11 @@ describe('canViewEmployeeDocuments + canEditEmployeeDocuments', () => {
     expect(canEditEmployeeDocuments(session({ role: 'HOD' }))).toBe(false)
   })
 
-  it('Leadership view requires email on GSL_DOCUMENT_VIEWERS allowlist', () => {
+  it('Production lockdown: TESTING_OPEN_ACCESS=false + GSL_DOCUMENT_VIEWERS set restricts Leadership to listed', () => {
+    process.env.TESTING_OPEN_ACCESS = 'false'
     delete process.env.GSL_DOCUMENT_VIEWERS
-    expect(canViewEmployeeDocuments(session({ role: 'Leadership' }))).toBe(false)
+    // Both env vars open: Leadership still in.
+    expect(canViewEmployeeDocuments(session({ role: 'Leadership' }))).toBe(true)
     process.env.GSL_DOCUMENT_VIEWERS = 'ameet.z@getsetlearn.info, jesal@getsetlearn.info'
     expect(
       canViewEmployeeDocuments(session({ role: 'Leadership', email: 'ameet.z@getsetlearn.info' })),
@@ -78,6 +80,7 @@ describe('canViewEmployeeDocuments + canEditEmployeeDocuments', () => {
     expect(
       canViewEmployeeDocuments(session({ role: 'Leadership', email: 'random@getsetlearn.info' })),
     ).toBe(false)
+    delete process.env.TESTING_OPEN_ACCESS
     delete process.env.GSL_DOCUMENT_VIEWERS
   })
 
@@ -392,13 +395,17 @@ describe('GET /api/admin/documents/[id]/download (reader)', () => {
     delete process.env.GSL_DOCUMENT_VIEWERS
   })
 
-  it('Non-allowlisted Leadership cannot read', async () => {
+  it('Non-allowlisted Leadership cannot read in PRODUCTION lockdown', async () => {
+    process.env.TESTING_OPEN_ACCESS = 'false'
+    process.env.GSL_DOCUMENT_VIEWERS = 'ameet.z@getsetlearn.info'
     mockGetSession.mockResolvedValue(LEAD_SESSION_OTHER as never)
     const { GET } = await import('@/app/api/admin/documents/[id]/download/route')
     const res = await GET(new Request('https://x/api/admin/documents/doc-1/download'), {
       params: { id: 'doc-1' },
     })
     expect(res.status).toBe(403)
+    delete process.env.TESTING_OPEN_ACCESS
+    delete process.env.GSL_DOCUMENT_VIEWERS
   })
 
   it('HR reader 404s cleanly when document is missing', async () => {

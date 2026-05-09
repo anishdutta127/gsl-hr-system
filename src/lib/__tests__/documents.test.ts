@@ -27,11 +27,19 @@ describe('canViewEmployeeDocuments', () => {
   it('HOD never allowed (Reporting Manager block)', () => {
     expect(canViewEmployeeDocuments(SESSION({ role: 'HOD' }))).toBe(false)
   })
-  it('Leadership only allowed if email is on the env allowlist', () => {
+  it('Leadership lockdown: TESTING_OPEN_ACCESS=false + viewer allowlist set restricts to listed emails', () => {
+    process.env.TESTING_OPEN_ACCESS = 'false'
     process.env.GSL_DOCUMENT_VIEWERS = 'ameet.z@getsetlearn.info'
     expect(canViewEmployeeDocuments(SESSION({ role: 'Leadership', email: 'ameet.z@getsetlearn.info' }))).toBe(true)
     expect(canViewEmployeeDocuments(SESSION({ role: 'Leadership', email: 'jesal@getsetlearn.info' }))).toBe(false)
+    delete process.env.TESTING_OPEN_ACCESS
     delete process.env.GSL_DOCUMENT_VIEWERS
+  })
+
+  it('Default-open: Leadership allowed when env vars unset (testing default)', () => {
+    delete process.env.TESTING_OPEN_ACCESS
+    delete process.env.GSL_DOCUMENT_VIEWERS
+    expect(canViewEmployeeDocuments(SESSION({ role: 'Leadership', email: 'random@gsl.in' }))).toBe(true)
   })
   it('Returns false for null session', () => {
     expect(canViewEmployeeDocuments(null)).toBe(false)

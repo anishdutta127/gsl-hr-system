@@ -173,16 +173,52 @@ Other Phase 4 mutations (taxonomy, holidays, documents, onboarding tasks, offboa
 - Email delivery via existing `deliverEmail()` (Resend if `RESEND_API_KEY` set; queue fallback otherwise).
 - `/admin/alerts/preferences`: HR reads, Admin edits. Per-category enable/disable, global kill switch, extra-recipient list. Last-25 fired alerts log surfaced inline.
 
-### TESTING_OPEN_ACCESS env override — REMOVE BEFORE PRODUCTION
-When set to `"true"` on Vercel, Leadership bypasses both `GSL_DOCUMENT_VIEWERS` and `GSL_INTERVIEW_VIEWERS` allowlists. Anish + Ameet + Ritu + Jesal can all view documents and exit interviews during the testing pass. **HR/Admin already have full access; HOD and other tighter gates STAY enforced regardless of the flag.**
+### Testing-vs-production access defaults
 
-Reactivation signal: Riddhi confirms her testing pass is complete and access should be restricted again. Anish flips the env on Vercel — no code change. The associated tests (`testingOpenAccess.test.ts`) pin the contract so the gate cannot drift.
+**Defaults are OPEN.** The system ships in testing mode so Anish + Ameet + Ritu + Jesal can poke every surface without anyone configuring env vars first. Production lockdown is one or two env vars away — no code change, no rebuild needed beyond the env flip.
+
+Env vars currently defaulted to "open" when unset:
+
+| Env var | Code default when unset | Effect when set |
+|---|---|---|
+| `TESTING_OPEN_ACCESS` | treated as `"true"` (open) | only `"false"` narrows; everything else stays open |
+| `GSL_DOCUMENT_VIEWERS` | every Leadership user is in the allowlist | only listed emails get into Leadership doc-view |
+| `GSL_INTERVIEW_VIEWERS` | every Leadership user is in the allowlist | only listed emails get into Leadership interview-view |
+
+In-system admin settings (no env var needed):
+
+| Setting | Default | Where to flip |
+|---|---|---|
+| Leave flow | `hr-mediated` (per Riddhi's preference) | Admin opens `/admin/alerts/preferences` and toggles. Persists in `src/data/system_settings.json`. |
+
+**To lock down for production**, set these on Vercel and redeploy (or just flip the env vars — no rebuild needed since they're read at request time):
+
+```
+TESTING_OPEN_ACCESS=false
+GSL_DOCUMENT_VIEWERS=ameet.z@getsetlearn.info,ritu@...,jesal@...
+GSL_INTERVIEW_VIEWERS=ameet.z@getsetlearn.info
+```
+
+The accompanying test file (`testingOpenAccess.test.ts`) pins the contract — both default-open and production-lockdown postures — so the gate cannot drift unintentionally.
+
+**Permission gates that DO NOT relax regardless of `TESTING_OPEN_ACCESS`** — these are role-correctness, not access-correctness:
+
+- **HOD never sees exit-interview content**, even for their direct reports. `canViewExitInterview` returns false for HOD always.
+- **Reporting Manager visibility scoping.** HOD only sees onboarding/offboarding tasks where they are the assignee or the employee's reporting manager. `canUserSeeTask` / `canUserSeeOffboardingTask` enforce this regardless of the flag.
+- **Sales / Operations / Premium-Sales roles cannot reach HR Ops at all.** Today the staff role enum is `Admin | HR | HOD | Leadership`; once new roles get added in a wider RBAC pass, the HR Ops page guards (`if (!isHrOrAdmin && !isLeadership && !isHod) redirect('/')`) already exclude them.
+- **Edit gates stay HR/Admin-only.** Leadership can VIEW documents + exit interviews + leave under the testing default, but cannot edit/upload/delete/approve. `canEditEmployeeDocuments`, `canEditExitInterview`, `canApproveLeave` always return false for Leadership.
+- **HOD self-approval blocked.** A HOD cannot approve their own leave application even when they are nominally their own reporting manager.
+- **Document hard-delete is Admin-only**, leave hard-delete is Admin-only, asset delete is HR/Admin-only.
+
+The reactivation signal for production lockdown: Riddhi confirms her testing pass is complete and access should be restricted. Anish sets the three env vars on Vercel — no code edit, no commit.
 
 ### New Phase 3+4 env vars
 
-- `TESTING_OPEN_ACCESS` — testing-mode flag (above). Set to `"true"` on staging.
-- `DEFAULT_LEAVE_FLOW` — `'hr-mediated'` (default) or `'self-service'`.
+- `TESTING_OPEN_ACCESS` — see above. Defaults open.
+- `GSL_DOCUMENT_VIEWERS` — see above. Defaults open.
+- `GSL_INTERVIEW_VIEWERS` — see above. Defaults open.
 - `GSL_ALERT_CRON_TOKEN` — secret the cron endpoint expects in `x-gsl-cron-token`. Same value goes in the GitHub Actions repo secret of the same name + `ALERTS_URL` (e.g., `https://hr.gsl/api/cron/alerts`).
+- `RESEND_API_KEY` — pre-existing. When unset, alerts fall back to the queue log (dev-friendly).
 
 ### Phase 3+4 defaults locked at land
 

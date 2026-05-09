@@ -44,7 +44,11 @@ export function loadEmployeeDocuments(): EmployeeDocument[] {
 
 /** Comma-separated list of additional emails (typically Leadership users
  *  like Ameet) who are explicitly allowed to view the document repository.
- *  HR + Admin already have access via role. */
+ *  HR + Admin already have access via role.
+ *
+ *  TESTING DEFAULT: when GSL_DOCUMENT_VIEWERS is unset OR empty, treat
+ *  every Leadership user as if they're on the allowlist. Set
+ *  GSL_DOCUMENT_VIEWERS=email1,email2,... on production to lock down. */
 function viewerAllowlist(): Set<string> {
   const raw = process.env.GSL_DOCUMENT_VIEWERS ?? ''
   return new Set(
@@ -55,15 +59,27 @@ function viewerAllowlist(): Set<string> {
   )
 }
 
-/** Test-mode override. When TESTING_OPEN_ACCESS=true, Leadership bypasses
- *  the env-driven allowlist for documents and exit interviews so Anish +
- *  Ameet can pre-test the full surface before Riddhi locks it down.
+/** Returns true when the document-viewer allowlist is unset or empty —
+ *  in which case every Leadership user is implicitly allowed. */
+function isViewerAllowlistOpen(): boolean {
+  const raw = process.env.GSL_DOCUMENT_VIEWERS
+  return raw === undefined || raw.trim() === ''
+}
+
+/** Test-mode override.
  *
- *  REMOVE BEFORE PRODUCTION. Reactivation signal: Riddhi confirms her
- *  testing pass is complete and access should be restricted again.
- *  Anish flips the env var to false on Vercel; no code change required. */
+ *  TESTING DEFAULT: open access for HR + Admin + Leadership.
+ *  Set TESTING_OPEN_ACCESS=false on production to enforce strict
+ *  allowlists. Anish flips the env var to false on Vercel — no code
+ *  change required.
+ *
+ *  HR/Admin already have full access via role; this flag opens up
+ *  Leadership. HOD and other tighter gates (Reporting Manager visibility
+ *  scoping, Sales/Ops blocked from HR Ops) STAY enforced regardless. */
 export function isTestingOpenAccess(): boolean {
-  return process.env.TESTING_OPEN_ACCESS === 'true'
+  const v = process.env.TESTING_OPEN_ACCESS
+  if (v === undefined || v === '') return true // default open
+  return v !== 'false'
 }
 
 export function canViewEmployeeDocuments(session: SessionClaims | null): boolean {
@@ -71,6 +87,7 @@ export function canViewEmployeeDocuments(session: SessionClaims | null): boolean
   if (session.role === 'Admin' || session.role === 'HR') return true
   if (session.role === 'Leadership') {
     if (isTestingOpenAccess()) return true
+    if (isViewerAllowlistOpen()) return true
     return viewerAllowlist().has(session.email.toLowerCase())
   }
   return false

@@ -256,9 +256,11 @@ describe('canViewExitInterview / canEditExitInterview', () => {
     expect(canEditExitInterview(session({ role: 'HOD' }))).toBe(false)
   })
 
-  it('Leadership view only via GSL_INTERVIEW_VIEWERS allowlist', () => {
+  it('Production lockdown: TESTING_OPEN_ACCESS=false + GSL_INTERVIEW_VIEWERS set restricts Leadership', () => {
+    process.env.TESTING_OPEN_ACCESS = 'false'
     delete process.env.GSL_INTERVIEW_VIEWERS
-    expect(canViewExitInterview(session({ role: 'Leadership' }))).toBe(false)
+    // Both env vars open: Leadership still in (default-open allowlist).
+    expect(canViewExitInterview(session({ role: 'Leadership' }))).toBe(true)
     process.env.GSL_INTERVIEW_VIEWERS = 'ameet.z@getsetlearn.info'
     expect(
       canViewExitInterview(session({ role: 'Leadership', email: 'ameet.z@getsetlearn.info' })),
@@ -266,6 +268,7 @@ describe('canViewExitInterview / canEditExitInterview', () => {
     expect(
       canViewExitInterview(session({ role: 'Leadership', email: 'random@getsetlearn.info' })),
     ).toBe(false)
+    delete process.env.TESTING_OPEN_ACCESS
     delete process.env.GSL_INTERVIEW_VIEWERS
   })
 

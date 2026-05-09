@@ -803,6 +803,22 @@ export interface AlertPreferences {
   updatedAt: string
 }
 
+// --- System settings (Phase 4 — admin-editable defaults) ---------------
+
+export const LEAVE_FLOWS = ['hr-mediated', 'self-service'] as const
+export type LeaveFlow = (typeof LEAVE_FLOWS)[number]
+
+export interface SystemSettings {
+  /** Whether leave applications run through the HR-mediated path
+   *  (HR opens the form on behalf of an employee) or the self-service
+   *  path (employee submits, manager approves). Defaults to
+   *  'hr-mediated' per Riddhi's stated preference; flip from
+   *  /admin/alerts/preferences when self-service ships. */
+  leaveFlow: LeaveFlow
+  updatedAt: string
+  updatedBy: string
+}
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {
