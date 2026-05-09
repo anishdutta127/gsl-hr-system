@@ -290,6 +290,29 @@ export interface Employee {
   /** Flagged during master-roster import when no Official Email ID was present. */
   officialEmailMissing?: boolean
   status: 'Active' | 'Exited'
+  /** Phase 4 lifecycle marker. Coexists with `status` (which stays the
+   * coarse Active/Exited record-state used everywhere in recruitment code).
+   * Populated by the muster migration; subsequent transitions are written
+   * by HR (probation confirm, notice period, leave). */
+  employmentStatus?: EmploymentStatus
+  /** Phase 4: rostering driver. office-5day / trainer-6day / hybrid-2day /
+   * field / remote. Inferred from department + designation at import; HR
+   * can override per-employee. */
+  workPattern?: WorkPattern
+  /** Phase 4: classifies the employee's location as a formal GSL office
+   * (Mumbai, Kolkata) vs. a remote/field-only city. Drives roster expectations. */
+  locationType?: LocationType
+  /** Phase 4: per-employee leave balances. Reset every leave year (Apr-Mar).
+   * Populated at import with the policy default; deductions land via the
+   * Phase 3 leave system. */
+  leaveBalance?: LeaveBalance
+  /** Phase 4: ISO date for the start of the current leave year (1 Apr).
+   * Renewals roll the balance and increment this. */
+  leaveYearStart?: string
+  /** Phase 4: most recent record-touch timestamp. createdAt + auditLog were
+   * the existing audit; updatedAt is a denormalised "when did this record
+   * last change" for the employees list sort. */
+  updatedAt?: string
   ctcAnnual?: number
   /** Detailed salary breakdown for appointment letter PF/PT rendering. All
    * amounts in INR. CTC/Basic/HRA/Conveyance/OtherAllowances/PFEmployee/NetTakeHome
@@ -324,6 +347,37 @@ export interface OnboardingItem {
   done: boolean
   doneAt?: string
   doneBy?: string
+}
+
+// --- HR Operations (Phase 4 additive fields, layered on Employee) --------
+
+export const WORK_PATTERNS = [
+  'office-5day',
+  'trainer-6day',
+  'hybrid-2day',
+  'field',
+  'remote',
+] as const
+export type WorkPattern = (typeof WORK_PATTERNS)[number]
+
+export const EMPLOYMENT_STATUSES = [
+  'Active',
+  'Probation',
+  'Confirmed',
+  'On Notice',
+  'On Leave',
+  'Exited',
+] as const
+export type EmploymentStatus = (typeof EMPLOYMENT_STATUSES)[number]
+
+export const LOCATION_TYPES = ['office', 'remote-field'] as const
+export type LocationType = (typeof LOCATION_TYPES)[number]
+
+export interface LeaveBalance {
+  /** Casual leave days available in the current leave year. */
+  casual: number
+  /** Sick leave days available in the current leave year. */
+  sick: number
 }
 
 // --- Prompt library (CP3 + CP4) ------------------------------------------
