@@ -6,6 +6,7 @@ import { formatDate, formatRs } from '@/lib/format'
 import { canViewEmployeeDocuments } from '@/lib/documents'
 import { probationStatus } from '@/lib/probation'
 import { loadOnboardingTasks, loadOnboardingTemplates, summariseOnboarding } from '@/lib/onboardingTasks'
+import { loadOffboardingTasks, loadOffboardingTemplates, summariseOffboarding } from '@/lib/offboardingTasks'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
 import { ProbationCard } from './ProbationCard'
@@ -189,6 +190,42 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
                     </div>
                   </>
                 )}
+              </Link>
+            )
+          })()}
+
+          {(() => {
+            const offTasks = loadOffboardingTasks().filter((t) => t.employeeId === employee.id)
+            if (offTasks.length === 0) return null
+            const offTpls = loadOffboardingTemplates()
+            const offSummary = summariseOffboarding({ templates: offTpls, tasks: offTasks })
+            const denom = offSummary.total - offSummary.notApplicable
+            const pct = denom === 0 ? 0 : Math.round((offSummary.completed / denom) * 100)
+            return (
+              <Link
+                href={`/employees/${employee.id}/offboarding`}
+                className="mt-6 block rounded-lg border border-line bg-card p-5 hover:bg-surface"
+              >
+                <div className="flex items-baseline justify-between gap-3">
+                  <h2 className="font-display text-lg text-ink">Offboarding</h2>
+                  {offSummary.isOffboarded && (
+                    <span className="rounded-sm bg-success-bg px-2 py-0.5 text-xs font-medium text-success">
+                      Complete
+                    </span>
+                  )}
+                </div>
+                <p className="mt-2 text-sm text-ink-2">
+                  {offSummary.completed} of {denom} mandatory complete
+                  {offSummary.blocked > 0 && (
+                    <span className="ml-2 text-warning">· {offSummary.blocked} blocked</span>
+                  )}
+                </p>
+                <div className="mt-2 h-1.5 overflow-hidden rounded bg-line">
+                  <div
+                    className={offSummary.isOffboarded ? 'h-full bg-success' : 'h-full bg-orange'}
+                    style={{ width: `${pct}%` }}
+                  />
+                </div>
               </Link>
             )
           })()}
