@@ -15,6 +15,64 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-05-09 — From Phase 4 Phase 2 (Onboarding/Offboarding/Assets) build
+
+### Riddhi to review the 16 onboarding task templates and 12 offboarding templates
+- Added: 2026-05-09
+- Priority: P1
+- Effort (human / CC): 30 min Riddhi review / 0
+- Reactivation signal: **Riddhi opens /onboarding for the first time** OR a real onboarding event happens. The seeded templates are best-practice Indian HR; she will want to add/remove/reword.
+- Notes: Templates editor UI is not built yet (admin pages /admin/onboarding-templates and /admin/offboarding-templates are deferred). For now, Riddhi edits `src/data/onboarding_task_templates.json` and `offboarding_task_templates.json` directly via Anish.
+
+### Build /admin/onboarding-templates and /admin/offboarding-templates editors
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 4 hr / 1.5 hr
+- Reactivation signal: **Riddhi requests her third template change** OR Anish gets tired of editing JSON for her. Phase 2 ships with templates as JSON; an editor page lets HR add/edit/disable templates without code.
+- Notes: Deferred because the seed list is comprehensive and Riddhi will want to live with it before redesigning.
+
+### Hook onboarding task auto-completion to document upload
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 1 hr / 30 min
+- Reactivation signal: **Riddhi reports double-data-entry friction**: she uploads a doc to /employees/[id]/documents and ALSO has to mark the matching onboarding task complete. Schema has the link (`OnboardingTaskTemplate.documentTemplateId`); UI just doesn't act on it yet.
+- Notes: Implementation: add a hook in /api/admin/documents POST to find onboarding tasks for the same employee whose template references the same documentTemplateId and mark them Completed.
+
+### Knowledge transfer document upload via existing repo
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 30 min / 15 min
+- Reactivation signal: **Riddhi attempts to upload a KT doc and there's no category for it.** Today the document repo has 16 templates; KT is implicitly part of "Other" or via a dedicated template. Add a "Knowledge Transfer" document template + link the offboarding `off-kt-document` task to it.
+- Notes: Trivial seed addition to `document_templates.json`. Just hasn't been requested.
+
+### exitType field UI (Voluntary / Termination / End of Contract / Retirement)
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 30 min / 15 min
+- Reactivation signal: **first termination event.** Schema has `EXIT_TYPES` enum; UI doesn't capture it. Should sit on the offboarding generate form so the exit interview can be auto-marked N/A for terminations.
+- Notes: Today HR manually flips the exit-interview task to N/A for terminations.
+
+### Resignation rescind affordance
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 1 hr / 30 min
+- Reactivation signal: **first rescinded resignation** (rare). Today the offboarding tasks persist when employmentStatus flips back to Active; HR has to manually mark them N/A en masse. A "Cancel offboarding" button on the offboarding page would do the bulk-mark + audit.
+- Notes: Edge case explicitly tested in `phase2EdgeStates.test.ts`.
+
+### Daily HR digest email (onboarding tasks due today + overdue)
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 4 hr / 1 hr
+- Reactivation signal: **Phase 4 attendance / notification module ships.** Brief said to log this — the data shape is already in place (the /onboarding overview computes overdue + due-today counts). Wiring email on a 9am IST cron is a small wrapper around the existing summary logic.
+- Notes: Deferred from Phase 2 explicitly.
+
+### IT and Accounts roles
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): half day / 2 hr
+- Reactivation signal: **second time IT or Accounts ends up with the wrong default assignee.** Today both fall back to first active HR user; the four "set up email" / "order laptop" / "F&F settlement" tasks all go to HR by default. Adding real role types and matching users would route correctly.
+- Notes: Folds into the wider RBAC redesign already logged.
+
 ## 2026-05-09 — From Phase 4 verification round (anti-Shruti-bug-class)
 
 ### Inline "Edit" links on taxonomy + holiday rows have small touch targets

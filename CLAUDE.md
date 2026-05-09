@@ -137,8 +137,38 @@ Second top-level area in the app, additive to recruitment. Sidebar has been spli
 `scripts/apply_queue.py` now handles two new employee.update operations:
 - `probation.confirm` — sets `confirmationDate` + `employmentStatus = 'Confirmed'`
 - `probation.extend` — pushes `confirmationDate` forward, keeps `employmentStatus = 'Probation'`, requires reason in audit notes
+- `employee.profile.update` — whitelisted fields: title, phone, location, workPattern, locationType, reportingTo, reportingManagerId, address, personalEmail, gender, maritalStatus
 
-Other Phase 4 mutations (taxonomy, holidays, documents) write directly via `atomicUpdateJson` rather than the queue — admin operations land rare and fine to ship one commit per edit.
+Other Phase 4 mutations (taxonomy, holidays, documents, onboarding tasks, offboarding tasks, exit interviews, F&F settlements, assets) write directly via `atomicUpdateJson` rather than the queue — admin operations land rare and fine to ship one commit per edit.
+
+## Phase 4 — Phase 2 (Onboarding + Offboarding + Assets, landed 2026-05-09)
+
+Three new modules complete the employee lifecycle:
+
+### Onboarding
+- 16 default task templates spanning pre-joining, day-1, week-1, and probation milestones (`src/data/onboarding_task_templates.json`). Categories: Documentation, IT & Assets, Workplace, HR Formalities, Manager Tasks. All flagged best-practice for Riddhi to edit.
+- Per-employee tasks live in `employee_onboarding_tasks.json`. Generation is idempotent and skips employees > 6 months past joining.
+- `/onboarding` (overview, scoped to RM for HOD), `/employees/[id]/onboarding` (per-employee checklist with inline edit), employee detail "Onboarding" widget with progress bar.
+
+### Offboarding
+- 12 default task templates pegged to either notice-start + offset OR LWD - daysBefore (`pegToLwd` flag). Triggers on `employmentStatus → On Notice` or `Exited`. Generation accepts noticeStartDate + lastWorkingDay.
+- Exit interview form + F&F settlement form on `/employees/[id]/offboarding`.
+- Exit interview confidentiality: HR + Admin can submit/edit; Leadership can read ONLY when on `GSL_INTERVIEW_VIEWERS` env allowlist; HOD never sees the interview content even for their direct reports. F&F settlement is HR/Admin-only — no Leadership view at all (will open up when the Accounts role lands).
+
+### Assets
+- Lightweight inventory: laptop / ID card / SIM / email account / other.
+- `/admin/assets` (Admin + HR write, Leadership read), per-employee section on the detail page.
+- Used by the `off-asset-return` offboarding task as the visual checklist surface.
+
+### Phase 2 defaults locked at land
+
+- **Probation review**: ob-probation-review template fires at day 180 (matches the Phase 1 probation badge math).
+- **Onboarding pre-joining tasks** auto-mark N/A when generated for back-dated joiners (we already passed those due dates).
+- **Onboarding skipped** for employees > 6 months past joining.
+- **Offboarding ff-settlement** dueDate = LWD + 30 days.
+- **Offboarding leave encashment** defaults to 0 per Riddhi's no-encashment policy (form field exists for future).
+- **IT / Accounts roles** don't exist yet; both fall back to first active HR user. Documented in `src/lib/onboardingTasks.ts:resolveAssignee`. Real RBAC pass logged in TODOs.
+- **Exit interview viewers**: env `GSL_INTERVIEW_VIEWERS` (comma-separated emails). Without it, only Admin + HR see interview content.
 
 ## Authoritative planning docs (read these for the "why")
 
