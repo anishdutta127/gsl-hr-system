@@ -1,0 +1,18 @@
+[
+  { "id": "tpl-appointment-letter", "name": "Signed Appointment Letter", "category": "employment", "isMandatory": true, "hasExpiry": false, "description": "Signed copy of the appointment letter issued by GSL." },
+  { "id": "tpl-pan-card", "name": "PAN Card", "category": "identity", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-aadhaar-card", "name": "Aadhaar Card", "category": "identity", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-10th-certificate", "name": "10th Passing Certificate", "category": "education", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-12th-certificate", "name": "12th Passing Certificate", "category": "education", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-degree-certificate", "name": "Degree Passing Certificate", "category": "education", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-prev-appointment-letter", "name": "Previous Companies' Appointment Letter", "category": "employment", "isMandatory": false, "hasExpiry": false, "applicabilityHint": "Only if previous employment exists." },
+  { "id": "tpl-relieving-letter", "name": "Relieving Letter", "category": "employment", "isMandatory": false, "hasExpiry": false, "applicabilityHint": "Mandatory if previous employment exists." },
+  { "id": "tpl-experience-letter", "name": "Experience Letter", "category": "employment", "isMandatory": false, "hasExpiry": false, "applicabilityHint": "Mandatory if previous employment exists." },
+  { "id": "tpl-passport-photo", "name": "Passport Size Photo", "category": "identity", "isMandatory": true, "hasExpiry": false },
+  { "id": "tpl-passport-copy", "name": "Passport Copy", "category": "identity", "isMandatory": false, "hasExpiry": true, "applicabilityHint": "Only if held; tracks passport expiry." },
+  { "id": "tpl-new-joinee-details", "name": "New Joinee Details (Excel)", "category": "employment", "isMandatory": true, "hasExpiry": false, "description": "GSL's joinee onboarding spreadsheet." },
+  { "id": "tpl-epfo-form", "name": "EPFO Form", "category": "employment", "isMandatory": false, "hasExpiry": false, "applicabilityHint": "Mandatory if PF is applicable." },
+  { "id": "tpl-form-12bb", "name": "Form 12BB", "category": "tax", "isMandatory": true, "hasExpiry": true, "description": "Annual investment declaration. Refresh every March; expires next FY." },
+  { "id": "tpl-medical-enrollment", "name": "Medical Enrollment", "category": "other", "isMandatory": false, "hasExpiry": true, "applicabilityHint": "Only if enrolled in GSL group health cover." },
+  { "id": "tpl-signed-contract", "name": "Signed Contract", "category": "employment", "isMandatory": false, "hasExpiry": true, "description": "Some contracts have expiry; HR sets per-document if so." }
+]

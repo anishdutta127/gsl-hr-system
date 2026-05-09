@@ -40,6 +40,11 @@ const nextConfig = {
         './data/resumes/**/*',
         './onedrive-data/seed/resumes/**/*',
       ],
+      // HR documents (Phase 4). Same single-root traversal-guard pattern as
+      // resumes; reader at /api/admin/documents/[id]/download streams them
+      // after a permission check. Adding a brand-new top-level root requires
+      // appending here AND to assertInsideHrDocumentsRoot.
+      '/api/admin/documents/[id]/download': ['./data/hr-documents/**/*'],
     },
   },
 }

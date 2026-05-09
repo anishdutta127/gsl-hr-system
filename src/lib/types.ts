@@ -445,6 +445,52 @@ export interface EmployeeOptionalHoliday {
 /** Default per-employee optional-holiday budget per leave year. */
 export const OPTIONAL_HOLIDAY_BUDGET_PER_YEAR = 2
 
+// --- Document repository (Phase 4) ---------------------------------------
+
+export const DOCUMENT_CATEGORIES = [
+  'identity',
+  'education',
+  'employment',
+  'tax',
+  'other',
+] as const
+export type DocumentCategory = (typeof DOCUMENT_CATEGORIES)[number]
+
+export interface DocumentTemplate {
+  id: string
+  name: string
+  category: DocumentCategory
+  /** When false, this template is "optional if applicable" — surfaced on
+   *  the checklist but not counted against the missing-mandatory tally. */
+  isMandatory: boolean
+  /** When true, an expiry date can be set per-upload and the system warns
+   *  on documents within 30/60/90 days of expiry. */
+  hasExpiry: boolean
+  description?: string
+  /** Optional hint about applicability — "Only if previous employment",
+   *  "Only if PF applicable", etc. Rendered as a tooltip on the checklist. */
+  applicabilityHint?: string
+}
+
+export interface EmployeeDocument {
+  id: string
+  employeeId: string
+  templateId: string
+  uploadedAt: string
+  uploadedBy: string
+  /** Repo path where the file lives. Always under data/hr-documents/. */
+  filePath: string
+  /** Original file name from the uploader, preserved for display. */
+  originalFileName: string
+  fileSize: number
+  expiresAt?: string | null
+  verified: boolean
+  verifiedBy?: string
+  verifiedAt?: string
+  notes?: string
+  auditLog: AuditEntry[]
+}
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {
