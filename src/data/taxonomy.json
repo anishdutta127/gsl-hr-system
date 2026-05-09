@@ -1,0 +1,52 @@
+{
+  "locations": {
+    "Mumbai": { "type": "office" },
+    "Kolkata": { "type": "office" },
+    "Bangalore": { "type": "remote-field", "notes": "Treated as remote per Riddhi's Phase 4 brief; promote to office when GSL opens an anchor space here." },
+    "Bandel": { "type": "remote-field" },
+    "Belgaum": { "type": "remote-field" },
+    "Chennai": { "type": "remote-field" },
+    "Contai": { "type": "remote-field" },
+    "Delhi": { "type": "remote-field" },
+    "Durgapur": { "type": "remote-field" },
+    "Faridabad": { "type": "remote-field" },
+    "Guwahati": { "type": "remote-field" },
+    "Hyderabad": { "type": "remote-field" },
+    "Indore": { "type": "remote-field" },
+    "Jharkhand": { "type": "remote-field" },
+    "Meerut": { "type": "remote-field" },
+    "Nagpur": { "type": "remote-field" },
+    "Pune": { "type": "remote-field" },
+    "Raipur": { "type": "remote-field" },
+    "Ranchi": { "type": "remote-field" },
+    "Secunderabad": { "type": "remote-field" },
+    "Siliguri": { "type": "remote-field" }
+  },
+  "departments": {
+    "Academics": {},
+    "Admin": {},
+    "Demonstration & Support": {
+      "flagged": true,
+      "notes": "Phase 4 muster import flagged this department. Riddhi to confirm canonical home (likely Operations or Sales)."
+    },
+    "Finance & Accounts": {},
+    "Founder's Office": {},
+    "Human Resources": {},
+    "Marketing": {},
+    "Operations": {},
+    "Partnerships": {},
+    "Product": {},
+    "STEM & Training": {},
+    "Sales": {},
+    "Technology": {}
+  },
+  "auditLog": [
+    {
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "muster-migration",
+      "action": "taxonomy.seed",
+      "after": { "locationCount": 21, "departmentCount": 13 },
+      "notes": "Seeded from Employee_Muster_v2.xlsx import."
+    }
+  ]
+}

@@ -380,6 +380,35 @@ export interface LeaveBalance {
   sick: number
 }
 
+/**
+ * Taxonomy metadata for the locations + departments aggregated off
+ * employees. Stored in src/data/taxonomy.json. The list of *names* is
+ * derived from employees.json on every read; this file just stores the
+ * metadata HR needs to attach to each name (locationType, flagged) and
+ * any standalone notes.
+ *
+ * Operations that mutate names (rename, merge) cascade through
+ * employees.json and update this metadata file in the same commit.
+ */
+export interface LocationMeta {
+  /** Office locations have GSL HR/admin presence on-site. Remote-field
+   *  locations are individual employees based there with no anchor office. */
+  type: LocationType
+  notes?: string
+}
+export interface DepartmentMeta {
+  /** True when Riddhi has flagged this department for review (e.g.,
+   *  "Demonstration & Support" pending decision on canonical home). */
+  flagged?: boolean
+  notes?: string
+}
+export interface Taxonomy {
+  locations: Record<string, LocationMeta>
+  departments: Record<string, DepartmentMeta>
+  /** Audit log for taxonomy mutations (rename / retype / merge). */
+  auditLog: AuditEntry[]
+}
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {

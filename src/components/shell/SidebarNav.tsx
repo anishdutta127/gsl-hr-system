@@ -26,6 +26,7 @@ import {
   PalmtreeIcon,
   BarChart3,
   ExternalLink,
+  Tags,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
@@ -81,6 +82,7 @@ const SECTIONS: NavSection[] = [
       { label: 'Holiday Calendar', href: '/holidays', icon: CalendarDays, roles: ADMIN_HR_LEAD },
       { label: 'Roster', href: '/roster', icon: CalendarClock, roles: ADMIN_HR_LEAD },
       { label: 'Documents', href: '/documents', icon: FolderLock, roles: ADMIN_HR },
+      { label: 'Locations and depts', href: '/admin/taxonomy', icon: Tags, roles: ADMIN_HR },
       { label: 'Onboarding', href: '#', icon: UserPlus, roles: ALL_STAFF, comingSoon: 'Phase 2' },
       { label: 'Offboarding', href: '#', icon: UserMinus, roles: ALL_STAFF, comingSoon: 'Phase 2' },
       { label: 'Leave', href: '#', icon: PalmtreeIcon, roles: ALL_STAFF, comingSoon: 'Phase 3' },
