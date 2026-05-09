@@ -15,6 +15,57 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-05-09 — From Phase 4 HR Operations module Phase 1
+
+### Confirm Demonstration & Support department canonical home
+- Added: 2026-05-09
+- Priority: P1
+- Effort (human / CC): 5 min / 5 min
+- Reactivation signal: **Riddhi reviews the seeded taxonomy at /admin/taxonomy.** "Demonstration & Support" is flagged in `src/data/taxonomy.json`. Likely belongs under Operations or Sales. 2 employees today (NEELADRI SEN, ARPIT SRIVASTAVA).
+- Notes: Migration left it as-is rather than guessing. Riddhi clicks "Edit → rename" on the row; the cascade-rename then updates both employees + the taxonomy metadata in one operation.
+
+### Set hybrid-2day pattern per-employee where it differs from the department default
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 30 min Riddhi review / 0
+- Reactivation signal: **Riddhi finds an Academics employee whose office days are NOT Mon+Thu**, or any other hybrid mismatch. Migration defaulted everyone to office-5day except trainers and field; hybrid is opt-in per the brief. The roster page already uses department defaults (Academics+STEM = Mon+Thu, others = Tue+Thu) when workPattern = hybrid-2day, so the data shape is ready — just needs Riddhi to flip the workPattern field on individuals via a future inline edit on /employees/[id]. UI for this is currently absent.
+- Notes: Adds an "Edit work pattern" control to the employee detail page when Phase 4 reactivates this. Until then, manual JSON edits via Anish.
+
+### Per-employee acknowledgement-email roster workflow (Riddhi's idea)
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): TBD
+- Reactivation signal: **Phase 4 attendance / exception-tracking module ships.** That's the natural place for this. Riddhi proposed daily emails asking employees to acknowledge their roster; sending 100+ emails/day and chasing non-responses creates more inbox traffic than it prevents. Defer until exception-tracking is in scope.
+- Notes: Documented here so the idea isn't lost. The acknowledgement workflow only becomes useful when there's a downstream "did Riddhi see this" tracker, which doesn't exist in Phase 1.
+
+### Employee self-service for optional holiday picks
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): per Phase 3 employee portal scope
+- Reactivation signal: **Phase 3 employee self-service portal ships.** Today HR records picks at /holidays; the budget logic + storage are already in place, just needs an employee-facing checkbox UI hooked to the same /api/admin/holidays/picks endpoint (or a new self-serve variant).
+- Notes: Riddhi confirmed Phase 1 stays HR-mediated.
+
+### Confirm Bangalore as office vs. promote
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 1 click
+- Reactivation signal: **GSL opens an anchor space in Bangalore.** Right now it's flagged as remote-field per Riddhi's "for now treat as remote" note. 13 employees today.
+- Notes: When the time comes, Riddhi clicks the type toggle on /admin/taxonomy.
+
+### Add Accounts and Reporting Manager roles to the staff role enum
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 1 day / 2 hr
+- Reactivation signal: **Phase 4 spec finalises the seven-role permission model.** Today the system has Admin / HR / HOD / Leadership. The Phase 4 brief calls for seven: Admin / HR / HR-Ops-only / Reporting Manager / Leadership / Accounts / Employee. Document repository view-allowlist (GSL_DOCUMENT_VIEWERS env) is the stopgap until Accounts becomes a real role.
+- Notes: Probably folds into a wider RBAC redesign rather than landing in isolation.
+
+### Roster CSV export → real Excel (.xlsx)
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 2 hr
+- Reactivation signal: **Riddhi reports CSV doesn't preserve formatting / header weights / freezes.** Today /roster exports plain CSV via Blob; if Riddhi wants it in Excel format with formatting, swap to ExcelJS or similar.
+- Notes: CSV is good enough for v1 — Excel imports it cleanly.
+
 ## 2026-04-23 — From /plan-devex-review
 
 ### Build /admin/health operational dashboard

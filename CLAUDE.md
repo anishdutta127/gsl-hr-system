@@ -108,6 +108,38 @@ Plan docs: `plans/anish-[track]-[phase]-[date].md` (same naming as MOU).
 
 MOU lives at `C:\Users\anish\Projects\gsl-mou-system`. Reuse `src/lib/pendingUpdates.ts`, `src/lib/templates.ts`, `.github/workflows/sync-and-deploy.yml` verbatim where applicable.
 
+## Phase 4 — HR Operations module (landed 2026-05-09)
+
+Second top-level area in the app, additive to recruitment. Sidebar has been split into Recruitment (navy) + HR Operations (orange #F39C50) + Admin sections. New surfaces:
+
+- `/employees` — extended with HR-Ops fields (workPattern, employmentStatus, locationType, leaveBalance, leaveYearStart). Migration script at `scripts/migrate_employee_muster.ts` is idempotent and pulls from `phase-4-hrops-inputs/Employee_Muster_v2.xlsx`.
+- `/admin/taxonomy` — admin Locations + Departments management; rename/merge cascades through employees in one commit, metadata moves in a second.
+- `/holidays` — 2026 calendar (11 mandatory + 4 optional from `phase-4-hrops-inputs/Holiday_Calendar_2026.pdf`). HR can add/edit/delete and record per-employee optional picks (default budget: 2/year).
+- `/roster` — expected-presence calendar from work patterns, holidays auto-removed. **No exception logging in Phase 1** per Riddhi's explicit ask; Phase 4 attendance handles that.
+- `/employees/[id]/documents` + `/documents` — document repository, gated to Admin + HR + allowlisted Leadership (env: `GSL_DOCUMENT_VIEWERS=ameet@...`). Reporting Managers must NOT see.
+- Probation tracking: 6-month default from joining date; badges on /employees, confirm + extend actions on /employees/[id].
+
+### Phase 4 defaults locked at land (review/adjust as Riddhi runs into them)
+
+- **Optional holiday budget**: 2 picks/year per employee (`OPTIONAL_HOLIDAY_BUDGET_PER_YEAR` in `src/lib/types.ts`).
+- **Hybrid-2day default office days**: Academics + STEM & Training = Mon+Thu, all others = Tue+Thu. Per-employee override field exists but no UI yet (see TODOS.md).
+- **Probation default**: 6 months from `dateOfJoining`. The resolver in `src/lib/probation.ts` accepts a `months` param so per-employee extensions land cleanly.
+- **PHM (chairman, MTPL/220)**: not in muster as a real employee; reportingManagerId resolves to null; placeholder employee record kept with empty fields.
+- **Ameet/Amit Zaveri (CEO, MTPL/014)**: name spelling drift in source data. Aliased explicitly in `scripts/migrate_employee_muster.ts` so the 11 reports-to-Ameet employees resolve to MTPL/014's id.
+- **Office vs remote-field locations**: Mumbai + Kolkata are offices. Bangalore is flagged remote-field "for now" per Riddhi; promote via `/admin/taxonomy` when an anchor space opens.
+- **Demonstration & Support** department: flagged for Riddhi to confirm canonical home (probably Operations or Sales).
+- **Document viewers**: HR + Admin always; Leadership only via the `GSL_DOCUMENT_VIEWERS` env var (comma-separated emails). HOD is hard-blocked (Reporting Manager rule).
+- **Document storage path**: `data/hr-documents/[employeeId]/[uuid].pdf`. Single-root traversal-guard via `assertInsideHrDocumentsRoot`. Mirrors the resume reader pattern. To add a new top-level root, append to that helper AND to `outputFileTracingIncludes` in `next.config.mjs`.
+- **Roster exception logging**: NOT shipped in Phase 1. Riddhi's email-acknowledgement workflow proposal is deferred to Phase 4 attendance for the same reason.
+
+### Apply runner additions
+
+`scripts/apply_queue.py` now handles two new employee.update operations:
+- `probation.confirm` — sets `confirmationDate` + `employmentStatus = 'Confirmed'`
+- `probation.extend` — pushes `confirmationDate` forward, keeps `employmentStatus = 'Probation'`, requires reason in audit notes
+
+Other Phase 4 mutations (taxonomy, holidays, documents) write directly via `atomicUpdateJson` rather than the queue — admin operations land rare and fine to ship one commit per edit.
+
 ## Authoritative planning docs (read these for the "why")
 
 Phase 1 is specified across four living documents in this repo. When anything about scope, premises, architecture, or visual design is ambiguous, these files are the source of truth, not this CLAUDE.md:
