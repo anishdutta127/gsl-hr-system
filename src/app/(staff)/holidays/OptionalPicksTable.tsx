@@ -25,6 +25,7 @@ export function OptionalPicksTable({
   const [filter, setFilter] = useState('')
   const [busyKey, setBusyKey] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [status, setStatus] = useState<string | null>(null)
   const router = useRouter()
 
   const pickIndex = useMemo(() => {
@@ -56,6 +57,7 @@ export function OptionalPicksTable({
     const key = `${employeeId}|${holidayId}`
     setBusyKey(key)
     setError(null)
+    setStatus(null)
     try {
       const res = await fetch('/api/admin/holidays/picks', {
         method: 'POST',
@@ -66,6 +68,10 @@ export function OptionalPicksTable({
         const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Toggle failed: ${res.status}`)
       }
+      const body = (await res.json()) as { action?: 'added' | 'removed' }
+      const verb = body.action === 'removed' ? 'Removed' : 'Saved'
+      setStatus(`${verb}. The pick reflects on the roster once Vercel rebuilds (~2 minutes).`)
+      setTimeout(() => setStatus(null), 8000)
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Toggle failed.')
@@ -84,6 +90,11 @@ export function OptionalPicksTable({
           className="w-full max-w-md rounded border border-line-strong bg-card px-3 py-1.5 text-sm"
         />
         {error && <p className="mt-2 text-xs text-danger">{error}</p>}
+        {status && (
+          <p role="status" aria-live="polite" className="mt-2 text-xs text-ink-2">
+            {status}
+          </p>
+        )}
       </div>
       <div className="max-h-[600px] overflow-auto">
         <table className="w-full text-sm">
@@ -115,16 +126,20 @@ export function OptionalPicksTable({
                     const checked = pickIndex.has(key)
                     const wouldExceed = !checked && used >= OPTIONAL_HOLIDAY_BUDGET_PER_YEAR
                     return (
-                      <td key={h.id} className="px-3 py-2 text-center">
-                        <input
-                          type="checkbox"
-                          checked={checked}
-                          disabled={busyKey === key || wouldExceed}
-                          onChange={() => toggle(emp.id, h.id)}
-                          aria-label={`${emp.name} picks ${h.name}`}
-                          className="h-4 w-4 cursor-pointer accent-orange disabled:cursor-not-allowed disabled:opacity-50"
+                      <td key={h.id} className="px-3 py-3 text-center">
+                        <label
+                          className="inline-flex min-h-[44px] min-w-[44px] cursor-pointer items-center justify-center"
                           title={wouldExceed ? `${emp.name} has used all ${OPTIONAL_HOLIDAY_BUDGET_PER_YEAR} picks` : undefined}
-                        />
+                        >
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            disabled={busyKey === key || wouldExceed}
+                            onChange={() => toggle(emp.id, h.id)}
+                            aria-label={`${emp.name} picks ${h.name}`}
+                            className="h-5 w-5 cursor-pointer accent-orange disabled:cursor-not-allowed disabled:opacity-50"
+                          />
+                        </label>
                       </td>
                     )
                   })}

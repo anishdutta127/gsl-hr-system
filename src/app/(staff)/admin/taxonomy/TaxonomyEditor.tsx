@@ -77,11 +77,13 @@ function LocationRow({ loc }: { loc: LocationView }) {
   const [type, setType] = useState<LocationType>(loc.type)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [status, setStatus] = useState<string | null>(null)
   const router = useRouter()
 
   async function save() {
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       if (type !== loc.type) {
         await postJson('/api/admin/taxonomy', {
@@ -100,6 +102,8 @@ function LocationRow({ loc }: { loc: LocationView }) {
         })
       }
       setEditing(false)
+      setStatus('Saved. The change reflects everywhere once Vercel rebuilds (~2 minutes).')
+      setTimeout(() => setStatus(null), 8000)
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Save failed.')
@@ -154,7 +158,7 @@ function LocationRow({ loc }: { loc: LocationView }) {
             <button
               onClick={save}
               disabled={busy}
-              className="rounded bg-navy px-3 py-1 text-xs font-medium text-white hover:bg-navy-dark disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-50"
             >
               {busy ? 'Saving...' : 'Save'}
             </button>
@@ -166,7 +170,7 @@ function LocationRow({ loc }: { loc: LocationView }) {
                 setError(null)
               }}
               disabled={busy}
-              className="rounded border border-line-strong px-3 py-1 text-xs text-ink-2 hover:bg-surface"
+              className="inline-flex min-h-[44px] items-center rounded border border-line-strong px-4 py-2 text-sm text-ink-2 hover:bg-surface"
             >
               Cancel
             </button>
@@ -180,6 +184,11 @@ function LocationRow({ loc }: { loc: LocationView }) {
           </button>
         )}
         {error && <p className="mt-1 text-xs text-danger">{error}</p>}
+        {status && (
+          <p role="status" aria-live="polite" className="mt-1 text-xs text-ink-2">
+            {status}
+          </p>
+        )}
       </td>
     </tr>
   )
@@ -190,11 +199,13 @@ function DepartmentRow({ dept }: { dept: DepartmentView }) {
   const [name, setName] = useState(dept.name)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [status, setStatus] = useState<string | null>(null)
   const router = useRouter()
 
   async function save() {
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       if (name.trim() && name.trim() !== dept.name) {
         await postJson('/api/admin/taxonomy', {
@@ -205,6 +216,8 @@ function DepartmentRow({ dept }: { dept: DepartmentView }) {
         })
       }
       setEditing(false)
+      setStatus('Saved. The change reflects everywhere once Vercel rebuilds (~2 minutes).')
+      setTimeout(() => setStatus(null), 8000)
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Save failed.')
@@ -245,7 +258,7 @@ function DepartmentRow({ dept }: { dept: DepartmentView }) {
             <button
               onClick={save}
               disabled={busy}
-              className="rounded bg-navy px-3 py-1 text-xs font-medium text-white hover:bg-navy-dark disabled:opacity-50"
+              className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-50"
             >
               {busy ? 'Saving...' : 'Save'}
             </button>
@@ -256,7 +269,7 @@ function DepartmentRow({ dept }: { dept: DepartmentView }) {
                 setError(null)
               }}
               disabled={busy}
-              className="rounded border border-line-strong px-3 py-1 text-xs text-ink-2 hover:bg-surface"
+              className="inline-flex min-h-[44px] items-center rounded border border-line-strong px-4 py-2 text-sm text-ink-2 hover:bg-surface"
             >
               Cancel
             </button>
@@ -270,6 +283,11 @@ function DepartmentRow({ dept }: { dept: DepartmentView }) {
           </button>
         )}
         {error && <p className="mt-1 text-xs text-danger">{error}</p>}
+        {status && (
+          <p role="status" aria-live="polite" className="mt-1 text-xs text-ink-2">
+            {status}
+          </p>
+        )}
       </td>
     </tr>
   )

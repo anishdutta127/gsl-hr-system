@@ -15,6 +15,43 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-05-09 — From Phase 4 verification round (anti-Shruti-bug-class)
+
+### Inline "Edit" links on taxonomy + holiday rows have small touch targets
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 30 min
+- Reactivation signal: **Riddhi reports difficulty editing rows on her phone.** The current "Edit" link is text-only with no padding (~16-18px tall), below the 44px WCAG target. Works fine with a mouse. Affects /admin/taxonomy and /holidays.
+- Notes: Promoted to inline buttons or made the entire row tap-to-expand. Defer until Riddhi actually edits from her phone — desktop is the dominant surface.
+
+### Optional holiday picks table is dense on mobile
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 1 hr
+- Reactivation signal: **Riddhi attempts to record picks from a 375px screen and complains.** Current matrix view (4 holiday columns + employee rows) requires horizontal scroll on phones. Functionally works, awkward.
+- Notes: Better UX would be a per-employee accordion view that switches in below 768px. Not built because Riddhi will run picks from a desktop during quarterly admin sessions.
+
+### Add Delete and Add actions to /admin/taxonomy
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 1 hr
+- Reactivation signal: **Riddhi has a stale taxonomy entry with 0 employees that she wants gone, OR a brand-new location/department to add before any employee gets it.** Today she can rename-to-merge, but cannot delete a 0-count entry, nor pre-create a new entry without the muster.
+- Notes: Phase 1 ships the rename/merge path because that covers 95% of admin needs. Add when explicit demand surfaces.
+
+### Surface employmentStatus mismatches with confirmation date
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 30 min
+- Reactivation signal: **a record drifts where employmentStatus = "Probation" but confirmationDate is in the past, or vice versa.** Today the probation badge always uses date-derived truth and ignores employmentStatus drift. Riddhi might hand-edit JSON and inadvertently create a drift; the system silently picks the date.
+- Notes: Add a small "Data inconsistency: confirmation date conflicts with employment status" warning banner on the employee detail. Low value until this drift actually happens.
+
+### On Notice / On Leave UI for employmentStatus
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 2 hr
+- Reactivation signal: **first employee enters notice period or extended leave.** The schema already has these enum values; only the probation flow wires UI. On Notice / On Leave need their own actions on the employee detail.
+- Notes: Phase 4 attendance + leave systems naturally want to read these. Build alongside.
+
 ## 2026-05-09 — From Phase 4 HR Operations module Phase 1
 
 ### Confirm Demonstration & Support department canonical home

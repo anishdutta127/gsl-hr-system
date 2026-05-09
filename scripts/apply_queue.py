@@ -185,6 +185,32 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
+    # Phase 4 employee profile edit. Whitelisted fields only — anything that
+    # affects compensation or recruitment-side joins (ctcAnnual,
+    # salaryStructure, candidateId, applicationId, status) goes through its
+    # own dedicated operation.
+    if op == "employee.profile.update":
+        editable_fields = (
+            "title",
+            "phone",
+            "location",
+            "workPattern",
+            "locationType",
+            "reportingTo",
+            "reportingManagerId",
+            "address",
+            "personalEmail",
+            "gender",
+            "maritalStatus",
+        )
+        if isinstance(after, dict):
+            for key in editable_fields:
+                if key in after:
+                    entity[key] = after[key]
+        entity["updatedAt"] = now_iso()
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
     # User password self-serve change
     if op == "user.password-change":
         if isinstance(after, dict) and "bcryptHash" in after:

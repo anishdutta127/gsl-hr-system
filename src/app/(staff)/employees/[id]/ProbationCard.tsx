@@ -23,23 +23,34 @@ export function ProbationCard({
   const [mode, setMode] = useState<'idle' | 'extend'>('idle')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [statusMsg, setStatusMsg] = useState<string | null>(null)
   const [extendDate, setExtendDate] = useState(status.endsAt ?? '')
   const [reason, setReason] = useState('')
   const router = useRouter()
 
+  function notify(msg: string) {
+    setStatusMsg(msg)
+    setTimeout(() => setStatusMsg(null), 12000)
+  }
+
   async function confirm() {
     setBusy(true)
     setError(null)
+    setStatusMsg(null)
     try {
       const res = await fetch(`/api/employees/${employeeId}/probation`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'confirm' }),
       })
+      const data = (await res.json().catch(() => ({}))) as { message?: string; note?: string }
       if (!res.ok) {
-        const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Confirm failed: ${res.status}`)
       }
+      notify(
+        data.note ??
+          'Confirmation queued. Reflects in the employee record after the next sync (~5-10 minutes; Admin can hit Sync now to speed it up).',
+      )
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Confirm failed.')
@@ -51,17 +62,22 @@ export function ProbationCard({
   async function submitExtend() {
     setBusy(true)
     setError(null)
+    setStatusMsg(null)
     try {
       const res = await fetch(`/api/employees/${employeeId}/probation`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action: 'extend', newEndDate: extendDate, reason }),
       })
+      const data = (await res.json().catch(() => ({}))) as { message?: string; note?: string }
       if (!res.ok) {
-        const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Extend failed: ${res.status}`)
       }
       setMode('idle')
+      notify(
+        data.note ??
+          'Extension queued. Reflects in the employee record after the next sync (~5-10 minutes; Admin can hit Sync now to speed it up).',
+      )
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Extend failed.')
@@ -94,14 +110,14 @@ export function ProbationCard({
               <button
                 onClick={confirm}
                 disabled={busy}
-                className="rounded bg-success px-3 py-1.5 text-xs font-medium text-white hover:opacity-90 disabled:opacity-50"
+                className="inline-flex min-h-[44px] items-center rounded bg-success px-4 py-2 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
               >
                 Confirm probation
               </button>
               <button
                 onClick={() => setMode('extend')}
                 disabled={busy}
-                className="rounded border border-line-strong px-3 py-1.5 text-xs text-ink hover:bg-surface"
+                className="inline-flex min-h-[44px] items-center rounded border border-line-strong px-4 py-2 text-sm text-ink hover:bg-surface"
               >
                 Extend
               </button>
@@ -137,7 +153,7 @@ export function ProbationCard({
                 <button
                   onClick={submitExtend}
                   disabled={busy || !extendDate || !reason.trim()}
-                  className="rounded bg-navy px-3 py-1.5 text-xs font-medium text-white hover:bg-navy-dark disabled:opacity-50"
+                  className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-50"
                 >
                   {busy ? 'Saving...' : 'Save extension'}
                 </button>
@@ -147,7 +163,7 @@ export function ProbationCard({
                     setError(null)
                   }}
                   disabled={busy}
-                  className="rounded border border-line-strong px-3 py-1.5 text-xs text-ink-2 hover:bg-surface"
+                  className="inline-flex min-h-[44px] items-center rounded border border-line-strong px-4 py-2 text-sm text-ink-2 hover:bg-surface"
                 >
                   Cancel
                 </button>
@@ -156,6 +172,11 @@ export function ProbationCard({
           )}
           {error && <p className="mt-2 text-xs text-danger">{error}</p>}
         </div>
+      )}
+      {statusMsg && (
+        <p role="status" aria-live="polite" className="mt-3 text-xs text-ink-2">
+          {statusMsg}
+        </p>
       )}
     </div>
   )

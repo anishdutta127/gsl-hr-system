@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { findEmployeeById } from '@/lib/data'
+import { findEmployeeById, loadEmployees } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { canViewEmployeeDocuments } from '@/lib/documents'
@@ -9,6 +9,7 @@ import { OnboardingChecklist } from './OnboardingChecklist'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
 import { ProbationCard } from './ProbationCard'
+import { EmployeeProfileEdit } from './EmployeeProfileEdit'
 
 export const dynamic = 'force-dynamic'
 
@@ -54,13 +55,53 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
 
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
         <section aria-labelledby="profile-heading">
-          <h2 id="profile-heading" className="mb-3 font-display text-lg text-ink">
-            Profile
-          </h2>
+          <div className="mb-3 flex items-baseline justify-between gap-3">
+            <h2 id="profile-heading" className="font-display text-lg text-ink">
+              Profile
+            </h2>
+            {canEdit && employee.status === 'Active' && (
+              <EmployeeProfileEdit
+                employeeId={employee.id}
+                initial={{
+                  title: employee.title ?? null,
+                  phone: employee.phone ?? null,
+                  location: employee.location ?? '',
+                  workPattern: employee.workPattern ?? 'office-5day',
+                  reportingTo: employee.reportingTo ?? null,
+                  address: employee.address ?? null,
+                  personalEmail: employee.personalEmail ?? null,
+                  gender: employee.gender ?? null,
+                  maritalStatus: employee.maritalStatus ?? null,
+                }}
+                knownLocations={[
+                  ...new Set(
+                    loadEmployees()
+                      .map((e) => e.location)
+                      .filter((l): l is string => !!l && l.length > 0),
+                  ),
+                ].sort()}
+              />
+            )}
+          </div>
           <dl className="grid grid-cols-2 gap-x-6 gap-y-3 rounded-lg border border-line bg-card p-5 text-sm">
             <Term label="Email">{employee.email}</Term>
-            <Term label="Phone">{employee.phone ?? '-'}</Term>
+            <Term label="Mobile">{employee.phone ?? '-'}</Term>
+            <Term label="Personal email">{employee.personalEmail ?? '-'}</Term>
+            <Term label="Location">
+              {employee.location || '-'}{' '}
+              {employee.locationType && (
+                <span className="ml-1 rounded-sm bg-surface px-1.5 py-0.5 text-[10px] text-ink-3">
+                  {employee.locationType === 'office' ? 'Office' : 'Remote/field'}
+                </span>
+              )}
+            </Term>
+            <Term label="Work pattern">{employee.workPattern ?? 'office-5day'}</Term>
             <Term label="Reporting to">{employee.reportingTo ?? '-'}</Term>
+            <Term label="Gender">{employee.gender ?? '-'}</Term>
+            <Term label="Marital status">{employee.maritalStatus ?? '-'}</Term>
+            <Term label="Address">
+              <span className="whitespace-pre-wrap">{employee.address ?? '-'}</span>
+            </Term>
             {canSeeSalary && (
               <Term label="Annual CTC">
                 {employee.ctcAnnual != null ? formatRs(employee.ctcAnnual) : '-'}

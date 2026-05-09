@@ -32,8 +32,8 @@ export function DocumentChecklist({
   canEdit: boolean
 }) {
   return (
-    <div className="overflow-hidden rounded-lg border border-line bg-card">
-      <table className="w-full text-sm">
+    <div className="overflow-x-auto rounded-lg border border-line bg-card">
+      <table className="w-full min-w-[720px] text-sm">
         <thead>
           <tr className="border-b border-line text-left text-xs uppercase tracking-wider text-ink-3">
             <th className="px-5 py-2">Document</th>
@@ -65,11 +65,18 @@ function DocRow({
   const fileRef = useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [status, setStatus] = useState<string | null>(null)
   const router = useRouter()
+
+  function notify(msg: string) {
+    setStatus(msg)
+    setTimeout(() => setStatus(null), 8000)
+  }
 
   async function upload(file: File) {
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       const fd = new FormData()
       fd.append('employeeId', employeeId)
@@ -80,6 +87,7 @@ function DocRow({
         const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Upload failed: ${res.status}`)
       }
+      notify('Uploaded. Document appears in the checklist once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Upload failed.')
@@ -93,6 +101,7 @@ function DocRow({
     if (!row.document) return
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       const res = await fetch('/api/admin/documents', {
         method: 'PATCH',
@@ -103,6 +112,9 @@ function DocRow({
         const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Update failed: ${res.status}`)
       }
+      notify(
+        `${row.document.verified ? 'Marked unverified' : 'Verified'}. Status updates once Vercel rebuilds (~2 minutes).`,
+      )
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Update failed.')
@@ -115,6 +127,7 @@ function DocRow({
     if (!row.document) return
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       const res = await fetch('/api/admin/documents', {
         method: 'PATCH',
@@ -128,6 +141,7 @@ function DocRow({
         const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Update failed: ${res.status}`)
       }
+      notify('Expiry saved. Reflects in alerts once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Update failed.')
@@ -141,6 +155,7 @@ function DocRow({
     if (!confirm(`Delete ${row.template.name}?`)) return
     setBusy(true)
     setError(null)
+    setStatus(null)
     try {
       const res = await fetch(`/api/admin/documents?id=${encodeURIComponent(row.document.id)}`, {
         method: 'DELETE',
@@ -149,6 +164,7 @@ function DocRow({
         const data = (await res.json().catch(() => ({}))) as { message?: string }
         throw new Error(data.message ?? `Delete failed: ${res.status}`)
       }
+      notify('Deleted. The row clears once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Delete failed.')
@@ -245,7 +261,7 @@ function DocRow({
               )}
             </div>
           ) : canEdit ? (
-            <label className="rounded bg-navy px-3 py-1.5 text-xs font-medium text-white hover:bg-navy-dark cursor-pointer">
+            <label className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark cursor-pointer">
               {busy ? 'Uploading...' : 'Upload'}
               <input
                 ref={fileRef}
@@ -261,6 +277,11 @@ function DocRow({
             <span className="text-xs text-ink-3">—</span>
           )}
           {error && <span className="text-xs text-danger">{error}</span>}
+          {status && (
+            <span role="status" aria-live="polite" className="text-xs text-ink-2">
+              {status}
+            </span>
+          )}
         </div>
       </td>
     </tr>

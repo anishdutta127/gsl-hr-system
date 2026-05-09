@@ -68,8 +68,8 @@ export default async function DocumentsAggregatePage() {
         <Stat label="Expired" value={totals.expired} tone="danger" />
       </div>
 
-      <div className="rounded-lg border border-line bg-card overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="rounded-lg border border-line bg-card overflow-x-auto">
+        <table className="w-full min-w-[720px] text-sm">
           <thead>
             <tr className="border-b border-line text-left text-xs uppercase tracking-wider text-ink-3">
               <th className="px-5 py-2">Employee</th>

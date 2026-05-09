@@ -14,6 +14,11 @@ export function HolidayList({
   canEdit: boolean
 }) {
   const [showCreate, setShowCreate] = useState(false)
+  const [status, setStatus] = useState<string | null>(null)
+  function notify(msg: string) {
+    setStatus(msg)
+    setTimeout(() => setStatus(null), 8000)
+  }
   return (
     <div>
       <div className="overflow-x-auto">
@@ -29,7 +34,7 @@ export function HolidayList({
           </thead>
           <tbody>
             {holidays.map((h) => (
-              <HolidayRow key={h.id} h={h} canEdit={canEdit} />
+              <HolidayRow key={h.id} h={h} canEdit={canEdit} notify={notify} />
             ))}
           </tbody>
         </table>
@@ -40,14 +45,20 @@ export function HolidayList({
             <CreateHolidayForm
               defaultType={holidays[0]?.type ?? 'mandatory'}
               onClose={() => setShowCreate(false)}
+              notify={notify}
             />
           ) : (
             <button
               onClick={() => setShowCreate(true)}
-              className="rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface"
+              className="inline-flex min-h-[44px] items-center rounded border border-line-strong bg-card px-4 py-2 text-sm font-medium text-ink hover:bg-surface"
             >
               + Add holiday
             </button>
+          )}
+          {status && (
+            <p role="status" aria-live="polite" className="mt-2 text-xs text-ink-2">
+              {status}
+            </p>
           )}
         </div>
       )}
@@ -55,12 +66,20 @@ export function HolidayList({
   )
 }
 
-function HolidayRow({ h, canEdit }: { h: HolidayWithDay; canEdit: boolean }) {
+function HolidayRow({
+  h,
+  canEdit,
+  notify,
+}: {
+  h: HolidayWithDay
+  canEdit: boolean
+  notify: (msg: string) => void
+}) {
   const [editing, setEditing] = useState(false)
   return (
     <tr className="border-b border-line/50">
       {editing ? (
-        <EditHolidayCells h={h} onClose={() => setEditing(false)} />
+        <EditHolidayCells h={h} onClose={() => setEditing(false)} notify={notify} />
       ) : (
         <>
           <td className="px-5 py-2 tabular text-ink">{h.date}</td>
@@ -83,7 +102,15 @@ function HolidayRow({ h, canEdit }: { h: HolidayWithDay; canEdit: boolean }) {
   )
 }
 
-function EditHolidayCells({ h, onClose }: { h: HolidayWithDay; onClose: () => void }) {
+function EditHolidayCells({
+  h,
+  onClose,
+  notify,
+}: {
+  h: HolidayWithDay
+  onClose: () => void
+  notify: (msg: string) => void
+}) {
   const [date, setDate] = useState(h.date)
   const [name, setName] = useState(h.name)
   const [type, setType] = useState<HolidayType>(h.type)
@@ -101,6 +128,7 @@ function EditHolidayCells({ h, onClose }: { h: HolidayWithDay; onClose: () => vo
         body: { id: h.id, date, name, type, notes: notes.trim() || null },
       })
       onClose()
+      notify('Saved. The calendar updates everywhere once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Save failed.')
@@ -117,6 +145,7 @@ function EditHolidayCells({ h, onClose }: { h: HolidayWithDay; onClose: () => vo
       await postJson(`/api/admin/holidays?id=${encodeURIComponent(h.id)}`, {
         method: 'DELETE',
       })
+      notify('Deleted. The calendar updates everywhere once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Delete failed.')
@@ -198,9 +227,11 @@ function EditHolidayCells({ h, onClose }: { h: HolidayWithDay; onClose: () => vo
 function CreateHolidayForm({
   defaultType,
   onClose,
+  notify,
 }: {
   defaultType: HolidayType
   onClose: () => void
+  notify: (msg: string) => void
 }) {
   const [date, setDate] = useState('')
   const [name, setName] = useState('')
@@ -219,6 +250,7 @@ function CreateHolidayForm({
         body: { date, name, type, notes: notes.trim() || undefined },
       })
       onClose()
+      notify('Added. The new holiday appears once Vercel rebuilds (~2 minutes).')
       router.refresh()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Create failed.')
@@ -273,14 +305,14 @@ function CreateHolidayForm({
         <button
           onClick={submit}
           disabled={busy || !date || !name}
-          className="rounded bg-navy px-3 py-1.5 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-50"
+          className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-50"
         >
           {busy ? 'Saving...' : 'Add'}
         </button>
         <button
           onClick={onClose}
           disabled={busy}
-          className="rounded border border-line-strong px-3 py-1.5 text-sm text-ink-2 hover:bg-surface"
+          className="inline-flex min-h-[44px] items-center rounded border border-line-strong px-4 py-2 text-sm text-ink-2 hover:bg-surface"
         >
           Cancel
         </button>
