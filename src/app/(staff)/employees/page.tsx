@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { loadEmployees, loadApplications, loadCandidates } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
+import { probationStatus } from '@/lib/probation'
 
 export const dynamic = 'force-dynamic'
 
@@ -152,6 +153,23 @@ export default async function EmployeesPage({
   )
 }
 
+function ProbationBadge({ prob }: { prob: ReturnType<typeof probationStatus> }) {
+  if (prob.kind === 'na' || prob.kind === 'confirmed') return null
+  if (prob.kind === 'pending-review') {
+    return (
+      <span className="ml-2 inline-flex items-center rounded-sm bg-danger-bg px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-danger">
+        Probation pending review
+      </span>
+    )
+  }
+  // probation
+  return (
+    <span className="ml-2 inline-flex items-center rounded-sm bg-orange-light px-1.5 py-0.5 text-[10px] font-medium text-orange-dark">
+      Probation · {prob.daysRemaining} days
+    </span>
+  )
+}
+
 function EmployeeSection({
   title,
   employees,
@@ -165,30 +183,34 @@ function EmployeeSection({
         {title} ({employees.length})
       </h2>
       <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
-        {employees.map((e) => (
-          <li key={e.id}>
-            <Link
-              href={`/employees/${e.id}`}
-              className="flex items-center justify-between gap-4 px-5 py-4 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
-            >
-              <span>
-                <span className="block font-medium text-ink">
-                  {e.title ? `${e.title} ` : ''}
-                  {e.name}
-                  <span className="ml-2 text-xs font-normal text-ink-3 tabular">
-                    {e.employeeCode}
+        {employees.map((e) => {
+          const prob = probationStatus(e)
+          return (
+            <li key={e.id}>
+              <Link
+                href={`/employees/${e.id}`}
+                className="flex items-center justify-between gap-4 px-5 py-4 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+              >
+                <span>
+                  <span className="block font-medium text-ink">
+                    {e.title ? `${e.title} ` : ''}
+                    {e.name}
+                    <span className="ml-2 text-xs font-normal text-ink-3 tabular">
+                      {e.employeeCode}
+                    </span>
+                    <ProbationBadge prob={prob} />
+                  </span>
+                  <span className="block text-xs text-ink-2">
+                    {e.designation} · {e.department} · Joined {formatDate(e.dateOfJoining)}
                   </span>
                 </span>
-                <span className="block text-xs text-ink-2">
-                  {e.designation} · {e.department} · Joined {formatDate(e.dateOfJoining)}
+                <span className="text-xs text-ink-3 tabular">
+                  {e.ctcAnnual != null ? formatRs(e.ctcAnnual, { compact: true }) : '-'}
                 </span>
-              </span>
-              <span className="text-xs text-ink-3 tabular">
-                {e.ctcAnnual != null ? formatRs(e.ctcAnnual, { compact: true }) : '-'}
-              </span>
-            </Link>
-          </li>
-        ))}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

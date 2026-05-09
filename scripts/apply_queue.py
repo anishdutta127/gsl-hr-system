@@ -171,6 +171,20 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
+    # Probation lifecycle (Phase 4): confirm sets confirmationDate +
+    # employmentStatus=Confirmed; extend lifts confirmationDate to a future
+    # date and keeps employmentStatus=Probation. Both write the same two
+    # fields, just with different downstream meanings.
+    if op in ("probation.confirm", "probation.extend"):
+        if isinstance(after, dict):
+            if "confirmationDate" in after:
+                entity["confirmationDate"] = after["confirmationDate"]
+            if "employmentStatus" in after:
+                entity["employmentStatus"] = after["employmentStatus"]
+        entity["updatedAt"] = now_iso()
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
     # User password self-serve change
     if op == "user.password-change":
         if isinstance(after, dict) and "bcryptHash" in after:

@@ -3,9 +3,12 @@ import Link from 'next/link'
 import { findEmployeeById } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
+import { canViewEmployeeDocuments } from '@/lib/documents'
+import { probationStatus } from '@/lib/probation'
 import { OnboardingChecklist } from './OnboardingChecklist'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
+import { ProbationCard } from './ProbationCard'
 
 export const dynamic = 'force-dynamic'
 
@@ -140,6 +143,24 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
         </section>
 
         <aside className="space-y-4">
+          <ProbationCard
+            employeeId={employee.id}
+            status={probationStatus(employee)}
+            canEdit={canEdit}
+          />
+
+          {canViewEmployeeDocuments(session) && (
+            <Link
+              href={`/employees/${employee.id}/documents`}
+              className="block rounded-lg border border-line bg-card p-5 hover:bg-surface"
+            >
+              <h2 className="font-display text-lg text-ink">Documents</h2>
+              <p className="mt-1 text-sm text-ink-2">
+                Open the document checklist for this employee →
+              </p>
+            </Link>
+          )}
+
           {employee.status === 'Active' && canEdit ? (
             <ExitInitiator employeeId={employee.id} />
           ) : null}
