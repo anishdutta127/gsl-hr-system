@@ -1,0 +1,18 @@
+[
+  { "id": "ob-appointment-letter", "name": "Send appointment letter via email", "category": "HR Formalities", "isMandatory": true, "defaultAssignee": "HR", "daysFromJoining": -7, "estimatedMinutes": 15, "documentTemplateId": "tpl-appointment-letter" },
+  { "id": "ob-verify-documents", "name": "Verify documents received (PAN, Aadhaar, education, previous employment)", "category": "Documentation", "isMandatory": true, "defaultAssignee": "HR", "daysFromJoining": -3, "estimatedMinutes": 30 },
+  { "id": "ob-email-account", "name": "Set up email account", "category": "IT & Assets", "isMandatory": true, "defaultAssignee": "IT", "daysFromJoining": -2, "estimatedMinutes": 20 },
+  { "id": "ob-spine-slack-access", "name": "Set up Spine and Slack access", "category": "IT & Assets", "isMandatory": true, "defaultAssignee": "IT", "daysFromJoining": -2, "estimatedMinutes": 20 },
+  { "id": "ob-laptop-order", "name": "Order laptop", "category": "IT & Assets", "isMandatory": true, "defaultAssignee": "IT", "daysFromJoining": -5, "estimatedMinutes": 30 },
+  { "id": "ob-inform-manager", "name": "Inform reporting manager of joining date", "category": "Manager Tasks", "isMandatory": true, "defaultAssignee": "HR", "daysFromJoining": -5, "estimatedMinutes": 10 },
+  { "id": "ob-orientation", "name": "Welcome and orientation session", "category": "HR Formalities", "isMandatory": true, "defaultAssignee": "HR", "daysFromJoining": 0, "estimatedMinutes": 60 },
+  { "id": "ob-handover-laptop", "name": "Hand over laptop, ID card, SIM", "category": "IT & Assets", "isMandatory": true, "defaultAssignee": "IT", "daysFromJoining": 0, "estimatedMinutes": 30 },
+  { "id": "ob-office-tour", "name": "Office tour (for office-based employees)", "category": "Workplace", "isMandatory": false, "defaultAssignee": "HR", "daysFromJoining": 0, "estimatedMinutes": 30, "description": "Mark N/A for remote-field employees." },
+  { "id": "ob-paperwork", "name": "Sign mandatory paperwork (NDA, conduct policy, IT policy)", "category": "HR Formalities", "isMandatory": true, "defaultAssignee": "HR", "daysFromJoining": 1, "estimatedMinutes": 30 },
+  { "id": "ob-epfo", "name": "EPFO form (if PF applicable)", "category": "HR Formalities", "isMandatory": false, "defaultAssignee": "HR", "daysFromJoining": 3, "estimatedMinutes": 20, "documentTemplateId": "tpl-epfo-form", "description": "Mark N/A if PF is not applicable." },
+  { "id": "ob-form-12bb", "name": "Form 12BB submission", "category": "HR Formalities", "isMandatory": false, "defaultAssignee": "HR", "daysFromJoining": 7, "estimatedMinutes": 15, "documentTemplateId": "tpl-form-12bb", "description": "Mark N/A if employee opts out of investment declaration." },
+  { "id": "ob-manager-1on1", "name": "Reporting manager 1:1 with goals", "category": "Manager Tasks", "isMandatory": true, "defaultAssignee": "ReportingManager", "daysFromJoining": 7, "estimatedMinutes": 60 },
+  { "id": "ob-buddy-assignment", "name": "Buddy assignment", "category": "HR Formalities", "isMandatory": false, "defaultAssignee": "HR", "daysFromJoining": 5, "estimatedMinutes": 15 },
+  { "id": "ob-3month-checkin", "name": "3-month check-in with reporting manager", "category": "Manager Tasks", "isMandatory": true, "defaultAssignee": "ReportingManager", "daysFromJoining": 90, "estimatedMinutes": 60 },
+  { "id": "ob-probation-review", "name": "Probation review at 6 months", "category": "Manager Tasks", "isMandatory": true, "defaultAssignee": "ReportingManager", "daysFromJoining": 180, "estimatedMinutes": 90, "description": "Linked to the probation badge on the employee detail page; complete this task as part of confirming probation." }
+]

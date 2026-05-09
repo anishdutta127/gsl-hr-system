@@ -5,7 +5,7 @@ import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { canViewEmployeeDocuments } from '@/lib/documents'
 import { probationStatus } from '@/lib/probation'
-import { OnboardingChecklist } from './OnboardingChecklist'
+import { loadOnboardingTasks, loadOnboardingTemplates, summariseOnboarding } from '@/lib/onboardingTasks'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
 import { ProbationCard } from './ProbationCard'
@@ -150,16 +150,48 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
             </section>
           )}
 
-          {employee.status === 'Active' ? (
-            <div className="mt-6">
-              <h2 className="mb-3 font-display text-lg text-ink">Onboarding checklist</h2>
-              <OnboardingChecklist
-                employeeId={employee.id}
-                items={employee.onboardingChecklist ?? []}
-                canEdit={canEdit}
-              />
-            </div>
-          ) : null}
+          {employee.status === 'Active' && (() => {
+            const obTasks = loadOnboardingTasks().filter((t) => t.employeeId === employee.id)
+            const tplList = loadOnboardingTemplates()
+            const summary = summariseOnboarding({ templates: tplList, tasks: obTasks })
+            const denom = summary.total - summary.notApplicable
+            const pct = denom === 0 ? 0 : Math.round((summary.completed / denom) * 100)
+            return (
+              <Link
+                href={`/employees/${employee.id}/onboarding`}
+                className="mt-6 block rounded-lg border border-line bg-card p-5 hover:bg-surface"
+              >
+                <div className="flex items-baseline justify-between gap-3">
+                  <h2 className="font-display text-lg text-ink">Onboarding</h2>
+                  {summary.isOnboarded && summary.total > 0 && (
+                    <span className="rounded-sm bg-success-bg px-2 py-0.5 text-xs font-medium text-success">
+                      Complete
+                    </span>
+                  )}
+                </div>
+                {summary.total === 0 ? (
+                  <p className="mt-2 text-sm text-ink-2">
+                    No onboarding tasks yet. Open to {canEdit ? 'generate the default checklist' : 'view'} →
+                  </p>
+                ) : (
+                  <>
+                    <p className="mt-2 text-sm text-ink-2">
+                      {summary.completed} of {denom} mandatory complete
+                      {summary.blocked > 0 && (
+                        <span className="ml-2 text-warning">· {summary.blocked} blocked</span>
+                      )}
+                    </p>
+                    <div className="mt-2 h-1.5 overflow-hidden rounded bg-line">
+                      <div
+                        className={summary.isOnboarded ? 'h-full bg-success' : 'h-full bg-orange'}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                  </>
+                )}
+              </Link>
+            )
+          })()}
 
           {employee.exit ? (
             <section className="mt-6 rounded-lg border border-line bg-card p-5">

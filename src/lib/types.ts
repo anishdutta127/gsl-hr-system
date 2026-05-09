@@ -491,6 +491,177 @@ export interface EmployeeDocument {
   auditLog: AuditEntry[]
 }
 
+// --- Onboarding workflow (Phase 4 Phase 2) ------------------------------
+
+export const ONBOARDING_CATEGORIES = [
+  'Documentation',
+  'IT & Assets',
+  'Workplace',
+  'HR Formalities',
+  'Manager Tasks',
+] as const
+export type OnboardingCategory = (typeof ONBOARDING_CATEGORIES)[number]
+
+export const TASK_STATUSES = [
+  'Not Started',
+  'In Progress',
+  'Completed',
+  'Blocked',
+  'N/A',
+] as const
+export type TaskStatus = (typeof TASK_STATUSES)[number]
+
+/** Who is responsible for a task by default. Resolved to a real userId
+ *  on the per-employee task: HR/IT/Admin go to the first matching role
+ *  user; ReportingManager resolves to employee.reportingManagerId;
+ *  Employee resolves to the employee themselves (Phase 3 self-service). */
+export const ONBOARDING_DEFAULT_ASSIGNEES = [
+  'HR',
+  'IT',
+  'Admin',
+  'ReportingManager',
+  'Employee',
+] as const
+export type OnboardingDefaultAssignee = (typeof ONBOARDING_DEFAULT_ASSIGNEES)[number]
+
+export interface OnboardingTaskTemplate {
+  id: string
+  name: string
+  description?: string
+  category: OnboardingCategory
+  isMandatory: boolean
+  defaultAssignee: OnboardingDefaultAssignee
+  /** Days from joining date when this task is expected by. Negative for
+   *  pre-joining tasks (e.g., -7 for the appointment letter). */
+  daysFromJoining: number
+  estimatedMinutes: number
+  /** Optional documentTemplate id this task references. Completing the
+   *  matching document upload auto-completes the task. */
+  documentTemplateId?: string
+}
+
+export interface OnboardingTask {
+  id: string
+  employeeId: string
+  templateId: string
+  status: TaskStatus
+  /** Resolved user id (or special string 'ReportingManager' /
+   *  'Employee' when the assignee couldn't be resolved at create time). */
+  assignedTo: string | null
+  /** Computed: employee.dateOfJoining + template.daysFromJoining. */
+  dueDate: string
+  completedAt: string | null
+  completedBy: string | null
+  notes: string
+  blockers: string
+  auditLog: AuditEntry[]
+}
+
+// --- Offboarding workflow (Phase 4 Phase 2) -----------------------------
+
+export const OFFBOARDING_CATEGORIES = [
+  'Notice Period',
+  'Knowledge Transfer',
+  'Last Day',
+  'Post-Exit',
+] as const
+export type OffboardingCategory = (typeof OFFBOARDING_CATEGORIES)[number]
+
+export const EXIT_TYPES = [
+  'Voluntary',
+  'Termination',
+  'End of Contract',
+  'Retirement',
+] as const
+export type ExitType = (typeof EXIT_TYPES)[number]
+
+export interface OffboardingTaskTemplate {
+  id: string
+  name: string
+  description?: string
+  category: OffboardingCategory
+  isMandatory: boolean
+  defaultAssignee: OnboardingDefaultAssignee | 'Accounts'
+  /** Days from notice start (Day 1 = day notice received). Use a large
+   *  positive offset for tasks pegged to last-working-day; the engine
+   *  resolves dueDate against `lastWorkingDay - daysBeforeLwd` when the
+   *  pegToLwd flag is set. */
+  daysFromNoticeStart: number
+  /** When true, daysFromNoticeStart is interpreted as "days BEFORE last
+   *  working day" (negative offset from LWD). E.g., 7 = a week before
+   *  LWD. Used for handover and KT tasks. */
+  pegToLwd?: boolean
+  estimatedMinutes: number
+}
+
+export interface OffboardingTask {
+  id: string
+  employeeId: string
+  templateId: string
+  status: TaskStatus
+  assignedTo: string | null
+  dueDate: string
+  completedAt: string | null
+  completedBy: string | null
+  notes: string
+  blockers: string
+  auditLog: AuditEntry[]
+}
+
+export interface ExitInterview {
+  employeeId: string
+  conductedAt: string
+  conductedBy: string
+  reasonForLeaving: string
+  wouldRecommend: 'Yes' | 'No' | 'Maybe' | null
+  satisfactionWithManager: 1 | 2 | 3 | 4 | 5 | null
+  satisfactionWithRole: 1 | 2 | 3 | 4 | 5 | null
+  topThingsToChange: string
+  freeText: string
+  auditLog: AuditEntry[]
+}
+
+export interface FFSettlement {
+  employeeId: string
+  finalSalaryDays: number
+  leaveEncashment: number
+  recoveryItems: Array<{ label: string; amount: number }>
+  noticePeriodAdjustment: number
+  totalNet: number
+  paidAt: string | null
+  paidBy: string | null
+  notes: string
+  auditLog: AuditEntry[]
+}
+
+// --- Asset tracking (Phase 4 Phase 2) -----------------------------------
+
+export const ASSET_TYPES = [
+  'Laptop',
+  'ID Card',
+  'SIM',
+  'Email Account',
+  'Other',
+] as const
+export type AssetType = (typeof ASSET_TYPES)[number]
+
+export const ASSET_CONDITIONS = ['New', 'Good', 'Fair', 'Damaged', 'Lost'] as const
+export type AssetCondition = (typeof ASSET_CONDITIONS)[number]
+
+export interface Asset {
+  id: string
+  type: AssetType
+  identifier: string
+  assignedTo: string | null
+  assignedAt: string | null
+  returnedAt: string | null
+  condition: AssetCondition
+  notes: string
+  createdAt: string
+  createdBy: string
+  auditLog: AuditEntry[]
+}
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {
