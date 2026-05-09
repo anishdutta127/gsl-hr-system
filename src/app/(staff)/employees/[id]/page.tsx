@@ -8,6 +8,13 @@ import { probationStatus } from '@/lib/probation'
 import { loadOnboardingTasks, loadOnboardingTemplates, summariseOnboarding } from '@/lib/onboardingTasks'
 import { loadOffboardingTasks, loadOffboardingTemplates, summariseOffboarding } from '@/lib/offboardingTasks'
 import { assetsAssignedTo, loadAssets } from '@/lib/assets'
+import {
+  leaveYearForDate,
+  loadLeaveApplications,
+  proratedEntitlement,
+  recalcBalance,
+} from '@/lib/leave'
+import { LEAVE_ENTITLEMENT_DEFAULTS } from '@/lib/types'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
 import { ProbationCard } from './ProbationCard'
@@ -151,6 +158,66 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
               )}
             </section>
           )}
+
+          {employee.status === 'Active' && (() => {
+            // Leave balance widget — computed from approved + pending leaves.
+            const today = new Date().toISOString().slice(0, 10)
+            const yearStart = leaveYearForDate(today)
+            const ent = {
+              casual: proratedEntitlement({
+                fullEntitlement: LEAVE_ENTITLEMENT_DEFAULTS.casual,
+                yearStart,
+                joiningDate: employee.dateOfJoining,
+              }),
+              sick: proratedEntitlement({
+                fullEntitlement: LEAVE_ENTITLEMENT_DEFAULTS.sick,
+                yearStart,
+                joiningDate: employee.dateOfJoining,
+              }),
+            }
+            const balance = recalcBalance({
+              employeeId: employee.id,
+              leaveYearStart: yearStart,
+              applications: loadLeaveApplications(),
+              entitlements: ent,
+            })
+            return (
+              <Link
+                href={`/employees/${employee.id}/leave`}
+                className="mt-6 block rounded-lg border border-line bg-card p-5 hover:bg-surface"
+              >
+                <h2 className="font-display text-lg text-ink">Leave balance</h2>
+                <div className="mt-3 grid grid-cols-2 gap-3 text-sm">
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-ink-3">Casual</div>
+                    <div className="font-display text-2xl tabular text-info">
+                      {balance.casual.balance}
+                      <span className="ml-1 text-sm text-ink-3">/ {balance.casual.entitlement}</span>
+                    </div>
+                    {balance.casual.pending > 0 && (
+                      <div className="text-xs text-ink-3">{balance.casual.pending} pending</div>
+                    )}
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-wider text-ink-3">Sick</div>
+                    <div className="font-display text-2xl tabular text-warning">
+                      {balance.sick.balance}
+                      <span className="ml-1 text-sm text-ink-3">/ {balance.sick.entitlement}</span>
+                    </div>
+                    {balance.sick.pending > 0 && (
+                      <div className="text-xs text-ink-3">{balance.sick.pending} pending</div>
+                    )}
+                  </div>
+                </div>
+                {balance.unpaid.taken > 0 && (
+                  <p className="mt-2 text-xs text-warning">
+                    Loss of pay year-to-date: {balance.unpaid.taken} day
+                    {balance.unpaid.taken === 1 ? '' : 's'}
+                  </p>
+                )}
+              </Link>
+            )
+          })()}
 
           {employee.status === 'Active' && (() => {
             const obTasks = loadOnboardingTasks().filter((t) => t.employeeId === employee.id)

@@ -662,6 +662,93 @@ export interface Asset {
   auditLog: AuditEntry[]
 }
 
+// --- Leave management (Phase 4 Phase 3) ----------------------------------
+
+export const LEAVE_TYPES = [
+  'casual',
+  'sick',
+  'unpaid',
+  'maternity',
+  'paternity',
+  'bereavement',
+  'compensatory',
+] as const
+export type LeaveType = (typeof LEAVE_TYPES)[number]
+
+export const LEAVE_STATUSES = [
+  'Draft',
+  'Submitted',
+  'Approved',
+  'Rejected',
+  'Cancelled',
+  'Recalled',
+] as const
+export type LeaveStatus = (typeof LEAVE_STATUSES)[number]
+
+export interface LeaveApplication {
+  id: string
+  employeeId: string
+  leaveType: LeaveType
+  /** Inclusive start date, ISO YYYY-MM-DD. */
+  startDate: string
+  /** Inclusive end date. Equals startDate for a single-day or half-day. */
+  endDate: string
+  /** Computed at apply-time, persisted for audit clarity. Accounts for
+   *  weekends + holidays per the employee's work pattern. */
+  totalDays: number
+  reason: string
+  isHalfDay: boolean
+  halfDaySession?: 'morning' | 'afternoon'
+  status: LeaveStatus
+  appliedAt: string
+  appliedBy: string
+  /** When the apply-runner moves it from Draft to Submitted. */
+  submittedAt: string | null
+  approvedBy: string | null
+  approvedAt: string | null
+  rejectionReason: string | null
+  recallReason: string | null
+  /** Set when the leave is logged retroactively (start date in the past). */
+  isEmergency: boolean
+  /** Loss-of-pay flag: total exceeded balance and the over-portion converts
+   *  to unpaid. Stored so the report can split paid vs LOP days. */
+  lossOfPayDays: number
+  /** Rejection/cancellation acknowledgment. */
+  cancelledBy?: string
+  cancelledAt?: string
+  auditLog: AuditEntry[]
+}
+
+export interface LeaveBucket {
+  /** Annual entitlement (12 for casual + sick per Riddhi). */
+  entitlement: number
+  /** Days already taken (Approved leaves count). */
+  taken: number
+  /** Days locked by Submitted (pending approval) leaves. */
+  pending: number
+  /** entitlement - taken - pending. May be negative if HR ran a manual
+   *  retroactive correction; the API rejects new applications that
+   *  would push it below zero unless the requester confirms LOP. */
+  balance: number
+}
+
+export interface LeaveBalanceRecord {
+  employeeId: string
+  /** April-1 of the active leave year. */
+  leaveYearStart: string
+  casual: LeaveBucket
+  sick: LeaveBucket
+  /** Unpaid leaves don't have an entitlement; we track only `taken`. */
+  unpaid: { taken: number }
+  updatedAt: string
+}
+
+/** Annual entitlement defaults per Riddhi: 12 casual + 12 sick = 24. */
+export const LEAVE_ENTITLEMENT_DEFAULTS = {
+  casual: 12,
+  sick: 12,
+} as const
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {

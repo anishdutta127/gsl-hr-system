@@ -5,6 +5,7 @@ import {
   loadEmployeeOptionalHolidays,
   loadHolidays,
 } from '@/lib/holidays'
+import { loadLeaveApplications } from '@/lib/leave'
 import { RosterView } from './RosterView'
 
 export const dynamic = 'force-dynamic'
@@ -30,6 +31,15 @@ export default async function RosterPage({
 
   const holidays = loadHolidays()
   const picks = loadEmployeeOptionalHolidays()
+  const approvedLeaves = loadLeaveApplications()
+    .filter((l) => l.status === 'Approved')
+    .map((l) => ({
+      employeeId: l.employeeId,
+      startDate: l.startDate,
+      endDate: l.endDate,
+      status: l.status,
+      leaveType: l.leaveType,
+    }))
 
   const compactEmployees = employees.map((e) => ({
     id: e.id,
@@ -58,6 +68,7 @@ export default async function RosterPage({
         employees={compactEmployees}
         holidays={holidays}
         picks={compactPicks}
+        approvedLeaves={approvedLeaves}
         year={year}
         month={month}
         group={group}

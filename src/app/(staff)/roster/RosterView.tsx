@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
 import {
+  buildLeaveDateSet,
   cellSymbol,
   daysInMonth,
   defaultHybridDays,
@@ -11,7 +12,7 @@ import {
   monthGridForEmployee,
   summariseMonth,
 } from '@/lib/roster'
-import type { Holiday, WorkPattern } from '@/lib/types'
+import type { Holiday, LeaveType, WorkPattern } from '@/lib/types'
 
 interface CompactEmployee {
   id: string
@@ -24,6 +25,13 @@ interface CompactEmployee {
 interface CompactPick {
   employeeId: string
   holidayId: string
+}
+interface CompactLeave {
+  employeeId: string
+  startDate: string
+  endDate: string
+  status: string
+  leaveType: LeaveType
 }
 type Group = 'person' | 'department' | 'location'
 
@@ -46,6 +54,7 @@ export function RosterView({
   employees,
   holidays,
   picks,
+  approvedLeaves,
   year,
   month,
   group,
@@ -53,6 +62,7 @@ export function RosterView({
   employees: CompactEmployee[]
   holidays: Holiday[]
   picks: CompactPick[]
+  approvedLeaves: CompactLeave[]
   year: number
   month: number
   group: Group
@@ -93,23 +103,34 @@ export function RosterView({
   const allDepartments = [...new Set(employees.map((e) => e.department))].sort()
   const allLocations = [...new Set(employees.map((e) => e.location))].sort()
 
+  const monthStart = `${year}-${String(month).padStart(2, '0')}-01`
+  const lastDay = new Date(Date.UTC(year, month, 0)).getUTCDate()
+  const monthEnd = `${year}-${String(month).padStart(2, '0')}-${String(lastDay).padStart(2, '0')}`
+
   const empGrids = filtered.map((emp) => {
     const pickedIds = picksByEmployee.get(emp.id) ?? new Set<string>()
     const dates = holidayDateSet(holidays, pickedIds)
     const hybridDays = defaultHybridDays(emp.department)
+    const empLeaves = approvedLeaves.filter((l) => l.employeeId === emp.id)
+    const leaveDates = buildLeaveDateSet({
+      approvedLeaves: empLeaves,
+      windowStart: monthStart,
+      windowEnd: monthEnd,
+    })
     const cells = monthGridForEmployee({
       workPattern: emp.workPattern,
       hybridDays,
       year,
       month1to12: month,
       holidayDates: dates,
+      leaveDates,
     })
     const summary = summariseMonth(cells)
     return { emp, cells, summary, hybridDays }
   })
 
   function exportCsv() {
-    const header = ['Code', 'Name', 'Department', 'Location', 'Pattern', ...days, 'Office', 'Off', 'Holiday']
+    const header = ['Code', 'Name', 'Department', 'Location', 'Pattern', ...days, 'Office', 'Off', 'Holiday', 'Leave']
     const lines = [header.join(',')]
     for (const { emp, cells, summary } of empGrids) {
       const row = [
@@ -122,6 +143,7 @@ export function RosterView({
         String(summary.office),
         String(summary.off),
         String(summary.holiday),
+        String(summary.leave),
       ]
       lines.push(row.join(','))
     }
@@ -242,10 +264,11 @@ export function RosterView({
         </button>
       </div>
 
-      <div className="rounded-lg border border-line bg-card text-xs text-ink-3 px-4 py-2 flex gap-4">
+      <div className="rounded-lg border border-line bg-card text-xs text-ink-3 px-4 py-2 flex flex-wrap gap-4">
         <span><span className="text-ink font-medium">O</span> = Office day</span>
         <span><span className="text-ink-2">−</span> = Off day</span>
         <span><span className="text-orange-dark font-medium">H</span> = Holiday</span>
+        <span><span className="text-info font-medium">L</span> = On leave</span>
       </div>
 
       {group === 'person' ? (
@@ -263,8 +286,8 @@ function PersonGrid({
 }: {
   empGrids: Array<{
     emp: CompactEmployee
-    cells: Array<{ date: string; kind: 'office' | 'off' | 'holiday' }>
-    summary: { office: number; off: number; holiday: number }
+    cells: Array<{ date: string; kind: 'office' | 'off' | 'holiday' | 'leave' }>
+    summary: { office: number; off: number; holiday: number; leave: number }
   }>
   days: string[]
 }) {
@@ -283,6 +306,7 @@ function PersonGrid({
             <th className="px-2 py-2 text-right">O</th>
             <th className="px-2 py-2 text-right">−</th>
             <th className="px-2 py-2 text-right">H</th>
+            <th className="px-2 py-2 text-right">L</th>
           </tr>
         </thead>
         <tbody>
@@ -301,11 +325,12 @@ function PersonGrid({
               <td className="px-2 py-1.5 text-right tabular text-ink">{summary.office}</td>
               <td className="px-2 py-1.5 text-right tabular text-ink-3">{summary.off}</td>
               <td className="px-2 py-1.5 text-right tabular text-orange-dark">{summary.holiday}</td>
+              <td className="px-2 py-1.5 text-right tabular text-info">{summary.leave}</td>
             </tr>
           ))}
           {empGrids.length === 0 && (
             <tr>
-              <td className="px-5 py-6 text-sm text-ink-3" colSpan={days.length + 5}>
+              <td className="px-5 py-6 text-sm text-ink-3" colSpan={days.length + 6}>
                 No employees match the current filter.
               </td>
             </tr>
@@ -316,9 +341,10 @@ function PersonGrid({
   )
 }
 
-function CellLabel({ kind }: { kind: 'office' | 'off' | 'holiday' }) {
+function CellLabel({ kind }: { kind: 'office' | 'off' | 'holiday' | 'leave' }) {
   if (kind === 'office') return <span className="font-medium text-ink">O</span>
   if (kind === 'holiday') return <span className="font-medium text-orange-dark">H</span>
+  if (kind === 'leave') return <span className="font-medium text-info">L</span>
   return <span className="text-ink-3">−</span>
 }
 
@@ -328,12 +354,13 @@ interface GroupSummaryRow {
   totalOffice: number
   totalOff: number
   totalHoliday: number
+  totalLeave: number
 }
 
 function aggregateByGroup(
   empGrids: Array<{
     emp: CompactEmployee
-    summary: { office: number; off: number; holiday: number }
+    summary: { office: number; off: number; holiday: number; leave: number }
   }>,
   field: 'department' | 'location',
 ): GroupSummaryRow[] {
@@ -342,11 +369,19 @@ function aggregateByGroup(
     const key = field === 'department' ? emp.department : emp.location
     const row =
       map.get(key) ??
-      ({ group: key, headcount: 0, totalOffice: 0, totalOff: 0, totalHoliday: 0 } as GroupSummaryRow)
+      ({
+        group: key,
+        headcount: 0,
+        totalOffice: 0,
+        totalOff: 0,
+        totalHoliday: 0,
+        totalLeave: 0,
+      } as GroupSummaryRow)
     row.headcount += 1
     row.totalOffice += summary.office
     row.totalOff += summary.off
     row.totalHoliday += summary.holiday
+    row.totalLeave += summary.leave
     map.set(key, row)
   }
   return [...map.values()].sort((a, b) => b.headcount - a.headcount || a.group.localeCompare(b.group))
@@ -363,6 +398,7 @@ function GroupedSummary({ rows }: { rows: GroupSummaryRow[] }) {
             <th className="px-3 py-2 text-right">Office days</th>
             <th className="px-3 py-2 text-right">Off days</th>
             <th className="px-3 py-2 text-right">Holiday days</th>
+            <th className="px-3 py-2 text-right">Leave days</th>
           </tr>
         </thead>
         <tbody>
@@ -373,11 +409,12 @@ function GroupedSummary({ rows }: { rows: GroupSummaryRow[] }) {
               <td className="px-3 py-2 text-right tabular">{r.totalOffice}</td>
               <td className="px-3 py-2 text-right tabular text-ink-3">{r.totalOff}</td>
               <td className="px-3 py-2 text-right tabular text-orange-dark">{r.totalHoliday}</td>
+              <td className="px-3 py-2 text-right tabular text-info">{r.totalLeave}</td>
             </tr>
           ))}
           {rows.length === 0 && (
             <tr>
-              <td className="px-5 py-6 text-sm text-ink-3" colSpan={5}>
+              <td className="px-5 py-6 text-sm text-ink-3" colSpan={6}>
                 No employees match the current filter.
               </td>
             </tr>

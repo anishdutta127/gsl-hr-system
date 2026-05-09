@@ -14,7 +14,7 @@
 
 import type { Holiday, WorkPattern } from './types'
 
-export type DayKind = 'office' | 'off' | 'holiday'
+export type DayKind = 'office' | 'off' | 'holiday' | 'leave'
 
 /** ISO day-of-week, 0=Sun ... 6=Sat. */
 export function dayOfWeek(dateIso: string): number {
@@ -41,20 +41,26 @@ export function defaultHybridDays(department: string): number[] {
  *   field        : no expected office presence (primarily out-of-office)
  *   remote       : no expected office presence
  *
- * Holidays trump every pattern; they appear as 'holiday' regardless of
- * whether the employee was scheduled in.
+ * Order of precedence:
+ *   leave (approved)  >  holiday  >  office  >  off
+ * The Phase 3 roster takes leaves as the source of truth — when an
+ * approved leave covers the date, the cell renders as 'leave' even on
+ * a day that would otherwise have been a holiday or off-day.
  */
 export function expectedDayKind({
   workPattern,
   dateIso,
   holidayDates,
   hybridDays,
+  leaveDates,
 }: {
   workPattern: WorkPattern
   dateIso: string
   holidayDates: Set<string>
   hybridDays: number[]
+  leaveDates?: Set<string>
 }): DayKind {
+  if (leaveDates?.has(dateIso)) return 'leave'
   if (holidayDates.has(dateIso)) return 'holiday'
   const dow = dayOfWeek(dateIso)
   switch (workPattern) {
@@ -93,29 +99,31 @@ export function monthGridForEmployee({
   year,
   month1to12,
   holidayDates,
+  leaveDates,
 }: {
   workPattern: WorkPattern
   hybridDays: number[]
   year: number
   month1to12: number
   holidayDates: Set<string>
+  leaveDates?: Set<string>
 }): Array<{ date: string; kind: DayKind }> {
   return daysInMonth(year, month1to12).map((date) => ({
     date,
-    kind: expectedDayKind({ workPattern, dateIso: date, holidayDates, hybridDays }),
+    kind: expectedDayKind({ workPattern, dateIso: date, holidayDates, hybridDays, leaveDates }),
   }))
 }
 
-/** Projection of "how many office days" + holiday count this month. */
+/** Projection of "how many office days" + holiday + leave counts. */
 export function summariseMonth(
   cells: Array<{ kind: DayKind }>,
-): { office: number; off: number; holiday: number } {
+): { office: number; off: number; holiday: number; leave: number } {
   return cells.reduce(
     (acc, c) => {
       acc[c.kind]++
       return acc
     },
-    { office: 0, off: 0, holiday: 0 },
+    { office: 0, off: 0, holiday: 0, leave: 0 },
   )
 }
 
@@ -143,5 +151,34 @@ export function cellSymbol(kind: DayKind): string {
       return '-'
     case 'holiday':
       return 'H'
+    case 'leave':
+      return 'L'
   }
+}
+
+/** Build the leave-date set from approved leaves for a given employee +
+ *  date window. The walking is inclusive on both ends. */
+export function buildLeaveDateSet({
+  approvedLeaves,
+  windowStart,
+  windowEnd,
+}: {
+  approvedLeaves: Array<{ startDate: string; endDate: string; status: string; employeeId: string }>
+  windowStart: string
+  windowEnd: string
+}): Set<string> {
+  const out = new Set<string>()
+  for (const l of approvedLeaves) {
+    if (l.status !== 'Approved') continue
+    if (l.endDate < windowStart) continue
+    if (l.startDate > windowEnd) continue
+    const startMs = new Date(`${l.startDate}T00:00:00Z`).getTime()
+    const endMs = new Date(`${l.endDate}T00:00:00Z`).getTime()
+    const day = 24 * 60 * 60 * 1000
+    for (let t = startMs; t <= endMs; t += day) {
+      const iso = new Date(t).toISOString().slice(0, 10)
+      if (iso >= windowStart && iso <= windowEnd) out.add(iso)
+    }
+  }
+  return out
 }

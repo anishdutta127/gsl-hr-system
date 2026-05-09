@@ -50,7 +50,7 @@ describe('SidebarNav.visibleSections', () => {
     expect(labels).toContain('Leave')
     expect(labels).toContain('Reports')
     const comingSoon = hrops.items.filter((i) => i.comingSoon).map((i) => i.label)
-    expect(comingSoon).toEqual(['Leave', 'Reports'])
+    expect(comingSoon).toEqual(['Reports'])
   })
 
   it('Admin section is gated to Admin role + My account for everyone', () => {

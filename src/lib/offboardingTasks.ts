@@ -284,7 +284,11 @@ export function applyOffboardingTaskStatusChange({
 
 /** Permission gate for the exit interview. Stricter than tasks: only
  *  HR + Admin + GSL_INTERVIEW_VIEWERS allowlist (Leadership). HOD never
- *  sees it. Reporting Manager never sees it. */
+ *  sees it. Reporting Manager never sees it.
+ *
+ *  TESTING_OPEN_ACCESS=true bypasses the Leadership allowlist for the
+ *  pre-launch testing pass with Riddhi. REMOVE BEFORE PRODUCTION (env
+ *  flip — no code change). */
 export function canViewExitInterview(session: {
   role: string
   email: string
@@ -292,6 +296,7 @@ export function canViewExitInterview(session: {
   if (!session) return false
   if (session.role === 'Admin' || session.role === 'HR') return true
   if (session.role === 'Leadership') {
+    if (process.env.TESTING_OPEN_ACCESS === 'true') return true
     const allow = (process.env.GSL_INTERVIEW_VIEWERS ?? '')
       .split(',')
       .map((s) => s.trim().toLowerCase())

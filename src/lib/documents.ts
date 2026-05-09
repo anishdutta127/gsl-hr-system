@@ -55,11 +55,23 @@ function viewerAllowlist(): Set<string> {
   )
 }
 
+/** Test-mode override. When TESTING_OPEN_ACCESS=true, Leadership bypasses
+ *  the env-driven allowlist for documents and exit interviews so Anish +
+ *  Ameet can pre-test the full surface before Riddhi locks it down.
+ *
+ *  REMOVE BEFORE PRODUCTION. Reactivation signal: Riddhi confirms her
+ *  testing pass is complete and access should be restricted again.
+ *  Anish flips the env var to false on Vercel; no code change required. */
+export function isTestingOpenAccess(): boolean {
+  return process.env.TESTING_OPEN_ACCESS === 'true'
+}
+
 export function canViewEmployeeDocuments(session: SessionClaims | null): boolean {
   if (!session) return false
   if (session.role === 'Admin' || session.role === 'HR') return true
-  if (session.role === 'Leadership' && viewerAllowlist().has(session.email.toLowerCase())) {
-    return true
+  if (session.role === 'Leadership') {
+    if (isTestingOpenAccess()) return true
+    return viewerAllowlist().has(session.email.toLowerCase())
   }
   return false
 }

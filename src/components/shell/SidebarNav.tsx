@@ -87,7 +87,7 @@ const SECTIONS: NavSection[] = [
       { label: 'Locations and depts', href: '/admin/taxonomy', icon: Tags, roles: ADMIN_HR },
       { label: 'Onboarding', href: '/onboarding', icon: UserPlus, roles: ALL_STAFF },
       { label: 'Offboarding', href: '/offboarding', icon: UserMinus, roles: ALL_STAFF },
-      { label: 'Leave', href: '#', icon: PalmtreeIcon, roles: ALL_STAFF, comingSoon: 'Phase 3' },
+      { label: 'Leave', href: '/leave', icon: PalmtreeIcon, roles: ALL_STAFF },
       { label: 'Reports', href: '#', icon: BarChart3, roles: ALL_STAFF, comingSoon: 'Phase 4' },
     ],
   },
