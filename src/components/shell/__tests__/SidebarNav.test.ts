@@ -43,6 +43,7 @@ describe('SidebarNav.visibleSections', () => {
     expect(labels).toContain('Holiday Calendar')
     expect(labels).toContain('Roster')
     expect(labels).toContain('Documents')
+    expect(labels).toContain('Assets')
     expect(labels).toContain('Locations and depts')
     expect(labels).toContain('Onboarding')
     expect(labels).toContain('Offboarding')

@@ -7,6 +7,7 @@ import { canViewEmployeeDocuments } from '@/lib/documents'
 import { probationStatus } from '@/lib/probation'
 import { loadOnboardingTasks, loadOnboardingTemplates, summariseOnboarding } from '@/lib/onboardingTasks'
 import { loadOffboardingTasks, loadOffboardingTemplates, summariseOffboarding } from '@/lib/offboardingTasks'
+import { assetsAssignedTo, loadAssets } from '@/lib/assets'
 import { ExitInitiator } from './ExitInitiator'
 import { SalaryStructureForm } from './SalaryStructureForm'
 import { ProbationCard } from './ProbationCard'
@@ -227,6 +228,36 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
                   />
                 </div>
               </Link>
+            )
+          })()}
+
+          {(() => {
+            const assigned = assetsAssignedTo(loadAssets(), employee.id)
+            if (assigned.length === 0) return null
+            return (
+              <section className="mt-6 rounded-lg border border-line bg-card p-5">
+                <div className="flex items-baseline justify-between">
+                  <h2 className="font-display text-lg text-ink">Assets ({assigned.length})</h2>
+                  {canEdit && (
+                    <Link href="/admin/assets" className="text-xs font-medium text-navy hover:underline">
+                      Manage →
+                    </Link>
+                  )}
+                </div>
+                <ul className="mt-3 divide-y divide-line">
+                  {assigned.map((a) => (
+                    <li key={a.id} className="flex flex-wrap items-baseline justify-between gap-2 py-2 text-sm">
+                      <span>
+                        <span className="font-medium text-ink">{a.type}</span>
+                        <span className="ml-2 text-xs text-ink-3 tabular">{a.identifier}</span>
+                      </span>
+                      <span className="text-xs text-ink-3">
+                        {a.condition} · assigned {a.assignedAt?.slice(0, 10)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
             )
           })()}
 
