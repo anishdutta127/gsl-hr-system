@@ -1,0 +1,30 @@
+name: Daily HR alerts
+
+# 9am IST = 03:30 UTC. cron is UTC.
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fire-alerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit the alerts cron endpoint
+        env:
+          ALERTS_URL: ${{ secrets.ALERTS_URL }}
+          GSL_ALERT_CRON_TOKEN: ${{ secrets.GSL_ALERT_CRON_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${ALERTS_URL:-}" ] || [ -z "${GSL_ALERT_CRON_TOKEN:-}" ]; then
+            echo "Missing ALERTS_URL or GSL_ALERT_CRON_TOKEN repo secret. Skipping."
+            exit 0
+          fi
+          response=$(curl --silent --fail --show-error \
+            --max-time 60 \
+            --header "x-gsl-cron-token: ${GSL_ALERT_CRON_TOKEN}" \
+            "${ALERTS_URL}")
+          echo "$response"

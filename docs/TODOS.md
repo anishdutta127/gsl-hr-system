@@ -15,6 +15,54 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-05-09 — From Phase 4 Phases 3 + 4 (Leave + Attendance + Analytics + Alerts)
+
+### Remove TESTING_OPEN_ACCESS env override
+- Added: 2026-05-09
+- Priority: P0 before production lockdown
+- Effort (human / CC): 1 minute (env flip on Vercel) / 0
+- Reactivation signal: **Riddhi confirms her testing pass is complete.** Anish unsets `TESTING_OPEN_ACCESS` on Vercel; Leadership goes back to needing the `GSL_DOCUMENT_VIEWERS` / `GSL_INTERVIEW_VIEWERS` allowlists.
+- Notes: No code change required. `testingOpenAccess.test.ts` pins the contract.
+
+### Build the employee self-service portal
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 1-2 days / 4 hr
+- Reactivation signal: **Riddhi says she's ready to flip self-service on.** Today the leave API accepts self-applies for HOD-class only; for everyone else there's no employee account. Need: employee auth (magic link or password), `/portal/me/*` pages for leave history + apply, `DEFAULT_LEAVE_FLOW=self-service` flip.
+- Notes: API surface is already there; this is auth + UI work.
+
+### Wire Resend domain + alert cron secrets
+- Added: 2026-05-09
+- Priority: P1 before alerts go live
+- Effort (human / CC): 30 min Anish setup
+- Reactivation signal: **Anish wants daily alerts to actually fire to inboxes.** Today the cron route is built and idempotent; without `RESEND_API_KEY` configured emails fall back to the queue log. To go live: set `RESEND_API_KEY`, configure verified sender domain, set `GSL_ALERT_CRON_TOKEN` in Vercel + matching GitHub Actions repo secret, set `ALERTS_URL` to `https://<vercel-domain>/api/cron/alerts`.
+- Notes: Workflow is at `.github/workflows/daily-alerts.yml`. First fire after the secrets land.
+
+### PDF export per analytics widget
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 1 day / 4 hr
+- Reactivation signal: **Riddhi requests "I need to share the headcount widget as a PDF for a board pack".** Today CSV export covers the full page.
+
+### Attendance present-rate denominator should match expected office days
+- Added: 2026-05-09
+- Priority: P2
+- Effort (human / CC): 4 hr
+- Reactivation signal: **Riddhi notices the analytics rate looks wrong** (especially for trainer-6day or hybrid-2day employees). Today the denominator is "days in window × employees", which over-counts weekends. Need to fold in the roster's expected-office-days math.
+- Notes: TODO in `analytics.ts:buildAttendanceWidget`.
+
+### Cross-year leave windows split
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 2 hr
+- Reactivation signal: **First leave application that crosses March 31 / April 1 boundary.** Today the leave counts entirely against `startDate`'s leave year. Riddhi may want a split.
+
+### Bulk attendance mark — date-range
+- Added: 2026-05-09
+- Priority: P3
+- Effort (human / CC): 2 hr
+- Reactivation signal: **Riddhi wants to mark a team on-field for a multi-day training.** Today the bulk-mark UI applies to a single date.
+
 ## 2026-05-09 — From Phase 4 Phase 2 (Onboarding/Offboarding/Assets) build
 
 ### Riddhi to review the 16 onboarding task templates and 12 offboarding templates

@@ -749,6 +749,60 @@ export const LEAVE_ENTITLEMENT_DEFAULTS = {
   sick: 12,
 } as const
 
+// --- Attendance exceptions (Phase 4 Phase 4) ----------------------------
+
+export const ATTENDANCE_EXCEPTION_TYPES = [
+  'late',
+  'half-day',
+  'absent',
+  'work-from-home',
+  'on-field',
+  'holiday-worked',
+] as const
+export type AttendanceExceptionType = (typeof ATTENDANCE_EXCEPTION_TYPES)[number]
+
+export interface AttendanceException {
+  id: string
+  employeeId: string
+  date: string
+  type: AttendanceExceptionType
+  notes: string
+  loggedBy: string
+  loggedAt: string
+  auditLog: AuditEntry[]
+}
+
+// --- Alerts (Phase 4 Phase 4) -------------------------------------------
+
+export const ALERT_CATEGORIES = [
+  'document-expiry',
+  'probation-review',
+  'onboarding-overdue',
+  'offboarding-lwd',
+  'leave-pending-24h',
+  'daily-hr-digest',
+] as const
+export type AlertCategory = (typeof ALERT_CATEGORIES)[number]
+
+export interface AlertLogEntry {
+  id: string
+  category: AlertCategory
+  /** Stable dedupe key per (category, target, trigger window). e.g.,
+   *  "document-expiry:doc-123:30d:2026-05-09". Same triggerKey ->
+   *  same alert -> never re-fires. */
+  triggerKey: string
+  recipients: string[]
+  firedAt: string
+  notes?: string
+}
+
+export interface AlertPreferences {
+  enabled: Partial<Record<AlertCategory, boolean>>
+  extraRecipients: string[]
+  globalEnabled: boolean
+  updatedAt: string
+}
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {

@@ -8,12 +8,12 @@ describe('SidebarNav.visibleSections', () => {
     expect(titles).toEqual(['Recruitment', 'HR Operations', 'Admin'])
   })
 
-  it('HR sees Recruitment + HR Operations + a partial Admin (only My account)', () => {
+  it('HR sees Recruitment + HR Operations + a partial Admin (Alert preferences + My account)', () => {
     const out = visibleSections('HR')
     const titles = out.map((s) => s.title)
     expect(titles).toEqual(['Recruitment', 'HR Operations', 'Admin'])
     const adminItems = out.find((s) => s.title === 'Admin')!.items.map((i) => i.label)
-    expect(adminItems).toEqual(['My account'])
+    expect(adminItems).toEqual(['Alert preferences', 'My account'])
   })
 
   it('HOD does NOT see Offers or Letters in Recruitment', () => {
@@ -48,14 +48,23 @@ describe('SidebarNav.visibleSections', () => {
     expect(labels).toContain('Onboarding')
     expect(labels).toContain('Offboarding')
     expect(labels).toContain('Leave')
-    expect(labels).toContain('Reports')
+    expect(labels).toContain('Attendance')
+    expect(labels).toContain('Analytics')
     const comingSoon = hrops.items.filter((i) => i.comingSoon).map((i) => i.label)
-    expect(comingSoon).toEqual(['Reports'])
+    expect(comingSoon).toEqual([])
   })
 
-  it('Admin section is gated to Admin role + My account for everyone', () => {
+  it('Admin section is gated to Admin role + Alert prefs for HR + My account for everyone', () => {
     const adminOut = visibleSections('Admin').find((s) => s.title === 'Admin')!
-    expect(adminOut.items.map((i) => i.label)).toEqual(['Users', 'Settings', 'My account'])
+    expect(adminOut.items.map((i) => i.label)).toEqual([
+      'Users',
+      'Alert preferences',
+      'Settings',
+      'My account',
+    ])
+
+    const hrOut = visibleSections('HR').find((s) => s.title === 'Admin')!
+    expect(hrOut.items.map((i) => i.label)).toEqual(['Alert preferences', 'My account'])
 
     const hodOut = visibleSections('HOD').find((s) => s.title === 'Admin')!
     expect(hodOut.items.map((i) => i.label)).toEqual(['My account'])

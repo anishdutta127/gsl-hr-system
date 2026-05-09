@@ -141,6 +141,61 @@ Second top-level area in the app, additive to recruitment. Sidebar has been spli
 
 Other Phase 4 mutations (taxonomy, holidays, documents, onboarding tasks, offboarding tasks, exit interviews, F&F settlements, assets) write directly via `atomicUpdateJson` rather than the queue — admin operations land rare and fine to ship one commit per edit.
 
+## Phase 4 — Phases 3 + 4 (Leave + Attendance + Analytics + Alerts, landed 2026-05-09)
+
+### Leave management (Phase 3)
+- 12 casual + 12 sick = 24 days/year per employee. April 1-March 31 leave year. No carry-forward, no encashment, no sandwich rule (Riddhi).
+- Pure helpers in `src/lib/leave.ts`: `computeTotalDays()` walks every day per work pattern (office-5day skips Sat/Sun, trainer-6day skips Sun, hybrid-2day only the configured 2 weekdays, field skips Sun, remote skips Sat/Sun); holidays never count; half-day = 0.5.
+- LOP overflow handled at apply-time: if applying days > balance, the API returns 409 with `requiresLOPConfirmation`; client confirms and the overflow lands as `lossOfPayDays` on the application.
+- Mid-year joiners get prorated entitlement.
+- `/leave` HR/Admin/Leadership overview (HOD scoped to direct reports). `/employees/[id]/leave` per-employee balance + apply form (HR-mediated) + history. Sidebar Leave entry now active.
+- Roster auto-marks "On Leave" cells from approved leaves — no separate attendance write needed.
+- Self-service portal: API ready (`/api/admin/leave/apply` accepts self-applies for HOD; the employee role + portal page lands when employee accounts ship).
+- `DEFAULT_LEAVE_FLOW` env var ('hr-mediated' default; 'self-service' when employee accounts ship). API works for both.
+- Full-year balance integration test: 12 checkpoints, rupee-perfect (`leaveBalanceFullYear.integration.test.ts`).
+
+### Attendance exception tracking (Phase 4)
+- "System assumes everyone present unless marked otherwise." HR logs only divergent days. No acknowledgement loop.
+- Exception types: `late | half-day | absent | work-from-home | on-field | holiday-worked`. `on-leave` and `holiday` auto-derive from leaves + calendar — never stored.
+- `/attendance` calendar with click-to-log, bulk-mark across multiple employees, filters by department/location/month.
+- Permissions: Admin + HR write; Leadership read all; HOD read only their direct reports.
+
+### Analytics (Phase 4)
+- `/analytics` (Admin + HR + Leadership; HOD blocked). Five widgets: Headcount + 12-month trend; Attrition (last 90 days, by dept, top reasons, avg tenure); Attendance (% present, exceptions, late-by-DOW heatmap); Leave utilisation + year-end projection + balance distribution; HR Ops metrics (avg days to onboard, on-time tasks %, document compliance %, open offboarding tasks).
+- Pure aggregation helpers in `src/lib/analytics.ts` — easy to unit-test.
+- Full-page CSV export.
+- PDF export deferred to backlog.
+
+### Automated alerts (Phase 4)
+- Daily 9am IST cron (`30 3 * * *` UTC) at `.github/workflows/daily-alerts.yml`. Calls `/api/cron/alerts` with `x-gsl-cron-token: GSL_ALERT_CRON_TOKEN`.
+- Six categories: document-expiry (30/14/7d), probation-review (7d before), onboarding-overdue (3+ days), offboarding-lwd (14d before), leave-pending-24h, daily-hr-digest.
+- Idempotency: each alert has a stable `triggerKey` keyed on (category, target, window, fire-date). `alert_log.json` records every send. Same key never fires twice.
+- Email delivery via existing `deliverEmail()` (Resend if `RESEND_API_KEY` set; queue fallback otherwise).
+- `/admin/alerts/preferences`: HR reads, Admin edits. Per-category enable/disable, global kill switch, extra-recipient list. Last-25 fired alerts log surfaced inline.
+
+### TESTING_OPEN_ACCESS env override — REMOVE BEFORE PRODUCTION
+When set to `"true"` on Vercel, Leadership bypasses both `GSL_DOCUMENT_VIEWERS` and `GSL_INTERVIEW_VIEWERS` allowlists. Anish + Ameet + Ritu + Jesal can all view documents and exit interviews during the testing pass. **HR/Admin already have full access; HOD and other tighter gates STAY enforced regardless of the flag.**
+
+Reactivation signal: Riddhi confirms her testing pass is complete and access should be restricted again. Anish flips the env on Vercel — no code change. The associated tests (`testingOpenAccess.test.ts`) pin the contract so the gate cannot drift.
+
+### New Phase 3+4 env vars
+
+- `TESTING_OPEN_ACCESS` — testing-mode flag (above). Set to `"true"` on staging.
+- `DEFAULT_LEAVE_FLOW` — `'hr-mediated'` (default) or `'self-service'`.
+- `GSL_ALERT_CRON_TOKEN` — secret the cron endpoint expects in `x-gsl-cron-token`. Same value goes in the GitHub Actions repo secret of the same name + `ALERTS_URL` (e.g., `https://hr.gsl/api/cron/alerts`).
+
+### Phase 3+4 defaults locked at land
+
+- Leave entitlement: 12 casual + 12 sick = 24/yr per employee, all roles.
+- Leave year: April 1 to March 31.
+- No carry-forward, no encashment, no sandwich rule.
+- Probation alert window: 7 days before end (matches Phase 1 probation badge math).
+- Document expiry windows: 30 / 14 / 7 days before.
+- Onboarding overdue threshold: 3+ days past due.
+- Offboarding LWD pre-warning: 14 days.
+- Leave manager-action SLA: 24 hours before HR escalation.
+- Attendance: exception-based only. No "everyone marks present daily" acknowledgement (deferred per Riddhi).
+
 ## Phase 4 — Phase 2 (Onboarding + Offboarding + Assets, landed 2026-05-09)
 
 Three new modules complete the employee lifecycle:

@@ -28,6 +28,8 @@ import {
   ExternalLink,
   Tags,
   Laptop,
+  ClipboardCheck,
+  BellRing,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
@@ -88,7 +90,8 @@ const SECTIONS: NavSection[] = [
       { label: 'Onboarding', href: '/onboarding', icon: UserPlus, roles: ALL_STAFF },
       { label: 'Offboarding', href: '/offboarding', icon: UserMinus, roles: ALL_STAFF },
       { label: 'Leave', href: '/leave', icon: PalmtreeIcon, roles: ALL_STAFF },
-      { label: 'Reports', href: '#', icon: BarChart3, roles: ALL_STAFF, comingSoon: 'Phase 4' },
+      { label: 'Attendance', href: '/attendance', icon: ClipboardCheck, roles: ALL_STAFF },
+      { label: 'Analytics', href: '/analytics', icon: BarChart3, roles: ADMIN_HR_LEAD },
     ],
   },
   {
@@ -96,6 +99,7 @@ const SECTIONS: NavSection[] = [
     accent: 'neutral',
     items: [
       { label: 'Users', href: '/users', icon: UserCog, roles: ['Admin'] },
+      { label: 'Alert preferences', href: '/admin/alerts/preferences', icon: BellRing, roles: ADMIN_HR },
       { label: 'Settings', href: '/settings', icon: Settings, roles: ['Admin'] },
       { label: 'My account', href: '/account', icon: UserCircle, roles: ALL_STAFF },
     ],

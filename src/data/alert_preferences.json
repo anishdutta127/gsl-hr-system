@@ -1,0 +1,13 @@
+{
+  "enabled": {
+    "document-expiry": true,
+    "probation-review": true,
+    "onboarding-overdue": true,
+    "offboarding-lwd": true,
+    "leave-pending-24h": true,
+    "daily-hr-digest": true
+  },
+  "extraRecipients": [],
+  "globalEnabled": true,
+  "updatedAt": "2026-05-09T00:00:00.000Z"
+}
