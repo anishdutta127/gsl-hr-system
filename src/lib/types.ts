@@ -409,6 +409,42 @@ export interface Taxonomy {
   auditLog: AuditEntry[]
 }
 
+// --- Holiday calendar (Phase 4) ------------------------------------------
+
+export type HolidayType = 'mandatory' | 'optional'
+
+export interface Holiday {
+  id: string
+  /** ISO YYYY-MM-DD. Drives roster/leave logic. */
+  date: string
+  name: string
+  type: HolidayType
+  /** Region scope. Phase 1 stores ['national'] uniformly per Riddhi's
+   *  confirmation. Future regional holidays add city codes here. */
+  regions: string[]
+  notes?: string
+  createdAt: string
+  createdBy: string
+  auditLog: AuditEntry[]
+}
+
+/**
+ * Per-employee optional-holiday picks. Phase 1 default budget: 2 picks per
+ * employee per leave year (Apr-Mar). HR records picks via /holidays/picks
+ * until self-service lands in Phase 3.
+ */
+export interface EmployeeOptionalHoliday {
+  employeeId: string
+  holidayId: string
+  /** Calendar year of the picked holiday (the year the date falls in). */
+  year: number
+  selectedAt: string
+  selectedBy: string
+}
+
+/** Default per-employee optional-holiday budget per leave year. */
+export const OPTIONAL_HOLIDAY_BUDGET_PER_YEAR = 2
+
 // --- Prompt library (CP3 + CP4) ------------------------------------------
 
 export interface Prompt {

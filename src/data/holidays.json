@@ -1,0 +1,246 @@
+[
+  {
+    "id": "h-2026-new-year",
+    "date": "2026-01-01",
+    "name": "New Year's Day",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-01-01", "name": "New Year's Day", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-makar-sankranti",
+    "date": "2026-01-14",
+    "name": "Makar Sankranti / Pongal / Bihu",
+    "type": "optional",
+    "regions": ["national"],
+    "notes": "Optional — counts against the 2-pick annual budget.",
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-01-14", "name": "Makar Sankranti / Pongal / Bihu", "type": "optional" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-republic-day",
+    "date": "2026-01-26",
+    "name": "Republic Day",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-01-26", "name": "Republic Day", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-holi",
+    "date": "2026-03-03",
+    "name": "Holi",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-03-03", "name": "Holi", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-gudi-padwa",
+    "date": "2026-03-19",
+    "name": "Gudi Padwa",
+    "type": "optional",
+    "regions": ["national"],
+    "notes": "Optional — counts against the 2-pick annual budget.",
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-03-19", "name": "Gudi Padwa", "type": "optional" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-eid-al-fitr",
+    "date": "2026-03-20",
+    "name": "Eid al-Fitr",
+    "type": "optional",
+    "regions": ["national"],
+    "notes": "Optional — counts against the 2-pick annual budget.",
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-03-20", "name": "Eid al-Fitr", "type": "optional" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-maharashtra-day",
+    "date": "2026-05-01",
+    "name": "Maharashtra Day",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-05-01", "name": "Maharashtra Day", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-janmashtami",
+    "date": "2026-09-04",
+    "name": "Janmashtami",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-09-04", "name": "Janmashtami", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-ganesh-chaturthi",
+    "date": "2026-09-14",
+    "name": "Ganesh Chaturthi",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-09-14", "name": "Ganesh Chaturthi", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-gandhi-jayanti",
+    "date": "2026-10-02",
+    "name": "Mahatma Gandhi Jayanti",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-10-02", "name": "Mahatma Gandhi Jayanti", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-dussehra",
+    "date": "2026-10-20",
+    "name": "Dussehra",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-10-20", "name": "Dussehra", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-govardhan-puja",
+    "date": "2026-11-09",
+    "name": "Govardhan Puja",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-11-09", "name": "Govardhan Puja", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-diwali-padwa-new-year",
+    "date": "2026-11-10",
+    "name": "Diwali Padwa (New Year)",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-11-10", "name": "Diwali Padwa (New Year)", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-diwali-padwa-bhai-dhuj",
+    "date": "2026-11-11",
+    "name": "Diwali Padwa (Bhai Dhuj)",
+    "type": "mandatory",
+    "regions": ["national"],
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-11-11", "name": "Diwali Padwa (Bhai Dhuj)", "type": "mandatory" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  },
+  {
+    "id": "h-2026-christmas",
+    "date": "2026-12-25",
+    "name": "Christmas",
+    "type": "optional",
+    "regions": ["national"],
+    "notes": "Optional — counts against the 2-pick annual budget.",
+    "createdAt": "2026-05-09T00:00:00.000Z",
+    "createdBy": "phase-4-seed",
+    "auditLog": [{
+      "timestamp": "2026-05-09T00:00:00.000Z",
+      "user": "phase-4-seed",
+      "action": "holiday.create",
+      "after": { "date": "2026-12-25", "name": "Christmas", "type": "optional" },
+      "notes": "Seeded from Holiday_Calendar_2026.pdf"
+    }]
+  }
+]
