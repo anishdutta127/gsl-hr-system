@@ -112,5 +112,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Resume_CV- Huda.docx, 196 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "3be6ed62-07b4-4eab-b9cd-8a689cc1e3c2",
+    "queuedAt": "2026-05-11T07:47:49.531Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/17dd281b-8c0f-4c2b-8235-503dd23182dc.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Mohammed-Muzammil.pdf, 382 KB)."
+    },
+    "retryCount": 0
   }
 ]
