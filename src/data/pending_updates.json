@@ -131,5 +131,35 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Mohammed-Muzammil.pdf, 382 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "303f4ac4-32e4-4962-b407-5af5d97da0db",
+    "queuedAt": "2026-05-11T07:48:47.234Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "30f06940-f51c-4ccb-a245-be954b33ad6c",
+      "candidateId": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-11T07:48:47.216Z",
+      "createdAt": "2026-05-11T07:48:47.216Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:48:47.216Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Senior Academics Manager pipeline."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
