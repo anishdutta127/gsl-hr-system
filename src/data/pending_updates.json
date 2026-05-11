@@ -298,5 +298,24 @@
       "notes": "Edited by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "753b47da-6a27-44d4-8c3b-706c75e7384f",
+    "queuedAt": "2026-05-11T07:58:55.468Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "5c4bd35f-9f53-52b9-01e9-c3389fe1c3d3",
+      "operation": "candidate.update",
+      "before": {
+        "name": "Bimlendu Shivam Growth Strategy"
+      },
+      "after": {
+        "name": "Bimlendu Shivam"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
