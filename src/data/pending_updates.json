@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "1d72d2f9-b3b7-4ab6-a167-b06627196b66",
+    "queuedAt": "2026-05-11T07:02:33.792Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "ea69ae97-9159-4ba7-b68b-4a14fff355e8",
+      "name": "Shabir Hussain",
+      "email": "kedskargil@gmail.com",
+      "phone": "",
+      "source": "Referral",
+      "searchableText": "Co-Founder",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-11.",
+      "createdAt": "2026-05-11T07:02:33.791Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:02:33.791Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shabir Hussain",
+            "email": "kedskargil@gmail.com",
+            "source": "Referral",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
