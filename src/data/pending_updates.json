@@ -412,5 +412,24 @@
       "notes": "Edited by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "706efc02-7875-4e0b-ae51-2352c825ed54",
+    "queuedAt": "2026-05-11T08:01:55.821Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "957ed62e-2e1d-50f7-89bb-99488de18991",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
