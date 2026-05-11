@@ -1,7 +1,7 @@
 [
   {
     "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
-    "name": "26 Shubham Maurya",
+    "name": "Shubham Maurya",
     "email": "",
     "phone": "",
     "source": "HRTeam",
@@ -77,6 +77,18 @@
           "templateTitle": "Assessment invite"
         },
         "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.592Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "name": "26 Shubham Maurya"
+        },
+        "after": {
+          "name": "Shubham Maurya"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -155,7 +167,7 @@
     "name": "Cvaishashafiqurrehman",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Educohire",
     "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/CVAISHASHAFIQURREHMAN.pdf",
     "searchableText": "AISHA SHAFIQUR REHMAN STEM & Robotics Educator | AI Trainer | Curriculum Designer | 3D Printing Specialist Contact Information Phone: 7045332002 Email: choudhery84@gmail.com Location: Mumbai, Maharashtra Professional Summary Experienced STEM & Robotics Educator with 10+ years of expertise in delivering hands-on, project-based learning in Robotics, Artificial Intelligence, Arduino, ESP32, Coding, and 3D Printing. Specialized in curriculum development aligned with ICSE standards and EdTech innovation models. Proven track record of establishing cost- effective robotics labs, mentoring competition-winning teams, training teachers, and integrating interdisciplinary STEM programs across grade levels. Seeking a leadership or senior trainer role within an EdTech STEM Robotics organization. Core Competencies • STEM & Robotics Curriculum Development (Grade 6–10) • AI & Machine Learning Foundations for School Education • Arduino, ESP32 & Embedded Systems Training • 3D Printing & Rapid Prototyping • Inquiry-Based & Experiential Learning • Teacher Training & Workshop Facilitation • Robotics Lab Setup & Kit Development • Competition Mentorship & STEM Event Leadership • Cross-Curricular STEM Integration • Educational Program Scaling & Implementation Technical Skills • Programming: Python, Java, C, C++, Scratch (Block-based Coding) • Robotics Platforms: Arduino, ESP32, LEGO Robotics, BLIX Robotics • Hardware: Sensors, Motors, Motor Drivers, Embedded Systems Integration • Design Tools: 3D Modeling & 3D Printing Technologies • Educational Tools: Robotics Simulation & Coding Platforms Professional Experience Robotics & AI Trainer – ICSE Curriculum Shri Bhaidas Dharsibhai Bhuta High School (ICSE), Mumbai | 2016 – Present • Lead Robotics & AI (Group 3 Subject) instruction for Grades 9 & 10 under ICSE framework. • Designed and implemented structured robotics and coding curriculum for Grades 6–10. • Conducted 50+ hands-on workshops in Robotics, AI, Arduino, ESP32, and 3D Printing. • Mentored student teams for interschool robotics competitions and innovation challenges. • Guided teams in BLIXATHON competitions promoting STEM innovation and collaborative design. • Established cost-effective robotics laboratories including hardware planning and procurement. • Developed modular robotics kits customized for school-level implementation. • Conducted teacher training sessions for integrating coding and robotics into mainstream subjects. • Collaborated with academic leadership to align STEM initiatives with institutional vision. Education M.Sc. in Information Technology | Mumbai University | 2015–2017 | 75% B.Sc. in Computer Science | Mumbai University | 2012–2015 | 80% Higher Secondary (Science) | Mumbai University | 2010–2012 | 68% Secondary School Certificate | 2010 | 94% Additional Strengths • Strong leadership and team mentoring abilities • Excellent communication and presentation skills • Time management and structured program execution • Passionate about scaling STEM education through EdTech innovation",
     "tags": {
@@ -193,6 +205,18 @@
           "templateTitle": "Offer email (with letter attached)"
         },
         "notes": "Bulk-send: \"Offer email (with letter attached)\" logged for Cvaishashafiqurrehman."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.608Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Educohire"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -446,7 +470,7 @@
     "name": "Ranjana",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Educohire",
     "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/Ranjana.pdf",
     "searchableText": "D y n a m i c a n d s k i l l e d e l e c t r i c a l e n g i n e e r w i t h 2 . 9 y e a r s o f h a n d s - o n e x p e r i e n c e i n d e s i g n i n g , t e s t i n g , a n d t r o u b l e s h o o t i n g e l e c t r o n i c s d e p a r t m e n t . A d e p t a t c o l l a b o r a t i n g w i t h c r o s s - f u n c t i o n a l t e a m s t o d e l i v e r p r o j e c t s o n t i m e . S e e k i n g t o l e v e r a g e t e c h n i c a l e x p e r t i s e a n d p r o b l e m - s o l v i n g s k i l l s . + 9 1 7 2 0 8 4 7 6 5 6 3 r a n j a n a g u p t a 5 0 4 @ g m a i l . c o m R A N J A N A H A R I S H C H A N D R A G U P T A A s s o c i a t e R o b o t i c s W O R K E X P E R I E N C E A s s o c i a t e R o b o t i c s ( E l e c t r o n i c s ) O N M Y O W N T E C H N O L O G Y P V T L I M I T E D J u n e 2 0 2 3 - J u l y 2 0 2 5 W o r k i n g o n A r d u i n o C + + , E s p 3 2 , e s p 8 2 6 6 a n d m a n y m o r e e m b e d d e d d e v i c e . W o r k s o n d e s i g n i n g , d e v e l o p i n g , a n d i m p l e m e n t i n g e l e c t r o n i c s y s t e m s a n d c o m p o n e n t s f o r r o b o t i c a p p l i c a t i o n s . W o r k e d o n p r o j e c t s : E C O P A R K , V e h i c l e a c c i d e n t c o n t r o l s y s t e m , H u m a n P o s e e s t i m a t i o n , L i n e f o l l o w e r b o t , A v o i d a n c e o b s t a c l e b o t , l i g h t f o l l o w e r b o t . C o g n i t i v e a s s e s s m e n t t h r o u g h M I D I D r u m T e c h n o l o g y : D e v e l o p A I - d r i v e n t o o l s t h a t c a n m e a s u r e c o g n i t i v e a b i l i t i e s a c c u r a t e l y , r e g a r d l e s s o f a p e r s o n ' s l i t e r a c y l e v e l o r c u l t u r a l b a c k g r o u n d . T e a c h i n g E x p e r i e n c e : A s R o b o t i c s t r a i n e r i n s c h o o l s l i k e A V M s c h o o l s , R N S h a h , J a m n a b a i N u r s e e s c h o o l , B o m b a y S c o t t i s h , U t p a l S a n g h v i , A d i t y a B i r l a D e s i g n e d l e a r n i n g m o d u l e s a n d s u p p o r t e d i n s t u d e n t s p r o j e c t s . C r e a t i n g c o n t e n t r e l a t e d t o r o b o t i c s a n d S T E M . C o n d u c t e d T e a c h e r t r a i n i n g s e s s i o n s i n s c h o o l s f o r t e a c h e r s . C o n d u c t e d W o r k s h o p s a n d e v e n t s . S t r e a m A s s o c i a t e K A N A K I A I N T E R N A T I O N A L S C H O O L J u l y 2 0 2 5 - C u r r e n t - D a t e F a c i l i t a t e e n g a g i n g S T R E A M ( S c i e n c e , T e c h n o l o g y , R e a d i n g , E n g i n e e r i n g , A r t & M a t h e m a t i c s ) s e s s i o n s f o s t e r i n g c r e a t i v i t y a n d c r i t i c a l t h i n k i n g . D e s i g n h a n d s - o n , p r o j e c t - b a s e d l e a r n i n g e x p e r i e n c e s a l i g n e d w i t h a c a d e m i c o b j e c t i v e s . A s s e s s s t u d e n t p e r f o r m a n c e t h r o u g h o b s e r v a t i o n s , p r e s e n t a t i o n s , a n d a c t i v i t y - b a s e d e v a l u a t i o n s a n d E n c o u r a g e i n q u i r y , t e a m w o r k , a n d i n n o v a t i o n t h r o u g h S T E M - b a s e d c o m p e t i t i o n s a n d c l a s s r o o m e x p e r i m e n t s . S e r v e d a s a m e n t o r , g u i d i n g a n d t r a i n i n g s t u d e n t s f o r t h e n a t i o n a l - l e v e l ‘ B a t t l e o f C h a r g e ’ r o b o t i c s c o m p e t i t i o n c o n d u c t e d b y I I T B o m b a y . ” I N T E R N S H I P S / P R O J E C T S M a h a r a s h t r a s t a t e e l e c t r i c i t y b o a r d ( M S E B ) D e c 2 0 2 1 - J a n 2 0 2 2 I t i n c l u d e s f a m i l i a r i z a t i o n w i t h a l l d i s t r i b u t i o n n e t w o r k s a n d e q u i p m e n t s . s t u d i e d a b o u t u n d e r g r o u n d f a u l t d e t e c t i o n a n d s o l u t i o n t o s o l v e t h a t f a u l t . I n d i a n W e s t e r n R a i l w a y s ( E M U C a r s h e d ) H a v i n g i d e a a b o u t t r a c t i o n s y s t e m , d i s c u s s e d a b o u t d i f f e r e n t t y p e s o f t r a c t i o n m o t o r t h e i r p e r f o r m a n c e , s i g n a l s y s t e m u s e d i n t r a c t i o n s y s t e m e t c . W e g o t a n o p p o r t u n i t y t o s e e t h e l o c o m o t i v e d r i v i n g s e c t i o n a l s o s t u d i e d a b o u t d i f f e r e n t p a r t s o f t r a c t i o n l i k e c u r r e n t c o l l e c t i o n s y s t e m , t r a n s f o r m e r , p a n t o g r a p h , c o n t r o l u n i t . J u n e 2 0 2 2 - J u n e 2 0 2 2 Q U A L I F I C A T I O N S t . F r a n c i s i n s t i t u t e o f T e c h n o l o g y [ B o r i w a l i ] B a c h e l o r ' s i n E l e c t r i c a l E n g i n e e r i n g S e c u r e d T F W S s e a t i n E l e c t r i c a l d e p a r t m e n t C G P A - 8 . 6 6 A u g 2 0 1 9 - M a y 2 0 2 3 T . P B h a t i a c o l l e g e [ K a n d i v a l i ] H o l y i n f a n t h i g h s c h o o l [ K a n d i v a l i ] H S C B o a r d s c o r e d 7 3 % S S C B o a r d s c o r e d 8 7 . 4 % A u g 2 0 1 8 - M a r c h 2 0 1 9 J u n e 2 0 1 6 - A p r i l 2 0 1 7 A u t o n o m o u s c o n t r o l o f d i f f e r e n t i a l b o t [ S e l f b a l a n c i n g r o b o t ] P r o c e d u r e t o p e r f o r m e d w i t h m i n i m a l h u m a n a s s i s t a n c e a n d m o v e m e n t i s b a s e d o n t w o s e p a r a t e l y d r i v e n w h e e l s . A u g 2 0 2 1 - M a r c h 2 0 2 2 D u a l a x i s s o l a r t r a c k e r w i t h I O T m o n i t o r i n g s y s t e m C o n s t r u c t e d t h e d u a l a x i s s o l a r t r a c k e r a n d f u r t h e r I m p l e m e n t e d o n t h e I O T m o n i t o r i n g s y s t e m u s i n g a r d u i n o u n o m o d u l e . A u g 2 0 2 2 - M a r c h 2 0 2 3 T u t o r G r a d e s f o r 1 1 t h a n d 1 2 t h i n M J A c a d e m y T a u g h t P h y s i c s t o g r a d e s 1 1 a n d 1 2 s t u d e n t s a t a j u n i o r c o l l e g e , f o c u s i n g o n f o u n d a t i o n a l a n d a d v a n c e d c o n c e p t s . C u s t o m i z e d t e a c h i n g m e t h o d s t o m e e t t h e n e e d s o f c o l l e g e - l e v e l l e a r n e r s , e n h a n c i n g e n g a g e m e n t a n d u n d e r s t a n d i n g . A u g 2 0 2 0 - J u l y 2 0 2 3 E S P 3 2 , 8 2 6 6 , I O T A r d u i n o c + + L a n g u a g e - C , P y t h o n C o n t e n t W r i t e r M a k e b l o c k , A I w i t h P i c t o b l o x M I T A p p I n v e n t o r M i c r o b i t , S c r a t c h b a s e d c o d i n g C a n v a D e s i g n i n g F u s i o n 3 6 0 & O n S h a p e , A u t o C A D M S - E x c e l , M S - W o r d & P o w e r P o i n t T e a m w o r k Q u i c k l e a r n e r A t t e n t i v e F l e x i b i l i t y S K I L L S T E C H N I C A L S K I L L S S O F T S K I L L S A C H I E V E M E N T S B a t t l e o f C h a r g e [ R o b o t i c s C o m p e t i t i o n ] W o r k o n W R O C o m p e t i t i o n C o d a e v o u r C o m p e t i t i o n I R I S C o m p e t i t i o n [ R o b o t i c s ] E l e c t r i c a l S y m p o s i u m , R e s o n a n c e a n d S p a r k z z c o m p e t i t i o n . T e c h n i c a l q u i z S p o r t s [ T h r o w b a l l , B o x c r i c k e t , B a d m i n t o n ]",
     "tags": {
@@ -473,6 +497,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/Ranjana.pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.623Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Educohire"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -481,7 +517,7 @@
     "name": "Sonali 2025 1",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Educohire",
     "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/Sonali Resume-2025-1.pdf",
     "searchableText": "SONALI GIRISH SANKPAL STEM Curriculum Manager | Robotics & Coding Educator | Academic Program Lead (15+ Years of Experience) Nerul, Navi Mumbai, Maharashtra, India 📧 sonali.sankpal2204@gmail.com | 📱 +91 7208225735 PROFESSIONAL SUMMARY Innovative and results-driven STEM Curriculum Manager with over 15 years of experience in STEM education, robotics, coding, academic leadership, and content development. Proven expertise in designing hands-on STEM curricula, implementing large-scale school programs, leading educator training, and mentoring student teams for national and global competitions. Passionate about integrating emerging technologies—AI, ML, robotics, and 3D design—into mainstream education to build future-ready learners. EDUCATION ● Master of Science (Major: Mathematics) – Madurai Kamaraj University, 2018 ● Master of Computer Science – University of Mumbai, 2015 ● Bachelor of Computer Science – University of Mumbai, 2011 CORE SKILLS Programming: Block-Based Coding, Arduino C++, Python (AI/ML), HTML, CSS, Android App Development Libraries: Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow Tools: Git, GitHub, Jupyter Notebook, Arduino IDE, MIT App Inventor, TinkerCAD, Canva, Movavi, adobe Platforms: Windows, Linux Specializations: STEM Curriculum Design, Robotics Education, Teacher Training, Assessment Frameworks, Project-Based Learning, STEM Lab Setup PROFESSIONAL EXPERIENCE Curriculum Manager – STEM | BeyondSkool June 2023 – Present 1. Curriculum Design & Development ● Designed full-year STEM curricula for Grades K–10 across Coding, Robotics, Electronics, AI/ML, and 3D Printing. ● Developed session planners, learning outcomes, student handbooks, and project templates. ● Created age-appropriate, inquiry-based STEM projects aligned with global education standards. 2. Program Planning & Implementation ● Designed STEM lab structures, material kits, and implementation guidelines for schools. ● Managed end-to-end execution of STEM exhibitions, showcases, and Olympiads. ● Coordinated with schools for smooth program rollouts and continuous academic alignment. 3. Research & Innovation ● Introduced new technologies such as Arduino, micro:bit, Raspberry Pi, Python AI tools, Scratch, and Tinkercad. ● Continuously integrated emerging trends in EdTech, robotics, and AI into the curriculum. 4. Assessments & Evaluation ● Created MCQs, rubrics, project evaluations, and portfolio frameworks for STEM learning. ● Designed baseline and endline assessments to measure student progress. ● Supported teachers in implementing competency-based assessments. 5. Teacher Training & Support ● Conducted teacher training workshops and certification programs. ● Developed teacher manuals, tutor notes, and troubleshooting guides. ● Provided ongoing academic support during classroom execution. 6. Cross-Functional Collaboration ● Collaborated with designers, content teams, vendors, and academic leadership. ● Maintained documentation, curriculum repositories, and audit records. ● Created monthly performance reports and implementation trackers. 7. Events & Competitions ● Designed and managed STEM Olympiads, hackathons, and innovation challenges. ● Developed evaluation rubrics and project themes for school competitions. 8. Recruitment & Team Building ● Conducted interviews and technical evaluations for STEM educators and curriculum developers. ● Mentored new team members and monitored academic delivery quality. Project Manager – Academics | Makebot Robotic Solutions July 2019 – June 2023 ● Led curriculum design for robotics, coding, and AI programs. ● Conducted hands-on product and robotics training for teachers and partners. ● Mentored student teams for the MakeX Global Robotics Competition (2019, 2022). ● Worked extensively with platforms such as Makeblock, Arduino, Raspberry Pi, Micro:bit, and ALS robots. Sr. STEAM Educator & Content Developer ● Designed coding curricula, assessments, and lesson plans for K–12 and adult learners. ● Conducted professional development workshops for teachers across schools and centers. IT & Computer Science Lecturer 2011 – 2019 Institutions: KPC Jr. College, Tilak Jr. College, Universal High School ● Taught IT and computer science with strong student results. ● Managed computer labs and conducted hands-on programming workshops. PROJECTS & KEY CONTRIBUTIONS ● GradeWise STEM Books: Developed comprehensive in-house STEM textbooks. ● Coding Books for Chetana Publications: Led content development and structure. ● Interactive Learning App Videos: Created educational video content for digital platforms. ● MakeX World Robotics Championship (2019, 2022): Led event management and team mentoring. ● CodingBee – World Coding Competition: Program Manager for global-scale coding contest. ● Coding to Concept Program: Built integrated Scratch, HTML, Python, and AI curriculum. AWARDS & CERTIFICATIONS ● Most Resourceful Employee of the Year – Makebot Robotic Solutions ● Data Visualization Certification – Great Learning (Skills: NumPy, Pandas, Machine Learning, Python) PERSONAL DETAILS",
     "tags": {
@@ -508,6 +544,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/Academics Team/Sonali Resume-2025-1.pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.641Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Educohire"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -527,7 +575,7 @@
     },
     "status": "Active",
     "consentedAt": null,
-    "notes": "Legacy resume delivered by HR on 2026-04-24. Original folder: BD & Ops. No consent on file; do not publish externally until HR confirms.",
+    "notes": "",
     "createdAt": "2026-04-24T09:07:53.566Z",
     "createdBy": "resume-import",
     "auditLog": [
@@ -545,12 +593,24 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Ashish_Mane_-_Resume-1 (1).pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.657Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "notes": "Legacy resume delivered by HR on 2026-04-24. Original folder: BD & Ops. No consent on file; do not publish externally until HR confirms."
+        },
+        "after": {
+          "notes": ""
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
   {
     "id": "5c4bd35f-9f53-52b9-01e9-c3389fe1c3d3",
-    "name": "Bimlendu Shivam Growth Strategy",
+    "name": "Bimlendu Shivam",
     "email": "",
     "phone": "",
     "source": "HRTeam",
@@ -582,6 +642,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Bimlendu Shivam - Growth Strategy_Resume (1).pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.673Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "name": "Bimlendu Shivam Growth Strategy"
+        },
+        "after": {
+          "name": "Bimlendu Shivam"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -960,7 +1032,7 @@
     "name": "Naukri Abhinetra[5y 0m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_Abhinetra[5y_0m].pdf",
     "searchableText": "ABHINETRA NELAKUDITI INTRODUCTION 5 years of experience in sales & business operations, with 3+ years specifically in Business Development in Tech and Ed- tech Industries. Proven track record of exceeding sales targets and managing the full top-of-funnel lifecycle. CORE COMPETENCIES • Strategic Account Mapping • Enterprise Accounts Management • Multi-channel Prospecting (Video, Social & Phone) • Lead Generation • Cold Prospecting (Email/Phone) • CRM (Salesforce, Zoho, Leadsquare) EDUCATION Bachelors in Business Administration Amity University, Noida 2021 – 2024 Higher Secondary (XII Standard) St. Mary’s College, Hyderabad 2011 – 2013 High School (X Standard) Good Samaritan High School, Hyderabad 2010 LOCATION Mumbai, Maharashtra CONTACT PHONE: +91 95500 14849 EMAIL: abhinetran@gmail.com LANGUAGES • English • Hindi • Telugu WORK EXPERIENCE Cotelligent – Sr. Associate Inside Sales July '24 – Present Hyderabad, Telangana • Owned full cycle pipeline and served as primary contact for outbound prospecting and initial engagement • Exceeded SQL targets by 115% average over 12 months • Served as primary point o f contact for major clients ensuring retention and satisfaction through consistent value delivery • Partnered with Account Executives to drive 40% more discovery calls for priority enterprise accounts through value-based selling • Executed high volume outbound prospecting 4+ daily outbound touchpoints via calls email and LinkedIn • Identified & Penetrated 40+ enterprise accounts by mapping org structures and engaging C Suite IT stakeholders • Collaborated on ABM campaigns boosting North American lead response rates by 30% • Leveraged ZoomInfo and LinkedIn Sales Navigator for targeted prospecting and personalized outreach Digital Nest – Business Development Executive Feb '23 – June ‘24 Hyderabad, Telangana • Exceeded sales targets by 20% through strategic outreach and clear communication of product value in the EdTech sector • Managed the full sales cycle using CRM for lead tracking, revenue forecasting and timely follow -ups while working with marketing to improve campaign messaging • Built strong relationships with decision makers at educational institutions and provided tailored product guidance as a subject matter expert VNR Infrastructure – Operations Executive Jan '21 – Nov ‘22 Hyderabad, Telangana • Performed clerical and administrative tasks. • Assisted head of operations in daily management and bill verification in large amounts. • Handled schedules and roosters of worker teams on site. • Worked as a bridge between operations head, labor force and internal departments of the organization. • Assisted the tender team in preparing reports and tendering work for new projects. CA Firm – Executive Assistant June '15 – Aug ‘19 Hyderabad, Telangana",
     "tags": {
@@ -989,6 +1061,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_Abhinetra[5y_0m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.690Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -997,7 +1081,7 @@
     "name": "Naukri AbhishekDeepakGaud[5y 6m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AbhishekDeepakGaud[5y_6m].pdf",
     "searchableText": "A b h i s h e k G a u d S t r a t e g i c T e a m L e a d e r C o m m i t t e d m a n a g e m e n t e x p e r t i s p r o f i c i e n t i n t e a m l e a d e r s h i p , s t r a t e g i c p l a n n i n g , d e l i v e r i n g t r a i n i n g , s e t t i n g g o a l s , a n d f a c i l i t a t i n g e f f e c t i v e c o m m u n i c a t i o n . P o s s e s s e s s t r o n g i n t e r p e r s o n a l a b i l i t i e s a n d e x c e l s i n e l i c i t i n g v a l u a b l e t e a m i n p u t . + 9 1 - 7 5 1 7 7 7 8 9 9 9 w o r k . a b h i s h e k g a u d @ g m a i l . c o m h t t p s : / / w w w . l i n k e d i n . c o m / i n / i a m a b h i g a u d / S a l e s T e a m L e a d e r C r a f t i n g a n d e x e c u t i n g s t r a t e g i e s t a i l o r e d t o a c h i e v e o u r p l a n n e d o b j e c t i v e s . L e a d i n g a t e a m o f e m p l o y e e s w h i l e m o n i t o r i n g t h e i r t a s k s t o e n s u r e a d v a n c e m e n t . L e d e n d - t o - e n d s a l e s o p e r a t i o n s , o p t i m i s i n g t h e s a l e s f u n n e l t o f u e l r e v e n u e g r o w t h . T r a i n i n g & M e n t o r i n g m y t e a m t o a c h i e v e t h e i r o b j e c t i v e s a n d e l e v a t e t h e i r s a l e s p r o c e s s . C o l l a b o r a t i n g w i t h t h e p r o d u c t t e a m t o a n a l y s e t h e m a r k e t f o r f u t u r e p r o d u c t i n n o v a t i o n . L e v e r a g i n g d a t a a n a l y s i s t o e n h a n c e c l i e n t c o n v e r s i o n e f f e c t i v e n e s s . M e e t i n g a n d s u r p a s s i n g t e a m t a r g e t s o n a m o n t h l y a n d q u a r t e r l y b a s i s . N o v 2 1 - M a y 2 3 E x p e r i e n c e U p G r a d E d u c a t i o n P v t . L t d . D i g i t a l R e g e n e s y s L e a d e r s h i p a n d T e a m M a n a g e m e n t : L e a d , m e n t o r , a n d m o t i v a t e a t e a m o f s a l e s r e p r e s e n t a t i v e s t o a c h i e v e a n d e x c e e d s a l e s t a r g e t s . S a l e s S t r a t e g y D e v e l o p m e n t : D e v e l o p a n d i m p l e m e n t e f f e c t i v e s a l e s s t r a t e g i e s a n d p l a n s t o d r i v e e n r o l m e n t a n d r e v e n u e g r o w t h . P e r f o r m a n c e M o n i t o r i n g : M o n i t o r a n d A n a l y s e t e a m p e r f o r m a n c e , p r o v i d i n g r e g u l a r f e e d b a c k a n d c o a c h i n g t o i m p r o v e p r o d u c t i v i t y a n d s a l e s t e c h n i q u e s . T r a i n i n g a n d D e v e l o p m e n t : C o n d u c t r e g u l a r t r a i n i n g s e s s i o n s t o e n h a n c e t h e s k i l l s a n d k n o w l e d g e o f t h e s a l e s t e a m i n e d u c a t i o n a l p r o d u c t s a n d s e r v i c e s . C u s t o m e r R e l a t i o n s h i p M a n a g e m e n t : B u i l d a n d m a i n t a i n s t r o n g r e l a t i o n s h i p s w i t h p r o s p e c t i v e a n d c u r r e n t s t u d e n t s , p a r e n t s , a n d e d u c a t i o n a l i n s t i t u t i o n s . D a t a A n a l y s i s a n d R e p o r t i n g : u t i l i s e C R M t o o l s t o t r a c k s a l e s a c t i v i t i e s a n d g e n e r a t e r e p o r t s f o r s e n i o r m a n a g e m e n t t o i n f o r m d e c i s i o n - m a k i n g . M a r k e t R e s e a r c h : S t a y u p d a t e d o n i n d u s t r y t r e n d s o f U k , U S A a n d A f r i c a n C o n t i n e n t , c o m p e t i t i v e l a n d s c a p e , a n d c u s t o m e r n e e d s t o a d j u s t s a l e s t a c t i c s a n d s t r a t e g i e s a c c o r d i n g l y . C o l l a b o r a t i v e E f f o r t s : W o r k c l o s e l y w i t h m a r k e t i n g , p r o d u c t d e v e l o p m e n t , a n d c u s t o m e r s u p p o r t t e a m s t o e n s u r e a s e a m l e s s c u s t o m e r e x p e r i e n c e a n d e f f e c t i v e s a l e s c a m p a i g n s . P r o b l e m - S o l v i n g : A d d r e s s a n d r e s o l v e a n y i s s u e s o r c h a l l e n g e s f a c e d b y t h e s a l e s t e a m o r c u s t o m e r s p r o m p t l y a n d e f f i c i e n t l y . G o a l S e t t i n g : S e t i n d i v i d u a l a n d t e a m s a l e s t a r g e t s , e n s u r i n g a l i g n m e n t w i t h t h e o v e r a l l b u s i n e s s o b j e c t i v e s o f t h e o r g a n i z a t i o n . I n c e n t i v e P r o g r a m s : D e s i g n a n d i m p l e m e n t i n c e n t i v e p r o g r a m s t o m o t i v a t e t h e s a l e s t e a m a n d r e w a r d h i g h p e r f o r m a n c e . C u s t o m e r F e e d b a c k : G a t h e r a n d a n a l y s e c u s t o m e r f e e d b a c k t o i m p r o v e p r o d u c t s a n d s e r v i c e s , e n h a n c i n g o v e r a l l c u s t o m e r s a t i s f a c t i o n a n d l o y a l t y . S a l e s T e a m L e a d e r J u n e 2 4 - A u g 2 0 2 5 T h i n k & L e a r n P v t . L t d S k i l f u l l y h a n d l e d l e a d s , c u l t i v a t e d e x i s t i n g r e l a t i o n s h i p s a n d m a i n t a i n e d c o n s i s t e n t l y h i g h c o n v e r s i o n r a t e s . S h o w c a s e d a c o n s i s t e n t r e c o r d o f o u t p e r f o r m i n g w e e k l y , m o n t h l y , a n d q u a r t e r l y g o a l s . P r o f i c i e n t l y e x e c u t e d a d h e r e n c e t o t h e i n s i d e s a l e s p r o c e s s , u t i l i s e d t o o l s a n d m a n a g e d d a t a . A l i g n i n g c l o s e l y w i t h o t h e r d e p a r t m e n t s t o m a i n t a i n s m o o t h o p e r a t i o n s a n d e l e v a t e c u s t o m e r s a t i s f a c t i o n . D e a l i n g w i t h o b j e c t i o n s a n d n e g o t i a t i n g p r i c e s e f f e c t i v e l y . P r o f i c i e n c y i n C R M m a n a g e m e n t a n d o p e r a t i o n . B u s i n e s s D e v e l o p m e n t A s s o c i a t e S e p t 1 9 - O c t 2 0 S u n r a y s i a O r g a n i c P v t L t d D r o v e r o b u s t B 2 B s a l e s i n i t i a t i v e s , o v e r s e e i n g k e y a c c o u n t s a n d m a x i m i s i n g r e v e n u e s t r e a m s C o l l a b o r a t e d c l o s e l y w i t h s a l e s l e a d e r s h i p a n d e x e c u t i v e m a n a g e m e n t , a l i g n i n g s t r a t e g i e s w i t h o r g a n i s a t i o n a l o b j e c t i v e s P r o a c t i v e l y g e n e r a t e d h i g h - q u a l i t y l e a d s , f o s t e r i n g e n d u r i n g c l i e n t p a r t n e r s h i p s a n d d r i v i n g s u s t a i n e d b u s i n e s s g r o w t h D e l i v e r e d c o m p e l l i n g p r o d u c t p r e s e n t a t i o n s , e f f e c t i v e l y a r t i c u l a t i n g v a l u e p r o p o s i t i o n s a n d s e c u r i n g b u y - i n P r o v i d e d e x e m p l a r y a f t e r - s a l e s s e r v i c e a n d o r d e r m a n a g e m e n t s u p p o r t , e n s u r i n g u n p a r a l l e l e d c l i e n t s a t i s f a c t i o n S t r a t e g i c B u s i n e s s C o m m u n i c a t o r M a y 1 9 - S e p t 1 9 M a s t e r s o f C o m m e r c e B e s t T e a m L e a d e r H u b S p o t I n b o u n d S a l e s A n t i M o n e y L a u n d e r i n g C o n c e p t s : A M L , K Y C a n d C o m p l i a n c e C C C - c o u r s e o n c o m p u t e r c o n c e p t s I T I T T A d v a n c e E x c e l B a c h e l o r s o f C o m m e r c e E d u c a t i o n L i c e n c e s a n d C e r t i f i c a t e s B . Y . K . S i n n a r C o l l e g e o f C o m m e r c e - I n d i a B . Y . K . S i n n a r C o l l e g e o f C o m m e r c e - I n d i a L a n g u a g e E n g l i s h H i n d i M a r a t h i",
     "tags": {
@@ -1026,6 +1110,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AbhishekDeepakGaud[5y_6m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.706Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -1034,7 +1130,7 @@
     "name": "Naukri AliyaSiddiqui[4y 0m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AliyaSiddiqui[4y_0m].pdf",
     "searchableText": "ALIYA SIDDIQUI 궼궾궽 Mumbai, India | 긼긽긾긿김깂깁 aaliyasiddiqui31@gmail.com | 긒긓 +91 9768917545 궁놓궎궏궐궑궒놖놗궓궔궕놔놘놕 Date of Birth: 13th February 1996 PROFESSIONAL SUMMARY Results-driven professional with a strong background in business development, client relations, and operations management. Proven success in lead conversion, team leadership, and driving student admissions. Adept at training and supervising staff, managing client communications, and utilizing CRM tools for streamlined processes. Passionate about delivering customer satisfaction and organizational growth. PROFESSIONAL EXPERIENCE  Business Development Executive Zell Education | January 2025 – Present - Designed and implemented lead generation strategies to boost student enrollment. - Cultivated strong client relationships via phone, email, and in-person interactions. - Consistently exceeded sales targets through tailored program pitches and timely follow-ups. - Provided detailed course counseling to assist prospective students in decision-making. - Responsible for managing the entire admission process from start to finish. - Updated CRM tools with lead progress, enhancing team coordination and performance tracking.  Center Coordinator / Manager Lakme Academy Fort | March 2023 – January 2025 - Oversaw end-to-end operations, managing a 10-member team and daily administrative functions. - Led staffing, scheduling, batch planning, and resource allocation efficiently. - Increased admissions by converting inquiries through effective counseling and follow-up. - Maintained high client satisfaction by addressing concerns promptly and professionally. - Managed digital presence via Instagram and Facebook to boost engagement and visibility. - Handled CRM and MS Office tools to manage admissions, accounts, and documentation. EDUCATION M.Sc. in Biochemistry | 2018 B.Sc. in Chemistry | 2016 TECHNICAL SKILLS - Proficient in MS Office (Word, Excel, PowerPoint, Outlook, Teams) - CRM Systems (Lead tracking, reporting, follow-up) - Social Media Management (Instagram, Facebook) SOFT SKILLS - Excellent communication (verbal and written) - Fluent in English, Hindi, and Marathi - Time Management & Prioritization - Leadership & Team Collaboration - Quick Learner, Adaptable, Goal-Oriented - Confident, Punctual, Positive Attitude",
     "tags": {
@@ -1063,6 +1159,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AliyaSiddiqui[4y_0m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.721Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -1071,7 +1179,7 @@
     "name": "Naukri AmitSingh[6y 6m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AmitSingh[6y_6m].pdf",
     "searchableText": "AMIT SINGH  9967355103  Amrut Siddhi no.5/504, Near SBI Bank Titwala (East)  amitsingh271928@gmail.com I aim to secure a challenging position in a reputable organisation and to fully utilize my skills, while making a significant contribution to the success of the company and to expand my learning and knowledge.  OBJECTIVE * Positive and Proactive attitude to Work* Demonstrate high level of professionalism* Ability to prioritise work load, work todeadlines and under pressure* Excellent Interpersonal skills* Ability to supervise and motivate staff* Good Time Management skill - strongproblem solving abilities and ability to workindependently.  SKILLS Aakash Education Services Ltd. BDM * Generated admissions by maintaining a continuous influx of data by conducting Above The Line (ATL) & Below The Line (BTL) marketing activities such as- seminars in schools, and open seminars in town & residential spots within a specified territory. * Contributed towards set targets by doing school visits for meeting principals, coordinators and management personnel for business development. * Ensured a delightful customer experience while going for home visits to counsel students and parents and close admissions resulting in enrolling the students. * Capitalized on business opportunities by liaising with local tuition teachers. Ensure adherence to internal processes and compliances. 1st March - Till Date AMPA Orthodontics Pvt. Ltd BDM * Responsible for revenue generation through sales and generated revenue of 8 ot 10 lakhs every month. * Figure out new channels ot generate more leads offline and ensure conversions on the same and used to run a free campaign. * Achieved highest number of 35 converted sales ni the month of November 2021. * Secured 4th position in company's pan India Super 30 Contest. 12th February 2021 - 2nd January 2025 Think and Learn pvt. Ltd. (Byju's) BDE * Academic consultant and to promote e learning platform. * Guide students throughout the academic years. * Conduct face to face customer meetings presentation and demonstration * Generated more leads offline. 2nd October 2020 - 8th February 2021 Toppr Technology's Pvt. Ltd. BDE * Academic consultant and to promote e learning platform. * Guides students throughout the academic year. * Conduct face to face customer meetings presentation and demonstration. * Generating leads more offline. * Generated revenue of 10 Lakhs by selling only K11 and K12 module per month. 2nd May 2019 - 15th July 2020 Reliable Packaging BDE * Generating sales to develop business * Maintaining and expanding existing account * Maintaining relationship with clients with efficient interaction and followups. 1st August 2018 29th April 2019 360 Realtors LLP Internship * Generating sales to develop business. * Maintaining and expanding existing account, * Maintaining relation with existing customer develop professional relationship or networks with clients * Study property listings co-ordinate appointments to show properties to prospect ot buyers and accompany clients to property sites. 23rd April 2018 - 31st July 2018  EXPERIENCE Antraweb Technologies Pvt. Ltd. Internship * Generating sales to develop business and maintaining and expanding existing account, * On field coldcalling to corporate offices to promote tally software and add ons with tally software. 28th August 201 - 2nd January 2018 Reliance Retail Pvt. Ltd. Internship * Understanding shopper's behaviour and evaluation of customer experience * Conducted survey and ni various location such sa Thane, Navi Mumbai, Mumbai in all Reliance format such as digital, Footwear, Fresh, Trends to understand various parameters pertaining to customers experience through structured questionnaire. 2nd May 2017 - 30th June 2017 Oriental School Of Business PGDM 54% K.M. Agrawal College (Mumbai University) B.Com 52% K.M. Agrawal College (State Board) H.S.C 60% IES Ganesh Nagar Vidyalaya (State Board) SSC 50%  EDUCATION",
     "tags": {
@@ -1100,6 +1208,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AmitSingh[6y_6m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.737Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -1108,7 +1228,7 @@
     "name": "Naukri AnandMishra[6y 0m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AnandMishra[6y_0m].pdf",
     "searchableText": "ASSOCIATE - STUDENT SUCCESS NOV 2019 - OCT 2020 u p G r a d E d u c a t i o n P v t L t d | M u m b a i Responsible for onboarding the learners and expectation setting with regards to different program elements Coordinating and moderating the sessions throughout the week for various programs Influence the program calendar including deadlines and events by working closely with the program team and driving the schedule for the maximum benefit of the learners Played a key role in aligning curriculum and learner expectations, enhancing student engagement and retention. Tracking and monitoring the students' progress from various batches Building strong relations with the students in order to gather maximum NPS SALES ASSOCIATE NOV 2018 - NOV 2019 D o c t o r s R i s k M e d i c o L e g a l S e r v i c e s I n d i a P v t . L t d | M u m b a i Engaging with customers to effectively build rapport and lasting relationships Connecting and following up with potential clients, making appointments, and pitching them our services. Presenting the business module and generating new business through a series of networking events Arranging mass events for effective conversion and maintaining the database of the potential clients Managed operations, customer service, and strategic marketing. EXPERIENCE CO- FOUNDER APR 2015 - JUL 2018 D o M y W o r k | M u m b a i Handling customer service and the inquiries of the students Understanding and allocation of the projects to the associates Connecting with the clients and taking feedback for the services provided Planning,assisting and executing the growth and marketing strategies Led national-level CSR training for 25,000+ students Successfully managed the end to end revamp of Medico Legal Consultant Program for 'GIVES' Successfully completed “Master Training Course” conducted by NIESBUD Successfully completed “Entrepreneurship Development Program” conducted by NIESBUD Successfully completed “Digital Marketing Program” conducted by upGrad Acted as an enthusiast tour guide for local Mumbai tours to foreign tourists ANAND MISHRA PROFESSIONAL SKILLS Client Relationship Team Management Strategic Planning Escalation Management Customer Satisfaction Negotiation skills Keen eye for new opportunities Session Management Vendor Management Stakeholder Management Team Player Cross-functional coordination Communication skills Data Analysis Multi Tasker PERSONAL SKILLS Creative spirit Reliable and professional Organized Time management Quick learner Self -Motivated Proactive Adaptability Attention to detail EDUCATION MANAGER - CUSTOMER SUCCESS CONTACT Mobile - 9821160930/9930779063 Email - anandarvindmishra@gmail.com Address - Mulund West, Mumbai LinkedIn - https://www.linkedin.com/in/anandmishraa ACHIEVEMENTS BMS MBA : MARKETING,FINANCE JUN 2014 - MAY 2019 U n i v e r s i t y o f M u m b a i PROFILE SNAPSHOT Accomplished Manager of Customer Success with a proven track record in boosting business growth through strategic seminars/webinars and cross- functional collaboration. Successfully led and motivated a team, surpassing targets and delivering exceptional outcomes. Proficient in driving escalations to resolution and generating business. Expertise extends to Student Success, and impactful Sales demonstrating adaptability, communication excellence, and impactful leadership across 6.5 years of diverse experience. MANAGER - CUSTOMER SUCCESS NOV 2020 - APRIL 2025 G l o b a l I n s t i t u t e o f V a l u e E d u c a t i o n S o c i e t y | M u m b a i Conceptualized and executed multiple strategic seminars and webinars, improving engagement and contributing to business growth. Spearheaded customer success for large-scale CSR education initiatives like “Dhangyan” for Tata Capital, reaching over 25,000+ underprivileged students across 5 cities. Boosting customer satisfaction by working closely with cross-functional teams to address and resolve concerns. Managing, training and motivating a team of executives to consistently exceed their quarterly targets Training, mentoring, and monitoring new team members' activities in order to promote productivity, accuracy, and friendly customer service. Standardized escalation management, reducing resolution time and boosted stakeholder satisfaction. Preparing monthly and quarterly documentation, reports, and logs. Managing communication with the students and the industry experts, to resolve their concerns. Known for service personalization, proactive support and .seamless handholding to the students ensuring good CSAT score and NPS throughout the learning journey. DOB - OCTOBER 14, 1995",
     "tags": {
@@ -1137,6 +1257,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AnandMishra[6y_0m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.752Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -1145,7 +1277,7 @@
     "name": "Naukri AQILAHMED[5y 1m]",
     "email": "",
     "phone": "",
-    "source": "HRTeam",
+    "source": "Naukri",
     "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AQILAHMED[5y_1m].pdf",
     "searchableText": "Aqil Ahmed ♂phone+91-8123321954 —/envel⌢peaqilprofessional74432@gmail.com —/linkedin linkedin.com/in/aqil-ahmed —♂¶ap-¶arker-altBengaluru, India Professional Summary Dynamic and results-driven Sales & Marketing professional with 5 years of experience driving revenue growth, managing customer relationships, and supporting branch-level operations. Currently serving as an Assistant Branch Manager, leading sales initiatives, improving enquiry-to-conversion ratios, and executing local marketing activities to enhance customer engagement and business visibility. Previously managed international clients and working professionals across the USA, Canada, and South America in a high- performance inside sales environment, consistently achieving sales targets and delivering superior customer service. Recognized for a structured sales approach, strong communication skills, and effective collaboration with cross-functional teams to improve customer experience and overall business performance. Seeking a managerial role where I can contribute through effective team leadership, sales strategy, and operational excellence. Core Competencies •Branch Leadership & Revenue Generation •Sales Team Coaching & Capability Building •Customer Acquisition & Admissions Strategy •Feeder Zone Development & Local Area Market- ing •Performance Forecasting & Funnel Optimization •School Outreach, Events & Community Engage- ment •CRM Tools (Salesforce, LMS, Internal CRMs) •Cross-functional Collaboration & Stakeholder Management Experience Aakash Educational Services LtdMar 2025 – Present Assistant Branch Manager (Sales & Marketing) •Manage, coach, and evaluate a 7-member sales team, improving counseling quality, lead utilization, and productivity. •Lead branch revenue, admissions growth, and sales operations through structured planning and execu- tion. •Drive acquisition via school outreach, seminars, academic tie-ups, walk-in events, and localized market- ing campaigns. •Strengthen relationships with principals, coordinators, and community influencers to build sustainable lead pipelines. •Collaborate with operations and academics teams to ensure seamless admissions, parent engagement, and onboarding. •Conduct sales reviews, performance audits, and forecasting to optimize enquiry-to-admission conversion ratios. International Knowledge Academy Pvt LtdApr 2024 – Mar 2025 Senior Inside Sales Manager (IC Role) •Achieved strong quarterly revenue growth across the US, Canada, and South America through consul- tative selling approach. •Built long-term client relationships, resulting in high retention, upsell success, and increased lifetime value for the customer. •Implemented targeted upselling and cross-selling strategies, increasing revenue per customer. •Consistent in monthly revenue targets through disciplined planning and customer-centric closing. Think and Learn Pvt Ltd (BYJU’S)Dec 2020 – Apr 2024 Business Development (BDA→Senior BDA→Team Lead) •Earned promotion into a team-handling role by consistently exceeding performance expectations and demonstrating clear leadership potential. •Improved team conversion through structured counselling workflows, optimized CRM usage, and follow- up refinement. •Managed end-to-end sales: prospecting, counselling, product demonstrations, negotiation, and closing. •Built strong client relationships, generating repeat enrolments and referral-driven growth. Education Bachelor of Engineering (Mechanical Engineering) P.D.A. College of Engineering, Gulbarga 2017 – 2020 Diploma in Mechanical Engineering KCT Polytechnic, Gulbarga 2014 – 2017 Certifications & Professional Development •Sales Pipeline Management — LinkedIn •B2B Sales Foundations — LinkedIn •Learning LinkedIn Sales Navigator — LinkedIn •Salesforce Essential Training — LinkedIn Languages •English (Fluent) •Kannada (Fluent) •Hindi (Fluent) •Urdu (Fluent) References Available upon request.",
     "tags": {
@@ -1174,6 +1306,18 @@
           "resumeFilePath": "onedrive-data/seed/resumes/BD & Ops/Naukri_AQILAHMED[5y_1m].pdf"
         },
         "notes": "Seeded from HR resume delivery."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.767Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {
+          "source": "HRTeam"
+        },
+        "after": {
+          "source": "Naukri"
+        },
+        "notes": "Edited by Hiring@getsetlearn.info."
       }
     ]
   },
@@ -6251,8 +6395,21 @@
         "before": {},
         "after": {},
         "notes": "Pipeline move: Senior Academics Manager → Sales Executive. Notes: Better fit for that role"
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.558Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/17dd281b-8c0f-4c2b-8235-503dd23182dc.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Mohammed-Muzammil.pdf, 382 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/17dd281b-8c0f-4c2b-8235-503dd23182dc.pdf"
   },
   {
     "id": "97ac7b63-cbbb-46a6-8dd5-da191f33be52",
@@ -6483,6 +6640,87 @@
           "source": "HRTeam",
           "programmes": [
             "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.542Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/63ed70f5-4e0e-422d-a022-a3779bf1faf9.docx"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Resume_CV- Huda.docx, 196 KB)."
+      }
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/63ed70f5-4e0e-422d-a022-a3779bf1faf9.docx"
+  },
+  {
+    "id": "ea69ae97-9159-4ba7-b68b-4a14fff355e8",
+    "name": "Shabir Hussain",
+    "email": "kedskargil@gmail.com",
+    "phone": "",
+    "source": "Referral",
+    "searchableText": "Co-Founder",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-11.",
+    "createdAt": "2026-05-11T07:02:33.791Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-11T07:02:33.791Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Shabir Hussain",
+          "email": "kedskargil@gmail.com",
+          "source": "Referral",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "0cb3c0a4-a1e6-4b0d-b984-ad587d00627b",
+    "name": "Abhishek Mukherjee",
+    "email": "abhishekiam@gmail.com",
+    "phone": "9830932635",
+    "source": "Referral",
+    "searchableText": "Senior Zonal Manager",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Referred by Prodipto",
+    "createdAt": "2026-05-11T07:50:45.035Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-11T07:50:45.035Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Abhishek Mukherjee",
+          "email": "abhishekiam@gmail.com",
+          "source": "Referral",
+          "programmes": [
+            "Sales"
           ]
         },
         "notes": "Created via paste-in import."

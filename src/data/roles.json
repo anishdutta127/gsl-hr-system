@@ -328,5 +328,50 @@
         "notes": "Created via UI"
       }
     ]
+  },
+  {
+    "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+    "title": "SME Arduino",
+    "department": "STEM",
+    "location": "Mumbai",
+    "employmentType": "Full-time",
+    "status": "Open",
+    "pipelineStages": [
+      "Sourced",
+      "Shortlisted",
+      "AssessmentSent",
+      "AssessmentDone",
+      "VideoSent",
+      "VideoDone",
+      "HODRoundScheduled",
+      "HODRoundDone",
+      "HRRoundScheduled",
+      "HRRoundDone",
+      "Offered",
+      "OfferAccepted",
+      "DocsCollected",
+      "Joined"
+    ],
+    "rubric": [],
+    "description": "<p><strong>Key Responsibilities:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Managing end-to-end STEM Product development.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Structure end-to-end curriculum frameworks and learning progressions across K–12 in STEM, Robotics, Coding, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure strong alignment between curriculum intent, instructional design methodology, hands-on activities, projects, and assessment strategies and tools.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Embed experiential, inquiry-based, problem-solving, and learner-centric pedagogical approaches within curriculum designs.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Be responsible for design and development of teaching – learning resources, to ensure academic accuracy, conceptual clarity, consistency across grades and alignment with NEP 2020 recommendations, NCF guidelines and SDG goals.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure age-appropriateness, cognitive load balance, and practical classroom feasibility of learning designs, including lab and activity components.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identify design gaps, redundancies, or misalignments and recommend data-informed improvements to enhance learning effectiveness.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Collaborate closely with academic, product, and delivery teams to ensure curriculum/ content usability, teacher readiness, and smooth classroom implementation.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Be responsible for the design, development and quality of teacher training design.</p><p><strong>Skill set:</strong></p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eye to detail</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong communication skills</p><p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Team management skills</p><p><strong>Qualifications:</strong></p><p>B. E./ M.E. in Electronics/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://B.Tech\">B.Tech</a> / <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Tech\">M.Tech</a> in Engineering, Technology, or a related STEM discipline</p><p><strong>Experience:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Minimum 5 years of experience in K–12 curriculum and content design for STEM, Robotics, Coding, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Work experience with Arduino boards will be preferred (Content creation and Training).</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sound knowledge of programming languages is expected.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exposure to classroom implementation, pilots, teacher training is preferred.</p><p><strong>Core Competencies:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong understanding of STEM, Robotics, Coding, and AI concepts at the K–12 level.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clear understanding of school board alignment requirements for STEM, Robotics, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ability to guide teams, maintain design standards, and ensure consistency across grades.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong attention to academic accuracy, design quality, and classroom feasibility.</p><p>&nbsp;</p><p>&nbsp;</p>",
+    "responsibilities": [],
+    "mustHaves": [],
+    "niceToHaves": [],
+    "createdAt": "2026-05-11T07:43:10.584Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-11T07:43:10.584Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.create",
+        "after": {
+          "title": "SME Arduino",
+          "department": "STEM",
+          "location": "Mumbai",
+          "employmentType": "Full-time"
+        },
+        "notes": "Created via UI"
+      }
+    ]
   }
 ]

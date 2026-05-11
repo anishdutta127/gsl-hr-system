@@ -2465,7 +2465,7 @@
     "reportingManagerId": "1584f525-bad3-5aa3-a9ca-a7a748543f6f",
     "location": "Chennai",
     "dateOfJoining": "2023-10-03",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-04-03",
     "tenureYears": 2.6,
     "dateOfBirth": "1999-09-02",
@@ -2550,6 +2550,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-05-11T10:03:32.782Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Terminated",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "FNF process done."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
       }
     ],
     "locationType": "remote-field",
@@ -2560,7 +2580,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-03-31",
+      "reason": "Terminated",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "FNF process done."
+    }
   },
   {
     "id": "ae8b87ec-59a0-5c98-6426-45c3a9069bf2",

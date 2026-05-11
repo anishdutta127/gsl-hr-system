@@ -2241,5 +2241,484 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-07T12:20:08.333Z"
+  },
+  {
+    "id": "1d72d2f9-b3b7-4ab6-a167-b06627196b66",
+    "queuedAt": "2026-05-11T07:02:33.792Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "ea69ae97-9159-4ba7-b68b-4a14fff355e8",
+      "name": "Shabir Hussain",
+      "email": "kedskargil@gmail.com",
+      "phone": "",
+      "source": "Referral",
+      "searchableText": "Co-Founder",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-11.",
+      "createdAt": "2026-05-11T07:02:33.791Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:02:33.791Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shabir Hussain",
+            "email": "kedskargil@gmail.com",
+            "source": "Referral",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.537Z"
+  },
+  {
+    "id": "137aca20-db94-4f0b-a8c1-5743c909789b",
+    "queuedAt": "2026-05-11T07:43:10.586Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+      "title": "SME Arduino",
+      "department": "STEM",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Managing end-to-end STEM Product development.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Structure end-to-end curriculum frameworks and learning progressions across K–12 in STEM, Robotics, Coding, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure strong alignment between curriculum intent, instructional design methodology, hands-on activities, projects, and assessment strategies and tools.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Embed experiential, inquiry-based, problem-solving, and learner-centric pedagogical approaches within curriculum designs.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Be responsible for design and development of teaching – learning resources, to ensure academic accuracy, conceptual clarity, consistency across grades and alignment with NEP 2020 recommendations, NCF guidelines and SDG goals.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ensure age-appropriateness, cognitive load balance, and practical classroom feasibility of learning designs, including lab and activity components.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Identify design gaps, redundancies, or misalignments and recommend data-informed improvements to enhance learning effectiveness.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Collaborate closely with academic, product, and delivery teams to ensure curriculum/ content usability, teacher readiness, and smooth classroom implementation.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Be responsible for the design, development and quality of teacher training design.</p><p><strong>Skill set:</strong></p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eye to detail</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong communication skills</p><p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Team management skills</p><p><strong>Qualifications:</strong></p><p>B. E./ M.E. in Electronics/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://B.Tech\">B.Tech</a> / <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Tech\">M.Tech</a> in Engineering, Technology, or a related STEM discipline</p><p><strong>Experience:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Minimum 5 years of experience in K–12 curriculum and content design for STEM, Robotics, Coding, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Work experience with Arduino boards will be preferred (Content creation and Training).</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sound knowledge of programming languages is expected.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exposure to classroom implementation, pilots, teacher training is preferred.</p><p><strong>Core Competencies:</strong></p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong understanding of STEM, Robotics, Coding, and AI concepts at the K–12 level.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clear understanding of school board alignment requirements for STEM, Robotics, and AI.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ability to guide teams, maintain design standards, and ensure consistency across grades.</p><p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong attention to academic accuracy, design quality, and classroom feasibility.</p><p>&nbsp;</p><p>&nbsp;</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-05-11T07:43:10.584Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:43:10.584Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "SME Arduino",
+            "department": "STEM",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.538Z"
+  },
+  {
+    "id": "b8ed2623-ee92-4f75-a84c-679e9e5f1d09",
+    "queuedAt": "2026-05-11T07:45:01.338Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/63ed70f5-4e0e-422d-a022-a3779bf1faf9.docx"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Resume_CV- Huda.docx, 196 KB)."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.554Z"
+  },
+  {
+    "id": "3be6ed62-07b4-4eab-b9cd-8a689cc1e3c2",
+    "queuedAt": "2026-05-11T07:47:49.531Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/17dd281b-8c0f-4c2b-8235-503dd23182dc.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Mohammed-Muzammil.pdf, 382 KB)."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.570Z"
+  },
+  {
+    "id": "303f4ac4-32e4-4962-b407-5af5d97da0db",
+    "queuedAt": "2026-05-11T07:48:47.234Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "30f06940-f51c-4ccb-a245-be954b33ad6c",
+      "candidateId": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-11T07:48:47.216Z",
+      "createdAt": "2026-05-11T07:48:47.216Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:48:47.216Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to Senior Academics Manager pipeline."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.570Z"
+  },
+  {
+    "id": "d89263a3-b0f1-4c5b-b03e-38b8a10146c1",
+    "queuedAt": "2026-05-11T07:50:45.036Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0cb3c0a4-a1e6-4b0d-b984-ad587d00627b",
+      "name": "Abhishek Mukherjee",
+      "email": "abhishekiam@gmail.com",
+      "phone": "9830932635",
+      "source": "Referral",
+      "searchableText": "Senior Zonal Manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Referred by Prodipto",
+      "createdAt": "2026-05-11T07:50:45.035Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:50:45.035Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Abhishek Mukherjee",
+            "email": "abhishekiam@gmail.com",
+            "source": "Referral",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.587Z"
+  },
+  {
+    "id": "5eb83f12-59de-491f-a02c-a52a665c87c9",
+    "queuedAt": "2026-05-11T07:55:31.373Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "candidate.update",
+      "before": {
+        "name": "26 Shubham Maurya"
+      },
+      "after": {
+        "name": "Shubham Maurya"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.604Z"
+  },
+  {
+    "id": "244bca59-805b-4736-8e8d-8e96cc7ee0ef",
+    "queuedAt": "2026-05-11T07:56:34.733Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "05d927d2-16ab-5c02-64e3-4290bfc3cb04",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Educohire"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.620Z"
+  },
+  {
+    "id": "2cdecafd-0a87-4aa0-8c84-b1efc18f756a",
+    "queuedAt": "2026-05-11T07:57:11.995Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "490e2e1c-311b-593a-6c71-e11d100b209f",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Educohire"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.635Z"
+  },
+  {
+    "id": "3f3f04f5-4366-4b2f-9ddf-272a259914c0",
+    "queuedAt": "2026-05-11T07:57:31.436Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "f3bb5052-0ad0-5200-f6ae-1135fd70b80f",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Educohire"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.653Z"
+  },
+  {
+    "id": "84bc831b-101b-4f60-bde7-4374170fb40b",
+    "queuedAt": "2026-05-11T07:58:34.029Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "43e04fd3-71ee-5d26-a23e-e8c6bd55317c",
+      "operation": "candidate.update",
+      "before": {
+        "notes": "Legacy resume delivered by HR on 2026-04-24. Original folder: BD & Ops. No consent on file; do not publish externally until HR confirms."
+      },
+      "after": {
+        "notes": ""
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.669Z"
+  },
+  {
+    "id": "753b47da-6a27-44d4-8c3b-706c75e7384f",
+    "queuedAt": "2026-05-11T07:58:55.468Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "5c4bd35f-9f53-52b9-01e9-c3389fe1c3d3",
+      "operation": "candidate.update",
+      "before": {
+        "name": "Bimlendu Shivam Growth Strategy"
+      },
+      "after": {
+        "name": "Bimlendu Shivam"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.685Z"
+  },
+  {
+    "id": "6a15115c-a786-42d2-a41e-44a71c071a26",
+    "queuedAt": "2026-05-11T07:59:54.954Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "292751dd-93b3-5a88-6b2f-bfcd7499df99",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.702Z"
+  },
+  {
+    "id": "38daf27a-f0ed-4f6a-87e5-39c3ae4077b6",
+    "queuedAt": "2026-05-11T08:00:15.928Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "5e856c95-fea4-53c3-820d-c36d54cd9a35",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.717Z"
+  },
+  {
+    "id": "a4db4bc5-cf2f-44d2-a47d-d8418a05e273",
+    "queuedAt": "2026-05-11T08:00:41.176Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "81b0246a-0fee-5a31-c6bb-67e5caf6ff9d",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.732Z"
+  },
+  {
+    "id": "866c03b8-8aad-4809-9d08-ca01d1ee3ade",
+    "queuedAt": "2026-05-11T08:01:08.739Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "3c9db1d5-befd-5f02-d898-66667c1823be",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.748Z"
+  },
+  {
+    "id": "00501b4d-ccee-4e9c-b2c2-a992975cc154",
+    "queuedAt": "2026-05-11T08:01:29.241Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "13238bac-f67e-5dd0-e3db-8fe47f331d5d",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.763Z"
+  },
+  {
+    "id": "706efc02-7875-4e0b-ae51-2352c825ed54",
+    "queuedAt": "2026-05-11T08:01:55.821Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "957ed62e-2e1d-50f7-89bb-99488de18991",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Naukri"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.779Z"
+  },
+  {
+    "id": "05be2c68-626d-4e6d-bec5-e9a9e2a3c6fd",
+    "queuedAt": "2026-05-11T08:08:16.064Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Terminated",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "FNF process done."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-11T10:03:32.793Z"
   }
 ]
