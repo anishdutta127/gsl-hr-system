@@ -431,5 +431,32 @@
       "notes": "Edited by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "05be2c68-626d-4e6d-bec5-e9a9e2a3c6fd",
+    "queuedAt": "2026-05-11T08:08:16.064Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Terminated",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "FNF process done."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+    },
+    "retryCount": 0
   }
 ]
