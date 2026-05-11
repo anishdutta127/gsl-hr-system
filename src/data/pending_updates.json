@@ -203,5 +203,24 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "5eb83f12-59de-491f-a02c-a52a665c87c9",
+    "queuedAt": "2026-05-11T07:55:31.373Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
+      "operation": "candidate.update",
+      "before": {
+        "name": "26 Shubham Maurya"
+      },
+      "after": {
+        "name": "Shubham Maurya"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
