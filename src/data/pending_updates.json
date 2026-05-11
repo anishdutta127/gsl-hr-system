@@ -93,5 +93,24 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "b8ed2623-ee92-4f75-a84c-679e9e5f1d09",
+    "queuedAt": "2026-05-11T07:45:01.338Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "63ed70f5-4e0e-422d-a022-a3779bf1faf9",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/63ed70f5-4e0e-422d-a022-a3779bf1faf9.docx"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Resume_CV- Huda.docx, 196 KB)."
+    },
+    "retryCount": 0
   }
 ]
