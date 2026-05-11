@@ -161,5 +161,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "d89263a3-b0f1-4c5b-b03e-38b8a10146c1",
+    "queuedAt": "2026-05-11T07:50:45.036Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0cb3c0a4-a1e6-4b0d-b984-ad587d00627b",
+      "name": "Abhishek Mukherjee",
+      "email": "abhishekiam@gmail.com",
+      "phone": "9830932635",
+      "source": "Referral",
+      "searchableText": "Senior Zonal Manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Referred by Prodipto",
+      "createdAt": "2026-05-11T07:50:45.035Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-11T07:50:45.035Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Abhishek Mukherjee",
+            "email": "abhishekiam@gmail.com",
+            "source": "Referral",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
