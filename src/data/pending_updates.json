@@ -279,5 +279,24 @@
       "notes": "Edited by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "84bc831b-101b-4f60-bde7-4374170fb40b",
+    "queuedAt": "2026-05-11T07:58:34.029Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "43e04fd3-71ee-5d26-a23e-e8c6bd55317c",
+      "operation": "candidate.update",
+      "before": {
+        "notes": "Legacy resume delivered by HR on 2026-04-24. Original folder: BD & Ops. No consent on file; do not publish externally until HR confirms."
+      },
+      "after": {
+        "notes": ""
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
