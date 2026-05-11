@@ -222,5 +222,24 @@
       "notes": "Edited by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "244bca59-805b-4736-8e8d-8e96cc7ee0ef",
+    "queuedAt": "2026-05-11T07:56:34.733Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "05d927d2-16ab-5c02-64e3-4290bfc3cb04",
+      "operation": "candidate.update",
+      "before": {
+        "source": "HRTeam"
+      },
+      "after": {
+        "source": "Educohire"
+      },
+      "notes": "Edited by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
