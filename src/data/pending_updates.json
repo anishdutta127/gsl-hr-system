@@ -393,5 +393,39 @@
       "createdAt": "2026-05-12T16:46:54.235Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "3cebb232-8733-4b74-83bb-3623038b135d",
+    "queuedAt": "2026-05-12T17:50:38.542Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e53a9fec-949a-4e86-b2eb-ac4234230a31",
+      "name": "Rahul Namdev",
+      "email": "rahulnamdev5115@gmail.com",
+      "phone": "7024754794",
+      "source": "Application",
+      "notes": "Hi, I’m Rahul Namdev, a Business Development and Operations professional with nearly 10+ years of experience across EdTech, institutional partnerships, and large-scale assessment operations. I’ve worked with organizations like BYJU’S, Unacademy, Sunstone Education, Mercer-Mettle, TCS iON, and Sify Technologies, driving revenue growth, institutional onboarding, stakeholder management, and seamless operational execution at scale.\r\n\r\nMy experience spans business development, strategic partnerships, student acquisition, and end-to-end program management, with a strong understanding of both growth and operations functions. Currently exploring leadership opportunities in Business Development, Operations, and Strategic Partnerships.",
+      "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf",
+      "createdAt": "2026-05-12T17:50:37.403Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T17:50:37.403Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rahul Namdev",
+            "email": "rahulnamdev5115@gmail.com",
+            "source": "Application",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
