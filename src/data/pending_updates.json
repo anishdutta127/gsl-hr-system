@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "5de63ebc-c1c0-4f89-b51e-75fa2817d5ed",
+    "queuedAt": "2026-05-12T14:02:50.980Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+      "name": "Abhishek Soni",
+      "email": "s.abhie@gmail.com",
+      "phone": "9610441044",
+      "source": "Application",
+      "notes": "I am deeply motivated by the opportunity to engage with educators, discuss transformative strategies, and contribute to building a stronger future for the next generation.",
+      "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf",
+      "createdAt": "2026-05-12T14:02:49.464Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T14:02:49.464Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Abhishek Soni",
+            "email": "s.abhie@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
