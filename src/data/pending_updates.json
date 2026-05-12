@@ -314,5 +314,39 @@
       "createdAt": "2026-05-12T14:11:48.091Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "6b7772a6-70db-4624-ad9d-3a9357bab2a7",
+    "queuedAt": "2026-05-12T14:55:32.444Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
+      "name": "Kishore G",
+      "email": "g.kishore438@gmail.com",
+      "phone": "7204863438",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf",
+      "createdAt": "2026-05-12T14:55:31.163Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T14:55:31.163Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Kishore G",
+            "email": "g.kishore438@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
