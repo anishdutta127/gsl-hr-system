@@ -235,5 +235,39 @@
       "createdAt": "2026-05-12T16:01:19.387Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "25b82234-3602-4874-8e1b-531b31c61819",
+    "queuedAt": "2026-05-12T16:04:27.122Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "40c12901-d5dc-4843-a291-0c3827538e53",
+      "name": "SACHIN KUMAR",
+      "email": "sackm123@gmail.com",
+      "phone": "7892355212",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf",
+      "createdAt": "2026-05-12T16:04:25.878Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T16:04:25.878Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "SACHIN KUMAR",
+            "email": "sackm123@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
