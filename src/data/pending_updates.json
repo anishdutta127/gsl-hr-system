@@ -235,5 +235,39 @@
       "createdAt": "2026-05-12T14:11:21.297Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "e5fe22d8-b1df-4f9b-b127-8bdffe239ea3",
+    "queuedAt": "2026-05-12T14:11:46.347Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "b753d73e-8617-4482-a282-8dd577c0efea",
+      "name": "ABHIJEET SINGH BHANUVANSHI",
+      "email": "asbhanuvanshi2000@gmail.com",
+      "phone": "8960681912",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/b753d73e-8617-4482-a282-8dd577c0efea.pdf",
+      "createdAt": "2026-05-12T14:11:45.032Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T14:11:45.032Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "ABHIJEET SINGH BHANUVANSHI",
+            "email": "asbhanuvanshi2000@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/b753d73e-8617-4482-a282-8dd577c0efea.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
