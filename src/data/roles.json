@@ -373,5 +373,50 @@
         "notes": "Created via UI"
       }
     ]
+  },
+  {
+    "id": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "title": "STEM Trainer",
+    "department": "STEM",
+    "location": "Remote",
+    "employmentType": "Full-time",
+    "status": "Open",
+    "pipelineStages": [
+      "Sourced",
+      "Shortlisted",
+      "AssessmentSent",
+      "AssessmentDone",
+      "VideoSent",
+      "VideoDone",
+      "HODRoundScheduled",
+      "HODRoundDone",
+      "HRRoundScheduled",
+      "HRRoundDone",
+      "Offered",
+      "OfferAccepted",
+      "DocsCollected",
+      "Joined"
+    ],
+    "rubric": [],
+    "description": "<p><strong>Role Description</strong></p><p>As a STEM Trainer, you will engage students through hands-on learning in Robotics, Coding, Electronics, IoT, and STEM activities using innovative Tinker kits and practical projects.</p><p><strong>Key Responsibilities:</strong></p><p> • Conduct interactive STEM and Robotics sessions in schools</p><p> • Train students using activity-based learning methods</p><p> • Handle Arduino, ESP32, sensors, actuators, and robotics kits</p><p> • Support workshops, exhibitions, demos, and teacher training programs</p><p> • Inspire students to innovate, build, and solve real-world problems. Document activities and school and student progress.</p><p></p>",
+    "responsibilities": [],
+    "mustHaves": [],
+    "niceToHaves": [],
+    "createdAt": "2026-05-12T09:01:09.812Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T09:01:09.812Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.create",
+        "after": {
+          "title": "STEM Trainer",
+          "department": "STEM",
+          "location": "Remote",
+          "employmentType": "Full-time"
+        },
+        "notes": "Created via UI"
+      }
+    ]
   }
 ]
