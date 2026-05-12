@@ -472,5 +472,39 @@
       "createdAt": "2026-05-12T17:50:40.374Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "d874c1e0-dede-42d6-99c0-8678479181b5",
+    "queuedAt": "2026-05-12T18:17:36.189Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
+      "name": "John Bijoy",
+      "email": "johbijoy@gmail.com",
+      "phone": "+919004042080",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf",
+      "createdAt": "2026-05-12T18:17:34.863Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T18:17:34.863Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "John Bijoy",
+            "email": "johbijoy@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
