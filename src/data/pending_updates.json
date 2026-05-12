@@ -709,5 +709,39 @@
       "createdAt": "2026-05-12T19:52:01.960Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "bcb57505-6ebc-4073-b56b-4769b6e26e5b",
+    "queuedAt": "2026-05-12T21:39:58.587Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21",
+      "name": "Deepak Prakash Morey",
+      "email": "deepakmore2121@gmail.com",
+      "phone": "+917507793077",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21.pdf",
+      "createdAt": "2026-05-12T21:39:57.530Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T21:39:57.530Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Deepak Prakash Morey",
+            "email": "deepakmore2121@gmail.com",
+            "source": "Application",
+            "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+            "resumeFilePath": "data/resumes/applications/2026/05/ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
