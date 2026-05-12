@@ -552,5 +552,131 @@
         "notes": "Bulk-added to Senior Academics Manager pipeline."
       }
     ]
+  },
+  {
+    "id": "f1bfb6bf-d360-4925-a20c-9622b6d6b366",
+    "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T14:02:49.464Z",
+    "createdAt": "2026-05-12T14:02:49.464Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:02:49.464Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "32c47981-a270-4487-aad8-05953b13c8f1",
+    "candidateId": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T14:09:54.170Z",
+    "createdAt": "2026-05-12T14:09:54.170Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:09:54.170Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "c3a64ad0-c538-469c-8069-2905d3a3c937",
+    "candidateId": "6d319a54-3634-4fb7-9050-d80d6a42ae78",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T14:11:17.849Z",
+    "createdAt": "2026-05-12T14:11:17.849Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:11:17.849Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "6d319a54-3634-4fb7-9050-d80d6a42ae78",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "88ebdd23-1e1d-4e7e-a28f-46e30df61e1f",
+    "candidateId": "b753d73e-8617-4482-a282-8dd577c0efea",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T14:11:45.032Z",
+    "createdAt": "2026-05-12T14:11:45.032Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:11:45.032Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "b753d73e-8617-4482-a282-8dd577c0efea",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "b53e78fb-0b04-4244-863d-f17e9f818b32",
+    "candidateId": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T14:55:31.163Z",
+    "createdAt": "2026-05-12T14:55:31.163Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:55:31.163Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "9c4b686f-a1ec-4c25-a4f6-e9c7b091af73",
+    "candidateId": "badfb08d-5d18-4a3f-b72e-6c4255650781",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-12T15:03:20.408Z",
+    "createdAt": "2026-05-12T15:03:20.408Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T15:03:20.408Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "badfb08d-5d18-4a3f-b72e-6c4255650781",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]

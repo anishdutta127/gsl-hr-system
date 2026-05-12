@@ -6726,5 +6726,161 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+    "name": "Abhishek Soni",
+    "email": "s.abhie@gmail.com",
+    "phone": "9610441044",
+    "source": "Application",
+    "notes": "I am deeply motivated by the opportunity to engage with educators, discuss transformative strategies, and contribute to building a stronger future for the next generation.",
+    "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf",
+    "createdAt": "2026-05-12T14:02:49.464Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:02:49.464Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Abhishek Soni",
+          "email": "s.abhie@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
+    "name": "Deepa",
+    "email": "deepasarasu16@gmail.com",
+    "phone": "+919840752288",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/9ccfd8d4-1f19-4442-9fe8-098957bc1424.pdf",
+    "createdAt": "2026-05-12T14:09:54.170Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:09:54.170Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Deepa",
+          "email": "deepasarasu16@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/9ccfd8d4-1f19-4442-9fe8-098957bc1424.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "6d319a54-3634-4fb7-9050-d80d6a42ae78",
+    "name": "ABHIJEET SINGH BHANUVANSHI",
+    "email": "asbhanuvanshi2000@gmail.com",
+    "phone": "8960681912",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/6d319a54-3634-4fb7-9050-d80d6a42ae78.pdf",
+    "createdAt": "2026-05-12T14:11:17.849Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:11:17.849Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "ABHIJEET SINGH BHANUVANSHI",
+          "email": "asbhanuvanshi2000@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/6d319a54-3634-4fb7-9050-d80d6a42ae78.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "b753d73e-8617-4482-a282-8dd577c0efea",
+    "name": "ABHIJEET SINGH BHANUVANSHI",
+    "email": "asbhanuvanshi2000@gmail.com",
+    "phone": "8960681912",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/b753d73e-8617-4482-a282-8dd577c0efea.pdf",
+    "createdAt": "2026-05-12T14:11:45.032Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:11:45.032Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "ABHIJEET SINGH BHANUVANSHI",
+          "email": "asbhanuvanshi2000@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/b753d73e-8617-4482-a282-8dd577c0efea.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
+    "name": "Kishore G",
+    "email": "g.kishore438@gmail.com",
+    "phone": "7204863438",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf",
+    "createdAt": "2026-05-12T14:55:31.163Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T14:55:31.163Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Kishore G",
+          "email": "g.kishore438@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "badfb08d-5d18-4a3f-b72e-6c4255650781",
+    "name": "RAHUL SONI",
+    "email": "rhlsoni@gmail.com",
+    "phone": "9650954088",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf",
+    "createdAt": "2026-05-12T15:03:20.408Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T15:03:20.408Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "RAHUL SONI",
+          "email": "rhlsoni@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
