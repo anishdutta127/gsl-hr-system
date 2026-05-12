@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "61767682-e755-45f1-a007-90832dd2fe2c",
+    "queuedAt": "2026-05-12T15:42:53.805Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "3a0a067c-44fd-4929-bda8-d08adada7deb",
+      "name": "Syed Zafar Abbas Naqvu",
+      "email": "sza.naqvi97@gmail.com",
+      "phone": "9958027648",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf",
+      "createdAt": "2026-05-12T15:42:52.546Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T15:42:52.546Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Syed Zafar Abbas Naqvu",
+            "email": "sza.naqvi97@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
