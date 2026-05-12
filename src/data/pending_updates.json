@@ -551,5 +551,39 @@
       "createdAt": "2026-05-12T18:17:38.163Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "de96a593-d122-48c7-92f3-4eec741f8dee",
+    "queuedAt": "2026-05-12T19:37:37.687Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "ffe75658-fad7-4baa-94ab-32529187e79c",
+      "name": "MOHAMMED AMEENULLA",
+      "email": "ameenimran04@gmail.com",
+      "phone": "9731034310",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf",
+      "createdAt": "2026-05-12T19:37:36.213Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T19:37:36.213Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "MOHAMMED AMEENULLA",
+            "email": "ameenimran04@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
