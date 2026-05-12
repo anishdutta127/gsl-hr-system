@@ -393,5 +393,39 @@
       "createdAt": "2026-05-12T14:55:34.857Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "f38e1953-7802-4786-b4ca-b372eb108df3",
+    "queuedAt": "2026-05-12T15:03:21.674Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "badfb08d-5d18-4a3f-b72e-6c4255650781",
+      "name": "RAHUL SONI",
+      "email": "rhlsoni@gmail.com",
+      "phone": "9650954088",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf",
+      "createdAt": "2026-05-12T15:03:20.408Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T15:03:20.408Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "RAHUL SONI",
+            "email": "rhlsoni@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
