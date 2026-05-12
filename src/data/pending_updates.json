@@ -630,5 +630,39 @@
       "createdAt": "2026-05-12T19:37:39.201Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "61b04bb1-01c1-47c6-8036-1da1522f773d",
+    "queuedAt": "2026-05-12T19:52:00.171Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "34ccbf4f-a41a-438a-9a7a-71807b0ce5f6",
+      "name": "Shibani Raja",
+      "email": "raja.shibani15@gmail.com",
+      "phone": "9167453383",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/34ccbf4f-a41a-438a-9a7a-71807b0ce5f6.pdf",
+      "createdAt": "2026-05-12T19:51:59.112Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-12T19:51:59.112Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shibani Raja",
+            "email": "raja.shibani15@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/34ccbf4f-a41a-438a-9a7a-71807b0ce5f6.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
