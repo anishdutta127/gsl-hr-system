@@ -219,5 +219,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "d15d774d-cae5-4545-8c25-c3969abe70aa",
+    "queuedAt": "2026-05-12T14:11:21.297Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "0d2e94d2-18f3-4989-bbdd-4c2827af0f81",
+      "to": "asbhanuvanshi2000@gmail.com",
+      "subject": "We received your application for STEM Trainer at GSL",
+      "body": "Hi ABHIJEET,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODU5NTA4MSwiZXhwaXJlc0F0IjoxNzc4NTk1OTgxLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNmQzMTlhNTQtMzYzNC00ZmI3LTkwNTAtZDgwZDZhNDJhZTc4IiwiYXBwbGljYXRpb25JZCI6ImMzYTY0YWQwLWM1MzgtNDY5Yy04MDY5LTI5MDVkM2EzYzkzNyIsIm5vbmNlIjoiZmZkMjYwMTktY2ViNi00MmZkLTljZjktNGU3Njc3ZjljM2JlIn19.K4wzBd7Ac1HZuEq8q3UedZclY8hiHTiQCjT0Tch57Es\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 6d319a54-3634-4fb7-9050-d80d6a42ae78",
+      "createdAt": "2026-05-12T14:11:21.297Z"
+    },
+    "retryCount": 0
   }
 ]
