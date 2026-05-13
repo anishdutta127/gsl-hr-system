@@ -542,5 +542,39 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "da1afa7b-dc44-43c3-8eb6-8a9701792235",
+    "queuedAt": "2026-05-13T07:50:49.029Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0d8bc546-efbc-4c1e-8128-f41f7ce33198",
+      "name": "Sameer shaikh",
+      "email": "sameershaikh49910@gmail.com",
+      "phone": "9370449910",
+      "source": "Application",
+      "notes": "I’m eager to learn, grow, and give my best to this role. I’m hardworking, quick to adapt, and excited for the opportunity.",
+      "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf",
+      "createdAt": "2026-05-13T07:50:48.074Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T07:50:48.074Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Sameer shaikh",
+            "email": "sameershaikh49910@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
