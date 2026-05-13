@@ -230,12 +230,33 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         append_audit(entity, queued_by, op, before, after, notes)
         return
 
-    # Offer state transitions: approve/send/accept/decline/withdraw
+    # Offer state transitions: approve/send/resend/accept/decline/withdraw
     if isinstance(op, str) and op.startswith("offer."):
         if isinstance(after, dict):
-            for key in ("status", "approvedAt", "approvedBy", "sentAt", "respondedAt"):
+            for key in (
+                "status",
+                "approvedAt",
+                "approvedBy",
+                "sentAt",
+                "respondedAt",
+                "acceptedCtcAnnual",
+                "acceptedOn",
+                "acceptedJoiningDate",
+                "declineReason",
+                "declineNotes",
+            ):
                 if key in after:
                     entity[key] = after[key]
+            # appendResentAt is a meta-field: not stored as-is, instead
+            # appended to the resentAt[] history. Lets the API hand the
+            # runner a clean "add this timestamp to history" instruction
+            # without the runner having to reconstruct prior history.
+            if "appendResentAt" in after:
+                history = entity.get("resentAt")
+                if not isinstance(history, list):
+                    history = []
+                history.append(after["appendResentAt"])
+                entity["resentAt"] = history
         append_audit(entity, queued_by, op, before, after, notes)
         return
 

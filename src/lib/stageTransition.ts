@@ -106,3 +106,26 @@ export type RejectionReason = (typeof REJECTION_REASONS)[number]
 export function isRejectionReason(value: unknown): value is RejectionReason {
   return typeof value === 'string' && (REJECTION_REASONS as readonly string[]).includes(value)
 }
+
+/**
+ * Structured reasons captured when an offer is declined. Mirrors
+ * REJECTION_REASONS in shape so HR can run "why are we losing offers"
+ * reports without scraping notes. 'Other' requires the free-text field.
+ */
+export const OFFER_DECLINE_REASONS = [
+  'Compensation',
+  'Role mismatch',
+  'Counter-offer accepted',
+  'Personal',
+  'No response',
+  'Other',
+] as const
+
+export type OfferDeclineReason = (typeof OFFER_DECLINE_REASONS)[number]
+
+export function isOfferDeclineReason(value: unknown): value is OfferDeclineReason {
+  return (
+    typeof value === 'string' &&
+    (OFFER_DECLINE_REASONS as readonly string[]).includes(value)
+  )
+}

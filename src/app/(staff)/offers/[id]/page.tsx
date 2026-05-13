@@ -61,8 +61,35 @@ export default async function OfferDetailPage({ params }: { params: { id: string
                 {formatDate(offer.approvedAt)} by {offer.approvedBy ?? '-'}
               </Term>
             ) : null}
-            {offer.sentAt ? <Term label="Sent">{formatDate(offer.sentAt)}</Term> : null}
+            {offer.sentAt ? (
+              <Term label="Sent">
+                {formatDate(offer.sentAt)}
+                {offer.resentAt && offer.resentAt.length > 0
+                  ? ` (resent ${offer.resentAt.length}x)`
+                  : ''}
+              </Term>
+            ) : null}
             {offer.respondedAt ? <Term label="Responded">{formatDate(offer.respondedAt)}</Term> : null}
+            {offer.acceptedOn ? (
+              <Term label="Accepted on">{formatDate(offer.acceptedOn)}</Term>
+            ) : null}
+            {offer.acceptedCtcAnnual &&
+            offer.acceptedCtcAnnual !== offer.compensation.ctcAnnual ? (
+              <Term label="Accepted CTC (negotiated)">
+                {formatRs(offer.acceptedCtcAnnual)}
+              </Term>
+            ) : null}
+            {offer.acceptedJoiningDate ? (
+              <Term label="Confirmed joining">
+                {formatDate(offer.acceptedJoiningDate)}
+              </Term>
+            ) : null}
+            {offer.declineReason ? (
+              <Term label="Decline reason">
+                {offer.declineReason}
+                {offer.declineNotes ? ` — ${offer.declineNotes}` : ''}
+              </Term>
+            ) : null}
           </dl>
         </section>
 

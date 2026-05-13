@@ -252,7 +252,26 @@ export interface Offer {
   approvedBy?: string
   approvedAt?: string
   sentAt?: string
+  /** Each manual resend appends a timestamp here; sentAt always tracks
+   * the most recent send. Surfaces as "Sent / Resent N" on the offer
+   * detail page so HR can see the history at a glance. */
+  resentAt?: string[]
   respondedAt?: string
+  /** Captured when HR marks the offer Accepted. May differ from the
+   * original `compensation.ctcAnnual` if HR negotiated. Always written
+   * as the source-of-truth for the employee-creation flow. */
+  acceptedCtcAnnual?: number
+  /** Date the candidate confirmed acceptance. May differ from
+   * respondedAt (queue write time) when HR back-stamps a verbal
+   * acceptance after the fact. */
+  acceptedOn?: string
+  /** Joining date the candidate committed to at acceptance. Pre-fills
+   * the employee record on activation. */
+  acceptedJoiningDate?: string
+  /** Captured when HR marks the offer Declined. Structured so
+   * "why are we losing offers" reports don't have to scrape notes. */
+  declineReason?: string
+  declineNotes?: string
   createdAt: string
   createdBy: string
   auditLog: AuditEntry[]
