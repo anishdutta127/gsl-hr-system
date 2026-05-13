@@ -3,6 +3,8 @@ import { loadEmployees, loadApplications, loadCandidates } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRs } from '@/lib/format'
 import { probationStatus } from '@/lib/probation'
+import { filterEmployees } from '@/lib/employees/filter'
+import { EmployeeSearchInput } from './EmployeeSearchInput'
 
 export const dynamic = 'force-dynamic'
 
@@ -28,14 +30,7 @@ export default async function EmployeesPage({
 
   const filterDept = searchParams.department?.trim() ?? ''
   const q = searchParams.q?.trim().toLowerCase() ?? ''
-  const filtered = employees.filter((e) => {
-    if (filterDept && e.department !== filterDept) return false
-    if (q) {
-      const hay = `${e.name} ${e.designation} ${e.employeeCode} ${e.email}`.toLowerCase()
-      if (!hay.includes(q)) return false
-    }
-    return true
-  })
+  const filtered = filterEmployees(employees, { query: q, department: filterDept })
 
   const active = filtered.filter((e) => e.status === 'Active')
   const exited = filtered.filter((e) => e.status === 'Exited')
@@ -47,7 +42,7 @@ export default async function EmployeesPage({
           role="status"
           className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
         >
-          Employee record queued. They appear in the active list within a few minutes once the sync runner picks them up.
+          Employee record queued. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.
         </div>
       )}
       <div className="mb-6">
@@ -58,53 +53,52 @@ export default async function EmployeesPage({
         </p>
       </div>
 
-      <form className="mb-6 flex flex-wrap items-end gap-3" role="search" aria-label="Filter employees">
+      <div
+        className="mb-6 flex flex-wrap items-end gap-3"
+        role="search"
+        aria-label="Filter employees"
+      >
         <div className="flex-1 min-w-[200px]">
-          <label htmlFor="q" className="block text-xs font-medium text-ink-2">
-            Search
-          </label>
-          <input
-            id="q"
-            name="q"
-            type="search"
-            defaultValue={q}
-            placeholder="name, code, designation"
-            className="mt-1 block w-full rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
-          />
+          <EmployeeSearchInput initial={q} />
         </div>
-        <div>
-          <label htmlFor="department" className="block text-xs font-medium text-ink-2">
-            Department
-          </label>
-          <select
-            id="department"
-            name="department"
-            defaultValue={filterDept}
-            className="mt-1 block rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+        <form className="flex items-end gap-3">
+          {/* Preserve the active search across the dept-form submit so
+              picking a department doesn't blow away the typed query. */}
+          {q && <input type="hidden" name="q" value={q} />}
+          <div>
+            <label htmlFor="department" className="block text-xs font-medium text-ink-2">
+              Department
+            </label>
+            <select
+              id="department"
+              name="department"
+              defaultValue={filterDept}
+              className="mt-1 block rounded border border-line-strong bg-card px-3 py-2 text-sm text-ink focus-visible:border-teal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+            >
+              <option value="">All departments</option>
+              {departments.map((d) => (
+                <option key={d} value={d}>
+                  {d}
+                </option>
+              ))}
+            </select>
+          </div>
+          <button
+            type="submit"
+            className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
           >
-            <option value="">All departments</option>
-            {departments.map((d) => (
-              <option key={d} value={d}>
-                {d}
-              </option>
-            ))}
-          </select>
-        </div>
-        <button
-          type="submit"
-          className="inline-flex min-h-[44px] items-center rounded bg-navy px-4 py-2 text-sm font-medium text-white hover:bg-navy-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-offset-2"
-        >
-          Apply
-        </button>
+            Filter
+          </button>
+        </form>
         {(filterDept || q) && (
           <Link
             href="/employees"
             className="text-xs font-medium text-ink-2 hover:text-ink"
           >
-            Clear
+            Clear all
           </Link>
         )}
-      </form>
+      </div>
 
       {pending.length > 0 && (
         <section aria-labelledby="pending-heading" className="mb-10">
@@ -139,9 +133,20 @@ export default async function EmployeesPage({
 
       {active.length === 0 && exited.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center text-sm text-ink-2">
-          {employees.length === 0
-            ? 'No employee records yet. Candidates who reach the Joined stage can be activated here.'
-            : 'No matches for the current filter.'}
+          {employees.length === 0 ? (
+            'No employee records yet. Candidates who reach the Joined stage can be activated here.'
+          ) : q ? (
+            <>
+              No employees match &ldquo;{q}&rdquo;.
+              <div className="mt-3">
+                <Link href="/employees" className="font-medium text-navy hover:underline">
+                  Clear search
+                </Link>
+              </div>
+            </>
+          ) : (
+            'No matches for the current filter.'
+          )}
         </div>
       ) : (
         <>
