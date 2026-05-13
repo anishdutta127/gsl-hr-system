@@ -101,9 +101,19 @@ export interface UseStageTransitionsResult {
   errorToast: string | null
   dismissError: () => void
   dismissSuccess: () => void
+  /** Subset of busyApplicationIds whose in-flight transition has exceeded
+   * the slow-threshold (1s). UI can render a "Saving…" affordance on
+   * cards in this set without flashing on every fast success. */
+  slowApplicationIds: Set<string>
 }
 
 const UNDO_WINDOW_MS = 5000
+
+/** After this many ms in-flight, the card flags itself as "Saving…" so
+ * the user has a visible signal something is taking longer than usual.
+ * 1 second is the well-trodden user-perception threshold for "this
+ * feels instant" vs. "this feels stuck". */
+const SLOW_THRESHOLD_MS = 1000
 
 /** Tail line appended to every staff-facing save toast. The queue lag is
  * the user-perceived "my change reverted" cause; this surfaces the
@@ -118,6 +128,8 @@ export function useStageTransitions({
   refreshServer,
 }: UseStageTransitionsArgs): UseStageTransitionsResult {
   const [busy, setBusy] = useState<Set<string>>(new Set())
+  const [slow, setSlow] = useState<Set<string>>(new Set())
+  const slowTimers = useRef<Map<string, ReturnType<typeof setTimeout>>>(new Map())
   const [error, setError] = useState<string | null>(null)
   const [successMsg, setSuccessMsg] = useState<{ message: string; entries: UndoEntry[] } | null>(null)
   const [confirmState, setConfirmState] = useState<UseStageTransitionsResult['confirmModal']>(null)
@@ -152,6 +164,34 @@ export function useStageTransitions({
       }
       return next
     })
+    // Slow-tracker: schedule a one-shot per id when going busy; clear
+    // both the timer and the slow flag when going un-busy.
+    for (const id of ids) {
+      const existing = slowTimers.current.get(id)
+      if (existing) {
+        clearTimeout(existing)
+        slowTimers.current.delete(id)
+      }
+      if (on) {
+        const t = setTimeout(() => {
+          setSlow((prev) => {
+            if (prev.has(id)) return prev
+            const next = new Set(prev)
+            next.add(id)
+            return next
+          })
+          slowTimers.current.delete(id)
+        }, SLOW_THRESHOLD_MS)
+        slowTimers.current.set(id, t)
+      } else {
+        setSlow((prev) => {
+          if (!prev.has(id)) return prev
+          const next = new Set(prev)
+          next.delete(id)
+          return next
+        })
+      }
+    }
   }, [])
 
   // -- Single-card transitions ---------------------------------------------
@@ -608,6 +648,7 @@ export function useStageTransitions({
       if (successTimer.current) clearTimeout(successTimer.current)
       setSuccessMsg(null)
     },
+    slowApplicationIds: slow,
   }
 }
 

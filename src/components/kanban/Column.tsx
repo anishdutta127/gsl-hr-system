@@ -12,6 +12,10 @@ interface Props {
   applications: ApplicationWithCandidate[]
   onSelect?: (applicationId: string) => void
   busyApplicationIds?: Set<string>
+  /** Applications whose in-flight transition has exceeded the slow
+   * threshold; cards in this set render a "Saving…" badge so HR knows
+   * the request hasn't fallen on the floor. */
+  slowApplicationIds?: Set<string>
   selectedIds?: Set<string>
   onToggleSelect?: (applicationId: string) => void
   onIntent?: (applicationId: string, intent: TransitionIntent) => void
@@ -24,6 +28,7 @@ export function Column({
   applications,
   onSelect,
   busyApplicationIds,
+  slowApplicationIds,
   selectedIds,
   onToggleSelect,
   onIntent,
@@ -61,6 +66,7 @@ export function Column({
               onToggleSelect={onToggleSelect}
               onIntent={onIntent}
               busy={busyApplicationIds?.has(a.id) ?? false}
+              slow={slowApplicationIds?.has(a.id) ?? false}
               showActions={showActions}
             />
           ))

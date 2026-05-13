@@ -225,6 +225,7 @@ export function Kanban({
               applications={byStage[stage] ?? []}
               onSelect={setSelectedId}
               busyApplicationIds={transitions.busyApplicationIds}
+              slowApplicationIds={transitions.slowApplicationIds}
               selectedIds={selected}
               onToggleSelect={canActOnCard ? toggleSelect : undefined}
               onIntent={canActOnCard ? transitions.onIntent : undefined}

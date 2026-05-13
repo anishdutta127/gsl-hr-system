@@ -17,6 +17,10 @@ interface Props {
   onToggleSelect?: (applicationId: string) => void
   onIntent?: (applicationId: string, intent: TransitionIntent) => void
   busy?: boolean
+  /** True when the card's in-flight transition has exceeded the slow
+   * threshold (~1s). Renders a low-key "Saving…" badge inside the card
+   * header so HR sees that the request hasn't been lost. */
+  slow?: boolean
   showActions?: boolean
 }
 
@@ -40,6 +44,7 @@ export function CandidateCard({
   onToggleSelect,
   onIntent,
   busy = false,
+  slow = false,
   showActions = false,
 }: Props) {
   const { attributes, listeners, setNodeRef, isDragging: isActiveDrag } = useDraggable({
@@ -87,6 +92,15 @@ export function CandidateCard({
           <div className="min-w-0 text-sm font-medium text-ink leading-tight">
             {candidate?.name ?? '(candidate removed)'}
           </div>
+          {slow && (
+            <span
+              role="status"
+              aria-live="polite"
+              className="ml-1 inline-flex shrink-0 items-center rounded bg-warning-bg px-1.5 py-0.5 text-[10px] font-medium text-ink-2"
+            >
+              Saving…
+            </span>
+          )}
         </div>
         {onSelect && (
           <button
