@@ -28,6 +28,13 @@ import {
 } from '@/lib/feedbackGate'
 import { buildFeedbackRequestMailto } from '@/lib/feedbackRequestMailto'
 import { PreOnboardingApprovalBlock } from './PreOnboardingApproval'
+import { SendPreOnboardingEmail } from './SendPreOnboardingEmail'
+import {
+  getMissingFieldsForTemplate,
+  type PreOnboardingTemplateId,
+  type TemplateContext,
+} from '@/lib/preOnboardingEmails'
+import { getEmailUnlockState } from '@/lib/preOnboardingEmails/unlockState'
 
 export const dynamic = 'force-dynamic'
 
@@ -424,6 +431,137 @@ export default async function CandidateDetailPage({
                         feedbackRequestMailto={mailto}
                         overrideTargetStage={nextStage}
                       />
+                    )
+                  })()}
+                  {role && (session.role === 'Admin' || session.role === 'HR') && (() => {
+                    const state = getEmailUnlockState(app)
+                    const sends = app.preOnboardingEmails ?? []
+                    const firstIntimation = sends.find((s) => s.templateId === 'offer-intimation')
+                    const hmEmail = app.hiringManagerId
+                      ? usersById.get(app.hiringManagerId)?.email
+                      : undefined
+                    const recruiterName =
+                      users.find((u) => u.email === session.email)?.name ?? session.email
+                    const sevenDaysOut = new Date()
+                    sevenDaysOut.setDate(sevenDaysOut.getDate() + 7)
+                    const ccDefault = Array.from(
+                      new Set(
+                        [session.email, hmEmail].filter(
+                          (v): v is string => !!v && v.trim().length > 0,
+                        ),
+                      ),
+                    )
+                    const baseContext: TemplateContext = {
+                      candidateName: candidate.name,
+                      positionTitle:
+                        app.preOnboardingApproval?.positionConfirmed ?? role.title,
+                      location:
+                        app.preOnboardingApproval?.locationConfirmed ??
+                        (typeof role.location === 'string' ? role.location : undefined),
+                      joiningDate: app.preOnboardingApproval?.joiningDateConfirmed,
+                      ctcAmount: app.preOnboardingApproval?.ctcConfirmed,
+                      offerIntimationDate: firstIntimation?.sentAt,
+                      appointmentReturnByDate: sevenDaysOut.toISOString().slice(0, 10),
+                      recruiterName,
+                      recruiterEmail: session.email,
+                    }
+                    type ButtonSpec = {
+                      templateId: PreOnboardingTemplateId
+                      label: string
+                      visible: boolean
+                    }
+                    const buttons: ButtonSpec[] = [
+                      {
+                        templateId: 'offer-intimation',
+                        label: 'Send Offer Intimation',
+                        visible: state.intimation === 'unlocked',
+                      },
+                      {
+                        templateId: 'offer-followup',
+                        label: 'Send Follow-up',
+                        visible: state.followup === 'unlocked',
+                      },
+                      {
+                        templateId: 'appointment-letter',
+                        label: 'Send Appointment Letter',
+                        visible: state.appointment === 'unlocked',
+                      },
+                      {
+                        templateId: 'notice-period-checkin',
+                        label: 'Send Notice Period Check-in',
+                        visible: state.noticeCheckin === 'unlocked',
+                      },
+                    ]
+                    const anyVisible = buttons.some((b) => b.visible)
+                    if (!anyVisible && sends.length === 0) return null
+                    return (
+                      <div className="mt-3 space-y-3 border-t border-line pt-3">
+                        <div className="text-xs font-medium uppercase tracking-wide text-ink-3">
+                          Pre-onboarding emails
+                        </div>
+                        {anyVisible && (
+                          <div className="flex flex-wrap gap-2">
+                            {buttons
+                              .filter((b) => b.visible)
+                              .map((b) => {
+                                const missing = getMissingFieldsForTemplate(
+                                  b.templateId,
+                                  baseContext,
+                                )
+                                if (missing.length > 0) {
+                                  return (
+                                    <button
+                                      key={b.templateId}
+                                      type="button"
+                                      disabled
+                                      title={`Cannot send yet: missing ${missing.join(', ')}.`}
+                                      className="inline-flex min-h-[36px] cursor-not-allowed items-center rounded border border-line bg-surface px-3 py-1.5 text-xs font-medium text-ink-3"
+                                    >
+                                      {b.label} (missing: {missing.join(', ')})
+                                    </button>
+                                  )
+                                }
+                                return (
+                                  <SendPreOnboardingEmail
+                                    key={b.templateId}
+                                    applicationId={app.id}
+                                    candidateName={candidate.name}
+                                    candidateEmail={candidate.email}
+                                    hiringManagerEmail={hmEmail}
+                                    defaults={{
+                                      templateId: b.templateId,
+                                      ccDefault,
+                                      context: baseContext,
+                                    }}
+                                  />
+                                )
+                              })}
+                          </div>
+                        )}
+                        {sends.length > 0 && (
+                          <details className="rounded border border-line bg-surface px-3 py-2 text-xs">
+                            <summary className="cursor-pointer font-medium text-ink-2">
+                              Past pre-onboarding emails ({sends.length})
+                            </summary>
+                            <ol className="mt-2 space-y-1.5">
+                              {[...sends].reverse().map((s, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex flex-wrap items-center justify-between gap-2 rounded border border-line bg-card px-2 py-1.5"
+                                >
+                                  <span className="text-ink">
+                                    <span className="font-medium">{s.templateId}</span>
+                                    <span className="ml-2 text-ink-3">by {s.sentBy}</span>
+                                  </span>
+                                  <time className="text-ink-3" dateTime={s.sentAt}>
+                                    {formatDate(s.sentAt)}
+                                  </time>
+                                </li>
+                              ))}
+                            </ol>
+                          </details>
+                        )}
+                      </div>
                     )
                   })()}
                 </li>
