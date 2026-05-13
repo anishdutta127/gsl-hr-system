@@ -93,9 +93,23 @@ export function PipelineActions({
     setConfirmRequired(null)
   }
 
-  // Roles that the candidate is NOT already actively in.
-  const memberRoleIds = new Set(memberships.map((m) => m.roleId))
-  const destinationOptions = openRoles.filter((r) => !memberRoleIds.has(r.id))
+  // Roles the candidate is currently ACTIVE in (non-terminal). Terminal
+  // applications (Rejected / Withdrawn / NotInterested / OnHold) do not
+  // block re-adding the candidate — the server-side bulk + move routes
+  // already match this behaviour; before this fix the UI was stricter
+  // than the server and the dropdown excluded re-addable roles.
+  const TERMINAL_STAGES_FOR_DEDUPE = new Set([
+    'Rejected',
+    'Withdrawn',
+    'NotInterested',
+    'OnHold',
+  ])
+  const activeRoleIds = new Set(
+    memberships
+      .filter((m) => !TERMINAL_STAGES_FOR_DEDUPE.has(m.currentStage))
+      .map((m) => m.roleId),
+  )
+  const destinationOptions = openRoles.filter((r) => !activeRoleIds.has(r.id))
 
   // For Move modal: exclude the source role from destinations too.
   const sourceRoleId = moveableMemberships.find((m) => m.applicationId === sourceApplicationId)?.roleId

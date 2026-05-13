@@ -38,7 +38,10 @@ export function canTransition(
   targetStage: Stage,
 ): TransitionResult {
   if (currentStage === targetStage) {
-    return { valid: false, reason: 'Already at this stage.' }
+    return {
+      valid: false,
+      reason: `Already at ${currentStage}. The card may need a refresh; reload the page if it still looks wrong.`,
+    }
   }
   if (isTerminal(currentStage)) {
     return {

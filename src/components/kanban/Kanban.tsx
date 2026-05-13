@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   DndContext,
@@ -51,8 +51,31 @@ export function Kanban({
 }: Props) {
   const router = useRouter()
 
-  // Optimistic stage overrides; cleared on server refresh (re-mount of props).
+  // Optimistic stage overrides. Each entry survives until the server props
+  // catch up (the queue applies and `applications` re-arrives with the same
+  // stage), at which point the override is redundant and we drop it. Leaving
+  // stale entries in place is what produced the "Already at this stage"
+  // false-positive in Workstream 4 — a second drag computed targetStage
+  // against the override, which already matched currentStage.
   const [stageOverride, setStageOverride] = useState<Record<string, Stage>>({})
+
+  // Drop overrides that match the server-side stage (the apply ran, or the
+  // override was wrong and the server source of truth is the canonical state).
+  useEffect(() => {
+    setStageOverride((prev) => {
+      let changed = false
+      const next: Record<string, Stage> = {}
+      for (const [id, ov] of Object.entries(prev)) {
+        const serverApp = applications.find((a) => a.id === id)
+        if (serverApp && serverApp.currentStage === ov) {
+          changed = true
+          continue
+        }
+        next[id] = ov
+      }
+      return changed ? next : prev
+    })
+  }, [applications])
 
   const merged = useMemo<ApplicationWithCandidate[]>(() => {
     return applications.map((a) =>
