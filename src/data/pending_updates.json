@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "0637a57b-9f61-4c66-9a45-97ba66073403",
+    "queuedAt": "2026-05-13T06:16:51.957Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001",
+      "name": "Rupam Ghosal",
+      "email": "rupamghosal0024@gmail.com",
+      "phone": "6202615285",
+      "source": "Application",
+      "notes": "I’m currently a PhD Research Scholar at BIT Mesra working in AI, Robotics, and Healthcare-focused systems. Alongside research, I have experience as a STEM educator and robotics trainer, where I conducted hands-on workshops on Arduino, IoT, AI/ML, automation, and student innovation projects.\r\n\r\nWhat excites me about Get Set Learn is the focus on making future-ready learning engaging and practical for students. I enjoy building interactive learning experiences that combine creativity, problem-solving, and technology, and I would love the opportunity to contribute to your STEM programs and bootcamps.",
+      "resumeFilePath": "data/resumes/applications/2026/05/3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001.pdf",
+      "createdAt": "2026-05-13T06:16:50.775Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T06:16:50.775Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rupam Ghosal",
+            "email": "rupamghosal0024@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
