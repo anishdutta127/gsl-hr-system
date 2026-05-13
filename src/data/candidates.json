@@ -7458,5 +7458,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "415a56ca-8342-45ae-aba2-bfff0fb61aa6",
+    "name": "Srivatsan Sethuraman",
+    "email": "oshokris@yahoo.co.in",
+    "phone": "9940073261",
+    "source": "Application",
+    "notes": "I have demonstrated experience in commissioning and developing academic content.",
+    "resumeFilePath": "data/resumes/applications/2026/05/415a56ca-8342-45ae-aba2-bfff0fb61aa6.pdf",
+    "createdAt": "2026-05-13T12:40:11.568Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T12:40:11.568Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Srivatsan Sethuraman",
+          "email": "oshokris@yahoo.co.in",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/415a56ca-8342-45ae-aba2-bfff0fb61aa6.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
