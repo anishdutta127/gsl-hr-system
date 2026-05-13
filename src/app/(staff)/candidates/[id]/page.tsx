@@ -32,6 +32,8 @@ import { CandidateResponseForm } from './CandidateResponseForm'
 import { SendPreOnboardingEmail } from './SendPreOnboardingEmail'
 import {
   getMissingFieldsForTemplate,
+  renderEmailTemplate,
+  TEMPLATE_ATTACHMENT_SUGGESTIONS,
   type PreOnboardingTemplateId,
   type TemplateContext,
 } from '@/lib/preOnboardingEmails'
@@ -534,6 +536,21 @@ export default async function CandidateDetailPage({
                                     </button>
                                   )
                                 }
+                                // Server-side render of the template so the
+                                // client component never imports loadCompany
+                                // / Node fs. Pass the rendered subject+body
+                                // as props.
+                                let prerenderedSubject = ''
+                                let prerenderedBody = ''
+                                let renderError: string | undefined
+                                try {
+                                  const out = renderEmailTemplate(b.templateId, baseContext)
+                                  prerenderedSubject = out.subject
+                                  prerenderedBody = out.body
+                                } catch (err) {
+                                  renderError =
+                                    err instanceof Error ? err.message : 'Template render failed.'
+                                }
                                 return (
                                   <SendPreOnboardingEmail
                                     key={b.templateId}
@@ -544,7 +561,11 @@ export default async function CandidateDetailPage({
                                     defaults={{
                                       templateId: b.templateId,
                                       ccDefault,
-                                      context: baseContext,
+                                      prerenderedSubject,
+                                      prerenderedBody,
+                                      attachmentSuggestions:
+                                        TEMPLATE_ATTACHMENT_SUGGESTIONS[b.templateId],
+                                      renderError,
                                     }}
                                   />
                                 )

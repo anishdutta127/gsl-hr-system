@@ -3,7 +3,6 @@ import { getCurrentSession } from '@/lib/identity'
 import {
   findRecognitionById,
   loadRecognitions,
-  loadUsers,
 } from '@/lib/data'
 import { atomicUpdateJson } from '@/lib/queue/githubQueue'
 import type { Recognition, RecognitionDistribution } from '@/lib/types'
@@ -121,10 +120,3 @@ export async function POST(
   return NextResponse.json({ ok: true, distributedAt: now })
 }
 
-/** Resolve the all-active-employees recipient list. Used by the
- * distribute modal to surface a count + an opt-out toggle. */
-export function _resolveDefaultRecipients(): { id: string; name: string; email: string }[] {
-  return loadUsers()
-    .filter((u) => u.active && u.email.includes('@'))
-    .map((u) => ({ id: u.id, name: u.name, email: u.email }))
-}

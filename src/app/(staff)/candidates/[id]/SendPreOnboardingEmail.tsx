@@ -1,26 +1,31 @@
 'use client'
 
-import { useEffect, useMemo, useState, useTransition } from 'react'
+import { useEffect, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import {
-  PRE_ONBOARDING_TEMPLATE_IDS,
-  TEMPLATE_ATTACHMENT_SUGGESTIONS,
-  renderEmailTemplate,
-  type PreOnboardingTemplateId,
-  type TemplateContext,
-} from '@/lib/preOnboardingEmails'
+import type { PreOnboardingTemplateId } from '@/lib/preOnboardingEmails'
 
 interface Props {
   applicationId: string
-  /** Display name only - used in the button label and modal heading. */
+  /** Display name only. Used in the button label and modal heading. */
   candidateName: string
   /** Pre-fill the To: field. HR can edit before firing. */
   candidateEmail: string
   defaults: {
     templateId: PreOnboardingTemplateId
-    /** Comma-joined string of default CC addresses (HR-Admin + hiring manager). */
+    /** Default CC addresses (HR-Admin + hiring manager). */
     ccDefault: string[]
-    context: TemplateContext
+    /** Pre-rendered subject from the server. The server holds the
+     * Node-only renderer (loadCompany uses fs); the client just edits
+     * the strings before firing mailto:. */
+    prerenderedSubject: string
+    /** Pre-rendered body from the server. */
+    prerenderedBody: string
+    /** Attachment names HR ticks before firing. mailto: cannot carry
+     * attachments; this is a checklist trace. */
+    attachmentSuggestions: string[]
+    /** When the server tried to render and failed (missing field, bad
+     * date), surface the message so HR sees why the draft is blank. */
+    renderError?: string
   }
   /** Optional separate hiring manager email surfaced as a hint under the CC
    * field, in case it is not already in ccDefault. */
@@ -56,33 +61,19 @@ export function SendPreOnboardingEmail(props: Props) {
   const templateId = props.defaults.templateId
   const templateTitle = TEMPLATE_TITLE[templateId]
 
-  // Stable JSON key over the context so the memo only recomputes when
-  // the actual values change. props.defaults.context is rebuilt on every
-  // parent render, so identity-based memoisation would never hit.
-  const contextKey = JSON.stringify(props.defaults.context)
   const ccKey = (props.defaults.ccDefault ?? []).join('|')
-
-  const rendered = useMemo(() => {
-    try {
-      return renderEmailTemplate(templateId, props.defaults.context)
-    } catch (err) {
-      return {
-        subject: '',
-        body: '',
-        attachmentSuggestions: TEMPLATE_ATTACHMENT_SUGGESTIONS[templateId],
-        error: err instanceof Error ? err.message : 'Template render failed.',
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [templateId, contextKey])
+  const initialSubject = props.defaults.prerenderedSubject
+  const initialBody = props.defaults.prerenderedBody
+  const attachmentSuggestions = props.defaults.attachmentSuggestions ?? []
+  const renderError = props.defaults.renderError ?? null
 
   const [to, setTo] = useState(props.candidateEmail ?? '')
   const [cc, setCc] = useState((props.defaults.ccDefault ?? []).join(', '))
-  const [subject, setSubject] = useState(rendered.subject)
-  const [body, setBody] = useState(rendered.body)
+  const [subject, setSubject] = useState(initialSubject)
+  const [body, setBody] = useState(initialBody)
   const [attachmentsClaimed, setAttachmentsClaimed] = useState<Record<string, boolean>>(() => {
     const map: Record<string, boolean> = {}
-    for (const s of rendered.attachmentSuggestions) map[s] = true
+    for (const s of attachmentSuggestions) map[s] = true
     return map
   })
 
@@ -94,15 +85,13 @@ export function SendPreOnboardingEmail(props: Props) {
     setSuccess(null)
     setTo(props.candidateEmail ?? '')
     setCc((props.defaults.ccDefault ?? []).join(', '))
-    setSubject(rendered.subject)
-    setBody(rendered.body)
+    setSubject(initialSubject)
+    setBody(initialBody)
     const map: Record<string, boolean> = {}
-    for (const s of rendered.attachmentSuggestions) map[s] = true
+    for (const s of attachmentSuggestions) map[s] = true
     setAttachmentsClaimed(map)
-    // We intentionally re-key on contextKey/ccKey rather than the
-    // unstable props references.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, props.candidateEmail, ccKey, contextKey])
+  }, [open, props.candidateEmail, ccKey, initialSubject, initialBody])
 
   useEffect(() => {
     if (!open) return
@@ -181,7 +170,6 @@ export function SendPreOnboardingEmail(props: Props) {
   }
 
   const headingId = `send-${templateId}-${props.applicationId}-heading`
-  const renderError = 'error' in rendered ? (rendered as { error: string }).error : null
 
   return (
     <>
@@ -278,11 +266,11 @@ export function SendPreOnboardingEmail(props: Props) {
                 />
               </label>
 
-              {rendered.attachmentSuggestions.length > 0 && (
+              {attachmentSuggestions.length > 0 && (
                 <fieldset>
                   <legend className="text-ink-2">Attachments to attach in Outlook</legend>
                   <div className="mt-2 space-y-1.5">
-                    {rendered.attachmentSuggestions.map((name) => (
+                    {attachmentSuggestions.map((name) => (
                       <label
                         key={name}
                         className="flex min-h-[36px] cursor-pointer items-center gap-2 rounded border border-line px-3 py-1.5 hover:bg-surface"
@@ -344,6 +332,3 @@ export function preOnboardingTemplateTitle(id: PreOnboardingTemplateId): string 
   return TEMPLATE_TITLE[id]
 }
 
-// Re-export the template id constant for consumers that want to iterate
-// the full set without importing both files.
-export { PRE_ONBOARDING_TEMPLATE_IDS }
