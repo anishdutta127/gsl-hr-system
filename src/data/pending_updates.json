@@ -268,5 +268,35 @@
       "notes": "Moved to Sales Executive."
     },
     "retryCount": 0
+  },
+  {
+    "id": "dcabf903-dbc7-49e8-bffc-9a9a00948232",
+    "queuedAt": "2026-05-13T06:46:25.816Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "ed7f6cfb-6bcd-416c-b0f2-28d63940fb39",
+      "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-13T06:46:25.042Z",
+      "createdAt": "2026-05-13T06:46:25.042Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T06:46:25.042Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
