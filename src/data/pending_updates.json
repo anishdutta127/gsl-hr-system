@@ -495,5 +495,26 @@
       "notes": "Pipeline move: Senior Academics Manager → STEM Trainer. Notes: Better fit"
     },
     "retryCount": 0
+  },
+  {
+    "id": "040a2234-5e69-4614-ac09-2f2b6ddf56fd",
+    "queuedAt": "2026-05-13T11:28:50.920Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "a955bcd1-fea5-4837-b462-6eacf79eb634",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T06:49:20.584Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-13T11:28:50.920Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0
   }
 ]
