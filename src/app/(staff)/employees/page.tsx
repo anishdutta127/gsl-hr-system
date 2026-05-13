@@ -5,6 +5,7 @@ import { formatDate, formatRs } from '@/lib/format'
 import { probationStatus } from '@/lib/probation'
 import { filterEmployees } from '@/lib/employees/filter'
 import { EmployeeSearchInput } from './EmployeeSearchInput'
+import { EmployeeCsvExport } from './EmployeeCsvExport'
 
 export const dynamic = 'force-dynamic'
 
@@ -45,12 +46,29 @@ export default async function EmployeesPage({
           Employee record queued. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.
         </div>
       )}
-      <div className="mb-6">
-        <h1 className="font-display text-2xl text-ink">Employees</h1>
-        <p className="mt-1 text-sm text-ink-2">
-          {employees.length.toLocaleString('en-IN')} on the master roster. Filter by department or
-          search by name, code, or designation.
-        </p>
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 className="font-display text-2xl text-ink">Employees</h1>
+          <p className="mt-1 text-sm text-ink-2">
+            {employees.length.toLocaleString('en-IN')} on the master roster.
+            Search by name, email, employee ID, or department; filter by
+            department.
+          </p>
+        </div>
+        <EmployeeCsvExport
+          employees={filtered.map((e) => ({
+            employeeCode: e.employeeCode ?? '',
+            name: e.name,
+            designation: e.designation ?? '',
+            department: e.department ?? '',
+            location: e.location ?? '',
+            email: e.email ?? '',
+            status: e.status,
+            dateOfJoining: e.dateOfJoining ?? '',
+            workPattern: e.workPattern ?? '',
+            reportingTo: e.reportingTo ?? '',
+          }))}
+        />
       </div>
 
       <div
