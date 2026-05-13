@@ -6882,5 +6882,395 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "3a0a067c-44fd-4929-bda8-d08adada7deb",
+    "name": "Syed Zafar Abbas Naqvu",
+    "email": "sza.naqvi97@gmail.com",
+    "phone": "9958027648",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf",
+    "createdAt": "2026-05-12T15:42:52.546Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T15:42:52.546Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Syed Zafar Abbas Naqvu",
+          "email": "sza.naqvi97@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "77eebb59-71a2-45c4-b59f-7c6dc60a0551",
+    "name": "MINERVA JHA",
+    "email": "minervajha1973@gmail.com",
+    "phone": "9110309640",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/77eebb59-71a2-45c4-b59f-7c6dc60a0551.pdf",
+    "createdAt": "2026-05-12T15:46:03.305Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T15:46:03.305Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "MINERVA JHA",
+          "email": "minervajha1973@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/77eebb59-71a2-45c4-b59f-7c6dc60a0551.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
+    "name": "SACHIN KUMAR",
+    "email": "sackm123@gmail.com",
+    "phone": "7892355212",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/4762c892-ea7f-4215-8976-d6a00d3fe65b.pdf",
+    "createdAt": "2026-05-12T16:01:16.016Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T16:01:16.016Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "SACHIN KUMAR",
+          "email": "sackm123@gmail.com",
+          "source": "Application",
+          "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+          "resumeFilePath": "data/resumes/applications/2026/05/4762c892-ea7f-4215-8976-d6a00d3fe65b.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "40c12901-d5dc-4843-a291-0c3827538e53",
+    "name": "SACHIN KUMAR",
+    "email": "sackm123@gmail.com",
+    "phone": "7892355212",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf",
+    "createdAt": "2026-05-12T16:04:25.878Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T16:04:25.878Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "SACHIN KUMAR",
+          "email": "sackm123@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "41278f9e-36b7-4571-add7-1614b7fc4ff5",
+    "name": "Mohammed Ziya Kashif",
+    "email": "mohammedziyakashif@gmail.com",
+    "phone": "7975319014",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/41278f9e-36b7-4571-add7-1614b7fc4ff5.pdf",
+    "createdAt": "2026-05-12T16:46:50.911Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T16:46:50.911Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Mohammed Ziya Kashif",
+          "email": "mohammedziyakashif@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/41278f9e-36b7-4571-add7-1614b7fc4ff5.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "e53a9fec-949a-4e86-b2eb-ac4234230a31",
+    "name": "Rahul Namdev",
+    "email": "rahulnamdev5115@gmail.com",
+    "phone": "7024754794",
+    "source": "Application",
+    "notes": "Hi, I’m Rahul Namdev, a Business Development and Operations professional with nearly 10+ years of experience across EdTech, institutional partnerships, and large-scale assessment operations. I’ve worked with organizations like BYJU’S, Unacademy, Sunstone Education, Mercer-Mettle, TCS iON, and Sify Technologies, driving revenue growth, institutional onboarding, stakeholder management, and seamless operational execution at scale.\r\n\r\nMy experience spans business development, strategic partnerships, student acquisition, and end-to-end program management, with a strong understanding of both growth and operations functions. Currently exploring leadership opportunities in Business Development, Operations, and Strategic Partnerships.",
+    "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf",
+    "createdAt": "2026-05-12T17:50:37.403Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T17:50:37.403Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Rahul Namdev",
+          "email": "rahulnamdev5115@gmail.com",
+          "source": "Application",
+          "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+          "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
+    "name": "John Bijoy",
+    "email": "johbijoy@gmail.com",
+    "phone": "+919004042080",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf",
+    "createdAt": "2026-05-12T18:17:34.863Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T18:17:34.863Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "John Bijoy",
+          "email": "johbijoy@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "ffe75658-fad7-4baa-94ab-32529187e79c",
+    "name": "MOHAMMED AMEENULLA",
+    "email": "ameenimran04@gmail.com",
+    "phone": "9731034310",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf",
+    "createdAt": "2026-05-12T19:37:36.213Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T19:37:36.213Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "MOHAMMED AMEENULLA",
+          "email": "ameenimran04@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "34ccbf4f-a41a-438a-9a7a-71807b0ce5f6",
+    "name": "Shibani Raja",
+    "email": "raja.shibani15@gmail.com",
+    "phone": "9167453383",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/34ccbf4f-a41a-438a-9a7a-71807b0ce5f6.pdf",
+    "createdAt": "2026-05-12T19:51:59.112Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T19:51:59.112Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Shibani Raja",
+          "email": "raja.shibani15@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/34ccbf4f-a41a-438a-9a7a-71807b0ce5f6.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21",
+    "name": "Deepak Prakash Morey",
+    "email": "deepakmore2121@gmail.com",
+    "phone": "+917507793077",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21.pdf",
+    "createdAt": "2026-05-12T21:39:57.530Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-12T21:39:57.530Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Deepak Prakash Morey",
+          "email": "deepakmore2121@gmail.com",
+          "source": "Application",
+          "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+          "resumeFilePath": "data/resumes/applications/2026/05/ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "15142a80-e902-4fdb-a9f1-0ecfbcff366e",
+    "name": "SUGANDHA JAISWAL",
+    "email": "sugandha.etech@gmail.com",
+    "phone": "7003057104",
+    "source": "Application",
+    "notes": "Stem teainer",
+    "resumeFilePath": "data/resumes/applications/2026/05/15142a80-e902-4fdb-a9f1-0ecfbcff366e.pdf",
+    "createdAt": "2026-05-13T02:57:32.702Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T02:57:32.702Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "SUGANDHA JAISWAL",
+          "email": "sugandha.etech@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/15142a80-e902-4fdb-a9f1-0ecfbcff366e.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
+    "name": "Mukund Wamane",
+    "email": "wamanemukund@gmail.com",
+    "phone": "+918459049127",
+    "source": "Application",
+    "notes": "I have good edutech sales experience pl give me opportunity.",
+    "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf",
+    "createdAt": "2026-05-13T03:06:22.036Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T03:06:22.036Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Mukund Wamane",
+          "email": "wamanemukund@gmail.com",
+          "source": "Application",
+          "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+          "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "9eac0554-2da9-425c-b90e-a8ae17bc0632",
+    "name": "Pintu Biswas",
+    "email": "pintubiswasphysics07@gmail.com",
+    "phone": "+918653315914",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf",
+    "createdAt": "2026-05-13T04:43:57.942Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T04:43:57.942Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Pintu Biswas",
+          "email": "pintubiswasphysics07@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "47766d67-45a5-4729-b897-f2b13c211233",
+    "name": "Mohd. Sahil",
+    "email": "mohd.sahil2524@gmail.com",
+    "phone": "8890952524",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf",
+    "createdAt": "2026-05-13T05:22:08.845Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T05:22:08.845Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Mohd. Sahil",
+          "email": "mohd.sahil2524@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "af8cc8d0-3642-4db3-ac48-d719df33b12a",
+    "name": "Mohd. Sahil",
+    "email": "mohd.sahil2524@gmail.com",
+    "phone": "8890952524",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf",
+    "createdAt": "2026-05-13T05:23:45.890Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T05:23:45.890Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Mohd. Sahil",
+          "email": "mohd.sahil2524@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
