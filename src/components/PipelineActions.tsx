@@ -53,7 +53,7 @@ export function PipelineActions({
   const [success, setSuccess] = useState<string | null>(null)
 
   // Memberships not in a terminal-non-active stage are valid Move sources.
-  // Joined is fully terminal — Move not allowed; only Add available.
+  // Joined is fully terminal - Move not allowed; only Add available.
   const moveableMemberships = memberships.filter(
     (m) => m.currentStage !== 'Joined',
   )
@@ -95,7 +95,7 @@ export function PipelineActions({
 
   // Roles the candidate is currently ACTIVE in (non-terminal). Terminal
   // applications (Rejected / Withdrawn / NotInterested / OnHold) do not
-  // block re-adding the candidate — the server-side bulk + move routes
+  // block re-adding the candidate - the server-side bulk + move routes
   // already match this behaviour; before this fix the UI was stricter
   // than the server and the dropdown excluded re-addable roles.
   const TERMINAL_STAGES_FOR_DEDUPE = new Set([
@@ -162,7 +162,7 @@ export function PipelineActions({
     setBusy(true)
     setError(null)
     try {
-      // Reuse the bulk endpoint with a single id — same dedupe + role-status
+      // Reuse the bulk endpoint with a single id - same dedupe + role-status
       // checks the bulk action enforces, no duplicated validation.
       const res = await fetch('/api/candidates/bulk', {
         method: 'POST',

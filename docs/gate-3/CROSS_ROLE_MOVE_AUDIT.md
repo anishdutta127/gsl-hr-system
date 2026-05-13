@@ -9,7 +9,7 @@
 
 `Application.currentStage` is the source of truth. `Candidate` has no stage field. One candidate × N roles = N applications, each with its own `currentStage`.
 
-That much is correct in the data model (see `src/lib/types.ts`). The bug is not a schema problem — no migration is required. The bugs that look "global" are UI / API edge-case issues.
+That much is correct in the data model (see `src/lib/types.ts`). The bug is not a schema problem - no migration is required. The bugs that look "global" are UI / API edge-case issues.
 
 ---
 
@@ -38,7 +38,7 @@ In `PipelineActions.tsx`:
   - destination has an active app for same candidate → "[name] is already in [role]'s pipeline." (409)
   - past-offer source without `force: true` → confirmation prompt (409)
 - Behaviour on success: source app → Withdrawn (audit only on source side if pipeline is read-only), new app at Sourced at destination. Two queue writes plus a third candidate-level audit entry.
-- **No call to `canTransition`** — so "Already at this stage" cannot come from this route.
+- **No call to `canTransition`** - so "Already at this stage" cannot come from this route.
 
 ### "Add to additional role"
 - Endpoint: `POST /api/candidates/bulk` with `action: { type: 'add-to-pipeline', roleId }`.
@@ -69,7 +69,7 @@ Likely paths for the toast on the screenshot:
 
 The most plausible cause of Shruti's screenshot: Shruti dragged John's card on the Kanban, the optimistic flip happened, the network was slow, she dragged again (or the queue applied delayed and `router.refresh()` brought back the original state mid-drag), and the second transition fired with `currentStage === targetStage`.
 
-The cross-role buttons are NOT directly responsible. The toast is real and appears on the screen at the same time the user clicks Move / Add — but it is a stage-transition toast bleeding through from a recent drag, not a Move / Add error.
+The cross-role buttons are NOT directly responsible. The toast is real and appears on the screen at the same time the user clicks Move / Add - but it is a stage-transition toast bleeding through from a recent drag, not a Move / Add error.
 
 ---
 
@@ -84,7 +84,7 @@ const destinationOptions = openRoles.filter((r) => !memberRoleIds.has(r.id))
 `memberships` includes terminal applications. Therefore Role B is excluded from the dropdown even when the candidate's only application for Role B is Rejected or Withdrawn. This is **stricter than the server** (which dedupes only against non-terminal applications). The user has no way to re-add a previously rejected candidate from the UI; the same Add action would succeed via curl or via the bulk-add bulk-actions surface from the candidates list page.
 
 Same problem for the source-roles filter:
-- `moveableMemberships.filter((m) => m.currentStage !== 'Joined')` includes Withdrawn / Rejected / NotInterested / OnHold sources. Picking a Rejected source would still call the move endpoint, but the move endpoint's `skipSourceWrite = sourceTerminal || isPipelineReadOnly` handles this gracefully — the source-side write is skipped, only the destination application is created.
+- `moveableMemberships.filter((m) => m.currentStage !== 'Joined')` includes Withdrawn / Rejected / NotInterested / OnHold sources. Picking a Rejected source would still call the move endpoint, but the move endpoint's `skipSourceWrite = sourceTerminal || isPipelineReadOnly` handles this gracefully - the source-side write is skipped, only the destination application is created.
 
 ---
 
@@ -99,12 +99,12 @@ Single transition (the slow surface Shruti reports):
 5. Server enqueues one `application.update` op via `enqueueUpdate`.
 6. `enqueueUpdate` writes a single queue entry to the GitHub Contents API.
 7. Server responds 200 → hook fires success toast + `router.refresh()`.
-8. Server Component re-renders against fresh disk data — but the queue has not yet been applied, so `currentStage` in `applications.json` is unchanged. The applier runs on schedule (hourly cron IST business hours) or via "Sync now."
+8. Server Component re-renders against fresh disk data - but the queue has not yet been applied, so `currentStage` in `applications.json` is unchanged. The applier runs on schedule (hourly cron IST business hours) or via "Sync now."
 9. The visual stage on the card depends on the optimistic override staying alive: the card "moves" instantly client-side, but reloading the page in another tab still shows the old stage.
 
 The end-to-end perceived latency is dominated by:
 - The network round-trip to enqueue (one GitHub Contents API write).
-- The queue applier interval. The card LOOKS instant on the same tab, but `router.refresh()` re-fetches and re-renders the whole page — that fetch + paint is what feels slow.
+- The queue applier interval. The card LOOKS instant on the same tab, but `router.refresh()` re-fetches and re-renders the whole page - that fetch + paint is what feels slow.
 
 `router.refresh()` is the perceived hang. The toast fires immediately, but the Server Component refresh re-loads every Server Component on the page (Kanban, side panel, header, breadcrumbs). A 200ms fetch + 300ms hydration round on a slow connection is ~half a second; on a fast connection ~150ms but still visible.
 
@@ -122,19 +122,19 @@ The end-to-end perceived latency is dominated by:
 | 20 | "Saving…" indicator on a card when the request is in flight > 1s, dropped when the response lands. | `CandidateCard.tsx` or `Kanban.tsx` |
 | 21 | KanbanFilters: filter state is client-only (no re-fetch). Confirmed in `applyFilters`. No fix needed. | (already perf-clean) |
 | 21 | Side-panel candidate search: check debouncing. If a controlled `value` triggers a re-render on every keystroke without debounce, add a short debounce. | `CandidateSidePanel` / search box |
-| 21 | Initial load: confirm no N+1 — current code reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each, then in-memory joins. Looks fine. | (already perf-clean) |
+| 21 | Initial load: confirm no N+1 - current code reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each, then in-memory joins. Looks fine. | (already perf-clean) |
 
-This audit is the bridge into Step 19 — it does not change any code.
+This audit is the bridge into Step 19 - it does not change any code.
 
 ---
 
-## 8. Step 21 — Kanban perf findings
+## 8. Step 21 - Kanban perf findings
 
 Walked the obvious surfaces; no actionable slowness:
 
-- **Filter clicks (`KanbanFilters` All / Stale / My adds / etc.)** — fully client-side. `Kanban.tsx:119` runs `applyFilters` inside `useMemo([merged, filters, currentUserEmail])`. No fetch. The URL `replace` on every change is a tiny no-op for the browser. Already fast.
-- **Kanban initial load** — Server Component reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each (one fs.readFile per JSON), then in-memory join. No N+1. The cost scales with total candidate count, which is ~hundreds today.
-- **Candidate list search** — form-submit (`<form>` → URL `?q=...` → server re-renders). No `onChange` round-trips; debounce is unnecessary because the user explicitly hits Apply.
-- **Side panel** — server renders the candidate snapshot once; no inputs that fire on every keystroke today.
+- **Filter clicks (`KanbanFilters` All / Stale / My adds / etc.)** - fully client-side. `Kanban.tsx:119` runs `applyFilters` inside `useMemo([merged, filters, currentUserEmail])`. No fetch. The URL `replace` on every change is a tiny no-op for the browser. Already fast.
+- **Kanban initial load** - Server Component reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each (one fs.readFile per JSON), then in-memory join. No N+1. The cost scales with total candidate count, which is ~hundreds today.
+- **Candidate list search** - form-submit (`<form>` → URL `?q=...` → server re-renders). No `onChange` round-trips; debounce is unnecessary because the user explicitly hits Apply.
+- **Side panel** - server renders the candidate snapshot once; no inputs that fire on every keystroke today.
 
-No commits filed for Step 21. The findings stand as a snapshot — promote any of these to active work the first time HR reports concrete slowness.
+No commits filed for Step 21. The findings stand as a snapshot - promote any of these to active work the first time HR reports concrete slowness.

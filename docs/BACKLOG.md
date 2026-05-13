@@ -1,6 +1,6 @@
 # Backlog
 
-Items deliberately deferred from the gate that shipped them. Each entry names the **reactivation trigger** — the specific signal that promotes it to active work.
+Items deliberately deferred from the gate that shipped them. Each entry names the **reactivation trigger** - the specific signal that promotes it to active work.
 
 Compare to `docs/TODOS.md` (open items with no specific trigger), this file is for items we have **chosen not** to build now and want to remember why.
 
@@ -12,9 +12,9 @@ Compare to `docs/TODOS.md` (open items with no specific trigger), this file is f
 
 #### Direct SMTP send (replaces mailto: throughout)
 
-Today every "Send …" affordance opens a mailto: in the user's mail client. Phase 1.1 would replace this with a direct send (e.g. via Resend, the same provider `deliverEmail` already uses). The recruiter would no longer review the draft in Outlook — the system would fire and confirm.
+Today every "Send …" affordance opens a mailto: in the user's mail client. Phase 1.1 would replace this with a direct send (e.g. via Resend, the same provider `deliverEmail` already uses). The recruiter would no longer review the draft in Outlook - the system would fire and confirm.
 
-**Reactivation trigger**: Riddhi confirms that mailto: is functioning correctly during her testing pass AND HR collectively asks for a fully automated send (eliminating the per-email Outlook click). Both conditions, not either. Pre-condition: a thread on attachment handling (mailto: cannot carry attachments; SMTP can — we would need an attachment-picker UI tied to actual file storage).
+**Reactivation trigger**: Riddhi confirms that mailto: is functioning correctly during her testing pass AND HR collectively asks for a fully automated send (eliminating the per-email Outlook click). Both conditions, not either. Pre-condition: a thread on attachment handling (mailto: cannot carry attachments; SMTP can - we would need an attachment-picker UI tied to actual file storage).
 
 Scope when promoted: send via Resend, signed envelope tracking (delivered / bounced), reply-to wired to the recruiter, audit log captures the message-id.
 
@@ -42,7 +42,7 @@ The "Send feedback request" button today opens mailto: with a pre-filled message
 
 **Reactivation trigger**: HM feedback response time > 48h is the typical case, AND HR raises the mailto: nudge as ineffective.
 
-Scope when promoted: Slack incoming webhook OR Twilio WhatsApp Business message template (the latter requires Meta approval — 1-2 week lead time).
+Scope when promoted: Slack incoming webhook OR Twilio WhatsApp Business message template (the latter requires Meta approval - 1-2 week lead time).
 
 ### Rewards & Recognition module
 
@@ -74,7 +74,7 @@ Scope when promoted: Twilio WhatsApp Business API, an approved message template 
 
 ## Recognition card scope decisions captured at MVP land (2026-05-13)
 
-These are NOT backlog — these are decisions Shruti has explicitly endorsed. Documented here so a future maintainer doesn't try to "fix" them:
+These are NOT backlog - these are decisions Shruti has explicitly endorsed. Documented here so a future maintainer doesn't try to "fix" them:
 
 - **No photo upload**: initials placeholder is intentional. Promotion logic above.
 - **Brand-aligned simplified visual, NOT Canva pixel-fidelity**: HR can keep using Canva for the highest-fidelity poster runs; the in-system card serves as the canonical reference and is good enough for internal distribution.

@@ -12,7 +12,7 @@ import {
 
 interface Props {
   applicationId: string
-  /** Display name only — used in the button label and modal heading. */
+  /** Display name only - used in the button label and modal heading. */
   candidateName: string
   /** Pre-fill the To: field. HR can edit before firing. */
   candidateEmail: string

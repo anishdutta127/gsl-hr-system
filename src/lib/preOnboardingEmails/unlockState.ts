@@ -15,7 +15,7 @@
  *   - appointment-letter: 'locked' until candidateOfferResponse.response === 'Accepted',
  *     'unlocked' once accepted and not yet sent, 'sent' once fired.
  *   - notice-period-checkin: 'locked' until appointment-letter has been sent,
- *     'unlocked' afterwards, 'sent' once fired. No upper bound — HR can fire
+ *     'unlocked' afterwards, 'sent' once fired. No upper bound - HR can fire
  *     this repeatedly during the notice window (later sends still log).
  */
 

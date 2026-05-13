@@ -13,7 +13,7 @@ export const runtime = 'nodejs'
  *
  * Permissions: assigned hiringManagerId on the application, OR Admin / HR.
  * Recruiters submitting feedback for someone else is intentionally
- * blocked — V6 hard rule.
+ * blocked - V6 hard rule.
  *
  * Body: { round?, recommendation, strengths, concerns, overallNotes? }
  *   - When `round` is omitted, the route fills it from the application's
@@ -103,7 +103,7 @@ export async function POST(
   }
 
   // Best-effort notification fan-out to the recruiter (Application.createdBy
-  // is the recruiter id in this codebase — they get a heads-up that the
+  // is the recruiter id in this codebase - they get a heads-up that the
   // gate has cleared). Failure here never blocks the submit.
   try {
     const recruiterEmail = application.createdBy
