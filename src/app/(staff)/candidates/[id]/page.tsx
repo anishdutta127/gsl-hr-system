@@ -27,6 +27,7 @@ import {
   roundLabelForStage,
 } from '@/lib/feedbackGate'
 import { buildFeedbackRequestMailto } from '@/lib/feedbackRequestMailto'
+import { PreOnboardingApprovalBlock } from './PreOnboardingApproval'
 
 export const dynamic = 'force-dynamic'
 
@@ -347,6 +348,39 @@ export default async function CandidateDetailPage({
                       />
                     </div>
                   )}
+                  {role && (() => {
+                    const eligibleForApproval =
+                      app.preOnboardingApproval ||
+                      ['HRRoundDone', 'Offered', 'OfferAccepted', 'DocsCollected'].includes(
+                        String(app.currentStage),
+                      )
+                    if (!eligibleForApproval) return null
+                    const isAssignedHm =
+                      !!app.hiringManagerId && app.hiringManagerId === session.sub
+                    return (
+                      <div className="mt-3 border-t border-line pt-3">
+                        <PreOnboardingApprovalBlock
+                          applicationId={app.id}
+                          candidateName={candidate.name}
+                          roleTitle={role.title}
+                          defaults={{
+                            ctcConfirmed:
+                              app.preOnboardingApproval?.ctcConfirmed ??
+                              role.salaryRange?.max,
+                            joiningDateConfirmed: app.preOnboardingApproval?.joiningDateConfirmed,
+                            locationConfirmed:
+                              app.preOnboardingApproval?.locationConfirmed ??
+                              (typeof role.location === 'string' ? role.location : undefined),
+                            positionConfirmed:
+                              app.preOnboardingApproval?.positionConfirmed ?? role.title,
+                          }}
+                          approval={app.preOnboardingApproval}
+                          sessionRole={session.role}
+                          isAssignedHiringManager={isAssignedHm}
+                        />
+                      </div>
+                    )
+                  })()}
                   {!terminal && role && (() => {
                     const hmId = app.hiringManagerId ?? null
                     const hm = hmId ? usersById.get(hmId) : null
