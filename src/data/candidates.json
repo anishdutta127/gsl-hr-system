@@ -6750,6 +6750,22 @@
           "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-13T09:19:38.811Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
+      },
+      {
+        "timestamp": "2026-05-13T09:19:38.835Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
       }
     ]
   },
@@ -6984,6 +7000,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-13T09:19:38.877Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer. Notes: Better fit"
       }
     ]
   },
@@ -7268,6 +7292,110 @@
           "source": "Application",
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001",
+    "name": "Rupam Ghosal",
+    "email": "rupamghosal0024@gmail.com",
+    "phone": "6202615285",
+    "source": "Application",
+    "notes": "I’m currently a PhD Research Scholar at BIT Mesra working in AI, Robotics, and Healthcare-focused systems. Alongside research, I have experience as a STEM educator and robotics trainer, where I conducted hands-on workshops on Arduino, IoT, AI/ML, automation, and student innovation projects.\r\n\r\nWhat excites me about Get Set Learn is the focus on making future-ready learning engaging and practical for students. I enjoy building interactive learning experiences that combine creativity, problem-solving, and technology, and I would love the opportunity to contribute to your STEM programs and bootcamps.",
+    "resumeFilePath": "data/resumes/applications/2026/05/3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001.pdf",
+    "createdAt": "2026-05-13T06:16:50.775Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T06:16:50.775Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Rupam Ghosal",
+          "email": "rupamghosal0024@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/3f9129f8-eb4b-4e09-9a46-5aaa4f4b0001.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "ad46cc6b-8bda-4c5a-890f-b2936c951960",
+    "name": "Thanuja V",
+    "email": "thanujav124@gmail.com",
+    "phone": "8904216611",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/ad46cc6b-8bda-4c5a-890f-b2936c951960.pdf",
+    "createdAt": "2026-05-13T06:49:20.584Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T06:49:20.584Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Thanuja V",
+          "email": "thanujav124@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/ad46cc6b-8bda-4c5a-890f-b2936c951960.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "0d8bc546-efbc-4c1e-8128-f41f7ce33198",
+    "name": "Sameer shaikh",
+    "email": "sameershaikh49910@gmail.com",
+    "phone": "9370449910",
+    "source": "Application",
+    "notes": "I’m eager to learn, grow, and give my best to this role. I’m hardworking, quick to adapt, and excited for the opportunity.",
+    "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf",
+    "createdAt": "2026-05-13T07:50:48.074Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T07:50:48.074Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Sameer shaikh",
+          "email": "sameershaikh49910@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "0bfdeff4-43cd-4d52-b309-b4b75170943c",
+    "name": "Rajni Kant Rai",
+    "email": "rajnibabu87@gmail.com",
+    "phone": "8073420973",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/0bfdeff4-43cd-4d52-b309-b4b75170943c.pdf",
+    "createdAt": "2026-05-13T07:55:18.162Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T07:55:18.162Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Rajni Kant Rai",
+          "email": "rajnibabu87@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/0bfdeff4-43cd-4d52-b309-b4b75170943c.pdf"
         },
         "notes": "Self-applied via /careers with resume."
       }
