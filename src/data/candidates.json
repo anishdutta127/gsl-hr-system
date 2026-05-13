@@ -7086,6 +7086,22 @@
           "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-13T11:37:32.053Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
+      },
+      {
+        "timestamp": "2026-05-13T11:37:32.079Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
       }
     ]
   },
@@ -7294,6 +7310,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-13T11:37:32.131Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer. Notes: Better fit"
       }
     ]
   },
@@ -7346,6 +7370,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/ad46cc6b-8bda-4c5a-890f-b2936c951960.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-13T11:37:32.152Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
       }
     ]
   },
@@ -7396,6 +7428,32 @@
           "source": "Application",
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "resumeFilePath": "data/resumes/applications/2026/05/0bfdeff4-43cd-4d52-b309-b4b75170943c.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "7f25d411-ed9c-4bd4-bf16-4afbd2ea942b",
+    "name": "Ebenezer J A",
+    "email": "ebenezerville@gmail.com",
+    "phone": "+919543787809",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/7f25d411-ed9c-4bd4-bf16-4afbd2ea942b.pdf",
+    "createdAt": "2026-05-13T11:06:10.791Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-13T11:06:10.791Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ebenezer J A",
+          "email": "ebenezerville@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/7f25d411-ed9c-4bd4-bf16-4afbd2ea942b.pdf"
         },
         "notes": "Self-applied via /careers with resume."
       }
