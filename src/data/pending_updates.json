@@ -121,5 +121,26 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "d3ab0d11-0beb-412b-b64e-3796d070e297",
+    "queuedAt": "2026-05-13T06:39:35.627Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "f1bfb6bf-d360-4925-a20c-9622b6d6b366",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-12T14:02:49.464Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-13T06:39:35.627Z"
+      },
+      "notes": "Moved to Sales Executive."
+    },
+    "retryCount": 0
   }
 ]
