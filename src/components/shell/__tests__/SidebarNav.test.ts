@@ -59,6 +59,7 @@ describe('SidebarNav.visibleSections', () => {
     expect(adminOut.items.map((i) => i.label)).toEqual([
       'Users',
       'Alert preferences',
+      'Queue status',
       'Settings',
       'My account',
     ])

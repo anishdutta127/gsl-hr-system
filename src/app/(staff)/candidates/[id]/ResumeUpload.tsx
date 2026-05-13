@@ -33,7 +33,7 @@ export function ResumeUpload({ candidateId }: { candidateId: string }) {
       // resumeFilePath update goes through the queue — the page will keep
       // showing "no resume" until the apply runner picks up. Be honest.
       setQueuedNote(
-        'Resume saved. The candidate record updates within ~10 minutes; admins can use Sync now to force it.',
+        'Resume saved. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.',
       )
       router.refresh()
       if (inputRef.current) inputRef.current.value = ''

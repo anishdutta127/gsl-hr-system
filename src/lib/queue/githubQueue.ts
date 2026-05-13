@@ -215,6 +215,67 @@ export async function deleteBinaryFile(path: string, reason: string): Promise<vo
 }
 
 /**
+ * Read a file from the repo via the Contents API. Used by the universal
+ * Sync now widget to fetch the LATEST pending_updates.json (the file
+ * bundled with the deploy is stale until the next non-`chore(queue):`
+ * commit triggers a Vercel rebuild). Returns null when the file is
+ * missing or the queue is not configured. Surfaces upstream errors so
+ * the caller can render a degraded state instead of crashing.
+ */
+export async function readRepoFile(path: string): Promise<string | null> {
+  try {
+    const file = await getFile(path)
+    return file?.text ?? null
+  } catch (err) {
+    if (err instanceof QueueNotConfiguredError) return null
+    throw err
+  }
+}
+
+/**
+ * Find the most recent commit whose subject starts with `chore(apply):`.
+ * Used by the Sync now widget to surface "last drain at HH:MM IST" without
+ * the caller having to list and parse the full commit history. Returns null
+ * if no apply commit is found in the last 30 commits.
+ */
+export async function findLastDrainCommit(): Promise<{
+  sha: string
+  date: string
+  message: string
+} | null> {
+  let token: string
+  try {
+    token = githubToken()
+  } catch {
+    return null
+  }
+  const url =
+    `https://api.github.com/repos/${githubRepo()}/commits` +
+    `?sha=${encodeURIComponent(githubBranch())}&per_page=30`
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'User-Agent': 'gsl-hr-system-queue',
+    },
+    cache: 'no-store',
+  })
+  if (!res.ok) return null
+  const list = (await res.json()) as Array<{
+    sha: string
+    commit: { message: string; author: { date: string } }
+  }>
+  for (const c of list) {
+    const subject = (c.commit.message ?? '').split('\n')[0] ?? ''
+    if (subject.startsWith('chore(apply):')) {
+      return { sha: c.sha, date: c.commit.author.date, message: subject }
+    }
+  }
+  return null
+}
+
+/**
  * Trigger a workflow_dispatch GitHub Action. Used by the admin "Sync now"
  * button to force the apply-queue workflow to run immediately instead of
  * waiting for the next 5-minute cron tick. Requires the queue PAT to have

@@ -30,6 +30,7 @@ import {
   Laptop,
   ClipboardCheck,
   BellRing,
+  Activity,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
@@ -100,6 +101,7 @@ const SECTIONS: NavSection[] = [
     items: [
       { label: 'Users', href: '/users', icon: UserCog, roles: ['Admin'] },
       { label: 'Alert preferences', href: '/admin/alerts/preferences', icon: BellRing, roles: ADMIN_HR },
+      { label: 'Queue status', href: '/admin/queue-status', icon: Activity, roles: ['Admin'] },
       { label: 'Settings', href: '/settings', icon: Settings, roles: ['Admin'] },
       { label: 'My account', href: '/account', icon: UserCircle, roles: ALL_STAFF },
     ],

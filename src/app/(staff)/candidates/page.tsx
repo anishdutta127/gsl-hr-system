@@ -109,8 +109,7 @@ export default async function CandidatesPage({
           role="status"
           className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
         >
-          {queuedNoticeName} is queued. The record appears in the pool within a few minutes once
-          the sync runner picks it up.
+          {queuedNoticeName} is queued. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.
         </div>
       )}
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">

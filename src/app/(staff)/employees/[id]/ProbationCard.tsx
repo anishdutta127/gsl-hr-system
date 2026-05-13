@@ -49,7 +49,7 @@ export function ProbationCard({
       }
       notify(
         data.note ??
-          'Confirmation queued. Reflects in the employee record after the next sync (~5-10 minutes; Admin can hit Sync now to speed it up).',
+          'Confirmation queued. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.',
       )
       router.refresh()
     } catch (err) {
@@ -76,7 +76,7 @@ export function ProbationCard({
       setMode('idle')
       notify(
         data.note ??
-          'Extension queued. Reflects in the employee record after the next sync (~5-10 minutes; Admin can hit Sync now to speed it up).',
+          'Extension queued. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.',
       )
       router.refresh()
     } catch (err) {

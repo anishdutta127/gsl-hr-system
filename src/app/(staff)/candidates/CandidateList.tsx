@@ -176,7 +176,7 @@ export function CandidateList({
     }
 
     setSuccess(
-      `Logged for ${res.result.applied} recipient${res.result.applied === 1 ? '' : 's'}. Outlook is opening.${truncationNotice}`,
+      `Logged for ${res.result.applied} recipient${res.result.applied === 1 ? '' : 's'}. Outlook is opening.${truncationNotice} Click Sync now to force immediate sync, or wait for the next auto-sync.`,
     )
     setSelected(new Set())
     closeModal()
@@ -227,15 +227,16 @@ export function CandidateList({
 
     const data = res.result
     const tail = `${data.skipped > 0 ? `, skipped ${data.skipped}` : ''}${data.errors > 0 ? `, errors ${data.errors}` : ''}`
+    const syncHint = ' Click Sync now to force immediate sync, or wait for the next auto-sync.'
     let msg: string
     if (actionType === 'log-email') {
-      msg = `Logged email for ${data.applied} candidate${data.applied === 1 ? '' : 's'}. Audit entries created${tail}.`
+      msg = `Logged email for ${data.applied} candidate${data.applied === 1 ? '' : 's'}. Audit entries created${tail}.${syncHint}`
     } else if (actionType === 'add-to-pipeline') {
-      msg = `Added ${data.applied} candidate${data.applied === 1 ? '' : 's'} to the pipeline${tail}.`
+      msg = `Added ${data.applied} candidate${data.applied === 1 ? '' : 's'} to the pipeline${tail}.${syncHint}`
     } else if (actionType === 'archive') {
-      msg = `Archived ${data.applied} candidate${data.applied === 1 ? '' : 's'}${tail}. Will reflect everywhere within ~1 minute.`
+      msg = `Archived ${data.applied} candidate${data.applied === 1 ? '' : 's'}${tail}.${syncHint}`
     } else {
-      msg = `Applied to ${data.applied}${tail}.`
+      msg = `Applied to ${data.applied}${tail}.${syncHint}`
     }
     setSuccess(msg)
     setSelected(new Set())

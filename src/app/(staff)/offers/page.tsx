@@ -35,7 +35,7 @@ export default async function OffersPage({
           role="status"
           className="mb-4 rounded border border-success bg-success-bg px-3 py-2 text-sm text-ink"
         >
-          Offer drafted. It appears in the list within a few minutes once the sync runner picks it up.
+          Offer drafted. Click Sync now (top right) to force immediate sync, or wait for the next auto-sync.
         </div>
       )}
       <div className="mb-6">

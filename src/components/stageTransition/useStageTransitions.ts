@@ -105,6 +105,11 @@ export interface UseStageTransitionsResult {
 
 const UNDO_WINDOW_MS = 5000
 
+/** Tail line appended to every staff-facing save toast. The queue lag is
+ * the user-perceived "my change reverted" cause; this surfaces the
+ * Sync now button as the explicit knob HR can pull instead of waiting. */
+const SYNC_HINT = ' Click Sync now to force immediate sync, or wait for the next auto-sync.'
+
 export function useStageTransitions({
   applications,
   roleByApplicationId,
@@ -185,7 +190,7 @@ export function useStageTransitions({
           : []
         const noun = isHodRoundStage(toStage) ? `. HOD has been notified` : ''
         setSuccessMsg({
-          message: `${successPrefix}${noun}.`,
+          message: `${successPrefix}${noun}.${SYNC_HINT}`,
           entries,
         })
         scheduleSuccessClear()
@@ -297,7 +302,7 @@ export function useStageTransitions({
             ? ` ${data.skipped + data.errors} could not be moved.`
             : ''
         setSuccessMsg({
-          message: `${successLabel} ${data.applied} candidate${data.applied === 1 ? '' : 's'}.${tail}`,
+          message: `${successLabel} ${data.applied} candidate${data.applied === 1 ? '' : 's'}.${tail}${SYNC_HINT}`,
           entries: undoEntries,
         })
         scheduleSuccessClear()
@@ -369,7 +374,7 @@ export function useStageTransitions({
           if (!undoneIds.has(id)) applyOptimistic(id, to)
         }
         setSuccessMsg({
-          message: `Reverted ${data.applied} candidate${data.applied === 1 ? '' : 's'}.`,
+          message: `Reverted ${data.applied} candidate${data.applied === 1 ? '' : 's'}.${SYNC_HINT}`,
           entries: [],
         })
         scheduleSuccessClear()
