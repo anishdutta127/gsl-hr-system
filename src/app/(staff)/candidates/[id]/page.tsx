@@ -28,6 +28,7 @@ import {
 } from '@/lib/feedbackGate'
 import { buildFeedbackRequestMailto } from '@/lib/feedbackRequestMailto'
 import { PreOnboardingApprovalBlock } from './PreOnboardingApproval'
+import { CandidateResponseForm } from './CandidateResponseForm'
 import { SendPreOnboardingEmail } from './SendPreOnboardingEmail'
 import {
   getMissingFieldsForTemplate,
@@ -433,6 +434,18 @@ export default async function CandidateDetailPage({
                       />
                     )
                   })()}
+                  {role &&
+                    (app.candidateOfferResponse ||
+                      (app.preOnboardingEmails ?? []).some((s) => s.templateId === 'offer-intimation')) && (
+                      <div className="mt-3 border-t border-line pt-3">
+                        <CandidateResponseForm
+                          applicationId={app.id}
+                          candidateName={candidate.name}
+                          response={app.candidateOfferResponse}
+                          canEdit={session.role === 'Admin' || session.role === 'HR'}
+                        />
+                      </div>
+                    )}
                   {role && (session.role === 'Admin' || session.role === 'HR') && (() => {
                     const state = getEmailUnlockState(app)
                     const sends = app.preOnboardingEmails ?? []
