@@ -1022,6 +1022,8 @@ export type PendingUpdateEntity =
   | 'offer'
   | 'employee'
   | 'outbound_mail'
+  | 'recognition'
+  | 'nominationCycle'
 
 export interface PendingUpdate {
   id: string
@@ -1031,6 +1033,78 @@ export interface PendingUpdate {
   operation: 'create' | 'update' | 'delete'
   payload: Record<string, unknown>
   retryCount?: number
+}
+
+// --- Rewards & Recognition (Phase 4, gate 3) ------------------------------
+
+/** Categories surfaced in the HOD nomination form + recognition card. */
+export const RECOGNITION_CATEGORIES = [
+  'Employee of the Month',
+  'Outstanding Contribution',
+  'Team Player',
+  'Innovation',
+  'Other',
+] as const
+
+export type RecognitionCategory = (typeof RECOGNITION_CATEGORIES)[number]
+
+/** Five-state lifecycle: HOD nominates → HR-Admin approves → HR-Admin
+ * publishes (email distribution) → archive (manual). Draft is the
+ * pre-submit holding state when a HOD is still composing the write-up. */
+export type RecognitionStatus =
+  | 'Draft'
+  | 'Nominated'
+  | 'Approved'
+  | 'Published'
+  | 'Archived'
+
+/** Single distribution event — every time HR opens the email modal and
+ * fires the mailto:, one of these is appended. */
+export interface RecognitionDistribution {
+  sentAt: string
+  sentBy: string
+  /** Number of recipients in the BCC field of the draft. */
+  recipientCount: number
+}
+
+export interface Recognition {
+  /** RECOG-{YYYY}-{NN} where YYYY is the financial year start and NN is
+   * gap-free within that year. */
+  id: string
+  /** Employee being recognised — a User id (employee records are the
+   * user records in this codebase, post-join). */
+  employeeId: string
+  /** User id of the nominator (HOD or HR-Admin). */
+  nominatedBy: string
+  /** YYYY-MM. Used for the monthly grid on /recognition. */
+  month: string
+  /** Snapshot of the employee's department at nomination time so renaming
+   * a department later doesn't rewrite historical recognitions. */
+  department: string
+  category: RecognitionCategory
+  /** The Canva-style write-up text. Plain text, line breaks preserved. */
+  writeup: string
+  status: RecognitionStatus
+  nominatedAt: string
+  approvedBy?: string
+  approvedAt?: string
+  publishedAt?: string
+  /** Append-only distribution log. */
+  distributionEmails: RecognitionDistribution[]
+  auditLog: AuditEntry[]
+}
+
+/** Bookkeeping record for the monthly "request nominations" mailto. One
+ * cycle per (month). HR-Admin can re-trigger if HODs need a reminder. */
+export interface NominationCycle {
+  id: string
+  /** YYYY-MM. */
+  month: string
+  requestedAt: string
+  requestedBy: string
+  /** User ids of the HODs the request mailto was addressed to. */
+  hodsNotified: string[]
+  auditLog: AuditEntry[]
 }
 
 // --- JWT session claims ---------------------------------------------------

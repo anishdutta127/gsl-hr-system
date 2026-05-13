@@ -16,6 +16,8 @@ import type {
   Interview,
   Offer,
   Employee,
+  Recognition,
+  NominationCycle,
 } from './types'
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data')
@@ -68,6 +70,18 @@ export function loadOffers(): Offer[] {
 
 export function loadEmployees(): Employee[] {
   return readJson<Employee[]>('employees.json', [])
+}
+
+export function loadRecognitions(): Recognition[] {
+  return readJson<Recognition[]>('recognitions.json', [])
+}
+
+export function findRecognitionById(id: string): Recognition | undefined {
+  return loadRecognitions().find((r) => r.id === id)
+}
+
+export function loadNominationCycles(): NominationCycle[] {
+  return readJson<NominationCycle[]>('nomination_cycles.json', [])
 }
 
 export function findCandidateById(id: string): Candidate | undefined {
