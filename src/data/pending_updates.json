@@ -298,5 +298,20 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "b62aec78-76af-4a58-9169-40d664905ee7",
+    "queuedAt": "2026-05-13T06:46:26.546Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
+      "operation": "candidate.update",
+      "before": {},
+      "after": {},
+      "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
+    },
+    "retryCount": 0
   }
 ]
