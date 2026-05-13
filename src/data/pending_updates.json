@@ -1025,5 +1025,39 @@
       "createdAt": "2026-05-13T04:44:00.257Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "d1e03e85-6538-4205-9015-732ddacbaa37",
+    "queuedAt": "2026-05-13T05:22:09.794Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "47766d67-45a5-4729-b897-f2b13c211233",
+      "name": "Mohd. Sahil",
+      "email": "mohd.sahil2524@gmail.com",
+      "phone": "8890952524",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf",
+      "createdAt": "2026-05-13T05:22:08.845Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T05:22:08.845Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Mohd. Sahil",
+            "email": "mohd.sahil2524@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
