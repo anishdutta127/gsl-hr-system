@@ -18,5 +18,26 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "b79fe92e-6225-4a53-879a-268ef84652b5",
+    "queuedAt": "2026-05-13T10:37:30.528Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "56b59ea4-9f8c-4f0b-ab6f-e2ba06ebc928",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-12T18:17:34.863Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-13T10:37:30.527Z"
+      },
+      "notes": "Moved to Sales Executive."
+    },
+    "retryCount": 0
   }
 ]
