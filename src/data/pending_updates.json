@@ -946,5 +946,39 @@
       "createdAt": "2026-05-13T03:06:25.109Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "aa4d997b-c387-4d4d-ae63-9fde0d4b0b68",
+    "queuedAt": "2026-05-13T04:43:58.841Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9eac0554-2da9-425c-b90e-a8ae17bc0632",
+      "name": "Pintu Biswas",
+      "email": "pintubiswasphysics07@gmail.com",
+      "phone": "+918653315914",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf",
+      "createdAt": "2026-05-13T04:43:57.942Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T04:43:57.942Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Pintu Biswas",
+            "email": "pintubiswasphysics07@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
