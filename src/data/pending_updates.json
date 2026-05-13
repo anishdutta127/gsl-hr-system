@@ -788,5 +788,39 @@
       "createdAt": "2026-05-12T21:40:00.652Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "d61dfe38-e113-48c0-a468-98f33227c2c6",
+    "queuedAt": "2026-05-13T02:57:33.598Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "15142a80-e902-4fdb-a9f1-0ecfbcff366e",
+      "name": "SUGANDHA JAISWAL",
+      "email": "sugandha.etech@gmail.com",
+      "phone": "7003057104",
+      "source": "Application",
+      "notes": "Stem teainer",
+      "resumeFilePath": "data/resumes/applications/2026/05/15142a80-e902-4fdb-a9f1-0ecfbcff366e.pdf",
+      "createdAt": "2026-05-13T02:57:32.702Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T02:57:32.702Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "SUGANDHA JAISWAL",
+            "email": "sugandha.etech@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/15142a80-e902-4fdb-a9f1-0ecfbcff366e.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
