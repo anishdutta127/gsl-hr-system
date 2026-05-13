@@ -9,7 +9,7 @@ interface Props {
   applicationId: string
   candidateName: string
   response: CandidateOfferResponse | undefined
-  /** Only render the form when Admin or HR. Leadership / HOD see history only. */
+  /** Only render the form when Admin or HR — Leadership / HOD see history only. */
   canEdit: boolean
 }
 

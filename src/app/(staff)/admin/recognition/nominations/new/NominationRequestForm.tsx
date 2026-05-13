@@ -19,7 +19,7 @@ interface Props {
 
 /**
  * Builds the mailto: URL for the monthly nomination request and logs a
- * NominationCycle on click. The actual email send is mailto: HR sees
+ * NominationCycle on click. The actual email send is mailto: — HR sees
  * the draft in Outlook / their mail client and chooses when to fire.
  */
 export function NominationRequestForm(props: Props) {
@@ -48,7 +48,7 @@ export function NominationRequestForm(props: Props) {
     '',
     `It is time to recognise an employee from your department for ${props.monthLabel}.`,
     '',
-    `Please submit your nomination via the GSL HR system - open /recognition/nominate and pick the employee, category, and a short write-up that captures what they did.`,
+    `Please submit your nomination via the GSL HR system — open /recognition/nominate and pick the employee, category, and a short write-up that captures what they did.`,
     '',
     `Nominations are due by the 25th of the month.`,
     '',

@@ -32,7 +32,7 @@ const STATUS_TONE: Record<string, string> = {
 
 /**
  * Pre-onboarding approval block on the candidate detail page. State
- * machine renders per status - Not Started → initiate form; Pending HM
+ * machine renders per status — Not Started → initiate form; Pending HM
  * → approve / reject buttons (HM or HR/Admin); Pending HR → approve /
  * reject (HR/Admin only); Approved → static summary; Rejected → reason
  * + Admin reset.

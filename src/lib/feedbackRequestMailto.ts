@@ -8,7 +8,7 @@
  * navigates to. Subject + body are URL-encoded by the helper so callers
  * don't have to.
  *
- * mailto: cannot carry CC / attachments - those would silently be dropped
+ * mailto: cannot carry CC / attachments — those would silently be dropped
  * by some mail clients. We keep this single-recipient + body-only and let
  * HR's email client open with the draft to review and send.
  */

@@ -55,7 +55,7 @@ export function Kanban({
   // catch up (the queue applies and `applications` re-arrives with the same
   // stage), at which point the override is redundant and we drop it. Leaving
   // stale entries in place is what produced the "Already at this stage"
-  // false-positive in Workstream 4 - a second drag computed targetStage
+  // false-positive in Workstream 4 — a second drag computed targetStage
   // against the override, which already matched currentStage.
   const [stageOverride, setStageOverride] = useState<Record<string, Stage>>({})
 

@@ -5,7 +5,7 @@
  * Storage: src/data/recognitions.json (array) + src/data/nomination_cycles.json (array).
  *
  * Writes happen via atomicUpdateJson direct-commit (admin/HR-only),
- * mirroring the taxonomy and holidays pattern - rare writes, single
+ * mirroring the taxonomy and holidays pattern — rare writes, single
  * canonical state, no queue replay needed.
  *
  * ID generation: RECOG-{FY}-{NN} where FY is the financial year start
@@ -35,7 +35,7 @@ export function financialYearStart(iso: string): number {
 /** Next sequential RECOG-{FY}-{NN} id. Caller passes the existing list +
  * the financial year (typically derived from today's date). Returns
  * max(existing-NN-for-FY) + 1, defaulting to 01 when empty. We never
- * fill gaps - a deleted RECOG-2026-05 stays a gap because the printed
+ * fill gaps — a deleted RECOG-2026-05 stays a gap because the printed
  * Canva-style poster series HR maintains is identified by these ids
  * and reusing a number would conflict with what's already gone out. */
 export function nextRecognitionId(

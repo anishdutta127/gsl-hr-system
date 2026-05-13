@@ -13,7 +13,7 @@
  *
  * Terminal-stage transitions (Reject, OnHold, Withdrawn) bypass the gate.
  * Rationale: HR is allowed to close out a candidate without asking the
- * hiring manager for prose feedback - the rejection reason capture is
+ * hiring manager for prose feedback — the rejection reason capture is
  * the audit trail for those moves.
  */
 

@@ -1,7 +1,7 @@
 /*
  * Convert an integer rupee amount into Indian-English words ("Twelve Lakh
  * Fifty Thousand"). Used by the offer-intimation template's CTC line, which
- * Shruti reads as "Rupees Twelve Lakh Fifty Thousand only" - no fractional
+ * Shruti reads as "Rupees Twelve Lakh Fifty Thousand only" — no fractional
  * paise, no "and 0/100".
  *
  * Handles 0 → 99,99,99,999 (just under a hundred crore). For larger or
@@ -64,7 +64,7 @@ function threeDigits(n: number): string {
   return head || tail
 }
 
-/** "Rupees Twelve Lakh Fifty Thousand only" - without the leading "Rupees"
+/** "Rupees Twelve Lakh Fifty Thousand only" — without the leading "Rupees"
  * and trailing "only" markers, the caller adds those. */
 export function amountToWordsIndian(amount: number): string {
   if (!Number.isFinite(amount)) return 'Zero'

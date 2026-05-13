@@ -10,7 +10,7 @@
  * renderer fills placeholders from a Candidate + Application + active
  * user + organisation context object.
  *
- * The output is plain text - these go via mailto: in Phase 1, so HTML
+ * The output is plain text — these go via mailto: in Phase 1, so HTML
  * would not survive the user's mail client anyway. The send-email modal
  * lets HR edit subject and body before firing the mailto:.
  */
@@ -30,7 +30,7 @@ export const PRE_ONBOARDING_TEMPLATE_IDS = [
 export type PreOnboardingTemplateId = (typeof PRE_ONBOARDING_TEMPLATE_IDS)[number]
 
 /** Suggested attachments per template. Surfaces in the modal as checkboxes
- * - HR picks which ones they will actually attach (mailto: cannot carry
+ * — HR picks which ones they will actually attach (mailto: cannot carry
  * attachments, so this is a checklist for the user, not a payload). */
 export const TEMPLATE_ATTACHMENT_SUGGESTIONS: Record<PreOnboardingTemplateId, string[]> = {
   'offer-intimation': [
@@ -86,11 +86,11 @@ export interface TemplateContext {
   /** Annual CTC in rupees (integer). The renderer formats it Indian-style
    * and derives the in-words string. */
   ctcAmount?: number
-  /** Date the offer intimation was first sent - used by the follow-up
+  /** Date the offer intimation was first sent — used by the follow-up
    * template's "our earlier communication dated" line. */
   offerIntimationDate?: string
   /** Deadline by which the candidate should return the signed appointment
-   * letter - used by the appointment-letter template. */
+   * letter — used by the appointment-letter template. */
   appointmentReturnByDate?: string
   recruiterName: string
   recruiterEmail: string
@@ -124,7 +124,7 @@ export function getMissingFieldsForTemplate(
 }
 
 /** Render a template against a context. Throws when required fields are
- * missing - callers should call getMissingFieldsForTemplate first. */
+ * missing — callers should call getMissingFieldsForTemplate first. */
 export function renderEmailTemplate(
   id: PreOnboardingTemplateId,
   ctx: TemplateContext,

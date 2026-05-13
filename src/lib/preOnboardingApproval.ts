@@ -125,7 +125,7 @@ export function transitionPreOnboardingApproval(
 }
 
 /** True when the application is cleared for sending the offer intimation
- * email - i.e. the approval has been finalised by HR. */
+ * email — i.e. the approval has been finalised by HR. */
 export function isReadyForOfferIntimation(approval: PreOnboardingApproval | undefined): boolean {
   return !!approval && approval.status === 'Approved'
 }
