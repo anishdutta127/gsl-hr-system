@@ -210,5 +210,39 @@
       "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
     },
     "retryCount": 0
+  },
+  {
+    "id": "c6c86e03-6990-4c37-8a18-dfc9864b76a3",
+    "queuedAt": "2026-05-13T11:06:11.973Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "7f25d411-ed9c-4bd4-bf16-4afbd2ea942b",
+      "name": "Ebenezer J A",
+      "email": "ebenezerville@gmail.com",
+      "phone": "+919543787809",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/7f25d411-ed9c-4bd4-bf16-4afbd2ea942b.pdf",
+      "createdAt": "2026-05-13T11:06:10.791Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T11:06:10.791Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ebenezer J A",
+            "email": "ebenezerville@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/7f25d411-ed9c-4bd4-bf16-4afbd2ea942b.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
