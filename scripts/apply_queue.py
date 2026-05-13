@@ -14,7 +14,12 @@ Operations handled:
   role.update [set-rubric, role.update]
   candidate.create
   application.create
-  application.update [stage-transition]
+  application.update [stage-transition,
+                      assign-hiring-manager, feedback-submitted,
+                      feedback-requested, feedback-override,
+                      set-feedback-required-stages,
+                      pre-onboarding.approval, pre-onboarding.email-sent,
+                      candidate-offer-response]
   interview.create
   offer.create
   offer.update [offer.approve, offer.send, offer.accept, offer.decline, offer.withdraw]
@@ -132,6 +137,76 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
             else:
                 entity.pop("rejectionReason", None)
                 entity.pop("rejectionNotes", None)
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: assign or reassign the hiring manager on this application.
+    if op == "assign-hiring-manager":
+        if isinstance(after, dict) and "hiringManagerId" in after:
+            entity["hiringManagerId"] = after["hiringManagerId"] or None
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: append a hiring-manager interview-feedback entry.
+    # after = { feedback: { round, submittedBy, submittedAt, recommendation,
+    #                       strengths, concerns, overallNotes } }
+    if op == "feedback-submitted":
+        if isinstance(after, dict) and isinstance(after.get("feedback"), dict):
+            feedback_entries = entity.setdefault("interviewFeedback", [])
+            if not isinstance(feedback_entries, list):
+                feedback_entries = []
+                entity["interviewFeedback"] = feedback_entries
+            feedback_entries.append(after["feedback"])
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: audit-only — recruiter requested feedback from the hiring
+    # manager via the candidate detail page banner. No field change.
+    if op == "feedback-requested":
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: audit-only — Admin overrode the feedback gate to move a
+    # candidate without the assigned hiring manager submitting feedback.
+    if op == "feedback-override":
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: set per-application override of which stages require feedback.
+    if op == "set-feedback-required-stages":
+        if isinstance(after, dict) and "feedbackRequiredFor" in after:
+            entity["feedbackRequiredFor"] = list(after["feedbackRequiredFor"] or [])
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: pre-onboarding approval state transitions. Single op covers
+    # initiation, hiring-manager approve, HR approve, reject (either side).
+    # after = { preOnboardingApproval: PreOnboardingApproval } — the full
+    # block is written each time so the applier does not need to know the
+    # current sub-state.
+    if op == "pre-onboarding.approval":
+        if isinstance(after, dict) and isinstance(after.get("preOnboardingApproval"), dict):
+            entity["preOnboardingApproval"] = after["preOnboardingApproval"]
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: record a pre-onboarding email send (mailto: draft opened).
+    # after = { send: PreOnboardingEmailSend }
+    if op == "pre-onboarding.email-sent":
+        if isinstance(after, dict) and isinstance(after.get("send"), dict):
+            sends = entity.setdefault("preOnboardingEmails", [])
+            if not isinstance(sends, list):
+                sends = []
+                entity["preOnboardingEmails"] = sends
+            sends.append(after["send"])
+        append_audit(entity, queued_by, op, before, after, notes)
+        return
+
+    # Gate 3: capture the candidate's response to the offer intimation.
+    # after = { candidateOfferResponse: CandidateOfferResponse }
+    if op == "candidate-offer-response":
+        if isinstance(after, dict) and isinstance(after.get("candidateOfferResponse"), dict):
+            entity["candidateOfferResponse"] = after["candidateOfferResponse"]
         append_audit(entity, queued_by, op, before, after, notes)
         return
 

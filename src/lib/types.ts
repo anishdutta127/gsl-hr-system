@@ -169,6 +169,119 @@ export interface Candidate {
 
 // --- Application (candidate × role × stage) -------------------------------
 
+/** Recommendation captured on a single hiring-manager feedback entry. */
+export const FEEDBACK_RECOMMENDATIONS = [
+  'Strong Hire',
+  'Move Forward',
+  'On Hold',
+  'Reject',
+] as const
+
+export type FeedbackRecommendation = (typeof FEEDBACK_RECOMMENDATIONS)[number]
+
+/** Narrative interview feedback submitted by the assigned hiring manager.
+ * Distinct from `Interview` (rubric-led scoring); this is the prose
+ * recommendation that gates progression out of the *RoundDone stages.
+ *
+ * `round` is the human label HR sees in the form ("Screening", "Technical",
+ * "Final"), not the pipeline stage id; multiple entries per round are
+ * allowed (a second-look after additional context is fine). The gate
+ * (Step 3) looks for *any* entry whose `round` matches the current stage's
+ * round label, so subsequent re-submissions count as cleared. */
+export interface InterviewFeedback {
+  round: string
+  submittedBy: string
+  submittedAt: string
+  recommendation: FeedbackRecommendation
+  strengths: string
+  concerns: string
+  overallNotes?: string
+}
+
+/** Stages out of which the hiring-manager feedback gate fires. Defaults to
+ * the three *RoundDone stages where an actual interview just happened.
+ * Per-application override allowed: a role with a different pipeline can
+ * supply its own list. */
+export const DEFAULT_FEEDBACK_REQUIRED_STAGES: Stage[] = [
+  'HODRoundDone',
+  'HOD2RoundDone',
+  'HRRoundDone',
+]
+
+/** Sequential pre-onboarding approval: hiring manager first, HR second.
+ * Lives on the Application rather than the Offer because the approval
+ * happens BEFORE an Offer entity is drafted (a recruiter may run the
+ * approval, then the candidate ghosts, and no Offer ever materialises). */
+export type PreOnboardingApprovalStatus =
+  | 'Not Started'
+  | 'Pending Hiring Manager'
+  | 'Pending HR Approval'
+  | 'Approved'
+  | 'Rejected'
+
+export interface PreOnboardingApproval {
+  status: PreOnboardingApprovalStatus
+  /** Confirmed CTC in INR (annual). Captured by the hiring manager. */
+  ctcConfirmed?: number
+  /** ISO date of confirmed joining. */
+  joiningDateConfirmed?: string
+  /** Confirmed location (text, free-form — may match a Role.location or be a
+   * site-level override). */
+  locationConfirmed?: string
+  /** Confirmed position title (defaults to candidate.roleAppliedFor). */
+  positionConfirmed?: string
+  /** Optional notes from either approver, last-wins. */
+  notes?: string
+  /** Set on the rejection path; either approver may reject. */
+  rejectionReason?: string
+  /** Who rejected: 'hiring-manager' | 'hr'. */
+  rejectedBy?: 'hiring-manager' | 'hr'
+  hiringManagerApprovedBy?: string
+  hiringManagerApprovedAt?: string
+  hrApprovedBy?: string
+  hrApprovedAt?: string
+}
+
+/** Candidate response captured manually by a recruiter (we are not parsing
+ * inbound email in Phase 1). Drives downstream UI affordances: once
+ * `response === 'Accepted'`, the Appointment Letter send action unlocks. */
+export const CANDIDATE_RESPONSE_TYPES = [
+  'Accepted',
+  'Declined',
+  'Negotiating',
+  'No Response',
+  'Need More Info',
+] as const
+
+export type CandidateResponseType = (typeof CANDIDATE_RESPONSE_TYPES)[number]
+
+export interface CandidateOfferResponse {
+  response: CandidateResponseType
+  /** ISO date of the response, as told to HR. May differ from the queue
+   * write timestamp when HR back-stamps. */
+  responseDate: string
+  notes?: string
+  /** Captured at the time HR recorded the response. */
+  recordedBy: string
+  recordedAt: string
+}
+
+/** Pre-onboarding email send tracker. Each entry corresponds to one
+ * mailto: action — we don't actually send via SMTP in Phase 1, but we
+ * record that HR opened the draft for that template so the next stage's
+ * action unlocks. */
+export interface PreOnboardingEmailSend {
+  templateId: 'offer-intimation' | 'offer-followup' | 'appointment-letter' | 'notice-period-checkin'
+  sentAt: string
+  sentBy: string
+  /** Editable subject + body the user saw at send time; captured for audit
+   * so we know what wording went out. */
+  subject?: string
+  /** Attachment names HR confirmed they would attach. mailto: cannot
+   * carry attachments — this is a checklist trace, not a delivery proof. */
+  attachmentsClaimed?: string[]
+}
+
 export interface Application {
   id: string
   candidateId: string
@@ -189,6 +302,39 @@ export interface Application {
     | 'Other'
   rejectionNotes?: string
   /** Stage transition history as queue writes land, newest first in each entry's auditLog. */
+
+  // --- Gate 3 additions --------------------------------------------------
+
+  /** Assigned hiring manager (User id). HR assigns when the candidate
+   * enters an interview-eligible stage. Pre-existing applications stay
+   * undefined and surface a "Assign hiring manager first" prompt on the
+   * next transition attempt out of a feedback-required stage. */
+  hiringManagerId?: string
+
+  /** Narrative interview feedback entries, append-only, ordered by
+   * submission time ascending. Multiple entries per round allowed
+   * (subsequent submissions count as updates from the gate's perspective). */
+  interviewFeedback?: InterviewFeedback[]
+
+  /** Per-application override of which stages require hiring-manager
+   * feedback before allowing a forward transition. When unset, the
+   * gate falls back to DEFAULT_FEEDBACK_REQUIRED_STAGES. Allow empty
+   * array to opt this application out entirely. */
+  feedbackRequiredFor?: Stage[]
+
+  /** Sequential pre-onboarding approval. Created on first action;
+   * undefined for applications that never reach the offer-zone. */
+  preOnboardingApproval?: PreOnboardingApproval
+
+  /** Manually-captured candidate response to the offer intimation.
+   * Recorded by HR; not parsed from inbound email. */
+  candidateOfferResponse?: CandidateOfferResponse
+
+  /** Tracks which pre-onboarding emails HR has drafted via the
+   * send-email modal. Drives the unlock chain on the candidate detail
+   * page (offer-intimation must be sent before follow-up; acceptance
+   * required before appointment-letter; etc.). */
+  preOnboardingEmails?: PreOnboardingEmailSend[]
 }
 
 // --- Audit log entry ------------------------------------------------------
