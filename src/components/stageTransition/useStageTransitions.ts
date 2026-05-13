@@ -6,14 +6,14 @@
  * Owns: optimistic state map, in-flight guards, undo timer, error and
  * success toasts, and the modal-trigger flags (confirm + reject reason).
  * The Kanban and the candidates list both consume this hook so the rules
- * live in one place — Karpathy: one obvious surface per concern.
+ * live in one place - Karpathy: one obvious surface per concern.
  *
  * Why a hook and not a component:
  *   - The Kanban already manages drag-drop optimism on the same data; lifting
  *     transitions into a hook lets the existing useOptimistic state be the
  *     single source of truth.
  *   - The candidates list will reuse this from a single-row context with no
- *     bulk surface — the hook returns only what each surface needs.
+ *     bulk surface - the hook returns only what each surface needs.
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -238,7 +238,7 @@ export function useStageTransitions({
           return false
         }
         // Surface a single-entry undo unless the move is into a terminal
-        // state we shouldn't trivially undo (Joined). Reject is undoable —
+        // state we shouldn't trivially undo (Joined). Reject is undoable -
         // explicit user-feedback ask for reversal of accidental rejects.
         const undoable = toStage !== 'Joined'
         const entries: UndoEntry[] = undoable
@@ -479,7 +479,7 @@ export function useStageTransitions({
             open: true,
             title: `Confirm ${candidateName}'s hire?`,
             body:
-              `Marks ${candidateName} as Joined for ${role.title}. Joined is a terminal state — you can't move them back through this menu after this.`,
+              `Marks ${candidateName} as Joined for ${role.title}. Joined is a terminal state - you can't move them back through this menu after this.`,
             variant: 'default',
             confirmLabel: 'Confirm hire',
             onConfirm: () => {

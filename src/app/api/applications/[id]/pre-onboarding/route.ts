@@ -15,7 +15,7 @@ export const runtime = 'nodejs'
  *
  * Sequential two-party: hiring-manager approves first (sets ctcConfirmed,
  * joiningDateConfirmed, locationConfirmed, positionConfirmed, optional
- * notes), then HR-Admin approves (no field edits required — the act of
+ * notes), then HR-Admin approves (no field edits required - the act of
  * approving is the change). Either party may reject; rejection captures
  * a reason and flips status to Rejected.
  *
@@ -25,7 +25,7 @@ export const runtime = 'nodejs'
  *   { action: 'hiring-manager-approve', notes? }
  *   { action: 'hr-approve', notes? }
  *   { action: 'reject', rejectionReason, rejectedBy: 'hiring-manager' | 'hr' }
- *   { action: 'reset' }  — Admin-only, returns the application to 'Not Started'
+ *   { action: 'reset' }  - Admin-only, returns the application to 'Not Started'
  */
 export async function POST(
   request: Request,

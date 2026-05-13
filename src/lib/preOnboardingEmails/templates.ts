@@ -1,5 +1,5 @@
 /*
- * Inlined template strings — preferred over fs.readFile at runtime because
+ * Inlined template strings - preferred over fs.readFile at runtime because
  * Next 14 serverless functions don't always carry the .md files into the
  * output unless we add them to outputFileTracingIncludes. Inlining sidesteps
  * the whole tracing question. The string content matches the Shruti-supplied

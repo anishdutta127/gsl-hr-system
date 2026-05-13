@@ -43,7 +43,7 @@ describe('canTransition – same-stage guard', () => {
 
   it('does not mistakenly trigger same-stage when moving to the matching name in a different role', () => {
     // Even with the same stage label, source and target are within the same
-    // role here — this is the only legitimate "same stage" guard. The test
+    // role here - this is the only legitimate "same stage" guard. The test
     // is here to lock in the behaviour: targetStage equal to currentStage
     // is rejected regardless of context (the caller has already chosen
     // role + applicationId).
