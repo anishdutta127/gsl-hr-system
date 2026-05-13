@@ -125,3 +125,16 @@ The end-to-end perceived latency is dominated by:
 | 21 | Initial load: confirm no N+1 — current code reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each, then in-memory joins. Looks fine. | (already perf-clean) |
 
 This audit is the bridge into Step 19 — it does not change any code.
+
+---
+
+## 8. Step 21 — Kanban perf findings
+
+Walked the obvious surfaces; no actionable slowness:
+
+- **Filter clicks (`KanbanFilters` All / Stale / My adds / etc.)** — fully client-side. `Kanban.tsx:119` runs `applyFilters` inside `useMemo([merged, filters, currentUserEmail])`. No fetch. The URL `replace` on every change is a tiny no-op for the browser. Already fast.
+- **Kanban initial load** — Server Component reads `loadApplications`, `loadRoles`, `loadInterviews`, `loadOffers` once each (one fs.readFile per JSON), then in-memory join. No N+1. The cost scales with total candidate count, which is ~hundreds today.
+- **Candidate list search** — form-submit (`<form>` → URL `?q=...` → server re-renders). No `onChange` round-trips; debounce is unnecessary because the user explicitly hits Apply.
+- **Side panel** — server renders the candidate snapshot once; no inputs that fire on every keystroke today.
+
+No commits filed for Step 21. The findings stand as a snapshot — promote any of these to active work the first time HR reports concrete slowness.
