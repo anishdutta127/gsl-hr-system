@@ -429,5 +429,26 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "895397dd-52ca-4d51-bc26-99a08c69235c",
+    "queuedAt": "2026-05-13T11:26:48.339Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "b3d7b1ef-d9bc-4b10-aae3-f06cd90557af",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T05:23:45.890Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-13T11:26:48.339Z"
+      },
+      "notes": "Moved to STEM Trainer. Notes: Better fit"
+    },
+    "retryCount": 0
   }
 ]
