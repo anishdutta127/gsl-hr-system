@@ -453,5 +453,35 @@
       "notes": "Moved to STEM Trainer. Notes: Better fit"
     },
     "retryCount": 0
+  },
+  {
+    "id": "21af2b04-4b24-440b-b104-f5855eafb82f",
+    "queuedAt": "2026-05-13T06:56:18.503Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "13aec265-6dac-45e6-8ddd-832ef16119a7",
+      "candidateId": "40c12901-d5dc-4843-a291-0c3827538e53",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-13T06:56:17.621Z",
+      "createdAt": "2026-05-13T06:56:17.621Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T06:56:17.621Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "40c12901-d5dc-4843-a291-0c3827538e53",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager. Notes: Better fit"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
