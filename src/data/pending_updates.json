@@ -867,5 +867,39 @@
       "createdAt": "2026-05-13T02:57:35.249Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "9f33c6a8-89f2-443c-aa87-3c87840a1b78",
+    "queuedAt": "2026-05-13T03:06:23.348Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
+      "name": "Mukund Wamane",
+      "email": "wamanemukund@gmail.com",
+      "phone": "+918459049127",
+      "source": "Application",
+      "notes": "I have good edutech sales experience pl give me opportunity.",
+      "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf",
+      "createdAt": "2026-05-13T03:06:22.036Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-13T03:06:22.036Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Mukund Wamane",
+            "email": "wamanemukund@gmail.com",
+            "source": "Application",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
