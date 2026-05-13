@@ -370,7 +370,9 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
           )}
 
           {employee.status === 'Active' && canEdit ? (
-            <ExitInitiator employeeId={employee.id} />
+            <div id="exit" className="scroll-mt-20">
+              <ExitInitiator employeeId={employee.id} />
+            </div>
           ) : null}
 
           <div className="rounded-lg border border-line bg-card p-5">
