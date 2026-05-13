@@ -6,6 +6,7 @@ import {
   loadRoles,
   loadInterviews,
   loadOffers,
+  loadUsers,
 } from '@/lib/data'
 import { requireRoles } from '@/lib/guards'
 import { formatDate, formatRelative } from '@/lib/format'
@@ -19,6 +20,13 @@ import { StagePill } from '@/components/StagePill'
 import { PipelineActions } from '@/components/PipelineActions'
 import { canAcceptNewCandidates, isPipelineReadOnly } from '@/lib/roleStatus'
 import { ApplicationStageActions } from './ApplicationStageActions'
+import { HiringManagerControls } from './HiringManagerControls'
+import {
+  evaluateGate,
+  isFeedbackRequiredStage,
+  roundLabelForStage,
+} from '@/lib/feedbackGate'
+import { buildFeedbackRequestMailto } from '@/lib/feedbackRequestMailto'
 
 export const dynamic = 'force-dynamic'
 
@@ -46,6 +54,11 @@ export default async function CandidateDetailPage({
 
   const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
   const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
+  const users = loadUsers()
+  const usersById = new Map(users.map((u) => [u.id, u] as const))
+  const activeStaffOptions = users
+    .filter((u) => u.active)
+    .map((u) => ({ id: u.id, name: u.name, role: u.role }))
 
   const canManagePipeline = session.role === 'Admin' || session.role === 'HR'
   const memberships = apps.map((a) => ({
@@ -334,6 +347,51 @@ export default async function CandidateDetailPage({
                       />
                     </div>
                   )}
+                  {!terminal && role && (() => {
+                    const hmId = app.hiringManagerId ?? null
+                    const hm = hmId ? usersById.get(hmId) : null
+                    const expectedRound = roundLabelForStage(app.currentStage)
+                    const gateFires = isFeedbackRequiredStage(app)
+                    const currentIdx = role.pipelineStages.indexOf(String(app.currentStage))
+                    const nextStage =
+                      currentIdx >= 0 && currentIdx < role.pipelineStages.length - 1
+                        ? String(role.pipelineStages[currentIdx + 1])
+                        : null
+                    const gate = gateFires && nextStage
+                      ? evaluateGate(app, nextStage)
+                      : { cleared: true }
+                    const mailto = hm?.email
+                      ? buildFeedbackRequestMailto({
+                          toEmail: hm.email,
+                          toName: hm.name,
+                          candidateName: candidate.name,
+                          candidateId: candidate.id,
+                          roleTitle: role.title,
+                          stage: String(app.currentStage),
+                          recruiterEmail: session.email,
+                          roundLabel: expectedRound,
+                        })
+                      : '#'
+                    return (
+                      <HiringManagerControls
+                        applicationId={app.id}
+                        roleTitle={role.title}
+                        candidateName={candidate.name}
+                        currentStage={String(app.currentStage)}
+                        expectedRound={expectedRound}
+                        hiringManagerId={hmId}
+                        hiringManagerName={hm?.name ?? null}
+                        feedback={app.interviewFeedback ?? []}
+                        gateFires={gateFires}
+                        gateCleared={gate.cleared}
+                        hmOptions={activeStaffOptions}
+                        sessionRole={session.role}
+                        sessionUserId={session.sub}
+                        feedbackRequestMailto={mailto}
+                        overrideTargetStage={nextStage}
+                      />
+                    )
+                  })()}
                 </li>
               )
             })}

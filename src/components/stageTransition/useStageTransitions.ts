@@ -161,6 +161,7 @@ export function useStageTransitions({
       pending: PendingTransition,
       candidateName: string,
       successPrefix: string,
+      overrideContext?: { override: true; overrideReason: string },
     ): Promise<boolean> => {
       const { applicationId, fromStage, toStage } = pending
       markBusy([applicationId], true)
@@ -173,11 +174,26 @@ export function useStageTransitions({
             targetStage: toStage,
             rejectionReason: pending.rejectionReason,
             rejectionNotes: pending.rejectionNotes,
+            ...(overrideContext ?? {}),
           }),
         })
         if (!res.ok) {
-          const b = (await res.json().catch(() => ({}))) as { message?: string }
+          const b = (await res.json().catch(() => ({}))) as {
+            message?: string
+            gate?: 'no-hiring-manager-assigned' | 'feedback-not-submitted'
+            promptHint?: string
+          }
           revertOptimistic(applicationId, fromStage)
+          if (res.status === 409 && b.gate) {
+            // Surface a friendly explanation that hands the user back to the
+            // Hiring Manager Controls block. Admin override is offered via
+            // a confirm-with-text-input dialog separately.
+            setError(
+              b.message ??
+                'Feedback required before moving this candidate forward. Submit feedback first, or ask Admin to override.',
+            )
+            return false
+          }
           setError(b.message ?? 'We could not save that. Try again, or WhatsApp Anish.')
           return false
         }

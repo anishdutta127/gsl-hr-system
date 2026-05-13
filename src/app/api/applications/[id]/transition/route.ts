@@ -10,6 +10,7 @@ import {
   type RejectionReason,
 } from '@/lib/stageTransition'
 import { deliverEmail } from '@/lib/mail'
+import { evaluateGate } from '@/lib/feedbackGate'
 
 export const runtime = 'nodejs'
 
@@ -27,6 +28,8 @@ export async function POST(
     notes?: unknown
     rejectionReason?: unknown
     rejectionNotes?: unknown
+    override?: unknown
+    overrideReason?: unknown
   }
   try {
     body = await request.json()
@@ -62,6 +65,42 @@ export async function POST(
   const { valid, reason } = canTransition(role, application.currentStage, targetStage)
   if (!valid) {
     return NextResponse.json({ message: reason ?? 'Invalid transition.' }, { status: 400 })
+  }
+
+  // Gate 3: hiring-manager feedback gate. Server-side hard gate. The UI
+  // also prompts via the same evaluation, but a curl POST cannot bypass.
+  // Admin can override with an explicit reason; the override is audit-logged
+  // as a distinct application.update op so it stands out on the timeline.
+  const gate = evaluateGate(application, targetStage)
+  const overrideRequested = body.override === true
+  const overrideReason =
+    typeof body.overrideReason === 'string' ? body.overrideReason.trim() : ''
+  if (!gate.cleared) {
+    if (!overrideRequested) {
+      return NextResponse.json(
+        {
+          message:
+            gate.reason === 'no-hiring-manager-assigned'
+              ? 'Assign a hiring manager before moving this candidate forward.'
+              : 'Hiring manager feedback is required before moving this candidate forward.',
+          gate: gate.reason,
+          promptHint: gate.promptHint,
+        },
+        { status: 409 },
+      )
+    }
+    if (session.role !== 'Admin') {
+      return NextResponse.json(
+        { message: 'Only Admin can override the feedback gate.' },
+        { status: 403 },
+      )
+    }
+    if (!overrideReason) {
+      return NextResponse.json(
+        { message: 'Override reason is required.' },
+        { status: 400 },
+      )
+    }
   }
 
   // Reject capture: required when target is Rejected.
@@ -103,6 +142,26 @@ export async function POST(
   }
 
   try {
+    // When the gate was overridden, log that fact FIRST so the audit
+    // timeline shows "override → transition" in order; both write to the
+    // same application's auditLog via the queue applier.
+    if (!gate.cleared && overrideRequested) {
+      await enqueueUpdate({
+        queuedBy: session.email,
+        entity: 'application',
+        operation: 'update',
+        payload: {
+          id: application.id,
+          operation: 'feedback-override',
+          before: {
+            currentStage: application.currentStage,
+            hiringManagerId: application.hiringManagerId ?? null,
+          },
+          after: { targetStage, gateReason: gate.reason },
+          notes: `Admin override: ${overrideReason}`,
+        },
+      })
+    }
     await enqueueUpdate({
       queuedBy: session.email,
       entity: 'application',

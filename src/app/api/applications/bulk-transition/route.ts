@@ -16,6 +16,7 @@ import {
 } from '@/lib/stageTransition'
 import { deliverEmail } from '@/lib/mail'
 import type { Role } from '@/lib/types'
+import { evaluateGate } from '@/lib/feedbackGate'
 
 export const runtime = 'nodejs'
 
@@ -201,6 +202,26 @@ export async function POST(request: Request) {
         toStage,
         status: 'skipped',
         message: valid.reason ?? 'Invalid transition for this application.',
+      })
+      continue
+    }
+
+    // Gate 3: feedback gate. Bulk operations never override — Admin must
+    // open the candidate detail page and approve each manually. Skip in
+    // the result details so HR knows which ones need attention.
+    const gate = evaluateGate(app, toStage)
+    if (!gate.cleared) {
+      result.skipped++
+      result.details.push({
+        applicationId: id,
+        candidateName: findCandidateById(app.candidateId)?.name,
+        fromStage: app.currentStage as string,
+        toStage,
+        status: 'skipped',
+        message:
+          gate.reason === 'no-hiring-manager-assigned'
+            ? 'Assign a hiring manager first.'
+            : 'Hiring manager feedback required.',
       })
       continue
     }
