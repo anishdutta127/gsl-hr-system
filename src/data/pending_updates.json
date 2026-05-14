@@ -18,5 +18,39 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "5046a485-150d-4a98-a803-9a4e13bf4ed2",
+    "queuedAt": "2026-05-14T00:48:44.862Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "10b87136-55eb-477b-bd00-c5f14687ee51",
+      "name": "Ankita Singh",
+      "email": "ankita_bansal27@yahoo.com",
+      "phone": "8368509569",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf",
+      "createdAt": "2026-05-14T00:48:43.933Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T00:48:43.933Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ankita Singh",
+            "email": "ankita_bansal27@yahoo.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
