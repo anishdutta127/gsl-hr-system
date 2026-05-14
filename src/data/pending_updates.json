@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "f8edfe28-ac58-449b-a30a-23541504bf59",
+    "queuedAt": "2026-05-14T17:21:03.632Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "62fb3535-d548-4a95-8610-f9f6528402a2",
+      "name": "Isha Menon",
+      "email": "ishadave.26@gmail.com",
+      "phone": "+919762943101",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/62fb3535-d548-4a95-8610-f9f6528402a2.pdf",
+      "createdAt": "2026-05-14T17:21:01.833Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T17:21:01.833Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Isha Menon",
+            "email": "ishadave.26@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/62fb3535-d548-4a95-8610-f9f6528402a2.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
