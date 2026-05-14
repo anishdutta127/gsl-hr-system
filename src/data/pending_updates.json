@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "6bce4d0f-840c-4f7f-9e73-99ce97c4d697",
+    "queuedAt": "2026-05-14T09:00:03.532Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "81e33ac5-0b06-4f9b-b6e4-01d19b6eaf72",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "AssessmentSent",
+        "stageEnteredAt": "2026-05-13T16:39:22.372Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-14T09:00:03.530Z"
+      }
+    },
+    "retryCount": 0
+  }
+]
