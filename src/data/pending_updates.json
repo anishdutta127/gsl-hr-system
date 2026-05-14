@@ -298,5 +298,25 @@
       "notes": "Rejected: Other. Duplicate profile"
     },
     "retryCount": 0
+  },
+  {
+    "id": "72e5d084-ac54-465a-8b5e-176dfb1dacb5",
+    "queuedAt": "2026-05-14T05:58:43.709Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "bface57b-f0ff-45d1-92de-37e1b170ba7e",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-12T17:50:37.403Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-14T05:58:43.708Z"
+      }
+    },
+    "retryCount": 0
   }
 ]
