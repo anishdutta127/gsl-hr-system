@@ -1280,8 +1280,8 @@
     "id": "b43c69d6-226a-40f1-b834-23bfa69010ff",
     "candidateId": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-13T03:06:22.036Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-14T06:57:24.091Z",
     "createdAt": "2026-05-13T03:06:22.036Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1294,8 +1294,26 @@
           "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-14T08:49:42.937Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-13T03:06:22.036Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-14T06:57:24.091Z",
+          "rejectionReason": "Other",
+          "rejectionNotes": "Poor communication"
+        },
+        "notes": "Rejected: Other. Poor communication"
       }
-    ]
+    ],
+    "rejectionReason": "Other",
+    "rejectionNotes": "Poor communication"
   },
   {
     "id": "59540083-ffcf-4819-9433-c60a47d226bf",
@@ -1605,8 +1623,8 @@
     "id": "36df33cc-cf64-4777-a1ff-ec60e724c922",
     "candidateId": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-13T10:37:30.527Z",
+    "currentStage": "NotInterested",
+    "stageEnteredAt": "2026-05-14T06:56:52.996Z",
     "createdAt": "2026-05-13T10:37:30.527Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -1620,6 +1638,19 @@
           "currentStage": "Sourced"
         },
         "notes": "Moved from Senior Academics Manager."
+      },
+      {
+        "timestamp": "2026-05-14T08:49:42.935Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-13T10:37:30.527Z"
+        },
+        "after": {
+          "currentStage": "NotInterested",
+          "stageEnteredAt": "2026-05-14T06:56:52.996Z"
+        }
       }
     ]
   },
@@ -1795,8 +1826,8 @@
     "id": "7cc3d1cd-eca5-4db9-af8e-9bd2bbeb04a8",
     "candidateId": "cfc3f93c-a546-4d61-b085-7550a2b66fe6",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-14T04:42:26.166Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-14T07:42:16.257Z",
     "createdAt": "2026-05-14T04:42:26.166Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1809,7 +1840,25 @@
           "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-14T08:49:42.938Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-14T04:42:26.166Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-14T07:42:16.257Z",
+          "rejectionReason": "Other",
+          "rejectionNotes": "Poor communication"
+        },
+        "notes": "Rejected: Other. Poor communication"
       }
-    ]
+    ],
+    "rejectionReason": "Other",
+    "rejectionNotes": "Poor communication"
   }
 ]
