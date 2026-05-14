@@ -41,5 +41,28 @@
       "notes": "Rejected: Other. Poor communication"
     },
     "retryCount": 0
+  },
+  {
+    "id": "dbe380ae-e898-4d71-a83d-e6aa116875ae",
+    "queuedAt": "2026-05-14T07:42:16.257Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "7cc3d1cd-eca5-4db9-af8e-9bd2bbeb04a8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-14T04:42:26.166Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-14T07:42:16.257Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Poor communication"
+      },
+      "notes": "Rejected: Other. Poor communication"
+    },
+    "retryCount": 0
   }
 ]
