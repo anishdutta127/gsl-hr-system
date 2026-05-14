@@ -239,5 +239,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "69173ed7-0038-40e6-ae11-77f7db3aa4da",
+    "queuedAt": "2026-05-14T04:42:28.671Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "920e5f72-e82c-4d70-b255-254340c0f899",
+      "to": "vaishnavlokeshkumar673@gmail.com",
+      "subject": "We received your application for Sales Executive at GSL",
+      "body": "Hi Lokesh,\n\nThanks for applying for Sales Executive at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODczMzc0OCwiZXhwaXJlc0F0IjoxNzc4NzM0NjQ4LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiY2ZjM2Y5M2MtYTU0Ni00ZDYxLWIwODUtNzU1MGEyYjY2ZmU2IiwiYXBwbGljYXRpb25JZCI6IjdjYzNkMWNkLWVjYTUtNGRiOS1hZjhlLTliZDJiYmViMDRhOCIsIm5vbmNlIjoiOTJmNTNmMGMtODM4Yi00ZTc1LTk2ZDItYTMwZDUzY2QyYzNmIn19.XFhg44NzO3QHD6SsXdRHA-RceBUYh_PW18bWLy7miU8\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+      "createdAt": "2026-05-14T04:42:28.671Z"
+    },
+    "retryCount": 0
   }
 ]
