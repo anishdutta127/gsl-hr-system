@@ -5922,5 +5922,385 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-13T13:38:12.584Z"
+  },
+  {
+    "id": "a5a7e40e-7969-43a6-a9a8-5610a7fe0546",
+    "queuedAt": "2026-05-13T16:39:22.374Z",
+    "queuedBy": "ameet.z@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "81e33ac5-0b06-4f9b-b6e4-01d19b6eaf72",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-13T11:22:26.600Z"
+      },
+      "after": {
+        "currentStage": "AssessmentSent",
+        "stageEnteredAt": "2026-05-13T16:39:22.372Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.462Z"
+  },
+  {
+    "id": "5046a485-150d-4a98-a803-9a4e13bf4ed2",
+    "queuedAt": "2026-05-14T00:48:44.862Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "10b87136-55eb-477b-bd00-c5f14687ee51",
+      "name": "Ankita Singh",
+      "email": "ankita_bansal27@yahoo.com",
+      "phone": "8368509569",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf",
+      "createdAt": "2026-05-14T00:48:43.933Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T00:48:43.933Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ankita Singh",
+            "email": "ankita_bansal27@yahoo.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.485Z"
+  },
+  {
+    "id": "b16865bc-ced2-4c06-a4c4-783c20e825c7",
+    "queuedAt": "2026-05-14T00:48:45.593Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "4147efbe-980f-4171-8de1-a4254da044ff",
+      "candidateId": "10b87136-55eb-477b-bd00-c5f14687ee51",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-14T00:48:43.933Z",
+      "createdAt": "2026-05-14T00:48:43.933Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T00:48:43.933Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "10b87136-55eb-477b-bd00-c5f14687ee51",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.487Z"
+  },
+  {
+    "id": "a3ae3782-28e8-4ab6-885e-728fb863669b",
+    "queuedAt": "2026-05-14T00:48:46.240Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "0ae1342c-368c-488e-96cc-95246bdea89c",
+      "to": "ankita_bansal27@yahoo.com",
+      "subject": "We received your application for STEM Trainer at GSL",
+      "body": "Hi Ankita,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODcxOTcyNiwiZXhwaXJlc0F0IjoxNzc4NzIwNjI2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMTBiODcxMzYtNTVlYi00NzdiLWJkMDAtYzVmMTQ2ODdlZTUxIiwiYXBwbGljYXRpb25JZCI6IjQxNDdlZmJlLTk4MGYtNDE3MS04ZGUxLWE0MjU0ZGEwNDRmZiIsIm5vbmNlIjoiNTk4YTZhZjEtM2UxZC00ZGM4LWIxZDYtMjRmNjYwMzg2Y2JjIn19.E4PKZS2-qcBmOl7TzWg7bK9NaYRDzBX2yHQOyUndyg0\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 10b87136-55eb-477b-bd00-c5f14687ee51",
+      "createdAt": "2026-05-14T00:48:46.240Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.487Z"
+  },
+  {
+    "id": "8025be08-2d61-46ff-ade8-fa1c2c188c45",
+    "queuedAt": "2026-05-14T02:30:58.019Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "7202ca0a-083c-416d-883d-09ce19116b4b",
+      "name": "Satyanshu Dwivedi",
+      "email": "satyarya9044@gmail.com",
+      "phone": "+918960048054",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf",
+      "createdAt": "2026-05-14T02:30:57.026Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T02:30:57.026Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Satyanshu Dwivedi",
+            "email": "satyarya9044@gmail.com",
+            "source": "Application",
+            "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+            "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.507Z"
+  },
+  {
+    "id": "d4143d1b-4f32-4da5-a2db-c3ea653bb028",
+    "queuedAt": "2026-05-14T02:30:58.752Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "71c73454-be84-413c-92bc-c4a891194276",
+      "candidateId": "7202ca0a-083c-416d-883d-09ce19116b4b",
+      "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-14T02:30:57.026Z",
+      "createdAt": "2026-05-14T02:30:57.026Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T02:30:57.026Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "7202ca0a-083c-416d-883d-09ce19116b4b",
+            "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.509Z"
+  },
+  {
+    "id": "e6d4749b-e6cf-403f-9b51-b044497bf4ff",
+    "queuedAt": "2026-05-14T02:30:59.485Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "103d8d5c-53b7-4915-b440-1d759bd57905",
+      "to": "satyarya9044@gmail.com",
+      "subject": "We received your application for SME Arduino at GSL",
+      "body": "Hi Satyanshu,\n\nThanks for applying for SME Arduino at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODcyNTg1OSwiZXhwaXJlc0F0IjoxNzc4NzI2NzU5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNzIwMmNhMGEtMDgzYy00MTZkLTg4M2QtMDljZTE5MTE2YjRiIiwiYXBwbGljYXRpb25JZCI6IjcxYzczNDU0LWJlODQtNDEzYy05MmJjLWM0YTg5MTE5NDI3NiIsIm5vbmNlIjoiZWIzNTdhYzQtMTdhOS00MjI2LTgwZDQtY2ZmOTEzZWE0OTlhIn19.A3QJ7Y5f_Qio7JLqkySK6T7O4u7juFsNmkjzlAohZN4\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 7202ca0a-083c-416d-883d-09ce19116b4b",
+      "createdAt": "2026-05-14T02:30:59.485Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.510Z"
+  },
+  {
+    "id": "603cc274-493a-41ba-a0ba-18078a243254",
+    "queuedAt": "2026-05-14T04:42:27.157Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+      "name": "Lokesh kumar Vaishnav",
+      "email": "vaishnavlokeshkumar673@gmail.com",
+      "phone": "9079184055",
+      "source": "Application",
+      "notes": "I consider myself well-suited for this position because I have 9 years of experience in this field. I previously worked with Educate Girls, an organization dedicated to promoting girls’ education. During my time there, I developed strong skills in enrolling children from villages into schools and engaging with communities through conversations and meetings.\r\n\r\nI also worked as a Field Coordinator for 4 years, where my main responsibility was to go door-to-door in villages, identify children who were deprived of education, and enroll them in schools. Along with this, I provided teaching support to students of classes 3, 4, and 5. This experience gave me a strong foundation in both fieldwork and teaching, and since this organization performs similar work, I believe my previous experience aligns perfectly with the role.\r\n\r\nAfter that, I worked as a Data Entry Operator for one year in the same organization, and later as an Impact Associate for another year. Currently, I am working as a District Impact Specialist in the same organization. In this role, I have gained experience in fieldwork, data analysis, communication, team leadership, and monitoring activities.\r\n\r\nMy current responsibilities include data analysis, monitoring, and preparing annual plans. I also provide regular feedback on field activities to ensure continuous improvement. Additionally, I am involved in developing and supporting district-level plans and impact function plans, as well as conducting regular reviews based on defined indicators.\r\n\r\nBecause of my extensive experience in education-related fieldwork, data management, monitoring, and team coordination, I am confident that I can perform this role effectively and contribute significantly to the organization’s goals.",
+      "resumeFilePath": "data/resumes/applications/2026/05/cfc3f93c-a546-4d61-b085-7550a2b66fe6.pdf",
+      "createdAt": "2026-05-14T04:42:26.166Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T04:42:26.166Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Lokesh kumar Vaishnav",
+            "email": "vaishnavlokeshkumar673@gmail.com",
+            "source": "Application",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "resumeFilePath": "data/resumes/applications/2026/05/cfc3f93c-a546-4d61-b085-7550a2b66fe6.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.528Z"
+  },
+  {
+    "id": "f1f73970-b22d-4411-8e56-c23d19ad75b5",
+    "queuedAt": "2026-05-14T04:42:27.873Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "7cc3d1cd-eca5-4db9-af8e-9bd2bbeb04a8",
+      "candidateId": "cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-14T04:42:26.166Z",
+      "createdAt": "2026-05-14T04:42:26.166Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T04:42:26.166Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.530Z"
+  },
+  {
+    "id": "69173ed7-0038-40e6-ae11-77f7db3aa4da",
+    "queuedAt": "2026-05-14T04:42:28.671Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "920e5f72-e82c-4d70-b255-254340c0f899",
+      "to": "vaishnavlokeshkumar673@gmail.com",
+      "subject": "We received your application for Sales Executive at GSL",
+      "body": "Hi Lokesh,\n\nThanks for applying for Sales Executive at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODczMzc0OCwiZXhwaXJlc0F0IjoxNzc4NzM0NjQ4LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiY2ZjM2Y5M2MtYTU0Ni00ZDYxLWIwODUtNzU1MGEyYjY2ZmU2IiwiYXBwbGljYXRpb25JZCI6IjdjYzNkMWNkLWVjYTUtNGRiOS1hZjhlLTliZDJiYmViMDRhOCIsIm5vbmNlIjoiOTJmNTNmMGMtODM4Yi00ZTc1LTk2ZDItYTMwZDUzY2QyYzNmIn19.XFhg44NzO3QHD6SsXdRHA-RceBUYh_PW18bWLy7miU8\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+      "createdAt": "2026-05-14T04:42:28.671Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.530Z"
+  },
+  {
+    "id": "7d49cd17-30c1-4fe9-a41a-3e3e72fe4337",
+    "queuedAt": "2026-05-14T05:46:44.150Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "f4120b4d-0aa0-46e3-bf9d-7b8d0b3e9807",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-07T07:31:18.176Z"
+      },
+      "after": {
+        "currentStage": "NotInterested",
+        "stageEnteredAt": "2026-05-14T05:46:44.148Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.532Z"
+  },
+  {
+    "id": "dd002b80-f404-4ca9-b45b-47b3f0e0bbbb",
+    "queuedAt": "2026-05-14T05:51:59.556Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "c9649f49-5ef3-43c2-bf61-2a9b09b538a9",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T10:39:57.458Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-14T05:51:59.556Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Duplicate profile"
+      },
+      "notes": "Rejected: Other. Duplicate profile"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.534Z"
+  },
+  {
+    "id": "72e5d084-ac54-465a-8b5e-176dfb1dacb5",
+    "queuedAt": "2026-05-14T05:58:43.709Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "bface57b-f0ff-45d1-92de-37e1b170ba7e",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-12T17:50:37.403Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-14T05:58:43.708Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.536Z"
+  },
+  {
+    "id": "b7a7d8f7-517f-4b56-865c-f4638a730bbb",
+    "queuedAt": "2026-05-14T06:05:59.723Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "ed7f6cfb-6bcd-416c-b0f2-28d63940fb39",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T06:46:25.042Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-14T06:05:59.723Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Duplicate candidate"
+      },
+      "notes": "Rejected: Other. Duplicate candidate"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.537Z"
+  },
+  {
+    "id": "ea2bfac6-d7a7-407a-b905-5402fcc9e293",
+    "queuedAt": "2026-05-14T06:11:51.499Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "0fe8becd-f9d6-49db-82b9-fd12925db368",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T06:39:35.627Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-14T06:11:51.499Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-14T06:12:53.539Z"
   }
 ]

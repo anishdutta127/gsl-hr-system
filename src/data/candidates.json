@@ -7484,5 +7484,83 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "10b87136-55eb-477b-bd00-c5f14687ee51",
+    "name": "Ankita Singh",
+    "email": "ankita_bansal27@yahoo.com",
+    "phone": "8368509569",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf",
+    "createdAt": "2026-05-14T00:48:43.933Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-14T00:48:43.933Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ankita Singh",
+          "email": "ankita_bansal27@yahoo.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/10b87136-55eb-477b-bd00-c5f14687ee51.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "7202ca0a-083c-416d-883d-09ce19116b4b",
+    "name": "Satyanshu Dwivedi",
+    "email": "satyarya9044@gmail.com",
+    "phone": "+918960048054",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf",
+    "createdAt": "2026-05-14T02:30:57.026Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-14T02:30:57.026Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Satyanshu Dwivedi",
+          "email": "satyarya9044@gmail.com",
+          "source": "Application",
+          "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+          "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "cfc3f93c-a546-4d61-b085-7550a2b66fe6",
+    "name": "Lokesh kumar Vaishnav",
+    "email": "vaishnavlokeshkumar673@gmail.com",
+    "phone": "9079184055",
+    "source": "Application",
+    "notes": "I consider myself well-suited for this position because I have 9 years of experience in this field. I previously worked with Educate Girls, an organization dedicated to promoting girls’ education. During my time there, I developed strong skills in enrolling children from villages into schools and engaging with communities through conversations and meetings.\r\n\r\nI also worked as a Field Coordinator for 4 years, where my main responsibility was to go door-to-door in villages, identify children who were deprived of education, and enroll them in schools. Along with this, I provided teaching support to students of classes 3, 4, and 5. This experience gave me a strong foundation in both fieldwork and teaching, and since this organization performs similar work, I believe my previous experience aligns perfectly with the role.\r\n\r\nAfter that, I worked as a Data Entry Operator for one year in the same organization, and later as an Impact Associate for another year. Currently, I am working as a District Impact Specialist in the same organization. In this role, I have gained experience in fieldwork, data analysis, communication, team leadership, and monitoring activities.\r\n\r\nMy current responsibilities include data analysis, monitoring, and preparing annual plans. I also provide regular feedback on field activities to ensure continuous improvement. Additionally, I am involved in developing and supporting district-level plans and impact function plans, as well as conducting regular reviews based on defined indicators.\r\n\r\nBecause of my extensive experience in education-related fieldwork, data management, monitoring, and team coordination, I am confident that I can perform this role effectively and contribute significantly to the organization’s goals.",
+    "resumeFilePath": "data/resumes/applications/2026/05/cfc3f93c-a546-4d61-b085-7550a2b66fe6.pdf",
+    "createdAt": "2026-05-14T04:42:26.166Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-14T04:42:26.166Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Lokesh kumar Vaishnav",
+          "email": "vaishnavlokeshkumar673@gmail.com",
+          "source": "Application",
+          "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+          "resumeFilePath": "data/resumes/applications/2026/05/cfc3f93c-a546-4d61-b085-7550a2b66fe6.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
