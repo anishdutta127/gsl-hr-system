@@ -97,5 +97,39 @@
       "createdAt": "2026-05-14T00:48:46.240Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "8025be08-2d61-46ff-ade8-fa1c2c188c45",
+    "queuedAt": "2026-05-14T02:30:58.019Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "7202ca0a-083c-416d-883d-09ce19116b4b",
+      "name": "Satyanshu Dwivedi",
+      "email": "satyarya9044@gmail.com",
+      "phone": "+918960048054",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf",
+      "createdAt": "2026-05-14T02:30:57.026Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T02:30:57.026Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Satyanshu Dwivedi",
+            "email": "satyarya9044@gmail.com",
+            "source": "Application",
+            "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+            "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
