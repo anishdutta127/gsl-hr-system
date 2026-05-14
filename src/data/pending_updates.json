@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "82bda612-bcf0-44fb-a16b-babfc138c495",
+    "queuedAt": "2026-05-14T11:09:01.639Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0f8b6a48-9021-4113-aba9-331fde00422c",
+      "name": "Nanu sharma",
+      "email": "nanusharma1812@gmail.com",
+      "phone": "7636880651",
+      "source": "Application",
+      "notes": "Dear sir/Ma'am\r\nI'm interested in joining as a sales executive position i have been in to hospitality industry nearly 10+years",
+      "resumeFilePath": "data/resumes/applications/2026/05/0f8b6a48-9021-4113-aba9-331fde00422c.pdf",
+      "createdAt": "2026-05-14T11:09:00.690Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-14T11:09:00.690Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Nanu sharma",
+            "email": "nanusharma1812@gmail.com",
+            "source": "Application",
+            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+            "resumeFilePath": "data/resumes/applications/2026/05/0f8b6a48-9021-4113-aba9-331fde00422c.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
