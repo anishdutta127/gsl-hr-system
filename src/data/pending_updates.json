@@ -160,5 +160,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "e6d4749b-e6cf-403f-9b51-b044497bf4ff",
+    "queuedAt": "2026-05-14T02:30:59.485Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "103d8d5c-53b7-4915-b440-1d759bd57905",
+      "to": "satyarya9044@gmail.com",
+      "subject": "We received your application for SME Arduino at GSL",
+      "body": "Hi Satyanshu,\n\nThanks for applying for SME Arduino at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODcyNTg1OSwiZXhwaXJlc0F0IjoxNzc4NzI2NzU5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNzIwMmNhMGEtMDgzYy00MTZkLTg4M2QtMDljZTE5MTE2YjRiIiwiYXBwbGljYXRpb25JZCI6IjcxYzczNDU0LWJlODQtNDEzYy05MmJjLWM0YTg5MTE5NDI3NiIsIm5vbmNlIjoiZWIzNTdhYzQtMTdhOS00MjI2LTgwZDQtY2ZmOTEzZWE0OTlhIn19.A3QJ7Y5f_Qio7JLqkySK6T7O4u7juFsNmkjzlAohZN4\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 7202ca0a-083c-416d-883d-09ce19116b4b",
+      "createdAt": "2026-05-14T02:30:59.485Z"
+    },
+    "retryCount": 0
   }
 ]
