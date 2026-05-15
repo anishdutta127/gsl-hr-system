@@ -118,5 +118,35 @@
       "notes": "Moved to STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "4497de3b-7459-4503-8b32-681843f7e2e0",
+    "queuedAt": "2026-05-15T09:04:38.869Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "07cccd70-01a6-4a33-aed9-60757484c1af",
+      "candidateId": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-15T09:04:37.500Z",
+      "createdAt": "2026-05-15T09:04:37.500Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-15T09:04:37.500Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from SME Arduino."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
