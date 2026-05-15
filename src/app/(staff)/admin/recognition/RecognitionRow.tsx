@@ -188,21 +188,26 @@ export function RecognitionRow(props: Props) {
           Nominated by {props.nominatorName} on {rec.nominatedAt.slice(0, 10)}
         </span>
         <div className="flex flex-wrap gap-2">
-          {rec.status === 'Approved' && (
-            <Link
-              href={`/recognition/${rec.id}/card`}
-              className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
-            >
-              View card
-            </Link>
-          )}
-          {rec.status === 'Published' && (
-            <Link
-              href={`/recognition/${rec.id}/card`}
-              className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
-            >
-              View card
-            </Link>
+          {(rec.status === 'Approved' || rec.status === 'Published') && (
+            <>
+              <Link
+                href={`/recognition/${rec.id}/card`}
+                className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+              >
+                View card
+              </Link>
+              <Link
+                href={`/admin/recognition/${rec.id}`}
+                className="inline-flex min-h-[36px] items-center rounded border border-line-strong bg-card px-3 py-1.5 text-sm font-medium text-ink hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+              >
+                Manage public share
+              </Link>
+              {rec.publicShareEnabled && (
+                <span className="inline-flex items-center rounded bg-teal-light px-2 py-1 text-[10px] font-medium text-teal-dark">
+                  Public · {rec.viewCount ?? 0} views
+                </span>
+              )}
+            </>
           )}
           {isNominated && !editing && (
             <>

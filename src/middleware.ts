@@ -27,6 +27,10 @@ const PUBLIC_PATHS = [
 const PUBLIC_PREFIXES = [
   '/careers',
   '/api/public',
+  // Public R&R celebration pages (Phase 4 gate 4). The page itself
+  // checks publicShareEnabled and 404s when the flag is off; middleware
+  // just opens the URL.
+  '/celebrate',
 ]
 
 const CANDIDATE_PUBLIC = [
