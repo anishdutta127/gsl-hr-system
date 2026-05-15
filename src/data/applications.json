@@ -945,8 +945,8 @@
     "id": "1e02f2ae-7fd3-46e0-8491-c95e78e65e8e",
     "candidateId": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
     "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-12T16:01:16.016Z",
+    "currentStage": "Withdrawn",
+    "stageEnteredAt": "2026-05-15T09:04:37.500Z",
     "createdAt": "2026-05-12T16:01:16.016Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -959,6 +959,20 @@
           "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.674Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-12T16:01:16.016Z"
+        },
+        "after": {
+          "currentStage": "Withdrawn",
+          "stageEnteredAt": "2026-05-15T09:04:37.500Z"
+        },
+        "notes": "Moved to STEM Trainer."
       }
     ]
   },
@@ -1251,8 +1265,8 @@
     "id": "f83894d5-b02d-4f74-b765-f089f5ba40eb",
     "candidateId": "ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21",
     "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-12T21:39:57.530Z",
+    "currentStage": "Withdrawn",
+    "stageEnteredAt": "2026-05-15T09:07:29.608Z",
     "createdAt": "2026-05-12T21:39:57.530Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1265,6 +1279,20 @@
           "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.700Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-12T21:39:57.530Z"
+        },
+        "after": {
+          "currentStage": "Withdrawn",
+          "stageEnteredAt": "2026-05-15T09:07:29.608Z"
+        },
+        "notes": "Moved to STEM Trainer."
       }
     ]
   },
@@ -1776,8 +1804,8 @@
     "id": "7fed1f73-f86c-4f20-93f7-82dfa445795a",
     "candidateId": "415a56ca-8342-45ae-aba2-bfff0fb61aa6",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-13T12:40:11.568Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-15T09:22:06.591Z",
     "createdAt": "2026-05-13T12:40:11.568Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1790,8 +1818,24 @@
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.745Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-13T12:40:11.568Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-15T09:22:06.591Z",
+          "rejectionReason": "Better Match Elsewhere"
+        },
+        "notes": "Rejected: Better Match Elsewhere"
       }
-    ]
+    ],
+    "rejectionReason": "Better Match Elsewhere"
   },
   {
     "id": "4147efbe-980f-4171-8de1-a4254da044ff",
@@ -1818,8 +1862,8 @@
     "id": "71c73454-be84-413c-92bc-c4a891194276",
     "candidateId": "7202ca0a-083c-416d-883d-09ce19116b4b",
     "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-14T02:30:57.026Z",
+    "currentStage": "Withdrawn",
+    "stageEnteredAt": "2026-05-15T09:09:13.710Z",
     "createdAt": "2026-05-14T02:30:57.026Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1832,6 +1876,20 @@
           "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.723Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-14T02:30:57.026Z"
+        },
+        "after": {
+          "currentStage": "Withdrawn",
+          "stageEnteredAt": "2026-05-15T09:09:13.710Z"
+        },
+        "notes": "Moved to STEM Trainer."
       }
     ]
   },
@@ -1878,8 +1936,8 @@
     "id": "ce8b3031-88c0-45d4-9e91-3400bc074a0d",
     "candidateId": "0f8b6a48-9021-4113-aba9-331fde00422c",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-14T11:09:00.690Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-15T09:02:08.871Z",
     "createdAt": "2026-05-14T11:09:00.690Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1892,8 +1950,26 @@
           "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.672Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-14T11:09:00.690Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-15T09:02:08.871Z",
+          "rejectionReason": "Other",
+          "rejectionNotes": "Higher experience than required."
+        },
+        "notes": "Rejected: Other. Higher experience than required."
       }
-    ]
+    ],
+    "rejectionReason": "Other",
+    "rejectionNotes": "Higher experience than required."
   },
   {
     "id": "8fe53363-9061-4f28-b200-f0be12ba4e07",
@@ -1920,8 +1996,8 @@
     "id": "f864e04b-e0bf-4b78-92ca-6dac7dcb13be",
     "candidateId": "c227c0de-e246-4c4e-9b6d-7e7014b97fa0",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-15T04:54:47.054Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-15T08:54:46.350Z",
     "createdAt": "2026-05-15T04:54:47.054Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -1934,6 +2010,90 @@
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.669Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-15T04:54:47.054Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-15T08:54:46.350Z",
+          "rejectionReason": "Not Qualified for Role",
+          "rejectionNotes": "More of a STEM profile."
+        },
+        "notes": "Rejected: Not Qualified for Role. More of a STEM profile."
+      }
+    ],
+    "rejectionReason": "Not Qualified for Role",
+    "rejectionNotes": "More of a STEM profile."
+  },
+  {
+    "id": "07cccd70-01a6-4a33-aed9-60757484c1af",
+    "candidateId": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-15T09:04:37.500Z",
+    "createdAt": "2026-05-15T09:04:37.500Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T09:04:37.500Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "application.create",
+        "after": {
+          "candidateId": "4762c892-ea7f-4215-8976-d6a00d3fe65b",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        },
+        "notes": "Moved from SME Arduino."
+      }
+    ]
+  },
+  {
+    "id": "494038b0-f78c-4142-a962-eee9a25fafa3",
+    "candidateId": "ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-15T09:07:29.608Z",
+    "createdAt": "2026-05-15T09:07:29.608Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T09:07:29.608Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "application.create",
+        "after": {
+          "candidateId": "ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        },
+        "notes": "Moved from SME Arduino."
+      }
+    ]
+  },
+  {
+    "id": "8bfcab6f-ecd2-44cb-a528-9236ac43b364",
+    "candidateId": "7202ca0a-083c-416d-883d-09ce19116b4b",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-15T09:09:13.710Z",
+    "createdAt": "2026-05-15T09:09:13.710Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T09:09:13.710Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "application.create",
+        "after": {
+          "candidateId": "7202ca0a-083c-416d-883d-09ce19116b4b",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        },
+        "notes": "Moved from SME Arduino."
       }
     ]
   }

@@ -6974,6 +6974,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/4762c892-ea7f-4215-8976-d6a00d3fe65b.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.684Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: SME Arduino → STEM Trainer."
       }
     ]
   },
@@ -7180,6 +7188,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/ec1d2e2e-a098-46d9-ba7c-d8892c2e9f21.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.709Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: SME Arduino → STEM Trainer."
       }
     ]
   },
@@ -7534,6 +7550,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/7202ca0a-083c-416d-883d-09ce19116b4b.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-15T09:26:00.731Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: SME Arduino → STEM Trainer."
       }
     ]
   },
