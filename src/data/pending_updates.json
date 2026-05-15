@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "0105ca94-b2fd-4f9d-b27e-0657042b2ba4",
+    "queuedAt": "2026-05-15T20:27:50.588Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+      "name": "Piyush Tripathi",
+      "email": "piyushtripathi064@gmail.com",
+      "phone": "7383881937",
+      "source": "Application",
+      "notes": "Sales & Marketing enthusiast with hands-on experience in B2B/B2C sales, business development, and customer engagement. Passionate about growth strategies, digital marketing, and building long-term business relationships.",
+      "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf",
+      "createdAt": "2026-05-15T20:27:47.822Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-15T20:27:47.822Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Piyush Tripathi",
+            "email": "piyushtripathi064@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
