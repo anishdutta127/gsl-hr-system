@@ -45,6 +45,12 @@ const nextConfig = {
       // after a permission check. Adding a brand-new top-level root requires
       // appending here AND to assertInsideHrDocumentsRoot.
       '/api/admin/documents/[id]/download': ['./data/hr-documents/**/*'],
+      // Exit handover uploaded documents (Phase 4 gate 4). Same
+      // single-root traversal-guard pattern. See
+      // src/lib/exitHandover.ts:assertInsideHandoverRoot.
+      '/api/admin/exit-handover/[employeeId]/document/[fileId]': [
+        './data/exit-handovers/**/*',
+      ],
     },
   },
 }
