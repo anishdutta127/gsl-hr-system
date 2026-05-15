@@ -7664,5 +7664,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "dfcd30e5-cc0a-404d-9e60-e3838d14d54a",
+    "name": "Fardeen Ahmad",
+    "email": "fardeen8181@gmail.com",
+    "phone": "+917011217869",
+    "source": "Application",
+    "notes": "Hi Team,\r\n\r\nI recently came across the opportunity for the Senior Academics Manager role and found it extremely aligned with my interest in education innovation and large-scale learning impact. The focus on STEM, Coding, AI, and experiential learning within K–12 systems is particularly exciting, especially in the context of NEP 2020 and future-ready education.\r\n\r\nWith over 5 years of experience in education program management, stakeholder engagement, teacher enablement, and implementation within government school ecosystems, I would be keen to explore how my background could contribute to this role.\r\n\r\nI would love to learn more about the position and the team.\r\n\r\nBest regards,\r\nFardeen Ahmad",
+    "resumeFilePath": "data/resumes/applications/2026/05/dfcd30e5-cc0a-404d-9e60-e3838d14d54a.pdf",
+    "createdAt": "2026-05-15T09:32:41.535Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T09:32:41.535Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Fardeen Ahmad",
+          "email": "fardeen8181@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/dfcd30e5-cc0a-404d-9e60-e3838d14d54a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
