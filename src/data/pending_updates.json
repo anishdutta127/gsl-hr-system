@@ -1,1 +1,55 @@
-[]
+[
+  {
+    "id": "b764aeb5-b040-44ec-ac63-e02cd43a14de",
+    "queuedAt": "2026-05-15T08:49:49.798Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+      "title": "VP- Marketing",
+      "department": "Marketing",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p><strong>Strategic Marketing Leadership</strong></p><p>Develop and execute integrated marketing strategies aligned with business and revenue goals.</p><ul><li><p>Drive market positioning, brand awareness, and customer engagement across schools, educators, parents, and institutional partners.</p></li><li><p>Identify growth opportunities within the EdTech and K-12 ecosystem.</p></li></ul><p><strong>AI-Driven Marketing &amp; Automation</strong></p><ul><li><p>Leverage AI tools and marketing automation platforms to improve campaign efficiency and personalization.</p></li><li><p>Implement AI-powered lead nurturing, CRM workflows, predictive analytics, and customer segmentation.</p></li><li><p>Use AI-driven insights for improving campaign performance, engagement, and conversion rates.</p></li><li><p>Explore emerging AI technologies for content generation, customer interaction, and marketing intelligence.</p></li></ul><p><strong>Growth &amp; Demand Generation</strong></p><ul><li><p>Lead digital marketing initiatives including SEO, SEM, paid campaigns, social media, webinars, influencer collaborations, and content marketing.</p></li><li><p>Drive B2B lead generation for school partnerships and institutional collaborations.</p></li><li><p>Optimize customer acquisition funnels and improve conversion metrics.</p></li></ul><p><strong>Brand &amp; Communication</strong></p><ul><li><p>Strengthen Get Set Learn’s positioning in AI education, future skills, and K-12 transformation.</p></li><li><p>Lead PR, thought leadership, events, partnerships, and communication strategies.</p></li><li><p>Ensure brand consistency across digital, offline, and partner channels.</p></li></ul><p><strong>Product Marketing &amp; Go-to-Market</strong></p><ul><li><p>Collaborate with product and academic teams to launch new programs and AI learning initiatives.</p></li><li><p>Build GTM strategies, messaging frameworks, and market penetration campaigns.</p></li><li><p>Support sales teams with presentations, brochures, case studies, and marketing collateral.</p></li></ul><p><strong>Team Leadership</strong></p><ul><li><p>Build, mentor, and manage a high-performing marketing team.</p></li><li><p>Manage agencies, external partners, and technology vendors.</p></li><li><p>Foster a data-driven, agile, and innovation-led marketing culture.</p></li></ul><p><strong>Analytics &amp; Performance</strong></p><ul><li><p>Own marketing KPIs including CAC, ROI, lead generation, engagement, conversion, and retention metrics.</p></li><li><p>Develop dashboards and performance reporting frameworks for leadership reviews.</p></li><li><p>Manage and optimize marketing budgets effectively.</p></li></ul><p><strong>Required Qualifications</strong></p><ul><li><p>Bachelor’s degree in Marketing, Business Administration, Communications, or related field; MBA preferred.</p></li><li><p>8–11 years of progressive marketing experience with at least 3–5 years in a leadership role.</p></li><li><p>Prior experience in the EdTech, Education, K-12, Learning, or SaaS industry is mandatory.</p></li><li><p>Strong expertise in digital marketing, growth marketing, brand strategy, and AI-enabled marketing technologies.</p></li><li><p>Experience working with CRM, marketing automation, and analytics platforms.</p></li><li><p>Proven ability to scale brand presence and lead generation in high-growth environments.</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-05-15T08:49:49.797Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-15T08:49:49.797Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "VP- Marketing",
+            "department": "Marketing",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
