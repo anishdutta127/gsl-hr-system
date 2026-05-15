@@ -74,5 +74,28 @@
       "notes": "Rejected: Not Qualified for Role. More of a STEM profile."
     },
     "retryCount": 0
+  },
+  {
+    "id": "5bfa60f0-9b87-4cfc-b930-9c1917eb62cf",
+    "queuedAt": "2026-05-15T09:02:08.871Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "ce8b3031-88c0-45d4-9e91-3400bc074a0d",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-14T11:09:00.690Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-15T09:02:08.871Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Higher experience than required."
+      },
+      "notes": "Rejected: Other. Higher experience than required."
+    },
+    "retryCount": 0
   }
 ]
