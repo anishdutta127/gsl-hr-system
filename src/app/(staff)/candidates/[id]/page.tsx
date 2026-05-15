@@ -38,6 +38,8 @@ import {
   type TemplateContext,
 } from '@/lib/preOnboardingEmails'
 import { getEmailUnlockState } from '@/lib/preOnboardingEmails/unlockState'
+import { loadEmployees, loadITAssets } from '@/lib/data'
+import { AssignITAssetsButton } from './AssignITAssetsButton'
 
 export const dynamic = 'force-dynamic'
 
@@ -72,6 +74,27 @@ export default async function CandidateDetailPage({
     .map((u) => ({ id: u.id, name: u.name, role: u.role }))
 
   const canManagePipeline = session.role === 'Admin' || session.role === 'HR'
+
+  // Match the candidate to an Employee record by email so HR-Admin can
+  // assign IT assets once the candidate has joined.
+  const matchedEmployee = candidate.email
+    ? loadEmployees().find(
+        (e) => e.email.toLowerCase() === candidate.email.toLowerCase() && e.status === 'Active',
+      )
+    : undefined
+  const availableITAssets = matchedEmployee
+    ? loadITAssets()
+        .filter((a) => a.status === 'Available')
+        .map((a) => ({
+          id: a.id,
+          category: a.category,
+          make: a.make,
+          model: a.model,
+          serialNumber: a.serialNumber,
+          status: a.status,
+        }))
+    : []
+
   const memberships = apps.map((a) => ({
     applicationId: a.id,
     roleId: a.roleId,
@@ -202,6 +225,33 @@ export default async function CandidateDetailPage({
           <p className="mt-2 break-all text-xs text-ink-3">{candidate.resumeFilePath}</p>
         )}
       </section>
+
+      {matchedEmployee && canManagePipeline && (
+        <section className="mb-6 rounded-lg border border-line bg-card p-4" aria-labelledby="it-assets-onboard-h">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 id="it-assets-onboard-h" className="text-sm font-medium text-ink">
+                IT asset starter kit
+              </h2>
+              <p className="mt-1 text-xs text-ink-2">
+                Joined as{' '}
+                <Link
+                  href={`/employees/${matchedEmployee.id}`}
+                  className="font-medium text-navy hover:underline"
+                >
+                  {matchedEmployee.name} ({matchedEmployee.employeeCode ?? 'no code'})
+                </Link>
+                . Assign hardware from available inventory.
+              </p>
+            </div>
+            <AssignITAssetsButton
+              employeeId={matchedEmployee.id}
+              employeeName={matchedEmployee.name}
+              availableAssets={availableITAssets}
+            />
+          </div>
+        </section>
+      )}
 
       {candidate.notes && (
         <section className="mb-6 rounded-lg border border-line bg-card p-4">

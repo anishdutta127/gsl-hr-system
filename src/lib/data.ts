@@ -18,6 +18,7 @@ import type {
   Employee,
   Recognition,
   NominationCycle,
+  ITAsset,
 } from './types'
 
 const DATA_DIR = path.join(process.cwd(), 'src', 'data')
@@ -82,6 +83,14 @@ export function findRecognitionById(id: string): Recognition | undefined {
 
 export function loadNominationCycles(): NominationCycle[] {
   return readJson<NominationCycle[]>('nomination_cycles.json', [])
+}
+
+export function loadITAssets(): ITAsset[] {
+  return readJson<ITAsset[]>('it_assets.json', [])
+}
+
+export function findITAssetById(id: string): ITAsset | undefined {
+  return loadITAssets().find((a) => a.id === id)
 }
 
 export function findCandidateById(id: string): Candidate | undefined {

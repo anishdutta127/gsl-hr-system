@@ -8,6 +8,8 @@ import { probationStatus } from '@/lib/probation'
 import { loadOnboardingTasks, loadOnboardingTemplates, summariseOnboarding } from '@/lib/onboardingTasks'
 import { loadOffboardingTasks, loadOffboardingTemplates, summariseOffboarding } from '@/lib/offboardingTasks'
 import { assetsAssignedTo, loadAssets } from '@/lib/assets'
+import { itAssetsAssignedTo } from '@/lib/itAssets'
+import { loadITAssets } from '@/lib/data'
 import {
   leaveYearForDate,
   loadLeaveApplications,
@@ -328,9 +330,56 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
             )
           })()}
 
+          {(() => {
+            const itAssigned = itAssetsAssignedTo(loadITAssets(), employee.id)
+            return (
+              <section className="mt-6 rounded-lg border border-line bg-card p-5">
+                <div className="flex items-baseline justify-between">
+                  <h2 className="font-display text-lg text-ink">IT assets ({itAssigned.length})</h2>
+                  {canEdit && (
+                    <Link href="/admin/it-assets" className="text-xs font-medium text-navy hover:underline">
+                      Manage →
+                    </Link>
+                  )}
+                </div>
+                {itAssigned.length === 0 ? (
+                  <p className="mt-3 text-sm text-ink-3">No IT hardware assigned.</p>
+                ) : (
+                  <ul className="mt-3 divide-y divide-line">
+                    {itAssigned.map((a) => (
+                      <li key={a.id} className="flex flex-wrap items-baseline justify-between gap-2 py-2 text-sm">
+                        <span>
+                          <Link
+                            href={`/admin/it-assets/${a.id}`}
+                            className="font-medium text-navy hover:underline"
+                          >
+                            {a.id}
+                          </Link>
+                          <span className="ml-2 text-ink">{a.make} {a.model}</span>
+                          <span className="ml-2 text-xs text-ink-3 tabular">{a.serialNumber}</span>
+                        </span>
+                        <span className="text-xs text-ink-3">
+                          {a.category} · assigned {a.currentAssignment?.assignedAt.slice(0, 10)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </section>
+            )
+          })()}
+
           {employee.exit ? (
             <section className="mt-6 rounded-lg border border-line bg-card p-5">
-              <h2 className="font-display text-lg text-ink">Exit</h2>
+              <div className="flex items-baseline justify-between">
+                <h2 className="font-display text-lg text-ink">Exit</h2>
+                <Link
+                  href={`/exits/${employee.id}/handover`}
+                  className="text-xs font-medium text-navy hover:underline"
+                >
+                  Open handover →
+                </Link>
+              </div>
               <dl className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
                 <Term label="Last working day">{formatDate(employee.exit.lastWorkingDay)}</Term>
                 <Term label="Reason">{employee.exit.reason}</Term>

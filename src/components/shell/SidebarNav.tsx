@@ -87,6 +87,7 @@ const SECTIONS: NavSection[] = [
       { label: 'Roster', href: '/roster', icon: CalendarClock, roles: ADMIN_HR_LEAD },
       { label: 'Documents', href: '/documents', icon: FolderLock, roles: ADMIN_HR },
       { label: 'Assets', href: '/admin/assets', icon: Laptop, roles: ADMIN_HR_LEAD },
+      { label: 'IT assets', href: '/admin/it-assets', icon: Laptop, roles: ADMIN_HR_LEAD },
       { label: 'Locations and depts', href: '/admin/taxonomy', icon: Tags, roles: ADMIN_HR },
       { label: 'Onboarding', href: '/onboarding', icon: UserPlus, roles: ALL_STAFF },
       { label: 'Offboarding', href: '/offboarding', icon: UserMinus, roles: ALL_STAFF },

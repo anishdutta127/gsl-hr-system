@@ -786,6 +786,72 @@ export interface ExitInterview {
   auditLog: AuditEntry[]
 }
 
+// --- Exit handover (Phase 4, gate 4) -------------------------------------
+//
+// The handover record sits alongside ExitInterview - same one-per-exit
+// shape, keyed by employeeId. Separates the artefact (a filled-in
+// template document) from the interview (HR's structured questions).
+
+export const HANDOVER_TEMPLATE_KINDS = ['Standard', 'Tech', 'Sales', 'Custom'] as const
+export type HandoverTemplateKind = (typeof HANDOVER_TEMPLATE_KINDS)[number]
+
+export interface HandoverDocumentFile {
+  uploadedAt: string
+  uploadedBy: string
+  filename: string
+  /** Bytes. */
+  fileSize: number
+  /** Repo-relative storage path under data/exit-handovers. */
+  storageRef: string
+}
+
+export interface HandoverPendingTask {
+  description: string
+  owner: string
+  dueDate: string | null
+}
+
+export interface HandoverKeyContact {
+  name: string
+  role: string
+  context: string
+}
+
+export interface HandoverAccessItem {
+  system: string
+  status: 'Pending' | 'Revoked'
+}
+
+export interface HandoverKnowledgeSession {
+  withWhom: string
+  completedAt: string
+  notes: string
+}
+
+export interface ExitHandover {
+  /** Same key as ExitInterview - one record per exiting employee. */
+  employeeId: string
+  templateUsed: HandoverTemplateKind | null
+  document: HandoverDocumentFile | null
+  reviewedBy: string | null
+  reviewedAt: string | null
+  reviewNotes: string
+  checklist: {
+    pendingTasks: HandoverPendingTask[]
+    keyContacts: HandoverKeyContact[]
+    accessRevocation: HandoverAccessItem[]
+    /** ITAsset ids the exiting employee has returned. */
+    itAssetsReturned: string[]
+    knowledgeTransfer: HandoverKnowledgeSession[]
+  }
+  createdAt: string
+  updatedAt: string
+  auditLog: AuditEntry[]
+}
+
+/** Status derived for surfacing on /exits. */
+export type HandoverStatus = 'Not started' | 'In progress' | 'Submitted' | 'Reviewed'
+
 export interface FFSettlement {
   employeeId: string
   finalSalaryDays: number
@@ -825,6 +891,83 @@ export interface Asset {
   createdAt: string
   createdBy: string
   auditLog: AuditEntry[]
+}
+
+// --- IT asset inventory (Phase 4, gate 4) -------------------------------
+//
+// Richer hardware inventory alongside the lightweight `Asset` above. The
+// older type tracks the offboarding return checklist (laptop / ID card /
+// SIM / email account); the IT asset entity carries serial number,
+// purchase metadata, warranty, full assignment history. Both coexist
+// because the older entity surfaces in offboarding flows already and we
+// did not want to ship a destructive migration.
+
+export const IT_ASSET_CATEGORIES = [
+  'Laptop',
+  'Desktop',
+  'Monitor',
+  'Phone',
+  'Tablet',
+  'Headset',
+  'Charger',
+  'Keyboard',
+  'Mouse',
+  'Other',
+] as const
+export type ITAssetCategory = (typeof IT_ASSET_CATEGORIES)[number]
+
+export const IT_ASSET_STATUSES = [
+  'Available',
+  'Assigned',
+  'In Repair',
+  'Retired',
+  'Lost',
+  'Stolen',
+] as const
+export type ITAssetStatus = (typeof IT_ASSET_STATUSES)[number]
+
+export const IT_ASSET_CONDITIONS = ['New', 'Good', 'Fair', 'Poor'] as const
+export type ITAssetCondition = (typeof IT_ASSET_CONDITIONS)[number]
+
+export interface ITAssetAssignment {
+  employeeId: string
+  assignedAt: string
+  assignedBy: string
+}
+
+export interface ITAssetHistoryEntry {
+  employeeId: string
+  assignedAt: string
+  returnedAt: string
+  returnedReason: string
+  assignedBy: string
+}
+
+export interface ITAsset {
+  /** ASSET-{YYYY}-{NNNN}. Gap-free within the calendar year. */
+  id: string
+  category: ITAssetCategory
+  make: string
+  model: string
+  serialNumber: string
+  /** Internal sticker / barcode tag. Optional. */
+  assetTag: string
+  /** ISO date. */
+  purchaseDate: string | null
+  /** INR, integer rupees. */
+  purchaseCost: number | null
+  warrantyEndDate: string | null
+  currentAssignment: ITAssetAssignment | null
+  assignmentHistory: ITAssetHistoryEntry[]
+  status: ITAssetStatus
+  condition: ITAssetCondition
+  /** Office name or city for WFH allocations. */
+  location: string
+  notes: string
+  auditLog: AuditEntry[]
+  createdBy: string
+  createdAt: string
+  updatedAt: string
 }
 
 // --- Leave management (Phase 4 Phase 3) ----------------------------------
@@ -1067,6 +1210,24 @@ export interface RecognitionDistribution {
   recipientCount: number
 }
 
+export interface RecognitionPhoto {
+  /** Web-reachable path: /recognition-photos/[recognitionId].jpg. */
+  storageRef: string
+  uploadedAt: string
+  uploadedBy: string
+}
+
+export interface RecognitionVoucher {
+  /** INR amount. Default 500 (Riddhi's policy). */
+  amount: number
+  /** Always 'INR' for now; field kept for future foreign-currency awards. */
+  currency: 'INR'
+  /** Default 'Amazon'; HR can override if they ship a different voucher. */
+  provider: string
+  deliveredAt: string | null
+  deliveryConfirmedBy: string | null
+}
+
 export interface Recognition {
   /** RECOG-{YYYY}-{NN} where YYYY is the financial year start and NN is
    * gap-free within that year. */
@@ -1091,6 +1252,16 @@ export interface Recognition {
   publishedAt?: string
   /** Append-only distribution log. */
   distributionEmails: RecognitionDistribution[]
+  // --- Phase 4 gate 4 additions ------------------------------------
+  /** Defaults to false. HR-Admin flips this on when the celebration is
+   *  ready for the public /celebrate URL to be shared. */
+  publicShareEnabled?: boolean
+  employeePhoto?: RecognitionPhoto | null
+  voucher?: RecognitionVoucher | null
+  /** Times the public share button was clicked. */
+  shareCount?: number
+  /** Counted server-side, deduplicated by IP within a 1h window. */
+  viewCount?: number
   auditLog: AuditEntry[]
 }
 
