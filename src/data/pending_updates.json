@@ -235,5 +235,39 @@
       "createdAt": "2026-05-16T06:38:19.407Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4cf7333c-9f5e-40b7-be77-2ab481a0d5ad",
+    "queuedAt": "2026-05-16T22:16:38.261Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+      "name": "Md Amir Khan",
+      "email": "maksaphira@gmail.com",
+      "phone": "7717733493",
+      "source": "Application",
+      "notes": "In Techvein It solutions I am the person behind everything, whether it is curriculum, teachers training, Books, Technical demo to new client, organising workshops in old and new schools, crafted techvein curriculum given my 7-8 years of work to them. Manager of Kolkata and Patna Schools.",
+      "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf",
+      "createdAt": "2026-05-16T22:16:37.227Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T22:16:37.227Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Md Amir Khan",
+            "email": "maksaphira@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
