@@ -77,5 +77,39 @@
       "createdAt": "2026-05-15T20:27:52.536Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "b06abc0e-e77c-4b1b-baab-5c05754e8ad1",
+    "queuedAt": "2026-05-16T02:16:34.625Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9cb376bc-699f-4348-9356-7311e4ced885",
+      "name": "Samar Jahan Tyagi",
+      "email": "tyagisamarjahan@gmail.com",
+      "phone": "9056667961",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf",
+      "createdAt": "2026-05-16T02:16:33.644Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T02:16:33.644Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Samar Jahan Tyagi",
+            "email": "tyagisamarjahan@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
