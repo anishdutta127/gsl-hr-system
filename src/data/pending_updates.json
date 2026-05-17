@@ -314,5 +314,39 @@
       "createdAt": "2026-05-16T22:16:39.769Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "3a91493a-f2de-421b-9e69-10212c66155b",
+    "queuedAt": "2026-05-17T16:46:14.538Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+      "name": "HEMANT BHURE",
+      "email": "hemantbhure90@gmail.com",
+      "phone": "9373769194",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf",
+      "createdAt": "2026-05-17T16:46:13.332Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-17T16:46:13.332Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "HEMANT BHURE",
+            "email": "hemantbhure90@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
