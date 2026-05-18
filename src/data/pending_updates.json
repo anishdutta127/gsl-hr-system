@@ -19,5 +19,27 @@
       "notes": "Reopened from Withdrawn to Sourced: To shift to Not Interested"
     },
     "retryCount": 0
+  },
+  {
+    "id": "0adc67a7-ba04-49f5-96d9-4d4d418bc4e3",
+    "queuedAt": "2026-05-18T12:29:05.244Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "54e33ac6-312c-4992-8379-37c46b62feb8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-16T22:16:37.227Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-18T12:29:05.242Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
   }
 ]
