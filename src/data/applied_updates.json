@@ -7052,5 +7052,415 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-15T11:32:01.107Z"
+  },
+  {
+    "id": "0105ca94-b2fd-4f9d-b27e-0657042b2ba4",
+    "queuedAt": "2026-05-15T20:27:50.588Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+      "name": "Piyush Tripathi",
+      "email": "piyushtripathi064@gmail.com",
+      "phone": "7383881937",
+      "source": "Application",
+      "notes": "Sales & Marketing enthusiast with hands-on experience in B2B/B2C sales, business development, and customer engagement. Passionate about growth strategies, digital marketing, and building long-term business relationships.",
+      "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf",
+      "createdAt": "2026-05-15T20:27:47.822Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-15T20:27:47.822Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Piyush Tripathi",
+            "email": "piyushtripathi064@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.354Z"
+  },
+  {
+    "id": "a92225e4-5b46-4225-9eb1-402ec825a606",
+    "queuedAt": "2026-05-15T20:27:51.379Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "da18eba9-fb1e-4ff2-abbd-34c02c3e19c6",
+      "candidateId": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+      "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-15T20:27:47.822Z",
+      "createdAt": "2026-05-15T20:27:47.822Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-15T20:27:47.822Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.356Z"
+  },
+  {
+    "id": "773c7897-9ceb-466d-9818-f81e37f3d03a",
+    "queuedAt": "2026-05-15T20:27:52.537Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "90bb0f63-c23e-4000-91ea-c3025ef4eccd",
+      "to": "piyushtripathi064@gmail.com",
+      "subject": "We received your application for VP- Marketing at GSL",
+      "body": "Hi Piyush,\n\nThanks for applying for VP- Marketing at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODg3Njg3MiwiZXhwaXJlc0F0IjoxNzc4ODc3NzcyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMDBlNjQwNzQtMDhhYS00ZDQ1LWE1YzQtNGUyMWZjYjRhOWQ4IiwiYXBwbGljYXRpb25JZCI6ImRhMThlYmE5LWZiMWUtNGZmMi1hYmJkLTM0YzAyYzNlMTljNiIsIm5vbmNlIjoiYjEwNTgyYjUtYzNkZS00ZWVjLThhYzYtYjkxNjE4NjljYzJmIn19.MN0IcuwBgEJ5Y2AdK46spbm_B6PRoAAdlAlIW6yPeDc\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+      "createdAt": "2026-05-15T20:27:52.536Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.356Z"
+  },
+  {
+    "id": "b06abc0e-e77c-4b1b-baab-5c05754e8ad1",
+    "queuedAt": "2026-05-16T02:16:34.625Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9cb376bc-699f-4348-9356-7311e4ced885",
+      "name": "Samar Jahan Tyagi",
+      "email": "tyagisamarjahan@gmail.com",
+      "phone": "9056667961",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf",
+      "createdAt": "2026-05-16T02:16:33.644Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T02:16:33.644Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Samar Jahan Tyagi",
+            "email": "tyagisamarjahan@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.377Z"
+  },
+  {
+    "id": "b40a6b8f-d993-4d5e-9b26-9d85567119be",
+    "queuedAt": "2026-05-16T02:16:35.300Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "556eaaa0-b3a0-4131-93ca-267dbf8d26cd",
+      "candidateId": "9cb376bc-699f-4348-9356-7311e4ced885",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-16T02:16:33.644Z",
+      "createdAt": "2026-05-16T02:16:33.644Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T02:16:33.644Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "9cb376bc-699f-4348-9356-7311e4ced885",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.379Z"
+  },
+  {
+    "id": "39fda3f2-1315-4c88-bad5-8cfcc0974862",
+    "queuedAt": "2026-05-16T02:16:36.062Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "d5649c77-aa15-48e9-a2b8-4ebd72d746cc",
+      "to": "tyagisamarjahan@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Samar,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODg5Nzc5NiwiZXhwaXJlc0F0IjoxNzc4ODk4Njk2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiOWNiMzc2YmMtNjk5Zi00MzQ4LTkzNTYtNzMxMWU0Y2VkODg1IiwiYXBwbGljYXRpb25JZCI6IjU1NmVhYWEwLWIzYTAtNDEzMS05M2NhLTI2N2RiZjhkMjZjZCIsIm5vbmNlIjoiOWZjYjMxOTAtYWNjOS00MzE5LWJhZGMtYTM2ZDA4OTA1NjVkIn19.ZxMGmtV8fRIC4itNI0pdg9tvm54Mnh5vyxNZP3Ov6DM\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 9cb376bc-699f-4348-9356-7311e4ced885",
+      "createdAt": "2026-05-16T02:16:36.062Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.380Z"
+  },
+  {
+    "id": "e01c0b25-ace3-47bc-887c-8e404b341d6b",
+    "queuedAt": "2026-05-16T06:38:18.015Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+      "name": "Vinitha Ramesh",
+      "email": "shavinram0412@gmail.com",
+      "phone": "9361192944",
+      "source": "Application",
+      "notes": "My name is Vinitha, and I am writing to apply for the position of AI & Robotics Trainer.\r\n\r\nI have around 2 years of experience working closely with Government schools, where I conducted sessions for students, guided them in developing robotics ideas and projects, and supported them in presenting their projects at district-level competitions through hands-on learning activities.\r\n\r\nIn addition, I worked for 1 year with the American India Foundation as a Robotics Cluster Coordinator and have 8 months of experience as a STEM Facilitator. Through these roles, I have developed strong skills in student engagement, project mentoring, stakeholder coordination, and community engagement.\r\n\r\nI am passionate about teaching robotics and STEM concepts in an interactive and practical way, helping students build creativity, problem-solving abilities, and technical skills.\r\n\r\nFor more details about my qualifications and experience, please find my resume attached.",
+      "resumeFilePath": "data/resumes/applications/2026/05/2d81ff39-9f8a-4e85-ae43-2d587b64c937.pdf",
+      "createdAt": "2026-05-16T06:38:16.957Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T06:38:16.957Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vinitha Ramesh",
+            "email": "shavinram0412@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/2d81ff39-9f8a-4e85-ae43-2d587b64c937.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.399Z"
+  },
+  {
+    "id": "49a4f3bc-9b3f-4641-aa67-f449a4cd5c44",
+    "queuedAt": "2026-05-16T06:38:18.757Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "8a7ba67d-5d09-4a5e-a697-76dce1e99700",
+      "candidateId": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-16T06:38:16.957Z",
+      "createdAt": "2026-05-16T06:38:16.957Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T06:38:16.957Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.401Z"
+  },
+  {
+    "id": "58a33749-40f4-43f7-b49b-842682a67f9a",
+    "queuedAt": "2026-05-16T06:38:19.407Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "939120fa-cae6-49e6-9a8b-b8cfead8c28c",
+      "to": "shavinram0412@gmail.com",
+      "subject": "We received your application for STEM Trainer at GSL",
+      "body": "Hi Vinitha,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODkxMzQ5OSwiZXhwaXJlc0F0IjoxNzc4OTE0Mzk5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMmQ4MWZmMzktOWY4YS00ZTg1LWFlNDMtMmQ1ODdiNjRjOTM3IiwiYXBwbGljYXRpb25JZCI6IjhhN2JhNjdkLTVkMDktNGE1ZS1hNjk3LTc2ZGNlMWU5OTcwMCIsIm5vbmNlIjoiZTNiNDEwYzctNDhjNS00NTNkLTg1ZmYtZGI1NDg2M2IwZDhmIn19.EYnKrcEIzIsX_GZ8rxWYmcl2S4_7P-tLcBWINh9uCOc\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+      "createdAt": "2026-05-16T06:38:19.407Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.402Z"
+  },
+  {
+    "id": "4cf7333c-9f5e-40b7-be77-2ab481a0d5ad",
+    "queuedAt": "2026-05-16T22:16:38.261Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+      "name": "Md Amir Khan",
+      "email": "maksaphira@gmail.com",
+      "phone": "7717733493",
+      "source": "Application",
+      "notes": "In Techvein It solutions I am the person behind everything, whether it is curriculum, teachers training, Books, Technical demo to new client, organising workshops in old and new schools, crafted techvein curriculum given my 7-8 years of work to them. Manager of Kolkata and Patna Schools.",
+      "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf",
+      "createdAt": "2026-05-16T22:16:37.227Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T22:16:37.227Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Md Amir Khan",
+            "email": "maksaphira@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.421Z"
+  },
+  {
+    "id": "ae89173b-70f6-4f05-8c1c-62b50dba9d58",
+    "queuedAt": "2026-05-16T22:16:38.987Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "54e33ac6-312c-4992-8379-37c46b62feb8",
+      "candidateId": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-16T22:16:37.227Z",
+      "createdAt": "2026-05-16T22:16:37.227Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-16T22:16:37.227Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.423Z"
+  },
+  {
+    "id": "ebdd82bb-32dc-4a0f-a4eb-b16c702a9009",
+    "queuedAt": "2026-05-16T22:16:39.769Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "db7528ef-76e0-48e3-9ab5-9e90e8d4bc7b",
+      "to": "maksaphira@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Md,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODk2OTc5OSwiZXhwaXJlc0F0IjoxNzc4OTcwNjk5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNjVlNDkwOGQtYWY5OS00YzRkLWExZjktZTE5MDJiZjc1N2EzIiwiYXBwbGljYXRpb25JZCI6IjU0ZTMzYWM2LTMxMmMtNDk5Mi04Mzc5LTM3YzQ2YjYyZmViOCIsIm5vbmNlIjoiZTA2ZjY2N2EtYTY4Mi00NzNhLWE3MmYtNmQ4MDExNGJiYTIxIn19.o-DISB1ijl9-v0K7ATYM1OZzJ4e8oIpFProwLRgJ25E\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+      "createdAt": "2026-05-16T22:16:39.769Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.423Z"
+  },
+  {
+    "id": "3a91493a-f2de-421b-9e69-10212c66155b",
+    "queuedAt": "2026-05-17T16:46:14.538Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+      "name": "HEMANT BHURE",
+      "email": "hemantbhure90@gmail.com",
+      "phone": "9373769194",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf",
+      "createdAt": "2026-05-17T16:46:13.332Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-17T16:46:13.332Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "HEMANT BHURE",
+            "email": "hemantbhure90@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.442Z"
+  },
+  {
+    "id": "12f443b9-5b39-4c53-a7e1-22807e9cb91d",
+    "queuedAt": "2026-05-17T16:46:15.237Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "6f721aa4-4353-4ead-b76d-80f5d0961053",
+      "candidateId": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-17T16:46:13.332Z",
+      "createdAt": "2026-05-17T16:46:13.332Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-17T16:46:13.332Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.444Z"
+  },
+  {
+    "id": "054c8cc1-38ef-47d6-87f9-14a155f8168c",
+    "queuedAt": "2026-05-17T16:46:15.942Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "e6c3597a-2bc8-49a6-b0ba-921989bb77ca",
+      "to": "hemantbhure90@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi HEMANT,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTAzNjM3NSwiZXhwaXJlc0F0IjoxNzc5MDM3Mjc1LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYWVmMmNjNjItMWI3Yy00MGNmLTk4NjctNzkzNzA1YzQ4NmQ3IiwiYXBwbGljYXRpb25JZCI6IjZmNzIxYWE0LTQzNTMtNGVhZC1iNzZkLTgwZjVkMDk2MTA1MyIsIm5vbmNlIjoiZTdmMTFjNjYtZGNiNC00YmIyLWIyNDgtM2ZlYmI0NTNmZDcyIn19.yHthITSZAiJV-knCqM755Gp4-uM-e6IdEa5JHnXPDR0\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate aef2cc62-1b7c-40cf-9867-793705c486d7",
+      "createdAt": "2026-05-17T16:46:15.942Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T06:41:23.445Z"
   }
 ]

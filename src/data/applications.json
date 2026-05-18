@@ -2117,5 +2117,110 @@
         }
       }
     ]
+  },
+  {
+    "id": "da18eba9-fb1e-4ff2-abbd-34c02c3e19c6",
+    "candidateId": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+    "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-15T20:27:47.822Z",
+    "createdAt": "2026-05-15T20:27:47.822Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T20:27:47.822Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+          "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "556eaaa0-b3a0-4131-93ca-267dbf8d26cd",
+    "candidateId": "9cb376bc-699f-4348-9356-7311e4ced885",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-16T02:16:33.644Z",
+    "createdAt": "2026-05-16T02:16:33.644Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T02:16:33.644Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "9cb376bc-699f-4348-9356-7311e4ced885",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "8a7ba67d-5d09-4a5e-a697-76dce1e99700",
+    "candidateId": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-16T06:38:16.957Z",
+    "createdAt": "2026-05-16T06:38:16.957Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T06:38:16.957Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "54e33ac6-312c-4992-8379-37c46b62feb8",
+    "candidateId": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-16T22:16:37.227Z",
+    "createdAt": "2026-05-16T22:16:37.227Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T22:16:37.227Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "6f721aa4-4353-4ead-b76d-80f5d0961053",
+    "candidateId": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-17T16:46:13.332Z",
+    "createdAt": "2026-05-17T16:46:13.332Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-17T16:46:13.332Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]

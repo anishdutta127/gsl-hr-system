@@ -7690,5 +7690,135 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "00e64074-08aa-4d45-a5c4-4e21fcb4a9d8",
+    "name": "Piyush Tripathi",
+    "email": "piyushtripathi064@gmail.com",
+    "phone": "7383881937",
+    "source": "Application",
+    "notes": "Sales & Marketing enthusiast with hands-on experience in B2B/B2C sales, business development, and customer engagement. Passionate about growth strategies, digital marketing, and building long-term business relationships.",
+    "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf",
+    "createdAt": "2026-05-15T20:27:47.822Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-15T20:27:47.822Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Piyush Tripathi",
+          "email": "piyushtripathi064@gmail.com",
+          "source": "Application",
+          "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+          "resumeFilePath": "data/resumes/applications/2026/05/00e64074-08aa-4d45-a5c4-4e21fcb4a9d8.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "9cb376bc-699f-4348-9356-7311e4ced885",
+    "name": "Samar Jahan Tyagi",
+    "email": "tyagisamarjahan@gmail.com",
+    "phone": "9056667961",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf",
+    "createdAt": "2026-05-16T02:16:33.644Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T02:16:33.644Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Samar Jahan Tyagi",
+          "email": "tyagisamarjahan@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "2d81ff39-9f8a-4e85-ae43-2d587b64c937",
+    "name": "Vinitha Ramesh",
+    "email": "shavinram0412@gmail.com",
+    "phone": "9361192944",
+    "source": "Application",
+    "notes": "My name is Vinitha, and I am writing to apply for the position of AI & Robotics Trainer.\r\n\r\nI have around 2 years of experience working closely with Government schools, where I conducted sessions for students, guided them in developing robotics ideas and projects, and supported them in presenting their projects at district-level competitions through hands-on learning activities.\r\n\r\nIn addition, I worked for 1 year with the American India Foundation as a Robotics Cluster Coordinator and have 8 months of experience as a STEM Facilitator. Through these roles, I have developed strong skills in student engagement, project mentoring, stakeholder coordination, and community engagement.\r\n\r\nI am passionate about teaching robotics and STEM concepts in an interactive and practical way, helping students build creativity, problem-solving abilities, and technical skills.\r\n\r\nFor more details about my qualifications and experience, please find my resume attached.",
+    "resumeFilePath": "data/resumes/applications/2026/05/2d81ff39-9f8a-4e85-ae43-2d587b64c937.pdf",
+    "createdAt": "2026-05-16T06:38:16.957Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T06:38:16.957Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Vinitha Ramesh",
+          "email": "shavinram0412@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/2d81ff39-9f8a-4e85-ae43-2d587b64c937.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
+    "name": "Md Amir Khan",
+    "email": "maksaphira@gmail.com",
+    "phone": "7717733493",
+    "source": "Application",
+    "notes": "In Techvein It solutions I am the person behind everything, whether it is curriculum, teachers training, Books, Technical demo to new client, organising workshops in old and new schools, crafted techvein curriculum given my 7-8 years of work to them. Manager of Kolkata and Patna Schools.",
+    "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf",
+    "createdAt": "2026-05-16T22:16:37.227Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-16T22:16:37.227Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Md Amir Khan",
+          "email": "maksaphira@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/65e4908d-af99-4c4d-a1f9-e1902bf757a3.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "aef2cc62-1b7c-40cf-9867-793705c486d7",
+    "name": "HEMANT BHURE",
+    "email": "hemantbhure90@gmail.com",
+    "phone": "9373769194",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf",
+    "createdAt": "2026-05-17T16:46:13.332Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-17T16:46:13.332Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "HEMANT BHURE",
+          "email": "hemantbhure90@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
