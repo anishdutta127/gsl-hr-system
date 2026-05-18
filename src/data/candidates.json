@@ -7688,6 +7688,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/dfcd30e5-cc0a-404d-9e60-e3838d14d54a.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-18T10:48:45.931Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
       }
     ]
   },
@@ -7740,6 +7748,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/9cb376bc-699f-4348-9356-7311e4ced885.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-18T10:48:45.955Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
       }
     ]
   },
@@ -7818,6 +7834,40 @@
           "resumeFilePath": "data/resumes/applications/2026/05/aef2cc62-1b7c-40cf-9867-793705c486d7.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "d5d54e0b-1610-40ec-8f90-af960ff08432",
+    "name": "Aman Sharma",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Creya Learning",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Will share his updated resume",
+    "createdAt": "2026-05-18T07:35:03.574Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-18T07:35:03.574Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Aman Sharma",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
       }
     ]
   }

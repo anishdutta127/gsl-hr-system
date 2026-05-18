@@ -1365,7 +1365,7 @@
     "reportingManagerId": "86763a19-6414-53a6-fac4-2f7a4ca417c3",
     "location": "Mumbai",
     "dateOfJoining": "2022-08-29",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "29-Feb-23",
     "tenureYears": 3.7,
     "dateOfBirth": "1984-07-16",
@@ -1450,6 +1450,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-05-18T10:48:45.973Z",
+        "user": "hr@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-15",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "As per instructed by Ameet - her email id and teams will be active for more 15 days."
+          }
+        },
+        "notes": "Exit initiated by hr@getsetlearn.info, LWD 2026-05-15."
       }
     ],
     "locationType": "office",
@@ -1460,7 +1480,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-05-15",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "As per instructed by Ameet - her email id and teams will be active for more 15 days."
+    }
   },
   {
     "id": "b09f40b1-09df-5bfa-f3ec-dc5f36e11710",
