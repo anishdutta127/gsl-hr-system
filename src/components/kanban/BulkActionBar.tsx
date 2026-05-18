@@ -13,6 +13,7 @@ interface Props {
   onForward: () => void
   onBackward: () => void
   onReject: () => void
+  onReopen: () => void
   onClear: () => void
 }
 
@@ -27,6 +28,7 @@ export function BulkActionBar({
   onForward,
   onBackward,
   onReject,
+  onReopen,
   onClear,
 }: Props) {
   const [detailsOpen, setDetailsOpen] = useState(false)
@@ -107,6 +109,16 @@ export function BulkActionBar({
           >
             Reject…
           </button>
+          {compat.terminal > 0 && (
+            <button
+              type="button"
+              onClick={onReopen}
+              title={`${compat.terminal} selected candidate${compat.terminal === 1 ? ' is' : 's are'} in a terminal stage. Reopen with a captured reason.`}
+              className="inline-flex min-h-[36px] items-center rounded border border-teal bg-teal-light px-3 py-1.5 text-sm font-medium text-teal-dark hover:bg-teal hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+            >
+              Reopen{compat.terminal > 1 ? ` (${compat.terminal})` : ''}…
+            </button>
+          )}
           <button
             type="button"
             onClick={onClear}
@@ -119,7 +131,9 @@ export function BulkActionBar({
       {hasMixed && (
         <div className="mt-2 text-xs text-ink-2">
           {compat.canForward} of {compat.total} can move forward
-          {compat.terminal > 0 ? ` · ${compat.terminal} already in a terminal state` : ''}
+          {compat.terminal > 0
+            ? ` · ${compat.terminal} in a terminal state (use Reopen to bring them back)`
+            : ''}
           {compat.stuck > 0 ? ` · ${compat.stuck} at the end of the pipeline` : ''}
           .{' '}
           <button
@@ -137,14 +151,14 @@ export function BulkActionBar({
             const term = isTerminal(a.currentStage)
             const { next, previous } = neighbours(role, a.currentStage)
             const note = term
-              ? `terminal — ${a.currentStage}`
+              ? `terminal - ${a.currentStage}`
               : !next && !previous
                 ? `stuck at ${a.currentStage}`
                 : !next
-                  ? `last non-terminal stage (${a.currentStage}) — no forward target`
+                  ? `last non-terminal stage (${a.currentStage}) - no forward target`
                   : !previous
-                    ? `first stage (${a.currentStage}) — no back target`
-                    : `OK — at ${a.currentStage}`
+                    ? `first stage (${a.currentStage}) - no back target`
+                    : `OK - at ${a.currentStage}`
             return (
               <li key={a.id} className="py-0.5">
                 <span className="font-medium text-ink">{a.candidate?.name ?? '(unknown)'}</span>

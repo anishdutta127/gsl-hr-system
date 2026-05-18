@@ -4,6 +4,7 @@ import { useDraggable } from '@dnd-kit/core'
 import type { ApplicationWithCandidate } from '@/lib/data'
 import type { Role } from '@/lib/types'
 import { formatDaysInStage } from '@/lib/format'
+import { isTerminal } from '@/lib/pipeline'
 import { StageTransitionButtons } from '@/components/stageTransition/StageTransitionButtons'
 import type { TransitionIntent } from '@/components/stageTransition/StageTransitionButtons'
 
@@ -16,6 +17,9 @@ interface Props {
   selected?: boolean
   onToggleSelect?: (applicationId: string) => void
   onIntent?: (applicationId: string, intent: TransitionIntent) => void
+  /** Single-card reopen affordance for cards in terminal columns. Renders
+   * a "Reopen…" button instead of the regular forward/back/reject strip. */
+  onReopen?: (applicationId: string) => void
   busy?: boolean
   /** True when the card's in-flight transition has exceeded the slow
    * threshold (~1s). Renders a low-key "Saving…" badge inside the card
@@ -43,10 +47,12 @@ export function CandidateCard({
   selected = false,
   onToggleSelect,
   onIntent,
+  onReopen,
   busy = false,
   slow = false,
   showActions = false,
 }: Props) {
+  const terminal = isTerminal(application.currentStage)
   const { attributes, listeners, setNodeRef, isDragging: isActiveDrag } = useDraggable({
     id: application.id,
   })
@@ -130,7 +136,7 @@ export function CandidateCard({
           </span>
         </div>
       )}
-      {showActions && role && onIntent && (
+      {showActions && role && onIntent && !terminal && (
         <div className="mt-2">
           <StageTransitionButtons
             role={role}
@@ -141,6 +147,24 @@ export function CandidateCard({
             compact
             onIntent={onIntent}
           />
+        </div>
+      )}
+      {showActions && terminal && onReopen && (
+        <div className="mt-2" onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
+          <button
+            type="button"
+            data-card-action="reopen"
+            disabled={busy}
+            onClick={(e) => {
+              e.stopPropagation()
+              onReopen(application.id)
+            }}
+            aria-label={`Reopen ${candidate?.name ?? 'candidate'}`}
+            title="Reopen with reason capture"
+            className="inline-flex min-h-[36px] sm:min-h-[28px] items-center rounded border border-teal bg-teal-light px-2 py-1 text-[11px] font-medium text-teal-dark hover:bg-teal hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            Reopen…
+          </button>
         </div>
       )}
     </div>

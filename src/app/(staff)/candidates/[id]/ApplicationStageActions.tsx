@@ -7,7 +7,9 @@ import type { ApplicationWithCandidate } from '@/lib/data'
 import { StageTransitionButtons } from '@/components/stageTransition/StageTransitionButtons'
 import { ConfirmModal } from '@/components/stageTransition/ConfirmModal'
 import { RejectReasonModal } from '@/components/stageTransition/RejectReasonModal'
+import { ReopenCandidateModal } from '@/components/stageTransition/ReopenCandidateModal'
 import { useStageTransitions } from '@/components/stageTransition/useStageTransitions'
+import { isTerminal } from '@/lib/pipeline'
 
 interface Props {
   role: Role
@@ -25,7 +27,7 @@ interface Props {
 /**
  * Per-application transition strip on the candidate detail page. Reuses the
  * same hook as the Kanban for consistent affordances (undo, confirm, reject
- * reason). Each app row hosts its own controller — multi-app candidates get
+ * reason). Each app row hosts its own controller - multi-app candidates get
  * independent transitions per role.
  */
 export function ApplicationStageActions(props: Props) {
@@ -64,16 +66,34 @@ export function ApplicationStageActions(props: Props) {
     refreshServer: () => router.refresh(),
   })
 
+  const inTerminal = isTerminal(stage)
+
   return (
     <>
-      <StageTransitionButtons
-        role={props.role}
-        applicationId={props.applicationId}
-        currentStage={stage}
-        disabled={props.disabled || transitions.busyApplicationIds.has(props.applicationId)}
-        visibility="static"
-        onIntent={transitions.onIntent}
-      />
+      {inTerminal ? (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded border border-line-strong bg-surface px-2 py-1 text-xs text-ink-2">
+            Closed at {stage}. Reopen to bring this candidate back into the pipeline.
+          </span>
+          <button
+            type="button"
+            disabled={props.disabled || transitions.busyApplicationIds.has(props.applicationId)}
+            onClick={() => transitions.reopenSingleStart(props.applicationId)}
+            className="inline-flex min-h-[36px] items-center rounded border border-teal bg-teal-light px-3 py-1.5 text-sm font-medium text-teal-dark hover:bg-teal hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal disabled:opacity-60"
+          >
+            Reopen candidate…
+          </button>
+        </div>
+      ) : (
+        <StageTransitionButtons
+          role={props.role}
+          applicationId={props.applicationId}
+          currentStage={stage}
+          disabled={props.disabled || transitions.busyApplicationIds.has(props.applicationId)}
+          visibility="static"
+          onIntent={transitions.onIntent}
+        />
+      )}
       {transitions.successToast && (
         <div
           role="status"
@@ -126,6 +146,17 @@ export function ApplicationStageActions(props: Props) {
           busy={transitions.rejectModal.busy}
           onCancel={transitions.rejectModal.onCancel}
           onSubmit={transitions.rejectModal.onSubmit}
+        />
+      )}
+      {transitions.reopenModal && (
+        <ReopenCandidateModal
+          open={transitions.reopenModal.open}
+          subjectLabel={transitions.reopenModal.subjectLabel}
+          fromLabel={transitions.reopenModal.fromLabel}
+          targetStageOptions={transitions.reopenModal.targetStageOptions}
+          busy={transitions.reopenModal.busy}
+          onCancel={transitions.reopenModal.onCancel}
+          onSubmit={transitions.reopenModal.onSubmit}
         />
       )}
     </>

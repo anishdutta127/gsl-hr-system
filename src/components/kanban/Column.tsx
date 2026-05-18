@@ -19,6 +19,7 @@ interface Props {
   selectedIds?: Set<string>
   onToggleSelect?: (applicationId: string) => void
   onIntent?: (applicationId: string, intent: TransitionIntent) => void
+  onReopen?: (applicationId: string) => void
   showActions?: boolean
 }
 
@@ -32,6 +33,7 @@ export function Column({
   selectedIds,
   onToggleSelect,
   onIntent,
+  onReopen,
   showActions = false,
 }: Props) {
   const { isOver, setNodeRef } = useDroppable({ id: stage })
@@ -65,6 +67,7 @@ export function Column({
               selected={selectedIds?.has(a.id) ?? false}
               onToggleSelect={onToggleSelect}
               onIntent={onIntent}
+              onReopen={onReopen}
               busy={busyApplicationIds?.has(a.id) ?? false}
               slow={slowApplicationIds?.has(a.id) ?? false}
               showActions={showActions}

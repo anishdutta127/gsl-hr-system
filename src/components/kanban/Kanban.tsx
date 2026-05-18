@@ -20,6 +20,7 @@ import { BulkActionBar } from './BulkActionBar'
 import { useStageTransitions } from '@/components/stageTransition/useStageTransitions'
 import { ConfirmModal } from '@/components/stageTransition/ConfirmModal'
 import { RejectReasonModal } from '@/components/stageTransition/RejectReasonModal'
+import { ReopenCandidateModal } from '@/components/stageTransition/ReopenCandidateModal'
 import type { Role, Stage } from '@/lib/types'
 import type { ApplicationWithCandidate } from '@/lib/data'
 import type { CurrentMembership, OpenRoleOption } from '@/components/PipelineActions'
@@ -211,6 +212,11 @@ export function Kanban({
             transitions.bulkRejectStart(selectedActiveIds)
             setSelected(new Set())
           }}
+          onReopen={() => {
+            transitions.bulkReopenStart(selectedActiveIds)
+            // Keep selection through the modal so cancel leaves the user
+            // where they started. Clearing happens in the submit success path.
+          }}
           onClear={() => setSelected(new Set())}
         />
       )}
@@ -229,6 +235,7 @@ export function Kanban({
               selectedIds={selected}
               onToggleSelect={canActOnCard ? toggleSelect : undefined}
               onIntent={canActOnCard ? transitions.onIntent : undefined}
+              onReopen={canActOnCard ? transitions.reopenSingleStart : undefined}
               showActions={canActOnCard}
             />
           ))}
@@ -308,6 +315,17 @@ export function Kanban({
           busy={transitions.rejectModal.busy}
           onCancel={transitions.rejectModal.onCancel}
           onSubmit={transitions.rejectModal.onSubmit}
+        />
+      )}
+      {transitions.reopenModal && (
+        <ReopenCandidateModal
+          open={transitions.reopenModal.open}
+          subjectLabel={transitions.reopenModal.subjectLabel}
+          fromLabel={transitions.reopenModal.fromLabel}
+          targetStageOptions={transitions.reopenModal.targetStageOptions}
+          busy={transitions.reopenModal.busy}
+          onCancel={transitions.reopenModal.onCancel}
+          onSubmit={transitions.reopenModal.onSubmit}
         />
       )}
 

@@ -25,6 +25,7 @@ import {
   isHodRoundStage,
   type RejectionReason,
 } from '@/lib/stageTransition'
+import { composeBulkToastMessage } from '@/lib/bulkActionToast'
 import type { TransitionIntent } from './StageTransitionButtons'
 
 /** Snapshot we need to undo a single application's transition. */
@@ -54,6 +55,24 @@ interface PendingBulkTransition {
   rejectionNotes?: string
 }
 
+/** Single-source-of-truth for a reopen invocation, shared by the modal and
+ * the dispatch path. `applicationIds` covers single-card (one entry) and
+ * bulk reopen (many entries). */
+interface PendingReopen {
+  applicationIds: string[]
+  /** Eligible target stages, computed once when the modal opens. Empty
+   * when no candidate in the selection has a reopen-eligible stage; the
+   * modal renders a disabled state in that case. */
+  targetStageOptions: Stage[]
+  /** Source stage(s) for the helper copy. */
+  fromLabel: string
+  /** Display label for the modal title: candidate name (single) or
+   * "N candidates" (bulk). */
+  subjectLabel: string
+  /** True for bulk reopen - the submit path posts to /bulk-reopen. */
+  bulk: boolean
+}
+
 export interface UseStageTransitionsArgs {
   /** Current applications (already optimistically reflected by parent). */
   applications: ApplicationWithCandidate[]
@@ -78,6 +97,10 @@ export interface UseStageTransitionsResult {
   bulkForward: (applicationIds: string[]) => void
   bulkBackward: (applicationIds: string[]) => void
   bulkRejectStart: (applicationIds: string[]) => void
+  // Reopen dispatch (single + bulk). Drag-drop OUT of terminal stages is
+  // never the entry point; reopen is always explicit.
+  reopenSingleStart: (applicationId: string) => void
+  bulkReopenStart: (applicationIds: string[]) => void
   // Modal state.
   confirmModal: {
     open: boolean
@@ -95,6 +118,19 @@ export interface UseStageTransitionsResult {
     busy: boolean
     onCancel: () => void
     onSubmit: (payload: { rejectionReason: RejectionReason; rejectionNotes?: string }) => void
+  } | null
+  reopenModal: {
+    open: boolean
+    subjectLabel: string
+    fromLabel: string
+    targetStageOptions: Stage[]
+    busy: boolean
+    onCancel: () => void
+    onSubmit: (payload: {
+      targetStage: string
+      reason: string
+      notifyCandidate: boolean
+    }) => void
   } | null
   // Toasts.
   successToast: { message: string; undo?: () => void } | null
@@ -137,6 +173,10 @@ export function useStageTransitions({
     bulk: boolean
     pending: PendingTransition | PendingBulkTransition
     subjectLabel: string
+    busy: boolean
+  } | null>(null)
+  const [reopenState, setReopenState] = useState<{
+    pending: PendingReopen
     busy: boolean
   } | null>(null)
 
@@ -353,12 +393,15 @@ export function useStageTransitions({
             toStage: d.toStage as Stage,
           }))
 
-        const tail =
-          data.skipped + data.errors > 0
-            ? ` ${data.skipped + data.errors} could not be moved.`
-            : ''
+        const message = composeBulkToastMessage({
+          successLabel,
+          applied: data.applied,
+          skipped: data.skipped,
+          errors: data.errors,
+          failures: data.details.filter((d) => d.status !== 'applied'),
+        })
         setSuccessMsg({
-          message: `${successLabel} ${data.applied} candidate${data.applied === 1 ? '' : 's'}.${tail}${SYNC_HINT}`,
+          message: `${message}${SYNC_HINT}`,
           entries: undoEntries,
         })
         scheduleSuccessClear()
@@ -570,6 +613,202 @@ export function useStageTransitions({
     [],
   )
 
+  // -- Reopen dispatch -----------------------------------------------------
+
+  const reopenSingleStart = useCallback(
+    (applicationId: string) => {
+      const app = appById.get(applicationId)
+      const role = roleByApplicationId(applicationId)
+      if (!app || !role) return
+      if (!isTerminal(app.currentStage)) {
+        // Defensive: caller should only invoke from a terminal-stage card.
+        setError(`${app.candidate?.name ?? 'This candidate'} is not in a terminal stage.`)
+        return
+      }
+      setReopenState({
+        pending: {
+          applicationIds: [applicationId],
+          targetStageOptions: [...role.pipelineStages] as Stage[],
+          fromLabel: String(app.currentStage),
+          subjectLabel: app.candidate?.name ?? 'this candidate',
+          bulk: false,
+        },
+        busy: false,
+      })
+    },
+    [appById, roleByApplicationId],
+  )
+
+  const bulkReopenStart = useCallback(
+    (applicationIds: string[]) => {
+      if (applicationIds.length === 0) return
+      // Only terminal-stage selections are eligible - silently drop the
+      // non-terminal ones so the modal doesn't reopen something that's
+      // already live. The caller (bulk action bar) gates this with the
+      // same predicate, but be defensive.
+      const eligible: typeof applicationIds = []
+      const fromStageCounts = new Map<string, number>()
+      let intersectedStages: string[] | null = null
+      for (const id of applicationIds) {
+        const app = appById.get(id)
+        const role = roleByApplicationId(id)
+        if (!app || !role) continue
+        if (!isTerminal(app.currentStage)) continue
+        eligible.push(id)
+        const from = String(app.currentStage)
+        fromStageCounts.set(from, (fromStageCounts.get(from) ?? 0) + 1)
+        const stages = role.pipelineStages as string[]
+        intersectedStages =
+          intersectedStages === null
+            ? [...stages]
+            : intersectedStages.filter((s) => stages.includes(s))
+      }
+      if (eligible.length === 0) {
+        setError('None of the selected candidates are in a terminal state.')
+        return
+      }
+      const fromLabel =
+        [...fromStageCounts.entries()]
+          .map(([s, n]) => (n > 1 ? `${s} (${n})` : s))
+          .join(', ') || '(terminal)'
+      setReopenState({
+        pending: {
+          applicationIds: eligible,
+          targetStageOptions: (intersectedStages ?? []) as Stage[],
+          fromLabel,
+          subjectLabel: `${eligible.length} candidate${eligible.length === 1 ? '' : 's'}`,
+          bulk: true,
+        },
+        busy: false,
+      })
+    },
+    [appById, roleByApplicationId],
+  )
+
+  const performSingleReopen = useCallback(
+    async (
+      pending: PendingReopen,
+      payload: { targetStage: string; reason: string; notifyCandidate: boolean },
+    ): Promise<boolean> => {
+      const applicationId = pending.applicationIds[0]
+      if (!applicationId) return false
+      const app = appById.get(applicationId)
+      if (!app) return false
+      const fromStage = app.currentStage
+      const targetStage = payload.targetStage as Stage
+      markBusy([applicationId], true)
+      try {
+        applyOptimistic(applicationId, targetStage)
+        const res = await fetch(`/api/applications/${applicationId}/reopen`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        if (!res.ok) {
+          revertOptimistic(applicationId, fromStage)
+          const b = (await res.json().catch(() => ({}))) as { message?: string }
+          setError(b.message ?? 'Reopen failed.')
+          return false
+        }
+        const candidateName = app.candidate?.name ?? 'this candidate'
+        setSuccessMsg({
+          message: `${candidateName} reopened from ${fromStage} to ${targetStage}.${SYNC_HINT}`,
+          entries: [],
+        })
+        scheduleSuccessClear()
+        refreshServer?.()
+        return true
+      } catch {
+        revertOptimistic(applicationId, fromStage)
+        setError('We could not reach our server. Try again.')
+        return false
+      } finally {
+        markBusy([applicationId], false)
+      }
+    },
+    [appById, applyOptimistic, refreshServer, revertOptimistic, markBusy],
+  )
+
+  const performBulkReopen = useCallback(
+    async (
+      pending: PendingReopen,
+      payload: { targetStage: string; reason: string; notifyCandidate: boolean },
+    ): Promise<boolean> => {
+      const ids = pending.applicationIds
+      markBusy(ids, true)
+      const flippedFrom = new Map<string, Stage>()
+      try {
+        for (const id of ids) {
+          const app = appById.get(id)
+          if (!app) continue
+          flippedFrom.set(id, app.currentStage)
+          applyOptimistic(id, payload.targetStage as Stage)
+        }
+        const res = await fetch('/api/applications/bulk-reopen', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ applicationIds: ids, ...payload }),
+        })
+        if (!res.ok) {
+          for (const [id, fromStage] of flippedFrom) revertOptimistic(id, fromStage)
+          const b = (await res.json().catch(() => ({}))) as { message?: string }
+          setError(b.message ?? 'Reopen failed.')
+          return false
+        }
+        const data = (await res.json()) as {
+          applied: number
+          skipped: number
+          errors: number
+          details: Array<{
+            applicationId: string
+            status: 'applied' | 'skipped' | 'error'
+            message?: string
+          }>
+        }
+        const appliedSet = new Set(
+          data.details.filter((d) => d.status === 'applied').map((d) => d.applicationId),
+        )
+        for (const [id, fromStage] of flippedFrom) {
+          if (!appliedSet.has(id)) revertOptimistic(id, fromStage)
+        }
+        const message = composeBulkToastMessage({
+          successLabel: 'Reopened',
+          applied: data.applied,
+          skipped: data.skipped,
+          errors: data.errors,
+          failures: data.details.filter((d) => d.status !== 'applied'),
+        })
+        setSuccessMsg({
+          message: `${message}${SYNC_HINT}`,
+          entries: [],
+        })
+        scheduleSuccessClear()
+        refreshServer?.()
+        return true
+      } catch {
+        for (const [id, fromStage] of flippedFrom) revertOptimistic(id, fromStage)
+        setError('We could not reach our server. Try again.')
+        return false
+      } finally {
+        markBusy(ids, false)
+      }
+    },
+    [appById, applyOptimistic, refreshServer, revertOptimistic, markBusy],
+  )
+
+  const submitReopen = useCallback(
+    async (payload: { targetStage: string; reason: string; notifyCandidate: boolean }) => {
+      if (!reopenState) return
+      setReopenState((prev) => (prev ? { ...prev, busy: true } : prev))
+      const ok = reopenState.pending.bulk
+        ? await performBulkReopen(reopenState.pending, payload)
+        : await performSingleReopen(reopenState.pending, payload)
+      if (ok) setReopenState(null)
+      else setReopenState((prev) => (prev ? { ...prev, busy: false } : prev))
+    },
+    [performBulkReopen, performSingleReopen, reopenState],
+  )
+
   // -- Reject modal submit -------------------------------------------------
 
   const submitReject = useCallback(
@@ -630,6 +869,8 @@ export function useStageTransitions({
     bulkForward,
     bulkBackward,
     bulkRejectStart,
+    reopenSingleStart,
+    bulkReopenStart,
     confirmModal: confirmState,
     rejectModal: rejectState
       ? {
@@ -639,6 +880,17 @@ export function useStageTransitions({
           busy: rejectState.busy,
           onCancel: () => setRejectState(null),
           onSubmit: (payload) => void submitReject(payload),
+        }
+      : null,
+    reopenModal: reopenState
+      ? {
+          open: true,
+          subjectLabel: reopenState.pending.subjectLabel,
+          fromLabel: reopenState.pending.fromLabel,
+          targetStageOptions: reopenState.pending.targetStageOptions,
+          busy: reopenState.busy,
+          onCancel: () => setReopenState(null),
+          onSubmit: (payload) => void submitReopen(payload),
         }
       : null,
     successToast,
