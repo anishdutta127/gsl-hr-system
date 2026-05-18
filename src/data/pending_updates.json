@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "6d6bae83-4002-4fb8-b779-92fb4e65f8fe",
+    "queuedAt": "2026-05-18T12:22:34.558Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "09401d3e-eae7-4ca0-a193-ca04750cb268",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-07T07:35:01.561Z"
+      },
+      "after": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-18T12:22:34.556Z"
+      },
+      "notes": "Reopened from Withdrawn to Sourced: To shift to Not Interested"
+    },
+    "retryCount": 0
+  }
+]
