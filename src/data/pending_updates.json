@@ -304,5 +304,32 @@
       "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "fa9c453b-a939-43ed-9d74-693d65bc1e0c",
+    "queuedAt": "2026-05-18T08:44:29.024Z",
+    "queuedBy": "hr@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-15",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "As per instructed by Ameet - her email id and teams will be active for more 15 days."
+        }
+      },
+      "notes": "Exit initiated by hr@getsetlearn.info, LWD 2026-05-15."
+    },
+    "retryCount": 0
   }
 ]
