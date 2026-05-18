@@ -230,8 +230,8 @@
     "id": "09401d3e-eae7-4ca0-a193-ca04750cb268",
     "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Withdrawn",
-    "stageEnteredAt": "2026-05-07T07:35:01.561Z",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-18T12:22:34.556Z",
     "createdAt": "2026-05-01T12:33:40.177Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -286,6 +286,20 @@
           "stageEnteredAt": "2026-05-07T07:35:01.561Z"
         },
         "notes": "Moved to Sales Executive. Notes: Better fit for that role"
+      },
+      {
+        "timestamp": "2026-05-18T14:19:32.277Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Withdrawn",
+          "stageEnteredAt": "2026-05-07T07:35:01.561Z"
+        },
+        "after": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-18T12:22:34.556Z"
+        },
+        "notes": "Reopened from Withdrawn to Sourced: To shift to Not Interested"
       }
     ]
   },
@@ -2306,8 +2320,8 @@
     "id": "54e33ac6-312c-4992-8379-37c46b62feb8",
     "candidateId": "65e4908d-af99-4c4d-a1f9-e1902bf757a3",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-16T22:16:37.227Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-18T12:29:05.242Z",
     "createdAt": "2026-05-16T22:16:37.227Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -2320,15 +2334,31 @@
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-18T14:19:32.282Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-16T22:16:37.227Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-18T12:29:05.242Z",
+          "rejectionReason": "Not Qualified for Role"
+        },
+        "notes": "Rejected: Not Qualified for Role"
       }
-    ]
+    ],
+    "rejectionReason": "Not Qualified for Role"
   },
   {
     "id": "6f721aa4-4353-4ead-b76d-80f5d0961053",
     "candidateId": "aef2cc62-1b7c-40cf-9867-793705c486d7",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-17T16:46:13.332Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-18T12:30:40.684Z",
     "createdAt": "2026-05-17T16:46:13.332Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -2341,15 +2371,31 @@
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-18T14:19:32.287Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-17T16:46:13.332Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-18T12:30:40.684Z",
+          "rejectionReason": "Not Qualified for Role"
+        },
+        "notes": "Rejected: Not Qualified for Role"
       }
-    ]
+    ],
+    "rejectionReason": "Not Qualified for Role"
   },
   {
     "id": "d19c02d0-c334-4e0b-81ba-2de1467a031a",
     "candidateId": "dfcd30e5-cc0a-404d-9e60-e3838d14d54a",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-18T07:38:43.372Z",
+    "currentStage": "OnHold",
+    "stageEnteredAt": "2026-05-18T12:41:21.072Z",
     "createdAt": "2026-05-18T07:38:43.372Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -2363,6 +2409,19 @@
           "currentStage": "Sourced"
         },
         "notes": "Moved from Senior Academics Manager."
+      },
+      {
+        "timestamp": "2026-05-18T14:19:32.290Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-18T07:38:43.372Z"
+        },
+        "after": {
+          "currentStage": "OnHold",
+          "stageEnteredAt": "2026-05-18T12:41:21.072Z"
+        }
       }
     ]
   },

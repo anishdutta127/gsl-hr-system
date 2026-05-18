@@ -7809,5 +7809,94 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-18T10:48:45.984Z"
+  },
+  {
+    "id": "6d6bae83-4002-4fb8-b779-92fb4e65f8fe",
+    "queuedAt": "2026-05-18T12:22:34.558Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "09401d3e-eae7-4ca0-a193-ca04750cb268",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-07T07:35:01.561Z"
+      },
+      "after": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-18T12:22:34.556Z"
+      },
+      "notes": "Reopened from Withdrawn to Sourced: To shift to Not Interested"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T14:19:32.282Z"
+  },
+  {
+    "id": "0adc67a7-ba04-49f5-96d9-4d4d418bc4e3",
+    "queuedAt": "2026-05-18T12:29:05.244Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "54e33ac6-312c-4992-8379-37c46b62feb8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-16T22:16:37.227Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-18T12:29:05.242Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T14:19:32.286Z"
+  },
+  {
+    "id": "937fa3bc-fca1-4127-8552-76755bdacdc8",
+    "queuedAt": "2026-05-18T12:30:40.685Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "6f721aa4-4353-4ead-b76d-80f5d0961053",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-17T16:46:13.332Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-18T12:30:40.684Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T14:19:32.290Z"
+  },
+  {
+    "id": "4f2d7dd1-c197-4ef8-b21d-c2af8c385d58",
+    "queuedAt": "2026-05-18T12:41:21.072Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "d19c02d0-c334-4e0b-81ba-2de1467a031a",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-18T07:38:43.372Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-18T12:41:21.072Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-18T14:19:32.292Z"
   }
 ]
