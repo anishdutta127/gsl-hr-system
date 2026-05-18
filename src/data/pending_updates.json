@@ -64,5 +64,47 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "24242bac-1a6a-43ad-8054-7a1917a42197",
+    "queuedAt": "2026-05-18T07:35:03.575Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "d5d54e0b-1610-40ec-8f90-af960ff08432",
+      "name": "Aman Sharma",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Creya Learning",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Will share his updated resume",
+      "createdAt": "2026-05-18T07:35:03.574Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-18T07:35:03.574Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Aman Sharma",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
