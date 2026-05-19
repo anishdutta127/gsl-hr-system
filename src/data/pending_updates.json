@@ -36,5 +36,25 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (CIBIE CHARAN RESUME (2).pdf, 350 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "4cc8cbaa-7fba-4273-8d2b-a777f9f97072",
+    "queuedAt": "2026-05-19T07:31:09.785Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "9c4b686f-a1ec-4c25-a4f6-e9c7b091af73",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-12T15:03:20.408Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-19T07:31:09.784Z"
+      }
+    },
+    "retryCount": 0
   }
 ]
