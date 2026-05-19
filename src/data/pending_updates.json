@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "0ce8064a-e84a-426c-b28d-703fafbab6a0",
+    "queuedAt": "2026-05-19T13:50:12.333Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "name": "Selvamani K",
+      "email": "selvamani416399@gmail.com",
+      "phone": "8973303598",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf",
+      "createdAt": "2026-05-19T13:50:10.263Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T13:50:10.263Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Selvamani K",
+            "email": "selvamani416399@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
