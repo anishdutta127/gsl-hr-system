@@ -17,5 +17,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Vidhya Resume.pdf, 298 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "28d342bc-4484-4199-8b3c-ad3f491f6a50",
+    "queuedAt": "2026-05-19T07:05:07.770Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "310bfb60-91f0-4f74-a161-5bd758c24840",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/310bfb60-91f0-4f74-a161-5bd758c24840.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (CIBIE CHARAN RESUME (2).pdf, 350 KB)."
+    },
+    "retryCount": 0
   }
 ]
