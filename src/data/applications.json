@@ -230,8 +230,8 @@
     "id": "09401d3e-eae7-4ca0-a193-ca04750cb268",
     "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-18T12:22:34.556Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-19T06:16:15.653Z",
     "createdAt": "2026-05-01T12:33:40.177Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -300,8 +300,24 @@
           "stageEnteredAt": "2026-05-18T12:22:34.556Z"
         },
         "notes": "Reopened from Withdrawn to Sourced: To shift to Not Interested"
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.942Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-18T12:22:34.556Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-19T06:16:15.653Z",
+          "rejectionReason": "Better Match Elsewhere"
+        },
+        "notes": "Rejected: Better Match Elsewhere"
       }
-    ]
+    ],
+    "rejectionReason": "Better Match Elsewhere"
   },
   {
     "id": "778bff34-b377-43b2-8540-1c74e24f5b8d",
@@ -470,8 +486,8 @@
     "id": "34eed21d-7438-40f4-ac42-50e65b06d37d",
     "candidateId": "705c39b1-6c1c-4e9f-b3e9-a3c64f423509",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Shortlisted",
-    "stageEnteredAt": "2026-05-07T09:56:49.638Z",
+    "currentStage": "HODRoundScheduled",
+    "stageEnteredAt": "2026-05-19T06:17:02.560Z",
     "createdAt": "2026-05-07T07:32:08.256Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -498,6 +514,19 @@
           "currentStage": "Shortlisted",
           "stageEnteredAt": "2026-05-07T09:56:49.638Z"
         }
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.945Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-05-07T09:56:49.638Z"
+        },
+        "after": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-19T06:17:02.560Z"
+        }
       }
     ]
   },
@@ -505,8 +534,8 @@
     "id": "1095426f-a125-4327-851f-264e823e5a4a",
     "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
     "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-    "currentStage": "Shortlisted",
-    "stageEnteredAt": "2026-05-07T09:56:52.143Z",
+    "currentStage": "HODRoundScheduled",
+    "stageEnteredAt": "2026-05-19T06:17:12.766Z",
     "createdAt": "2026-05-07T07:35:01.561Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -532,6 +561,19 @@
         "after": {
           "currentStage": "Shortlisted",
           "stageEnteredAt": "2026-05-07T09:56:52.143Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.947Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-05-07T09:56:52.143Z"
+        },
+        "after": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-19T06:17:12.766Z"
         }
       }
     ]
@@ -721,8 +763,8 @@
     "id": "32c47981-a270-4487-aad8-05953b13c8f1",
     "candidateId": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
     "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-12T14:09:54.170Z",
+    "currentStage": "HODRoundScheduled",
+    "stageEnteredAt": "2026-05-19T06:18:16.683Z",
     "createdAt": "2026-05-12T14:09:54.170Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -735,6 +777,32 @@
           "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.949Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-12T14:09:54.170Z"
+        },
+        "after": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-05-19T06:17:44.549Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.952Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-12T14:09:54.170Z"
+        },
+        "after": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-19T06:18:16.683Z"
+        }
       }
     ]
   },
@@ -742,8 +810,8 @@
     "id": "c3a64ad0-c538-469c-8069-2905d3a3c937",
     "candidateId": "6d319a54-3634-4fb7-9050-d80d6a42ae78",
     "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-12T14:11:17.849Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-19T06:26:06.554Z",
     "createdAt": "2026-05-12T14:11:17.849Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -756,8 +824,24 @@
           "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
           "currentStage": "Sourced"
         }
+      },
+      {
+        "timestamp": "2026-05-19T06:36:32.954Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-12T14:11:17.849Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-19T06:26:06.554Z",
+          "rejectionReason": "Not Qualified for Role"
+        },
+        "notes": "Rejected: Not Qualified for Role"
       }
-    ]
+    ],
+    "rejectionReason": "Not Qualified for Role"
   },
   {
     "id": "88ebdd23-1e1d-4e7e-a28f-46e30df61e1f",

@@ -7870,5 +7870,107 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "310bfb60-91f0-4f74-a161-5bd758c24840",
+    "name": "Charan Chibe",
+    "email": "",
+    "phone": "",
+    "source": "Application",
+    "searchableText": "STEM trainer Chennai",
+    "tags": {
+      "programmes": [
+        "STEAM"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+    "createdAt": "2026-05-19T06:30:42.501Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-19T06:30:42.501Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Charan Chibe",
+          "email": "",
+          "source": "Application",
+          "programmes": [
+            "STEAM"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
+    "name": "Vidhya",
+    "email": "",
+    "phone": "",
+    "source": "Application",
+    "searchableText": "Chennai STEM Trainer",
+    "tags": {
+      "programmes": [
+        "STEAM"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+    "createdAt": "2026-05-19T06:31:13.141Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-19T06:31:13.141Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Vidhya",
+          "email": "",
+          "source": "Application",
+          "programmes": [
+            "STEAM"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "016795a5-7435-46d4-8bdd-02982f023a97",
+    "name": "Nithyasri",
+    "email": "",
+    "phone": "",
+    "source": "Educohire",
+    "searchableText": "STEM Trainer",
+    "tags": {
+      "programmes": [
+        "STEAM"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+    "createdAt": "2026-05-19T06:31:43.332Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-19T06:31:43.332Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Nithyasri",
+          "email": "",
+          "source": "Educohire",
+          "programmes": [
+            "STEAM"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
