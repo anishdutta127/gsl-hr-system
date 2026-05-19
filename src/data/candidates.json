@@ -7902,8 +7902,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-19T10:25:33.680Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/310bfb60-91f0-4f74-a161-5bd758c24840.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (CIBIE CHARAN RESUME (2).pdf, 350 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/310bfb60-91f0-4f74-a161-5bd758c24840.pdf"
   },
   {
     "id": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
@@ -7936,8 +7949,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-19T10:25:33.659Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/d0cca188-aab3-4151-9ac9-815c406dbfeb.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Vidhya Resume.pdf, 298 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/d0cca188-aab3-4151-9ac9-815c406dbfeb.pdf"
   },
   {
     "id": "016795a5-7435-46d4-8bdd-02982f023a97",
