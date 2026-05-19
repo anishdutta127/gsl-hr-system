@@ -122,5 +122,47 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "db99ae2e-f1b0-4349-9798-f7efa40c6c18",
+    "queuedAt": "2026-05-19T06:30:42.501Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "310bfb60-91f0-4f74-a161-5bd758c24840",
+      "name": "Charan Chibe",
+      "email": "",
+      "phone": "",
+      "source": "Application",
+      "searchableText": "STEM trainer Chennai",
+      "tags": {
+        "programmes": [
+          "STEAM"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+      "createdAt": "2026-05-19T06:30:42.501Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T06:30:42.501Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Charan Chibe",
+            "email": "",
+            "source": "Application",
+            "programmes": [
+              "STEAM"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
