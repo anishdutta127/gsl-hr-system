@@ -181,5 +181,27 @@
       "notes": "Rejected: Other. Duplicate"
     },
     "retryCount": 0
+  },
+  {
+    "id": "3720e548-3ada-46d4-b59f-0beda5e4de0a",
+    "queuedAt": "2026-05-19T07:41:23.286Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "882e5968-3c82-4ac1-b438-d915ad600aaa",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-13T07:50:48.074Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-19T07:41:23.286Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
   }
 ]
