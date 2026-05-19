@@ -8742,5 +8742,169 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-19T13:38:58.790Z"
+  },
+  {
+    "id": "0ce8064a-e84a-426c-b28d-703fafbab6a0",
+    "queuedAt": "2026-05-19T13:50:12.333Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "name": "Selvamani K",
+      "email": "selvamani416399@gmail.com",
+      "phone": "8973303598",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf",
+      "createdAt": "2026-05-19T13:50:10.263Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T13:50:10.263Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Selvamani K",
+            "email": "selvamani416399@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.342Z"
+  },
+  {
+    "id": "58367990-e292-4590-9e0c-7041c5181801",
+    "queuedAt": "2026-05-19T13:50:13.442Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "07b89bad-a5b7-41fc-af34-f06f072f6e1b",
+      "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-19T13:50:10.263Z",
+      "createdAt": "2026-05-19T13:50:10.263Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T13:50:10.263Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.345Z"
+  },
+  {
+    "id": "7ecb2b81-7abf-4cbe-b95e-7eeee3948a1b",
+    "queuedAt": "2026-05-19T13:50:14.430Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "a03b037f-b7c8-490d-8d76-e3795b0eee22",
+      "to": "selvamani416399@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Selvamani,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTE5ODYxNCwiZXhwaXJlc0F0IjoxNzc5MTk5NTE0LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMmM3NjM1MTctNDVlYy00MDM3LTk5ZTItODk3OGNjMThiNTBhIiwiYXBwbGljYXRpb25JZCI6IjA3Yjg5YmFkLWE1YjctNDFmYy1hZjM0LWYwNmYwNzJmNmUxYiIsIm5vbmNlIjoiYmZhNzFkODUtZjM3MS00YjYyLTk1N2UtNmE4Y2YyNWJiNDkzIn19._Zo8oGQ_Is08F6dxhq15zpr7QgXxfCK9u0XSxJRflQA\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 2c763517-45ec-4037-99e2-8978cc18b50a",
+      "createdAt": "2026-05-19T13:50:14.430Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.346Z"
+  },
+  {
+    "id": "fb70d903-d8dd-4405-8fce-6688c25decb4",
+    "queuedAt": "2026-05-19T14:15:16.991Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e9a89714-7a11-483c-bac4-2c54db2f7f68",
+      "name": "Arvind Nagar",
+      "email": "arvindnagarkota@gmail.com",
+      "phone": "+917231995777",
+      "source": "Application",
+      "notes": "Leadership-oriented education professional with experience in building learner-centric programs, driving academic quality, and leading cross-functional execution in fast-paced learning environments. Skilled in curriculum execution, instructional alignment, learner engagement, team leadership, and creating scalable educational experiences that improve learning outcomes and implementation effectiveness. Passionate about experiential and outcome-driven education aligned with evolving learner and industry needs.",
+      "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf",
+      "createdAt": "2026-05-19T14:15:15.648Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T14:15:15.648Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Arvind Nagar",
+            "email": "arvindnagarkota@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.365Z"
+  },
+  {
+    "id": "e6de7659-706d-4c75-a865-154ad4717020",
+    "queuedAt": "2026-05-19T14:15:17.931Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "3c41c58c-a530-4f02-a910-ce0ae7b0f546",
+      "candidateId": "e9a89714-7a11-483c-bac4-2c54db2f7f68",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-19T14:15:15.648Z",
+      "createdAt": "2026-05-19T14:15:15.648Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T14:15:15.648Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "e9a89714-7a11-483c-bac4-2c54db2f7f68",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.368Z"
+  },
+  {
+    "id": "a7c0cbb6-0498-460c-bad3-390d3fb89d77",
+    "queuedAt": "2026-05-19T14:15:19.135Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "a043db85-4dcb-4cb0-b218-8625421a7029",
+      "to": "arvindnagarkota@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Arvind,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTIwMDExOSwiZXhwaXJlc0F0IjoxNzc5MjAxMDE5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTlhODk3MTQtN2ExMS00ODNjLWJhYzQtMmM1NGRiMmY3ZjY4IiwiYXBwbGljYXRpb25JZCI6IjNjNDFjNThjLWE1MzAtNGYwMi1hOTEwLWNlMGFlN2IwZjU0NiIsIm5vbmNlIjoiYzlhMTI5YzItYWQxZS00YzgxLTk5NmItMTYxYjkzZmQyNDQ1In19.8UkZ-GGvG8OeLouIDIrqeWY5O8MzsMEG92-H_2y9vQo\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate e9a89714-7a11-483c-bac4-2c54db2f7f68",
+      "createdAt": "2026-05-19T14:15:19.135Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-19T16:39:06.369Z"
   }
 ]

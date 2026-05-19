@@ -8024,5 +8024,57 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "2c763517-45ec-4037-99e2-8978cc18b50a",
+    "name": "Selvamani K",
+    "email": "selvamani416399@gmail.com",
+    "phone": "8973303598",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf",
+    "createdAt": "2026-05-19T13:50:10.263Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-19T13:50:10.263Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Selvamani K",
+          "email": "selvamani416399@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "e9a89714-7a11-483c-bac4-2c54db2f7f68",
+    "name": "Arvind Nagar",
+    "email": "arvindnagarkota@gmail.com",
+    "phone": "+917231995777",
+    "source": "Application",
+    "notes": "Leadership-oriented education professional with experience in building learner-centric programs, driving academic quality, and leading cross-functional execution in fast-paced learning environments. Skilled in curriculum execution, instructional alignment, learner engagement, team leadership, and creating scalable educational experiences that improve learning outcomes and implementation effectiveness. Passionate about experiential and outcome-driven education aligned with evolving learner and industry needs.",
+    "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf",
+    "createdAt": "2026-05-19T14:15:15.648Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-19T14:15:15.648Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Arvind Nagar",
+          "email": "arvindnagarkota@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
