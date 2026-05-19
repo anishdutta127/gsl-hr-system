@@ -77,5 +77,39 @@
       "createdAt": "2026-05-19T13:50:14.430Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "fb70d903-d8dd-4405-8fce-6688c25decb4",
+    "queuedAt": "2026-05-19T14:15:16.991Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e9a89714-7a11-483c-bac4-2c54db2f7f68",
+      "name": "Arvind Nagar",
+      "email": "arvindnagarkota@gmail.com",
+      "phone": "+917231995777",
+      "source": "Application",
+      "notes": "Leadership-oriented education professional with experience in building learner-centric programs, driving academic quality, and leading cross-functional execution in fast-paced learning environments. Skilled in curriculum execution, instructional alignment, learner engagement, team leadership, and creating scalable educational experiences that improve learning outcomes and implementation effectiveness. Passionate about experiential and outcome-driven education aligned with evolving learner and industry needs.",
+      "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf",
+      "createdAt": "2026-05-19T14:15:15.648Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T14:15:15.648Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Arvind Nagar",
+            "email": "arvindnagarkota@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/e9a89714-7a11-483c-bac4-2c54db2f7f68.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
