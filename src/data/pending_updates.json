@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "9dd7d77c-9608-4292-86d4-9e9cf0bbd744",
+    "queuedAt": "2026-05-19T07:04:29.945Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/d0cca188-aab3-4151-9ac9-815c406dbfeb.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Vidhya Resume.pdf, 298 KB)."
+    },
+    "retryCount": 0
+  }
+]
