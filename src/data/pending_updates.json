@@ -307,5 +307,35 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "6a3c62ca-0379-410c-bad8-ce943dc9a5b4",
+    "queuedAt": "2026-05-19T09:59:16.898Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "049ce1d2-ba9d-4b00-880a-771fbe6134d4",
+      "candidateId": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-19T09:59:16.889Z",
+      "createdAt": "2026-05-19T09:59:16.889Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T09:59:16.889Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Bulk-added to STEM Trainer pipeline."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
