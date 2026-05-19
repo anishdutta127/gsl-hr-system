@@ -206,5 +206,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "a170681c-0ed7-47bd-a18d-f4f269a8f1bb",
+    "queuedAt": "2026-05-19T06:31:43.332Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "016795a5-7435-46d4-8bdd-02982f023a97",
+      "name": "Nithyasri",
+      "email": "",
+      "phone": "",
+      "source": "Educohire",
+      "searchableText": "STEM Trainer",
+      "tags": {
+        "programmes": [
+          "STEAM"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+      "createdAt": "2026-05-19T06:31:43.332Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T06:31:43.332Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Nithyasri",
+            "email": "",
+            "source": "Educohire",
+            "programmes": [
+              "STEAM"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
