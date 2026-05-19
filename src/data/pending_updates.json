@@ -164,5 +164,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "d89e3e67-52b7-4a67-8f78-37840938ff1a",
+    "queuedAt": "2026-05-19T06:31:13.141Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "d0cca188-aab3-4151-9ac9-815c406dbfeb",
+      "name": "Vidhya",
+      "email": "",
+      "phone": "",
+      "source": "Application",
+      "searchableText": "Chennai STEM Trainer",
+      "tags": {
+        "programmes": [
+          "STEAM"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-19.",
+      "createdAt": "2026-05-19T06:31:13.141Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-19T06:31:13.141Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vidhya",
+            "email": "",
+            "source": "Application",
+            "programmes": [
+              "STEAM"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
