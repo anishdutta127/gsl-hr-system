@@ -143,5 +143,26 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "bdbcbf7e-885b-4a1f-a577-1b93bb955133",
+    "queuedAt": "2026-05-20T07:22:33.664Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "07b89bad-a5b7-41fc-af34-f06f072f6e1b",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:50:10.263Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-20T07:22:33.664Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0
   }
 ]
