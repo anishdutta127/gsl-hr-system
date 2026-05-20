@@ -9840,5 +9840,48 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-20T10:02:00.348Z"
+  },
+  {
+    "id": "a386651c-787c-41dc-9695-fda9d621349e",
+    "queuedAt": "2026-05-20T10:38:47.003Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0a96eb06-5120-431c-b58a-9d8c59efd56e",
+      "name": "Suraj",
+      "email": "",
+      "phone": "",
+      "source": "Application",
+      "searchableText": "Academics and Arduino",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-20.",
+      "createdAt": "2026-05-20T10:38:47.002Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T10:38:47.002Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Suraj",
+            "email": "",
+            "source": "Application",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T12:29:05.261Z"
   }
 ]
