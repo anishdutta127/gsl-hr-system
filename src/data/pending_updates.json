@@ -235,5 +235,39 @@
       "createdAt": "2026-05-20T03:44:49.478Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "18f57b87-dd00-4642-bc8b-098d8fbb2fe2",
+    "queuedAt": "2026-05-20T04:29:20.409Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "3e2f7933-4048-4771-a919-cfc27393f307",
+      "name": "Ankita Harmalkar",
+      "email": "ankita.p.harmalkar@gmail.com",
+      "phone": "9833122668",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/3e2f7933-4048-4771-a919-cfc27393f307.pdf",
+      "createdAt": "2026-05-20T04:29:19.294Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T04:29:19.294Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ankita Harmalkar",
+            "email": "ankita.p.harmalkar@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/3e2f7933-4048-4771-a919-cfc27393f307.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
