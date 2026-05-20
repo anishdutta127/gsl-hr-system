@@ -393,5 +393,39 @@
       "createdAt": "2026-05-20T05:41:35.917Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "cf6b2290-2b4b-44ba-ab40-6cb07925e3d0",
+    "queuedAt": "2026-05-20T06:34:16.995Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "c46bc7e0-1903-493d-9f73-f6cb764194ca",
+      "name": "Ganesh",
+      "email": "gthapliyal72@gmail.com",
+      "phone": "9760926309",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/c46bc7e0-1903-493d-9f73-f6cb764194ca.pdf",
+      "createdAt": "2026-05-20T06:34:15.744Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T06:34:15.744Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ganesh",
+            "email": "gthapliyal72@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/c46bc7e0-1903-493d-9f73-f6cb764194ca.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
