@@ -314,5 +314,39 @@
       "createdAt": "2026-05-20T04:29:22.162Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "34ee3762-0dc2-4a6e-80bb-b9991a6ca956",
+    "queuedAt": "2026-05-20T05:41:34.278Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "20a98570-0c2f-4553-b0fb-27adc5b55530",
+      "name": "Debasmita Majumder",
+      "email": "debasmitamajumder0@gmail.com",
+      "phone": "9051867016",
+      "source": "Application",
+      "notes": "I believe I would be a strong fit for this role, as I bring 7 years of experience in instructional design, with a strong focus on K–12 computer programming content. I also actively leverage AI tools in my workflow to improve efficiency and streamline content development processes. Additionally, I have experience leading and mentoring teams of instructional designers.\r\n\r\nI am currently based in Bangalore and would also like to know if this role offers a work-from-home arrangement.",
+      "resumeFilePath": "data/resumes/applications/2026/05/20a98570-0c2f-4553-b0fb-27adc5b55530.pdf",
+      "createdAt": "2026-05-20T05:41:33.251Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T05:41:33.251Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Debasmita Majumder",
+            "email": "debasmitamajumder0@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/20a98570-0c2f-4553-b0fb-27adc5b55530.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
