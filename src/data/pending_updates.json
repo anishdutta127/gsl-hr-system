@@ -61,5 +61,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "93d8a0f9-f099-453a-8b73-17f638ad2f76",
+    "queuedAt": "2026-05-20T02:24:16.668Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "476815de-31a6-46b9-a580-00ee25ac5898",
+      "to": "nishithi1012@gmail.com",
+      "subject": "We received your application for VP- Marketing at GSL",
+      "body": "Hi Nishith,\n\nThanks for applying for VP- Marketing at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTI0Mzg1NiwiZXhwaXJlc0F0IjoxNzc5MjQ0NzU2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTgyZDY2ZTItMjMzMC00M2M4LWE2MjktNjE3NmM0MjM5MWM0IiwiYXBwbGljYXRpb25JZCI6IjExYmU1ZDhkLTNjYWEtNGY5MC04OWI3LTllNGJjNDBmMzA0MSIsIm5vbmNlIjoiYjI3ZjNjOWMtYWM2MS00MDdlLWJhZjEtMTRhYTE5MTk2NWUzIn19.oSLcbJpm3qY173wuWCLo8gTQWDTq8ssfjLxLGbEl4po\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate e82d66e2-2330-43c8-a629-6176c42391c4",
+      "createdAt": "2026-05-20T02:24:16.668Z"
+    },
+    "retryCount": 0
   }
 ]
