@@ -121,5 +121,27 @@
       "notes": "Rejected: Better Match Elsewhere"
     },
     "retryCount": 0
+  },
+  {
+    "id": "14ba9366-da7e-4e9d-ae72-064fa986eb36",
+    "queuedAt": "2026-05-20T07:22:05.017Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "9086d41c-747a-4147-8332-f32f0c48bc15",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:22:59.966Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:22:05.017Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
   }
 ]
