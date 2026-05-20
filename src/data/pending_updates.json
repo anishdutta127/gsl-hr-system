@@ -164,5 +164,35 @@
       "notes": "Moved to STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "1b5da6e0-0949-473f-9217-cbb9b2e7847e",
+    "queuedAt": "2026-05-20T07:22:34.492Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "4112e1f3-9496-44f2-adb8-fe47ef1b0a50",
+      "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-20T07:22:33.664Z",
+      "createdAt": "2026-05-20T07:22:33.664Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T07:22:33.664Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
