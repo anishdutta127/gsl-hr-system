@@ -99,5 +99,27 @@
       "notes": "Rejected: Better Match Elsewhere"
     },
     "retryCount": 0
+  },
+  {
+    "id": "5a82ef57-badf-474a-a55d-c51ee822b917",
+    "queuedAt": "2026-05-20T07:18:45.130Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "4c652dab-66e7-4c72-b56c-c3e4969f0295",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T03:44:45.784Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:18:45.130Z",
+        "rejectionReason": "Better Match Elsewhere"
+      },
+      "notes": "Rejected: Better Match Elsewhere"
+    },
+    "retryCount": 0
   }
 ]
