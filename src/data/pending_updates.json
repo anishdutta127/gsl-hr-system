@@ -77,5 +77,39 @@
       "createdAt": "2026-05-20T02:24:16.668Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "153503dd-6a6e-4dd7-b070-65821300bd97",
+    "queuedAt": "2026-05-20T03:09:11.233Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "ebea669f-34ab-49d6-be7f-974ef71803dd",
+      "name": "Suhas Vitthal Bidgar",
+      "email": "suhasbidgar7@gmail.com",
+      "phone": "+917219467373",
+      "source": "Application",
+      "notes": "I have 3 years of experience working as a STEM Trainer at Learning Links Foundation, where I conducted hands-on training sessions in Robotics, Coding, Electronics, and STEM activities for school students. I am passionate about activity-based learning and have experience handling Arduino, ESP32, sensors, and robotics kits. I enjoy inspiring students through practical projects and innovative learning methods. I am eager to contribute my skills and experience to your organization.",
+      "resumeFilePath": "data/resumes/applications/2026/05/ebea669f-34ab-49d6-be7f-974ef71803dd.pdf",
+      "createdAt": "2026-05-20T03:09:09.809Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T03:09:09.809Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Suhas Vitthal Bidgar",
+            "email": "suhasbidgar7@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/ebea669f-34ab-49d6-be7f-974ef71803dd.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
