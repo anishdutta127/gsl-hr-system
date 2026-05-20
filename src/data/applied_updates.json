@@ -9398,5 +9398,447 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-20T06:36:32.653Z"
+  },
+  {
+    "id": "7458c922-7a4f-4665-854c-71739ff8bb80",
+    "queuedAt": "2026-05-20T07:10:30.511Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "1f92669f-55ee-46f6-ac18-1109a8de4195",
+      "name": "Aniruddha Deepak Jadhav",
+      "email": "aniruddha10294@gmail.com",
+      "phone": "+919769703806",
+      "source": "Application",
+      "notes": "I bring 7 plus years of experience in Content and curriculum development\r\n I have created lesson plans, Content, curriculum development for teachers, textbook, STEAM activities, etc.",
+      "resumeFilePath": "data/resumes/applications/2026/05/1f92669f-55ee-46f6-ac18-1109a8de4195.pdf",
+      "createdAt": "2026-05-20T07:10:28.966Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T07:10:28.966Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Aniruddha Deepak Jadhav",
+            "email": "aniruddha10294@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/1f92669f-55ee-46f6-ac18-1109a8de4195.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.260Z"
+  },
+  {
+    "id": "280219d1-6f47-4f7b-a6fe-4ecaabea944c",
+    "queuedAt": "2026-05-20T07:10:31.762Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "0103a41a-5f98-4c10-8b84-b7879aab970e",
+      "candidateId": "1f92669f-55ee-46f6-ac18-1109a8de4195",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-20T07:10:28.966Z",
+      "createdAt": "2026-05-20T07:10:28.966Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T07:10:28.966Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "1f92669f-55ee-46f6-ac18-1109a8de4195",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.263Z"
+  },
+  {
+    "id": "5acee1c0-6674-4a49-b1e3-b501b0b0306f",
+    "queuedAt": "2026-05-20T07:10:32.894Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "cdf662ac-7343-46dd-a993-9ba7b1ba262f",
+      "to": "aniruddha10294@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Aniruddha,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTI2MTAzMiwiZXhwaXJlc0F0IjoxNzc5MjYxOTMyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMWY5MjY2OWYtNTVlZS00NmY2LWFjMTgtMTEwOWE4ZGU0MTk1IiwiYXBwbGljYXRpb25JZCI6IjAxMDNhNDFhLTVmOTgtNGMxMC04Yjg0LWI3ODc5YWFiOTcwZSIsIm5vbmNlIjoiZmZmOWU1ZjAtNGI1MC00ZTkwLTkxZjUtMDEwNzBjYjE3NTlkIn19.CjwvlZhVY989SwJPmQZHXtPGZGCZMhNH61f_aT-zqhY\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 1f92669f-55ee-46f6-ac18-1109a8de4195",
+      "createdAt": "2026-05-20T07:10:32.894Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.264Z"
+  },
+  {
+    "id": "5f7e9570-4dc2-4369-9dd0-df7c6c1faa8a",
+    "queuedAt": "2026-05-20T07:16:55.149Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "11be5d8d-3caa-4f90-89b7-9e4bc40f3041",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T02:24:13.519Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:16:55.147Z",
+        "rejectionReason": "Better Match Elsewhere"
+      },
+      "notes": "Rejected: Better Match Elsewhere"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.267Z"
+  },
+  {
+    "id": "5a82ef57-badf-474a-a55d-c51ee822b917",
+    "queuedAt": "2026-05-20T07:18:45.130Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "4c652dab-66e7-4c72-b56c-c3e4969f0295",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T03:44:45.784Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:18:45.130Z",
+        "rejectionReason": "Better Match Elsewhere"
+      },
+      "notes": "Rejected: Better Match Elsewhere"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.270Z"
+  },
+  {
+    "id": "14ba9366-da7e-4e9d-ae72-064fa986eb36",
+    "queuedAt": "2026-05-20T07:22:05.017Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "9086d41c-747a-4147-8332-f32f0c48bc15",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:22:59.966Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:22:05.017Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.273Z"
+  },
+  {
+    "id": "bdbcbf7e-885b-4a1f-a577-1b93bb955133",
+    "queuedAt": "2026-05-20T07:22:33.664Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "07b89bad-a5b7-41fc-af34-f06f072f6e1b",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:50:10.263Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-20T07:22:33.664Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.276Z"
+  },
+  {
+    "id": "1b5da6e0-0949-473f-9217-cbb9b2e7847e",
+    "queuedAt": "2026-05-20T07:22:34.492Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "4112e1f3-9496-44f2-adb8-fe47ef1b0a50",
+      "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-20T07:22:33.664Z",
+      "createdAt": "2026-05-20T07:22:33.664Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T07:22:33.664Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.279Z"
+  },
+  {
+    "id": "4c02c804-09aa-49e7-93e7-99d3c539d6e6",
+    "queuedAt": "2026-05-20T07:22:35.410Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "operation": "candidate.update",
+      "before": {},
+      "after": {},
+      "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.300Z"
+  },
+  {
+    "id": "24c46c22-29ef-497e-846a-7a93ee53e5a2",
+    "queuedAt": "2026-05-20T07:25:03.628Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "5b88a9bf-f38e-4965-b712-e6074987b9a8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T04:29:19.294Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-20T07:25:03.628Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.303Z"
+  },
+  {
+    "id": "e47a0568-912f-4758-a0e6-b7fc598d465f",
+    "queuedAt": "2026-05-20T07:26:15.794Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "7571a8a9-2c45-4341-bbd6-42ba680f4fa6",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T06:34:15.744Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T07:26:15.794Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.306Z"
+  },
+  {
+    "id": "9a027eb0-3597-43e4-ab05-ae3eada28009",
+    "queuedAt": "2026-05-20T09:43:17.864Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "9086d41c-747a-4147-8332-f32f0c48bc15",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:22:59.966Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T09:43:17.864Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.309Z"
+  },
+  {
+    "id": "54ab6d6a-7507-495d-8e1e-db854b0036b5",
+    "queuedAt": "2026-05-20T09:43:32.774Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "07b89bad-a5b7-41fc-af34-f06f072f6e1b",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T13:50:10.263Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-20T09:43:32.774Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.312Z"
+  },
+  {
+    "id": "bca105d5-1ca6-4635-92e2-266188bcc610",
+    "queuedAt": "2026-05-20T09:43:33.924Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "22972ce5-f6be-4e73-b081-c87be2fdda10",
+      "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-20T09:43:32.774Z",
+      "createdAt": "2026-05-20T09:43:32.774Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T09:43:32.774Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "2c763517-45ec-4037-99e2-8978cc18b50a",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.316Z"
+  },
+  {
+    "id": "61e5954e-59e6-44e5-9e30-6da237359718",
+    "queuedAt": "2026-05-20T09:43:35.361Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "2c763517-45ec-4037-99e2-8978cc18b50a",
+      "operation": "candidate.update",
+      "before": {},
+      "after": {},
+      "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.335Z"
+  },
+  {
+    "id": "72d44b2c-c2ce-4b0c-85dc-cfa77fa93f51",
+    "queuedAt": "2026-05-20T09:43:43.096Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "5b88a9bf-f38e-4965-b712-e6074987b9a8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T04:29:19.294Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-20T09:43:43.096Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.338Z"
+  },
+  {
+    "id": "b908c74a-30ec-4c45-a7e6-a3d44cd4b7c9",
+    "queuedAt": "2026-05-20T09:43:56.556Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "3c41c58c-a530-4f02-a910-ce0ae7b0f546",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-19T14:15:15.648Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-20T09:43:56.556Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.341Z"
+  },
+  {
+    "id": "27320124-6214-4da8-96dc-4b97423fa108",
+    "queuedAt": "2026-05-20T09:44:05.531Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "cd61d1f6-9ac8-467d-9228-7bbc99d3fffe",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T05:41:33.251Z"
+      },
+      "after": {
+        "currentStage": "OnHold",
+        "stageEnteredAt": "2026-05-20T09:44:05.531Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.345Z"
+  },
+  {
+    "id": "dde2cb28-11b9-4391-b980-fd6138267686",
+    "queuedAt": "2026-05-20T09:48:22.626Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "7571a8a9-2c45-4341-bbd6-42ba680f4fa6",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T06:34:15.744Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-20T09:48:22.626Z",
+        "rejectionReason": "Better Match Elsewhere"
+      },
+      "notes": "Rejected: Better Match Elsewhere"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-20T10:02:00.348Z"
   }
 ]

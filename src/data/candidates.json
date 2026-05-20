@@ -8048,6 +8048,22 @@
           "resumeFilePath": "data/resumes/applications/2026/05/2c763517-45ec-4037-99e2-8978cc18b50a.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-20T10:02:00.285Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
+      },
+      {
+        "timestamp": "2026-05-20T10:02:00.321Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
       }
     ]
   },
@@ -8228,6 +8244,32 @@
           "source": "Application",
           "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
           "resumeFilePath": "data/resumes/applications/2026/05/c46bc7e0-1903-493d-9f73-f6cb764194ca.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "1f92669f-55ee-46f6-ac18-1109a8de4195",
+    "name": "Aniruddha Deepak Jadhav",
+    "email": "aniruddha10294@gmail.com",
+    "phone": "+919769703806",
+    "source": "Application",
+    "notes": "I bring 7 plus years of experience in Content and curriculum development\r\n I have created lesson plans, Content, curriculum development for teachers, textbook, STEAM activities, etc.",
+    "resumeFilePath": "data/resumes/applications/2026/05/1f92669f-55ee-46f6-ac18-1109a8de4195.pdf",
+    "createdAt": "2026-05-20T07:10:28.966Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-20T07:10:28.966Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Aniruddha Deepak Jadhav",
+          "email": "aniruddha10294@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/1f92669f-55ee-46f6-ac18-1109a8de4195.pdf"
         },
         "notes": "Self-applied via /careers with resume."
       }
