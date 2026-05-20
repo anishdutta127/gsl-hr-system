@@ -298,5 +298,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "3d40aac9-c817-49c9-976a-b4bb889d9a1d",
+    "queuedAt": "2026-05-20T04:29:22.162Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "e49e9be9-62e6-4311-a8e8-4ff182d6b7ae",
+      "to": "ankita.p.harmalkar@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi Ankita,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTI1MTM2MiwiZXhwaXJlc0F0IjoxNzc5MjUyMjYyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiM2UyZjc5MzMtNDA0OC00NzcxLWE5MTktY2ZjMjczOTNmMzA3IiwiYXBwbGljYXRpb25JZCI6IjViODhhOWJmLWYzOGUtNDk2NS1iNzEyLWU2MDc0OTg3YjlhOCIsIm5vbmNlIjoiMjQwY2QxZjctMzkyZC00ZTkwLTllM2EtMzEzOTJmZWJkNWVmIn19.jhnKczFKw8ckWuVeQg31RfPf_5rpIQy0x1dGS4b70fc\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 3e2f7933-4048-4771-a919-cfc27393f307",
+      "createdAt": "2026-05-20T04:29:22.162Z"
+    },
+    "retryCount": 0
   }
 ]
