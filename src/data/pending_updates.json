@@ -156,5 +156,39 @@
       "createdAt": "2026-05-20T03:09:13.497Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "32dfc7e0-acc2-44dd-abc2-6b17dbf89df7",
+    "queuedAt": "2026-05-20T03:44:47.378Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "bb6055fb-a08e-475c-ac8c-d79a380501f0",
+      "name": "Shreya Lalwani",
+      "email": "shreya.lalwani.83@gmail.com",
+      "phone": "+919638565034",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/bb6055fb-a08e-475c-ac8c-d79a380501f0.pdf",
+      "createdAt": "2026-05-20T03:44:45.784Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T03:44:45.784Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Shreya Lalwani",
+            "email": "shreya.lalwani.83@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "resumeFilePath": "data/resumes/applications/2026/05/bb6055fb-a08e-475c-ac8c-d79a380501f0.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
