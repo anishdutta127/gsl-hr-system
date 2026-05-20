@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "846037a5-7a23-43cb-a763-0b56f235a924",
+    "queuedAt": "2026-05-20T02:24:14.806Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e82d66e2-2330-43c8-a629-6176c42391c4",
+      "name": "Nishith Intwala",
+      "email": "nishithi1012@gmail.com",
+      "phone": "9833077387",
+      "source": "Application",
+      "notes": "I was part of Uniform Junction 2021 - 2022 for Mumbai Region",
+      "resumeFilePath": "data/resumes/applications/2026/05/e82d66e2-2330-43c8-a629-6176c42391c4.pdf",
+      "createdAt": "2026-05-20T02:24:13.519Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-20T02:24:13.519Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Nishith Intwala",
+            "email": "nishithi1012@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "resumeFilePath": "data/resumes/applications/2026/05/e82d66e2-2330-43c8-a629-6176c42391c4.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
