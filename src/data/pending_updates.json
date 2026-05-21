@@ -86,5 +86,24 @@
       "notes": "Rejected: Not Qualified for Role"
     },
     "retryCount": 0
+  },
+  {
+    "id": "eb50219f-99be-4fa9-bad3-4ffe66015fad",
+    "queuedAt": "2026-05-21T07:11:23.030Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "0a96eb06-5120-431c-b58a-9d8c59efd56e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/05/0a96eb06-5120-431c-b58a-9d8c59efd56e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Suraj Chopade - L&D (Content) - Resume (2).pdf, 152 KB)."
+    },
+    "retryCount": 0
   }
 ]
