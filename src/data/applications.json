@@ -3146,8 +3146,8 @@
     "id": "5b88a9bf-f38e-4965-b712-e6074987b9a8",
     "candidateId": "3e2f7933-4048-4771-a919-cfc27393f307",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-21T07:26:36.865Z",
+    "currentStage": "Shortlisted",
+    "stageEnteredAt": "2026-05-21T10:56:30.860Z",
     "createdAt": "2026-05-20T04:29:19.294Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -3198,6 +3198,32 @@
         "after": {
           "currentStage": "Sourced",
           "stageEnteredAt": "2026-05-21T07:26:36.865Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-21T13:39:46.257Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-21T07:26:36.865Z"
+        },
+        "after": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-05-21T10:37:18.333Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-21T13:39:46.264Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-21T07:26:36.865Z"
+        },
+        "after": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-05-21T10:56:30.860Z"
         }
       }
     ]
@@ -3470,8 +3496,8 @@
     "id": "2a09aa12-2d64-4c78-ae21-5a77f57841b6",
     "candidateId": "0a96eb06-5120-431c-b58a-9d8c59efd56e",
     "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-21T07:25:17.887Z",
+    "currentStage": "HODRoundScheduled",
+    "stageEnteredAt": "2026-05-21T10:56:36.242Z",
     "createdAt": "2026-05-21T07:25:17.887Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -3485,6 +3511,32 @@
           "currentStage": "Sourced"
         },
         "notes": "Bulk-added to Senior Academics Manager pipeline."
+      },
+      {
+        "timestamp": "2026-05-21T13:39:46.261Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-21T07:25:17.887Z"
+        },
+        "after": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-21T10:37:22.990Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-21T13:39:46.267Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-21T07:25:17.887Z"
+        },
+        "after": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-21T10:56:36.242Z"
+        }
       }
     ]
   }
