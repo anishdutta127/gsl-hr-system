@@ -3264,5 +3264,26 @@
         "notes": "Moved from Senior Academics Manager."
       }
     ]
+  },
+  {
+    "id": "2a69308a-3b19-45d8-bb65-a25c076519d7",
+    "candidateId": "8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-20T23:56:07.790Z",
+    "createdAt": "2026-05-20T23:56:07.790Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-20T23:56:07.790Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]

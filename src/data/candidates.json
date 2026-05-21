@@ -8308,5 +8308,31 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b",
+    "name": "Amit Kumar Pandey",
+    "email": "amitpandey386030@gmail.com",
+    "phone": "9696676001",
+    "source": "Application",
+    "notes": "To work for students, learnings, and long term engagement opportunity with organization.",
+    "resumeFilePath": "data/resumes/applications/2026/05/8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b.pdf",
+    "createdAt": "2026-05-20T23:56:07.790Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-20T23:56:07.790Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Amit Kumar Pandey",
+          "email": "amitpandey386030@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
