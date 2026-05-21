@@ -8306,8 +8306,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-05-21T10:24:11.782Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/05/0a96eb06-5120-431c-b58a-9d8c59efd56e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Suraj Chopade - L&D (Content) - Resume (2).pdf, 152 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/05/0a96eb06-5120-431c-b58a-9d8c59efd56e.pdf"
   },
   {
     "id": "8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b",
@@ -8332,6 +8345,74 @@
           "resumeFilePath": "data/resumes/applications/2026/05/8cf8fd52-a0e6-4a5a-ab5c-cd439f5eaa8b.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "2a78af8f-5bff-4b18-a896-cfce5597a7df",
+    "name": "Hussain",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sales Manager",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-21.",
+    "createdAt": "2026-05-21T07:17:48.133Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-21T07:17:48.133Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Hussain",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "51c84371-3eb3-48ed-8a71-5d090431dbbb",
+    "name": "Rajesh",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sales Manager",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-21.",
+    "createdAt": "2026-05-21T07:24:34.247Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-21T07:24:34.247Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Rajesh",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
       }
     ]
   }
