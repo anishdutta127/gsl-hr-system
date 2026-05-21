@@ -147,5 +147,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "6bbf2725-fbc0-4556-ace5-76591aeb1cde",
+    "queuedAt": "2026-05-21T07:24:34.248Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "51c84371-3eb3-48ed-8a71-5d090431dbbb",
+      "name": "Rajesh",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Sales Manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-21.",
+      "createdAt": "2026-05-21T07:24:34.247Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-21T07:24:34.247Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rajesh",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
