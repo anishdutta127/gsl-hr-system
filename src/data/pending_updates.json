@@ -105,5 +105,47 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Suraj Chopade - L&D (Content) - Resume (2).pdf, 152 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "2f9e1374-7376-43ea-ae4c-2eb5538b39c9",
+    "queuedAt": "2026-05-21T07:17:48.136Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2a78af8f-5bff-4b18-a896-cfce5597a7df",
+      "name": "Hussain",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Sales Manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-21.",
+      "createdAt": "2026-05-21T07:17:48.133Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-21T07:17:48.133Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Hussain",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
