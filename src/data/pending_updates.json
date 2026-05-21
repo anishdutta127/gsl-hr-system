@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": "0a363de0-a822-471d-866e-b7af74d6650e",
+    "queuedAt": "2026-05-21T07:04:37.964Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "1095426f-a125-4327-851f-264e823e5a4a",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "HODRoundScheduled",
+        "stageEnteredAt": "2026-05-19T06:17:12.766Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-21T07:04:37.963Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0
+  }
+]
