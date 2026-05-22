@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "c6558c1e-27b4-4b65-91d9-f7c3cdfa14dc",
+    "queuedAt": "2026-05-22T05:30:25.101Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "279cc1b9-2f9d-47e3-801e-df14104b68b0",
+      "name": "Rupam Ghosal",
+      "email": "rupamrider568@gmail.com",
+      "phone": "7903941872",
+      "source": "Application",
+      "notes": "I have stem experience of 3+ years",
+      "resumeFilePath": "data/resumes/applications/2026/05/279cc1b9-2f9d-47e3-801e-df14104b68b0.pdf",
+      "createdAt": "2026-05-22T05:30:23.868Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-22T05:30:23.868Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rupam Ghosal",
+            "email": "rupamrider568@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/279cc1b9-2f9d-47e3-801e-df14104b68b0.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
