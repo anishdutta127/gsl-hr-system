@@ -10458,5 +10458,87 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-21T13:39:46.270Z"
+  },
+  {
+    "id": "c6558c1e-27b4-4b65-91d9-f7c3cdfa14dc",
+    "queuedAt": "2026-05-22T05:30:25.101Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "279cc1b9-2f9d-47e3-801e-df14104b68b0",
+      "name": "Rupam Ghosal",
+      "email": "rupamrider568@gmail.com",
+      "phone": "7903941872",
+      "source": "Application",
+      "notes": "I have stem experience of 3+ years",
+      "resumeFilePath": "data/resumes/applications/2026/05/279cc1b9-2f9d-47e3-801e-df14104b68b0.pdf",
+      "createdAt": "2026-05-22T05:30:23.868Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-22T05:30:23.868Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rupam Ghosal",
+            "email": "rupamrider568@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/279cc1b9-2f9d-47e3-801e-df14104b68b0.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-22T06:36:15.118Z"
+  },
+  {
+    "id": "bd5016c2-0731-405e-ac1b-37682e9f5035",
+    "queuedAt": "2026-05-22T05:30:26.118Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "351f832f-1785-4262-aece-63abde68f7fe",
+      "candidateId": "279cc1b9-2f9d-47e3-801e-df14104b68b0",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-22T05:30:23.868Z",
+      "createdAt": "2026-05-22T05:30:23.868Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-22T05:30:23.868Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "279cc1b9-2f9d-47e3-801e-df14104b68b0",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-22T06:36:15.121Z"
+  },
+  {
+    "id": "4d0d72b7-7c2a-40ed-b907-7b91a958bd43",
+    "queuedAt": "2026-05-22T05:30:26.984Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "08b26286-9584-497b-9043-6fa7f22303a3",
+      "to": "rupamrider568@gmail.com",
+      "subject": "We received your application for STEM Trainer at GSL",
+      "body": "Hi Rupam,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTQyNzgyNiwiZXhwaXJlc0F0IjoxNzc5NDI4NzI2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMjc5Y2MxYjktMmY5ZC00N2UzLTgwMWUtZGYxNDEwNGI2OGIwIiwiYXBwbGljYXRpb25JZCI6IjM1MWY4MzJmLTE3ODUtNDI2Mi1hZWNlLTYzYWJkZTY4ZjdmZSIsIm5vbmNlIjoiZDdmMzY0MjUtNDgzZS00M2FjLTg3YjUtNDRlYzI3ZTBmYzMwIn19.bO92nijES2Y1ZUuMhQmwxJ8E5L2Ud0PPLpiVpJMBZiQ\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 279cc1b9-2f9d-47e3-801e-df14104b68b0",
+      "createdAt": "2026-05-22T05:30:26.984Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-22T06:36:15.122Z"
   }
 ]
