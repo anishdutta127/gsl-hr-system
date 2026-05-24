@@ -77,5 +77,39 @@
       "createdAt": "2026-05-24T03:17:12.469Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "e853fc41-a637-4de8-88b7-3ffec6f1bf2b",
+    "queuedAt": "2026-05-24T06:18:10.784Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "d76a7bcc-c947-4da2-80c6-03d0147a9aba",
+      "name": "Naqiya Pardawala",
+      "email": "naqiya.parda@gmail.com",
+      "phone": "9022768964",
+      "source": "Application",
+      "notes": "Hi,\r\nI came across the opening for the Senior Academics role and wanted to express my interest. At Blix, I have been actively managing academic programs, student engagement, team coordination, and operational processes, which has helped me build strong leadership and academic management skills. I would love the opportunity to bring my experience and contribution to your organization.\r\nLooking forward to connecting with you.",
+      "resumeFilePath": "data/resumes/applications/2026/05/d76a7bcc-c947-4da2-80c6-03d0147a9aba.pdf",
+      "createdAt": "2026-05-24T06:18:09.418Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-24T06:18:09.418Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Naqiya Pardawala",
+            "email": "naqiya.parda@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/d76a7bcc-c947-4da2-80c6-03d0147a9aba.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
