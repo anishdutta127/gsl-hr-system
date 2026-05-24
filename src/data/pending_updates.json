@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "db461ffa-7149-4304-84c8-f7f94dca39f3",
+    "queuedAt": "2026-05-24T03:17:10.855Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "0f477d35-4391-4977-ac5f-09e1b7427fc2",
+      "name": "Vishal Verma",
+      "email": "Vish.ver007@gmail.com",
+      "phone": "79061 91446",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/0f477d35-4391-4977-ac5f-09e1b7427fc2.pdf",
+      "createdAt": "2026-05-24T03:17:09.553Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-24T03:17:09.553Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vishal Verma",
+            "email": "Vish.ver007@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/0f477d35-4391-4977-ac5f-09e1b7427fc2.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
