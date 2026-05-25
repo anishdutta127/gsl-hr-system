@@ -8491,6 +8491,82 @@
           "resumeFilePath": "data/resumes/applications/2026/05/d76a7bcc-c947-4da2-80c6-03d0147a9aba.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-05-25T11:07:41.329Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
+      }
+    ]
+  },
+  {
+    "id": "a750997e-33a6-4039-9572-50032ce4856e",
+    "name": "Parth",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sales manager",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-25.",
+    "createdAt": "2026-05-25T10:20:32.415Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-25T10:20:32.415Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Parth",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "e2570f72-2047-4f8a-a4b2-715d2474d94b",
+    "name": "Hassan",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Sales Manager",
+    "tags": {
+      "programmes": [
+        "Sales"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-25.",
+    "createdAt": "2026-05-25T10:21:17.835Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-25T10:21:17.835Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Hassan",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Sales"
+          ]
+        },
+        "notes": "Created via paste-in import."
       }
     ]
   }
