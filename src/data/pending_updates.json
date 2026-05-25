@@ -106,5 +106,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "8e23b38b-1f7b-4750-b994-64e61a0d1d06",
+    "queuedAt": "2026-05-25T10:21:17.835Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e2570f72-2047-4f8a-a4b2-715d2474d94b",
+      "name": "Hassan",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Sales Manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-25.",
+      "createdAt": "2026-05-25T10:21:17.835Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-25T10:21:17.835Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Hassan",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
