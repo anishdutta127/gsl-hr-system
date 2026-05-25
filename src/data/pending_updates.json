@@ -333,5 +333,28 @@
       "notes": "Rejected: Other. Duplicate profile"
     },
     "retryCount": 0
+  },
+  {
+    "id": "a3081606-886f-4e99-bb0b-a23a3aef22e8",
+    "queuedAt": "2026-05-25T11:01:07.897Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "351f832f-1785-4262-aece-63abde68f7fe",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-22T05:30:23.868Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-25T11:01:07.896Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Language issue"
+      },
+      "notes": "Rejected: Other. Language issue"
+    },
+    "retryCount": 0
   }
 ]
