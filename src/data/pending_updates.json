@@ -356,5 +356,27 @@
       "notes": "Rejected: Other. Language issue"
     },
     "retryCount": 0
+  },
+  {
+    "id": "be9976be-7202-4047-be37-1e8ca2a90dab",
+    "queuedAt": "2026-05-25T11:01:56.741Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "1e6db2ad-51d1-4d63-83c0-09c0b58a80fe",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-20T03:09:09.809Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-25T11:01:56.741Z",
+        "rejectionReason": "Better Match Elsewhere"
+      },
+      "notes": "Rejected: Better Match Elsewhere"
+    },
+    "retryCount": 0
   }
 ]
