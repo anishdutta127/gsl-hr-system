@@ -64,5 +64,47 @@
       "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "b5e3b1e8-228d-47f0-bb79-bbfe77787a4b",
+    "queuedAt": "2026-05-25T10:20:32.416Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "a750997e-33a6-4039-9572-50032ce4856e",
+      "name": "Parth",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Sales manager",
+      "tags": {
+        "programmes": [
+          "Sales"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-05-25.",
+      "createdAt": "2026-05-25T10:20:32.415Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-25T10:20:32.415Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Parth",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Sales"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
