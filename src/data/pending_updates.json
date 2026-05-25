@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": "3dded1fe-970b-489c-9255-327f0e8bde5b",
+    "queuedAt": "2026-05-25T10:13:02.347Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "9a2e16a2-7266-4064-9beb-0a2bd19962c2",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-24T06:18:09.418Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-05-25T10:13:02.347Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0
+  }
+]
