@@ -646,5 +646,29 @@
         "notes": "Re-seeded by seed_users.mjs — password reset to starter."
       }
     ]
+  },
+  {
+    "id": "f63cf4d5-f2bc-440b-903e-022beab647a0",
+    "email": "gsl-testing@getsetlearn.info",
+    "name": "GSL Testing",
+    "role": "Admin",
+    "bcryptHash": "$2b$12$9/bOWbWQ1eWd30as1uEBdeypY5GzxD4eDofbMSWFq9zFs6W022pIO",
+    "createdAt": "2026-05-27T10:00:00.000Z",
+    "active": true,
+    "ownedRoleIds": [],
+    "auditLog": [
+      {
+        "timestamp": "2026-05-27T10:00:00.000Z",
+        "user": "anish.d@getsetlearn.info",
+        "action": "user.create",
+        "after": {
+          "email": "gsl-testing@getsetlearn.info",
+          "name": "GSL Testing",
+          "role": "Admin",
+          "active": true
+        },
+        "notes": "Testing account with full Admin access. Starter password: GSL#123."
+      }
+    ]
   }
 ]
