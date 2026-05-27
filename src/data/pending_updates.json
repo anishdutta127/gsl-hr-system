@@ -120,5 +120,60 @@
       "createdAt": "2026-05-27T07:42:20.075Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "a8e547d7-ca66-4c8c-9104-50ea15a6f948",
+    "queuedAt": "2026-05-27T07:48:49.492Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "title": "Instructional Designer",
+      "department": "Academics",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HOD2RoundScheduled",
+        "HOD2RoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities:</strong></p><ul><li><p>Lead the design of lessons, activities, and assessments aligned with <strong>NEP 2020, NCF, and SDG-linked priorities</strong>.</p></li><li><p>Curriculum design as per NEP 2020 and global standards and mapping to the same</p></li><li><p>Ensure strong alignment between learning objectives, pedagogy, activities, and assessments.</p></li><li><p>Apply experiential, learner-centric, and inquiry-driven approaches purposefully.</p></li><li><p>Develop and review learning materials, teacher guides, assessment and other resources.</p></li><li><p>Ensure age-appropriateness, conceptual accuracy, and cognitive load balance.</p></li><li><p>Identify and resolve instructional gaps or misalignments.</p></li><li><p>Work closely with academic, editorial, media, and delivery teams to ensure quality outcomes.</p></li></ul><p><strong>Skills sets:</strong></p><ol><li><p>Team management skills</p></li><li><p>Excellent written and oral communication</p></li><li><p>Readiness to explore latest EdTech and AI tools</p></li><li><p>Awareness about latest trends in K12 education</p></li><li><p>Research oriented</p></li></ol><p><strong>Qualifications:</strong></p><ul><li><p>Degree or postgraduate diploma in <strong>Instructional Design, Education, or related fields</strong>.</p></li><li><p>B.Sc/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Sc\">M.Sc</a>./ B.Tech/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Tech\">M.Tech</a> - STEM background preferred.</p></li></ul><p><strong>Experience:</strong></p><ul><li><p><strong>Minimum 4-6years of experience</strong> in instructional design, learning design, or content development.</p></li><li><p><strong>Preferred:</strong> Experience with K–12 and/or STEM-related programmes.</p></li></ul><p>&nbsp;</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-05-27T07:48:49.491Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-27T07:48:49.491Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Instructional Designer",
+            "department": "Academics",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
