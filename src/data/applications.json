@@ -851,8 +851,8 @@
     "id": "32c47981-a270-4487-aad8-05953b13c8f1",
     "candidateId": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
     "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-    "currentStage": "HODRoundScheduled",
-    "stageEnteredAt": "2026-05-19T06:18:16.683Z",
+    "currentStage": "HODRoundDone",
+    "stageEnteredAt": "2026-05-27T07:00:36.765Z",
     "createdAt": "2026-05-12T14:09:54.170Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -890,6 +890,19 @@
         "after": {
           "currentStage": "HODRoundScheduled",
           "stageEnteredAt": "2026-05-19T06:18:16.683Z"
+        }
+      },
+      {
+        "timestamp": "2026-05-27T10:43:15.009Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "HODRoundScheduled",
+          "stageEnteredAt": "2026-05-19T06:18:16.683Z"
+        },
+        "after": {
+          "currentStage": "HODRoundDone",
+          "stageEnteredAt": "2026-05-27T07:00:36.765Z"
         }
       }
     ]
@@ -3985,8 +3998,8 @@
     "id": "555b8fd5-e4c8-4943-9936-f208586588fa",
     "candidateId": "d76a7bcc-c947-4da2-80c6-03d0147a9aba",
     "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-05-25T10:13:02.347Z",
+    "currentStage": "Rejected",
+    "stageEnteredAt": "2026-05-27T07:01:27.750Z",
     "createdAt": "2026-05-25T10:13:02.347Z",
     "createdBy": "Hiring@getsetlearn.info",
     "auditLog": [
@@ -4000,6 +4013,45 @@
           "currentStage": "Sourced"
         },
         "notes": "Moved from Senior Academics Manager."
+      },
+      {
+        "timestamp": "2026-05-27T10:43:15.012Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-05-25T10:13:02.347Z"
+        },
+        "after": {
+          "currentStage": "Rejected",
+          "stageEnteredAt": "2026-05-27T07:01:27.750Z",
+          "rejectionReason": "Other",
+          "rejectionNotes": "Location issue"
+        },
+        "notes": "Rejected: Other. Location issue"
+      }
+    ],
+    "rejectionReason": "Other",
+    "rejectionNotes": "Location issue"
+  },
+  {
+    "id": "ed2c85a3-3f54-452c-ac71-c11af58af448",
+    "candidateId": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+    "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-27T07:42:16.864Z",
+    "createdAt": "2026-05-27T07:42:16.864Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-27T07:42:16.864Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "currentStage": "Sourced"
+        }
       }
     ]
   }

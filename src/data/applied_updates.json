@@ -11409,5 +11409,188 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-25T11:07:41.450Z"
+  },
+  {
+    "id": "5371ffae-34ac-4b8c-a67d-6a627aaaa84b",
+    "queuedAt": "2026-05-27T07:00:36.766Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "32c47981-a270-4487-aad8-05953b13c8f1",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "HODRoundScheduled",
+        "stageEnteredAt": "2026-05-19T06:18:16.683Z"
+      },
+      "after": {
+        "currentStage": "HODRoundDone",
+        "stageEnteredAt": "2026-05-27T07:00:36.765Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.012Z"
+  },
+  {
+    "id": "46ae823e-97c8-4044-8d40-0936dc272778",
+    "queuedAt": "2026-05-27T07:01:27.751Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "555b8fd5-e4c8-4943-9936-f208586588fa",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-25T10:13:02.347Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-05-27T07:01:27.750Z",
+        "rejectionReason": "Other",
+        "rejectionNotes": "Location issue"
+      },
+      "notes": "Rejected: Other. Location issue"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.015Z"
+  },
+  {
+    "id": "aa0628fe-78bb-4a67-834d-2b4b3c4bb848",
+    "queuedAt": "2026-05-27T07:42:17.932Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+      "name": "diwakar pandey",
+      "email": "diwakar.riju@gmail.com",
+      "phone": "9111009887",
+      "source": "Application",
+      "notes": "10+ years of EdTech & Publishing exp.\r\n15 years of overall sales exp.",
+      "resumeFilePath": "data/resumes/applications/2026/05/f8c22234-106f-4da3-a26e-8ceefbeb1e6b.pdf",
+      "createdAt": "2026-05-27T07:42:16.864Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-27T07:42:16.864Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "diwakar pandey",
+            "email": "diwakar.riju@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/f8c22234-106f-4da3-a26e-8ceefbeb1e6b.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.036Z"
+  },
+  {
+    "id": "5bf99b19-f98e-4914-9edb-3ea241ee3d94",
+    "queuedAt": "2026-05-27T07:42:18.786Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "ed2c85a3-3f54-452c-ac71-c11af58af448",
+      "candidateId": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-27T07:42:16.864Z",
+      "createdAt": "2026-05-27T07:42:16.864Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-27T07:42:16.864Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.040Z"
+  },
+  {
+    "id": "6aff4b82-22b1-4a68-a131-83cfebb6e25f",
+    "queuedAt": "2026-05-27T07:42:20.075Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "e2abee8f-bee3-43a5-af06-fda6a7b45a77",
+      "to": "diwakar.riju@gmail.com",
+      "subject": "We received your application for Senior Academics Manager at GSL",
+      "body": "Hi diwakar,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTg2Nzc0MCwiZXhwaXJlc0F0IjoxNzc5ODY4NjQwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZjhjMjIyMzQtMTA2Zi00ZGEzLWEyNmUtOGNlZWZiZWIxZTZiIiwiYXBwbGljYXRpb25JZCI6ImVkMmM4NWEzLTNmNTQtNDUyYy1hYzcxLWMxMWFmNThhZjQ0OCIsIm5vbmNlIjoiNzQ5MWY3MDItZTRkMi00NmZiLWIxMDktNzc4OGM3YWI2ZDFhIn19.phn2BNmisjIN_SiSq0AT6I070oroqoLkbIVVOaZ1KUQ\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+      "createdAt": "2026-05-27T07:42:20.075Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.041Z"
+  },
+  {
+    "id": "a8e547d7-ca66-4c8c-9104-50ea15a6f948",
+    "queuedAt": "2026-05-27T07:48:49.492Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "title": "Instructional Designer",
+      "department": "Academics",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HOD2RoundScheduled",
+        "HOD2RoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities:</strong></p><ul><li><p>Lead the design of lessons, activities, and assessments aligned with <strong>NEP 2020, NCF, and SDG-linked priorities</strong>.</p></li><li><p>Curriculum design as per NEP 2020 and global standards and mapping to the same</p></li><li><p>Ensure strong alignment between learning objectives, pedagogy, activities, and assessments.</p></li><li><p>Apply experiential, learner-centric, and inquiry-driven approaches purposefully.</p></li><li><p>Develop and review learning materials, teacher guides, assessment and other resources.</p></li><li><p>Ensure age-appropriateness, conceptual accuracy, and cognitive load balance.</p></li><li><p>Identify and resolve instructional gaps or misalignments.</p></li><li><p>Work closely with academic, editorial, media, and delivery teams to ensure quality outcomes.</p></li></ul><p><strong>Skills sets:</strong></p><ol><li><p>Team management skills</p></li><li><p>Excellent written and oral communication</p></li><li><p>Readiness to explore latest EdTech and AI tools</p></li><li><p>Awareness about latest trends in K12 education</p></li><li><p>Research oriented</p></li></ol><p><strong>Qualifications:</strong></p><ul><li><p>Degree or postgraduate diploma in <strong>Instructional Design, Education, or related fields</strong>.</p></li><li><p>B.Sc/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Sc\">M.Sc</a>./ B.Tech/ <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://M.Tech\">M.Tech</a> - STEM background preferred.</p></li></ul><p><strong>Experience:</strong></p><ul><li><p><strong>Minimum 4-6years of experience</strong> in instructional design, learning design, or content development.</p></li><li><p><strong>Preferred:</strong> Experience with K–12 and/or STEM-related programmes.</p></li></ul><p>&nbsp;</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-05-27T07:48:49.491Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-27T07:48:49.491Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Instructional Designer",
+            "department": "Academics",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-27T10:43:15.041Z"
   }
 ]
