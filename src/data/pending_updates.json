@@ -41,5 +41,39 @@
       "notes": "Rejected: Other. Location issue"
     },
     "retryCount": 0
+  },
+  {
+    "id": "aa0628fe-78bb-4a67-834d-2b4b3c4bb848",
+    "queuedAt": "2026-05-27T07:42:17.932Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "f8c22234-106f-4da3-a26e-8ceefbeb1e6b",
+      "name": "diwakar pandey",
+      "email": "diwakar.riju@gmail.com",
+      "phone": "9111009887",
+      "source": "Application",
+      "notes": "10+ years of EdTech & Publishing exp.\r\n15 years of overall sales exp.",
+      "resumeFilePath": "data/resumes/applications/2026/05/f8c22234-106f-4da3-a26e-8ceefbeb1e6b.pdf",
+      "createdAt": "2026-05-27T07:42:16.864Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-27T07:42:16.864Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "diwakar pandey",
+            "email": "diwakar.riju@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/f8c22234-106f-4da3-a26e-8ceefbeb1e6b.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
