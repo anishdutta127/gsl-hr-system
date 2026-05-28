@@ -77,5 +77,39 @@
       "createdAt": "2026-05-28T01:35:20.928Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "ba299e42-14b6-44ec-bc9a-98adf857e790",
+    "queuedAt": "2026-05-28T05:10:05.608Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+      "name": "Ankita Chaudhary",
+      "email": "ngganguly3@gmail.com",
+      "phone": "+919903044288",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf",
+      "createdAt": "2026-05-28T05:10:04.092Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T05:10:04.092Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ankita Chaudhary",
+            "email": "ngganguly3@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
