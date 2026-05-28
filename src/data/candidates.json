@@ -8673,5 +8673,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "3f7b3ef4-2d56-48ef-ac16-c5163874abde",
+    "name": "Sudhanshu Alaram Deshpande",
+    "email": "sdeshpande1708@gmail.com",
+    "phone": "7028865099",
+    "source": "Application",
+    "notes": "I am excited for this role",
+    "resumeFilePath": "data/resumes/applications/2026/05/3f7b3ef4-2d56-48ef-ac16-c5163874abde.pdf",
+    "createdAt": "2026-05-28T06:41:07.341Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T06:41:07.341Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Sudhanshu Alaram Deshpande",
+          "email": "sdeshpande1708@gmail.com",
+          "source": "Application",
+          "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+          "resumeFilePath": "data/resumes/applications/2026/05/3f7b3ef4-2d56-48ef-ac16-c5163874abde.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
