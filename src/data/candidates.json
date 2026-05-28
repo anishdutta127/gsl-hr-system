@@ -8699,5 +8699,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "37640a3b-2a98-4c7a-aa63-881d6a2d49e7",
+    "name": "Tejas Bhagat",
+    "email": "tejasbhagat90@gmail.com",
+    "phone": "7620051714",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/37640a3b-2a98-4c7a-aa63-881d6a2d49e7.pdf",
+    "createdAt": "2026-05-28T12:53:09.664Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T12:53:09.664Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Tejas Bhagat",
+          "email": "tejasbhagat90@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/05/37640a3b-2a98-4c7a-aa63-881d6a2d49e7.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
