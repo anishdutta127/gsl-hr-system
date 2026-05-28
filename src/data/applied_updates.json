@@ -11592,5 +11592,251 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-05-27T10:43:15.041Z"
+  },
+  {
+    "id": "404174e2-2c5e-4136-a349-e3cbbef19a02",
+    "queuedAt": "2026-05-28T01:35:19.303Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+      "name": "Vikas Sambhaiji Kolhe",
+      "email": "vikas.kolhe.tech@gmail.com",
+      "phone": "9637520386",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf",
+      "createdAt": "2026-05-28T01:35:18.172Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T01:35:18.172Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vikas Sambhaiji Kolhe",
+            "email": "vikas.kolhe.tech@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.759Z"
+  },
+  {
+    "id": "e51c8af0-c603-4cd4-bff4-fc2399ff63b1",
+    "queuedAt": "2026-05-28T01:35:20.059Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "09a8b249-4759-46ab-9bc6-a92bb0beeaf3",
+      "candidateId": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-28T01:35:18.172Z",
+      "createdAt": "2026-05-28T01:35:18.172Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T01:35:18.172Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.763Z"
+  },
+  {
+    "id": "48c50edb-8d73-4522-927e-6bd43f7dd5ea",
+    "queuedAt": "2026-05-28T01:35:20.928Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "b57e18c1-0352-4857-87c1-913aa34e444a",
+      "to": "vikas.kolhe.tech@gmail.com",
+      "subject": "We received your application for STEM Trainer at GSL",
+      "body": "Hi Vikas,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTkzMjEyMCwiZXhwaXJlc0F0IjoxNzc5OTMzMDIwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMzZmYTViODctNWVhMi00ZGU4LWE3NTItMTA0ODNiMTE3YzM5IiwiYXBwbGljYXRpb25JZCI6IjA5YThiMjQ5LTQ3NTktNDZhYi05YmM2LWE5MmJiMGJlZWFmMyIsIm5vbmNlIjoiNDgwNDliOGEtNWJkOS00ZWQwLWJjOTItYzkzMWNlNDdhNjFiIn19.fuPc9UaKmCRXgbbwGRQ1D-0mL_yu_A4qOtkMVRw0pDY\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 36fa5b87-5ea2-4de8-a752-10483b117c39",
+      "createdAt": "2026-05-28T01:35:20.928Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.764Z"
+  },
+  {
+    "id": "ba299e42-14b6-44ec-bc9a-98adf857e790",
+    "queuedAt": "2026-05-28T05:10:05.608Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+      "name": "Ankita Chaudhary",
+      "email": "ngganguly3@gmail.com",
+      "phone": "+919903044288",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf",
+      "createdAt": "2026-05-28T05:10:04.092Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T05:10:04.092Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ankita Chaudhary",
+            "email": "ngganguly3@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.786Z"
+  },
+  {
+    "id": "32cd25c0-46e1-45ac-ad1d-5def21625fc5",
+    "queuedAt": "2026-05-28T05:10:06.496Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "abc1ea25-d388-4af5-8292-5e263c17a63b",
+      "candidateId": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-28T05:10:04.092Z",
+      "createdAt": "2026-05-28T05:10:04.092Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T05:10:04.092Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.790Z"
+  },
+  {
+    "id": "f1002a81-6dbe-4f04-8e20-135bfb359fe5",
+    "queuedAt": "2026-05-28T05:10:07.396Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "9db5ea16-0577-42ff-aff2-f37a4cc58ac4",
+      "to": "ngganguly3@gmail.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Ankita,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTk0NTAwNywiZXhwaXJlc0F0IjoxNzc5OTQ1OTA3LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYWY4Mzg3MDYtMjQ2Zi00ZDQxLThiY2ItNWQyMmViMDlmZGM3IiwiYXBwbGljYXRpb25JZCI6ImFiYzFlYTI1LWQzODgtNGFmNS04MjkyLTVlMjYzYzE3YTYzYiIsIm5vbmNlIjoiYjMzZjcxYWQtZTU1Ni00ZWYyLTliNzAtNDRkZmRmMThkMWIyIn19.izNYDRMjqNMBTzgEEU9R_y7sEDxyhzRpMaZtoglF_Ko\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate af838706-246f-4d41-8bcb-5d22eb09fdc7",
+      "createdAt": "2026-05-28T05:10:07.396Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.791Z"
+  },
+  {
+    "id": "7822c081-c8f1-4576-b7e5-186bbb32ca8b",
+    "queuedAt": "2026-05-28T06:15:04.603Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "5f09dead-052d-4449-bd79-1cfee285610a",
+      "name": "Kanchan Wagaralkar",
+      "email": "kwagaralkar27@gmail.com",
+      "phone": "8108349844",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/5f09dead-052d-4449-bd79-1cfee285610a.pdf",
+      "createdAt": "2026-05-28T06:15:03.435Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T06:15:03.435Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Kanchan Wagaralkar",
+            "email": "kwagaralkar27@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/05/5f09dead-052d-4449-bd79-1cfee285610a.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.811Z"
+  },
+  {
+    "id": "550a2d23-bf97-4d23-b81b-54fdb7f4f057",
+    "queuedAt": "2026-05-28T06:15:05.530Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "baf41ed5-8a01-42f0-9594-4314d0218fc7",
+      "candidateId": "5f09dead-052d-4449-bd79-1cfee285610a",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-05-28T06:15:03.435Z",
+      "createdAt": "2026-05-28T06:15:03.435Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T06:15:03.435Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "5f09dead-052d-4449-bd79-1cfee285610a",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.816Z"
+  },
+  {
+    "id": "72cd3029-5493-49e3-a42b-6ff0377f6ecc",
+    "queuedAt": "2026-05-28T06:15:06.577Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "e4603651-03f0-4b33-b5db-4a880f86b3f6",
+      "to": "kwagaralkar27@gmail.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Kanchan,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3OTk0ODkwNiwiZXhwaXJlc0F0IjoxNzc5OTQ5ODA2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNWYwOWRlYWQtMDUyZC00NDQ5LWJkNzktMWNmZWUyODU2MTBhIiwiYXBwbGljYXRpb25JZCI6ImJhZjQxZWQ1LThhMDEtNDJmMC05NTk0LTQzMTRkMDIxOGZjNyIsIm5vbmNlIjoiZjZhNDEwOWItM2I3Yy00MjA0LTk5ZDctMTk2YWU0ZjAxOGIxIn19.JgfbIX0sYJDo79xRWumw95ml3LahL8DvF9tkntpm9K0\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 5f09dead-052d-4449-bd79-1cfee285610a",
+      "createdAt": "2026-05-28T06:15:06.577Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-05-28T06:40:36.817Z"
   }
 ]

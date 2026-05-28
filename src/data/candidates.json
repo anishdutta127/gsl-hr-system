@@ -8595,5 +8595,83 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+    "name": "Vikas Sambhaiji Kolhe",
+    "email": "vikas.kolhe.tech@gmail.com",
+    "phone": "9637520386",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf",
+    "createdAt": "2026-05-28T01:35:18.172Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T01:35:18.172Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Vikas Sambhaiji Kolhe",
+          "email": "vikas.kolhe.tech@gmail.com",
+          "source": "Application",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+    "name": "Ankita Chaudhary",
+    "email": "ngganguly3@gmail.com",
+    "phone": "+919903044288",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf",
+    "createdAt": "2026-05-28T05:10:04.092Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T05:10:04.092Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ankita Chaudhary",
+          "email": "ngganguly3@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/05/af838706-246f-4d41-8bcb-5d22eb09fdc7.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "5f09dead-052d-4449-bd79-1cfee285610a",
+    "name": "Kanchan Wagaralkar",
+    "email": "kwagaralkar27@gmail.com",
+    "phone": "8108349844",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/5f09dead-052d-4449-bd79-1cfee285610a.pdf",
+    "createdAt": "2026-05-28T06:15:03.435Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T06:15:03.435Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Kanchan Wagaralkar",
+          "email": "kwagaralkar27@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/05/5f09dead-052d-4449-bd79-1cfee285610a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]

@@ -4054,5 +4054,68 @@
         }
       }
     ]
+  },
+  {
+    "id": "09a8b249-4759-46ab-9bc6-a92bb0beeaf3",
+    "candidateId": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+    "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-28T01:35:18.172Z",
+    "createdAt": "2026-05-28T01:35:18.172Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T01:35:18.172Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+          "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "abc1ea25-d388-4af5-8292-5e263c17a63b",
+    "candidateId": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+    "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-28T05:10:04.092Z",
+    "createdAt": "2026-05-28T05:10:04.092Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T05:10:04.092Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "af838706-246f-4d41-8bcb-5d22eb09fdc7",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "baf41ed5-8a01-42f0-9594-4314d0218fc7",
+    "candidateId": "5f09dead-052d-4449-bd79-1cfee285610a",
+    "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-05-28T06:15:03.435Z",
+    "createdAt": "2026-05-28T06:15:03.435Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-28T06:15:03.435Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "5f09dead-052d-4449-bd79-1cfee285610a",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]
