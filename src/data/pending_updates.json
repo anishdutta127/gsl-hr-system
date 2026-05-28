@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "404174e2-2c5e-4136-a349-e3cbbef19a02",
+    "queuedAt": "2026-05-28T01:35:19.303Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "36fa5b87-5ea2-4de8-a752-10483b117c39",
+      "name": "Vikas Sambhaiji Kolhe",
+      "email": "vikas.kolhe.tech@gmail.com",
+      "phone": "9637520386",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf",
+      "createdAt": "2026-05-28T01:35:18.172Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-28T01:35:18.172Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vikas Sambhaiji Kolhe",
+            "email": "vikas.kolhe.tech@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/36fa5b87-5ea2-4de8-a752-10483b117c39.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
