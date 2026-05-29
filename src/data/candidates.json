@@ -8725,5 +8725,57 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "a59199e8-c853-4060-b522-e76d37382910",
+    "name": "Astha Goyal",
+    "email": "asthagoyal08@gmail.com",
+    "phone": "9060599191",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/a59199e8-c853-4060-b522-e76d37382910.pdf",
+    "createdAt": "2026-05-29T06:49:18.582Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-29T06:49:18.582Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Astha Goyal",
+          "email": "asthagoyal08@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/05/a59199e8-c853-4060-b522-e76d37382910.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "eeba7739-972b-4f21-8720-f8e2f422f303",
+    "name": "Ankita Chaudhary",
+    "email": "ngganguly3@gmail.com",
+    "phone": "+919903044288",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/05/eeba7739-972b-4f21-8720-f8e2f422f303.pdf",
+    "createdAt": "2026-05-29T07:05:06.485Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-05-29T07:05:06.485Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ankita Chaudhary",
+          "email": "ngganguly3@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/05/eeba7739-972b-4f21-8720-f8e2f422f303.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
