@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "d6565e9a-4667-409e-bec5-8162af3045b9",
+    "queuedAt": "2026-05-29T06:49:19.676Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "a59199e8-c853-4060-b522-e76d37382910",
+      "name": "Astha Goyal",
+      "email": "asthagoyal08@gmail.com",
+      "phone": "9060599191",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/a59199e8-c853-4060-b522-e76d37382910.pdf",
+      "createdAt": "2026-05-29T06:49:18.582Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-29T06:49:18.582Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Astha Goyal",
+            "email": "asthagoyal08@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/05/a59199e8-c853-4060-b522-e76d37382910.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
