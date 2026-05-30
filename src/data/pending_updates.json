@@ -77,5 +77,39 @@
       "createdAt": "2026-05-30T12:07:18.030Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "92907de2-43d5-4c01-bcee-cfd6126240b9",
+    "queuedAt": "2026-05-30T16:27:51.904Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "d5eba072-c0bb-4524-958e-7761672c153f",
+      "name": "Chandan Panday",
+      "email": "chandanpanday729@gmail.com",
+      "phone": "+919455186010",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/05/d5eba072-c0bb-4524-958e-7761672c153f.pdf",
+      "createdAt": "2026-05-30T16:27:51.082Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-30T16:27:51.082Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Chandan Panday",
+            "email": "chandanpanday729@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/d5eba072-c0bb-4524-958e-7761672c153f.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
