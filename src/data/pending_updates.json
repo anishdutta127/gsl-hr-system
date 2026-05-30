@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "ea141b27-99a7-4f8c-b56f-e2c989fea87b",
+    "queuedAt": "2026-05-30T12:07:16.763Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "60e9a966-fcb5-4367-aea2-8e0ae6a06703",
+      "name": "Marini Devi",
+      "email": "marini.r9@gmail.com",
+      "phone": "+918870821809",
+      "source": "Application",
+      "notes": "opportunity to contribute to student learning and educational innovation. My background in training, curriculum development, and learner engagement aligns well with the role, and I am excited about being part of an organization that focuses on enhancing K-12 education and creating meaningful learning experiences for students.",
+      "resumeFilePath": "data/resumes/applications/2026/05/60e9a966-fcb5-4367-aea2-8e0ae6a06703.pdf",
+      "createdAt": "2026-05-30T12:07:15.939Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-30T12:07:15.939Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Marini Devi",
+            "email": "marini.r9@gmail.com",
+            "source": "Application",
+            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
+            "resumeFilePath": "data/resumes/applications/2026/05/60e9a966-fcb5-4367-aea2-8e0ae6a06703.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
