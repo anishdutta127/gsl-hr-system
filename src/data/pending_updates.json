@@ -156,5 +156,39 @@
       "createdAt": "2026-05-30T16:27:53.391Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "eba3368f-5f03-43f0-b76d-6fb108400e88",
+    "queuedAt": "2026-05-31T19:37:51.717Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "491db043-9305-406d-947a-9b5fc30144bb",
+      "name": "Srikesh Iyer",
+      "email": "srikesh1112@gmail.com",
+      "phone": "+918871025411",
+      "source": "Application",
+      "notes": "Application: Senior Academics Manager – Srikesh Iyer (M.Tech Robotics, 5+ Yrs K-12 EdTech)\r\n​Hi!\r\n​I am applying for the Senior Academics Manager position. With an M.Tech in Robotics from IIT Gandhinagar and 5+ years driving K–12 EdTech operations, my background perfectly bridges deep STEM expertise with scalable curriculum execution.\r\n​I am a strong fit for this role because I bring:\r\n​Robotics & STEM Pedagogy: My foundation in experiential, inquiry-based STEM was built at IITGN—working hands-on with the Creative Learning Initiative (CLI) and Nyasa—and through my IEEE/Neurorobotics publications.\r\n​Pedagogical Rigor: I hold a B.Ed. and am CTET-qualified, ensuring my curriculum frameworks strictly adhere to cognitive load balance and national academic standards.\r\n​Curriculum & Delivery at Scale: I have overseen the end-to-end design of 4,500+ K–12 content decks and 100+ chapters.\r\n​Teacher Training & Implementation: I have designed training for and managed 80+ mentors/Master Teachers, and successfully implemented programs across 15+ partner schools (MOUs).\r\n​I would love to bring my technical background and systems-driven approach to your academic team.\r\n​Best regards,\r\n​Srikesh Iyer",
+      "resumeFilePath": "data/resumes/applications/2026/05/491db043-9305-406d-947a-9b5fc30144bb.pdf",
+      "createdAt": "2026-05-31T19:37:50.603Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-05-31T19:37:50.603Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Srikesh Iyer",
+            "email": "srikesh1112@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/05/491db043-9305-406d-947a-9b5fc30144bb.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
