@@ -565,5 +565,27 @@
       "notes": "Rejected: Position Filled"
     },
     "retryCount": 0
+  },
+  {
+    "id": "cbaab9fa-a703-4f4d-b4c5-82f8e530c549",
+    "queuedAt": "2026-06-01T05:48:35.459Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "09a8b249-4759-46ab-9bc6-a92bb0beeaf3",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-28T01:35:18.172Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-01T05:48:35.459Z",
+        "rejectionReason": "Position Filled"
+      },
+      "notes": "Rejected: Position Filled"
+    },
+    "retryCount": 0
   }
 ]
