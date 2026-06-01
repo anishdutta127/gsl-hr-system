@@ -21,5 +21,26 @@
       "notes": "Paused by Hiring@getsetlearn.info. Reason: The hiring has been paused for the month."
     },
     "retryCount": 0
+  },
+  {
+    "id": "699c9eb4-94b9-47fe-89ae-84a1903259ea",
+    "queuedAt": "2026-06-01T09:48:40.793Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "6c9f84fa-e2c4-4c06-a09a-2211122417a8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-30T12:07:15.939Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-06-01T09:48:40.793Z"
+      },
+      "notes": "Moved to Senior Academics Manager. Notes: Better fit in the other role."
+    },
+    "retryCount": 0
   }
 ]
