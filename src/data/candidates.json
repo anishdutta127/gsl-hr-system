@@ -8801,6 +8801,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/60e9a966-fcb5-4367-aea2-8e0ae6a06703.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-06-01T13:47:35.352Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: STEM Trainer → Senior Academics Manager. Notes: Better fit in the other role."
       }
     ]
   },
@@ -8853,6 +8861,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/491db043-9305-406d-947a-9b5fc30144bb.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-06-01T13:47:35.398Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
       }
     ]
   }

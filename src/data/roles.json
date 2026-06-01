@@ -290,7 +290,7 @@
     "department": "Other",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Paused",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -326,8 +326,41 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-06-01T13:47:35.334Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.pause",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Paused",
+          "pauseReason": "The hiring has been paused for the month."
+        },
+        "notes": "Paused by Hiring@getsetlearn.info. Reason: The hiring has been paused for the month."
+      },
+      {
+        "timestamp": "2026-06-01T13:47:35.415Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.pause",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Paused",
+          "pauseReason": "Awaiting management clearance."
+        },
+        "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting management clearance."
       }
-    ]
+    ],
+    "pauseReason": "Awaiting management clearance."
   },
   {
     "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
@@ -380,7 +413,7 @@
     "department": "STEM",
     "location": "Remote",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Paused",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -416,8 +449,25 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-06-01T13:47:35.414Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.pause",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Paused",
+          "pauseReason": null
+        },
+        "notes": "Paused by Hiring@getsetlearn.info."
       }
-    ]
+    ],
+    "pauseReason": null
   },
   {
     "id": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
