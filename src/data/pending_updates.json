@@ -240,5 +240,28 @@
       "notes": "Paused by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "1d16a6a4-1a84-4fa7-b858-ce938e543c7d",
+    "queuedAt": "2026-06-01T12:35:58.009Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": "Awaiting management clearance."
+      },
+      "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting management clearance."
+    },
+    "retryCount": 0
   }
 ]
