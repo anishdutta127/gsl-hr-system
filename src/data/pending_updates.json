@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "44055e0d-0fe2-4226-a0fb-9f5cec8482aa",
+    "queuedAt": "2026-06-01T09:48:00.263Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": "The hiring has been paused for the month."
+      },
+      "notes": "Paused by Hiring@getsetlearn.info. Reason: The hiring has been paused for the month."
+    },
+    "retryCount": 0
+  }
+]
