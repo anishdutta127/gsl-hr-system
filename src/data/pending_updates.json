@@ -42,5 +42,35 @@
       "notes": "Moved to Senior Academics Manager. Notes: Better fit in the other role."
     },
     "retryCount": 0
+  },
+  {
+    "id": "132129ed-a6e9-4951-8678-4cb3b5f1dbcc",
+    "queuedAt": "2026-06-01T09:48:41.709Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "a796c97e-f454-4a38-80e4-60fb9163b210",
+      "candidateId": "60e9a966-fcb5-4367-aea2-8e0ae6a06703",
+      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-01T09:48:40.793Z",
+      "createdAt": "2026-06-01T09:48:40.793Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-01T09:48:40.793Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "60e9a966-fcb5-4367-aea2-8e0ae6a06703",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from STEM Trainer. Notes: Better fit in the other role."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
