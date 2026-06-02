@@ -8923,5 +8923,107 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "4b86b1a3-37aa-493f-b6e9-76432a5277b4",
+    "name": "Sayan Karmakar",
+    "email": "sayan.karmakar123@gmail.com",
+    "phone": "9635701334",
+    "source": "Application",
+    "notes": "",
+    "createdAt": "2026-06-02T13:16:49.068Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T13:16:49.068Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Sayan Karmakar",
+          "email": "sayan.karmakar123@gmail.com",
+          "source": "Application",
+          "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3"
+        },
+        "notes": "Self-applied via /careers (no resume attached)."
+      }
+    ]
+  },
+  {
+    "id": "c7765bd1-c842-48d9-badf-c37ce91ebb17",
+    "name": "Anushree yadav",
+    "email": "yanushree25@gmail.com",
+    "phone": "+919610040514",
+    "source": "Application",
+    "notes": "I am applying for the post as I seek growth and diversity in my career",
+    "resumeFilePath": "data/resumes/applications/2026/06/c7765bd1-c842-48d9-badf-c37ce91ebb17.pdf",
+    "createdAt": "2026-06-02T13:23:27.210Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T13:23:27.210Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Anushree yadav",
+          "email": "yanushree25@gmail.com",
+          "source": "Application",
+          "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+          "resumeFilePath": "data/resumes/applications/2026/06/c7765bd1-c842-48d9-badf-c37ce91ebb17.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "2464c950-c743-454e-b41b-32cf53fb8f01",
+    "name": "Anushree yadav",
+    "email": "yanushree25@gmail.com",
+    "phone": "+919610040514",
+    "source": "Application",
+    "notes": "I am applying for the post so as to seek diversity and growth in my career and further was looking for such great opportunities.",
+    "resumeFilePath": "data/resumes/applications/2026/06/2464c950-c743-454e-b41b-32cf53fb8f01.pdf",
+    "createdAt": "2026-06-02T13:25:49.643Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T13:25:49.643Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Anushree yadav",
+          "email": "yanushree25@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/06/2464c950-c743-454e-b41b-32cf53fb8f01.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "40f32ad7-ad9b-4a09-9a9f-7b85db09ae32",
+    "name": "Vibhav Bansal",
+    "email": "bansal.vibhav04@gmail.com",
+    "phone": "9818971737",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/40f32ad7-ad9b-4a09-9a9f-7b85db09ae32.pdf",
+    "createdAt": "2026-06-02T13:36:25.302Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T13:36:25.302Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Vibhav Bansal",
+          "email": "bansal.vibhav04@gmail.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/06/40f32ad7-ad9b-4a09-9a9f-7b85db09ae32.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
