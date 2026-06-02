@@ -154,5 +154,39 @@
       "createdAt": "2026-06-02T13:23:30.928Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "03c02eff-6a98-4b03-8011-11b299966ae7",
+    "queuedAt": "2026-06-02T13:25:51.088Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2464c950-c743-454e-b41b-32cf53fb8f01",
+      "name": "Anushree yadav",
+      "email": "yanushree25@gmail.com",
+      "phone": "+919610040514",
+      "source": "Application",
+      "notes": "I am applying for the post so as to seek diversity and growth in my career and further was looking for such great opportunities.",
+      "resumeFilePath": "data/resumes/applications/2026/06/2464c950-c743-454e-b41b-32cf53fb8f01.pdf",
+      "createdAt": "2026-06-02T13:25:49.643Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T13:25:49.643Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Anushree yadav",
+            "email": "yanushree25@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/2464c950-c743-454e-b41b-32cf53fb8f01.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
