@@ -77,5 +77,39 @@
       "createdAt": "2026-06-02T17:53:33.801Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4e991827-e518-41f2-b953-fb41b5654a02",
+    "queuedAt": "2026-06-02T19:35:40.489Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "98064795-198d-4e8f-9ebd-102a9ba825ed",
+      "name": "Apeksha Gautam",
+      "email": "apekshagautam09@gmail.com",
+      "phone": "9541942250",
+      "source": "Application",
+      "notes": "I am excited to apply for this role, since I believe through this position, I shall be able to utilise my skills and research experience in the field of education quite well, and would be able to bring a real impact in the lives of young learners.",
+      "resumeFilePath": "data/resumes/applications/2026/06/98064795-198d-4e8f-9ebd-102a9ba825ed.pdf",
+      "createdAt": "2026-06-02T19:35:39.281Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T19:35:39.281Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Apeksha Gautam",
+            "email": "apekshagautam09@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/98064795-198d-4e8f-9ebd-102a9ba825ed.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
