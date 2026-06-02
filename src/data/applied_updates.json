@@ -1,264 +1,5 @@
 [
   {
-    "id": "7090a39c-f3a5-424f-afbc-7b7c3e7585e4",
-    "queuedAt": "2026-04-27T11:11:12.868Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "05d927d2-16ab-5c02-64e3-4290bfc3cb04",
-      "operation": "email.sent",
-      "before": {},
-      "after": {
-        "templateId": "OFFER-ANNOUNCE",
-        "templateTitle": "Offer email (with letter attached)"
-      },
-      "notes": "Bulk-send: \"Offer email (with letter attached)\" logged for Cvaishashafiqurrehman."
-    },
-    "retryCount": 0,
-    "failedAt": "2026-04-29T07:50:48.619Z",
-    "failureReason": "Unknown update operation: email.sent",
-    "appliedAt": "2026-04-29T09:55:34.466Z"
-  },
-  {
-    "id": "5dd44bd6-464a-46e7-9909-2b11976d0d8f",
-    "queuedAt": "2026-04-29T10:49:05.396Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "update",
-    "payload": {
-      "id": "309952f2-092f-49af-9fb3-49976d230e76",
-      "operation": "role.close",
-      "before": {
-        "status": "Open",
-        "pauseReason": null,
-        "closeOutcome": null,
-        "closeNotes": null
-      },
-      "after": {
-        "status": "Closed",
-        "closeOutcome": "Cancelled",
-        "closeNotes": null
-      },
-      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.733Z"
-  },
-  {
-    "id": "27e69a67-23bf-41e0-9837-204c386c19b3",
-    "queuedAt": "2026-04-29T10:49:19.375Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "update",
-    "payload": {
-      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
-      "operation": "role.close",
-      "before": {
-        "status": "Open",
-        "pauseReason": null,
-        "closeOutcome": null,
-        "closeNotes": null
-      },
-      "after": {
-        "status": "Closed",
-        "closeOutcome": "Cancelled",
-        "closeNotes": null
-      },
-      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.733Z"
-  },
-  {
-    "id": "28f3c113-2203-4cde-9fdd-7836e85061b0",
-    "queuedAt": "2026-04-29T10:50:56.342Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "04e1c341-41c4-42e6-9e4e-6a104124ef80",
-      "name": "Ashish Mane",
-      "email": "",
-      "phone": "",
-      "source": "HRTeam",
-      "searchableText": "Bright Champs",
-      "tags": {
-        "programmes": [
-          "Sales"
-        ]
-      },
-      "status": "Active",
-      "consentedAt": null,
-      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
-      "createdAt": "2026-04-29T10:50:56.342Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-29T10:50:56.342Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "candidate.create",
-          "after": {
-            "name": "Ashish Mane",
-            "email": "",
-            "source": "HRTeam",
-            "programmes": [
-              "Sales"
-            ]
-          },
-          "notes": "Created via paste-in import."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.753Z"
-  },
-  {
-    "id": "2074ed59-0657-4498-aa98-1c2ec69077e0",
-    "queuedAt": "2026-04-29T10:59:23.280Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
-      "name": "Vishal Mane",
-      "email": "vishalspatil.695@gmail.com",
-      "phone": "",
-      "source": "HRTeam",
-      "searchableText": "Content Developer",
-      "tags": {
-        "programmes": [
-          "Academics"
-        ]
-      },
-      "status": "Active",
-      "consentedAt": null,
-      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-29.",
-      "createdAt": "2026-04-29T10:59:23.280Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-29T10:59:23.280Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "candidate.create",
-          "after": {
-            "name": "Vishal Mane",
-            "email": "vishalspatil.695@gmail.com",
-            "source": "HRTeam",
-            "programmes": [
-              "Academics"
-            ]
-          },
-          "notes": "Created via paste-in import."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.770Z"
-  },
-  {
-    "id": "20520cc7-8cc8-4d7c-8bd9-80172a7e38b0",
-    "queuedAt": "2026-04-29T11:02:39.106Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
-      "operation": "email.sent",
-      "before": {},
-      "after": {
-        "templateId": "ASSESSMENT-INVITE",
-        "templateTitle": "Assessment invite"
-      },
-      "notes": "Bulk-send: \"Assessment invite\" logged for 26 Shubham Maurya."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.787Z"
-  },
-  {
-    "id": "b5702292-91a8-4a28-a217-932c9fa52eaf",
-    "queuedAt": "2026-04-29T11:09:34.452Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "update",
-    "payload": {
-      "id": "309952f2-092f-49af-9fb3-49976d230e76",
-      "operation": "role.close",
-      "before": {
-        "status": "Open",
-        "pauseReason": null,
-        "closeOutcome": null,
-        "closeNotes": null
-      },
-      "after": {
-        "status": "Closed",
-        "closeOutcome": "Cancelled",
-        "closeNotes": null
-      },
-      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.787Z"
-  },
-  {
-    "id": "0d565611-ce3b-4930-86ef-3e80e45a0fa0",
-    "queuedAt": "2026-04-29T11:09:45.591Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "update",
-    "payload": {
-      "id": "96379265-314b-4ed9-943f-c9685d67ad2a",
-      "operation": "role.close",
-      "before": {
-        "status": "Open",
-        "pauseReason": null,
-        "closeOutcome": null,
-        "closeNotes": null
-      },
-      "after": {
-        "status": "Closed",
-        "closeOutcome": "Cancelled",
-        "closeNotes": null
-      },
-      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.788Z"
-  },
-  {
-    "id": "8ff778e0-08b0-48fa-899f-7633138dcaa5",
-    "queuedAt": "2026-04-29T11:22:20.727Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "e5121645-5147-4b31-bcf3-cc35de473811",
-      "name": "Shruti Patkie",
-      "email": "sup0107@gmail.com",
-      "phone": "9820362829",
-      "source": "Application",
-      "notes": "The work culture.",
-      "createdAt": "2026-04-29T11:22:20.726Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-29T11:22:20.726Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Shruti Patkie",
-            "email": "sup0107@gmail.com",
-            "source": "Application",
-            "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd"
-          },
-          "notes": "Self-applied via /careers"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.805Z"
-  },
-  {
     "id": "c7953ab7-d407-4093-a75f-9fb6fb1509df",
     "queuedAt": "2026-04-29T11:22:21.643Z",
     "queuedBy": "public:careers",
@@ -12844,5 +12585,248 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-01T13:47:35.416Z"
+  },
+  {
+    "id": "d9e31dfb-5bf3-4eca-b03c-673a2fb3af25",
+    "queuedAt": "2026-06-02T06:55:13.984Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "354c030e-7d4a-5d1f-54cd-23fba729a562",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-04-30",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-04-30."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.842Z"
+  },
+  {
+    "id": "9339a07e-8d8a-4179-a792-be7b1cd9d3d2",
+    "queuedAt": "2026-06-02T06:58:18.105Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "57873a98-aede-520c-3828-2d545c600f48",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.858Z"
+  },
+  {
+    "id": "2d1e1375-e78c-478e-9d5a-e40b684441d2",
+    "queuedAt": "2026-06-02T07:00:06.016Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "9c9b0042-b87a-53f0-db69-d08d51d67f3d",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-20",
+          "reason": "Suspension",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-20."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.872Z"
+  },
+  {
+    "id": "ad9bd847-e8ce-4903-9f29-5d4667546521",
+    "queuedAt": "2026-06-02T07:06:00.236Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "72216e73-158d-52c2-7acc-854cd6a4555a",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-13",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-13."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.887Z"
+  },
+  {
+    "id": "8d8b7651-b484-407c-98d1-29ac06b8ea18",
+    "queuedAt": "2026-06-02T07:08:11.083Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-01-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-01-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.902Z"
+  },
+  {
+    "id": "a29f0903-cf34-47f7-b0ae-f2c191a95d36",
+    "queuedAt": "2026-06-02T07:09:29.690Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "fb4400da-d6ec-5c2d-9ae1-fb867cd61606",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-01-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-01-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.917Z"
+  },
+  {
+    "id": "4926bdf9-1f57-4925-84da-20191f07ce31",
+    "queuedAt": "2026-06-02T07:10:46.976Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "070be06a-2682-546e-4412-72edf09d471e",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2024-12-03",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2024-12-03."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.932Z"
+  },
+  {
+    "id": "b7e46393-c68e-4e07-ac6e-49a1f9bd4f4c",
+    "queuedAt": "2026-06-02T07:11:29.337Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "12eb7afa-2221-5758-6ad7-63a6dd9a7d8a",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-01-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-01-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.947Z"
+  },
+  {
+    "id": "824f858a-e3b2-4244-8879-d3c55e465bdb",
+    "queuedAt": "2026-06-02T07:12:25.438Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "2a9d38f1-e5e6-58fe-8ef2-e596af55e618",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-01-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-01-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T07:13:41.962Z"
   }
 ]
