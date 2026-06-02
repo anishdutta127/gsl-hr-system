@@ -312,5 +312,31 @@
       "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
     },
     "retryCount": 0
+  },
+  {
+    "id": "990d9c60-7c63-4be1-a76a-ae47f255b7b7",
+    "queuedAt": "2026-06-02T09:37:40.190Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "5364378a-9f51-57e2-6551-f238fdf39cee",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-28",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
+    },
+    "retryCount": 0
   }
 ]
