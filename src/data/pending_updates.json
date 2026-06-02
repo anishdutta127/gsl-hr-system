@@ -128,5 +128,32 @@
       "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
     },
     "retryCount": 0
+  },
+  {
+    "id": "f7f6c5fc-c883-48bf-8fa7-86352986b960",
+    "queuedAt": "2026-06-02T09:19:29.907Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "04e6bc2e-79de-501a-12c9-022958efcc9e",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-04-17",
+          "reason": "Suspension",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Solvelt platform discontinuation."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-04-17."
+    },
+    "retryCount": 0
   }
 ]
