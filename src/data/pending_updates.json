@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "id": "a310063e-0817-43ca-ab40-b953f9be5f07",
+    "queuedAt": "2026-06-02T13:16:49.070Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "4b86b1a3-37aa-493f-b6e9-76432a5277b4",
+      "name": "Sayan Karmakar",
+      "email": "sayan.karmakar123@gmail.com",
+      "phone": "9635701334",
+      "source": "Application",
+      "notes": "",
+      "createdAt": "2026-06-02T13:16:49.068Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T13:16:49.068Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Sayan Karmakar",
+            "email": "sayan.karmakar123@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3"
+          },
+          "notes": "Self-applied via /careers (no resume attached)."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
