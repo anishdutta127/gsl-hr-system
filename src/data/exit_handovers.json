@@ -39,5 +39,46 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Haris Hashmi",
+          "completedAt": "2026-05-15",
+          "notes": "Completed"
+        }
+      ]
+    },
+    "createdAt": "2026-06-02T07:04:08.655Z",
+    "updatedAt": "2026-06-02T07:04:08.655Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T07:04:08.655Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
