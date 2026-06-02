@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "d9e31dfb-5bf3-4eca-b03c-673a2fb3af25",
+    "queuedAt": "2026-06-02T06:55:13.984Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "354c030e-7d4a-5d1f-54cd-23fba729a562",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-04-30",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-04-30."
+    },
+    "retryCount": 0
+  }
+]
