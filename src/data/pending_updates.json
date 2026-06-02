@@ -338,5 +338,39 @@
       "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
     },
     "retryCount": 0
+  },
+  {
+    "id": "182b8f7e-db89-4b91-8e66-a1760113ba11",
+    "queuedAt": "2026-06-02T11:24:35.603Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+      "name": "Akanksha Jain",
+      "email": "akankshabt.jain@gmail.com",
+      "phone": "7610303832",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf",
+      "createdAt": "2026-06-02T11:24:34.390Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T11:24:34.390Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Akanksha Jain",
+            "email": "akankshabt.jain@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
