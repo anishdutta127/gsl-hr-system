@@ -1,1 +1,43 @@
-[]
+[
+  {
+    "employeeId": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
+    "templateUsed": "Standard",
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Balu Mahendran",
+          "completedAt": "2026-04-07",
+          "notes": ""
+        }
+      ]
+    },
+    "createdAt": "2026-06-02T07:01:39.349Z",
+    "updatedAt": "2026-06-02T07:01:39.349Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T07:01:39.349Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": "Standard",
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
+  }
+]
