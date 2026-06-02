@@ -1,534 +1,5 @@
 [
   {
-    "id": "c7953ab7-d407-4093-a75f-9fb6fb1509df",
-    "queuedAt": "2026-04-29T11:22:21.643Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "db941086-6481-4209-9990-cdad0dcd4b4c",
-      "candidateId": "e5121645-5147-4b31-bcf3-cc35de473811",
-      "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-04-29T11:22:20.726Z",
-      "createdAt": "2026-04-29T11:22:20.726Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-29T11:22:20.726Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "e5121645-5147-4b31-bcf3-cc35de473811",
-            "roleId": "7804934c-1226-40fb-86a2-6345ef68c3fd",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.805Z"
-  },
-  {
-    "id": "d1cee6b4-cf59-470e-93ae-dfc06abf7d55",
-    "queuedAt": "2026-04-29T11:22:22.508Z",
-    "queuedBy": "system",
-    "entity": "careers_application",
-    "operation": "create",
-    "payload": {
-      "_kind": "outbound-mail",
-      "to": "sup0107@gmail.com",
-      "subject": "We received your application for Pre-Sales Intern at GSL",
-      "body": "Hi Shruti,\n\nThanks for applying for Pre-Sales Intern at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzQ2MTc0MiwiZXhwaXJlc0F0IjoxNzc3NDYyNjQyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUxMjE2NDUtNTE0Ny00YjMxLWJjZjMtY2MzNWRlNDczODExIiwiYXBwbGljYXRpb25JZCI6ImRiOTQxMDg2LTY0ODEtNDIwOS05OTkwLWNkYWQwZGNkNGI0YyIsIm5vbmNlIjoiZDE4NGY3NzQtYjY3ZS00MDQ1LWJiNGUtZjcyZTcyNDQwZjdmIn19.UnYolQxkrDrCpzDHxIhybTieEmy0mhAqsbh7gx4NFVU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate e5121645-5147-4b31-bcf3-cc35de473811",
-      "createdAt": "2026-04-29T11:22:22.508Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T11:23:35.828Z"
-  },
-  {
-    "id": "89e02c1e-1c20-4c6b-8309-602809c24728",
-    "queuedAt": "2026-04-29T12:03:23.519Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "create",
-    "payload": {
-      "id": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "title": "Senior Academics Manager",
-      "department": "Academics",
-      "location": "Mumbai",
-      "employmentType": "Full-time",
-      "status": "Open",
-      "pipelineStages": [
-        "Sourced",
-        "Shortlisted",
-        "AssessmentSent",
-        "AssessmentDone",
-        "VideoSent",
-        "VideoDone",
-        "HODRoundScheduled",
-        "HODRoundDone",
-        "HOD2RoundScheduled",
-        "HOD2RoundDone",
-        "HRRoundScheduled",
-        "HRRoundDone",
-        "Offered",
-        "OfferAccepted",
-        "DocsCollected",
-        "Joined"
-      ],
-      "rubric": [],
-      "description": "Role Purpose: \nTo lead the design, structuring, and quality governance of K–12 instructional and \ncurriculum frameworks in STEM, Robotics, Coding, Artificial Intelligence, etc., translating \nacademic content into coherent, age-appropriate, and classroom-ready learning \nresources that are pedagogically robust, consistent, and implementation-feasible. \n\nKey Responsibilities: \n• Structure end-to-end curriculum frameworks and learning progressions across K–12 \nin STEM, Robotics, Coding, and AI. \n• Ensure strong alignment between curriculum intent, instructional design \nmethodology, hands-on activities, projects, and assessment strategies. \n• Embed experiential, inquiry-based, problem-solving, and learner-centric \npedagogical approaches within curriculum designs. \n• Be responsible for design and development of teaching – learning resources, to \nensure academic accuracy, conceptual clarity, consistency across grades and \nalignment with NEP 2020 recommendations, NCF guidelines and SDG goals. \n• Ensure age-appropriateness, cognitive load balance, and practical classroom \nfeasibility of learning designs, including lab and activity components. \n• Identify design gaps, redundancies, or misalignments and recommend data\ninformed improvements to enhance learning effectiveness. \n• Collaborate closely with academic, product, and delivery teams to ensure \ncurriculum/ content usability, teacher readiness, and smooth classroom \nimplementation. \n• Be responsible for the design, development and quality of teacher training design. \n\nQualifications: \nB.Tech / M.Tech in Engineering, Technology, or a related STEM discipline \nExperience:  \n• Minimum 5 years of experience in K–12 curriculum and content design for STEM, \nRobotics, Coding, and AI. \n• Exposure to classroom implementation, pilots, or teacher training is preferred. \n\nCore Competencies: \n• Strong understanding of STEM, Robotics, Coding, and AI concepts at the K–12 level. \n• Solid grounding in K–12 pedagogy and curriculum structuring. \n• Clear understanding of school board alignment requirements for STEM, Robotics, and \nAI. \n• Ability to guide teams, maintain design standards, and ensure consistency across \ngrades. \n• Strong attention to academic accuracy, design quality, and classroom feasibility.",
-      "responsibilities": [],
-      "mustHaves": [],
-      "niceToHaves": [],
-      "createdAt": "2026-04-29T12:03:23.517Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-29T12:03:23.517Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "role.create",
-          "after": {
-            "title": "Senior Academics Manager",
-            "department": "Academics",
-            "location": "Mumbai",
-            "employmentType": "Full-time"
-          },
-          "notes": "Created via UI"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-29T13:00:59.653Z"
-  },
-  {
-    "id": "85a29f7e-8eee-4600-9cbc-d825895347f0",
-    "queuedAt": "2026-04-30T06:38:26.968Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "9056ef85-77cb-4d82-8cdc-686416ee336e",
-      "candidateId": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-04-30T06:38:26.951Z",
-      "createdAt": "2026-04-30T06:38:26.951Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T06:38:26.951Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "application.create",
-          "after": {
-            "candidateId": "00a56c80-3b7d-40eb-a734-3bd39a94f71e",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          },
-          "notes": "Bulk-added to Senior Academics Manager pipeline."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T07:54:22.048Z"
-  },
-  {
-    "id": "d679c751-1897-4ea3-83af-64654b1e471f",
-    "queuedAt": "2026-04-30T06:39:50.251Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "450078a1-00ed-49bf-b936-6e3085b5f149",
-      "name": "Akshay Tawde",
-      "email": "aki.agenious@gmail.com",
-      "phone": "",
-      "source": "HRTeam",
-      "searchableText": "LEAD School - Academic Advisor",
-      "tags": {
-        "programmes": [
-          "Academics"
-        ]
-      },
-      "status": "Active",
-      "consentedAt": null,
-      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-30.",
-      "createdAt": "2026-04-30T06:39:50.251Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T06:39:50.251Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "candidate.create",
-          "after": {
-            "name": "Akshay Tawde",
-            "email": "aki.agenious@gmail.com",
-            "source": "HRTeam",
-            "programmes": [
-              "Academics"
-            ]
-          },
-          "notes": "Created via paste-in import."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T07:54:22.068Z"
-  },
-  {
-    "id": "03686e55-e998-4a01-a23f-52e58b73a53b",
-    "queuedAt": "2026-04-30T09:12:56.010Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "81f3ee04-75ad-4da0-ae1b-1ce0e15213a9",
-      "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-04-30T09:12:55.991Z",
-      "createdAt": "2026-04-30T09:12:55.991Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T09:12:55.991Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "application.create",
-          "after": {
-            "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          },
-          "notes": "Bulk-added to Senior Academics Manager pipeline."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T09:56:06.849Z"
-  },
-  {
-    "id": "e66dd67a-4b37-42d6-910e-842fac597560",
-    "queuedAt": "2026-04-30T09:21:58.668Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "0535e7dd-019d-468f-8488-21f064815a7e",
-      "name": "Rajesh Vishwakarma",
-      "email": "",
-      "phone": "",
-      "source": "HRTeam",
-      "searchableText": "Business Development Manager",
-      "tags": {
-        "programmes": [
-          "Sales"
-        ]
-      },
-      "status": "Active",
-      "consentedAt": null,
-      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-04-30.",
-      "createdAt": "2026-04-30T09:21:58.666Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T09:21:58.666Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "candidate.create",
-          "after": {
-            "name": "Rajesh Vishwakarma",
-            "email": "",
-            "source": "HRTeam",
-            "programmes": [
-              "Sales"
-            ]
-          },
-          "notes": "Created via paste-in import."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T09:56:06.868Z"
-  },
-  {
-    "id": "7db7ba52-a8ff-4ce0-8ab5-cf04bede7db6",
-    "queuedAt": "2026-04-30T09:23:28.988Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "203262c3-e475-4d22-9ec7-044d3cf7e9df",
-      "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-04-30T09:23:28.971Z",
-      "createdAt": "2026-04-30T09:23:28.971Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T09:23:28.971Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "application.create",
-          "after": {
-            "candidateId": "450078a1-00ed-49bf-b936-6e3085b5f149",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          },
-          "notes": "Bulk-added to Senior Academics Manager pipeline."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T09:56:06.868Z"
-  },
-  {
-    "id": "a708ba86-3322-4cfd-9d72-2d1363193b91",
-    "queuedAt": "2026-04-30T10:18:51.045Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "create",
-    "payload": {
-      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-      "title": "Sales Executive",
-      "department": "Other",
-      "location": "Mumbai",
-      "employmentType": "Full-time",
-      "status": "Open",
-      "pipelineStages": [
-        "Sourced",
-        "Shortlisted",
-        "AssessmentSent",
-        "AssessmentDone",
-        "VideoSent",
-        "VideoDone",
-        "HODRoundScheduled",
-        "HODRoundDone",
-        "HRRoundScheduled",
-        "HRRoundDone",
-        "Offered",
-        "OfferAccepted",
-        "DocsCollected",
-        "Joined"
-      ],
-      "rubric": [],
-      "description": "Job Responsibilities:\n\nAcquire and convert schools into long-term partners for Robotics, AI & STEM programs\nOwn the full sales cycle — lead generation to closure\nDeliver demos and presentations to school decision-makers\nManage relationships with existing partner schools to drive retention and cross-sell\nGenerate leads via field visits, referrals, and events\nCoordinate smooth program onboarding with academic and ops teams\nMaintain daily visit logs and weekly sales reports",
-      "responsibilities": [],
-      "mustHaves": [],
-      "niceToHaves": [],
-      "createdAt": "2026-04-30T10:18:51.044Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-04-30T10:18:51.044Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "role.create",
-          "after": {
-            "title": "Sales Executive",
-            "department": "Other",
-            "location": "Mumbai",
-            "employmentType": "Full-time"
-          },
-          "notes": "Created via UI"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-04-30T11:23:05.718Z"
-  },
-  {
-    "id": "9cd5e210-d89d-46a7-bce9-a73d0b5f9601",
-    "queuedAt": "2026-05-01T10:40:42.053Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
-      "name": "Sourabh Naresh Pithode",
-      "email": "spithode008@gmail.com",
-      "phone": "8888641148",
-      "source": "Application",
-      "notes": "As I have 9+ years of experience and that to 6+ dedicated to this field , so I think I am right feet to this role",
-      "createdAt": "2026-05-01T10:40:42.051Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-01T10:40:42.051Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Sourabh Naresh Pithode",
-            "email": "spithode008@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
-          },
-          "notes": "Self-applied via /careers"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T11:01:34.721Z"
-  },
-  {
-    "id": "0b38814b-3761-4827-8725-5c531dc2d526",
-    "queuedAt": "2026-05-01T10:40:42.821Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "b0902fcd-78e6-457f-9bd7-18881e7ede9d",
-      "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-01T10:40:42.051Z",
-      "createdAt": "2026-05-01T10:40:42.051Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-01T10:40:42.051Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "e74e69d6-c23f-4ecb-8b06-05dee2366590",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T11:01:34.721Z"
-  },
-  {
-    "id": "ba1b0092-53ba-4a81-904e-dffd6924e815",
-    "queuedAt": "2026-05-01T10:40:43.519Z",
-    "queuedBy": "system",
-    "entity": "careers_application",
-    "operation": "create",
-    "payload": {
-      "_kind": "outbound-mail",
-      "to": "spithode008@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Sourabh,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzYzMjA0MywiZXhwaXJlc0F0IjoxNzc3NjMyOTQzLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTc0ZTY5ZDYtYzIzZi00ZWNiLThiMDYtMDVkZWUyMzY2NTkwIiwiYXBwbGljYXRpb25JZCI6ImIwOTAyZmNkLTc4ZTYtNDU3Zi05YmQ3LTE4ODgxZTdlZGU5ZCIsIm5vbmNlIjoiNWU5MWI5OGQtYWYwNy00NzMxLWJlN2YtNjUyYjU4NjIzY2M4In19.eLszzXN03CvZvx0drwr-FnbxMmK7YhXvM1a4vABPXAQ\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate e74e69d6-c23f-4ecb-8b06-05dee2366590",
-      "createdAt": "2026-05-01T10:40:43.519Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T11:01:34.738Z"
-  },
-  {
-    "id": "d2599a96-200f-4580-9cec-19a704300b23",
-    "queuedAt": "2026-05-01T12:33:40.180Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
-      "name": "Muzammil Khan",
-      "email": "muzammilkhan4911@gmail.com",
-      "phone": "8080580031",
-      "source": "Application",
-      "notes": "",
-      "createdAt": "2026-05-01T12:33:40.177Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-01T12:33:40.177Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Muzammil Khan",
-            "email": "muzammilkhan4911@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
-          },
-          "notes": "Self-applied via /careers"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T13:48:55.619Z"
-  },
-  {
-    "id": "f37cabf6-c907-49d1-8d5a-8904ea0fa201",
-    "queuedAt": "2026-05-01T12:33:40.943Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "09401d3e-eae7-4ca0-a193-ca04750cb268",
-      "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-01T12:33:40.177Z",
-      "createdAt": "2026-05-01T12:33:40.177Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-01T12:33:40.177Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "17dd281b-8c0f-4c2b-8235-503dd23182dc",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T13:48:55.619Z"
-  },
-  {
-    "id": "15b2c2e4-e0b2-425b-9150-b59a82eac59b",
-    "queuedAt": "2026-05-01T12:33:41.648Z",
-    "queuedBy": "system",
-    "entity": "careers_application",
-    "operation": "create",
-    "payload": {
-      "_kind": "outbound-mail",
-      "to": "muzammilkhan4911@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Muzammil,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3NzYzODgyMSwiZXhwaXJlc0F0IjoxNzc3NjM5NzIxLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMTdkZDI4MWItOGMwZi00YzJiLTgyMzUtNTAzZGQyMzE4MmRjIiwiYXBwbGljYXRpb25JZCI6IjA5NDAxZDNlLWVhZTctNGNhMC1hMTkzLWNhMDQ3NTBjYjI2OCIsIm5vbmNlIjoiMDljZGQ3YzQtMTM2Ni00NWVlLTlkMjktNTA1NzFiZjk0OTk2In19.qQgayWsg8YaXW5Qo23PUQ2LGMqHgbokfOK0wS4jhVCU\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 17dd281b-8c0f-4c2b-8235-503dd23182dc",
-      "createdAt": "2026-05-01T12:33:41.648Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T13:48:55.637Z"
-  },
-  {
-    "id": "5e1beed6-8e2a-4439-8365-04e0d775c499",
-    "queuedAt": "2026-05-01T13:12:05.252Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "97ac7b63-cbbb-46a6-8dd5-da191f33be52",
-      "name": "AKSHAY SUNIL TAWDE",
-      "email": "aki.agenious@gmail.com",
-      "phone": "90041-09502",
-      "source": "Application",
-      "notes": "New venture and new opportunities to explore.",
-      "createdAt": "2026-05-01T13:12:05.249Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-01T13:12:05.249Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "AKSHAY SUNIL TAWDE",
-            "email": "aki.agenious@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d"
-          },
-          "notes": "Self-applied via /careers"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-01T13:48:55.655Z"
-  },
-  {
     "id": "10646373-15ca-40a4-952c-9450a5c6f1e6",
     "queuedAt": "2026-05-01T13:12:05.981Z",
     "queuedBy": "public:careers",
@@ -12828,5 +12299,440 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-02T07:13:41.962Z"
+  },
+  {
+    "id": "9f05a671-b2f6-4c6b-89b3-90fd37c16aab",
+    "queuedAt": "2026-06-02T09:11:36.797Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "0342dae1-f699-5c97-0065-8d10b0da51d6",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-02-13",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-13."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.182Z"
+  },
+  {
+    "id": "a220b825-b26a-4945-b938-802afec227fe",
+    "queuedAt": "2026-06-02T09:13:45.068Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "3655d7b3-8461-53da-06a7-ee160af28158",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-02-27",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-27."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.198Z"
+  },
+  {
+    "id": "5d7608f8-3d2b-464c-82f5-7019ecb72d19",
+    "queuedAt": "2026-06-02T09:15:16.895Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "ae8b87ec-59a0-5c98-6426-45c3a9069bf2",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-07",
+          "reason": "Suspension",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-07."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.214Z"
+  },
+  {
+    "id": "f21501aa-ba2e-4fa5-991b-125faad2def2",
+    "queuedAt": "2026-06-02T09:16:12.628Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "3d9c7696-761d-5b81-7b0b-39993fcfa80a",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.230Z"
+  },
+  {
+    "id": "4ba9eaa4-3024-4157-9205-f80bc40f3e94",
+    "queuedAt": "2026-06-02T09:17:01.205Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "da0dc0d6-89f4-52a7-a9d7-1c3e246baf2c",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.245Z"
+  },
+  {
+    "id": "f7f6c5fc-c883-48bf-8fa7-86352986b960",
+    "queuedAt": "2026-06-02T09:19:29.907Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "04e6bc2e-79de-501a-12c9-022958efcc9e",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-04-17",
+          "reason": "Suspension",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Solvelt platform discontinuation."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-04-17."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.261Z"
+  },
+  {
+    "id": "49eb9cf7-a573-475d-87c7-60fbc81de6a5",
+    "queuedAt": "2026-06-02T09:20:30.597Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "acfb8956-81c2-51ac-969c-50463be531ee",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-15",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-15."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.276Z"
+  },
+  {
+    "id": "acff702f-15ad-47eb-b35e-826aca1b9586",
+    "queuedAt": "2026-06-02T09:31:45.255Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "fa68fe81-9768-5f42-138e-8aaab76149e2",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-20",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-20."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.292Z"
+  },
+  {
+    "id": "92e665b4-d0f8-4d38-be61-dd28503ae4e7",
+    "queuedAt": "2026-06-02T09:33:34.596Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+      "name": "Ishani Shah",
+      "email": "iishahphibonacci@gmail.com",
+      "phone": "+91 79902-73405",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/b6974034-0fac-41f7-8a00-8899ea9fca54.pdf",
+      "createdAt": "2026-06-02T09:33:33.485Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T09:33:33.485Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Ishani Shah",
+            "email": "iishahphibonacci@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/b6974034-0fac-41f7-8a00-8899ea9fca54.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.314Z"
+  },
+  {
+    "id": "dbec6d7a-de4d-45ed-a761-a6da13581994",
+    "queuedAt": "2026-06-02T09:33:35.545Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "1251a260-3f52-4cc2-9261-eb25748af3e0",
+      "candidateId": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-02T09:33:33.485Z",
+      "createdAt": "2026-06-02T09:33:33.485Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T09:33:33.485Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.318Z"
+  },
+  {
+    "id": "8510255f-6a6b-4901-9e85-4a50b520d552",
+    "queuedAt": "2026-06-02T09:33:36.422Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "58ebb57a-d792-42ce-9546-16e5a96714a6",
+      "to": "iishahphibonacci@gmail.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Ishani,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4MDM5MjgxNiwiZXhwaXJlc0F0IjoxNzgwMzkzNzE2LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYjY5NzQwMzQtMGZhYy00MWY3LThhMDAtODg5OWVhOWZjYTU0IiwiYXBwbGljYXRpb25JZCI6IjEyNTFhMjYwLTNmNTItNGNjMi05MjYxLWViMjU3NDhhZjNlMCIsIm5vbmNlIjoiNzlmNWUyYTYtN2NlNS00YzAyLTlhNjQtMjJkMjE2NTgxZGI3In19.u5anBENQvWNKSsTGk4i8B1kalneqHM0fVnFfVlsYNbg\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate b6974034-0fac-41f7-8a00-8899ea9fca54",
+      "createdAt": "2026-06-02T09:33:36.421Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.319Z"
+  },
+  {
+    "id": "42f1f175-82dc-4d96-8f70-c44b2e622259",
+    "queuedAt": "2026-06-02T09:36:41.723Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "99cb8890-0271-5487-824a-0b594a5becb1",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-22",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.334Z"
+  },
+  {
+    "id": "990d9c60-7c63-4be1-a76a-ae47f255b7b7",
+    "queuedAt": "2026-06-02T09:37:40.190Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "5364378a-9f51-57e2-6551-f238fdf39cee",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-28",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.349Z"
+  },
+  {
+    "id": "182b8f7e-db89-4b91-8e66-a1760113ba11",
+    "queuedAt": "2026-06-02T11:24:35.603Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+      "name": "Akanksha Jain",
+      "email": "akankshabt.jain@gmail.com",
+      "phone": "7610303832",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf",
+      "createdAt": "2026-06-02T11:24:34.390Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T11:24:34.390Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Akanksha Jain",
+            "email": "akankshabt.jain@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.368Z"
+  },
+  {
+    "id": "04b5112a-726e-4f95-9399-8a9f3b3ac836",
+    "queuedAt": "2026-06-02T11:24:36.464Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "f431e322-98ee-4079-9893-e5238dfea8b3",
+      "candidateId": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-02T11:24:34.390Z",
+      "createdAt": "2026-06-02T11:24:34.390Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T11:24:34.390Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.372Z"
+  },
+  {
+    "id": "1008036a-1eee-4f9e-bd4d-2ee469ca57c6",
+    "queuedAt": "2026-06-02T11:24:37.355Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "1b171328-b019-4ad4-a987-3eef8732d354",
+      "to": "akankshabt.jain@gmail.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Akanksha,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4MDM5OTQ3NywiZXhwaXJlc0F0IjoxNzgwNDAwMzc3LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTZmNjZhODctOGZlMC00NDI1LTg2YmQtODk0YmZkOTI3OWZlIiwiYXBwbGljYXRpb25JZCI6ImY0MzFlMzIyLTk4ZWUtNDA3OS05ODkzLWU1MjM4ZGZlYThiMyIsIm5vbmNlIjoiOTliYzI0YzctYzFjMS00MTc3LWIyMDEtZmFjOTZlNzIxMjEzIn19.QLCmDAFZNud_gue2jK65VslY5b37ZiqkiTbRR94TJOA\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+      "createdAt": "2026-06-02T11:24:37.355Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-02T11:42:03.373Z"
   }
 ]

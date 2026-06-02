@@ -4749,5 +4749,47 @@
         "notes": "Moved from Senior Academics Manager."
       }
     ]
+  },
+  {
+    "id": "1251a260-3f52-4cc2-9261-eb25748af3e0",
+    "candidateId": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+    "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-06-02T09:33:33.485Z",
+    "createdAt": "2026-06-02T09:33:33.485Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T09:33:33.485Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
+  },
+  {
+    "id": "f431e322-98ee-4079-9893-e5238dfea8b3",
+    "candidateId": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+    "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-06-02T11:24:34.390Z",
+    "createdAt": "2026-06-02T11:24:34.390Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T11:24:34.390Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]

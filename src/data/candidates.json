@@ -8871,5 +8871,57 @@
         "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
       }
     ]
+  },
+  {
+    "id": "b6974034-0fac-41f7-8a00-8899ea9fca54",
+    "name": "Ishani Shah",
+    "email": "iishahphibonacci@gmail.com",
+    "phone": "+91 79902-73405",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/b6974034-0fac-41f7-8a00-8899ea9fca54.pdf",
+    "createdAt": "2026-06-02T09:33:33.485Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T09:33:33.485Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Ishani Shah",
+          "email": "iishahphibonacci@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/06/b6974034-0fac-41f7-8a00-8899ea9fca54.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "e6f66a87-8fe0-4425-86bd-894bfd9279fe",
+    "name": "Akanksha Jain",
+    "email": "akankshabt.jain@gmail.com",
+    "phone": "7610303832",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf",
+    "createdAt": "2026-06-02T11:24:34.390Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T11:24:34.390Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Akanksha Jain",
+          "email": "akankshabt.jain@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/06/e6f66a87-8fe0-4425-86bd-894bfd9279fe.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]

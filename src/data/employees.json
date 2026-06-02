@@ -2629,7 +2629,7 @@
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Ranchi",
     "dateOfJoining": "2024-01-02",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-07-02",
     "tenureYears": 2.3,
     "dateOfBirth": "2002-09-10",
@@ -2714,6 +2714,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.201Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-07",
+            "reason": "Suspension",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-07."
       }
     ],
     "locationType": "remote-field",
@@ -2724,7 +2743,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-03-07",
+      "reason": "Suspension",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "eb9f299d-ac36-5746-dbf9-55eec1968e15",
@@ -4059,7 +4084,7 @@
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Secunderabad",
     "dateOfJoining": "2024-05-13",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-11-13",
     "tenureYears": 1.9,
     "dateOfBirth": "Wednesday, May 23, 2001",
@@ -4144,6 +4169,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.337Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-28",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
       }
     ],
     "locationType": "remote-field",
@@ -4154,7 +4198,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-05-28",
+      "reason": "Termination",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "7e7e9bb7-62e3-5553-d64c-8b493c6ca5f0",
@@ -6359,7 +6409,7 @@
     "reportingManagerId": "76c516b8-257e-5829-016a-a42a5f248e9e",
     "location": "Mumbai",
     "dateOfJoining": "2024-10-03",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-04-03",
     "tenureYears": 1.6,
     "dateOfBirth": "Tuesday, October 31, 2000",
@@ -6444,6 +6494,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.168Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-02-13",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-13."
       }
     ],
     "locationType": "office",
@@ -6454,7 +6523,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-02-13",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "9482d08f-da43-5d36-f277-ae04390220a7",
@@ -6799,7 +6874,7 @@
     "reportingManagerId": null,
     "location": "Pune",
     "dateOfJoining": "2024-11-11",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-05-11",
     "tenureYears": 1.4,
     "dateOfBirth": "Monday, May 16, 1977",
@@ -6884,6 +6959,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.264Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-15",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-15."
       }
     ],
     "locationType": "remote-field",
@@ -6894,7 +6988,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-05-15",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "b5a25060-d0ea-50b9-e15f-d6c131dcfe8d",
@@ -8254,7 +8354,7 @@
     "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
     "location": "Kolkata",
     "dateOfJoining": "2025-05-01",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-10-01",
     "tenureYears": 1,
     "dateOfBirth": "Friday, December 20, 1985",
@@ -8339,6 +8439,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.280Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-20",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-20."
       }
     ],
     "locationType": "office",
@@ -8349,7 +8468,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-05-20",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "27ff56ad-5969-5ae0-99d2-34904e26cdcd",
@@ -8584,7 +8709,7 @@
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Durgapur",
     "dateOfJoining": "2025-06-01",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-11-30",
     "tenureYears": 0.9,
     "dateOfBirth": "26.04.1984",
@@ -8669,6 +8794,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.322Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-22",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
       }
     ],
     "locationType": "remote-field",
@@ -8679,7 +8823,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-05-22",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "1415f213-e192-58b3-e04f-58462d365385",
@@ -9929,7 +10079,7 @@
     "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
     "location": "Kolkata",
     "dateOfJoining": "2025-07-31",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": null,
     "tenureYears": 0.731506849,
     "dateOfBirth": "09.08.2002",
@@ -10014,6 +10164,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.217Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
       }
     ],
     "locationType": "office",
@@ -10024,7 +10193,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-03-31",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "2944d3e0-b5a2-5af8-f90d-e603f59141a4",
@@ -10724,7 +10899,7 @@
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Chennai",
     "dateOfJoining": "2025-09-15",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": null,
     "tenureYears": 0.605479452,
     "dateOfBirth": "Sunday, April 14, 2002",
@@ -10809,6 +10984,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.185Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-02-27",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-27."
       }
     ],
     "locationType": "remote-field",
@@ -10819,7 +11013,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-02-27",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "04e6bc2e-79de-501a-12c9-022958efcc9e",
@@ -10834,7 +11034,7 @@
     "reportingManagerId": "86763a19-6414-53a6-fac4-2f7a4ca417c3",
     "location": "Bangalore",
     "dateOfJoining": "2025-10-01",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": null,
     "tenureYears": 0.561643836,
     "dateOfBirth": "Friday, December 6, 1991",
@@ -10919,6 +11119,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.249Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-04-17",
+            "reason": "Suspension",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Solvelt platform discontinuation."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-04-17."
       }
     ],
     "locationType": "remote-field",
@@ -10929,7 +11149,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-04-17",
+      "reason": "Suspension",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Solvelt platform discontinuation."
+    }
   },
   {
     "id": "6cbf4fdc-e511-52e9-7769-06fd48e59a9b",
@@ -11494,7 +11721,7 @@
     "reportingManagerId": "b4957259-0647-5695-c02c-cae2efb83c62",
     "location": "Kolkata",
     "dateOfJoining": "2025-12-04",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": null,
     "tenureYears": 0.38630137,
     "dateOfBirth": "1989-06-06",
@@ -11579,6 +11806,25 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-02T11:42:03.233Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
       }
     ],
     "locationType": "office",
@@ -11589,7 +11835,13 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-03-31",
+      "reason": "Termination",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false
+    }
   },
   {
     "id": "de076da4-669a-5ce7-4500-fd15724e7457",
