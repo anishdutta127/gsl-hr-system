@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "d4aba968-bc04-4bc7-94da-d9ac7a077f46",
+    "queuedAt": "2026-06-02T17:53:32.046Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "2b66e15a-2c51-4207-8a3e-fe342ccb284a",
+      "name": "Aneeqa Ahmad",
+      "email": "aneeqa2k@yahoo.com",
+      "phone": "9619459799",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/2b66e15a-2c51-4207-8a3e-fe342ccb284a.pdf",
+      "createdAt": "2026-06-02T17:53:30.641Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T17:53:30.641Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Aneeqa Ahmad",
+            "email": "aneeqa2k@yahoo.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/06/2b66e15a-2c51-4207-8a3e-fe342ccb284a.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
