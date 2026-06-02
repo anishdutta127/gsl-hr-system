@@ -233,5 +233,39 @@
       "createdAt": "2026-06-02T13:25:53.106Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4d0545e1-9a59-4548-9208-e0df9db3f182",
+    "queuedAt": "2026-06-02T13:36:26.762Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "40f32ad7-ad9b-4a09-9a9f-7b85db09ae32",
+      "name": "Vibhav Bansal",
+      "email": "bansal.vibhav04@gmail.com",
+      "phone": "9818971737",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/40f32ad7-ad9b-4a09-9a9f-7b85db09ae32.pdf",
+      "createdAt": "2026-06-02T13:36:25.302Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-02T13:36:25.302Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Vibhav Bansal",
+            "email": "bansal.vibhav04@gmail.com",
+            "source": "Application",
+            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+            "resumeFilePath": "data/resumes/applications/2026/06/40f32ad7-ad9b-4a09-9a9f-7b85db09ae32.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
