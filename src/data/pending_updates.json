@@ -156,5 +156,39 @@
       "createdAt": "2026-06-02T19:35:42.066Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "26c3d440-40e7-4844-b4f0-b3178612029b",
+    "queuedAt": "2026-06-03T07:08:21.621Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9f11ab11-f22a-4514-afa1-39156e6bf18d",
+      "name": "Nirmal Pathak",
+      "email": "imnirmalpathak@gmail.com",
+      "phone": "7850814977",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/9f11ab11-f22a-4514-afa1-39156e6bf18d.pdf",
+      "createdAt": "2026-06-03T07:08:20.179Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-03T07:08:20.179Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Nirmal Pathak",
+            "email": "imnirmalpathak@gmail.com",
+            "source": "Application",
+            "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+            "resumeFilePath": "data/resumes/applications/2026/06/9f11ab11-f22a-4514-afa1-39156e6bf18d.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
