@@ -9025,5 +9025,83 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "2b66e15a-2c51-4207-8a3e-fe342ccb284a",
+    "name": "Aneeqa Ahmad",
+    "email": "aneeqa2k@yahoo.com",
+    "phone": "9619459799",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/2b66e15a-2c51-4207-8a3e-fe342ccb284a.pdf",
+    "createdAt": "2026-06-02T17:53:30.641Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T17:53:30.641Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Aneeqa Ahmad",
+          "email": "aneeqa2k@yahoo.com",
+          "source": "Application",
+          "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
+          "resumeFilePath": "data/resumes/applications/2026/06/2b66e15a-2c51-4207-8a3e-fe342ccb284a.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "98064795-198d-4e8f-9ebd-102a9ba825ed",
+    "name": "Apeksha Gautam",
+    "email": "apekshagautam09@gmail.com",
+    "phone": "9541942250",
+    "source": "Application",
+    "notes": "I am excited to apply for this role, since I believe through this position, I shall be able to utilise my skills and research experience in the field of education quite well, and would be able to bring a real impact in the lives of young learners.",
+    "resumeFilePath": "data/resumes/applications/2026/06/98064795-198d-4e8f-9ebd-102a9ba825ed.pdf",
+    "createdAt": "2026-06-02T19:35:39.281Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-02T19:35:39.281Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Apeksha Gautam",
+          "email": "apekshagautam09@gmail.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/06/98064795-198d-4e8f-9ebd-102a9ba825ed.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
+  },
+  {
+    "id": "9f11ab11-f22a-4514-afa1-39156e6bf18d",
+    "name": "Nirmal Pathak",
+    "email": "imnirmalpathak@gmail.com",
+    "phone": "7850814977",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/9f11ab11-f22a-4514-afa1-39156e6bf18d.pdf",
+    "createdAt": "2026-06-03T07:08:20.179Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-03T07:08:20.179Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Nirmal Pathak",
+          "email": "imnirmalpathak@gmail.com",
+          "source": "Application",
+          "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+          "resumeFilePath": "data/resumes/applications/2026/06/9f11ab11-f22a-4514-afa1-39156e6bf18d.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
