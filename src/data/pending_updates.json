@@ -292,5 +292,26 @@
       "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "92828b84-df95-4f30-9a80-762da051cc26",
+    "queuedAt": "2026-06-08T11:40:54.845Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "f1df51db-b186-4206-b17d-574dfb949208",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-02T17:53:30.641Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-06-08T11:40:54.845Z"
+      },
+      "notes": "Moved to Instructional Designer."
+    },
+    "retryCount": 0
   }
 ]
