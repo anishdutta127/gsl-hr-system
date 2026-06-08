@@ -519,5 +519,51 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "0342dae1-f699-5c97-0065-8d10b0da51d6",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "siddhi.g@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Larisa Dabre",
+          "completedAt": "2026-02-13",
+          "notes": "Handover Complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T06:53:57.846Z",
+    "updatedAt": "2026-06-08T06:53:57.846Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:53:57.846Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
