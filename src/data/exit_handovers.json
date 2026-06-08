@@ -329,7 +329,12 @@
     "checklist": {
       "pendingTasks": [],
       "keyContacts": [],
-      "accessRevocation": [],
+      "accessRevocation": [
+        {
+          "system": "priyanka.p@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
       "itAssetsReturned": [],
       "knowledgeTransfer": [
         {
@@ -340,7 +345,7 @@
       ]
     },
     "createdAt": "2026-06-08T06:37:24.608Z",
-    "updatedAt": "2026-06-08T06:37:24.608Z",
+    "updatedAt": "2026-06-08T06:42:03.905Z",
     "auditLog": [
       {
         "timestamp": "2026-06-08T06:37:24.608Z",
@@ -355,6 +360,31 @@
             "accessRevocation": 0,
             "itAssetsReturned": 0,
             "knowledgeTransfer": 0
+          }
+        }
+      },
+      {
+        "timestamp": "2026-06-08T06:42:03.905Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.update",
+        "before": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
+          }
+        },
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
           }
         }
       }
