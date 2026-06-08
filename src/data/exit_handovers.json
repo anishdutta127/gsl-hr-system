@@ -887,5 +887,56 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "04e6bc2e-79de-501a-12c9-022958efcc9e",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "Chethan H S",
+          "status": "Pending"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Nandan Eswar",
+          "completedAt": "2026-05-29",
+          "notes": "Handover Complete"
+        },
+        {
+          "withWhom": "Ajith Nair",
+          "completedAt": "2026-05-29",
+          "notes": "Handover Complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T07:20:02.589Z",
+    "updatedAt": "2026-06-08T07:20:02.589Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T07:20:02.589Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
