@@ -82,5 +82,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "ff68d35e-15df-40ef-9239-286a81fce544",
+    "queuedAt": "2026-06-08T06:28:11.292Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "41b37e20-d93c-4e15-8cc7-697552d294f4",
+      "name": "Pallavi D",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Instructional Designer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+      "createdAt": "2026-06-08T06:28:11.292Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-08T06:28:11.292Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Pallavi D",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
