@@ -166,5 +166,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "ea189f6b-0f18-42f4-b179-ece007b1a779",
+    "queuedAt": "2026-06-08T06:29:40.567Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "b0d7beeb-7142-4792-ab32-a93464b11c13",
+      "name": "Rohit Yadav",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Instructional Designer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+      "createdAt": "2026-06-08T06:29:40.567Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-08T06:29:40.567Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Rohit Yadav",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
