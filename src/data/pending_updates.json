@@ -161,5 +161,35 @@
       "notes": "Moved to Instructional Designer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "43fa550e-bd30-4c1a-89ee-5fd193bfea78",
+    "queuedAt": "2026-06-08T11:32:04.655Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "37293c79-fd27-4874-8f4f-a5427a8a55f7",
+      "candidateId": "3e2f7933-4048-4771-a919-cfc27393f307",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-08T11:32:03.876Z",
+      "createdAt": "2026-06-08T11:32:03.876Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-08T11:32:03.876Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "application.create",
+          "after": {
+            "candidateId": "3e2f7933-4048-4771-a919-cfc27393f307",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          },
+          "notes": "Moved from Senior Academics Manager."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
