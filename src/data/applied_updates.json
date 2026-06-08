@@ -1,125 +1,5 @@
 [
   {
-    "id": "5eb83f12-59de-491f-a02c-a52a665c87c9",
-    "queuedAt": "2026-05-11T07:55:31.373Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "570e4ced-6f62-5c9d-c0c7-cdde9dd15e82",
-      "operation": "candidate.update",
-      "before": {
-        "name": "26 Shubham Maurya"
-      },
-      "after": {
-        "name": "Shubham Maurya"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.604Z"
-  },
-  {
-    "id": "244bca59-805b-4736-8e8d-8e96cc7ee0ef",
-    "queuedAt": "2026-05-11T07:56:34.733Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "05d927d2-16ab-5c02-64e3-4290bfc3cb04",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Educohire"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.620Z"
-  },
-  {
-    "id": "2cdecafd-0a87-4aa0-8c84-b1efc18f756a",
-    "queuedAt": "2026-05-11T07:57:11.995Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "490e2e1c-311b-593a-6c71-e11d100b209f",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Educohire"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.635Z"
-  },
-  {
-    "id": "3f3f04f5-4366-4b2f-9ddf-272a259914c0",
-    "queuedAt": "2026-05-11T07:57:31.436Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "f3bb5052-0ad0-5200-f6ae-1135fd70b80f",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Educohire"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.653Z"
-  },
-  {
-    "id": "84bc831b-101b-4f60-bde7-4374170fb40b",
-    "queuedAt": "2026-05-11T07:58:34.029Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "43e04fd3-71ee-5d26-a23e-e8c6bd55317c",
-      "operation": "candidate.update",
-      "before": {
-        "notes": "Legacy resume delivered by HR on 2026-04-24. Original folder: BD & Ops. No consent on file; do not publish externally until HR confirms."
-      },
-      "after": {
-        "notes": ""
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.669Z"
-  },
-  {
-    "id": "753b47da-6a27-44d4-8c3b-706c75e7384f",
-    "queuedAt": "2026-05-11T07:58:55.468Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "5c4bd35f-9f53-52b9-01e9-c3389fe1c3d3",
-      "operation": "candidate.update",
-      "before": {
-        "name": "Bimlendu Shivam Growth Strategy"
-      },
-      "after": {
-        "name": "Bimlendu Shivam"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.685Z"
-  },
-  {
     "id": "6a15115c-a786-42d2-a41e-44a71c071a26",
     "queuedAt": "2026-05-11T07:59:54.954Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -12761,5 +12641,139 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-08T12:10:16.637Z"
+  },
+  {
+    "id": "5564f6b1-804a-4d0b-ba1b-969d9f6318c4",
+    "queuedAt": "2026-06-08T12:12:33.067Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "f431e322-98ee-4079-9893-e5238dfea8b3",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-02T11:24:34.390Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-08T12:12:33.066Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.332Z"
+  },
+  {
+    "id": "382d216c-cd97-4096-b257-f481ab060725",
+    "queuedAt": "2026-06-08T12:12:59.375Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "f431e322-98ee-4079-9893-e5238dfea8b3",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-02T11:24:34.390Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-08T12:12:59.374Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.336Z"
+  },
+  {
+    "id": "558eb5dd-b4cb-4813-8ca3-1547933da3e1",
+    "queuedAt": "2026-06-08T12:14:16.689Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "acdd13dd-5484-4fee-a988-6da224f989af",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-02T13:25:49.643Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-08T12:14:16.689Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.341Z"
+  },
+  {
+    "id": "fb7fa78f-6336-4b0d-92e7-a5ed7c971ef3",
+    "queuedAt": "2026-06-08T12:17:06.885Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "da057546-557b-4b82-b8e0-da4916bec704",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-02T19:35:39.281Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-08T12:17:06.885Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.345Z"
+  },
+  {
+    "id": "9177454a-836a-4982-8f3c-80edcea77cf5",
+    "queuedAt": "2026-06-08T12:23:50.621Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "37293c79-fd27-4874-8f4f-a5427a8a55f7",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-08T11:32:03.876Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-08T12:23:50.621Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.350Z"
+  },
+  {
+    "id": "19de2c10-cf02-4ddd-8b05-94c8339876e2",
+    "queuedAt": "2026-06-08T12:25:35.997Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "29c4b4c4-7523-4a3c-b234-eb555be899b0",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-08T11:40:54.845Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-08T12:25:35.997Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-08T16:15:56.354Z"
   }
 ]
