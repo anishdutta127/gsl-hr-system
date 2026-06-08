@@ -40,5 +40,47 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "e91b6644-4c49-4543-9c02-aab9190e9190",
+    "queuedAt": "2026-06-08T06:26:29.953Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "3fe7c91e-1081-4a0b-86c4-19b430be6c6e",
+      "name": "Komal",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Instructional Designer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+      "createdAt": "2026-06-08T06:26:29.953Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-08T06:26:29.953Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Komal",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
