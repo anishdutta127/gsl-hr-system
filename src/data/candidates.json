@@ -8194,6 +8194,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/3e2f7933-4048-4771-a919-cfc27393f307.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.533Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Instructional Designer."
       }
     ]
   },
@@ -8697,6 +8705,14 @@
           "resumeFilePath": "data/resumes/applications/2026/05/3f7b3ef4-2d56-48ef-ac16-c5163874abde.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.505Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: SME Arduino → STEM Trainer."
       }
     ]
   },
@@ -8809,6 +8825,14 @@
         "before": {},
         "after": {},
         "notes": "Pipeline move: STEM Trainer → Senior Academics Manager. Notes: Better fit in the other role."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.566Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → STEM Trainer."
       }
     ]
   },
@@ -9049,6 +9073,14 @@
           "resumeFilePath": "data/resumes/applications/2026/06/2b66e15a-2c51-4207-8a3e-fe342ccb284a.pdf"
         },
         "notes": "Self-applied via /careers with resume."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.596Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.update",
+        "before": {},
+        "after": {},
+        "notes": "Pipeline move: Senior Academics Manager → Instructional Designer."
       }
     ]
   },
@@ -9135,8 +9167,33 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.456Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/06/87e02fa9-8e8f-4e15-b7c3-e559868b2162.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.476Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/06/87e02fa9-8e8f-4e15-b7c3-e559868b2162.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/06/87e02fa9-8e8f-4e15-b7c3-e559868b2162.pdf"
   },
   {
     "id": "3fe7c91e-1081-4a0b-86c4-19b430be6c6e",
@@ -9169,8 +9226,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.437Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/06/3fe7c91e-1081-4a0b-86c4-19b430be6c6e.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (Komal Pawar Profile.pdf, 53 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/06/3fe7c91e-1081-4a0b-86c4-19b430be6c6e.pdf"
   },
   {
     "id": "41b37e20-d93c-4e15-8cc7-697552d294f4",
@@ -9203,8 +9273,21 @@
           ]
         },
         "notes": "Created via paste-in import."
+      },
+      {
+        "timestamp": "2026-06-08T12:10:16.416Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.set-resume",
+        "before": {
+          "resumeFilePath": null
+        },
+        "after": {
+          "resumeFilePath": "data/resumes/uploads/2026/06/41b37e20-d93c-4e15-8cc7-697552d294f4.pdf"
+        },
+        "notes": "Resume uploaded by Hiring@getsetlearn.info (PALLAVI DHALL_Educator.pdf, 52 KB)."
       }
-    ]
+    ],
+    "resumeFilePath": "data/resumes/uploads/2026/06/41b37e20-d93c-4e15-8cc7-697552d294f4.pdf"
   },
   {
     "id": "18c0f3f2-3ab8-4472-85f8-407ff83bb4cc",
