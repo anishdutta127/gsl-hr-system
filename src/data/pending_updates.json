@@ -36,5 +36,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Komal Pawar Profile.pdf, 53 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "09635f15-6f10-4572-b6c3-7dd75ad02d38",
+    "queuedAt": "2026-06-08T11:19:52.671Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "87e02fa9-8e8f-4e15-b7c3-e559868b2162",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/06/87e02fa9-8e8f-4e15-b7c3-e559868b2162.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
+    },
+    "retryCount": 0
   }
 ]
