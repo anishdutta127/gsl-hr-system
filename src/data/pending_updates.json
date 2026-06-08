@@ -140,5 +140,26 @@
       "notes": "Pipeline move: SME Arduino → STEM Trainer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "6d0484db-9890-4b80-a69a-fc7ac2faea33",
+    "queuedAt": "2026-06-08T11:32:03.876Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "5b88a9bf-f38e-4965-b712-e6074987b9a8",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-05-21T10:56:30.860Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-06-08T11:32:03.876Z"
+      },
+      "notes": "Moved to Instructional Designer."
+    },
+    "retryCount": 0
   }
 ]
