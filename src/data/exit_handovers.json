@@ -146,5 +146,46 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "5364378a-9f51-57e2-6551-f238fdf39cee",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Prashanth Mishra",
+          "completedAt": "2026-06-05",
+          "notes": "Handover complete, laptop left"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T06:35:48.151Z",
+    "updatedAt": "2026-06-08T06:35:48.151Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:35:48.151Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
