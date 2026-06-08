@@ -228,5 +228,46 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "070be06a-2682-546e-4412-72edf09d471e",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Pooja Sharma",
+          "completedAt": "2026-01-30",
+          "notes": "Handover complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T06:37:24.608Z",
+    "updatedAt": "2026-06-08T06:37:24.608Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:37:24.608Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
