@@ -226,5 +226,26 @@
       }
     },
     "retryCount": 0
+  },
+  {
+    "id": "ca43cfcc-991b-4942-812d-5fb9c0ea5dc9",
+    "queuedAt": "2026-06-08T11:40:10.804Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "a796c97e-f454-4a38-80e4-60fb9163b210",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-01T09:48:40.793Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-06-08T11:40:10.804Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0
   }
 ]
