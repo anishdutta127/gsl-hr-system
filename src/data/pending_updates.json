@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "7da6a9dd-1846-492b-87b9-db5317952366",
+    "queuedAt": "2026-06-08T11:18:28.703Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "41b37e20-d93c-4e15-8cc7-697552d294f4",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/06/41b37e20-d93c-4e15-8cc7-697552d294f4.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (PALLAVI DHALL_Educator.pdf, 52 KB)."
+    },
+    "retryCount": 0
+  }
+]
