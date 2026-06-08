@@ -206,5 +206,25 @@
       "notes": "Pipeline move: Senior Academics Manager → Instructional Designer."
     },
     "retryCount": 0
+  },
+  {
+    "id": "6c28bae2-9e2e-401e-8102-10f545c68d06",
+    "queuedAt": "2026-06-08T11:39:47.340Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "a796c97e-f454-4a38-80e4-60fb9163b210",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-01T09:48:40.793Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-08T11:39:47.340Z"
+      }
+    },
+    "retryCount": 0
   }
 ]
