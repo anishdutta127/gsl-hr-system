@@ -17,5 +17,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (PALLAVI DHALL_Educator.pdf, 52 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "a6daeb1d-e511-4295-9cbc-69ff9e021f2f",
+    "queuedAt": "2026-06-08T11:18:58.648Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "3fe7c91e-1081-4a0b-86c4-19b430be6c6e",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/06/3fe7c91e-1081-4a0b-86c4-19b430be6c6e.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Komal Pawar Profile.pdf, 53 KB)."
+    },
+    "retryCount": 0
   }
 ]
