@@ -125,5 +125,20 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "f5f3ad41-2295-46c8-a4a1-0582d2085784",
+    "queuedAt": "2026-06-08T11:31:41.870Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "3f7b3ef4-2d56-48ef-ac16-c5163874abde",
+      "operation": "candidate.update",
+      "before": {},
+      "after": {},
+      "notes": "Pipeline move: SME Arduino → STEM Trainer."
+    },
+    "retryCount": 0
   }
 ]
