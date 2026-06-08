@@ -9103,5 +9103,175 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "87e02fa9-8e8f-4e15-b7c3-e559868b2162",
+    "name": "Aneesha",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+    "createdAt": "2026-06-08T06:23:51.152Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:23:51.152Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Aneesha",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "3fe7c91e-1081-4a0b-86c4-19b430be6c6e",
+    "name": "Komal",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+    "createdAt": "2026-06-08T06:26:29.953Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:26:29.953Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Komal",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "41b37e20-d93c-4e15-8cc7-697552d294f4",
+    "name": "Pallavi D",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+    "createdAt": "2026-06-08T06:28:11.292Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:28:11.292Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Pallavi D",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "18c0f3f2-3ab8-4472-85f8-407ff83bb4cc",
+    "name": "Kanchan",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+    "createdAt": "2026-06-08T06:28:34.237Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:28:34.237Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Kanchan",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
+  },
+  {
+    "id": "b0d7beeb-7142-4792-ab32-a93464b11c13",
+    "name": "Rohit Yadav",
+    "email": "",
+    "phone": "",
+    "source": "HRTeam",
+    "searchableText": "Instructional Designer",
+    "tags": {
+      "programmes": [
+        "Academics"
+      ]
+    },
+    "status": "Active",
+    "consentedAt": null,
+    "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+    "createdAt": "2026-06-08T06:29:40.567Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:29:40.567Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "candidate.create",
+        "after": {
+          "name": "Rohit Yadav",
+          "email": "",
+          "source": "HRTeam",
+          "programmes": [
+            "Academics"
+          ]
+        },
+        "notes": "Created via paste-in import."
+      }
+    ]
   }
 ]
