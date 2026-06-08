@@ -1,1 +1,44 @@
-[]
+[
+  {
+    "id": "b536a56a-88fc-41d0-b69d-578cc2be3cb1",
+    "queuedAt": "2026-06-08T06:23:51.154Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "87e02fa9-8e8f-4e15-b7c3-e559868b2162",
+      "name": "Aneesha",
+      "email": "",
+      "phone": "",
+      "source": "HRTeam",
+      "searchableText": "Instructional Designer",
+      "tags": {
+        "programmes": [
+          "Academics"
+        ]
+      },
+      "status": "Active",
+      "consentedAt": null,
+      "notes": "Paste-in by Hiring@getsetlearn.info on 2026-06-08.",
+      "createdAt": "2026-06-08T06:23:51.152Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-08T06:23:51.152Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "candidate.create",
+          "after": {
+            "name": "Aneesha",
+            "email": "",
+            "source": "HRTeam",
+            "programmes": [
+              "Academics"
+            ]
+          },
+          "notes": "Created via paste-in import."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
