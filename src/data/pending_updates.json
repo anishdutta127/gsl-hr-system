@@ -55,5 +55,24 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "b37e00d3-3160-49e5-9ffb-6f349f5de484",
+    "queuedAt": "2026-06-08T11:20:08.900Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "candidate",
+    "operation": "update",
+    "payload": {
+      "id": "87e02fa9-8e8f-4e15-b7c3-e559868b2162",
+      "operation": "candidate.set-resume",
+      "before": {
+        "resumeFilePath": null
+      },
+      "after": {
+        "resumeFilePath": "data/resumes/uploads/2026/06/87e02fa9-8e8f-4e15-b7c3-e559868b2162.pdf"
+      },
+      "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
+    },
+    "retryCount": 0
   }
 ]
