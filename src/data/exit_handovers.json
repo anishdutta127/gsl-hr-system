@@ -454,5 +454,46 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Rajesh Perumal",
+          "completedAt": "2026-01-30",
+          "notes": "Handover Complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T06:52:19.463Z",
+    "updatedAt": "2026-06-08T06:52:19.463Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T06:52:19.463Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
