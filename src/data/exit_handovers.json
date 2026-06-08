@@ -795,5 +795,51 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "9c9b0042-b87a-53f0-db69-d08d51d67f3d",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "anshuman.g@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Prodipto Banerjee",
+          "completedAt": "2026-05-26",
+          "notes": "Handover complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T07:12:25.949Z",
+    "updatedAt": "2026-06-08T07:12:25.949Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T07:12:25.949Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
