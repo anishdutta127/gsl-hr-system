@@ -749,5 +749,51 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "3d9c7696-761d-5b81-7b0b-39993fcfa80a",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "saptak.s@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Avishek Dasgupta",
+          "completedAt": "2026-03-30",
+          "notes": "Handover Complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T07:07:26.832Z",
+    "updatedAt": "2026-06-08T07:07:26.832Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T07:07:26.832Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
