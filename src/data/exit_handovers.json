@@ -465,18 +465,17 @@
     "checklist": {
       "pendingTasks": [],
       "keyContacts": [],
-      "accessRevocation": [],
-      "itAssetsReturned": [],
-      "knowledgeTransfer": [
+      "accessRevocation": [
         {
-          "withWhom": "Rajesh Perumal",
-          "completedAt": "2026-01-30",
-          "notes": "Handover Complete"
+          "system": "shiva.e@getsetlearn.info",
+          "status": "Revoked"
         }
-      ]
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": []
     },
     "createdAt": "2026-06-08T06:52:19.463Z",
-    "updatedAt": "2026-06-08T06:52:19.463Z",
+    "updatedAt": "2026-06-08T06:52:52.004Z",
     "auditLog": [
       {
         "timestamp": "2026-06-08T06:52:19.463Z",
@@ -491,6 +490,31 @@
             "accessRevocation": 0,
             "itAssetsReturned": 0,
             "knowledgeTransfer": 0
+          }
+        }
+      },
+      {
+        "timestamp": "2026-06-08T06:52:52.004Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.update",
+        "before": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
+          }
+        },
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
           }
         }
       }
