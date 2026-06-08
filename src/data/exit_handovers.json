@@ -938,5 +938,51 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "da0dc0d6-89f4-52a7-a9d7-1c3e246baf2c",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "parthib.p@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Deepjyoti Das",
+          "completedAt": "2026-03-30",
+          "notes": "Handover Complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-08T07:24:32.082Z",
+    "updatedAt": "2026-06-08T07:24:32.082Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-08T07:24:32.082Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
