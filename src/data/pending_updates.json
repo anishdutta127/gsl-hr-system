@@ -74,5 +74,26 @@
       "notes": "Resume uploaded by Hiring@getsetlearn.info (Annesha Bhattacharya_Resume.pdf, 1169 KB)."
     },
     "retryCount": 0
+  },
+  {
+    "id": "a97927db-f02b-4ed0-bb26-34c48308f274",
+    "queuedAt": "2026-06-08T11:31:40.224Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "6a2462d1-c51b-4fda-9e16-51b43c64a862",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-28T06:41:07.341Z"
+      },
+      "after": {
+        "currentStage": "Withdrawn",
+        "stageEnteredAt": "2026-06-08T11:31:40.223Z"
+      },
+      "notes": "Moved to STEM Trainer."
+    },
+    "retryCount": 0
   }
 ]
