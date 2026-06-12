@@ -138,7 +138,7 @@
   },
   {
     "employeeId": "ae8b87ec-59a0-5c98-6426-45c3a9069bf2",
-    "templateUsed": null,
+    "templateUsed": "Custom",
     "document": null,
     "reviewedBy": null,
     "reviewedAt": null,
@@ -162,7 +162,7 @@
       ]
     },
     "createdAt": "2026-06-08T06:32:47.358Z",
-    "updatedAt": "2026-06-08T06:40:53.222Z",
+    "updatedAt": "2026-06-12T11:30:22.562Z",
     "auditLog": [
       {
         "timestamp": "2026-06-08T06:32:47.358Z",
@@ -200,6 +200,31 @@
             "pendingTasks": 0,
             "keyContacts": 0,
             "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
+          }
+        }
+      },
+      {
+        "timestamp": "2026-06-12T11:30:22.562Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.update",
+        "before": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 1,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 1
+          }
+        },
+        "after": {
+          "templateUsed": "Custom",
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 1,
             "itAssetsReturned": 0,
             "knowledgeTransfer": 1
           }
