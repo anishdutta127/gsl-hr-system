@@ -5141,8 +5141,8 @@
     "id": "b37fc8da-e1ca-42c8-a326-d308c3e5964a",
     "candidateId": "9f11ab11-f22a-4514-afa1-39156e6bf18d",
     "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
-    "currentStage": "Sourced",
-    "stageEnteredAt": "2026-06-03T07:08:20.179Z",
+    "currentStage": "Shortlisted",
+    "stageEnteredAt": "2026-06-12T09:56:46.235Z",
     "createdAt": "2026-06-03T07:08:20.179Z",
     "createdBy": "public:careers",
     "auditLog": [
@@ -5154,6 +5154,19 @@
           "candidateId": "9f11ab11-f22a-4514-afa1-39156e6bf18d",
           "roleId": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
           "currentStage": "Sourced"
+        }
+      },
+      {
+        "timestamp": "2026-06-12T11:07:24.362Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "stage-transition",
+        "before": {
+          "currentStage": "Sourced",
+          "stageEnteredAt": "2026-06-03T07:08:20.179Z"
+        },
+        "after": {
+          "currentStage": "Shortlisted",
+          "stageEnteredAt": "2026-06-12T09:56:46.235Z"
         }
       }
     ]

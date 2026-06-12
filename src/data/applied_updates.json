@@ -1,25 +1,5 @@
 [
   {
-    "id": "6a15115c-a786-42d2-a41e-44a71c071a26",
-    "queuedAt": "2026-05-11T07:59:54.954Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "292751dd-93b3-5a88-6b2f-bfcd7499df99",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.702Z"
-  },
-  {
     "id": "38daf27a-f0ed-4f6a-87e5-39c3ae4077b6",
     "queuedAt": "2026-05-11T08:00:15.928Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -12775,5 +12755,26 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-08T16:15:56.354Z"
+  },
+  {
+    "id": "c258c16f-fc03-4068-9817-c6aded557e59",
+    "queuedAt": "2026-06-12T09:56:46.235Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "b37fc8da-e1ca-42c8-a326-d308c3e5964a",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-06-03T07:08:20.179Z"
+      },
+      "after": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-12T09:56:46.235Z"
+      }
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-12T11:07:24.367Z"
   }
 ]
