@@ -1138,5 +1138,46 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "fa68fe81-9768-5f42-138e-8aaab76149e2",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Hirak Thakur",
+          "completedAt": "2026-05-29",
+          "notes": "Handover partially done."
+        }
+      ]
+    },
+    "createdAt": "2026-06-15T09:22:57.419Z",
+    "updatedAt": "2026-06-15T09:22:57.419Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-15T09:22:57.419Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
