@@ -1,65 +1,5 @@
 [
   {
-    "id": "38daf27a-f0ed-4f6a-87e5-39c3ae4077b6",
-    "queuedAt": "2026-05-11T08:00:15.928Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "5e856c95-fea4-53c3-820d-c36d54cd9a35",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.717Z"
-  },
-  {
-    "id": "a4db4bc5-cf2f-44d2-a47d-d8418a05e273",
-    "queuedAt": "2026-05-11T08:00:41.176Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "81b0246a-0fee-5a31-c6bb-67e5caf6ff9d",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.732Z"
-  },
-  {
-    "id": "866c03b8-8aad-4809-9d08-ca01d1ee3ade",
-    "queuedAt": "2026-05-11T08:01:08.739Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "3c9db1d5-befd-5f02-d898-66667c1823be",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.748Z"
-  },
-  {
     "id": "00501b4d-ccee-4e9c-b2c2-a992975cc154",
     "queuedAt": "2026-05-11T08:01:29.241Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -12776,5 +12716,74 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-12T11:07:24.367Z"
+  },
+  {
+    "id": "ba0d203a-03b7-4252-afb4-9c3ccbf97665",
+    "queuedAt": "2026-06-15T10:16:49.197Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "00cb77c4-24e6-429e-b5c5-626849dad8eb",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-08T12:07:34.115Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-15T10:16:49.195Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-15T14:47:37.781Z"
+  },
+  {
+    "id": "c658f0f2-f2f7-4318-a094-621cebb65ad0",
+    "queuedAt": "2026-06-15T10:17:28.707Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "df30d7dc-9fab-4a3e-8089-fb9c39aa728a",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Shortlisted",
+        "stageEnteredAt": "2026-06-01T09:52:49.768Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-15T10:17:28.707Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-15T14:47:37.786Z"
+  },
+  {
+    "id": "26d18226-fd28-4cbe-9508-cab97bd0bd84",
+    "queuedAt": "2026-06-15T10:20:19.147Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "application",
+    "operation": "update",
+    "payload": {
+      "id": "e2540eb0-e585-403e-8525-04e751926d2b",
+      "operation": "stage-transition",
+      "before": {
+        "currentStage": "Sourced",
+        "stageEnteredAt": "2026-05-30T16:27:51.082Z"
+      },
+      "after": {
+        "currentStage": "Rejected",
+        "stageEnteredAt": "2026-06-15T10:20:19.147Z",
+        "rejectionReason": "Not Qualified for Role"
+      },
+      "notes": "Rejected: Not Qualified for Role"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-15T14:47:37.791Z"
   }
 ]
