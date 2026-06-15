@@ -424,7 +424,13 @@
     "reviewNotes": "",
     "checklist": {
       "pendingTasks": [],
-      "keyContacts": [],
+      "keyContacts": [
+        {
+          "name": "",
+          "role": "",
+          "context": ""
+        }
+      ],
       "accessRevocation": [
         {
           "system": "sneha.p@getsetlearn.info",
@@ -432,10 +438,16 @@
         }
       ],
       "itAssetsReturned": [],
-      "knowledgeTransfer": []
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Pooja Sharma",
+          "completedAt": "2026-01-30",
+          "notes": "Handover Complete"
+        }
+      ]
     },
     "createdAt": "2026-06-08T06:38:58.773Z",
-    "updatedAt": "2026-06-08T06:39:40.485Z",
+    "updatedAt": "2026-06-15T05:38:10.520Z",
     "auditLog": [
       {
         "timestamp": "2026-06-08T06:38:58.773Z",
@@ -475,6 +487,31 @@
             "accessRevocation": 0,
             "itAssetsReturned": 0,
             "knowledgeTransfer": 1
+          }
+        }
+      },
+      {
+        "timestamp": "2026-06-15T05:38:10.520Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.update",
+        "before": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 1,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        },
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 1,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
           }
         }
       }
