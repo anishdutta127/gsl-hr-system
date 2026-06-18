@@ -6079,7 +6079,7 @@
     "reportingManagerId": "f3420ded-da9f-576c-5916-d26cdb8aa220",
     "location": "Belgaum",
     "dateOfJoining": "2024-09-18",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-03-18",
     "tenureYears": 1.6,
     "dateOfBirth": "1991-08-08",
@@ -6164,6 +6164,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-18T11:32:18.896Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-05",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-05."
       }
     ],
     "locationType": "remote-field",
@@ -6174,7 +6194,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-05",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover complete."
+    }
   },
   {
     "id": "86bc8333-efce-57ac-3e45-26524abd3239",

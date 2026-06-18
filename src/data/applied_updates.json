@@ -1,25 +1,5 @@
 [
   {
-    "id": "00501b4d-ccee-4e9c-b2c2-a992975cc154",
-    "queuedAt": "2026-05-11T08:01:29.241Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "13238bac-f67e-5dd0-e3db-8fe47f331d5d",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.763Z"
-  },
-  {
     "id": "706efc02-7875-4e0b-ae51-2352c825ed54",
     "queuedAt": "2026-05-11T08:01:55.821Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -12785,5 +12765,33 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-15T14:47:37.791Z"
+  },
+  {
+    "id": "4e9552a9-e85f-451e-b8f5-c51d2900c6e1",
+    "queuedAt": "2026-06-18T08:45:04.227Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "1feff9e8-7188-53e8-0e7f-bbfd05e644d7",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-05",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-05."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-18T11:32:18.910Z"
   }
 ]
