@@ -1942,7 +1942,7 @@
     "reportingManagerId": "b18ea4d9-8356-59d5-da63-da7655188fcd",
     "location": "Bangalore",
     "dateOfJoining": "2023-06-12",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2023-12-12",
     "tenureYears": 2.9,
     "dateOfBirth": "1990-12-11",
@@ -2027,6 +2027,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-19T12:27:09.230Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover in progress."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -2037,7 +2057,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-19",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover in progress."
+    }
   },
   {
     "id": "e18b8664-7e8c-5d9e-895b-ae0d790ee455",
@@ -4929,7 +4956,7 @@
     "reportingManagerId": "39f1d06d-88ad-5c8f-321b-c0f6ee4d7589",
     "location": "Mumbai",
     "dateOfJoining": "2024-06-04",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-12-04",
     "tenureYears": 1.9,
     "dateOfBirth": "1981-03-10",
@@ -5014,6 +5041,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-19T12:27:09.245Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "office",
@@ -5024,7 +5071,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-19",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover complete."
+    }
   },
   {
     "id": "12eb7afa-2221-5758-6ad7-63a6dd9a7d8a",
@@ -7916,7 +7970,7 @@
     "reportingManagerId": "a05d22e1-6f15-526d-56bf-69a1147ba115",
     "location": "Meerut",
     "dateOfJoining": "2025-04-15",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2025-09-15",
     "tenureYears": 1,
     "dateOfBirth": "1999-10-28",
@@ -8001,6 +8055,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-19T12:27:09.214Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover completed"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -8011,7 +8085,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-19",
+      "reason": "Termination",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover completed"
+    }
   },
   {
     "id": "c9367668-8b15-5d6c-7a3d-58f91c912233",
@@ -10596,7 +10677,7 @@
     "reportingManagerId": "b5a25060-d0ea-50b9-e15f-d6c131dcfe8d",
     "location": "Bangalore",
     "dateOfJoining": "2025-08-11",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": null,
     "tenureYears": 0.701369863,
     "dateOfBirth": "Sunday, February 10, 1991",
@@ -10681,6 +10762,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-06-19T12:27:09.261Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover in progress."
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -10691,7 +10792,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-19",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover in progress."
+    }
   },
   {
     "id": "ac75706b-9175-5fb0-beb7-9882213db98b",

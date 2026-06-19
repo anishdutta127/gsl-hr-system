@@ -1,142 +1,5 @@
 [
   {
-    "id": "706efc02-7875-4e0b-ae51-2352c825ed54",
-    "queuedAt": "2026-05-11T08:01:55.821Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "957ed62e-2e1d-50f7-89bb-99488de18991",
-      "operation": "candidate.update",
-      "before": {
-        "source": "HRTeam"
-      },
-      "after": {
-        "source": "Naukri"
-      },
-      "notes": "Edited by Hiring@getsetlearn.info."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.779Z"
-  },
-  {
-    "id": "05be2c68-626d-4e6d-bec5-e9a9e2a3c6fd",
-    "queuedAt": "2026-05-11T08:08:16.064Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "employee",
-    "operation": "update",
-    "payload": {
-      "id": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
-      "operation": "exit.initiate",
-      "before": {
-        "status": "Active",
-        "exit": null
-      },
-      "after": {
-        "status": "Exited",
-        "exit": {
-          "lastWorkingDay": "2026-03-31",
-          "reason": "Terminated",
-          "relievingLetterIssued": false,
-          "experienceLetterIssued": false,
-          "notes": "FNF process done."
-        }
-      },
-      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-11T10:03:32.793Z"
-  },
-  {
-    "id": "1e2e3139-54e5-413d-ae82-c37e0174439d",
-    "queuedAt": "2026-05-12T09:01:09.813Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "role",
-    "operation": "create",
-    "payload": {
-      "id": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-      "title": "STEM Trainer",
-      "department": "STEM",
-      "location": "Remote",
-      "employmentType": "Full-time",
-      "status": "Open",
-      "pipelineStages": [
-        "Sourced",
-        "Shortlisted",
-        "AssessmentSent",
-        "AssessmentDone",
-        "VideoSent",
-        "VideoDone",
-        "HODRoundScheduled",
-        "HODRoundDone",
-        "HRRoundScheduled",
-        "HRRoundDone",
-        "Offered",
-        "OfferAccepted",
-        "DocsCollected",
-        "Joined"
-      ],
-      "rubric": [],
-      "description": "<p><strong>Role Description</strong></p><p>As a STEM Trainer, you will engage students through hands-on learning in Robotics, Coding, Electronics, IoT, and STEM activities using innovative Tinker kits and practical projects.</p><p><strong>Key Responsibilities:</strong></p><p> • Conduct interactive STEM and Robotics sessions in schools</p><p> • Train students using activity-based learning methods</p><p> • Handle Arduino, ESP32, sensors, actuators, and robotics kits</p><p> • Support workshops, exhibitions, demos, and teacher training programs</p><p> • Inspire students to innovate, build, and solve real-world problems. Document activities and school and student progress.</p><p></p>",
-      "responsibilities": [],
-      "mustHaves": [],
-      "niceToHaves": [],
-      "createdAt": "2026-05-12T09:01:09.812Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T09:01:09.812Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "role.create",
-          "after": {
-            "title": "STEM Trainer",
-            "department": "STEM",
-            "location": "Remote",
-            "employmentType": "Full-time"
-          },
-          "notes": "Created via UI"
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T10:45:16.759Z"
-  },
-  {
-    "id": "5de63ebc-c1c0-4f89-b51e-75fa2817d5ed",
-    "queuedAt": "2026-05-12T14:02:50.980Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "name": "Abhishek Soni",
-      "email": "s.abhie@gmail.com",
-      "phone": "9610441044",
-      "source": "Application",
-      "notes": "I am deeply motivated by the opportunity to engage with educators, discuss transformative strategies, and contribute to building a stronger future for the next generation.",
-      "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf",
-      "createdAt": "2026-05-12T14:02:49.464Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T14:02:49.464Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Abhishek Soni",
-            "email": "s.abhie@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/9c8f7df6-01d5-4ce5-96e3-f066b3b7116f.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.691Z"
-  },
-  {
     "id": "0d3a5db2-d62b-4ee6-b43a-64c9ba8aa5e5",
     "queuedAt": "2026-05-12T14:02:51.883Z",
     "queuedBy": "public:careers",
@@ -12793,5 +12656,117 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-18T11:32:18.910Z"
+  },
+  {
+    "id": "26a14b29-763a-4838-879a-e72f9088a4ea",
+    "queuedAt": "2026-06-19T11:02:40.349Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "2c251e56-903f-5a06-b8cf-4d0462eaa0e3",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover completed"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-19T12:27:09.227Z"
+  },
+  {
+    "id": "b0fc0ddc-9ea1-4f57-a2a2-62e86ac64302",
+    "queuedAt": "2026-06-19T11:10:42.502Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "ee6eded2-746a-552d-9fac-5962da4b81b1",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover in progress."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-19T12:27:09.242Z"
+  },
+  {
+    "id": "10444b35-452f-4f75-8031-b86cab49c578",
+    "queuedAt": "2026-06-19T11:12:46.769Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "0da7f95f-a76a-51ef-ea98-af7f4c5edcdf",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-19T12:27:09.257Z"
+  },
+  {
+    "id": "1088ff21-fa08-4a94-8694-685a3e663884",
+    "queuedAt": "2026-06-19T11:14:44.397Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover in progress."
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-19T12:27:09.272Z"
   }
 ]
