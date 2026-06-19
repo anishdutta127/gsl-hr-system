@@ -1210,5 +1210,51 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "1feff9e8-7188-53e8-0e7f-bbfd05e644d7",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "sundeep.m@getsetlearn.info",
+          "status": "Pending"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Rajesh P",
+          "completedAt": "2026-06-05",
+          "notes": "Handover complete"
+        }
+      ]
+    },
+    "createdAt": "2026-06-19T11:09:05.983Z",
+    "updatedAt": "2026-06-19T11:09:05.983Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-19T11:09:05.983Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
