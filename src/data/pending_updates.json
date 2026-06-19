@@ -32,5 +32,34 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "65d6f915-8fcb-4db9-a364-c4d89c1c4d7e",
+    "queuedAt": "2026-06-19T20:30:49.584Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "0c49c872-9c98-4b14-900c-a20819ee7012",
+      "candidateId": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-19T20:30:47.806Z",
+      "createdAt": "2026-06-19T20:30:47.806Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-19T20:30:47.806Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
