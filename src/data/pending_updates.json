@@ -61,5 +61,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "6ad6b6d7-0d6c-4fc8-8d73-17e19ca5b668",
+    "queuedAt": "2026-06-19T20:30:50.284Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "1004ac11-3439-4ea1-b672-c9917eb5ccd5",
+      "to": "smriti.sood@yahoo.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Smriti,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4MTkwMTA1MCwiZXhwaXJlc0F0IjoxNzgxOTAxOTUwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNTYyMzZhNmMtMGRiYy00YjI0LWJlMTEtNjY2YjFiOTgyZjQ1IiwiYXBwbGljYXRpb25JZCI6IjBjNDljODcyLTljOTgtNGIxNC05MDBjLWEyMDgxOWVlNzAxMiIsIm5vbmNlIjoiMGIzMzYzMGMtOWIxYi00OWNjLWFjNjYtMGZjYjYzY2I0NjBlIn19.fi5rBBakUemkPBjWpBza2eXvT78S6twzWiw89JOs7qw\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 56236a6c-0dbc-4b24-be11-666b1b982f45",
+      "createdAt": "2026-06-19T20:30:50.284Z"
+    },
+    "retryCount": 0
   }
 ]
