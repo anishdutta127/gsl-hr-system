@@ -1,1 +1,196 @@
-[]
+[
+  {
+    "employeeId": "242a225c-23dc-5dbb-ec89-d5ccae71bbae",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "Resignation",
+    "resignationDate": null,
+    "terminationDate": null,
+    "lastWorkingDay": "2026-05-15",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-06-22T09:42:52.594Z",
+        "completedBy": "system"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-06-22T09:42:52.594Z",
+    "createdBy": "system",
+    "updatedAt": "2026-06-22T09:42:52.594Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-22T09:42:52.594Z",
+        "user": "system",
+        "action": "exit.migrate.create",
+        "notes": "Backfilled exit process for in-flight exit of SHUBHRA RISHI."
+      },
+      {
+        "timestamp": "2026-06-22T09:42:52.594Z",
+        "user": "system",
+        "action": "exit.migrate.backfill",
+        "after": {
+          "appendedSteps": 6
+        },
+        "notes": "Backfilled 6 missing step(s)."
+      }
+    ]
+  },
+  {
+    "employeeId": "e8cd28b8-af5c-5454-f3fc-3808cf5cf68f",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "Terminated",
+    "resignationDate": null,
+    "terminationDate": null,
+    "lastWorkingDay": "2026-03-31",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-06-22T09:42:52.594Z",
+        "completedBy": "system"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-06-22T09:42:52.594Z",
+    "createdBy": "system",
+    "updatedAt": "2026-06-22T09:42:52.594Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-22T09:42:52.594Z",
+        "user": "system",
+        "action": "exit.migrate.create",
+        "notes": "Backfilled exit process for in-flight exit of EZHILARASAN ELUMALAI."
+      },
+      {
+        "timestamp": "2026-06-22T09:42:52.594Z",
+        "user": "system",
+        "action": "exit.migrate.backfill",
+        "after": {
+          "appendedSteps": 6
+        },
+        "notes": "Backfilled 6 missing step(s)."
+      }
+    ]
+  }
+]

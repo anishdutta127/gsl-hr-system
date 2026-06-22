@@ -457,7 +457,7 @@ export function mergeExitProcess({
     letterIssuedBy: by,
   })
   markCompletedIf('ff', Boolean(signals.ffPaidAt), {
-    paidAt: signals.ffPaidAt ?? now,
+    paymentDate: (signals.ffPaidAt ?? now).slice(0, 10),
     ffAmount: signals.ffAmount ?? null,
   })
 
