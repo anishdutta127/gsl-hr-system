@@ -865,6 +865,102 @@ export interface FFSettlement {
   auditLog: AuditEntry[]
 }
 
+// --- Exit cockpit (six-step exit process, 2026-06) ----------------------
+//
+// Reshapes the fragmented offboarding flow (tasks + handover + exit
+// interview + F&F across three pages) into ONE editable, ordered six-step
+// process per exiting employee. Steps are instantiated from the editable
+// exit_step_templates.json; the per-employee record lives in
+// exit_processes.json and is mutated via atomicUpdateJson (never the queue),
+// each write appending an auditLog entry. The employee.status -> 'Exited'
+// flip stays on the existing exit.initiate queue op (employees.json is
+// queue-managed everywhere else).
+
+export const EXIT_STEP_KINDS = [
+  'initiate',
+  'handover',
+  'letter:NO-DUES-v1',
+  'ff',
+  'letter:RELIEVING-v1',
+  'letter:EXPERIENCE-v1',
+  'custom',
+] as const
+export type ExitStepKind = (typeof EXIT_STEP_KINDS)[number]
+
+export const EXIT_STEP_STATUSES = [
+  'Not Started',
+  'In Progress',
+  'Completed',
+  'N/A',
+] as const
+export type ExitStepStatus = (typeof EXIT_STEP_STATUSES)[number]
+
+export interface ExitStepTemplate {
+  id: string
+  /** 1-based display order. The cockpit sorts on this. */
+  order: number
+  name: string
+  kind: ExitStepKind
+  /** Mandatory steps gate "process complete"; HR can mark them N/A. */
+  isMandatory: boolean
+  description?: string
+}
+
+/** Kind-specific data captured on a step. All keys optional; only those
+ *  relevant to the step's kind are populated. Settlement figures and
+ *  payment data are financial (HR/Admin-only on the cockpit). */
+export interface ExitStepData {
+  // handover
+  handoverEmailedAt?: string | null
+  rmConfirmedAt?: string | null
+  // no dues
+  settlementFigures?: number | null
+  settlementWords?: string | null
+  lastDrawnSalary?: number | null
+  pendingItems?: string | null
+  signed?: boolean
+  signedAt?: string | null
+  signedCopyNote?: string | null
+  // ff settlement
+  ffAmount?: number | null
+  paymentDate?: string | null
+  paymentReference?: string | null
+  // letters (relieving / experience / no-dues generation)
+  letterIssuedAt?: string | null
+  letterIssuedBy?: string | null
+}
+
+export interface ExitProcessStep {
+  templateId: string
+  name: string
+  kind: ExitStepKind
+  isMandatory: boolean
+  status: ExitStepStatus
+  data: ExitStepData
+  notes: string
+  completedAt: string | null
+  completedBy: string | null
+}
+
+export interface ExitProcess {
+  employeeId: string
+  exitType: ExitType
+  reasonForLeaving: string
+  /** Resignation date for voluntary exits; null for terminations. */
+  resignationDate: string | null
+  /** Termination date for involuntary exits; null otherwise. */
+  terminationDate: string | null
+  lastWorkingDay: string
+  steps: ExitProcessStep[]
+  /** Stamped when all mandatory steps reach Completed/NA. Null while in
+   *  progress. Drives the Alumni/Completed grouping on the /exits board. */
+  completedAt: string | null
+  createdAt: string
+  createdBy: string
+  updatedAt: string
+  auditLog: AuditEntry[]
+}
+
 // --- Asset tracking (Phase 4 Phase 2) -----------------------------------
 
 export const ASSET_TYPES = [

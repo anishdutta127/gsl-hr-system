@@ -22,7 +22,7 @@ export interface LetterVariable {
   label: string
   required: boolean
   hint?: string
-  defaultFrom?: 'employee.name' | 'employee.title' | 'employee.email' | 'employee.employeeCode' | 'employee.designation' | 'employee.department' | 'employee.location' | 'employee.dateOfJoining' | 'employee.phone' | 'company.signatoryName' | 'company.signatoryTitle' | 'today'
+  defaultFrom?: 'employee.name' | 'employee.title' | 'employee.email' | 'employee.employeeCode' | 'employee.designation' | 'employee.department' | 'employee.location' | 'employee.dateOfJoining' | 'employee.phone' | 'company.signatoryName' | 'company.signatoryTitle' | 'company.legalName' | 'company.name' | 'company.tagline' | 'pronoun.subject' | 'pronoun.object' | 'pronoun.possessive' | 'today'
   multiline?: boolean
 }
 
@@ -161,14 +161,35 @@ export const LETTER_TEMPLATES: LetterTemplate[] = [
   {
     id: 'NO-DUES-v1',
     title: 'No Dues Letter',
-    description: "Acknowledgement of full and final settlement.",
+    description: "Acknowledgement of full and final settlement. The five contractual clauses are fixed boilerplate.",
     filePath: 'public/hr-templates/NO-DUES-v1.docx',
     audience: 'exited',
     variables: [
+      { token: 'date', label: 'Letter date (long form)', required: true, defaultFrom: 'today', hint: 'e.g., 22nd June 2026' },
       { token: 'name', label: 'Full name', required: true, defaultFrom: 'employee.name' },
       { token: 'employeeCode', label: 'Employee code', required: true, defaultFrom: 'employee.employeeCode' },
-      { token: 'duesAmount', label: 'Settlement amount (numeric)', required: true, hint: 'e.g., 1,04,501' },
+      { token: 'duesAmount', label: 'Settlement amount (numeric, Rs, Indian comma)', required: true, hint: 'e.g., 1,04,501' },
       { token: 'duesAmountWords', label: 'Settlement amount (words)', required: true, hint: 'One Lakh Four Thousand Five Hundred and One' },
+    ],
+  },
+  {
+    id: 'EXPERIENCE-v1',
+    title: 'Experience Letter',
+    description: 'Service / experience certificate. Audience: exited employees. He/she pronouns derive from the employee gender field.',
+    filePath: 'public/hr-templates/EXPERIENCE-v1.docx',
+    audience: 'exited',
+    variables: [
+      { token: 'issueDate', label: 'Letter date (long form)', required: true, defaultFrom: 'today', hint: 'e.g., 22nd June 2026' },
+      { token: 'salutationName', label: 'Salutation name (the "Dear ___")', required: true, hint: 'usually the first name' },
+      { token: 'employeeName', label: 'Full name', required: true, defaultFrom: 'employee.name' },
+      { token: 'designation', label: 'Designation', required: true, defaultFrom: 'employee.designation' },
+      { token: 'employerName', label: 'Employer (legal entity)', required: true, defaultFrom: 'company.legalName' },
+      { token: 'employmentFrom', label: 'Employed from (DOJ, long form)', required: true, hint: 'e.g., 1st April 2024' },
+      { token: 'employmentTo', label: 'Employed to (LWD, long form)', required: true, hint: 'e.g., 30th June 2026' },
+      { token: 'pronounSubject', label: 'Pronoun subject', required: true, defaultFrom: 'pronoun.subject', hint: 'He / She / They' },
+      { token: 'pronounObject', label: 'Pronoun object', required: true, defaultFrom: 'pronoun.object', hint: 'him / her / them' },
+      { token: 'pronounPossessive', label: 'Pronoun possessive', required: true, defaultFrom: 'pronoun.possessive', hint: 'his / her / their' },
+      ...COMMON_SIGNATORY,
     ],
   },
 ]

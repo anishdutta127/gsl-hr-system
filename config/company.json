@@ -15,8 +15,8 @@
     "country": "India"
   },
   "signatory": {
-    "name": "Authorised Signatory",
-    "title": "Director",
+    "name": "Amit Zaveri",
+    "title": "Chief Executive Officer",
     "email": "signatory@gsl.edu.in",
     "phone": "+91-2200000000"
   },
@@ -25,6 +25,10 @@
     "title": "HR Lead",
     "email": "hr@gsl.edu.in",
     "whatsapp": "+91-9900000000"
+  },
+  "accountsContact": {
+    "name": "Accounts",
+    "email": "accounts@gsl.edu.in"
   },
   "website": "https://getsetlearn.in",
   "parentGroup": "Arvind Mafatlal Group"

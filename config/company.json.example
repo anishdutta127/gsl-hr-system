@@ -27,6 +27,10 @@
     "email": "hr@gsl.edu.in",
     "whatsapp": "+91-XXXXXXXXXX"
   },
+  "accountsContact": {
+    "name": "Accounts",
+    "email": "accounts@gsl.edu.in"
+  },
   "website": "https://getsetlearn.in",
   "parentGroup": "Arvind Mafatlal Group"
 }

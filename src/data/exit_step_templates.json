@@ -1,0 +1,50 @@
+[
+  {
+    "id": "exit-initiated",
+    "order": 1,
+    "name": "Exit initiated",
+    "kind": "initiate",
+    "isMandatory": true,
+    "description": "Capture the reason for leaving, resignation or termination date, and the official last working day. Recorded when the exit is started; editable until the exit is complete."
+  },
+  {
+    "id": "exit-handover",
+    "order": 2,
+    "name": "Handover",
+    "kind": "handover",
+    "isMandatory": true,
+    "description": "Generate the handover email to the reporting manager (Accounts and HR are always CC'd) plus the handover checklist. Copy or open in your mail client - no email is sent automatically. Mark complete once the reporting manager confirms go-ahead."
+  },
+  {
+    "id": "exit-no-dues",
+    "order": 3,
+    "name": "No Dues / Notice Certificate",
+    "kind": "letter:NO-DUES-v1",
+    "isMandatory": true,
+    "description": "Generate the No Dues letter (employee code, full-and-final settlement figures and words, last drawn salary, pending items). The five contractual clauses are fixed boilerplate. The employee signs and returns it - record it as signed and note the signed copy."
+  },
+  {
+    "id": "exit-ff-settlement",
+    "order": 4,
+    "name": "Full and final settlement",
+    "kind": "ff",
+    "isMandatory": true,
+    "description": "Record the settlement amount and payment confirmation (date and reference). HR and Admin only."
+  },
+  {
+    "id": "exit-relieving",
+    "order": 5,
+    "name": "Relieving letter",
+    "kind": "letter:RELIEVING-v1",
+    "isMandatory": true,
+    "description": "Generate the relieving letter from the Relieving template."
+  },
+  {
+    "id": "exit-experience",
+    "order": 6,
+    "name": "Experience letter",
+    "kind": "letter:EXPERIENCE-v1",
+    "isMandatory": true,
+    "description": "Generate the experience letter from the Experience template."
+  }
+]
