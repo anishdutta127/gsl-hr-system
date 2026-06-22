@@ -9356,5 +9356,31 @@
         "notes": "Created via paste-in import."
       }
     ]
+  },
+  {
+    "id": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+    "name": "Smriti Sood",
+    "email": "smriti.sood@yahoo.com",
+    "phone": "7498113531",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/56236a6c-0dbc-4b24-be11-666b1b982f45.pdf",
+    "createdAt": "2026-06-19T20:30:47.806Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-19T20:30:47.806Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Smriti Sood",
+          "email": "smriti.sood@yahoo.com",
+          "source": "Application",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "resumeFilePath": "data/resumes/applications/2026/06/56236a6c-0dbc-4b24-be11-666b1b982f45.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]

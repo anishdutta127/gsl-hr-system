@@ -1,87 +1,5 @@
 [
   {
-    "id": "0d3a5db2-d62b-4ee6-b43a-64c9ba8aa5e5",
-    "queuedAt": "2026-05-12T14:02:51.883Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "f1bfb6bf-d360-4925-a20c-9622b6d6b366",
-      "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T14:02:49.464Z",
-      "createdAt": "2026-05-12T14:02:49.464Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T14:02:49.464Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.692Z"
-  },
-  {
-    "id": "4ee654fc-774b-4d46-b639-819abf4a2926",
-    "queuedAt": "2026-05-12T14:02:52.767Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "b1aaedce-bd82-4b88-8451-a159025be71c",
-      "to": "s.abhie@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Abhishek,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODU5NDU3MiwiZXhwaXJlc0F0IjoxNzc4NTk1NDcyLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiOWM4ZjdkZjYtMDFkNS00Y2U1LTk2ZTMtZjA2NmIzYjcxMTZmIiwiYXBwbGljYXRpb25JZCI6ImYxYmZiNmJmLWQzNjAtNDkyNS1hMjBjLTk2MjJiNmQ2YjM2NiIsIm5vbmNlIjoiYWI3NTA1ZTItMzc0Mi00NTQxLWFiMTItMDFlYTAwM2JkMGEzIn19.6RFxeQA0droEz0v4jqNnPsISJvQupB5y-3SmhZoZMaA\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "createdAt": "2026-05-12T14:02:52.767Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.692Z"
-  },
-  {
-    "id": "a9afc512-7fd9-4ad1-8f87-6ff60f6521f1",
-    "queuedAt": "2026-05-12T14:09:55.321Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "9ccfd8d4-1f19-4442-9fe8-098957bc1424",
-      "name": "Deepa",
-      "email": "deepasarasu16@gmail.com",
-      "phone": "+919840752288",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/9ccfd8d4-1f19-4442-9fe8-098957bc1424.pdf",
-      "createdAt": "2026-05-12T14:09:54.170Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T14:09:54.170Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Deepa",
-            "email": "deepasarasu16@gmail.com",
-            "source": "Application",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "resumeFilePath": "data/resumes/applications/2026/05/9ccfd8d4-1f19-4442-9fe8-098957bc1424.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.707Z"
-  },
-  {
     "id": "29283a95-2410-4e3d-a9f6-01b56f3d9dd3",
     "queuedAt": "2026-05-12T14:09:56.225Z",
     "queuedBy": "public:careers",
@@ -12768,5 +12686,87 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-19T12:27:09.272Z"
+  },
+  {
+    "id": "a7c3b98d-2d07-461f-994f-3b1776b510bd",
+    "queuedAt": "2026-06-19T20:30:48.902Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+      "name": "Smriti Sood",
+      "email": "smriti.sood@yahoo.com",
+      "phone": "7498113531",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/56236a6c-0dbc-4b24-be11-666b1b982f45.pdf",
+      "createdAt": "2026-06-19T20:30:47.806Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-19T20:30:47.806Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Smriti Sood",
+            "email": "smriti.sood@yahoo.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/56236a6c-0dbc-4b24-be11-666b1b982f45.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-22T08:45:16.586Z"
+  },
+  {
+    "id": "65d6f915-8fcb-4db9-a364-c4d89c1c4d7e",
+    "queuedAt": "2026-06-19T20:30:49.584Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "0c49c872-9c98-4b14-900c-a20819ee7012",
+      "candidateId": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+      "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-06-19T20:30:47.806Z",
+      "createdAt": "2026-06-19T20:30:47.806Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-19T20:30:47.806Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "56236a6c-0dbc-4b24-be11-666b1b982f45",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-22T08:45:16.591Z"
+  },
+  {
+    "id": "6ad6b6d7-0d6c-4fc8-8d73-17e19ca5b668",
+    "queuedAt": "2026-06-19T20:30:50.284Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "1004ac11-3439-4ea1-b672-c9917eb5ccd5",
+      "to": "smriti.sood@yahoo.com",
+      "subject": "We received your application for Instructional Designer at GSL",
+      "body": "Hi Smriti,\n\nThanks for applying for Instructional Designer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4MTkwMTA1MCwiZXhwaXJlc0F0IjoxNzgxOTAxOTUwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNTYyMzZhNmMtMGRiYy00YjI0LWJlMTEtNjY2YjFiOTgyZjQ1IiwiYXBwbGljYXRpb25JZCI6IjBjNDljODcyLTljOTgtNGIxNC05MDBjLWEyMDgxOWVlNzAxMiIsIm5vbmNlIjoiMGIzMzYzMGMtOWIxYi00OWNjLWFjNjYtMGZjYjYzY2I0NjBlIn19.fi5rBBakUemkPBjWpBza2eXvT78S6twzWiw89JOs7qw\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 56236a6c-0dbc-4b24-be11-666b1b982f45",
+      "createdAt": "2026-06-19T20:30:50.284Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-06-22T08:45:16.592Z"
   }
 ]
