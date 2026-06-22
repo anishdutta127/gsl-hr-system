@@ -1,50 +1,55 @@
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
+import { getCurrentSession } from '@/lib/identity'
 import { loadEmployees } from '@/lib/data'
-import { requireRoles } from '@/lib/guards'
 import { formatDate } from '@/lib/format'
-import { handoverStatus, loadExitHandovers } from '@/lib/exitHandover'
-import type { HandoverStatus } from '@/lib/types'
+import { loadExitProcesses, summariseExit } from '@/lib/exitProcess'
+import type { Employee, ExitProcess } from '@/lib/types'
 import { InitiateExitPicker, type PickerEmployee } from './InitiateExitPicker'
 
 export const dynamic = 'force-dynamic'
 
 /**
- * Recruitment-side Exits surface. Tracks exited employees: LWD,
- * relieving and experience letters, and the handover document.
- *
- * Handover statuses are derived from `exit_handovers.json` keyed by
- * employee id. HR-Admin can spot the "Submitted" queue to know which
- * handovers need review.
+ * Exits board - the single home for the exit lifecycle. In-progress exits
+ * carry their live six-step checklist status; completed exits drop into the
+ * Alumni group, out of the active /employees roster. Open to all staff;
+ * HOD sees only their direct reports, Leadership is read-only.
  */
-export default async function ExitsPage({
-  searchParams,
-}: {
-  searchParams: { handover?: string }
-}) {
-  await requireRoles(['Admin', 'HR'])
+export default async function ExitsPage() {
+  const session = await getCurrentSession()
+  if (!session) redirect('/login')
+  const isHrOrAdmin = session.role === 'Admin' || session.role === 'HR'
+  const isLeadership = session.role === 'Leadership'
+  const isHod = session.role === 'HOD'
+  if (!isHrOrAdmin && !isLeadership && !isHod) redirect('/')
+
   const employees = loadEmployees()
-  const exited = employees.filter((e) => e.status === 'Exited')
-  const handovers = loadExitHandovers()
-  const handoverByEmp = new Map(handovers.map((h) => [h.employeeId, h]))
-  const filterStatus = searchParams.handover as HandoverStatus | undefined
+  const employeeById = new Map(employees.map((e) => [e.id, e] as const))
+  const processes = loadExitProcesses()
 
-  const exitedWithHandover = exited.map((e) => ({
-    employee: e,
-    handover: handoverByEmp.get(e.id),
-    status: handoverStatus(handoverByEmp.get(e.id)),
-  }))
-
-  const filtered = filterStatus
-    ? exitedWithHandover.filter((row) => row.status === filterStatus)
-    : exitedWithHandover
-
-  const statusCounts: Record<HandoverStatus, number> = {
-    'Not started': 0,
-    'In progress': 0,
-    Submitted: 0,
-    Reviewed: 0,
+  function inScope(employeeId: string): boolean {
+    if (isHrOrAdmin || isLeadership) return true
+    const emp = employeeById.get(employeeId)
+    return Boolean(emp && emp.reportingManagerId === session!.sub)
   }
-  for (const row of exitedWithHandover) statusCounts[row.status]++
+
+  const rows = processes
+    .filter((p) => inScope(p.employeeId))
+    .map((p) => ({ process: p, employee: employeeById.get(p.employeeId) }))
+    .filter((r): r is { process: ExitProcess; employee: Employee } => Boolean(r.employee))
+
+  const inProgress = rows
+    .filter((r) => !r.process.completedAt)
+    .sort((a, b) => a.employee.name.localeCompare(b.employee.name))
+  const alumni = rows
+    .filter((r) => r.process.completedAt)
+    .sort((a, b) => (b.process.completedAt ?? '').localeCompare(a.process.completedAt ?? ''))
+
+  // Exited employees with no checklist yet (legacy exits before this reshape).
+  const trackedIds = new Set(processes.map((p) => p.employeeId))
+  const legacyExited = employees
+    .filter((e) => e.status === 'Exited' && !trackedIds.has(e.id) && inScope(e.id))
+    .sort((a, b) => a.name.localeCompare(b.name))
 
   const active: PickerEmployee[] = employees
     .filter((e) => e.status === 'Active')
@@ -59,166 +64,131 @@ export default async function ExitsPage({
 
   return (
     <div className="container-page py-8">
-      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <h1 className="font-display text-2xl text-ink">Exits</h1>
-          <p className="mt-1 text-sm text-ink-2">
-            Track last working days, relieving letters, experience letters, and
-            handover documents for employees who have exited. For the active employee
-            roster, use{' '}
-            <Link href="/employees" className="font-medium text-navy hover:underline">
-              Employees
-            </Link>
-            .
-          </p>
+      <div className="mb-6">
+        <h1 className="font-display text-2xl text-ink">Exits</h1>
+        <p className="mt-1 text-sm text-ink-2">
+          Drive each exit end-to-end from one page: handover, no dues, settlement, relieving and
+          experience letters. For the active roster use{' '}
+          <Link href="/employees" className="font-medium text-navy hover:underline">
+            Employees
+          </Link>
+          .{isHod && ' Showing your direct reports only.'}
+        </p>
+      </div>
+
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <Stat label="In progress" value={inProgress.length} tone={inProgress.length > 0 ? 'warning' : 'ok'} />
+        <Stat label="Alumni" value={alumni.length} tone="ok" />
+        <Stat label="No checklist" value={legacyExited.length} tone={legacyExited.length > 0 ? 'muted' : 'ok'} />
+      </div>
+
+      {isHrOrAdmin && (
+        <div className="mb-8">
+          <InitiateExitPicker employees={active} />
         </div>
-      </div>
+      )}
 
-      <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <FilterStat
-          label="Not started"
-          value={statusCounts['Not started']}
-          href="/exits?handover=Not%20started"
-          active={filterStatus === 'Not started'}
-          tone="muted"
-        />
-        <FilterStat
-          label="In progress"
-          value={statusCounts['In progress']}
-          href="/exits?handover=In%20progress"
-          active={filterStatus === 'In progress'}
-          tone="warning"
-        />
-        <FilterStat
-          label="Submitted"
-          value={statusCounts.Submitted}
-          href="/exits?handover=Submitted"
-          active={filterStatus === 'Submitted'}
-          tone="navy"
-        />
-        <FilterStat
-          label="Reviewed"
-          value={statusCounts.Reviewed}
-          href="/exits?handover=Reviewed"
-          active={filterStatus === 'Reviewed'}
-          tone="success"
-        />
-      </div>
-
-      <div className="mb-8">
-        <InitiateExitPicker employees={active} />
-      </div>
-
-      <section aria-labelledby="exited-heading">
-        <div className="mb-3 flex flex-wrap items-baseline justify-between gap-2">
-          <h2 id="exited-heading" className="font-display text-lg text-ink">
-            Exited ({filtered.length}
-            {filterStatus ? ` of ${exited.length}` : ''})
-          </h2>
-          {filterStatus && (
-            <Link href="/exits" className="text-xs font-medium text-navy hover:underline">
-              Clear filter
-            </Link>
-          )}
-        </div>
-        {filtered.length === 0 ? (
-          <div className="rounded-lg border border-dashed border-line-strong bg-card p-6 text-center text-sm text-ink-2">
-            {filterStatus ? `No exits with handover status ${filterStatus}.` : 'No exits recorded yet.'}
-          </div>
+      <Section title={`In progress (${inProgress.length})`}>
+        {inProgress.length === 0 ? (
+          <Empty>No exits in progress.</Empty>
         ) : (
           <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
-            {filtered.map(({ employee: e, status }) => (
-              <li key={e.id}>
-                <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 text-sm">
-                  <Link
-                    href={`/employees/${e.id}`}
-                    className="min-w-0 flex-1 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
-                  >
-                    <span className="block font-medium text-ink">{e.name}</span>
-                    <span className="block text-xs text-ink-2">
-                      {e.designation} · LWD {e.exit ? formatDate(e.exit.lastWorkingDay) : '-'} ·{' '}
-                      {e.exit?.reason ?? '-'}
-                    </span>
-                  </Link>
-                  <span className="flex flex-wrap gap-2">
-                    <HandoverBadge status={status} />
-                    <Link
-                      href={`/exits/${e.id}/handover`}
-                      className="inline-flex min-h-[36px] items-center rounded border border-line-strong px-2 py-1 text-xs font-medium text-ink hover:bg-surface"
-                    >
-                      Handover
-                    </Link>
-                    <LetterBadge label="Relieving" issued={Boolean(e.exit?.relievingLetterIssued)} />
-                    <LetterBadge label="Experience" issued={Boolean(e.exit?.experienceLetterIssued)} />
-                  </span>
-                </div>
-              </li>
+            {inProgress.map(({ process, employee }) => (
+              <ExitRow key={employee.id} employee={employee} process={process} />
             ))}
           </ul>
         )}
-      </section>
+      </Section>
+
+      {legacyExited.length > 0 && (
+        <Section title={`Exited, no checklist (${legacyExited.length})`}>
+          <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
+            {legacyExited.map((e) => (
+              <li key={e.id}>
+                <Link
+                  href={`/exits/${e.id}`}
+                  className="flex items-center justify-between gap-3 px-5 py-4 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+                >
+                  <span>
+                    <span className="block font-medium text-ink">{e.name}</span>
+                    <span className="block text-xs text-ink-2">
+                      {e.designation} · LWD {e.exit ? formatDate(e.exit.lastWorkingDay) : '-'}
+                    </span>
+                  </span>
+                  <span className="shrink-0 text-xs font-medium text-orange-dark">
+                    {isHrOrAdmin ? 'Start checklist →' : 'View →'}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {alumni.length > 0 && (
+        <Section title={`Alumni (${alumni.length})`}>
+          <ul className="divide-y divide-line overflow-hidden rounded-lg border border-line bg-card">
+            {alumni.map(({ process, employee }) => (
+              <ExitRow key={employee.id} employee={employee} process={process} />
+            ))}
+          </ul>
+        </Section>
+      )}
     </div>
   )
 }
 
-function HandoverBadge({ status }: { status: HandoverStatus }) {
-  const tone =
-    status === 'Reviewed'
-      ? 'bg-success-bg text-success'
-      : status === 'Submitted'
-        ? 'bg-navy-light text-navy'
-        : status === 'In progress'
-          ? 'bg-warning-bg text-warning'
-          : 'bg-surface text-ink-3'
+function ExitRow({ employee, process }: { employee: Employee; process: ExitProcess }) {
+  const summary = summariseExit(process)
   return (
-    <span className={`inline-flex items-center rounded px-2 py-1 text-xs font-medium ${tone}`}>
-      Handover: {status}
-    </span>
+    <li>
+      <Link
+        href={`/exits/${employee.id}`}
+        className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+      >
+        <span className="min-w-0 flex-1">
+          <span className="block font-medium text-ink">{employee.name}</span>
+          <span className="block text-xs text-ink-2">
+            {employee.designation} · {employee.department} · LWD {formatDate(process.lastWorkingDay)}
+          </span>
+        </span>
+        <span className="flex w-40 items-center gap-2">
+          <span className="h-1.5 flex-1 overflow-hidden rounded bg-line" aria-hidden="true">
+            <span
+              className={summary.isComplete ? 'block h-full bg-success' : 'block h-full bg-orange'}
+              style={{ width: `${summary.percent}%` }}
+            />
+          </span>
+          <span className="w-9 shrink-0 text-right text-xs tabular text-ink-2">{summary.percent}%</span>
+        </span>
+      </Link>
+    </li>
   )
 }
 
-function LetterBadge({ label, issued }: { label: string; issued: boolean }) {
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <span
-      className={
-        issued
-          ? 'inline-flex items-center rounded bg-teal-light px-2 py-1 text-xs font-medium text-teal-dark'
-          : 'inline-flex items-center rounded bg-surface px-2 py-1 text-xs text-ink-2'
-      }
-    >
-      {label}: {issued ? 'Issued' : 'Pending'}
-    </span>
+    <section className="mb-8" aria-label={title}>
+      <h2 className="mb-3 font-display text-lg text-ink">{title}</h2>
+      {children}
+    </section>
   )
 }
 
-function FilterStat({
-  label,
-  value,
-  href,
-  active,
-  tone,
-}: {
-  label: string
-  value: number
-  href: string
-  active: boolean
-  tone: 'muted' | 'warning' | 'navy' | 'success'
-}) {
-  const toneClass =
-    tone === 'success'
-      ? 'border-success'
-      : tone === 'navy'
-        ? 'border-navy'
-        : tone === 'warning'
-          ? 'border-warning'
-          : 'border-line'
+function Empty({ children }: { children: React.ReactNode }) {
   return (
-    <Link
-      href={href}
-      className={`block rounded-lg border ${toneClass} ${active ? 'bg-surface ring-2 ring-teal' : 'bg-card'} p-4 transition hover:bg-surface`}
-    >
-      <div className="font-display text-3xl tabular text-ink">{value}</div>
+    <div className="rounded-lg border border-dashed border-line-strong bg-card p-6 text-center text-sm text-ink-2">
+      {children}
+    </div>
+  )
+}
+
+function Stat({ label, value, tone }: { label: string; value: number; tone: 'ok' | 'warning' | 'muted' }) {
+  const color = tone === 'warning' ? 'text-orange-dark' : tone === 'muted' ? 'text-ink-3' : 'text-success'
+  return (
+    <div className="rounded-lg border border-line bg-card p-4">
+      <div className={`font-display text-3xl tabular ${color}`}>{value}</div>
       <div className="mt-1 text-xs uppercase tracking-wider text-ink-3">{label}</div>
-    </Link>
+    </div>
   )
 }

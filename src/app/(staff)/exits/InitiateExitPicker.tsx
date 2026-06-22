@@ -62,9 +62,8 @@ export function InitiateExitPicker({ employees }: { employees: PickerEmployee[] 
         <div>
           <h2 className="font-display text-lg text-ink">Initiate exit</h2>
           <p className="mt-1 text-xs text-ink-2">
-            Pick the employee. The exit form opens on their detail page (last
-            working day, reason, notes), and the offboarding tasks generate
-            automatically.
+            Pick the employee. The exit cockpit opens with the start form (reason,
+            dates, last working day), then drives all six steps from one page.
           </p>
         </div>
         <button
@@ -100,7 +99,7 @@ export function InitiateExitPicker({ employees }: { employees: PickerEmployee[] 
           {matches.map((e) => (
             <li key={e.id}>
               <Link
-                href={`/employees/${e.id}#exit`}
+                href={`/exits/${e.id}`}
                 className="flex items-center justify-between gap-3 px-3 py-2 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
               >
                 <span>

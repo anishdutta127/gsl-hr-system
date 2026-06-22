@@ -13,7 +13,6 @@ import {
   ClipboardList,
   Bell,
   MessageSquare,
-  LogOut,
   Mail,
   Settings,
   UserCog,
@@ -31,6 +30,7 @@ import {
   ClipboardCheck,
   BellRing,
   Activity,
+  ListTodo,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { StaffRole } from '@/lib/types'
@@ -74,7 +74,6 @@ const SECTIONS: NavSection[] = [
       { label: 'Letters', href: '/letters', icon: FileText, roles: ADMIN_HR },
       { label: 'Emails', href: '/emails', icon: Mail, roles: ADMIN_HR },
       { label: 'Prompts', href: '/prompts', icon: Sparkles, roles: ADMIN_HR_HOD },
-      { label: 'Exits', href: '/exits', icon: LogOut, roles: ADMIN_HR },
       { label: 'Careers (public)', href: '/careers', icon: ExternalLink, roles: ADMIN_HR_HOD, external: true },
     ],
   },
@@ -90,7 +89,8 @@ const SECTIONS: NavSection[] = [
       { label: 'IT assets', href: '/admin/it-assets', icon: Laptop, roles: ADMIN_HR_LEAD },
       { label: 'Locations and depts', href: '/admin/taxonomy', icon: Tags, roles: ADMIN_HR },
       { label: 'Onboarding', href: '/onboarding', icon: UserPlus, roles: ALL_STAFF },
-      { label: 'Offboarding', href: '/offboarding', icon: UserMinus, roles: ALL_STAFF },
+      { label: 'Exits', href: '/exits', icon: UserMinus, roles: ALL_STAFF },
+      { label: 'Task board', href: '/hr-tasks', icon: ListTodo, roles: ALL_STAFF },
       { label: 'Leave', href: '/leave', icon: PalmtreeIcon, roles: ALL_STAFF },
       { label: 'Attendance', href: '/attendance', icon: ClipboardCheck, roles: ALL_STAFF },
       { label: 'Analytics', href: '/analytics', icon: BarChart3, roles: ADMIN_HR_LEAD },
