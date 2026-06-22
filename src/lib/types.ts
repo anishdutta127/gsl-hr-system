@@ -1374,6 +1374,69 @@ export interface NominationCycle {
   auditLog: AuditEntry[]
 }
 
+// --- Internal HR task board (2026-06) -----------------------------------
+//
+// Riddhi's cross-stakeholder task tracker. Many HR tasks span multiple teams
+// and stall waiting on others' inputs; this captures status, ownership,
+// ordered sub-stages, the dependency (who it's pending with + why), blockers,
+// an optional due date, a NULLABLE next step (tasks may have no defined next
+// step), and an activity log. Internal staff only - never employee/candidate
+// facing. Writes via atomicUpdateJson + auditLog, same as the admin surfaces.
+
+export const HR_TASK_STATUSES = [
+  'Not started',
+  'In progress',
+  'Blocked',
+  'Waiting on input',
+  'Done',
+] as const
+export type HrTaskStatus = (typeof HR_TASK_STATUSES)[number]
+
+export const HR_TASK_STAGE_STATUSES = ['pending', 'current', 'done'] as const
+export type HrTaskStageStatus = (typeof HR_TASK_STAGE_STATUSES)[number]
+
+export interface HrTaskStage {
+  id: string
+  name: string
+  order: number
+  status: HrTaskStageStatus
+  notes?: string
+}
+
+export interface HrTaskDependency {
+  /** Who the task is pending with - person or team, free text. */
+  pendingWith: string
+  /** Optional link to a staff user. */
+  pendingWithUserId?: string | null
+  /** Why it is delayed. */
+  reason: string
+}
+
+export interface HrTask {
+  id: string
+  title: string
+  description: string
+  status: HrTaskStatus
+  /** Owning staff user. Null when unassigned. */
+  ownerUserId: string | null
+  /** Ordered sub-stages for multi-stage tasks; single-stage tasks keep an
+   *  empty list. */
+  stages: HrTaskStage[]
+  /** The stage currently in flight; null for single-stage / unstarted. */
+  currentStageId: string | null
+  /** Who it is pending with + why. Null when nothing is blocking externally. */
+  dependency: HrTaskDependency | null
+  blocked: boolean
+  blockerNote: string
+  dueDate: string | null
+  /** Nullable on purpose: a task may have no clearly defined next step. */
+  nextStep: string | null
+  createdAt: string
+  createdBy: string
+  updatedAt: string
+  auditLog: AuditEntry[]
+}
+
 // --- JWT session claims ---------------------------------------------------
 
 export interface SessionClaims {
