@@ -5353,5 +5353,26 @@
         }
       }
     ]
+  },
+  {
+    "id": "e00a7a9b-f8b3-4c3e-951c-94276cf6611f",
+    "candidateId": "9adaa091-f390-4292-8639-b99d55e846a6",
+    "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+    "currentStage": "Sourced",
+    "stageEnteredAt": "2026-06-23T09:34:35.675Z",
+    "createdAt": "2026-06-23T09:34:35.675Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-23T09:34:35.675Z",
+        "user": "public:careers",
+        "action": "application.create",
+        "after": {
+          "candidateId": "9adaa091-f390-4292-8639-b99d55e846a6",
+          "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+          "currentStage": "Sourced"
+        }
+      }
+    ]
   }
 ]
