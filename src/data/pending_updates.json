@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "aa0e81a4-de6f-48bb-8098-3051458a07bb",
+    "queuedAt": "2026-06-23T09:34:36.904Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "9adaa091-f390-4292-8639-b99d55e846a6",
+      "name": "MANISH PAREEK",
+      "email": "manishpareek7040@gmail.com",
+      "phone": "+917040140018",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/06/9adaa091-f390-4292-8639-b99d55e846a6.pdf",
+      "createdAt": "2026-06-23T09:34:35.675Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-06-23T09:34:35.675Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "MANISH PAREEK",
+            "email": "manishpareek7040@gmail.com",
+            "source": "Application",
+            "roleId": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+            "resumeFilePath": "data/resumes/applications/2026/06/9adaa091-f390-4292-8639-b99d55e846a6.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
