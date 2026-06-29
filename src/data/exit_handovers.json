@@ -1450,5 +1450,57 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "17cf6d1f-509a-5ce4-399c-450cc7316d49",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [
+        {
+          "description": "Schools & Data",
+          "owner": "Sumit",
+          "dueDate": "2026-07-03"
+        }
+      ],
+      "keyContacts": [],
+      "accessRevocation": [
+        {
+          "system": "tushar.t@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Sumit Majumder",
+          "completedAt": "2026-07-03",
+          "notes": "Handover ongoing"
+        }
+      ]
+    },
+    "createdAt": "2026-06-29T07:52:18.542Z",
+    "updatedAt": "2026-06-29T07:52:18.542Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-29T07:52:18.542Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
