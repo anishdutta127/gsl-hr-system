@@ -9408,5 +9408,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "83ef4afb-6774-47a1-9a3b-cd8ae1adfaff",
+    "name": "Om Upadhyay",
+    "email": "omupadhyay2565@gmail.com",
+    "phone": "9011835965",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/06/83ef4afb-6774-47a1-9a3b-cd8ae1adfaff.pdf",
+    "createdAt": "2026-06-27T12:46:51.661Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-27T12:46:51.661Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Om Upadhyay",
+          "email": "omupadhyay2565@gmail.com",
+          "source": "Application",
+          "roleId": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+          "resumeFilePath": "data/resumes/applications/2026/06/83ef4afb-6774-47a1-9a3b-cd8ae1adfaff.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]
