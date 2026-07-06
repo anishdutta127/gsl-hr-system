@@ -1030,7 +1030,10 @@
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
         "status": "Not Started",
-        "data": {},
+        "data": {
+          "settlementFigures": 7000,
+          "settlementWords": "Seven Thousand only"
+        },
         "notes": "",
         "completedAt": null,
         "completedBy": null
@@ -1072,7 +1075,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T10:54:10.883Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:55:31.697Z",
+    "updatedAt": "2026-07-06T10:56:12.356Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T10:54:10.883Z",
@@ -1099,6 +1102,24 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-06T10:55:31.309Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:56:12.356Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "settlementFigures": 7000,
+            "settlementWords": "Seven Thousand only"
           }
         }
       }
