@@ -162,11 +162,11 @@
         "name": "Relieving letter",
         "kind": "letter:RELIEVING-v1",
         "isMandatory": true,
-        "status": "N/A",
+        "status": "Completed",
         "data": {},
         "notes": "Not applicable",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-06T10:50:49.648Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-experience",
@@ -183,7 +183,7 @@
     "completedAt": "2026-07-06T10:49:38.335Z",
     "createdAt": "2026-06-22T09:42:52.594Z",
     "createdBy": "system",
-    "updatedAt": "2026-07-06T10:50:44.769Z",
+    "updatedAt": "2026-07-06T10:50:49.648Z",
     "auditLog": [
       {
         "timestamp": "2026-06-22T09:42:52.594Z",
@@ -424,6 +424,21 @@
         },
         "after": {
           "status": "N/A",
+          "notes": "Not applicable",
+          "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:50:49.648Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "N/A",
+          "notes": "Not applicable",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
           "notes": "Not applicable",
           "data": {}
         }
