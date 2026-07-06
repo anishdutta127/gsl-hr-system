@@ -1029,7 +1029,7 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Completed",
+        "status": "In Progress",
         "data": {
           "settlementFigures": 7000,
           "settlementWords": "Seven Thousand only",
@@ -1038,8 +1038,8 @@
           "pendingItems": "Signed copy"
         },
         "notes": "",
-        "completedAt": "2026-07-06T10:56:17.386Z",
-        "completedBy": "Hiring@getsetlearn.info"
+        "completedAt": null,
+        "completedBy": null
       },
       {
         "templateId": "exit-ff-settlement",
@@ -1078,7 +1078,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T10:54:10.883Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:57:30.615Z",
+    "updatedAt": "2026-07-06T10:57:33.537Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T10:54:10.883Z",
@@ -1246,6 +1246,33 @@
         },
         "after": {
           "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementFigures": 7000,
+            "settlementWords": "Seven Thousand only",
+            "signed": true,
+            "signedAt": "2026-07-06T10:56:40.617Z",
+            "pendingItems": "Signed copy"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:57:33.537Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementFigures": 7000,
+            "settlementWords": "Seven Thousand only",
+            "signed": true,
+            "signedAt": "2026-07-06T10:56:40.617Z",
+            "pendingItems": "Signed copy"
+          }
+        },
+        "after": {
+          "status": "In Progress",
           "notes": "",
           "data": {
             "settlementFigures": 7000,
