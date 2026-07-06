@@ -245,13 +245,13 @@
         "name": "Full and final settlement",
         "kind": "ff",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {
           "paymentReference": "INF\\NEFT\\IN42616954568382\\UTIB0000019\\84285917 BYHRISHIKE FROM VANGHEE\\AAKANKSHASHARMA  S40720276  8,145.00 DR"
         },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-06T10:42:45.542Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-relieving",
@@ -279,7 +279,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:42:41.852Z",
+    "updatedAt": "2026-07-06T10:42:45.542Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -516,6 +516,25 @@
         },
         "after": {
           "status": "Not Started",
+          "notes": "",
+          "data": {
+            "paymentReference": "INF\\NEFT\\IN42616954568382\\UTIB0000019\\84285917 BYHRISHIKE FROM VANGHEE\\AAKANKSHASHARMA  S40720276  8,145.00 DR"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:42:45.542Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "paymentReference": "INF\\NEFT\\IN42616954568382\\UTIB0000019\\84285917 BYHRISHIKE FROM VANGHEE\\AAKANKSHASHARMA  S40720276  8,145.00 DR"
+          }
+        },
+        "after": {
+          "status": "Completed",
           "notes": "",
           "data": {
             "paymentReference": "INF\\NEFT\\IN42616954568382\\UTIB0000019\\84285917 BYHRISHIKE FROM VANGHEE\\AAKANKSHASHARMA  S40720276  8,145.00 DR"
