@@ -280,7 +280,7 @@
     "completedAt": "2026-07-06T10:43:49.564Z",
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:44:33.083Z",
+    "updatedAt": "2026-07-06T10:44:40.398Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -686,6 +686,21 @@
         "before": {
           "status": "N/A",
           "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "N/A",
+          "notes": "Not applicable",
+          "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:44:40.398Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
+        "before": {
+          "status": "N/A",
+          "notes": "Not applicable",
           "data": {}
         },
         "after": {
