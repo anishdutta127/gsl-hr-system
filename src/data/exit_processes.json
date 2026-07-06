@@ -259,7 +259,7 @@
         "name": "Relieving letter",
         "kind": "letter:RELIEVING-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "N/A",
         "data": {},
         "notes": "",
         "completedAt": null,
@@ -280,7 +280,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:42:48.053Z",
+    "updatedAt": "2026-07-06T10:42:55.766Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -560,6 +560,21 @@
             "paymentReference": "INF\\NEFT\\IN42616954568382\\UTIB0000019\\84285917 BYHRISHIKE FROM VANGHEE\\AAKANKSHASHARMA  S40720276  8,145.00 DR",
             "paymentDate": "2026-07-06"
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:42:55.766Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "N/A",
+          "notes": "",
+          "data": {}
         }
       }
     ]
