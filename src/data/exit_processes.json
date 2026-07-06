@@ -1016,11 +1016,13 @@
         "name": "Handover",
         "kind": "handover",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "rmConfirmedAt": "2026-07-06T10:55:31.309Z"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-06T10:55:31.697Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-no-dues",
@@ -1070,7 +1072,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T10:54:10.883Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:54:10.883Z",
+    "updatedAt": "2026-07-06T10:55:31.697Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T10:54:10.883Z",
@@ -1082,6 +1084,23 @@
           "lastWorkingDay": "2026-04-30"
         },
         "notes": "Exit initiated for AAROHI BHARTI."
+      },
+      {
+        "timestamp": "2026-07-06T10:55:31.697Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-06T10:55:31.309Z"
+          }
+        }
       }
     ]
   }
