@@ -15,6 +15,19 @@ export const runtime = 'nodejs'
 
 type DefaultFrom = NonNullable<ReturnType<typeof findTemplateById>>['variables'][number]['defaultFrom']
 
+/** Resolve he/she pronouns from the employee gender field. Unknown / blank
+ *  gender falls back to the gender-neutral they/them/their so a letter never
+ *  ships a wrong-gender pronoun silently; HR can override per-letter. */
+function derivePronoun(
+  gender: string | null | undefined,
+  form: 'subject' | 'object' | 'possessive',
+): string {
+  const g = (gender ?? '').trim().toLowerCase()
+  if (g.startsWith('m')) return form === 'subject' ? 'He' : form === 'object' ? 'him' : 'his'
+  if (g.startsWith('f')) return form === 'subject' ? 'She' : form === 'object' ? 'her' : 'her'
+  return form === 'subject' ? 'They' : form === 'object' ? 'them' : 'their'
+}
+
 function resolveDefault(
   source: DefaultFrom | undefined,
   ctx: { employee?: ReturnType<typeof findEmployeeById>; company: ReturnType<typeof loadCompany> },
@@ -34,6 +47,12 @@ function resolveDefault(
     case 'employee.phone': return employee?.phone ?? ''
     case 'company.signatoryName': return company.signatory.name
     case 'company.signatoryTitle': return company.signatory.title
+    case 'company.legalName': return company.legalName
+    case 'company.name': return company.name
+    case 'company.tagline': return company.tagline
+    case 'pronoun.subject': return derivePronoun(employee?.gender, 'subject')
+    case 'pronoun.object': return derivePronoun(employee?.gender, 'object')
+    case 'pronoun.possessive': return derivePronoun(employee?.gender, 'possessive')
     default: return ''
   }
 }

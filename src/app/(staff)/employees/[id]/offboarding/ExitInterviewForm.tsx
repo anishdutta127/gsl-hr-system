@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { cloneElement, isValidElement, useId, useState, type ReactElement } from 'react'
 import { useRouter } from 'next/navigation'
 
 interface Initial {
@@ -184,12 +184,18 @@ function Field({
   full?: boolean
   children: React.ReactNode
 }) {
+  // Associate the visible label with the control so it has an accessible name
+  // (axe: label / select-name). The control is the single child.
+  const id = useId()
+  const control = isValidElement(children)
+    ? cloneElement(children as ReactElement<{ id?: string }>, { id })
+    : children
   return (
     <div className={full ? 'sm:col-span-2' : undefined}>
-      <label className="block text-xs font-medium uppercase tracking-wider text-ink-3">
+      <label htmlFor={id} className="block text-xs font-medium uppercase tracking-wider text-ink-3">
         {label}
       </label>
-      <div className="mt-1">{children}</div>
+      <div className="mt-1">{control}</div>
     </div>
   )
 }

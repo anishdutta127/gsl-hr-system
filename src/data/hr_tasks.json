@@ -1,0 +1,39 @@
+[
+  {
+    "id": "hrtask-incentive-structure-demo",
+    "title": "Design and roll out the sales incentive structure",
+    "description": "Prepare a revised incentive structure for the sales team, get leadership sign-off, gather current targets and achievement figures, finalise, hand to Accounts for implementation, and communicate to the team. Multi-stakeholder; stalls easily while waiting on inputs from other teams.",
+    "status": "Waiting on input",
+    "ownerUserId": "61d1ea89-efbd-4d9b-b0c4-b7824f8ef8d7",
+    "stages": [
+      { "id": "stg-prepare", "name": "Prepare incentive structure", "order": 1, "status": "done", "notes": "First draft of slabs and payout logic prepared." },
+      { "id": "stg-ameet-review", "name": "Ameet review and sign-off", "order": 2, "status": "current", "notes": "Sent to Ameet for review." },
+      { "id": "stg-collect-targets", "name": "Collect targets and achievement from Pratik and Vishwanath", "order": 3, "status": "pending", "notes": "" },
+      { "id": "stg-finalise", "name": "Finalise structure", "order": 4, "status": "pending", "notes": "" },
+      { "id": "stg-accounts", "name": "Accounts implementation", "order": 5, "status": "pending", "notes": "" },
+      { "id": "stg-communicate", "name": "Communicate to the team", "order": 6, "status": "pending", "notes": "" }
+    ],
+    "currentStageId": "stg-ameet-review",
+    "dependency": {
+      "pendingWith": "Ameet Zaveri (CEO)",
+      "pendingWithUserId": "75e5bbcc-ad5d-4863-8f74-faba55657fc2",
+      "reason": "Awaiting review and sign-off on the proposed structure before targets and achievement data are collected from the sales HODs."
+    },
+    "blocked": false,
+    "blockerNote": "",
+    "dueDate": "2026-07-15",
+    "nextStep": "Chase Ameet for sign-off, then request current targets and achievement figures from Pratik and Vishwanath.",
+    "createdAt": "2026-06-22T04:00:00.000Z",
+    "createdBy": "hr@getsetlearn.info",
+    "updatedAt": "2026-06-22T04:00:00.000Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-06-22T04:00:00.000Z",
+        "user": "hr@getsetlearn.info",
+        "action": "hr-task.create",
+        "after": { "title": "Design and roll out the sales incentive structure", "status": "Waiting on input" },
+        "notes": "Seeded demo task showing multi-stage tracking and dependency on Ameet."
+      }
+    ]
+  }
+]

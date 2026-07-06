@@ -47,6 +47,16 @@ export function formatDate(iso: string | null | undefined): string {
   }
 }
 
+/** Long-form English date for letters: "1st April 2024". Empty -> ''. */
+export function formatLongDate(iso: string | null | undefined): string {
+  if (!iso) return ''
+  try {
+    return format(parseISO(iso), 'do MMMM yyyy')
+  } catch {
+    return iso
+  }
+}
+
 export function formatRelative(
   iso: string | null | undefined,
   opts: { addSuffix?: boolean } = {},

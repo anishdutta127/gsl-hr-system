@@ -15,6 +15,24 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 
 ---
 
+## 2026-07-06 — From exit-cockpit finish (letters + F&F + a11y)
+
+### Riddhi to confirm the three exit-letter wording points
+- Added: 2026-07-06
+- Priority: P1 (letters go out under the CEO's signature)
+- Effort (human / CC): 15 min (Riddhi) / 15 min (CC, swap .docx if wording changes)
+- Reactivation signal: **Before the first real letter is issued.** Confirm: (1) Experience-letter tenure shows both dates (DOJ -> LWD) vs the source's single blank; (2) the normalised pronouns (all he/she/him/her/his/her derive from the employee gender field); (3) the corrected No Dues opening line ("I, {employeeName} (Employee Code - {employeeCode})", the source was garbled). All three are TODO-commented in `scripts/build_exit_letter_templates.ts`.
+- Notes: If she rewords, edit the body constant + re-run `npx tsx scripts/build_exit_letter_templates.ts`. Merge fields + config-driven signatory/legal-entity/brand already wired.
+
+### App-wide design-token contrast below AA 4.5:1 (dedicated design pass)
+- Added: 2026-07-06
+- Priority: P2
+- Effort (human / CC): design decision + 30 min
+- Reactivation signal: **A dedicated a11y/design pass, or the axe baseline is tightened to require 4.5:1 everywhere.** Two DESIGN.md tokens render sub-AA on light backgrounds, app-wide (sidebar chrome + many pages, not this feature): `ink-3` #8189A0 (~3.48:1, DESIGN.md's intended muted-metadata token) and the `text-success`/`bg-success-bg` status badge (~2.4:1, ~37 files). `orange-dark` was already darkened to #A25E12 (now AA) as part of this branch.
+- Notes: Changing `ink-3`/success app-wide is a design-owner call (DESIGN.md deviation needs approval). Anish chose to leave them this pass and fix only `orange-dark`.
+
+---
+
 ## 2026-05-09 — From Phase 4 Phases 3 + 4 (Leave + Attendance + Analytics + Alerts)
 
 ### Remove TESTING_OPEN_ACCESS env override

@@ -35,6 +35,12 @@ export interface CompanyConfig {
     email: string
     whatsapp: string
   }
+  /** Accounts desk, CC'd on exit handover emails. Optional - falls back to
+   *  HR-only CC when absent. */
+  accountsContact?: {
+    name: string
+    email: string
+  }
   website: string
   parentGroup: string
 }

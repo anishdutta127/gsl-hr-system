@@ -22,7 +22,7 @@ export interface LetterVariable {
   label: string
   required: boolean
   hint?: string
-  defaultFrom?: 'employee.name' | 'employee.title' | 'employee.email' | 'employee.employeeCode' | 'employee.designation' | 'employee.department' | 'employee.location' | 'employee.dateOfJoining' | 'employee.phone' | 'company.signatoryName' | 'company.signatoryTitle' | 'today'
+  defaultFrom?: 'employee.name' | 'employee.title' | 'employee.email' | 'employee.employeeCode' | 'employee.designation' | 'employee.department' | 'employee.location' | 'employee.dateOfJoining' | 'employee.phone' | 'company.signatoryName' | 'company.signatoryTitle' | 'company.legalName' | 'company.name' | 'company.tagline' | 'pronoun.subject' | 'pronoun.object' | 'pronoun.possessive' | 'today'
   multiline?: boolean
 }
 
@@ -149,26 +149,47 @@ export const LETTER_TEMPLATES: LetterTemplate[] = [
     filePath: 'public/hr-templates/RELIEVING-v1.docx',
     audience: 'exited',
     variables: [
-      { token: 'todayLong', label: 'Letter date (long form)', required: true, defaultFrom: 'today' },
-      { token: 'name', label: 'Full name', required: true, defaultFrom: 'employee.name' },
+      { token: 'issueDate', label: 'Letter date (long form)', required: true, defaultFrom: 'today', hint: 'e.g., 6th July 2026' },
+      { token: 'employeeName', label: 'Full name', required: true, defaultFrom: 'employee.name' },
       { token: 'designation', label: 'Designation', required: true, defaultFrom: 'employee.designation' },
       { token: 'employeeCode', label: 'Employee code', required: true, defaultFrom: 'employee.employeeCode' },
-      { token: 'joiningDateLong', label: 'Date of joining (long form)', required: true, defaultFrom: 'employee.dateOfJoining' },
-      { token: 'lastWorkingDayLong', label: 'Last working day (long form)', required: true },
+      { token: 'dateOfJoining', label: 'Date of joining (long form)', required: true, defaultFrom: 'employee.dateOfJoining' },
+      { token: 'lastWorkingDay', label: 'Last working day (long form)', required: true },
       ...COMMON_SIGNATORY,
     ],
   },
   {
     id: 'NO-DUES-v1',
     title: 'No Dues Letter',
-    description: "Acknowledgement of full and final settlement.",
+    description: "Acknowledgement of full and final settlement, signed by the employee. The five contractual clauses are fixed boilerplate.",
     filePath: 'public/hr-templates/NO-DUES-v1.docx',
     audience: 'exited',
     variables: [
-      { token: 'name', label: 'Full name', required: true, defaultFrom: 'employee.name' },
+      { token: 'date', label: 'Letter date (long form)', required: true, defaultFrom: 'today', hint: 'e.g., 6th July 2026' },
+      { token: 'legalEntityName', label: 'Legal entity', required: true, defaultFrom: 'company.legalName' },
+      { token: 'employeeName', label: 'Full name', required: true, defaultFrom: 'employee.name' },
       { token: 'employeeCode', label: 'Employee code', required: true, defaultFrom: 'employee.employeeCode' },
-      { token: 'duesAmount', label: 'Settlement amount (numeric)', required: true, hint: 'e.g., 1,04,501' },
-      { token: 'duesAmountWords', label: 'Settlement amount (words)', required: true, hint: 'One Lakh Four Thousand Five Hundred and One' },
+      { token: 'settlementAmountFigures', label: 'Settlement amount (numeric, Rs, Indian comma)', required: true, hint: 'e.g., 1,04,501' },
+      { token: 'settlementAmountWords', label: 'Settlement amount (words)', required: true, hint: 'One Lakh Four Thousand Five Hundred and One' },
+    ],
+  },
+  {
+    id: 'EXPERIENCE-v1',
+    title: 'Experience Letter',
+    description: 'Service / experience certificate. Audience: exited employees. He/she pronouns derive from the employee gender field.',
+    filePath: 'public/hr-templates/EXPERIENCE-v1.docx',
+    audience: 'exited',
+    variables: [
+      { token: 'issueDate', label: 'Letter date (long form)', required: true, defaultFrom: 'today', hint: 'e.g., 6th July 2026' },
+      { token: 'salutationName', label: 'Salutation name (the "Dear ___")', required: true, hint: 'usually the first name' },
+      { token: 'employeeName', label: 'Full name', required: true, defaultFrom: 'employee.name' },
+      { token: 'brandName', label: 'Brand name (employed with)', required: true, defaultFrom: 'company.tagline', hint: 'e.g., Get Set Learn' },
+      { token: 'designation', label: 'Designation', required: true, defaultFrom: 'employee.designation' },
+      { token: 'dateOfJoining', label: 'Employed from (DOJ, long form)', required: true, defaultFrom: 'employee.dateOfJoining', hint: 'e.g., 1st April 2024' },
+      { token: 'lastWorkingDay', label: 'Employed to (LWD, long form)', required: true, hint: 'e.g., 30th June 2026' },
+      { token: 'objectPronoun', label: 'Pronoun object', required: true, defaultFrom: 'pronoun.object', hint: 'him / her / them' },
+      { token: 'possessivePronoun', label: 'Pronoun possessive', required: true, defaultFrom: 'pronoun.possessive', hint: 'his / her / their' },
+      ...COMMON_SIGNATORY,
     ],
   },
 ]
