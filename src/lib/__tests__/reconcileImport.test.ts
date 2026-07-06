@@ -62,10 +62,12 @@ function ctx(existing: Employee[], over: Partial<ReconcileContext> = {}): Reconc
   }
 }
 
+const one = (rows: ImportRow[], c: ReconcileContext) => reconcileEmployeeImport(rows, c)[0]!
+
 describe('reconcileEmployeeImport', () => {
   it('creates a net-new active employee and resolves the manager', () => {
     const mgr = emp({ id: 'mgr-1', employeeCode: 'MTPL/900', name: 'Existing Person' })
-    const [r] = reconcileEmployeeImport([row()], ctx([mgr]))
+    const r = one([row()], ctx([mgr]))
     expect(r.classification).toBe('create')
     expect(r.errors).toEqual([])
     expect(r.employee?.status).toBe('Active')
@@ -76,26 +78,26 @@ describe('reconcileEmployeeImport', () => {
   })
 
   it('maps "STEM and Training" to the canonical "STEM & Training"', () => {
-    const [r] = reconcileEmployeeImport([row({ department: 'STEM and Training' })], ctx([]))
+    const r = one([row({ department: 'STEM and Training' })], ctx([]))
     expect(r.resolvedDepartment).toBe('STEM & Training')
     expect(r.warnings.some((w) => w.includes('not in canonical'))).toBe(false)
   })
 
   it('flags an out-of-taxonomy location but keeps it on the record', () => {
-    const [r] = reconcileEmployeeImport([row({ location: 'Ladakh' })], ctx([]))
+    const r = one([row({ location: 'Ladakh' })], ctx([]))
     expect(r.classification).toBe('create')
     expect(r.employee?.location).toBe('Ladakh')
     expect(r.warnings.some((w) => w.includes('Ladakh') && w.includes('not in canonical'))).toBe(true)
   })
 
   it('flags a title/gender conflict without changing the gender', () => {
-    const [r] = reconcileEmployeeImport([row({ title: 'Mr.', gender: 'Female' })], ctx([]))
+    const r = one([row({ title: 'Mr.', gender: 'Female' })], ctx([]))
     expect(r.employee?.gender).toBe('Female') // never guessed/rewritten
     expect(r.warnings.some((w) => w.includes('conflicts with gender'))).toBe(true)
   })
 
   it('errors on missing required fields', () => {
-    const [r] = reconcileEmployeeImport([row({ designation: '', dateOfJoining: '' })], ctx([]))
+    const r = one([row({ designation: '', dateOfJoining: '' })], ctx([]))
     expect(r.classification).toBe('error')
     expect(r.employee).toBeNull()
     expect(r.errors.some((e) => e.includes('Designation'))).toBe(true)
@@ -103,7 +105,7 @@ describe('reconcileEmployeeImport', () => {
   })
 
   it('errors on a malformed date', () => {
-    const [r] = reconcileEmployeeImport([row({ dateOfBirth: '31/02/1990' })], ctx([]))
+    const r = one([row({ dateOfBirth: '31/02/1990' })], ctx([]))
     expect(r.classification).toBe('error')
     expect(r.errors.some((e) => e.includes('does not parse'))).toBe(true)
   })
@@ -127,7 +129,7 @@ describe('reconcileEmployeeImport', () => {
       designation: 'Old Title',
       location: '',
     })
-    const [r] = reconcileEmployeeImport([row({ designation: 'Sales Executive', location: 'Kolkata' })], ctx([existing]))
+    const r = one([row({ designation: 'Sales Executive', location: 'Kolkata' })], ctx([existing]))
     expect(r.classification).toBe('reactivate')
     expect(r.employee?.status).toBe('Active')
     expect(r.employee?.location).toBe('Kolkata') // filled (was empty)
@@ -137,9 +139,9 @@ describe('reconcileEmployeeImport', () => {
 
   it('applies a populated-field overwrite only when opted in', () => {
     const existing = emp({ id: 'id-MTPL500', employeeCode: 'MTPL/500', name: 'New Person', designation: 'Old Title' })
-    const [r] = reconcileEmployeeImport(
+    const r = one(
       [row({ designation: 'Sales Executive' })],
-      ctx([existing], { overwriteFields: new Set(['designation']) }),
+      ctx([existing], { overwriteFields: new Set(['MTPL/500:designation']) }),
     )
     expect(r.employee?.designation).toBe('Sales Executive')
     expect(r.fieldDiffs.some((d) => d.field === 'designation' && d.applied)).toBe(true)

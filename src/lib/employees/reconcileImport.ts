@@ -96,7 +96,8 @@ export interface ReconcileContext {
   idFor: (code: string) => string
   /** UI-parity onboarding checklist for fresh records. */
   defaultOnboardingChecklist?: () => Employee['onboardingChecklist']
-  /** Opt-in: overwrite populated fields on existing records with these keys. */
+  /** Opt-in overwrite of populated fields on existing records. Keys are
+   *  `${employeeCode}:${field}` so the preview can tick individual cells. */
   overwriteFields?: Set<string>
 }
 
@@ -257,14 +258,26 @@ function reconcileExisting(
   const merged: Record<string, unknown> = { ...existing }
   const isEmpty = (v: unknown) => v == null || (typeof v === 'string' && v.trim() === '')
 
+  // Derived fields (inferred, not upload columns) are never filled/diffed on an
+  // update - they stay whatever the existing record + lifecycle actions set.
+  const SKIP = new Set([
+    'leaveBalance',
+    'leaveYearStart',
+    'officialEmailMissing',
+    'employmentStatus',
+    'workPattern',
+    'locationType',
+  ])
   for (const [key, incoming] of Object.entries(projection)) {
-    if (key === 'leaveBalance' || key === 'leaveYearStart' || key === 'officialEmailMissing') continue
+    if (SKIP.has(key)) continue
     const current = (existing as unknown as Record<string, unknown>)[key]
     if (isEmpty(incoming)) continue
     if (isEmpty(current)) {
       merged[key] = incoming // fill the gap
     } else if (JSON.stringify(current) !== JSON.stringify(incoming)) {
-      const applied = ctx.overwriteFields?.has(key) ?? false
+      // Opt-in overwrite, keyed per employee-code + field so the preview can
+      // tick individual cells (never a blanket overwrite).
+      const applied = ctx.overwriteFields?.has(`${cleanString(row.employeeCode)}:${key}`) ?? false
       if (applied) merged[key] = incoming
       diffs.push({ field: key, existing: current, incoming, applied })
     }
