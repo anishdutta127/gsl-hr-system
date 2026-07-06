@@ -991,5 +991,98 @@
     "closedAt": "2026-07-06T10:45:27.630Z",
     "closedBy": "Hiring@getsetlearn.info",
     "closeReason": "Experience and relieving letter not applicable so nothing to fill."
+  },
+  {
+    "employeeId": "354c030e-7d4a-5d1f-54cd-23fba729a562",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "Family Concerns",
+    "resignationDate": "2026-04-23",
+    "terminationDate": null,
+    "lastWorkingDay": "2026-04-30",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-07-06T10:54:10.883Z",
+        "completedBy": "Hiring@getsetlearn.info"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-07-06T10:54:10.883Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "updatedAt": "2026-07-06T10:54:10.883Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T10:54:10.883Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "after": {
+          "exitType": "Voluntary",
+          "reasonForLeaving": "Family Concerns",
+          "lastWorkingDay": "2026-04-30"
+        },
+        "notes": "Exit initiated for AAROHI BHARTI."
+      }
+    ]
   }
 ]
