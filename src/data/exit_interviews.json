@@ -8,7 +8,7 @@
     "satisfactionWithManager": 2,
     "satisfactionWithRole": 1,
     "topThingsToChange": "",
-    "freeText": "",
+    "freeText": "Reason for leaving (from the interview): Resignation",
     "auditLog": [
       {
         "timestamp": "2026-07-06T10:07:22.532Z",
@@ -27,6 +27,15 @@
           "reasonForLeaving": "Resignation",
           "wouldRecommend": "Maybe"
         }
+      },
+      {
+        "timestamp": "2026-07-06T11:14:31.689Z",
+        "user": "exit-interview-reason-migration",
+        "action": "exit-interview.reason.migrate-to-notes",
+        "after": {
+          "copiedReason": "Resignation"
+        },
+        "notes": "Copied the legacy interview reason into freeText; the editable field is replaced by the document upload."
       }
     ]
   }
