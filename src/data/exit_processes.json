@@ -162,7 +162,7 @@
         "name": "Relieving letter",
         "kind": "letter:RELIEVING-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "N/A",
         "data": {},
         "notes": "",
         "completedAt": null,
@@ -183,7 +183,7 @@
     "completedAt": null,
     "createdAt": "2026-06-22T09:42:52.594Z",
     "createdBy": "system",
-    "updatedAt": "2026-07-06T10:49:18.497Z",
+    "updatedAt": "2026-07-06T10:49:27.214Z",
     "auditLog": [
       {
         "timestamp": "2026-06-22T09:42:52.594Z",
@@ -330,6 +330,21 @@
             "paymentReference": "",
             "paymentDate": "2026-07-06"
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:49:27.214Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "N/A",
+          "notes": "",
+          "data": {}
         }
       }
     ]
