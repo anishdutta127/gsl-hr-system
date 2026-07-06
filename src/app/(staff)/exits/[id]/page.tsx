@@ -146,6 +146,8 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
                   </p>
                   <ExitInterviewForm
                     employeeId={employee.id}
+                    canonicalReason={process.reasonForLeaving || employee.exit?.reason || ''}
+                    initialDocument={interview?.interviewDocument ?? null}
                     initial={
                       interview ?? {
                         reasonForLeaving: process.reasonForLeaving,
