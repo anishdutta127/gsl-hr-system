@@ -773,16 +773,34 @@ export interface OffboardingTask {
   auditLog: AuditEntry[]
 }
 
+/** A confidential exit-interview document. Stored under data/exit-interview-docs;
+ *  served ONLY through the gated route (canViewExitInterview), never directly. */
+export interface ExitInterviewDocumentFile {
+  uploadedAt: string
+  uploadedBy: string
+  filename: string
+  /** Bytes. */
+  fileSize: number
+  /** Repo-relative storage path under data/exit-interview-docs. */
+  storageRef: string
+}
+
 export interface ExitInterview {
   employeeId: string
   conductedAt: string
   conductedBy: string
+  /** Legacy free-text reason. Superseded by the canonical employee.exit.reason
+   *  (set at initiation) + the uploaded interview document. Kept for back-compat;
+   *  existing values are migrated into freeText. */
   reasonForLeaving: string
   wouldRecommend: 'Yes' | 'No' | 'Maybe' | null
   satisfactionWithManager: 1 | 2 | 3 | 4 | 5 | null
   satisfactionWithRole: 1 | 2 | 3 | 4 | 5 | null
   topThingsToChange: string
   freeText: string
+  /** The confidential exit-interview document (HR conducts the interview via a
+   *  document). Null when none uploaded. */
+  interviewDocument?: ExitInterviewDocumentFile | null
   auditLog: AuditEntry[]
 }
 

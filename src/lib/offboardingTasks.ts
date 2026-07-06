@@ -54,6 +54,29 @@ export function loadExitInterviews(): ExitInterview[] {
   return readJsonArray<ExitInterview>(INTERVIEWS_FILE)
 }
 
+// --- Exit-interview confidential document storage ------------------------
+// Same single-root traversal-guard pattern as handovers/resumes, but the SERVE
+// route gates on canViewExitInterview (HR/Admin only; HOD never; Leadership
+// only when allowlisted) - the document inherits exit-interview confidentiality,
+// NOT general document visibility. An interview doc can contain candid feedback
+// about the reporting manager, so a leak here is the whole risk.
+
+const EXIT_INTERVIEW_DOCS_ROOT = path.resolve(process.cwd(), 'data', 'exit-interview-docs')
+
+export function buildExitInterviewDocPath(employeeId: string, fileId: string, ext: string): string {
+  const safeId = employeeId.replace(/[^a-zA-Z0-9-_]/g, '')
+  const safeFileId = fileId.replace(/[^a-zA-Z0-9-_]/g, '')
+  const safeExt = ext.replace(/[^a-zA-Z0-9.]/g, '').toLowerCase()
+  return `data/exit-interview-docs/${safeId}/${safeFileId}${safeExt.startsWith('.') ? safeExt : `.${safeExt}`}`
+}
+
+export function assertInsideExitInterviewDocsRoot(absPath: string): void {
+  const resolved = path.resolve(absPath)
+  if (!resolved.startsWith(EXIT_INTERVIEW_DOCS_ROOT + path.sep) && resolved !== EXIT_INTERVIEW_DOCS_ROOT) {
+    throw new Error(`Resolved path ${resolved} escapes exit-interview-docs root ${EXIT_INTERVIEW_DOCS_ROOT}.`)
+  }
+}
+
 export function loadFFSettlements(): FFSettlement[] {
   return readJsonArray<FFSettlement>(FF_FILE)
 }

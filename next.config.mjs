@@ -51,6 +51,12 @@ const nextConfig = {
       '/api/admin/exit-handover/[employeeId]/document/[fileId]': [
         './data/exit-handovers/**/*',
       ],
+      // Confidential exit-interview documents. Single-root traversal-guard
+      // pattern; the serve route gates on canViewExitInterview (HOD/RM never).
+      // See src/lib/offboardingTasks.ts:assertInsideExitInterviewDocsRoot.
+      '/api/admin/offboarding/exit-interview/[employeeId]/document/[fileId]': [
+        './data/exit-interview-docs/**/*',
+      ],
     },
   },
 }
