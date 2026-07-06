@@ -1502,5 +1502,57 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "eb9f299d-ac36-5746-dbf9-55eec1968e15",
+    "templateUsed": null,
+    "document": null,
+    "reviewedBy": null,
+    "reviewedAt": null,
+    "reviewNotes": "",
+    "checklist": {
+      "pendingTasks": [],
+      "keyContacts": [
+        {
+          "name": "Swati Phutane",
+          "role": "Chief Operations",
+          "context": "Management level role"
+        }
+      ],
+      "accessRevocation": [
+        {
+          "system": "tamanna.j@getsetlearn.info",
+          "status": "Revoked"
+        }
+      ],
+      "itAssetsReturned": [],
+      "knowledgeTransfer": [
+        {
+          "withWhom": "Avi Kejriwal",
+          "completedAt": "2026-06-30",
+          "notes": "Handover completed"
+        }
+      ]
+    },
+    "createdAt": "2026-07-06T07:02:39.396Z",
+    "updatedAt": "2026-07-06T07:02:39.396Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:02:39.396Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-handover.create",
+        "before": null,
+        "after": {
+          "templateUsed": null,
+          "counts": {
+            "pendingTasks": 0,
+            "keyContacts": 0,
+            "accessRevocation": 0,
+            "itAssetsReturned": 0,
+            "knowledgeTransfer": 0
+          }
+        }
+      }
+    ]
   }
 ]
