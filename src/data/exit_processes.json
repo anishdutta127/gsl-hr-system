@@ -208,7 +208,7 @@
         "isMandatory": true,
         "status": "Completed",
         "data": {},
-        "notes": "",
+        "notes": "Exit Completed",
         "completedAt": "2026-07-06T08:10:04.263Z",
         "completedBy": "Hiring@getsetlearn.info"
       },
@@ -271,7 +271,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T08:10:04.263Z",
+    "updatedAt": "2026-07-06T10:40:03.785Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -283,6 +283,21 @@
           "lastWorkingDay": "2026-05-07"
         },
         "notes": "Exit initiated for Aakanksha Sharma."
+      },
+      {
+        "timestamp": "2026-07-06T10:40:03.785Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "Exit Completed",
+          "data": {}
+        }
       }
     ]
   }
