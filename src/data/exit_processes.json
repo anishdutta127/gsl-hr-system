@@ -280,7 +280,7 @@
     "completedAt": "2026-07-06T10:43:49.564Z",
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:44:40.398Z",
+    "updatedAt": "2026-07-06T10:45:27.630Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -708,7 +708,21 @@
           "notes": "Not applicable",
           "data": {}
         }
+      },
+      {
+        "timestamp": "2026-07-06T10:45:27.630Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.closed",
+        "after": {
+          "closedBy": "Hiring@getsetlearn.info",
+          "outstandingSteps": [],
+          "reason": "Experience and relieving letter not applicable so nothing to fill."
+        },
+        "notes": "Exit closed: Experience and relieving letter not applicable so nothing to fill."
       }
-    ]
+    ],
+    "closedAt": "2026-07-06T10:45:27.630Z",
+    "closedBy": "Hiring@getsetlearn.info",
+    "closeReason": "Experience and relieving letter not applicable so nothing to fill."
   }
 ]
