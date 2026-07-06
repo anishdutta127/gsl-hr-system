@@ -218,7 +218,9 @@
         "kind": "handover",
         "isMandatory": true,
         "status": "Completed",
-        "data": {},
+        "data": {
+          "rmConfirmedAt": "2026-07-06T10:40:18.467Z"
+        },
         "notes": "",
         "completedAt": "2026-07-06T10:40:12.362Z",
         "completedBy": "Hiring@getsetlearn.info"
@@ -271,7 +273,7 @@
     "completedAt": null,
     "createdAt": "2026-07-06T08:10:04.263Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-06T10:40:12.362Z",
+    "updatedAt": "2026-07-06T10:40:19.491Z",
     "auditLog": [
       {
         "timestamp": "2026-07-06T08:10:04.263Z",
@@ -312,6 +314,23 @@
           "status": "Completed",
           "notes": "",
           "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:40:19.491Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-06T10:40:18.467Z"
+          }
         }
       }
     ]
