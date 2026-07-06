@@ -18,6 +18,15 @@
           "reasonForLeaving": "Resignation",
           "wouldRecommend": "Maybe"
         }
+      },
+      {
+        "timestamp": "2026-07-06T10:44:03.532Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-interview.update",
+        "after": {
+          "reasonForLeaving": "Resignation",
+          "wouldRecommend": "Maybe"
+        }
       }
     ]
   }
