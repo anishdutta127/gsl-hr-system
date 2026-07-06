@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "employeeId": "72216e73-158d-52c2-7acc-854cd6a4555a",
+    "conductedAt": "2026-07-06T10:06:51.165Z",
+    "conductedBy": "Hiring@getsetlearn.info",
+    "reasonForLeaving": "Resignation",
+    "wouldRecommend": null,
+    "satisfactionWithManager": null,
+    "satisfactionWithRole": null,
+    "topThingsToChange": "",
+    "freeText": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T10:06:51.165Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-interview.create",
+        "after": {
+          "reasonForLeaving": "Resignation",
+          "wouldRecommend": null
+        }
+      }
+    ]
+  }
+]
