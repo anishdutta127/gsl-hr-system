@@ -1,1 +1,3202 @@
-[]
+[
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-appointment-letter",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-04-27",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-04-27",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-verify-documents",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-01",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-email-account",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-02",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-02",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-spine-slack-access",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-02",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-02",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-laptop-order",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-04-29",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-04-29",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-inform-manager",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-04-29",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-04-29",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-orientation",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-04",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-04",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-handover-laptop",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-04",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-04",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-office-tour",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-04",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-04",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-paperwork",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-05",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-05",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-epfo",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-07",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-07",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-form-12bb",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-05-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-manager-1on1",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-05-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-05-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-buddy-assignment",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-09",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-09",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-3month-checkin",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-08-02",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-02",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-573e60e6-d02c-0423-489a-a5ef21830038-ob-probation-review",
+    "employeeId": "573e60e6-d02c-0423-489a-a5ef21830038",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-10-31",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-10-31",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-appointment-letter",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-04",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-04",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-verify-documents",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-08",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-08",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-email-account",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-09",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-09",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-spine-slack-access",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-09",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-09",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-laptop-order",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-06",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-06",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-inform-manager",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-06",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-06",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-orientation",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-handover-laptop",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-office-tour",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-paperwork",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-12",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-12",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-epfo",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-14",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-14",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-form-12bb",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-05-18",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-manager-1on1",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "86bc8333-efce-57ac-3e45-26524abd3239",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-05-18",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-buddy-assignment",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-16",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-16",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-3month-checkin",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "86bc8333-efce-57ac-3e45-26524abd3239",
+    "dueDate": "2026-08-09",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-09",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-22c3662d-4088-338f-8847-a8b41b923b5a-ob-probation-review",
+    "employeeId": "22c3662d-4088-338f-8847-a8b41b923b5a",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "86bc8333-efce-57ac-3e45-26524abd3239",
+    "dueDate": "2026-11-07",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-07",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-appointment-letter",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-08",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-08",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-verify-documents",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-12",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-12",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-email-account",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-13",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-spine-slack-access",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-13",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-laptop-order",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-10",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-10",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-inform-manager",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-10",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-10",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-orientation",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-handover-laptop",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-office-tour",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-paperwork",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-16",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-16",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-epfo",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-18",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-form-12bb",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-05-22",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-manager-1on1",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "dueDate": "2026-05-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-05-22",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-buddy-assignment",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-20",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-3month-checkin",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "dueDate": "2026-08-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-13",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-162729d6-15c9-e7e5-0018-03c22b4b48fe-ob-probation-review",
+    "employeeId": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "10168b81-6eca-5b28-b858-aae78e8414ee",
+    "dueDate": "2026-11-11",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-11",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-appointment-letter",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-18",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-verify-documents",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-22",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-email-account",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-spine-slack-access",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-laptop-order",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-inform-manager",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-orientation",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-handover-laptop",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-office-tour",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-paperwork",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-26",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-26",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-epfo",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-28",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-28",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-form-12bb",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-manager-1on1",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-buddy-assignment",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-30",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-3month-checkin",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-08-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-23",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-2a1ce517-c67f-2381-245a-e341d7e4d45f-ob-probation-review",
+    "employeeId": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-11-21",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-21",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-appointment-letter",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-18",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-verify-documents",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-22",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-email-account",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-spine-slack-access",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-laptop-order",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-inform-manager",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-orientation",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-handover-laptop",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-office-tour",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-paperwork",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-26",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-26",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-epfo",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-28",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-28",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-form-12bb",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-manager-1on1",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "9e826d7a-92ea-521c-1d9d-778c77ee667a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-buddy-assignment",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-30",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-3month-checkin",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "9e826d7a-92ea-521c-1d9d-778c77ee667a",
+    "dueDate": "2026-08-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-23",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-bf085ed4-570d-fac6-cdce-5015651962b0-ob-probation-review",
+    "employeeId": "bf085ed4-570d-fac6-cdce-5015651962b0",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "9e826d7a-92ea-521c-1d9d-778c77ee667a",
+    "dueDate": "2026-11-21",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-21",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-appointment-letter",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-25",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-verify-documents",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-29",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-29",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-email-account",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-30",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-spine-slack-access",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-30",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-laptop-order",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-27",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-27",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-inform-manager",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-27",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-27",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-orientation",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-handover-laptop",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-office-tour",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-paperwork",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-02",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-06-02",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-epfo",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-04",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-06-04",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-form-12bb",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-08",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-06-08",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-manager-1on1",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "11cc5d27-b071-5d11-1ef6-0584d0437002",
+    "dueDate": "2026-06-08",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-06-08",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-buddy-assignment",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-06",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-06-06",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-3month-checkin",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "11cc5d27-b071-5d11-1ef6-0584d0437002",
+    "dueDate": "2026-08-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-30",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-9dac9111-db22-39c2-8fcf-6a22f73cd9dd-ob-probation-review",
+    "employeeId": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "11cc5d27-b071-5d11-1ef6-0584d0437002",
+    "dueDate": "2026-11-28",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-28",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-appointment-letter",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-08",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-06-08",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-verify-documents",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-12",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-06-12",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-email-account",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-06-13",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-spine-slack-access",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-06-13",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-laptop-order",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-10",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-06-10",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-inform-manager",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-10",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-06-10",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-orientation",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-06-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-handover-laptop",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-06-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-office-tour",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-15",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-06-15",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-paperwork",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-16",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-06-16",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-epfo",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-06-18",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-form-12bb",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-06-22",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-manager-1on1",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "dueDate": "2026-06-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-06-22",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-buddy-assignment",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-06-20",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-3month-checkin",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "dueDate": "2026-09-13",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-09-13",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-3d115484-b318-87a3-6f18-0bd86ffb5fa7-ob-probation-review",
+    "employeeId": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "933169dc-8065-586e-cba5-3802e5a1eab1",
+    "dueDate": "2026-12-12",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-12-12",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-appointment-letter",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-appointment-letter",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-18",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-appointment-letter",
+          "dueDate": "2026-05-18",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-verify-documents",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-verify-documents",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-22",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-verify-documents",
+          "dueDate": "2026-05-22",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-email-account",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-email-account",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-email-account",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-spine-slack-access",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-spine-slack-access",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-spine-slack-access",
+          "dueDate": "2026-05-23",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-laptop-order",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-laptop-order",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-laptop-order",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-inform-manager",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-inform-manager",
+    "status": "N/A",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-20",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-inform-manager",
+          "dueDate": "2026-05-20",
+          "status": "N/A"
+        },
+        "notes": "Auto-marked N/A: pre-joining task generated after the joining date passed."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-orientation",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-orientation",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-orientation",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-handover-laptop",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-handover-laptop",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-handover-laptop",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-office-tour",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-office-tour",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-25",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-office-tour",
+          "dueDate": "2026-05-25",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-paperwork",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-paperwork",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-26",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-paperwork",
+          "dueDate": "2026-05-26",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-epfo",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-epfo",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-28",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-epfo",
+          "dueDate": "2026-05-28",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-form-12bb",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-form-12bb",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-form-12bb",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-manager-1on1",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-manager-1on1",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-06-01",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-manager-1on1",
+          "dueDate": "2026-06-01",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-buddy-assignment",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-buddy-assignment",
+    "status": "Not Started",
+    "assignedTo": "724b64cd-a849-4c6d-b06f-ce325396d96a",
+    "dueDate": "2026-05-30",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-buddy-assignment",
+          "dueDate": "2026-05-30",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-3month-checkin",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-3month-checkin",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-08-23",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-3month-checkin",
+          "dueDate": "2026-08-23",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  },
+  {
+    "id": "obtask-fa299aa3-ef4e-34ec-97e1-c66d86ff0e05-ob-probation-review",
+    "employeeId": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+    "templateId": "ob-probation-review",
+    "status": "Not Started",
+    "assignedTo": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+    "dueDate": "2026-11-21",
+    "completedAt": null,
+    "completedBy": null,
+    "notes": "",
+    "blockers": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-06T07:46:28.985Z",
+        "user": "system",
+        "action": "onboarding.task.create",
+        "after": {
+          "templateId": "ob-probation-review",
+          "dueDate": "2026-11-21",
+          "status": "Not Started"
+        },
+        "notes": "Generated from default onboarding template."
+      }
+    ]
+  }
+]
