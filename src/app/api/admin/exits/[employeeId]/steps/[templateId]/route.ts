@@ -15,20 +15,24 @@ import {
   applyStepPatch,
   canEditExitProcess,
   loadExitProcesses,
+  projectFFSettlement,
   stepActionLabel,
   type StepPatch,
 } from '@/lib/exitProcess'
+import { loadFFSettlements } from '@/lib/offboardingTasks'
 import { atomicUpdateJson } from '@/lib/queue/githubQueue'
 import {
   EXIT_STEP_STATUSES,
   type ExitProcess,
   type ExitStepData,
   type ExitStepStatus,
+  type FFSettlement,
 } from '@/lib/types'
 
 export const runtime = 'nodejs'
 
 const PROCESSES_PATH = 'src/data/exit_processes.json'
+const FF_PATH = 'src/data/ff_settlements.json'
 
 function bad(message: string, status = 400) {
   return NextResponse.json({ message }, { status })
@@ -120,6 +124,42 @@ export async function PATCH(
   )
 
   const updated = next.find((p) => p.employeeId === params.employeeId)
+
+  // Write-through: keep ff_settlements.json (the F&F ledger of record analytics
+  // reads) in sync when the F&F step changes. Upsert by employeeId so there is
+  // exactly one row per employee (no double-count). Non-fatal: the ExitProcess
+  // is the edit surface; migrate_ff_settlements.ts is the reconciliation backstop.
+  if (step.kind === 'ff' && updated) {
+    const pre = projectFFSettlement({
+      process: updated,
+      existing: loadFFSettlements().find((f) => f.employeeId === params.employeeId),
+      by: session.email,
+      now,
+    })
+    if (pre?.changed) {
+      try {
+        await atomicUpdateJson<FFSettlement[]>(
+          FF_PATH,
+          (current) => {
+            const list = Array.isArray(current) ? current : []
+            const existing = list.find((f) => f.employeeId === params.employeeId)
+            const proj = projectFFSettlement({ process: updated, existing, by: session.email, now })
+            const row = proj?.next ?? existing
+            const without = list.filter((f) => f.employeeId !== params.employeeId)
+            return {
+              next: row ? [...without, row] : list,
+              commitMessage: `feat(exits): sync F&F ledger ${params.employeeId.slice(0, 8)}`,
+            }
+          },
+          { defaultValue: loadFFSettlements() },
+        )
+      } catch {
+        // Non-fatal: the step save already succeeded; the ledger re-syncs on the
+        // next F&F edit or when migrate_ff_settlements.ts runs.
+      }
+    }
+  }
+
   return NextResponse.json({
     ok: true,
     process: updated,

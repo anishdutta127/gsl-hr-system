@@ -31,6 +31,7 @@ import type {
   ExitStepStatus,
   ExitStepTemplate,
   ExitType,
+  FFSettlement,
   SessionClaims,
 } from './types'
 
@@ -164,6 +165,26 @@ export function summariseExit(process: ExitProcess | undefined): ExitSummary {
   return { total: process.steps.length, completed, mandatoryRemaining, isComplete, percent }
 }
 
+/** Mandatory steps not yet Completed or N/A - the "outstanding" work listed in
+ *  the close confirmation and snapshotted into the close audit entry. */
+export function outstandingStepNames(process: Pick<ExitProcess, 'steps'>): string[] {
+  return process.steps
+    .filter((s) => s.isMandatory && s.status !== 'Completed' && s.status !== 'N/A')
+    .map((s) => s.name)
+}
+
+/** An exit is off the active board (in the Alumni group) when it is either
+ *  naturally complete (all mandatory steps done) OR explicitly closed. */
+export function isArchivedExit(process: Pick<ExitProcess, 'completedAt' | 'closedAt'>): boolean {
+  return Boolean(process.completedAt) || Boolean(process.closedAt)
+}
+
+/** Timestamp used to sort the Alumni group (most recent first). A manual close
+ *  wins over natural completion when both happen to be set. */
+export function exitArchivedAt(process: Pick<ExitProcess, 'completedAt' | 'closedAt'>): string | null {
+  return process.closedAt ?? process.completedAt ?? null
+}
+
 /** Stamp completedAt when all mandatory steps are Completed/NA; clear it if a
  *  step regresses. Idempotent; preserves the original completion timestamp. */
 export function recomputeCompletion(process: ExitProcess, now: string): ExitProcess {
@@ -283,6 +304,144 @@ export function canViewStepDetail(session: SessionClaims | null, kind: ExitStepK
   return session.role === 'Admin' || session.role === 'HR' || session.role === 'Leadership' || session.role === 'HOD'
 }
 
+// --- Close / reopen (explicit archival) ---------------------------------
+
+/** HR may undo a close within this window of the closedAt timestamp (a
+ *  misfire-correction grace period); Admin may reopen any time. */
+export const EXIT_REOPEN_HR_WINDOW_MS = 24 * 60 * 60 * 1000
+
+/** Close is an HR/Admin write, same gate as editing the exit. */
+export function canCloseExitProcess(session: SessionClaims | null): boolean {
+  return canEditExitProcess(session)
+}
+
+/** Reopen: Admin any time; HR only within EXIT_REOPEN_HR_WINDOW_MS of the
+ *  close. Leadership / HOD / signed-out: never. */
+export function canReopenExitProcess(
+  session: SessionClaims | null,
+  process: Pick<ExitProcess, 'closedAt'>,
+  now: string,
+): boolean {
+  if (!session) return false
+  if (!process.closedAt) return false
+  if (session.role === 'Admin') return true
+  if (session.role === 'HR') {
+    const elapsed = Date.parse(now) - Date.parse(process.closedAt)
+    return Number.isFinite(elapsed) && elapsed >= 0 && elapsed <= EXIT_REOPEN_HR_WINDOW_MS
+  }
+  return false
+}
+
+/**
+ * Explicitly close an exit: archive it off the active board even with steps
+ * outstanding. Records who/when/why plus the outstanding-steps snapshot in the
+ * audit log. Never issues letters or mutates steps. Closing an already-closed
+ * process is a no-op (keeps the original close metadata).
+ */
+export function closeExitProcess({
+  process,
+  reason,
+  by,
+  now,
+}: {
+  process: ExitProcess
+  reason: string
+  by: string
+  now: string
+}): ExitProcess {
+  if (process.closedAt) return process
+  const outstandingSteps = outstandingStepNames(process)
+  const cleanReason = reason.trim()
+  return {
+    ...process,
+    closedAt: now,
+    closedBy: by,
+    closeReason: cleanReason || null,
+    updatedAt: now,
+    auditLog: [
+      ...process.auditLog,
+      {
+        timestamp: now,
+        user: by,
+        action: 'exit.closed',
+        after: { closedBy: by, outstandingSteps, reason: cleanReason },
+        notes: cleanReason ? `Exit closed: ${cleanReason}` : 'Exit closed.',
+      },
+    ],
+  }
+}
+
+/**
+ * Undo a close: clears the closed marker so the exit returns to the active
+ * board. completedAt is untouched, so a genuinely-complete exit stays in
+ * Alumni. Reopening a non-closed process is a no-op.
+ */
+export function reopenExitProcess({
+  process,
+  by,
+  now,
+  reason,
+}: {
+  process: ExitProcess
+  by: string
+  now: string
+  reason?: string
+}): ExitProcess {
+  if (!process.closedAt) return process
+  const cleanReason = (reason ?? '').trim()
+  return {
+    ...process,
+    closedAt: null,
+    closedBy: null,
+    closeReason: null,
+    updatedAt: now,
+    auditLog: [
+      ...process.auditLog,
+      {
+        timestamp: now,
+        user: by,
+        action: 'exit.reopened',
+        before: {
+          closedAt: process.closedAt,
+          closedBy: process.closedBy ?? null,
+          closeReason: process.closeReason ?? null,
+        },
+        notes: cleanReason ? `Exit reopened: ${cleanReason}` : 'Exit reopened.',
+      },
+    ],
+  }
+}
+
+/**
+ * Build a first-class ExitProcess for a legacy exit (employee already Exited,
+ * no process yet) so the board's "no checklist" bucket becomes closeable. The
+ * header is derived from employee.exit; steps are instantiated and the initiate
+ * step marked done, so a later reopen yields a real, workable checklist.
+ */
+export function createExitProcessForLegacy({
+  employee,
+  templates,
+  by,
+  now,
+}: {
+  employee: Employee
+  templates: ExitStepTemplate[]
+  by: string
+  now: string
+}): ExitProcess {
+  return createExitProcessRecord({
+    employee,
+    templates,
+    exitType: 'Voluntary',
+    reasonForLeaving: employee.exit?.reason ?? '',
+    resignationDate: null,
+    terminationDate: null,
+    lastWorkingDay: employee.exit?.lastWorkingDay ?? '',
+    by,
+    now,
+  })
+}
+
 // --- Handover email builder (pure) --------------------------------------
 
 export interface HandoverEmail {
@@ -356,6 +515,102 @@ export function buildHandoverEmail({
 export function settlementWordsDefault(figures: number | null | undefined): string {
   if (figures === null || figures === undefined || !Number.isFinite(figures) || figures <= 0) return ''
   return `${amountToWordsIndian(figures)} only`
+}
+
+// --- F&F ledger projection (single source of truth) ----------------------
+//
+// The exit cockpit is the F&F EDIT surface (the 'ff' step on the ExitProcess).
+// ff_settlements.json is the F&F LEDGER OF RECORD that analytics and every
+// other F&F reader consume. To keep exactly one source of truth (and never
+// double-count), the cockpit F&F step is projected into the ledger, upserted
+// by employeeId: the step-update route write-throughs on every 'ff' PATCH and
+// scripts/migrate_ff_settlements.ts backfills history. This complements the
+// existing scripts/migrate_exit_processes.ts (which seeds the cockpit 'ff'
+// step FROM legacy ledger rows for pre-cockpit exits); both are keyed on
+// employeeId and converge on the same amount, so re-running either is a no-op.
+
+export interface FFProjection {
+  /** The ledger row to upsert (merged onto any existing row). */
+  next: FFSettlement
+  /** True when the cockpit-owned fields (totalNet/paidAt/paidBy) differ from
+   *  `existing`. Callers skip the write when false so the write-through and the
+   *  migration stay idempotent. */
+  changed: boolean
+}
+
+/**
+ * Project an ExitProcess's F&F step into its ff_settlements ledger row, MERGING
+ * onto any existing row so richer legacy fields (finalSalaryDays,
+ * leaveEncashment, recoveryItems, noticePeriodAdjustment, notes) are preserved.
+ * The cockpit owns the net amount + payment; everything else survives from the
+ * legacy detailed F&F form.
+ *
+ * Returns null when the exit has no F&F amount entered yet (nothing to sync).
+ */
+export function projectFFSettlement({
+  process,
+  existing,
+  by,
+  now,
+}: {
+  process: Pick<ExitProcess, 'employeeId' | 'steps'>
+  existing: FFSettlement | undefined
+  by: string
+  now: string
+}): FFProjection | null {
+  const ffStep = process.steps.find((s) => s.kind === 'ff')
+  const amount = ffStep?.data.ffAmount
+  if (!ffStep || amount === null || amount === undefined || !Number.isFinite(amount)) return null
+
+  const totalNet = amount
+  const paymentDate = (ffStep.data.paymentDate ?? '').trim()
+  const paidAt = paymentDate
+    ? `${paymentDate}T00:00:00.000Z`
+    : ffStep.status === 'Completed'
+      ? (ffStep.completedAt ?? existing?.paidAt ?? null)
+      : (existing?.paidAt ?? null)
+  const paidBy = ffStep.completedBy ?? existing?.paidBy ?? (paidAt ? by : null)
+
+  const changed =
+    !existing ||
+    existing.totalNet !== totalNet ||
+    (existing.paidAt ?? null) !== paidAt ||
+    (existing.paidBy ?? null) !== paidBy
+
+  const base: FFSettlement = existing ?? {
+    employeeId: process.employeeId,
+    finalSalaryDays: 0,
+    leaveEncashment: 0,
+    recoveryItems: [],
+    noticePeriodAdjustment: 0,
+    totalNet: 0,
+    paidAt: null,
+    paidBy: null,
+    notes: '',
+    auditLog: [],
+  }
+
+  const next: FFSettlement = {
+    ...base,
+    employeeId: process.employeeId,
+    totalNet,
+    paidAt,
+    paidBy,
+    auditLog: changed
+      ? [
+          ...base.auditLog,
+          {
+            timestamp: now,
+            user: by,
+            action: 'ff-settlement.sync-from-cockpit',
+            before: existing ? { totalNet: existing.totalNet, paidAt: existing.paidAt ?? null } : undefined,
+            after: { totalNet, paidAt, paymentReference: ffStep.data.paymentReference ?? null },
+            notes: 'Synced from exit cockpit F&F step.',
+          },
+        ]
+      : base.auditLog,
+  }
+  return { next, changed }
 }
 
 // --- Migration merge (idempotent) ---------------------------------------
