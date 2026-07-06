@@ -18,7 +18,7 @@ export default async function BulkUploadPage() {
   return (
     <div className="container-page py-8">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-ink-3">
-        <Link href="/employees" className="rounded hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal">
+        <Link href="/employees" className="rounded text-ink-2 underline underline-offset-2 hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal">
           Employees
         </Link>
         <span className="px-2" aria-hidden="true">/</span>

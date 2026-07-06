@@ -258,8 +258,18 @@ function reconcileExisting(
   const merged: Record<string, unknown> = { ...existing }
   const isEmpty = (v: unknown) => v == null || (typeof v === 'string' && v.trim() === '')
 
+  // Derived fields (inferred, not upload columns) are never filled/diffed on an
+  // update - they stay whatever the existing record + lifecycle actions set.
+  const SKIP = new Set([
+    'leaveBalance',
+    'leaveYearStart',
+    'officialEmailMissing',
+    'employmentStatus',
+    'workPattern',
+    'locationType',
+  ])
   for (const [key, incoming] of Object.entries(projection)) {
-    if (key === 'leaveBalance' || key === 'leaveYearStart' || key === 'officialEmailMissing') continue
+    if (SKIP.has(key)) continue
     const current = (existing as unknown as Record<string, unknown>)[key]
     if (isEmpty(incoming)) continue
     if (isEmpty(current)) {
