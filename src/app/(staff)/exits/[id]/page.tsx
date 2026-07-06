@@ -8,6 +8,7 @@ import { todayLongEnGB } from '@/lib/letterTemplates'
 import {
   buildHandoverEmail,
   canEditExitProcess,
+  canReopenExitProcess,
   canViewExitProcess,
   canViewStepDetail,
   findExitProcess,
@@ -82,12 +83,12 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
           const firstName = (employee.name || '').trim().split(/\s+/)[0] || employee.name
 
           const letterBaseValues: Record<string, Record<string, string>> = {
-            'RELIEVING-v1': { todayLong, joiningDateLong: dojLong, lastWorkingDayLong: lwdLong },
+            'RELIEVING-v1': { issueDate: todayLong, dateOfJoining: dojLong, lastWorkingDay: lwdLong },
             'EXPERIENCE-v1': {
               issueDate: todayLong,
               salutationName: firstName,
-              employmentFrom: dojLong,
-              employmentTo: lwdLong,
+              dateOfJoining: dojLong,
+              lastWorkingDay: lwdLong,
             },
             'NO-DUES-v1': { date: todayLong },
           }
@@ -112,6 +113,7 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
             <>
               <ExitCockpit
                 employeeId={employee.id}
+                employeeName={employee.name}
                 exitMeta={{
                   exitType: process.exitType,
                   reasonForLeaving: process.reasonForLeaving,
@@ -126,6 +128,12 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
                 viewerEmail={session.email}
                 handover={handover}
                 letterBaseValues={letterBaseValues}
+                closedState={{
+                  closedAt: process.closedAt ?? null,
+                  closedBy: process.closedBy ?? null,
+                  closeReason: process.closeReason ?? null,
+                }}
+                canReopen={canReopenExitProcess(session, process, new Date().toISOString())}
               />
 
               {showInterview && (

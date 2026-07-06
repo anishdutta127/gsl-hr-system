@@ -281,3 +281,10 @@ These five docs replace the need for Claude to re-derive scope, visual language,
 ## Design System
 
 Always read `DESIGN.md` before making any visual or UI decisions. All font choices, colors, spacing, aesthetic direction, and copy voice are defined there. Do not deviate without explicit user approval. In QA mode, flag any code that doesn't match `DESIGN.md`.
+
+<!-- cc-brain-project:begin -->
+## Working memory (Obsidian vault), read first, persists across sessions
+@C:/Users/anish/obsidian/cc-brain/Projects/gsl-hr-system/_index.md
+
+Memory protocol: read state.md before starting; append to decisions.md / learnings.md inline as you go; update state.md + write a session log at the end of every work batch.
+<!-- cc-brain-project:end -->

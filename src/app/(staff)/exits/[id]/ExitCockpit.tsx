@@ -5,6 +5,13 @@ import { useRouter } from 'next/navigation'
 import { formatRs, formatDate } from '@/lib/format'
 import { amountToWordsIndian } from '@/lib/preOnboardingEmails/amountInWords'
 import type { ExitStepData, ExitStepKind, ExitStepStatus, ExitType } from '@/lib/types'
+import { CloseExitDialog } from '../CloseExitDialog'
+
+interface ClosedState {
+  closedAt: string | null
+  closedBy: string | null
+  closeReason: string | null
+}
 
 const STATUS_ORDER: ExitStepStatus[] = ['Not Started', 'In Progress', 'Completed', 'N/A']
 
@@ -92,6 +99,7 @@ function SaveChip({ state, msg }: { state: SaveState; msg?: string }) {
 
 export function ExitCockpit({
   employeeId,
+  employeeName,
   exitMeta,
   steps: initialSteps,
   summary: initialSummary,
@@ -99,8 +107,11 @@ export function ExitCockpit({
   viewerEmail,
   handover,
   letterBaseValues,
+  closedState,
+  canReopen: initialCanReopen,
 }: {
   employeeId: string
+  employeeName: string
   exitMeta: ExitMeta
   steps: CockpitStep[]
   summary: { total: number; completed: number; mandatoryRemaining: number; isComplete: boolean; percent: number }
@@ -108,12 +119,71 @@ export function ExitCockpit({
   viewerEmail: string
   handover: HandoverEmail
   letterBaseValues: Record<string, Record<string, string>>
+  closedState: ClosedState
+  canReopen: boolean
 }) {
   const router = useRouter()
   const [steps, setSteps] = useState<CockpitStep[]>(initialSteps)
   const [save, setSave] = useState<Record<string, { state: SaveState; msg?: string }>>({})
   const [newStepName, setNewStepName] = useState('')
   const [addingStep, setAddingStep] = useState(false)
+  const [closed, setClosed] = useState<ClosedState>(closedState)
+  const [canReopen, setCanReopen] = useState(initialCanReopen)
+  const [showCloseDialog, setShowCloseDialog] = useState(false)
+  const [closeBusy, setCloseBusy] = useState(false)
+  const [closeError, setCloseError] = useState<string | null>(null)
+  const [reopenBusy, setReopenBusy] = useState(false)
+
+  const outstandingSteps = useMemo(
+    () =>
+      steps
+        .filter((s) => s.isMandatory && s.status !== 'Completed' && s.status !== 'N/A')
+        .map((s) => s.name),
+    [steps],
+  )
+
+  async function closeExit(reason: string) {
+    setCloseBusy(true)
+    setCloseError(null)
+    try {
+      const res = await fetch(`/api/admin/exits/${employeeId}/close`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reason }),
+      })
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(body.message ?? 'Could not close the exit.')
+      setClosed({ closedAt: new Date().toISOString(), closedBy: viewerEmail, closeReason: reason || null })
+      setCanReopen(canEdit) // just closed it: within any window
+      setShowCloseDialog(false)
+      router.refresh()
+    } catch (err) {
+      setCloseError(err instanceof Error ? err.message : 'Could not close the exit.')
+    } finally {
+      setCloseBusy(false)
+    }
+  }
+
+  async function reopenExit() {
+    if (!window.confirm('Reopen this exit? It returns to the active board.')) return
+    setReopenBusy(true)
+    try {
+      const res = await fetch(`/api/admin/exits/${employeeId}/reopen`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      })
+      const body = await res.json().catch(() => ({}))
+      if (!res.ok) throw new Error(body.message ?? 'Could not reopen the exit.')
+      setClosed({ closedAt: null, closedBy: null, closeReason: null })
+      setCanReopen(false)
+      router.refresh()
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : 'Could not reopen the exit.')
+    } finally {
+      setReopenBusy(false)
+    }
+  }
 
   const summary = useMemo(() => {
     let mandatoryTotal = 0
@@ -135,6 +205,8 @@ export function ExitCockpit({
       percent,
     }
   }, [steps])
+
+  const isClosed = Boolean(closed.closedAt)
 
   function setSaveState(templateId: string, state: SaveState, msg?: string) {
     setSave((v) => ({ ...v, [templateId]: { state, msg } }))
@@ -259,13 +331,17 @@ export function ExitCockpit({
             <span className="rounded-sm bg-success-bg px-2 py-0.5 text-xs font-medium text-success">
               Moved to alumni{exitMeta.completedAt ? ` · ${formatDate(exitMeta.completedAt)}` : ''}
             </span>
+          ) : isClosed ? (
+            <span className="rounded-sm bg-surface px-2 py-0.5 text-xs font-medium text-ink-2">
+              Closed{closed.closedAt ? ` · ${formatDate(closed.closedAt)}` : ''}
+            </span>
           ) : (
             <span className="rounded-sm bg-orange-light px-2 py-0.5 text-xs font-medium text-orange-dark">
               In progress
             </span>
           )}
         </div>
-        <div className="mt-3 h-2 overflow-hidden rounded bg-line" role="progressbar" aria-valuenow={summary.percent} aria-valuemin={0} aria-valuemax={100}>
+        <div className="mt-3 h-2 overflow-hidden rounded bg-line" role="progressbar" aria-label="Exit completion" aria-valuenow={summary.percent} aria-valuemin={0} aria-valuemax={100}>
           <div
             className={summary.isComplete ? 'h-full bg-success' : 'h-full bg-orange'}
             style={{ width: `${summary.percent}%` }}
@@ -280,6 +356,46 @@ export function ExitCockpit({
           />
           <Meta label="Reason" value={exitMeta.reasonForLeaving || '-'} />
         </dl>
+
+        {canEdit && (isClosed || !summary.isComplete) && (
+          <div className="mt-4 border-t border-line pt-4">
+            {isClosed ? (
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm text-ink-2">
+                  Closed{closed.closedAt ? ` ${formatDate(closed.closedAt)}` : ''}
+                  {closed.closedBy ? ` by ${closed.closedBy}` : ''}.
+                  {closed.closeReason ? ` Reason: ${closed.closeReason}` : ''}
+                </p>
+                {canReopen ? (
+                  <button
+                    type="button"
+                    onClick={reopenExit}
+                    disabled={reopenBusy}
+                    className="inline-flex min-h-[44px] shrink-0 items-center rounded border border-line-strong bg-card px-4 py-2 text-sm font-medium text-navy hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal disabled:opacity-60"
+                  >
+                    {reopenBusy ? 'Reopening…' : 'Reopen exit'}
+                  </button>
+                ) : (
+                  <span className="shrink-0 text-xs text-ink-3">Reopen window passed - ask an Admin.</span>
+                )}
+              </div>
+            ) : (
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="text-sm text-ink-2">
+                  Close to archive this exit now, even with steps outstanding (e.g. a termination with
+                  no experience letter). No letters are issued.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setShowCloseDialog(true)}
+                  className="inline-flex min-h-[44px] shrink-0 items-center rounded border border-orange bg-card px-4 py-2 text-sm font-medium text-orange-dark hover:bg-orange-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+                >
+                  Close exit
+                </button>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Steps */}
@@ -328,6 +444,20 @@ export function ExitCockpit({
             </button>
           </div>
         </div>
+      )}
+
+      {showCloseDialog && (
+        <CloseExitDialog
+          employeeName={employeeName}
+          outstandingSteps={outstandingSteps}
+          busy={closeBusy}
+          error={closeError}
+          onConfirm={closeExit}
+          onCancel={() => {
+            setShowCloseDialog(false)
+            setCloseError(null)
+          }}
+        />
       )}
     </div>
   )
@@ -550,7 +680,12 @@ function HandoverBody({
           <dd className="text-ink">{handover.subject}</dd>
         </div>
       </dl>
-      <pre className="max-h-64 overflow-auto whitespace-pre-wrap rounded border border-line bg-surface p-3 font-body text-sm text-ink">
+      <pre
+        tabIndex={0}
+        role="region"
+        aria-label="Handover email body"
+        className="max-h-64 overflow-auto whitespace-pre-wrap rounded border border-line bg-surface p-3 font-body text-sm text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+      >
         {handover.body}
       </pre>
       <div className="flex flex-wrap gap-2">
@@ -580,7 +715,7 @@ function HandoverBody({
           <button
             type="button"
             onClick={() => onData({ rmConfirmedAt: new Date().toISOString() }, 'Completed')}
-            className="inline-flex min-h-[44px] items-center rounded bg-orange px-3 py-2 text-sm font-medium text-white hover:bg-orange-dark"
+            className="inline-flex min-h-[44px] items-center rounded bg-orange-dark px-3 py-2 text-sm font-medium text-white hover:brightness-95"
           >
             Reporting manager confirmed - mark complete
           </button>
@@ -692,7 +827,12 @@ function NoDuesBody({
             disabled={!canGenerate}
             onClick={() =>
               onGenerate(
-                { duesAmount: figures ? formatRs(figures, { bare: true }) : '', duesAmountWords: words },
+                {
+                  settlementAmountFigures: figures ? formatRs(figures, { bare: true }) : '',
+                  // The letter body supplies the trailing "only" ("Indian Rupees {words} only"),
+                  // so strip any trailing "only" the stored/computed words carry to avoid "only only".
+                  settlementAmountWords: words.replace(/\s*only\s*$/i, ''),
+                },
                 false,
               )
             }
@@ -785,7 +925,7 @@ function FFBody({
         <button
           type="button"
           onClick={() => onData({ paymentDate: step.data.paymentDate ?? new Date().toISOString().slice(0, 10) }, 'Completed')}
-          className="inline-flex min-h-[44px] items-center rounded bg-orange px-3 py-2 text-sm font-medium text-white hover:bg-orange-dark"
+          className="inline-flex min-h-[44px] items-center rounded bg-orange-dark px-3 py-2 text-sm font-medium text-white hover:brightness-95"
         >
           Mark settled and paid
         </button>

@@ -955,6 +955,14 @@ export interface ExitProcess {
   /** Stamped when all mandatory steps reach Completed/NA. Null while in
    *  progress. Drives the Alumni/Completed grouping on the /exits board. */
   completedAt: string | null
+  /** Explicitly closed (archived) by HR/Admin, possibly with steps still
+   *  outstanding (e.g. a termination with no experience letter). Distinct from
+   *  completedAt: either one being set lands the exit in the Alumni group, off
+   *  the active board. Cleared on reopen. Optional so pre-close records parse. */
+  closedAt?: string | null
+  closedBy?: string | null
+  /** Short reason captured when closing with steps outstanding. */
+  closeReason?: string | null
   createdAt: string
   createdBy: string
   updatedAt: string
