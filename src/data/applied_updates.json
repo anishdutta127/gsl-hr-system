@@ -1,281 +1,5 @@
 [
   {
-    "id": "38a25065-3d28-45aa-888d-ce0ee9ac1a20",
-    "queuedAt": "2026-05-12T14:55:33.361Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "b53e78fb-0b04-4244-863d-f17e9f818b32",
-      "candidateId": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T14:55:31.163Z",
-      "createdAt": "2026-05-12T14:55:31.163Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T14:55:31.163Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.755Z"
-  },
-  {
-    "id": "33b1b4cb-9b23-416b-8c59-8d85ee4be419",
-    "queuedAt": "2026-05-12T14:55:34.857Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "1c8b3f86-619f-42c2-ba4f-803309d23d07",
-      "to": "g.kishore438@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Kishore,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODU5NzczNCwiZXhwaXJlc0F0IjoxNzc4NTk4NjM0LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiY2Q2MDI4YjctMzFlMS00NWY1LWJiYjQtNDY5MjQyYzdiMDRlIiwiYXBwbGljYXRpb25JZCI6ImI1M2U3OGZiLTBiMDQtNDI0NC04NjNkLWYxN2U5ZjgxOGIzMiIsIm5vbmNlIjoiNjYxMDI1OWMtYzllNC00NmFkLTkyMjctOTIxZjgyYjBlNDgxIn19.wMRZtPMEIKFwI4ua_kRyM_Zg-yvwQ8fmsbRP2zqWZ3c\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate cd6028b7-31e1-45f5-bbb4-469242c7b04e",
-      "createdAt": "2026-05-12T14:55:34.857Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.755Z"
-  },
-  {
-    "id": "f38e1953-7802-4786-b4ca-b372eb108df3",
-    "queuedAt": "2026-05-12T15:03:21.674Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "badfb08d-5d18-4a3f-b72e-6c4255650781",
-      "name": "RAHUL SONI",
-      "email": "rhlsoni@gmail.com",
-      "phone": "9650954088",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf",
-      "createdAt": "2026-05-12T15:03:20.408Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:03:20.408Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "RAHUL SONI",
-            "email": "rhlsoni@gmail.com",
-            "source": "Application",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "resumeFilePath": "data/resumes/applications/2026/05/badfb08d-5d18-4a3f-b72e-6c4255650781.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.770Z"
-  },
-  {
-    "id": "580fccb4-e4e6-4f5e-b064-88e61596ddab",
-    "queuedAt": "2026-05-12T15:03:22.646Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "9c4b686f-a1ec-4c25-a4f6-e9c7b091af73",
-      "candidateId": "badfb08d-5d18-4a3f-b72e-6c4255650781",
-      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T15:03:20.408Z",
-      "createdAt": "2026-05-12T15:03:20.408Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:03:20.408Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "badfb08d-5d18-4a3f-b72e-6c4255650781",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.771Z"
-  },
-  {
-    "id": "5958fda0-11e8-4895-ae51-aa8a81567b8d",
-    "queuedAt": "2026-05-12T15:03:23.791Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "d99e3cf6-e34a-4cf3-ae38-cfa762b82281",
-      "to": "rhlsoni@gmail.com",
-      "subject": "We received your application for STEM Trainer at GSL",
-      "body": "Hi RAHUL,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODU5ODIwMywiZXhwaXJlc0F0IjoxNzc4NTk5MTAzLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYmFkZmIwOGQtNWQxOC00YTNmLWI3MmUtNmM0MjU1NjUwNzgxIiwiYXBwbGljYXRpb25JZCI6IjljNGI2ODZmLWExZWMtNGMyNS1hNGY2LWU5YzdiMDkxYWY3MyIsIm5vbmNlIjoiYTBkMmFiNmItY2UyMy00ZmU0LWE3NDEtMTJkM2VkNzQxNGYzIn19.FTN3Mvfwj8iuwjUjc7ANK2DALRzVzxQI1PgmE_eIqVE\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate badfb08d-5d18-4a3f-b72e-6c4255650781",
-      "createdAt": "2026-05-12T15:03:23.791Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.771Z"
-  },
-  {
-    "id": "61767682-e755-45f1-a007-90832dd2fe2c",
-    "queuedAt": "2026-05-12T15:42:53.805Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "3a0a067c-44fd-4929-bda8-d08adada7deb",
-      "name": "Syed Zafar Abbas Naqvu",
-      "email": "sza.naqvi97@gmail.com",
-      "phone": "9958027648",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf",
-      "createdAt": "2026-05-12T15:42:52.546Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:42:52.546Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Syed Zafar Abbas Naqvu",
-            "email": "sza.naqvi97@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/3a0a067c-44fd-4929-bda8-d08adada7deb.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.214Z"
-  },
-  {
-    "id": "e564741c-3e51-4a18-9a12-096ce68c98c0",
-    "queuedAt": "2026-05-12T15:42:54.737Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "9a79caae-efbe-444b-8697-eb8946b97ff6",
-      "candidateId": "3a0a067c-44fd-4929-bda8-d08adada7deb",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T15:42:52.546Z",
-      "createdAt": "2026-05-12T15:42:52.546Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:42:52.546Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "3a0a067c-44fd-4929-bda8-d08adada7deb",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.223Z"
-  },
-  {
-    "id": "7bbac7db-d3bd-4097-828c-ab5f41811a3c",
-    "queuedAt": "2026-05-12T15:42:55.600Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "ded6aa0e-c0c0-4a2f-b5d5-7354538b7562",
-      "to": "sza.naqvi97@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Syed,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODYwMDU3NSwiZXhwaXJlc0F0IjoxNzc4NjAxNDc1LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiM2EwYTA2N2MtNDRmZC00OTI5LWJkYTgtZDA4YWRhZGE3ZGViIiwiYXBwbGljYXRpb25JZCI6IjlhNzljYWFlLWVmYmUtNDQ0Yi04Njk3LWViODk0NmI5N2ZmNiIsIm5vbmNlIjoiMWNhN2MxYWMtYmU2MC00ZjAxLWJhYWMtM2VkMWQyYjY0MWY2In19.DbZLndknolK_41tgQ3ZhUec5NR5L4BqqEYeQOFoRDs8\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 3a0a067c-44fd-4929-bda8-d08adada7deb",
-      "createdAt": "2026-05-12T15:42:55.600Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.223Z"
-  },
-  {
-    "id": "388fe7ab-d664-47a0-a40d-a38d7350d102",
-    "queuedAt": "2026-05-12T15:46:04.400Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "77eebb59-71a2-45c4-b59f-7c6dc60a0551",
-      "name": "MINERVA JHA",
-      "email": "minervajha1973@gmail.com",
-      "phone": "9110309640",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/77eebb59-71a2-45c4-b59f-7c6dc60a0551.pdf",
-      "createdAt": "2026-05-12T15:46:03.305Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:46:03.305Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "MINERVA JHA",
-            "email": "minervajha1973@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/77eebb59-71a2-45c4-b59f-7c6dc60a0551.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.284Z"
-  },
-  {
-    "id": "9ae45bb4-650b-4f29-9ece-3a2a30f3555a",
-    "queuedAt": "2026-05-12T15:46:05.247Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "e97e0dce-0e61-4550-adc4-ecfd0d659d99",
-      "candidateId": "77eebb59-71a2-45c4-b59f-7c6dc60a0551",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T15:46:03.305Z",
-      "createdAt": "2026-05-12T15:46:03.305Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T15:46:03.305Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "77eebb59-71a2-45c4-b59f-7c6dc60a0551",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.313Z"
-  },
-  {
     "id": "877ca7c3-2c52-463b-b591-3587a13255bd",
     "queuedAt": "2026-05-12T15:46:06.806Z",
     "queuedBy": "system",
@@ -12770,5 +12494,1094 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-06T06:57:10.157Z"
+  },
+  {
+    "id": "976ffad2-2e3d-47f1-97ae-74bd1f9bb06a",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "573e60e6-d02c-0423-489a-a5ef21830038",
+      "employeeCode": "MTPL/232",
+      "title": "Mr.",
+      "name": "Mohan Cheddellha",
+      "email": "mohan.c@getsetlearn.info",
+      "phone": null,
+      "designation": "Key Accounts Manager",
+      "department": "Sales",
+      "reportingTo": "Vishwanath Ghanekar",
+      "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+      "location": "Hyderabad",
+      "locationType": "remote-field",
+      "dateOfJoining": "2026-05-04",
+      "confirmationDate": "2026-11-03",
+      "dateOfBirth": "1982-09-23",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-96ca77b1",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-201f8052",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-6ada9bb8",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-922b0df1",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-b1d082a7",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-56dd206b",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-81bb1d3a",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-95ce0349",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-a616912a",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-f0b642eb",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/232",
+            "designation": "Key Accounts Manager",
+            "dateOfJoining": "2026-05-04"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.310Z"
+  },
+  {
+    "id": "b9dfb319-7085-4a9f-8356-f3672545fede",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "22c3662d-4088-338f-8847-a8b41b923b5a",
+      "employeeCode": "MTPL/233",
+      "title": "Mr.",
+      "name": "Shabir Hussain",
+      "email": "shabir.h@getsetlearn.info",
+      "phone": null,
+      "designation": "Sales Executive",
+      "department": "Sales",
+      "reportingTo": "Sumit Majumder",
+      "reportingManagerId": "86bc8333-efce-57ac-3e45-26524abd3239",
+      "location": "Ladakh",
+      "locationType": "remote-field",
+      "dateOfJoining": "2026-05-11",
+      "confirmationDate": "2026-11-10",
+      "dateOfBirth": "2000-06-22",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-80e383c3",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-415574eb",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-ef1cdd6c",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-625a38b9",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-38eb7a85",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-42118254",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-e060dfc0",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-dc8bdc47",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-c637b273",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-d1947531",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/233",
+            "designation": "Sales Executive",
+            "dateOfJoining": "2026-05-11"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.350Z"
+  },
+  {
+    "id": "5bdbe2ac-561e-433b-b74f-e08eccb33395",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "162729d6-15c9-e7e5-0018-03c22b4b48fe",
+      "employeeCode": "MTPL/234",
+      "title": "Mr.",
+      "name": "Debojoty Nayek",
+      "email": "debojoty.n@getsetlearn.info",
+      "phone": null,
+      "designation": "Jr Innovation Mentor",
+      "department": "STEM & Training",
+      "reportingTo": "Avishek Dasgupta",
+      "reportingManagerId": "10168b81-6eca-5b28-b858-aae78e8414ee",
+      "location": "Kolkata",
+      "locationType": "office",
+      "dateOfJoining": "2026-05-15",
+      "confirmationDate": "2026-11-14",
+      "dateOfBirth": "1999-08-18",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "trainer-6day",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-e8d79e9d",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-c08ed18d",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-0bc298d1",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-3e742c43",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-19bf2514",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-daae1636",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-c63e2458",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-d80b9a20",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-a860b0f7",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-cd9eca04",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/234",
+            "designation": "Jr Innovation Mentor",
+            "dateOfJoining": "2026-05-15"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.395Z"
+  },
+  {
+    "id": "90940f64-13b8-4e9a-8a8b-06bce992086e",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "2a1ce517-c67f-2381-245a-e341d7e4d45f",
+      "employeeCode": "MTPL/235",
+      "title": "Mr.",
+      "name": "Rajesh Vishwakarma",
+      "email": "rajesh.v@getsetlearn.info",
+      "phone": null,
+      "designation": "Key Accounts Manager",
+      "department": "Sales",
+      "reportingTo": "Vishwanath Ghanekar",
+      "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+      "location": "Mumbai",
+      "locationType": "office",
+      "dateOfJoining": "2026-05-25",
+      "confirmationDate": "2026-11-24",
+      "dateOfBirth": "1977-06-22",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-813f4822",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-4c927d79",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-7fd5ee63",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-01cbcdc3",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-f0c7b564",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-5564b97e",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-c0fef290",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-20d9a1d8",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-98360e7b",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-06dab120",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/235",
+            "designation": "Key Accounts Manager",
+            "dateOfJoining": "2026-05-25"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.430Z"
+  },
+  {
+    "id": "99b1c7ac-dc13-4015-8472-037cfc225765",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "bf085ed4-570d-fac6-cdce-5015651962b0",
+      "employeeCode": "MTPL/236",
+      "title": "Mrs.",
+      "name": "Manisha Kumari",
+      "email": "manisha.k@getsetlearn.info",
+      "phone": null,
+      "designation": "Sr Innovation Coach",
+      "department": "STEM & Training",
+      "reportingTo": "Prashanth Mishra",
+      "reportingManagerId": "9e826d7a-92ea-521c-1d9d-778c77ee667a",
+      "location": "Durgapur",
+      "locationType": "remote-field",
+      "dateOfJoining": "2026-05-25",
+      "confirmationDate": "2026-11-24",
+      "dateOfBirth": "1993-08-23",
+      "age": null,
+      "gender": "Female",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "trainer-6day",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-420c5f14",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-553bf1ac",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-eb4e1d14",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-cb4aed7d",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-3eb182fa",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-c25df1ff",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-d1424cf3",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-79afa95d",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-61c865c7",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-8b449858",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/236",
+            "designation": "Sr Innovation Coach",
+            "dateOfJoining": "2026-05-25"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.474Z"
+  },
+  {
+    "id": "96466d2f-f69f-496b-ad77-69effbd923ee",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "9dac9111-db22-39c2-8fcf-6a22f73cd9dd",
+      "employeeCode": "MTPL/238",
+      "title": "Mr.",
+      "name": "Ritesh Singh",
+      "email": "ritesh.s@getsetlearn.info",
+      "phone": null,
+      "designation": "Jr Innovation Mentor",
+      "department": "STEM & Training",
+      "reportingTo": "Shushankita Mishra",
+      "reportingManagerId": "11cc5d27-b071-5d11-1ef6-0584d0437002",
+      "location": "Mumbai",
+      "locationType": "office",
+      "dateOfJoining": "2026-06-01",
+      "confirmationDate": "2026-12-01",
+      "dateOfBirth": "2005-06-04",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "trainer-6day",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-6a294166",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-0aa9e1db",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-ef1eb8af",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-79f97847",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-39d7398e",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-aa628413",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-b558c9a4",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-1174cbed",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-2951e269",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-292d6ace",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/238",
+            "designation": "Jr Innovation Mentor",
+            "dateOfJoining": "2026-06-01"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.525Z"
+  },
+  {
+    "id": "d2fece85-ef66-45d1-b647-6ef104fac4e4",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "3d115484-b318-87a3-6f18-0bd86ffb5fa7",
+      "employeeCode": "MTPL/240",
+      "title": "Mr.",
+      "name": "Abhishek Mukherjee",
+      "email": "abhishek.m@getsetlearn.info",
+      "phone": null,
+      "designation": "Sr Zonal Sales Manager",
+      "department": "Sales",
+      "reportingTo": "Prodipto Banerjee",
+      "reportingManagerId": "933169dc-8065-586e-cba5-3802e5a1eab1",
+      "location": "Kolkata",
+      "locationType": "office",
+      "dateOfJoining": "2026-06-15",
+      "confirmationDate": "2026-12-14",
+      "dateOfBirth": "1978-10-18",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-1521aba4",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-d9bf03cc",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-c3e6ac14",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-1901e3b7",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-5ab9f89d",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-4fcafc61",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-79954433",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-5da612b0",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-64fa6e2b",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-ac733741",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/240",
+            "designation": "Sr Zonal Sales Manager",
+            "dateOfJoining": "2026-06-15"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.595Z"
+  },
+  {
+    "id": "8ad16687-7b3c-4d2d-9d4f-be77b5a97379",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "a1b8d9cf-8a28-6cbb-528c-b3287d398fa4",
+      "employeeCode": "MTPL/166",
+      "title": "Mr.",
+      "name": "CHHUNNI LAL SAHU",
+      "email": "chhunnilal.s@getsetlearn.info",
+      "phone": null,
+      "designation": "Deputy Manager - Sales",
+      "department": "Sales",
+      "reportingTo": "Pratik Dastidar",
+      "reportingManagerId": "60faf0cd-1756-5560-4b81-c57cb7724b72",
+      "location": "Chhattisgarh",
+      "locationType": "remote-field",
+      "dateOfJoining": "2025-02-24",
+      "confirmationDate": "2026-08-23",
+      "dateOfBirth": "1985-01-18",
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-6b6eb6d7",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-7fbec6d4",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-bbed528c",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-720aaf91",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-33d40328",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-0ace2d13",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-af5b4f10",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-6a92ebb6",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-73472c1d",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-31135156",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/166",
+            "designation": "Deputy Manager - Sales",
+            "dateOfJoining": "2025-02-24"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.650Z"
+  },
+  {
+    "id": "754f36d0-53ea-4413-8760-b12a05c5f24c",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+      "employeeCode": "MTPL/237",
+      "title": "Mr.",
+      "name": "Maunish Pandya",
+      "email": "maunish.p@getsetlearn.info",
+      "phone": null,
+      "designation": "Key Accounts Manager",
+      "department": "Sales",
+      "reportingTo": "Vishwanath Ghanekar",
+      "reportingManagerId": "4f7afc15-5248-5f59-0ac6-005d7b776cbc",
+      "location": "Mumbai",
+      "locationType": "office",
+      "dateOfJoining": "2026-05-25",
+      "confirmationDate": "2026-11-24",
+      "dateOfBirth": null,
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Probation",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-a4d06ca9",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-9aaa5aa6",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-562769a7",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-54f12abe",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-b37573e2",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-3ae61b5b",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-98c28162",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-586e5622",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-0ad83e79",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-810bf76c",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/237",
+            "designation": "Key Accounts Manager",
+            "dateOfJoining": "2026-05-25"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.696Z"
+  },
+  {
+    "id": "e57a9a5b-90aa-4c70-94a2-fc43185d3fee",
+    "queuedAt": "2026-07-06T07:45:49.592Z",
+    "queuedBy": "employee-import",
+    "entity": "employee",
+    "operation": "create",
+    "payload": {
+      "id": "c3958f57-1604-f337-cef6-db9b03ef2a93",
+      "employeeCode": "MTPL/040",
+      "title": "Mr.",
+      "name": "NILABHRA PODDAR",
+      "email": "nilabhra.p@getsetlearn.info",
+      "phone": null,
+      "designation": "General Manager - Sales West & South",
+      "department": "Sales",
+      "reportingTo": null,
+      "reportingManagerId": null,
+      "location": "",
+      "locationType": "remote-field",
+      "dateOfJoining": "2022-06-06",
+      "confirmationDate": null,
+      "dateOfBirth": null,
+      "age": null,
+      "gender": "Male",
+      "maritalStatus": null,
+      "address": null,
+      "personalEmail": null,
+      "employmentStatus": "Active",
+      "workPattern": "field",
+      "leaveBalance": {
+        "casual": 12,
+        "sick": 12
+      },
+      "leaveYearStart": "2026-04-01",
+      "officialEmailMissing": false,
+      "tenureYears": null,
+      "status": "Active",
+      "onboardingChecklist": [
+        {
+          "id": "ob-74d4995d",
+          "label": "Offer letter signed + filed",
+          "done": false
+        },
+        {
+          "id": "ob-3383f6a7",
+          "label": "Joining documents collected (PAN, Aadhaar, educational)",
+          "done": false
+        },
+        {
+          "id": "ob-10d6860e",
+          "label": "Previous-employer relieving letter received",
+          "done": false
+        },
+        {
+          "id": "ob-9fcf51cd",
+          "label": "Employee code assigned",
+          "done": false
+        },
+        {
+          "id": "ob-d94ffa67",
+          "label": "Email + laptop handed over",
+          "done": false
+        },
+        {
+          "id": "ob-072a6181",
+          "label": "Access to Drive, Slack, internal tools granted",
+          "done": false
+        },
+        {
+          "id": "ob-fba3f022",
+          "label": "Day-1 induction scheduled",
+          "done": false
+        },
+        {
+          "id": "ob-d626668b",
+          "label": "Reporting manager introduced",
+          "done": false
+        },
+        {
+          "id": "ob-6b56e46b",
+          "label": "Policy handbook acknowledged",
+          "done": false
+        },
+        {
+          "id": "ob-19d1fd01",
+          "label": "Background verification initiated",
+          "done": false
+        }
+      ],
+      "createdAt": "2026-07-06T07:45:49.592Z",
+      "createdBy": "employee-import",
+      "updatedAt": "2026-07-06T07:45:49.592Z",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.create",
+          "after": {
+            "employeeCode": "MTPL/040",
+            "designation": "General Manager - Sales West & South",
+            "dateOfJoining": "2022-06-06"
+          },
+          "notes": "Bulk import (create-or-reactivate reconcile service)."
+        },
+        {
+          "timestamp": "2026-07-06T07:45:49.592Z",
+          "user": "employee-import",
+          "action": "employee.gender.correct",
+          "after": {
+            "gender": "Male"
+          },
+          "notes": "Source file had Gender \"Female\" with Title \"Mr.\" (conflict); corrected to \"Male\" per Anish 2026-07-06."
+        }
+      ]
+    },
+    "appliedAt": "2026-07-06T07:46:05.733Z"
   }
 ]
