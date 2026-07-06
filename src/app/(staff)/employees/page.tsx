@@ -14,7 +14,8 @@ export default async function EmployeesPage({
 }: {
   searchParams: { department?: string; q?: string; notice?: string }
 }) {
-  await requireRoles(['Admin', 'HR', 'Leadership'])
+  const session = await requireRoles(['Admin', 'HR', 'Leadership'])
+  const canBulkUpload = session.role === 'Admin' || session.role === 'HR'
   const employees = loadEmployees()
   const applications = loadApplications()
   const candidates = loadCandidates()
@@ -55,20 +56,30 @@ export default async function EmployeesPage({
             department.
           </p>
         </div>
-        <EmployeeCsvExport
-          employees={filtered.map((e) => ({
-            employeeCode: e.employeeCode ?? '',
-            name: e.name,
-            designation: e.designation ?? '',
-            department: e.department ?? '',
-            location: e.location ?? '',
-            email: e.email ?? '',
-            status: e.status,
-            dateOfJoining: e.dateOfJoining ?? '',
-            workPattern: e.workPattern ?? '',
-            reportingTo: e.reportingTo ?? '',
-          }))}
-        />
+        <div className="flex flex-wrap items-center gap-2">
+          {canBulkUpload && (
+            <Link
+              href="/employees/bulk-upload"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded border border-orange bg-card px-4 py-2 text-sm font-medium text-orange-dark hover:bg-orange-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+            >
+              Bulk upload
+            </Link>
+          )}
+          <EmployeeCsvExport
+            employees={filtered.map((e) => ({
+              employeeCode: e.employeeCode ?? '',
+              name: e.name,
+              designation: e.designation ?? '',
+              department: e.department ?? '',
+              location: e.location ?? '',
+              email: e.email ?? '',
+              status: e.status,
+              dateOfJoining: e.dateOfJoining ?? '',
+              workPattern: e.workPattern ?? '',
+              reportingTo: e.reportingTo ?? '',
+            }))}
+          />
+        </div>
       </div>
 
       <div
