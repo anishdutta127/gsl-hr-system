@@ -183,7 +183,7 @@
     "completedAt": "2026-07-06T10:49:38.335Z",
     "createdAt": "2026-06-22T09:42:52.594Z",
     "createdBy": "system",
-    "updatedAt": "2026-07-06T10:50:39.608Z",
+    "updatedAt": "2026-07-06T10:50:44.769Z",
     "auditLog": [
       {
         "timestamp": "2026-06-22T09:42:52.594Z",
@@ -411,6 +411,21 @@
             "paymentReference": "",
             "paymentDate": "2026-07-06"
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-06T10:50:44.769Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "N/A",
+          "notes": "Not applicable",
+          "data": {}
+        },
+        "after": {
+          "status": "N/A",
+          "notes": "Not applicable",
+          "data": {}
         }
       }
     ]
