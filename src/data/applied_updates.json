@@ -1,57 +1,5 @@
 [
   {
-    "id": "123f0099-a3b3-4401-98a1-d1d7e0907a71",
-    "queuedAt": "2026-05-12T14:11:48.091Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "e4da6d82-45ba-4a68-961a-52a7d73bd9c1",
-      "to": "asbhanuvanshi2000@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi ABHIJEET,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODU5NTEwOCwiZXhwaXJlc0F0IjoxNzc4NTk2MDA4LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYjc1M2Q3M2UtODYxNy00NDgyLWEyODItOGRkNTc3YzBlZmVhIiwiYXBwbGljYXRpb25JZCI6Ijg4ZWJkZDIzLTFlMWQtNGU3ZS1hMjhmLTQ2ZTMwZGY2MWUxZiIsIm5vbmNlIjoiMTkzNjMyM2QtYjMwMi00NWM5LWExY2EtYjYyYjc0MzlmZmEwIn19.madOWkYmA6d81L4EUX4oC4FPF8zzIt3T7y_AKKDu8hI\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate b753d73e-8617-4482-a282-8dd577c0efea",
-      "createdAt": "2026-05-12T14:11:48.091Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.739Z"
-  },
-  {
-    "id": "6b7772a6-70db-4624-ad9d-3a9357bab2a7",
-    "queuedAt": "2026-05-12T14:55:32.444Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "cd6028b7-31e1-45f5-bbb4-469242c7b04e",
-      "name": "Kishore G",
-      "email": "g.kishore438@gmail.com",
-      "phone": "7204863438",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf",
-      "createdAt": "2026-05-12T14:55:31.163Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T14:55:31.163Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Kishore G",
-            "email": "g.kishore438@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/cd6028b7-31e1-45f5-bbb4-469242c7b04e.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-12T15:19:34.754Z"
-  },
-  {
     "id": "38a25065-3d28-45aa-888d-ce0ee9ac1a20",
     "queuedAt": "2026-05-12T14:55:33.361Z",
     "queuedBy": "public:careers",
@@ -12766,5 +12714,61 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-06-29T07:17:14.817Z"
+  },
+  {
+    "id": "b7da48e6-9ce8-45cd-a9e4-abd85120dbc1",
+    "queuedAt": "2026-07-06T04:41:05.027Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "eb9f299d-ac36-5746-dbf9-55eec1968e15",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-30",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-30."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-06T06:57:10.142Z"
+  },
+  {
+    "id": "028094da-6c66-4a1c-acc9-e9a1591e7459",
+    "queuedAt": "2026-07-06T04:44:14.391Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "46d73ce5-436c-5460-a889-0e5ef0bec232",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-30",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover of laptop pending"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-30."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-06T06:57:10.157Z"
   }
 ]

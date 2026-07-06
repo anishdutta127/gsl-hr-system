@@ -2791,7 +2791,7 @@
     "reportingManagerId": "86763a19-6414-53a6-fac4-2f7a4ca417c3",
     "location": "Mumbai",
     "dateOfJoining": "2024-01-08",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-07-08",
     "tenureYears": 2.3,
     "dateOfBirth": "1987-04-02",
@@ -2876,6 +2876,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-07-06T06:57:10.128Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-30",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-30."
       }
     ],
     "locationType": "office",
@@ -2886,7 +2906,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-30",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
+    }
   },
   {
     "id": "0f554066-82ad-5600-bd5e-866f6fc28f55",
@@ -3121,7 +3148,7 @@
     "reportingManagerId": "86763a19-6414-53a6-fac4-2f7a4ca417c3",
     "location": "Mumbai",
     "dateOfJoining": "2024-01-29",
-    "status": "Active",
+    "status": "Exited",
     "confirmationDate": "2024-07-29",
     "tenureYears": 2.2,
     "dateOfBirth": "1980-12-22",
@@ -3206,6 +3233,26 @@
           "officialEmailMissing": false
         },
         "notes": "Phase 4 HR-Ops schema migration from Employee_Muster_v2.xlsx"
+      },
+      {
+        "timestamp": "2026-07-06T06:57:10.145Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-30",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover of laptop pending"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-30."
       }
     ],
     "locationType": "office",
@@ -3216,7 +3263,14 @@
       "sick": 12
     },
     "leaveYearStart": "2026-04-01",
-    "updatedAt": "2026-05-09T09:53:39.819Z"
+    "updatedAt": "2026-05-09T09:53:39.819Z",
+    "exit": {
+      "lastWorkingDay": "2026-06-30",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover of laptop pending"
+    }
   },
   {
     "id": "a002df93-aed2-50d9-dc10-34f7bfe6feb4",
