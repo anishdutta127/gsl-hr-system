@@ -2153,17 +2153,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-07T10:34:49.047Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Anshuman Gupta.pdf",
+            "fileSize": 263236,
+            "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-experience/letter-45a00817-2026-4ae4-9ade-36e0bb9c2d1d.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T10:34:49.047Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-07T10:34:49.047Z",
     "createdAt": "2026-07-07T09:54:11.148Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T10:34:36.960Z",
+    "updatedAt": "2026-07-07T10:34:49.047Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T09:54:11.148Z",
@@ -2468,6 +2476,29 @@
               "filename": "MTPL Relieving Letter- Anshuman Gupta.pdf",
               "fileSize": 238053,
               "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-relieving/letter-4569983b-5f37-489f-9d19-85bcbc405048.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T10:34:49.047Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:34:49.047Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Anshuman Gupta.pdf",
+              "fileSize": 263236,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-experience/letter-45a00817-2026-4ae4-9ade-36e0bb9c2d1d.pdf"
             }
           }
         }
