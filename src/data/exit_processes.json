@@ -1609,7 +1609,8 @@
         "isMandatory": true,
         "status": "Not Started",
         "data": {
-          "settlementWords": ""
+          "settlementWords": "",
+          "settlementFigures": null
         },
         "notes": "",
         "completedAt": null,
@@ -1652,7 +1653,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:44:44.064Z",
+    "updatedAt": "2026-07-07T06:44:45.274Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1696,6 +1697,26 @@
           "notes": "",
           "data": {
             "settlementWords": ""
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:44:45.274Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "settlementWords": ""
+          }
+        },
+        "after": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "settlementWords": "",
+            "settlementFigures": null
           }
         }
       }
