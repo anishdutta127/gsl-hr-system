@@ -1659,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:46:00.484Z",
+    "updatedAt": "2026-07-07T06:46:38.925Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1955,6 +1955,27 @@
             "pendingItems": "",
             "signed": true,
             "signedAt": "2026-07-07T06:45:45.240Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:46:38.925Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
+            "paymentDate": "2026-07-07"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
+            "paymentDate": "2026-07-07"
           }
         }
       }
