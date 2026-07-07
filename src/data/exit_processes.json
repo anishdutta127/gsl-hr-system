@@ -1609,8 +1609,8 @@
         "isMandatory": true,
         "status": "Completed",
         "data": {
-          "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
-          "settlementFigures": 19483,
+          "settlementWords": "",
+          "settlementFigures": null,
           "pendingItems": "",
           "signed": true,
           "signedAt": "2026-07-07T06:45:45.240Z"
@@ -1659,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:45:45.418Z",
+    "updatedAt": "2026-07-07T06:46:00.484Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1925,6 +1925,33 @@
           "data": {
             "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
             "settlementFigures": 19483,
+            "pendingItems": "",
+            "signed": true,
+            "signedAt": "2026-07-07T06:45:45.240Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:46:00.484Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
+            "settlementFigures": 19483,
+            "pendingItems": "",
+            "signed": true,
+            "signedAt": "2026-07-07T06:45:45.240Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementWords": "",
+            "settlementFigures": null,
             "pendingItems": "",
             "signed": true,
             "signedAt": "2026-07-07T06:45:45.240Z"
