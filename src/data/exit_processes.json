@@ -1659,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:45:26.876Z",
+    "updatedAt": "2026-07-07T06:45:41.861Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1847,6 +1847,33 @@
           "data": {
             "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
             "paymentDate": "2026-07-07"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:45:41.861Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
+            "settlementFigures": 19483,
+            "pendingItems": "",
+            "signed": true,
+            "signedAt": "2026-07-07T06:45:02.630Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
+            "settlementFigures": 19483,
+            "pendingItems": "",
+            "signed": true,
+            "signedAt": "2026-07-07T06:45:02.630Z"
           }
         }
       }
