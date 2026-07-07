@@ -1607,15 +1607,17 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {
           "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
           "settlementFigures": 19483,
-          "pendingItems": ""
+          "pendingItems": "",
+          "signed": true,
+          "signedAt": "2026-07-07T06:45:02.630Z"
         },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T06:45:02.812Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -1654,7 +1656,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:45:02.606Z",
+    "updatedAt": "2026-07-07T06:45:02.812Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1761,6 +1763,31 @@
             "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
             "settlementFigures": 19483,
             "pendingItems": ""
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:45:02.812Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
+            "settlementFigures": 19483,
+            "pendingItems": ""
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "settlementWords": "Nineteen Thousand Four Hundred Eighty Three only",
+            "settlementFigures": 19483,
+            "pendingItems": "",
+            "signed": true,
+            "signedAt": "2026-07-07T06:45:02.630Z"
           }
         }
       }
