@@ -1360,17 +1360,17 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {},
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T06:08:01.971Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-07T06:08:01.971Z",
     "createdAt": "2026-07-07T05:55:15.166Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:07:55.953Z",
+    "updatedAt": "2026-07-07T06:08:01.971Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T05:55:15.166Z",
@@ -1439,6 +1439,21 @@
         "timestamp": "2026-07-07T06:07:55.953Z",
         "user": "Hiring@getsetlearn.info",
         "action": "exit.relieving.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:08:01.971Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
         "before": {
           "status": "Not Started",
           "notes": "",
