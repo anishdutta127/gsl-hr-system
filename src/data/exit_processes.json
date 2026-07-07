@@ -2171,7 +2171,7 @@
     "completedAt": "2026-07-07T10:34:49.047Z",
     "createdAt": "2026-07-07T09:54:11.148Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T10:34:49.047Z",
+    "updatedAt": "2026-07-07T10:35:12.039Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T09:54:11.148Z",
@@ -2500,6 +2500,25 @@
               "fileSize": 263236,
               "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-experience/letter-45a00817-2026-4ae4-9ade-36e0bb9c2d1d.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T10:35:12.039Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-07"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-07"
           }
         }
       }
