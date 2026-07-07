@@ -2101,11 +2101,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-07T10:32:49.371Z",
+            "uploadedAt": "2026-07-07T10:33:54.736Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "No Dues Letter - GSL.pdf",
             "fileSize": 566637,
-            "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
+            "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-c2f45556-4ad9-4bad-938b-5f051b14ad1e.pdf"
           },
           "settlementWords": "Twenty Seven Thousand Seventy Two only",
           "settlementFigures": 27072
@@ -2151,7 +2151,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T09:54:11.148Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T10:33:50.481Z",
+    "updatedAt": "2026-07-07T10:33:54.736Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T09:54:11.148Z",
@@ -2264,6 +2264,41 @@
               "filename": "No Dues Letter - GSL.pdf",
               "fileSize": 566637,
               "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
+            },
+            "settlementWords": "Twenty Seven Thousand Seventy Two only",
+            "settlementFigures": 27072
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T10:33:54.736Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:32:49.371Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
+            },
+            "settlementWords": "Twenty Seven Thousand Seventy Two only",
+            "settlementFigures": 27072
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:33:54.736Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-c2f45556-4ad9-4bad-938b-5f051b14ad1e.pdf"
             },
             "settlementWords": "Twenty Seven Thousand Seventy Two only",
             "settlementFigures": 27072
