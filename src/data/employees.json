@@ -15302,7 +15302,7 @@
     "leaveYearStart": "2026-04-01",
     "officialEmailMissing": false,
     "tenureYears": null,
-    "status": "Active",
+    "status": "Exited",
     "onboardingChecklist": [
       {
         "id": "ob-74d4995d",
@@ -15378,7 +15378,34 @@
           "gender": "Male"
         },
         "notes": "Source file had Gender \"Female\" with Title \"Mr.\" (conflict); corrected to \"Male\" per Anish 2026-07-06."
+      },
+      {
+        "timestamp": "2026-07-07T06:32:47.267Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Contract Expired",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
       }
-    ]
+    ],
+    "exit": {
+      "lastWorkingDay": "2026-03-31",
+      "reason": "Contract Expired",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
+    }
   }
 ]
