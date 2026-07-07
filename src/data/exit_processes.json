@@ -1638,11 +1638,11 @@
         "name": "Relieving letter",
         "kind": "letter:RELIEVING-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {},
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T06:51:24.910Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-experience",
@@ -1659,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:46:53.450Z",
+    "updatedAt": "2026-07-07T06:51:24.910Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1998,6 +1998,21 @@
             "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
             "paymentDate": "2026-07-07"
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:51:24.910Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
         }
       }
     ]
