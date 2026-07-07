@@ -1624,13 +1624,14 @@
         "name": "Full and final settlement",
         "kind": "ff",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {
-          "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR"
+          "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
+          "paymentDate": "2026-07-07"
         },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T06:45:26.876Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-relieving",
@@ -1658,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:45:25.736Z",
+    "updatedAt": "2026-07-07T06:45:26.876Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -1826,6 +1827,26 @@
           "notes": "",
           "data": {
             "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:45:26.876Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {
+            "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentReference": "15-04-2026  INF\\NEFT\\IN42610557011077\\HDFC0006005\\83544817 BYHRISHIKE FROM VANGHEE\\ANGSHULIMARAICH  S44733449  19,483.00 DR",
+            "paymentDate": "2026-07-07"
           }
         }
       }
