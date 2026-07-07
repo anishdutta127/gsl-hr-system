@@ -1659,7 +1659,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T06:42:07.663Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:51:24.910Z",
+    "updatedAt": "2026-07-07T06:51:33.795Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T06:42:07.663Z",
@@ -2006,6 +2006,21 @@
         "action": "exit.relieving.update",
         "before": {
           "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-07T06:51:33.795Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "Completed",
           "notes": "",
           "data": {}
         },
