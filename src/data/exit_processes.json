@@ -2110,7 +2110,7 @@
           "settlementWords": "Twenty Seven Thousand Seventy Two only",
           "settlementFigures": 27072,
           "signed": true,
-          "signedAt": "2026-07-07T10:33:58.937Z"
+          "signedAt": "2026-07-07T10:34:20.131Z"
         },
         "notes": "",
         "completedAt": "2026-07-07T10:32:49.371Z",
@@ -2153,7 +2153,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T09:54:11.148Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T10:34:16.350Z",
+    "updatedAt": "2026-07-07T10:34:20.386Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T09:54:11.148Z",
@@ -2380,6 +2380,45 @@
             "settlementFigures": 27072,
             "signed": true,
             "signedAt": "2026-07-07T10:33:58.937Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T10:34:20.386Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:33:54.736Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-c2f45556-4ad9-4bad-938b-5f051b14ad1e.pdf"
+            },
+            "settlementWords": "Twenty Seven Thousand Seventy Two only",
+            "settlementFigures": 27072,
+            "signed": true,
+            "signedAt": "2026-07-07T10:33:58.937Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:33:54.736Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-c2f45556-4ad9-4bad-938b-5f051b14ad1e.pdf"
+            },
+            "settlementWords": "Twenty Seven Thousand Seventy Two only",
+            "settlementFigures": 27072,
+            "signed": true,
+            "signedAt": "2026-07-07T10:34:20.131Z"
           }
         }
       }
