@@ -38,5 +38,26 @@
         "notes": "Copied the legacy interview reason into freeText; the editable field is replaced by the document upload."
       }
     ]
+  },
+  {
+    "employeeId": "c3958f57-1604-f337-cef6-db9b03ef2a93",
+    "conductedAt": "2026-07-07T06:09:15.151Z",
+    "conductedBy": "Hiring@getsetlearn.info",
+    "reasonForLeaving": "",
+    "wouldRecommend": null,
+    "satisfactionWithManager": null,
+    "satisfactionWithRole": null,
+    "topThingsToChange": "",
+    "freeText": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-07T06:09:15.151Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-interview.create",
+        "after": {
+          "wouldRecommend": null
+        }
+      }
+    ]
   }
 ]
