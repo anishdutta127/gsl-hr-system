@@ -1370,7 +1370,7 @@
     "completedAt": "2026-07-07T06:08:01.971Z",
     "createdAt": "2026-07-07T05:55:15.166Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T06:09:03.786Z",
+    "updatedAt": "2026-07-07T06:09:55.692Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T05:55:15.166Z",
@@ -1553,7 +1553,21 @@
           "notes": "",
           "data": {}
         }
+      },
+      {
+        "timestamp": "2026-07-07T06:09:55.692Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.closed",
+        "after": {
+          "closedBy": "Hiring@getsetlearn.info",
+          "outstandingSteps": [],
+          "reason": "Everything done."
+        },
+        "notes": "Exit closed: Everything done."
       }
-    ]
+    ],
+    "closedAt": "2026-07-07T06:09:55.692Z",
+    "closedBy": "Hiring@getsetlearn.info",
+    "closeReason": "Everything done."
   }
 ]
