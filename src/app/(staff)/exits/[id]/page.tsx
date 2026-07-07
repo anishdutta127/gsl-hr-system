@@ -9,6 +9,7 @@ import {
   buildHandoverEmail,
   canEditExitProcess,
   canReopenExitProcess,
+  canViewExitLetterDocument,
   canViewExitProcess,
   canViewStepDetail,
   findExitProcess,
@@ -16,6 +17,7 @@ import {
   summariseExit,
 } from '@/lib/exitProcess'
 import { canViewExitInterview, loadExitInterviews } from '@/lib/offboardingTasks'
+import type { ExitStepData } from '@/lib/types'
 import { ExitInterviewForm } from '../../employees/[id]/offboarding/ExitInterviewForm'
 import { StartExitForm } from './StartExitForm'
 import { ExitCockpit, type CockpitStep } from './ExitCockpit'
@@ -93,16 +95,29 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
             'NO-DUES-v1': { date: todayLong },
           }
 
-          const steps: CockpitStep[] = process.steps.map((s) => ({
-            templateId: s.templateId,
-            name: s.name,
-            kind: s.kind,
-            isMandatory: s.isMandatory,
-            status: s.status,
-            data: s.data,
-            notes: s.notes,
-            canSeeDetail: canViewStepDetail(session, s.kind),
-          }))
+          const steps: CockpitStep[] = process.steps.map((s) => {
+            const canSeeDetail = canViewStepDetail(session, s.kind)
+            const canViewLetterDoc = canViewExitLetterDocument(session, s.kind)
+            // Redact step data + notes from viewers who cannot see the detail -
+            // this keeps No Dues settlement figures out of a HOD/Leadership RSC
+            // payload, not merely hidden in the UI. Then strip the uploaded
+            // letter reference from anyone who cannot fetch it.
+            let data: ExitStepData = canSeeDetail ? s.data : {}
+            if (data.letterDocument && !canViewLetterDoc) {
+              data = { ...data, letterDocument: null }
+            }
+            return {
+              templateId: s.templateId,
+              name: s.name,
+              kind: s.kind,
+              isMandatory: s.isMandatory,
+              status: s.status,
+              data,
+              notes: canSeeDetail ? s.notes : '',
+              canSeeDetail,
+              canViewLetterDoc,
+            }
+          })
 
           const showInterview = canViewExitInterview(session)
           const interview = showInterview

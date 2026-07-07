@@ -21,7 +21,7 @@
     "name": "No Dues / Notice Certificate",
     "kind": "letter:NO-DUES-v1",
     "isMandatory": true,
-    "description": "Generate the No Dues letter (employee code, full-and-final settlement figures and words, last drawn salary, pending items). The five contractual clauses are fixed boilerplate. The employee signs and returns it - record it as signed and note the signed copy."
+    "description": "Record the full-and-final settlement figures and words, last drawn salary and pending items, then upload the signed No Dues letter (or generate a draft from the template to send for signing). Uploading the final letter completes the step. HR and Admin only."
   },
   {
     "id": "exit-ff-settlement",
@@ -37,7 +37,7 @@
     "name": "Relieving letter",
     "kind": "letter:RELIEVING-v1",
     "isMandatory": true,
-    "description": "Generate the relieving letter from the Relieving template."
+    "description": "Upload the final relieving letter (signed / on letterhead), or generate a draft from the Relieving template. Either completes the step."
   },
   {
     "id": "exit-experience",
@@ -45,6 +45,6 @@
     "name": "Experience letter",
     "kind": "letter:EXPERIENCE-v1",
     "isMandatory": true,
-    "description": "Generate the experience letter from the Experience template."
+    "description": "Upload the final experience letter (signed / on letterhead), or generate a draft from the Experience template. Either completes the step."
   }
 ]
