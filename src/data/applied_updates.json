@@ -1,57 +1,5 @@
 [
   {
-    "id": "e520886e-8662-409a-b785-d79f19a3fc06",
-    "queuedAt": "2026-05-12T16:01:19.387Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "e5dcaf59-5e42-468b-a4be-3ddac99fdbf1",
-      "to": "sackm123@gmail.com",
-      "subject": "We received your application for SME Arduino at GSL",
-      "body": "Hi SACHIN,\n\nThanks for applying for SME Arduino at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODYwMTY3OSwiZXhwaXJlc0F0IjoxNzc4NjAyNTc5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNDc2MmM4OTItZWE3Zi00MjE1LTg5NzYtZDZhMDBkM2ZlNjViIiwiYXBwbGljYXRpb25JZCI6IjFlMDJmMmFlLTdmZDMtNDZlMC04NDkxLWM5NWU3OGU2NWU4ZSIsIm5vbmNlIjoiZDU5ZGQ1N2MtZmYxNy00MDAxLWExODMtNWE4YjliYjg0NzJhIn19.dTMopB1mYeEww6VAPRrP_mPwvhYrMWiJT0doSm2nRb0\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 4762c892-ea7f-4215-8976-d6a00d3fe65b",
-      "createdAt": "2026-05-12T16:01:19.387Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.498Z"
-  },
-  {
-    "id": "25b82234-3602-4874-8e1b-531b31c61819",
-    "queuedAt": "2026-05-12T16:04:27.122Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "40c12901-d5dc-4843-a291-0c3827538e53",
-      "name": "SACHIN KUMAR",
-      "email": "sackm123@gmail.com",
-      "phone": "7892355212",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf",
-      "createdAt": "2026-05-12T16:04:25.878Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T16:04:25.878Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "SACHIN KUMAR",
-            "email": "sackm123@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/40c12901-d5dc-4843-a291-0c3827538e53.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.688Z"
-  },
-  {
     "id": "b9e3d992-8200-4eea-acb7-c723c2aa8210",
     "queuedAt": "2026-05-12T16:04:28.095Z",
     "queuedBy": "public:careers",
@@ -13595,5 +13543,71 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-07T06:32:47.282Z"
+  },
+  {
+    "id": "3b982a3c-0149-4427-bf04-7af0d48ab543",
+    "queuedAt": "2026-07-07T06:42:08.463Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "57873a98-aede-520c-3828-2d545c600f48",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover completed"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-07T10:06:47.998Z"
+  },
+  {
+    "id": "11e2f5c7-fd33-4c1f-a488-20a229386254",
+    "queuedAt": "2026-07-07T09:54:12.353Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "9c9b0042-b87a-53f0-db69-d08d51d67f3d",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-20",
+          "reason": "Suspension",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-20",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover Complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-20."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-07T10:06:48.016Z"
   }
 ]
