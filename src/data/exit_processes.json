@@ -1309,11 +1309,13 @@
         "name": "Handover",
         "kind": "handover",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "rmConfirmedAt": "2026-07-07T06:07:31.635Z"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-07T06:07:33.406Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-no-dues",
@@ -1363,7 +1365,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T05:55:15.166Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T05:55:15.166Z",
+    "updatedAt": "2026-07-07T06:07:33.406Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T05:55:15.166Z",
@@ -1375,6 +1377,23 @@
           "lastWorkingDay": "2026-03-31"
         },
         "notes": "Exit initiated for NILABHRA PODDAR."
+      },
+      {
+        "timestamp": "2026-07-07T06:07:33.406Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-07T06:07:31.635Z"
+          }
+        }
       }
     ]
   }
