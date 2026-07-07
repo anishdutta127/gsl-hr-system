@@ -57,6 +57,13 @@ const nextConfig = {
       '/api/admin/offboarding/exit-interview/[employeeId]/document/[fileId]': [
         './data/exit-interview-docs/**/*',
       ],
+      // Uploaded final exit letters (No Dues / Relieving / Experience), per
+      // step. Single-root traversal-guard pattern; the serve route gates on
+      // canViewExitLetterDocument (No Dues is HR/Admin-only financial; HOD/RM
+      // never). See src/lib/exitProcess.ts:assertInsideExitLetterDocsRoot.
+      '/api/admin/exits/[employeeId]/steps/[templateId]/letter/[fileId]': [
+        './data/exit-letter-docs/**/*',
+      ],
     },
   },
 }

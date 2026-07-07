@@ -304,6 +304,78 @@ export function canViewStepDetail(session: SessionClaims | null, kind: ExitStepK
   return session.role === 'Admin' || session.role === 'HR' || session.role === 'Leadership' || session.role === 'HOD'
 }
 
+/**
+ * Who may VIEW (fetch) a letter step's uploaded document. The document inherits
+ * the same visibility as that step's generated letter:
+ *   - No Dues carries settlement figures -> financial -> HR/Admin only. A
+ *     reporting manager or HOD must never fetch it (matches the No Dues/F&F gate).
+ *   - Relieving / Experience -> HR/Admin always; Leadership per the exit
+ *     testing/allowlist posture (GSL_INTERVIEW_VIEWERS); HOD/RM never. This
+ *     mirrors the generated-letter audience (only HR/Admin can produce one) and
+ *     never widens visibility to a reporting manager.
+ * Enforced on the serve route, not just the UI.
+ */
+export function canViewExitLetterDocument(
+  session: { role: string; email: string } | null,
+  kind: ExitStepKind,
+): boolean {
+  if (!session) return false
+  if (isFinancialStep(kind)) return canViewExitFinancials(session as SessionClaims)
+  // Non-financial letters (relieving / experience): reuse the exit leadership
+  // allowlist so the audience matches the exit interview - HR/Admin + allowlisted
+  // Leadership, never HOD. Imported lazily to avoid a cycle with offboardingTasks.
+  return canViewExitLetterLeadership(session)
+}
+
+// Kept local (not re-exported) so the letter-doc gate owns its own Leadership
+// rule without importing offboardingTasks (which would pull the whole module).
+function canViewExitLetterLeadership(session: { role: string; email: string }): boolean {
+  if (session.role === 'Admin' || session.role === 'HR') return true
+  if (session.role === 'Leadership') {
+    const flag = process.env.TESTING_OPEN_ACCESS
+    const testingOpen = flag === undefined || flag === '' ? true : flag !== 'false'
+    if (testingOpen) return true
+    const raw = process.env.GSL_INTERVIEW_VIEWERS
+    if (raw === undefined || raw.trim() === '') return true
+    return raw
+      .split(',')
+      .map((s) => s.trim().toLowerCase())
+      .filter(Boolean)
+      .includes(session.email.toLowerCase())
+  }
+  return false
+}
+
+// --- Letter document storage (per-step uploaded final letters) -----------
+// Same single-root traversal-guard pattern as the confidential exit-interview
+// document (PR #4). The serve route gates on canViewExitLetterDocument so the
+// No Dues letter (financial) never reaches a reporting manager / HOD. Adding a
+// brand-new top-level root requires appending here AND to
+// outputFileTracingIncludes in next.config.mjs.
+
+const EXIT_LETTER_DOCS_ROOT = path.resolve(process.cwd(), 'data', 'exit-letter-docs')
+
+/** Repo-relative storage path: data/exit-letter-docs/<employee>/<template>/<file>.<ext>.
+ *  All segments are sanitised so a crafted id cannot escape the root. */
+export function buildExitLetterDocPath(
+  employeeId: string,
+  templateId: string,
+  fileId: string,
+  ext: string,
+): string {
+  const safe = (s: string) => s.replace(/[^a-zA-Z0-9-_]/g, '')
+  const safeExt = ext.replace(/[^a-zA-Z0-9.]/g, '').toLowerCase()
+  const dotExt = safeExt.startsWith('.') ? safeExt : `.${safeExt}`
+  return `data/exit-letter-docs/${safe(employeeId)}/${safe(templateId)}/${safe(fileId)}${dotExt}`
+}
+
+export function assertInsideExitLetterDocsRoot(absPath: string): void {
+  const resolved = path.resolve(absPath)
+  if (!resolved.startsWith(EXIT_LETTER_DOCS_ROOT + path.sep) && resolved !== EXIT_LETTER_DOCS_ROOT) {
+    throw new Error(`Resolved path ${resolved} escapes exit-letter-docs root ${EXIT_LETTER_DOCS_ROOT}.`)
+  }
+}
+
 // --- Close / reopen (explicit archival) ---------------------------------
 
 /** HR may undo a close within this window of the closedAt timestamp (a

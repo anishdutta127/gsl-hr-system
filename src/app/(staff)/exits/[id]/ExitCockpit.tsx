@@ -1,10 +1,17 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
+import { FileText, Upload, Trash2 } from 'lucide-react'
 import { formatRs, formatDate } from '@/lib/format'
 import { amountToWordsIndian } from '@/lib/preOnboardingEmails/amountInWords'
-import type { ExitStepData, ExitStepKind, ExitStepStatus, ExitType } from '@/lib/types'
+import type {
+  ExitLetterDocumentFile,
+  ExitStepData,
+  ExitStepKind,
+  ExitStepStatus,
+  ExitType,
+} from '@/lib/types'
 import { CloseExitDialog } from '../CloseExitDialog'
 
 interface ClosedState {
@@ -24,6 +31,16 @@ export interface CockpitStep {
   data: ExitStepData
   notes: string
   canSeeDetail: boolean
+  /** Whether this viewer may fetch the step's uploaded letter (No Dues is
+   *  HR/Admin-only; relieving/experience follow the exit leadership allowlist). */
+  canViewLetterDoc: boolean
+}
+
+/** Extract the storage fileId from a repo path like
+ *  data/exit-letter-docs/<emp>/<template>/<fileId>.<ext>. */
+function fileIdOf(storageRef: string): string {
+  const base = storageRef.split('/').pop() ?? ''
+  return base.replace(/\.[^.]+$/, '')
 }
 
 interface HandoverEmail {
@@ -282,6 +299,67 @@ export function ExitCockpit({
     }
   }
 
+  async function uploadLetter(step: CockpitStep, file: File) {
+    setSaveState(step.templateId, 'saving')
+    try {
+      const fd = new FormData()
+      fd.append('file', file)
+      const res = await fetch(`/api/admin/exits/${employeeId}/steps/${step.templateId}/letter`, {
+        method: 'POST',
+        body: fd,
+      })
+      const body = (await res.json().catch(() => ({}))) as { message?: string; document?: ExitLetterDocumentFile }
+      if (!res.ok || !body.document) throw new Error(body.message ?? 'Upload failed.')
+      const doc = body.document
+      // A present letter satisfies the step (server marks it Completed too).
+      setSteps((list) =>
+        list.map((s) =>
+          s.templateId === step.templateId
+            ? { ...s, status: 'Completed', data: { ...s.data, letterDocument: doc } }
+            : s,
+        ),
+      )
+      setSaveState(step.templateId, 'saved')
+      router.refresh()
+      window.setTimeout(() => setSaveState(step.templateId, 'idle'), 2500)
+    } catch (err) {
+      setSaveState(step.templateId, 'error', err instanceof Error ? err.message : 'Upload failed.')
+    }
+  }
+
+  async function removeLetter(step: CockpitStep) {
+    const doc = step.data.letterDocument
+    if (!doc) return
+    if (!window.confirm('Remove this uploaded letter?')) return
+    setSaveState(step.templateId, 'saving')
+    try {
+      const res = await fetch(
+        `/api/admin/exits/${employeeId}/steps/${step.templateId}/letter/${fileIdOf(doc.storageRef)}`,
+        { method: 'DELETE' },
+      )
+      if (!res.ok) {
+        const body = (await res.json().catch(() => ({}))) as { message?: string }
+        throw new Error(body.message ?? 'Remove failed.')
+      }
+      // Mirror the server: revert completion only when no other letter signal
+      // (a generated letter, or a recorded signed copy) survives the removal.
+      setSteps((list) =>
+        list.map((s) => {
+          if (s.templateId !== step.templateId) return s
+          const hasOtherSignal = Boolean(s.data.letterIssuedAt) || Boolean(s.data.signed)
+          const nextStatus: ExitStepStatus =
+            s.status === 'Completed' && !hasOtherSignal ? 'Not Started' : s.status
+          return { ...s, status: nextStatus, data: { ...s.data, letterDocument: null } }
+        }),
+      )
+      setSaveState(step.templateId, 'saved')
+      router.refresh()
+      window.setTimeout(() => setSaveState(step.templateId, 'idle'), 2500)
+    } catch (err) {
+      setSaveState(step.templateId, 'error', err instanceof Error ? err.message : 'Remove failed.')
+    }
+  }
+
   async function addCustomStep() {
     const name = newStepName.trim()
     if (!name) return
@@ -406,6 +484,7 @@ export function ExitCockpit({
               index={idx + 1}
               step={step}
               canEdit={canEdit}
+              employeeId={employeeId}
               save={save[step.templateId] ?? { state: 'idle' }}
               handover={handover}
               exitMeta={exitMeta}
@@ -413,6 +492,8 @@ export function ExitCockpit({
               onNotes={(notes) => patchStep(step.templateId, { notes })}
               onData={(data, status) => patchStep(step.templateId, { data, status })}
               onGenerate={(extra, markComplete) => generateLetter(step, extra, markComplete)}
+              onUploadLetter={(file) => uploadLetter(step, file)}
+              onRemoveLetter={() => removeLetter(step)}
               onRemove={() => removeCustomStep(step.templateId)}
             />
           </li>
@@ -476,6 +557,7 @@ function StepCard({
   index,
   step,
   canEdit,
+  employeeId,
   save,
   handover,
   exitMeta,
@@ -483,11 +565,14 @@ function StepCard({
   onNotes,
   onData,
   onGenerate,
+  onUploadLetter,
+  onRemoveLetter,
   onRemove,
 }: {
   index: number
   step: CockpitStep
   canEdit: boolean
+  employeeId: string
   save: { state: SaveState; msg?: string }
   handover: HandoverEmail
   exitMeta: ExitMeta
@@ -495,6 +580,8 @@ function StepCard({
   onNotes: (notes: string) => void
   onData: (data: Partial<ExitStepData>, status?: ExitStepStatus) => void
   onGenerate: (extra: Record<string, string>, markComplete: boolean) => void
+  onUploadLetter: (file: File) => Promise<void>
+  onRemoveLetter: () => Promise<void>
   onRemove: () => void
 }) {
   const done = step.status === 'Completed' || step.status === 'N/A'
@@ -534,10 +621,13 @@ function StepCard({
           <StepBody
             step={step}
             canEdit={canEdit}
+            employeeId={employeeId}
             handover={handover}
             exitMeta={exitMeta}
             onData={onData}
             onGenerate={onGenerate}
+            onUploadLetter={onUploadLetter}
+            onRemoveLetter={onRemoveLetter}
           />
 
           {canEdit && (
@@ -597,17 +687,23 @@ function StepCard({
 function StepBody({
   step,
   canEdit,
+  employeeId,
   handover,
   exitMeta,
   onData,
   onGenerate,
+  onUploadLetter,
+  onRemoveLetter,
 }: {
   step: CockpitStep
   canEdit: boolean
+  employeeId: string
   handover: HandoverEmail
   exitMeta: ExitMeta
   onData: (data: Partial<ExitStepData>, status?: ExitStepStatus) => void
   onGenerate: (extra: Record<string, string>, markComplete: boolean) => void
+  onUploadLetter: (file: File) => Promise<void>
+  onRemoveLetter: () => Promise<void>
 }) {
   switch (step.kind) {
     case 'initiate':
@@ -620,12 +716,31 @@ function StepBody({
     case 'handover':
       return <HandoverBody step={step} canEdit={canEdit} handover={handover} onData={onData} />
     case 'letter:NO-DUES-v1':
-      return <NoDuesBody step={step} canEdit={canEdit} onData={onData} onGenerate={onGenerate} />
+      return (
+        <NoDuesBody
+          step={step}
+          canEdit={canEdit}
+          employeeId={employeeId}
+          onData={onData}
+          onGenerate={onGenerate}
+          onUploadLetter={onUploadLetter}
+          onRemoveLetter={onRemoveLetter}
+        />
+      )
     case 'ff':
       return <FFBody step={step} canEdit={canEdit} onData={onData} />
     case 'letter:RELIEVING-v1':
     case 'letter:EXPERIENCE-v1':
-      return <LetterBody step={step} canEdit={canEdit} onGenerate={onGenerate} />
+      return (
+        <LetterBody
+          step={step}
+          canEdit={canEdit}
+          employeeId={employeeId}
+          onGenerate={onGenerate}
+          onUploadLetter={onUploadLetter}
+          onRemoveLetter={onRemoveLetter}
+        />
+      )
     default:
       return (
         <p className="text-sm text-ink-2">
@@ -760,13 +875,19 @@ function MoneyInput({
 function NoDuesBody({
   step,
   canEdit,
+  employeeId,
   onData,
   onGenerate,
+  onUploadLetter,
+  onRemoveLetter,
 }: {
   step: CockpitStep
   canEdit: boolean
+  employeeId: string
   onData: (data: Partial<ExitStepData>, status?: ExitStepStatus) => void
   onGenerate: (extra: Record<string, string>, markComplete: boolean) => void
+  onUploadLetter: (file: File) => Promise<void>
+  onRemoveLetter: () => Promise<void>
 }) {
   const figures = step.data.settlementFigures ?? null
   const words = step.data.settlementWords ?? (figures ? `${amountToWordsIndian(figures)} only` : '')
@@ -820,32 +941,42 @@ function NoDuesBody({
           placeholder="None, or list outstanding items"
         />
       </div>
-      {canEdit && (
-        <div className="flex flex-wrap items-center gap-2 border-t border-line pt-3">
-          <button
-            type="button"
-            disabled={!canGenerate}
-            onClick={() =>
-              onGenerate(
-                {
-                  settlementAmountFigures: figures ? formatRs(figures, { bare: true }) : '',
-                  // The letter body supplies the trailing "only" ("Indian Rupees {words} only"),
-                  // so strip any trailing "only" the stored/computed words carry to avoid "only only".
-                  settlementAmountWords: words.replace(/\s*only\s*$/i, ''),
-                },
-                false,
-              )
-            }
-            className="inline-flex min-h-[44px] items-center rounded bg-navy px-3 py-2 text-sm font-medium text-white hover:bg-navy-dark disabled:opacity-60"
-          >
-            Generate No Dues (.docx)
-          </button>
-          {!canGenerate && <span className="text-xs text-ink-3">Enter the settlement amount first.</span>}
-          {step.data.letterIssuedAt && (
-            <span className="text-xs text-ink-3">Generated {formatDate(step.data.letterIssuedAt)}</span>
-          )}
-        </div>
-      )}
+      <LetterUploadPanel
+        employeeId={employeeId}
+        step={step}
+        canEdit={canEdit}
+        onUpload={onUploadLetter}
+        onRemove={onRemoveLetter}
+        secondary={
+          canEdit ? (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs text-ink-3">Need a draft to send for signing?</span>
+              <button
+                type="button"
+                disabled={!canGenerate}
+                onClick={() =>
+                  onGenerate(
+                    {
+                      settlementAmountFigures: figures ? formatRs(figures, { bare: true }) : '',
+                      // The letter body supplies the trailing "only" ("Indian Rupees {words} only"),
+                      // so strip any trailing "only" the stored/computed words carry to avoid "only only".
+                      settlementAmountWords: words.replace(/\s*only\s*$/i, ''),
+                    },
+                    true,
+                  )
+                }
+                className="inline-flex min-h-[44px] items-center rounded border border-line-strong bg-card px-3 py-2 text-sm font-medium text-navy hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal disabled:opacity-60"
+              >
+                Generate a draft (.docx)
+              </button>
+              {!canGenerate && <span className="text-xs text-ink-3">Enter the settlement amount first.</span>}
+              {step.data.letterIssuedAt && (
+                <span className="text-xs text-ink-3">Draft generated {formatDate(step.data.letterIssuedAt)}</span>
+              )}
+            </div>
+          ) : null
+        }
+      />
       {canEdit && (
         <div className="space-y-2 border-t border-line pt-3">
           <button
@@ -937,32 +1068,172 @@ function FFBody({
 function LetterBody({
   step,
   canEdit,
+  employeeId,
   onGenerate,
+  onUploadLetter,
+  onRemoveLetter,
 }: {
   step: CockpitStep
   canEdit: boolean
+  employeeId: string
   onGenerate: (extra: Record<string, string>, markComplete: boolean) => void
+  onUploadLetter: (file: File) => Promise<void>
+  onRemoveLetter: () => Promise<void>
 }) {
   return (
     <div className="space-y-2 text-sm">
-      <p className="text-ink-2">
-        Generates the {step.name.toLowerCase()} as a .docx with the signatory and company details from
-        configuration. Generating marks this step complete.
+      <LetterUploadPanel
+        employeeId={employeeId}
+        step={step}
+        canEdit={canEdit}
+        onUpload={onUploadLetter}
+        onRemove={onRemoveLetter}
+        secondary={
+          canEdit ? (
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs text-ink-3">
+                No signed copy yet? Generate a draft from the {step.name.toLowerCase()} template:
+              </span>
+              <button
+                type="button"
+                onClick={() => onGenerate({}, true)}
+                className="inline-flex min-h-[44px] items-center rounded border border-line-strong bg-card px-3 py-2 text-sm font-medium text-navy hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
+              >
+                Generate a draft (.docx)
+              </button>
+              {step.data.letterIssuedAt && (
+                <span className="text-xs text-ink-3">Draft generated {formatDate(step.data.letterIssuedAt)}</span>
+              )}
+            </div>
+          ) : null
+        }
+      />
+    </div>
+  )
+}
+
+/**
+ * Shared "final letter" panel for the three letter steps. Upload is the primary
+ * action (the signed / offline-finalised copy); the caller passes the secondary
+ * "generate a draft" control via `secondary`. View is shown only to viewers who
+ * may fetch the file (No Dues is HR/Admin-only). Upload/replace/remove are
+ * HR/Admin (canEdit); the serve + write routes enforce the same gates server-side.
+ */
+function LetterUploadPanel({
+  employeeId,
+  step,
+  canEdit,
+  onUpload,
+  onRemove,
+  secondary,
+}: {
+  employeeId: string
+  step: CockpitStep
+  canEdit: boolean
+  onUpload: (file: File) => Promise<void>
+  onRemove: () => Promise<void>
+  secondary?: ReactNode
+}) {
+  const doc = step.data.letterDocument ?? null
+  const [busy, setBusy] = useState(false)
+  const inputId = `letter-upload-${step.templateId}`
+  const viewHref = doc
+    ? `/api/admin/exits/${employeeId}/steps/${step.templateId}/letter/${fileIdOf(doc.storageRef)}`
+    : '#'
+
+  async function handleUpload(file: File) {
+    setBusy(true)
+    try {
+      await onUpload(file)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function handleRemove() {
+    setBusy(true)
+    try {
+      await onRemove()
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div className="rounded border border-line bg-surface p-4">
+      <h4 className="text-xs font-medium uppercase tracking-wider text-ink-3">Final letter</h4>
+      <p className="mt-1 text-xs text-ink-3">
+        Upload the signed or finalised letter (PDF or DOCX, up to 15 MB). This completes the step.
       </p>
-      {canEdit && (
-        <div className="flex flex-wrap items-center gap-2">
-          <button
-            type="button"
-            onClick={() => onGenerate({}, true)}
-            className="inline-flex min-h-[44px] items-center rounded bg-navy px-3 py-2 text-sm font-medium text-white hover:bg-navy-dark"
+
+      {doc && step.canViewLetterDoc ? (
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <a
+            href={viewHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[44px] items-center gap-2 rounded border border-line-strong bg-card px-3 py-2 text-sm font-medium text-navy hover:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal"
           >
-            Generate {step.name} (.docx)
-          </button>
-          {step.data.letterIssuedAt && (
-            <span className="text-xs text-ink-3">Issued {formatDate(step.data.letterIssuedAt)}</span>
+            <FileText className="h-4 w-4" aria-hidden="true" /> View {doc.filename}
+          </a>
+          <span className="text-xs text-ink-3">
+            {(doc.fileSize / 1024).toFixed(0)} KB, uploaded {doc.uploadedAt.slice(0, 10)}
+          </span>
+          {canEdit && (
+            <div className="flex flex-wrap items-center gap-2">
+              <label
+                htmlFor={inputId}
+                className="inline-flex min-h-[44px] cursor-pointer items-center gap-2 rounded border border-line-strong bg-card px-3 py-2 text-sm font-medium text-ink hover:bg-surface focus-within:ring-2 focus-within:ring-teal"
+              >
+                <Upload className="h-4 w-4" aria-hidden="true" /> Replace
+              </label>
+              <button
+                type="button"
+                onClick={handleRemove}
+                disabled={busy}
+                className="inline-flex min-h-[44px] items-center gap-2 rounded px-3 py-2 text-sm font-medium text-danger hover:bg-danger-bg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal disabled:opacity-50"
+              >
+                <Trash2 className="h-4 w-4" aria-hidden="true" /> Remove
+              </button>
+            </div>
           )}
         </div>
+      ) : doc && !step.canViewLetterDoc ? (
+        <p className="mt-3 text-sm text-ink-2">A letter is on file. It is visible to HR and Admin only.</p>
+      ) : canEdit ? (
+        <div className="mt-3">
+          <label htmlFor={inputId} className="block text-sm font-medium text-ink">
+            Upload the final letter
+          </label>
+        </div>
+      ) : (
+        <p className="mt-3 text-sm text-ink-2">No letter uploaded.</p>
       )}
+
+      {canEdit && (
+        <input
+          id={inputId}
+          type="file"
+          accept=".pdf,.docx,.doc"
+          disabled={busy}
+          onChange={(e) => {
+            const f = e.target.files?.[0]
+            if (f) void handleUpload(f)
+            e.target.value = ''
+          }}
+          className={
+            doc
+              ? 'sr-only'
+              : 'mt-2 block w-full rounded border border-line-strong bg-card text-sm text-ink file:mr-3 file:min-h-[44px] file:cursor-pointer file:border-0 file:bg-surface file:px-4 file:py-2 file:text-sm file:font-medium file:text-navy hover:file:bg-line focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal'
+          }
+        />
+      )}
+      {busy && (
+        <p role="status" aria-live="polite" className="mt-2 text-xs text-ink-2">
+          Working...
+        </p>
+      )}
+      {secondary && <div className="mt-3 border-t border-line pt-3">{secondary}</div>}
     </div>
   )
 }

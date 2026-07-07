@@ -924,6 +924,21 @@ export interface ExitStepTemplate {
   description?: string
 }
 
+/** An uploaded final letter for a letter step (the signed / offline-finalised
+ *  copy HR attaches instead of, or alongside, generating a draft). Stored under
+ *  data/exit-letter-docs; served ONLY through the gated per-step route
+ *  (canViewExitLetterDocument), never directly. Inherits the step's visibility:
+ *  the No Dues letter carries settlement figures so it is HR/Admin-only. */
+export interface ExitLetterDocumentFile {
+  uploadedAt: string
+  uploadedBy: string
+  filename: string
+  /** Bytes. */
+  fileSize: number
+  /** Repo-relative storage path under data/exit-letter-docs. */
+  storageRef: string
+}
+
 /** Kind-specific data captured on a step. All keys optional; only those
  *  relevant to the step's kind are populated. Settlement figures and
  *  payment data are financial (HR/Admin-only on the cockpit). */
@@ -946,6 +961,10 @@ export interface ExitStepData {
   // letters (relieving / experience / no-dues generation)
   letterIssuedAt?: string | null
   letterIssuedBy?: string | null
+  /** The uploaded final letter for this letter step (signed / offline copy).
+   *  Managed ONLY by the dedicated letter upload/remove routes, never through
+   *  the generic step PATCH (which would let a client set an arbitrary ref). */
+  letterDocument?: ExitLetterDocumentFile | null
 }
 
 export interface ExitProcessStep {
