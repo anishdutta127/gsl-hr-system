@@ -83,17 +83,17 @@
   },
   {
     "employeeId": "9c9b0042-b87a-53f0-db69-d08d51d67f3d",
-    "conductedAt": "2026-07-07T10:34:58.982Z",
+    "conductedAt": "2026-07-07T10:36:15.845Z",
     "conductedBy": "Hiring@getsetlearn.info",
     "reasonForLeaving": "",
     "wouldRecommend": null,
     "satisfactionWithManager": null,
     "satisfactionWithRole": null,
     "topThingsToChange": "",
-    "freeText": "",
+    "freeText": "Not required",
     "auditLog": [
       {
-        "timestamp": "2026-07-07T10:34:58.982Z",
+        "timestamp": "2026-07-07T10:36:15.845Z",
         "user": "Hiring@getsetlearn.info",
         "action": "exit-interview.create",
         "after": {
