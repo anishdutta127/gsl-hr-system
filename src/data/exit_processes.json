@@ -2106,7 +2106,8 @@
             "filename": "No Dues Letter - GSL.pdf",
             "fileSize": 566637,
             "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
-          }
+          },
+          "settlementWords": ""
         },
         "notes": "",
         "completedAt": "2026-07-07T10:32:49.371Z",
@@ -2149,7 +2150,7 @@
     "completedAt": null,
     "createdAt": "2026-07-07T09:54:11.148Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-07T10:32:49.371Z",
+    "updatedAt": "2026-07-07T10:33:43.136Z",
     "auditLog": [
       {
         "timestamp": "2026-07-07T09:54:11.148Z",
@@ -2199,6 +2200,38 @@
               "fileSize": 566637,
               "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-07T10:33:43.136Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:32:49.371Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-07T10:32:49.371Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter - GSL.pdf",
+              "fileSize": 566637,
+              "storageRef": "data/exit-letter-docs/9c9b0042-b87a-53f0-db69-d08d51d67f3d/exit-no-dues/letter-36be4793-9825-4019-b4ef-5c2533932154.pdf"
+            },
+            "settlementWords": ""
           }
         }
       }
