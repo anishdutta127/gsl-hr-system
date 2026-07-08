@@ -2760,6 +2760,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-07."
+      },
+      {
+        "timestamp": "2026-07-08T13:18:23.249Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-07",
+            "reason": "Suspension",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-08",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-08."
       }
     ],
     "locationType": "remote-field",
@@ -2772,10 +2797,11 @@
     "leaveYearStart": "2026-04-01",
     "updatedAt": "2026-05-09T09:53:39.819Z",
     "exit": {
-      "lastWorkingDay": "2026-03-07",
-      "reason": "Suspension",
+      "lastWorkingDay": "2026-03-08",
+      "reason": "Resignation",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
     }
   },
   {
