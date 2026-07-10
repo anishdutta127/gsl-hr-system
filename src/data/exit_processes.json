@@ -3546,5 +3546,98 @@
         "notes": "Exit initiated for PURUSHOTTHAMA B V."
       }
     ]
+  },
+  {
+    "employeeId": "cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "Resignation",
+    "resignationDate": "2026-06-01",
+    "terminationDate": null,
+    "lastWorkingDay": "2026-06-19",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-07-10T09:40:20.098Z",
+        "completedBy": "Hiring@getsetlearn.info"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-07-10T09:40:20.098Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "updatedAt": "2026-07-10T09:40:20.098Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-10T09:40:20.098Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "after": {
+          "exitType": "Voluntary",
+          "reasonForLeaving": "Resignation",
+          "lastWorkingDay": "2026-06-19"
+        },
+        "notes": "Exit initiated for RAKESH R."
+      }
+    ]
   }
 ]
