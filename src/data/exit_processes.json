@@ -3453,5 +3453,98 @@
         "notes": "Exit initiated for PRIYANKA PUSHKER."
       }
     ]
+  },
+  {
+    "employeeId": "ee6eded2-746a-552d-9fac-5962da4b81b1",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "Resignation",
+    "resignationDate": "2026-06-01",
+    "terminationDate": null,
+    "lastWorkingDay": "2026-06-19",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-07-10T09:39:17.887Z",
+        "completedBy": "Hiring@getsetlearn.info"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-07-10T09:39:17.887Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "updatedAt": "2026-07-10T09:39:17.887Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-10T09:39:17.887Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "after": {
+          "exitType": "Voluntary",
+          "reasonForLeaving": "Resignation",
+          "lastWorkingDay": "2026-06-19"
+        },
+        "notes": "Exit initiated for PURUSHOTTHAMA B V."
+      }
+    ]
   }
 ]
