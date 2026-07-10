@@ -4662,5 +4662,98 @@
         "notes": "Exit initiated for TAMANNA JAISINGHANI."
       }
     ]
+  },
+  {
+    "employeeId": "17cf6d1f-509a-5ce4-399c-450cc7316d49",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "termination",
+    "resignationDate": "2026-06-05",
+    "terminationDate": null,
+    "lastWorkingDay": "2026-06-05",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-07-10T11:42:53.785Z",
+        "completedBy": "Hiring@getsetlearn.info"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-07-10T11:42:53.785Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "updatedAt": "2026-07-10T11:42:53.785Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-10T11:42:53.785Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "after": {
+          "exitType": "Voluntary",
+          "reasonForLeaving": "termination",
+          "lastWorkingDay": "2026-06-05"
+        },
+        "notes": "Exit initiated for TUSHAR TELDHUNE."
+      }
+    ]
   }
 ]
