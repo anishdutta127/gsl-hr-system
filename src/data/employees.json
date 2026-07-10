@@ -2047,6 +2047,32 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.929Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover in progress."
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -2063,7 +2089,7 @@
       "reason": "Resignation",
       "relievingLetterIssued": false,
       "experienceLetterIssued": false,
-      "notes": "Handover in progress."
+      "notes": "Handover complete"
     }
   },
   {
@@ -4321,6 +4347,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.966Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-28",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-28",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
       }
     ],
     "locationType": "remote-field",
@@ -4336,7 +4387,8 @@
       "lastWorkingDay": "2026-05-28",
       "reason": "Termination",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
     }
   },
   {
@@ -5058,6 +5110,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2024-12-03."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.912Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2024-12-03",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2024-12-03",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2024-12-03."
       }
     ],
     "locationType": "remote-field",
@@ -5073,7 +5150,8 @@
       "lastWorkingDay": "2024-12-03",
       "reason": "Resignation",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
     }
   },
   {
@@ -8208,6 +8286,32 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.894Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover completed"
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -8221,10 +8325,10 @@
     "updatedAt": "2026-05-09T09:53:39.819Z",
     "exit": {
       "lastWorkingDay": "2026-06-19",
-      "reason": "Termination",
+      "reason": "Resignation",
       "relievingLetterIssued": false,
       "experienceLetterIssued": false,
-      "notes": "Handover completed"
+      "notes": "Handover complete"
     }
   },
   {
@@ -9080,6 +9184,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.876Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-22",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-05-22",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
       }
     ],
     "locationType": "remote-field",
@@ -9095,7 +9224,8 @@
       "lastWorkingDay": "2026-05-22",
       "reason": "Resignation",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
     }
   },
   {
@@ -10993,6 +11123,32 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.948Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover in progress."
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-19",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
       }
     ],
     "locationType": "remote-field",
@@ -11009,7 +11165,7 @@
       "reason": "Resignation",
       "relievingLetterIssued": false,
       "experienceLetterIssued": false,
-      "notes": "Handover in progress."
+      "notes": "Handover complete"
     }
   },
   {
@@ -11349,6 +11505,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-27."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.839Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-02-27",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-02-27",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover completed"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-27."
       }
     ],
     "locationType": "remote-field",
@@ -11364,7 +11545,8 @@
       "lastWorkingDay": "2026-02-27",
       "reason": "Resignation",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover completed"
     }
   },
   {
@@ -12197,6 +12379,31 @@
           }
         },
         "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+      },
+      {
+        "timestamp": "2026-07-10T09:59:42.858Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Termination",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false
+          }
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-03-31",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover complete"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
       }
     ],
     "locationType": "office",
@@ -12210,9 +12417,10 @@
     "updatedAt": "2026-05-09T09:53:39.819Z",
     "exit": {
       "lastWorkingDay": "2026-03-31",
-      "reason": "Termination",
+      "reason": "Resignation",
       "relievingLetterIssued": false,
-      "experienceLetterIssued": false
+      "experienceLetterIssued": false,
+      "notes": "Handover complete"
     }
   },
   {

@@ -1,221 +1,5 @@
 [
   {
-    "id": "37e6ba36-3c0c-4eb3-9298-3ef20caaca24",
-    "queuedAt": "2026-05-12T16:46:54.235Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "0b525e2f-309d-40dd-95a7-a0cc5a5bf18b",
-      "to": "mohammedziyakashif@gmail.com",
-      "subject": "We received your application for STEM Trainer at GSL",
-      "body": "Hi Mohammed,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODYwNDQxNCwiZXhwaXJlc0F0IjoxNzc4NjA1MzE0LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNDEyNzhmOWUtMzZiNy00NTcxLWFkZDctMTYxNGI3ZmM0ZmY1IiwiYXBwbGljYXRpb25JZCI6IjhiNDUyYmU4LWNhNDItNDVkMi1iNDFjLTIzZjUxYmY1YTFmYSIsIm5vbmNlIjoiZjhmZmJhMWMtY2NhZC00MTBkLWFlMjAtYzgyNWVlMDQxMTgwIn19.m7hYsp04PR1gedQJLTFeBni7UNVTbyTDCa9Xd_A_dOI\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 41278f9e-36b7-4571-add7-1614b7fc4ff5",
-      "createdAt": "2026-05-12T16:46:54.235Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:55.877Z"
-  },
-  {
-    "id": "3cebb232-8733-4b74-83bb-3623038b135d",
-    "queuedAt": "2026-05-12T17:50:38.542Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "e53a9fec-949a-4e86-b2eb-ac4234230a31",
-      "name": "Rahul Namdev",
-      "email": "rahulnamdev5115@gmail.com",
-      "phone": "7024754794",
-      "source": "Application",
-      "notes": "Hi, I’m Rahul Namdev, a Business Development and Operations professional with nearly 10+ years of experience across EdTech, institutional partnerships, and large-scale assessment operations. I’ve worked with organizations like BYJU’S, Unacademy, Sunstone Education, Mercer-Mettle, TCS iON, and Sify Technologies, driving revenue growth, institutional onboarding, stakeholder management, and seamless operational execution at scale.\r\n\r\nMy experience spans business development, strategic partnerships, student acquisition, and end-to-end program management, with a strong understanding of both growth and operations functions. Currently exploring leadership opportunities in Business Development, Operations, and Strategic Partnerships.",
-      "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf",
-      "createdAt": "2026-05-12T17:50:37.403Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T17:50:37.403Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Rahul Namdev",
-            "email": "rahulnamdev5115@gmail.com",
-            "source": "Application",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "resumeFilePath": "data/resumes/applications/2026/05/e53a9fec-949a-4e86-b2eb-ac4234230a31.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.057Z"
-  },
-  {
-    "id": "ac17bc15-5dbb-46a9-af59-8553036a428e",
-    "queuedAt": "2026-05-12T17:50:39.443Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "bface57b-f0ff-45d1-92de-37e1b170ba7e",
-      "candidateId": "e53a9fec-949a-4e86-b2eb-ac4234230a31",
-      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T17:50:37.403Z",
-      "createdAt": "2026-05-12T17:50:37.403Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T17:50:37.403Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "e53a9fec-949a-4e86-b2eb-ac4234230a31",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.058Z"
-  },
-  {
-    "id": "288dafe4-1d98-476c-ac50-66ef39799274",
-    "queuedAt": "2026-05-12T17:50:40.374Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "bd8b8ae2-8776-4add-9b5b-41a2db09b263",
-      "to": "rahulnamdev5115@gmail.com",
-      "subject": "We received your application for Sales Executive at GSL",
-      "body": "Hi Rahul,\n\nThanks for applying for Sales Executive at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODYwODI0MCwiZXhwaXJlc0F0IjoxNzc4NjA5MTQwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiZTUzYTlmZWMtOTQ5YS00ZTg2LWIyZWItYWM0MjM0MjMwYTMxIiwiYXBwbGljYXRpb25JZCI6ImJmYWNlNTdiLWYwZmYtNDVkMS05MmRlLTM3ZTFiMTcwYmE3ZSIsIm5vbmNlIjoiYmZhNzYyYTEtNmI1OS00YzM3LTk1ZDEtMmEwMGEyYzdhZmZkIn19.5_guZmk-6558TduAzN6dF2DxNZI-DJdlbI-a1ZrHr-0\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate e53a9fec-949a-4e86-b2eb-ac4234230a31",
-      "createdAt": "2026-05-12T17:50:40.374Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.085Z"
-  },
-  {
-    "id": "d874c1e0-dede-42d6-99c0-8678479181b5",
-    "queuedAt": "2026-05-12T18:17:36.189Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
-      "name": "John Bijoy",
-      "email": "johbijoy@gmail.com",
-      "phone": "+919004042080",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf",
-      "createdAt": "2026-05-12T18:17:34.863Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T18:17:34.863Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "John Bijoy",
-            "email": "johbijoy@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/9f7506aa-23d2-46f4-a649-df38093fcfd5.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.106Z"
-  },
-  {
-    "id": "3b6001a0-ec0c-4dd8-bc4f-d10e6c907387",
-    "queuedAt": "2026-05-12T18:17:37.168Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "56b59ea4-9f8c-4f0b-ab6f-e2ba06ebc928",
-      "candidateId": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-12T18:17:34.863Z",
-      "createdAt": "2026-05-12T18:17:34.863Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T18:17:34.863Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "9f7506aa-23d2-46f4-a649-df38093fcfd5",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.115Z"
-  },
-  {
-    "id": "58dd63c5-867d-4560-a0ad-807925beec09",
-    "queuedAt": "2026-05-12T18:17:38.163Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "fb91ad3a-a40d-49fb-a5e9-3bd87ad2e10a",
-      "to": "johbijoy@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi John,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODYwOTg1OCwiZXhwaXJlc0F0IjoxNzc4NjEwNzU4LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiOWY3NTA2YWEtMjNkMi00NmY0LWE2NDktZGYzODA5M2ZjZmQ1IiwiYXBwbGljYXRpb25JZCI6IjU2YjU5ZWE0LTlmOGMtNGYwYi1hYjZmLWUyYmEwNmViYzkyOCIsIm5vbmNlIjoiNzc5MDI1M2UtZjBkZS00OWUxLWIyYzEtOWNjOGEwNzY0MTg3In19.OcHsYf_GhEh4jVW9yy1uZ1JllQfQopOoy62P0NYp1TQ\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 9f7506aa-23d2-46f4-a649-df38093fcfd5",
-      "createdAt": "2026-05-12T18:17:38.163Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.115Z"
-  },
-  {
-    "id": "de96a593-d122-48c7-92f3-4eec741f8dee",
-    "queuedAt": "2026-05-12T19:37:37.687Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "ffe75658-fad7-4baa-94ab-32529187e79c",
-      "name": "MOHAMMED AMEENULLA",
-      "email": "ameenimran04@gmail.com",
-      "phone": "9731034310",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf",
-      "createdAt": "2026-05-12T19:37:36.213Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-12T19:37:36.213Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "MOHAMMED AMEENULLA",
-            "email": "ameenimran04@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/ffe75658-fad7-4baa-94ab-32529187e79c.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.136Z"
-  },
-  {
     "id": "458be87e-cdc3-473b-96bb-17526763d91d",
     "queuedAt": "2026-05-12T19:37:38.420Z",
     "queuedBy": "public:careers",
@@ -13631,5 +13415,272 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-08T13:18:23.261Z"
+  },
+  {
+    "id": "764efa50-a44d-40c2-a336-c1b30f01421f",
+    "queuedAt": "2026-07-10T08:48:01.976Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "3655d7b3-8461-53da-06a7-ee160af28158",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-02-27",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-02-27",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover completed"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-02-27."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.854Z"
+  },
+  {
+    "id": "004db3f0-5ce1-47b4-a7da-d469c87c037c",
+    "queuedAt": "2026-07-10T09:29:22.876Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "da0dc0d6-89f4-52a7-a9d7-1c3e246baf2c",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-03-31",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-03-31."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.872Z"
+  },
+  {
+    "id": "cad444df-82a7-4606-9aeb-7c1ea7bc507d",
+    "queuedAt": "2026-07-10T09:32:45.409Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "99cb8890-0271-5487-824a-0b594a5becb1",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-22",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-22",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-22."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.890Z"
+  },
+  {
+    "id": "844acb83-1b4e-48a8-b9a1-cd519897fdbc",
+    "queuedAt": "2026-07-10T09:33:55.813Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "2c251e56-903f-5a06-b8cf-4d0462eaa0e3",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover completed"
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.908Z"
+  },
+  {
+    "id": "6360d6b5-8056-4e86-ace6-d204cbf5e3d3",
+    "queuedAt": "2026-07-10T09:38:00.760Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "070be06a-2682-546e-4412-72edf09d471e",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2024-12-03",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2024-12-03",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2024-12-03."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.926Z"
+  },
+  {
+    "id": "34aaaa21-3e83-46bb-b088-d2f97f217544",
+    "queuedAt": "2026-07-10T09:39:19.177Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "ee6eded2-746a-552d-9fac-5962da4b81b1",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover in progress."
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.944Z"
+  },
+  {
+    "id": "dc6546da-8a15-41b3-a2a0-addb33fcfff0",
+    "queuedAt": "2026-07-10T09:40:21.524Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover in progress."
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-19",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-19."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.962Z"
+  },
+  {
+    "id": "6a716e96-f8cd-4e5c-b674-a9b845f046dd",
+    "queuedAt": "2026-07-10T09:41:41.234Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "5364378a-9f51-57e2-6551-f238fdf39cee",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-28",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false
+        }
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-05-28",
+          "reason": "Termination",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover complete"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-05-28."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-10T09:59:42.980Z"
   }
 ]
