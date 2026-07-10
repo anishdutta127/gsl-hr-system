@@ -4290,5 +4290,98 @@
         "notes": "Exit initiated for SIDDHI GAWADE."
       }
     ]
+  },
+  {
+    "employeeId": "12eb7afa-2221-5758-6ad7-63a6dd9a7d8a",
+    "exitType": "Voluntary",
+    "reasonForLeaving": "resignation",
+    "resignationDate": "2026-01-01",
+    "terminationDate": null,
+    "lastWorkingDay": "2026-01-31",
+    "steps": [
+      {
+        "templateId": "exit-initiated",
+        "name": "Exit initiated",
+        "kind": "initiate",
+        "isMandatory": true,
+        "status": "Completed",
+        "data": {},
+        "notes": "",
+        "completedAt": "2026-07-10T11:36:46.814Z",
+        "completedBy": "Hiring@getsetlearn.info"
+      },
+      {
+        "templateId": "exit-handover",
+        "name": "Handover",
+        "kind": "handover",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-no-dues",
+        "name": "No Dues / Notice Certificate",
+        "kind": "letter:NO-DUES-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-ff-settlement",
+        "name": "Full and final settlement",
+        "kind": "ff",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-relieving",
+        "name": "Relieving letter",
+        "kind": "letter:RELIEVING-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      },
+      {
+        "templateId": "exit-experience",
+        "name": "Experience letter",
+        "kind": "letter:EXPERIENCE-v1",
+        "isMandatory": true,
+        "status": "Not Started",
+        "data": {},
+        "notes": "",
+        "completedAt": null,
+        "completedBy": null
+      }
+    ],
+    "completedAt": null,
+    "createdAt": "2026-07-10T11:36:46.814Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "updatedAt": "2026-07-10T11:36:46.814Z",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-10T11:36:46.814Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "after": {
+          "exitType": "Voluntary",
+          "reasonForLeaving": "resignation",
+          "lastWorkingDay": "2026-01-31"
+        },
+        "notes": "Exit initiated for SNEHA PATIL."
+      }
+    ]
   }
 ]
