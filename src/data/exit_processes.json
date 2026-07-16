@@ -4063,11 +4063,13 @@
         "name": "Full and final settlement",
         "kind": "ff",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "paymentDate": "2026-07-16"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:10:14.196Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-relieving",
@@ -4095,7 +4097,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T08:48:00.826Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:10:08.390Z",
+    "updatedAt": "2026-07-16T12:10:14.196Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T08:48:00.826Z",
@@ -4145,6 +4147,23 @@
               "fileSize": 33419,
               "storageRef": "data/exit-letter-docs/3655d7b3-8461-53da-06a7-ee160af28158/exit-no-dues/letter-8b96755e-64c3-4635-8b85-a551916927c1.docx"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:10:14.196Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-16"
           }
         }
       }
