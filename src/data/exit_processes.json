@@ -2717,7 +2717,7 @@
     "completedAt": "2026-07-16T11:56:40.110Z",
     "createdAt": "2026-07-08T11:37:55.879Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T11:57:44.667Z",
+    "updatedAt": "2026-07-16T11:57:51.526Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:37:55.879Z",
@@ -2995,6 +2995,21 @@
               "storageRef": "data/exit-letter-docs/2a9d38f1-e5e6-58fe-8ef2-e596af55e618/exit-relieving/letter-563cc297-5554-4244-82d3-f65fc8f55a20.pdf"
             }
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T11:57:51.526Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
         }
       }
     ]
