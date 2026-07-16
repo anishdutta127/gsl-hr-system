@@ -3131,11 +3131,13 @@
         "name": "Handover",
         "kind": "handover",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "rmConfirmedAt": "2026-07-16T12:00:51.059Z"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:00:19.613Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-no-dues",
@@ -3185,7 +3187,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:49:15.268Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-08T11:49:15.268Z",
+    "updatedAt": "2026-07-16T12:00:19.613Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:49:15.268Z",
@@ -3197,6 +3199,23 @@
           "lastWorkingDay": "2026-04-17"
         },
         "notes": "Exit initiated for CHETHAN HS."
+      },
+      {
+        "timestamp": "2026-07-16T12:00:19.613Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-16T12:00:51.059Z"
+          }
+        }
       }
     ]
   },
