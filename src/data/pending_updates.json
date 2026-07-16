@@ -74,5 +74,58 @@
       "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting management approval"
     },
     "retryCount": 0
+  },
+  {
+    "id": "52bda95a-e0af-4daa-ae43-b963a0bee829",
+    "queuedAt": "2026-07-16T11:54:03.332Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "e3276f56-d104-44a2-95ff-8143a9f7a57c",
+      "title": "Tele Sales",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<ul><li><p><strong>Key Responsibilities:</strong> Distribution and coordination with retailers; building and maintaining retailer relationships to support sales and distribution objectives</p></li><li><p><strong>Preferred Background:</strong> Candidates with a technical background will be preferred, as the role requires understanding of product specifications while liaising with retail partners</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-16T11:54:03.332Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-16T11:54:03.332Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Tele Sales",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
