@@ -3197,17 +3197,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-16T12:01:43.624Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Chethan H S.pdf",
+            "fileSize": 252493,
+            "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-50c01dbf-6e25-4a7f-88d4-e63cac9f90fe.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:01:43.624Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-16T12:01:43.624Z",
     "createdAt": "2026-07-08T11:49:15.268Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:01:34.662Z",
+    "updatedAt": "2026-07-16T12:01:43.624Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:49:15.268Z",
@@ -3367,6 +3375,29 @@
               "filename": "MTPL Relieving Letter- Chethan H S.pdf",
               "fileSize": 239657,
               "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-relieving/letter-cfea8497-09bb-4193-8b65-ce16f62b0af0.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:01:43.624Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:01:43.624Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Chethan H S.pdf",
+              "fileSize": 252493,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-50c01dbf-6e25-4a7f-88d4-e63cac9f90fe.pdf"
             }
           }
         }
