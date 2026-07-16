@@ -3598,11 +3598,13 @@
         "name": "Handover",
         "kind": "handover",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "rmConfirmedAt": "2026-07-16T12:03:40.830Z"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:03:09.409Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-no-dues",
@@ -3652,7 +3654,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:56:03.525Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-08T11:56:03.525Z",
+    "updatedAt": "2026-07-16T12:03:09.409Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:56:03.525Z",
@@ -3664,6 +3666,23 @@
           "lastWorkingDay": "2026-03-08"
         },
         "notes": "Exit initiated for KUNAL SHARMA."
+      },
+      {
+        "timestamp": "2026-07-16T12:03:09.409Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-16T12:03:40.830Z"
+          }
+        }
       }
     ]
   },
