@@ -51,5 +51,28 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "fdcaf261-ec07-4bc6-9e62-86bcdb46d143",
+    "queuedAt": "2026-07-16T11:53:07.370Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": "Awaiting management approval"
+      },
+      "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting management approval"
+    },
+    "retryCount": 0
   }
 ]
