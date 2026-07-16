@@ -143,5 +143,26 @@
         }
       }
     ]
+  },
+  {
+    "employeeId": "ae8b87ec-59a0-5c98-6426-45c3a9069bf2",
+    "conductedAt": "2026-07-16T12:05:49.459Z",
+    "conductedBy": "Hiring@getsetlearn.info",
+    "reasonForLeaving": "",
+    "wouldRecommend": null,
+    "satisfactionWithManager": null,
+    "satisfactionWithRole": null,
+    "topThingsToChange": "",
+    "freeText": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-16T12:05:49.459Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-interview.create",
+        "after": {
+          "wouldRecommend": null
+        }
+      }
+    ]
   }
 ]
