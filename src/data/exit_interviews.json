@@ -104,7 +104,7 @@
   },
   {
     "employeeId": "2a9d38f1-e5e6-58fe-8ef2-e596af55e618",
-    "conductedAt": "2026-07-16T11:56:47.411Z",
+    "conductedAt": "2026-07-16T11:58:06.242Z",
     "conductedBy": "Hiring@getsetlearn.info",
     "reasonForLeaving": "",
     "wouldRecommend": null,
@@ -114,7 +114,7 @@
     "freeText": "",
     "auditLog": [
       {
-        "timestamp": "2026-07-16T11:56:47.411Z",
+        "timestamp": "2026-07-16T11:58:06.242Z",
         "user": "Hiring@getsetlearn.info",
         "action": "exit-interview.create",
         "after": {
