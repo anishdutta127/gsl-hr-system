@@ -3154,7 +3154,7 @@
             "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-no-dues/letter-2f7a256e-99a9-4dc9-b386-e0a575324253.pdf"
           },
           "signed": true,
-          "signedAt": "2026-07-16T12:01:17.653Z"
+          "signedAt": "2026-07-16T12:02:31.116Z"
         },
         "notes": "",
         "completedAt": "2026-07-16T12:00:41.779Z",
@@ -3215,7 +3215,7 @@
     "completedAt": "2026-07-16T12:01:43.624Z",
     "createdAt": "2026-07-08T11:49:15.268Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:01:59.433Z",
+    "updatedAt": "2026-07-16T12:01:59.567Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:49:15.268Z",
@@ -3434,6 +3434,41 @@
             },
             "signed": true,
             "signedAt": "2026-07-16T12:01:17.653Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:01:59.567Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:01:59.433Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Chethan HS.pdf",
+              "fileSize": 214913,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-no-dues/letter-2f7a256e-99a9-4dc9-b386-e0a575324253.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-16T12:01:17.653Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:01:59.433Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Chethan HS.pdf",
+              "fileSize": 214913,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-no-dues/letter-2f7a256e-99a9-4dc9-b386-e0a575324253.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-16T12:02:31.116Z"
           }
         }
       }
