@@ -3178,11 +3178,19 @@
         "name": "Relieving letter",
         "kind": "letter:RELIEVING-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-16T12:01:34.662Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Relieving Letter- Chethan H S.pdf",
+            "fileSize": 239657,
+            "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-relieving/letter-cfea8497-09bb-4193-8b65-ce16f62b0af0.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:01:34.662Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-experience",
@@ -3199,7 +3207,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:49:15.268Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:01:27.825Z",
+    "updatedAt": "2026-07-16T12:01:34.662Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:49:15.268Z",
@@ -3337,6 +3345,29 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-05-15"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:01:34.662Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:01:34.662Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Chethan H S.pdf",
+              "fileSize": 239657,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-relieving/letter-cfea8497-09bb-4193-8b65-ce16f62b0af0.pdf"
+            }
           }
         }
       }
