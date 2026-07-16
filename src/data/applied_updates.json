@@ -1,122 +1,5 @@
 [
   {
-    "id": "9f33c6a8-89f2-443c-aa87-3c87840a1b78",
-    "queuedAt": "2026-05-13T03:06:23.348Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
-      "name": "Mukund Wamane",
-      "email": "wamanemukund@gmail.com",
-      "phone": "+918459049127",
-      "source": "Application",
-      "notes": "I have good edutech sales experience pl give me opportunity.",
-      "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf",
-      "createdAt": "2026-05-13T03:06:22.036Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T03:06:22.036Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Mukund Wamane",
-            "email": "wamanemukund@gmail.com",
-            "source": "Application",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "resumeFilePath": "data/resumes/applications/2026/05/7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.316Z"
-  },
-  {
-    "id": "058ae0ff-aa18-4138-9a67-1798f04e2925",
-    "queuedAt": "2026-05-13T03:06:24.169Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "b43c69d6-226a-40f1-b834-23bfa69010ff",
-      "candidateId": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
-      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T03:06:22.036Z",
-      "createdAt": "2026-05-13T03:06:22.036Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T03:06:22.036Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.325Z"
-  },
-  {
-    "id": "ec0272d9-95c0-4285-a91c-140d25f15377",
-    "queuedAt": "2026-05-13T03:06:25.109Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "b22d17a6-2a77-4f3e-aa2c-de9155aca94f",
-      "to": "wamanemukund@gmail.com",
-      "subject": "We received your application for Sales Executive at GSL",
-      "body": "Hi Mukund,\n\nThanks for applying for Sales Executive at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODY0MTU4NSwiZXhwaXJlc0F0IjoxNzc4NjQyNDg1LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiN2Q0NzQ3YWItYmYyZi00NmFjLTgyYmMtYzNjZjZmMjRhNjBjIiwiYXBwbGljYXRpb25JZCI6ImI0M2M2OWQ2LTIyNmEtNDBmMS1iODM0LTIzYmZhNjkwMTBmZiIsIm5vbmNlIjoiNWZlNWUzNGUtNDU2ZC00YTJjLWE5N2MtODZjNDBhZTUwM2E3In19.VENQnZdfJaJVbqDWKwtiCpX67aFITodcazIr2uyeBpc\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 7d4747ab-bf2f-46ac-82bc-c3cf6f24a60c",
-      "createdAt": "2026-05-13T03:06:25.109Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.326Z"
-  },
-  {
-    "id": "aa4d997b-c387-4d4d-ae63-9fde0d4b0b68",
-    "queuedAt": "2026-05-13T04:43:58.841Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "9eac0554-2da9-425c-b90e-a8ae17bc0632",
-      "name": "Pintu Biswas",
-      "email": "pintubiswasphysics07@gmail.com",
-      "phone": "+918653315914",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf",
-      "createdAt": "2026-05-13T04:43:57.942Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T04:43:57.942Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Pintu Biswas",
-            "email": "pintubiswasphysics07@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/9eac0554-2da9-425c-b90e-a8ae17bc0632.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.406Z"
-  },
-  {
     "id": "b15cb697-d7ab-4e0b-8f89-a50526ef92f4",
     "queuedAt": "2026-05-13T04:43:59.534Z",
     "queuedBy": "public:careers",
@@ -13756,5 +13639,161 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-10T12:23:55.096Z"
+  },
+  {
+    "id": "b491eb30-bd93-4900-9ced-5b03095801a5",
+    "queuedAt": "2026-07-16T11:52:35.226Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "16a3a68b-3274-4820-b857-a5b9abc06663",
+      "title": "Key Account Executive",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<h3>Key Responsibilities</h3><ul><li><p>Identify and onboard new premium/key accounts within the assigned territory</p></li><li><p>Build and maintain strong relationships with existing key clients to ensure retention and satisfaction</p></li><li><p>Achieve monthly and quarterly sales targets for the premium product/service line</p></li><li><p>Conduct regular client visits, presentations, and product demonstrations</p></li><li><p>Understand client needs and recommend suitable premium offerings</p></li><li><p>Coordinate with internal teams (operations, support, logistics) to ensure smooth order fulfillment and service delivery</p></li><li><p>Track and report sales performance, market trends, and competitor activity</p></li><li><p>Resolve client queries and escalations promptly and professionally</p></li><li><p>Maintain accurate records of accounts, leads, and sales pipeline in CRM tools</p></li><li><p>Support senior sales staff in strategic account planning</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-16T11:52:35.225Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-16T11:52:35.225Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Key Account Executive",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-16T12:53:09.657Z"
+  },
+  {
+    "id": "fdcaf261-ec07-4bc6-9e62-86bcdb46d143",
+    "queuedAt": "2026-07-16T11:53:07.370Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e3263041-a259-48cd-9abf-07ec58b8e1f3",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": "Awaiting management approval"
+      },
+      "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting management approval"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-16T12:53:09.658Z"
+  },
+  {
+    "id": "52bda95a-e0af-4daa-ae43-b963a0bee829",
+    "queuedAt": "2026-07-16T11:54:03.332Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "e3276f56-d104-44a2-95ff-8143a9f7a57c",
+      "title": "Tele Sales",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<ul><li><p><strong>Key Responsibilities:</strong> Distribution and coordination with retailers; building and maintaining retailer relationships to support sales and distribution objectives</p></li><li><p><strong>Preferred Background:</strong> Candidates with a technical background will be preferred, as the role requires understanding of product specifications while liaising with retail partners</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-16T11:54:03.332Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-16T11:54:03.332Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Tele Sales",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-16T12:53:09.659Z"
+  },
+  {
+    "id": "0337b50e-6bdf-49f7-8a98-f047ca9eca94",
+    "queuedAt": "2026-07-16T11:54:17.700Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "operation": "role.resume",
+      "before": {
+        "status": "Paused",
+        "pauseReason": "Awaiting management clearance.",
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Open",
+        "pauseReason": null
+      },
+      "notes": "resume by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-16T12:53:09.660Z"
   }
 ]
