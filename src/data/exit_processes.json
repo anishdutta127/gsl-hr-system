@@ -4095,17 +4095,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-16T12:10:36.945Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "Experience Letter- Lekha Rajeswari.pdf",
+            "fileSize": 219835,
+            "storageRef": "data/exit-letter-docs/3655d7b3-8461-53da-06a7-ee160af28158/exit-experience/letter-33ba11c3-c036-48df-a9ca-ff94bda4a4c6.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-16T12:10:36.945Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-16T12:10:36.945Z",
     "createdAt": "2026-07-10T08:48:00.826Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:10:26.763Z",
+    "updatedAt": "2026-07-16T12:10:36.945Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T08:48:00.826Z",
@@ -4194,6 +4202,29 @@
               "filename": "MTPL Relieving Letter- Lekha Rajeswari.pdf",
               "fileSize": 244590,
               "storageRef": "data/exit-letter-docs/3655d7b3-8461-53da-06a7-ee160af28158/exit-relieving/letter-0142b403-0afd-41ba-9532-dfcf94d37724.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:10:36.945Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:10:36.945Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "Experience Letter- Lekha Rajeswari.pdf",
+              "fileSize": 219835,
+              "storageRef": "data/exit-letter-docs/3655d7b3-8461-53da-06a7-ee160af28158/exit-experience/letter-33ba11c3-c036-48df-a9ca-ff94bda4a4c6.pdf"
             }
           }
         }
