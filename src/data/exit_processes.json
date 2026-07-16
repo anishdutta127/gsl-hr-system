@@ -2691,11 +2691,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-16T11:56:33.630Z",
+            "uploadedAt": "2026-07-16T11:57:44.667Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Relieving Letter- Ashish Rana.pdf",
             "fileSize": 155681,
-            "storageRef": "data/exit-letter-docs/2a9d38f1-e5e6-58fe-8ef2-e596af55e618/exit-relieving/letter-6c61ae3c-7f00-41f2-87bd-6c6bf9b57dbf.pdf"
+            "storageRef": "data/exit-letter-docs/2a9d38f1-e5e6-58fe-8ef2-e596af55e618/exit-relieving/letter-563cc297-5554-4244-82d3-f65fc8f55a20.pdf"
           }
         },
         "notes": "",
@@ -2717,7 +2717,7 @@
     "completedAt": "2026-07-16T11:56:40.110Z",
     "createdAt": "2026-07-08T11:37:55.879Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T11:57:34.829Z",
+    "updatedAt": "2026-07-16T11:57:44.667Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:37:55.879Z",
@@ -2963,6 +2963,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-16"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T11:57:44.667Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T11:56:33.630Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Ashish Rana.pdf",
+              "fileSize": 155681,
+              "storageRef": "data/exit-letter-docs/2a9d38f1-e5e6-58fe-8ef2-e596af55e618/exit-relieving/letter-6c61ae3c-7f00-41f2-87bd-6c6bf9b57dbf.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T11:57:44.667Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Ashish Rana.pdf",
+              "fileSize": 155681,
+              "storageRef": "data/exit-letter-docs/2a9d38f1-e5e6-58fe-8ef2-e596af55e618/exit-relieving/letter-563cc297-5554-4244-82d3-f65fc8f55a20.pdf"
+            }
           }
         }
       }
