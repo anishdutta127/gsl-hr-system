@@ -3648,11 +3648,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-16T12:05:01.143Z",
+            "uploadedAt": "2026-07-16T12:05:34.216Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Relieving Letter- Kunal Sharma.pdf",
             "fileSize": 242448,
-            "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-relieving/letter-cb78cf56-55ca-4efe-9a9c-546e948dd0c3.pdf"
+            "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-relieving/letter-14b2b845-157a-4dfc-b084-8321f6f1bd89.pdf"
           }
         },
         "notes": "",
@@ -3674,7 +3674,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:56:03.525Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:05:26.844Z",
+    "updatedAt": "2026-07-16T12:05:34.216Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:56:03.525Z",
@@ -3940,6 +3940,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-16"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:05:34.216Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:05:01.143Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Kunal Sharma.pdf",
+              "fileSize": 242448,
+              "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-relieving/letter-cb78cf56-55ca-4efe-9a9c-546e948dd0c3.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:05:34.216Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Kunal Sharma.pdf",
+              "fileSize": 242448,
+              "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-relieving/letter-14b2b845-157a-4dfc-b084-8321f6f1bd89.pdf"
+            }
           }
         }
       }
