@@ -3200,11 +3200,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-16T12:01:43.624Z",
+            "uploadedAt": "2026-07-16T12:02:27.183Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Experience Letter- Chethan H S.pdf",
             "fileSize": 252493,
-            "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-50c01dbf-6e25-4a7f-88d4-e63cac9f90fe.pdf"
+            "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-da76c3d4-722c-409d-99c2-f78f135b0c8f.pdf"
           }
         },
         "notes": "",
@@ -3215,7 +3215,7 @@
     "completedAt": "2026-07-16T12:01:43.624Z",
     "createdAt": "2026-07-08T11:49:15.268Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:02:15.644Z",
+    "updatedAt": "2026-07-16T12:02:27.183Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:49:15.268Z",
@@ -3537,6 +3537,37 @@
               "filename": "MTPL Relieving Letter- Chethan H S.pdf",
               "fileSize": 239657,
               "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-relieving/letter-22dbb439-bfa7-4bfb-a7b1-938b6a05cd32.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:02:27.183Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:01:43.624Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Chethan H S.pdf",
+              "fileSize": 252493,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-50c01dbf-6e25-4a7f-88d4-e63cac9f90fe.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:02:27.183Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Chethan H S.pdf",
+              "fileSize": 252493,
+              "storageRef": "data/exit-letter-docs/04e6bc2e-79de-501a-12c9-022958efcc9e/exit-experience/letter-da76c3d4-722c-409d-99c2-f78f135b0c8f.pdf"
             }
           }
         }
