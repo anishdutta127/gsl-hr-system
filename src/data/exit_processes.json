@@ -3600,7 +3600,7 @@
         "isMandatory": true,
         "status": "Completed",
         "data": {
-          "rmConfirmedAt": "2026-07-16T12:03:40.830Z"
+          "rmConfirmedAt": "2026-07-16T12:04:56.448Z"
         },
         "notes": "",
         "completedAt": "2026-07-16T12:03:09.409Z",
@@ -3664,7 +3664,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:56:03.525Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:04:18.229Z",
+    "updatedAt": "2026-07-16T12:04:24.881Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:56:03.525Z",
@@ -3747,6 +3747,25 @@
             },
             "signed": true,
             "signedAt": "2026-07-16T12:04:49.552Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:04:24.881Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-16T12:03:40.830Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-16T12:04:56.448Z"
           }
         }
       }
