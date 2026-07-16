@@ -3614,11 +3614,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-16T12:04:17.118Z",
+            "uploadedAt": "2026-07-16T12:04:33.665Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "No Dues Letter- Kunal Sharma.docx",
             "fileSize": 41884,
-            "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-no-dues/letter-89c2ff51-3a4b-4d7a-adac-6130f728a107.docx"
+            "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-no-dues/letter-4912c85c-3e86-4ba6-ae97-8705cb2dcd97.docx"
           },
           "signed": true,
           "signedAt": "2026-07-16T12:04:49.552Z"
@@ -3664,7 +3664,7 @@
     "completedAt": null,
     "createdAt": "2026-07-08T11:56:03.525Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-16T12:04:24.881Z",
+    "updatedAt": "2026-07-16T12:04:33.665Z",
     "auditLog": [
       {
         "timestamp": "2026-07-08T11:56:03.525Z",
@@ -3766,6 +3766,41 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-16T12:04:56.448Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-16T12:04:33.665Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:04:17.118Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Kunal Sharma.docx",
+              "fileSize": 41884,
+              "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-no-dues/letter-89c2ff51-3a4b-4d7a-adac-6130f728a107.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-16T12:04:49.552Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-16T12:04:33.665Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Kunal Sharma.docx",
+              "fileSize": 41884,
+              "storageRef": "data/exit-letter-docs/ae8b87ec-59a0-5c98-6426-45c3a9069bf2/exit-no-dues/letter-4912c85c-3e86-4ba6-ae97-8705cb2dcd97.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-16T12:04:49.552Z"
           }
         }
       }
