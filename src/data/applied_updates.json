@@ -1,35 +1,5 @@
 [
   {
-    "id": "b15cb697-d7ab-4e0b-8f89-a50526ef92f4",
-    "queuedAt": "2026-05-13T04:43:59.534Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "59540083-ffcf-4819-9433-c60a47d226bf",
-      "candidateId": "9eac0554-2da9-425c-b90e-a8ae17bc0632",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T04:43:57.942Z",
-      "createdAt": "2026-05-13T04:43:57.942Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T04:43:57.942Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "9eac0554-2da9-425c-b90e-a8ae17bc0632",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.416Z"
-  },
-  {
     "id": "4c8f1c22-dccf-4b16-a61f-5beb65f94a76",
     "queuedAt": "2026-05-13T04:44:00.257Z",
     "queuedBy": "system",
@@ -13795,5 +13765,33 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-16T12:53:09.660Z"
+  },
+  {
+    "id": "69b2afce-9417-44c9-8eed-dac32ae11a27",
+    "queuedAt": "2026-07-17T12:07:32.918Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "employee",
+    "operation": "update",
+    "payload": {
+      "id": "fa299aa3-ef4e-34ec-97e1-c66d86ff0e05",
+      "operation": "exit.initiate",
+      "before": {
+        "status": "Active",
+        "exit": null
+      },
+      "after": {
+        "status": "Exited",
+        "exit": {
+          "lastWorkingDay": "2026-06-09",
+          "reason": "Resignation",
+          "relievingLetterIssued": false,
+          "experienceLetterIssued": false,
+          "notes": "Handover pending"
+        }
+      },
+      "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-09."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-17T12:16:43.124Z"
   }
 ]

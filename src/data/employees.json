@@ -15852,7 +15852,7 @@
     "leaveYearStart": "2026-04-01",
     "officialEmailMissing": false,
     "tenureYears": null,
-    "status": "Active",
+    "status": "Exited",
     "onboardingChecklist": [
       {
         "id": "ob-a4d06ca9",
@@ -15919,8 +15919,35 @@
           "dateOfJoining": "2026-05-25"
         },
         "notes": "Bulk import (create-or-reactivate reconcile service)."
+      },
+      {
+        "timestamp": "2026-07-17T12:16:43.112Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.initiate",
+        "before": {
+          "status": "Active",
+          "exit": null
+        },
+        "after": {
+          "status": "Exited",
+          "exit": {
+            "lastWorkingDay": "2026-06-09",
+            "reason": "Resignation",
+            "relievingLetterIssued": false,
+            "experienceLetterIssued": false,
+            "notes": "Handover pending"
+          }
+        },
+        "notes": "Exit initiated by Hiring@getsetlearn.info, LWD 2026-06-09."
       }
-    ]
+    ],
+    "exit": {
+      "lastWorkingDay": "2026-06-09",
+      "reason": "Resignation",
+      "relievingLetterIssued": false,
+      "experienceLetterIssued": false,
+      "notes": "Handover pending"
+    }
   },
   {
     "id": "c3958f57-1604-f337-cef6-db9b03ef2a93",
