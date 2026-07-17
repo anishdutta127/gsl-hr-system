@@ -4540,11 +4540,19 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T08:02:38.242Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "Payal.pdf",
+            "fileSize": 331229,
+            "storageRef": "data/exit-letter-docs/99cb8890-0271-5487-824a-0b594a5becb1/exit-no-dues/letter-3f20a005-aec8-43c8-a975-095107adb4ff.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T08:02:38.242Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -4583,7 +4591,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T09:32:44.310Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T08:02:28.192Z",
+    "updatedAt": "2026-07-17T08:02:38.242Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:32:44.310Z",
@@ -4610,6 +4618,29 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T08:02:59.473Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T08:02:38.242Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T08:02:38.242Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "Payal.pdf",
+              "fileSize": 331229,
+              "storageRef": "data/exit-letter-docs/99cb8890-0271-5487-824a-0b594a5becb1/exit-no-dues/letter-3f20a005-aec8-43c8-a975-095107adb4ff.pdf"
+            }
           }
         }
       }
