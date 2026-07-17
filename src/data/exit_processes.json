@@ -8248,7 +8248,7 @@
     "completedAt": "2026-07-17T11:33:38.944Z",
     "createdAt": "2026-07-10T11:36:46.814Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:59:52.542Z",
+    "updatedAt": "2026-07-17T11:59:56.859Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:36:46.814Z",
@@ -8440,6 +8440,25 @@
             },
             "signed": true,
             "signedAt": "2026-07-17T11:33:38.130Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:59:56.859Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-17"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-17"
           }
         }
       }
