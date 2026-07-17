@@ -5592,17 +5592,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T10:11:10.960Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Rakesh R.pdf",
+            "fileSize": 248840,
+            "storageRef": "data/exit-letter-docs/cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b/exit-experience/letter-7fc73eda-b06a-4a57-9b9b-3368571cff68.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T10:11:10.960Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T10:11:10.960Z",
     "createdAt": "2026-07-10T09:40:20.098Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:11:00.500Z",
+    "updatedAt": "2026-07-17T10:11:10.960Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:40:20.098Z",
@@ -5724,6 +5732,29 @@
               "filename": "MTPL Relieving Letter- Rakesh R.pdf",
               "fileSize": 238763,
               "storageRef": "data/exit-letter-docs/cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b/exit-relieving/letter-91528f39-97f3-412e-aa49-3b23fae7b1a1.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:11:10.960Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:11:10.960Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Rakesh R.pdf",
+              "fileSize": 248840,
+              "storageRef": "data/exit-letter-docs/cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b/exit-experience/letter-7fc73eda-b06a-4a57-9b9b-3368571cff68.pdf"
             }
           }
         }
