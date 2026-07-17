@@ -5835,11 +5835,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T10:35:09.933Z",
+            "uploadedAt": "2026-07-17T10:35:55.041Z",
             "uploadedBy": "Hiring@getsetlearn.info",
-            "filename": "MTPL Relieving Letter- Sangeetha Nanna.pdf",
-            "fileSize": 413535,
-            "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-relieving/letter-872bbc3b-652d-4ac8-8581-f3a80e7caac5.pdf"
+            "filename": "MTPL Experience Letter- Sangeetha Nanna.pdf",
+            "fileSize": 427451,
+            "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-relieving/letter-330c68f5-3b93-4eea-b716-08bd13bd6759.pdf"
           }
         },
         "notes": "",
@@ -5869,7 +5869,7 @@
     "completedAt": "2026-07-17T10:35:20.928Z",
     "createdAt": "2026-07-10T09:41:40.233Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:35:45.161Z",
+    "updatedAt": "2026-07-17T10:35:55.041Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:41:40.233Z",
@@ -6104,6 +6104,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-17"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:35:55.041Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:35:09.933Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Sangeetha Nanna.pdf",
+              "fileSize": 413535,
+              "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-relieving/letter-872bbc3b-652d-4ac8-8581-f3a80e7caac5.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:35:55.041Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Sangeetha Nanna.pdf",
+              "fileSize": 427451,
+              "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-relieving/letter-330c68f5-3b93-4eea-b716-08bd13bd6759.pdf"
+            }
           }
         }
       }
