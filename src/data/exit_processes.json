@@ -7249,7 +7249,7 @@
     "completedAt": "2026-07-17T11:16:15.633Z",
     "createdAt": "2026-07-10T11:33:10.854Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:22:12.050Z",
+    "updatedAt": "2026-07-17T11:22:16.665Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:33:10.854Z",
@@ -7457,6 +7457,37 @@
           "status": "Completed",
           "notes": "",
           "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:22:16.665Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:16:15.633Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "Experience Letter- Shruti Rawul.pdf",
+              "fileSize": 219802,
+              "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-experience/letter-73e09552-c430-4dd9-8cce-f0e11320be47.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:16:15.633Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "Experience Letter- Shruti Rawul.pdf",
+              "fileSize": 219802,
+              "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-experience/letter-73e09552-c430-4dd9-8cce-f0e11320be47.pdf"
+            }
+          }
         }
       }
     ]
