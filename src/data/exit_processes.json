@@ -6498,11 +6498,19 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T10:42:48.243Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "No Dues Letter- Sarika Chandratre.pdf",
+            "fileSize": 505988,
+            "storageRef": "data/exit-letter-docs/0da7f95f-a76a-51ef-ea98-af7f4c5edcdf/exit-no-dues/letter-f078864e-4956-4331-bc50-a90a564d1b32.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T10:42:48.243Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -6541,7 +6549,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T11:29:33.434Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:42:35.549Z",
+    "updatedAt": "2026-07-17T10:42:48.243Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:29:33.434Z",
@@ -6568,6 +6576,29 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T10:43:06.786Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:42:48.243Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:42:48.243Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Sarika Chandratre.pdf",
+              "fileSize": 505988,
+              "storageRef": "data/exit-letter-docs/0da7f95f-a76a-51ef-ea98-af7f4c5edcdf/exit-no-dues/letter-f078864e-4956-4331-bc50-a90a564d1b32.pdf"
+            }
           }
         }
       }
