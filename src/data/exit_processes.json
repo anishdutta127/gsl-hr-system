@@ -8222,11 +8222,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T11:33:30.880Z",
+            "uploadedAt": "2026-07-17T12:00:04.747Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Relieving Letter- Sneha Patil.pdf",
             "fileSize": 157528,
-            "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-relieving/letter-f7184f8e-8026-44db-9375-4b4f7545942f.pdf"
+            "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-relieving/letter-e0555ee5-72ad-4755-9f1f-9cc01bbf80ab.pdf"
           }
         },
         "notes": "",
@@ -8248,7 +8248,7 @@
     "completedAt": "2026-07-17T11:33:38.944Z",
     "createdAt": "2026-07-10T11:36:46.814Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:59:56.859Z",
+    "updatedAt": "2026-07-17T12:00:04.747Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:36:46.814Z",
@@ -8459,6 +8459,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-17"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:00:04.747Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:33:30.880Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Sneha Patil.pdf",
+              "fileSize": 157528,
+              "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-relieving/letter-f7184f8e-8026-44db-9375-4b4f7545942f.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:00:04.747Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Sneha Patil.pdf",
+              "fileSize": 157528,
+              "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-relieving/letter-e0555ee5-72ad-4755-9f1f-9cc01bbf80ab.pdf"
+            }
           }
         }
       }
