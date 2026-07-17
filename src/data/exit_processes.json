@@ -6794,11 +6794,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T10:47:10.138Z",
+            "uploadedAt": "2026-07-17T11:13:30.927Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Relieving Letter- Shiva Eppa.pdf",
             "fileSize": 253598,
-            "storageRef": "data/exit-letter-docs/85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975/exit-relieving/letter-4a1ef6f1-b877-4953-91eb-b05247b55712.pdf"
+            "storageRef": "data/exit-letter-docs/85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975/exit-relieving/letter-66591d97-7033-4b52-9593-e43d2a74f468.pdf"
           }
         },
         "notes": "",
@@ -6828,7 +6828,7 @@
     "completedAt": "2026-07-17T10:47:19.436Z",
     "createdAt": "2026-07-10T11:32:23.522Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:13:21.992Z",
+    "updatedAt": "2026-07-17T11:13:30.927Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:32:23.522Z",
@@ -7082,6 +7082,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-17"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:13:30.927Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:47:10.138Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Shiva Eppa.pdf",
+              "fileSize": 253598,
+              "storageRef": "data/exit-letter-docs/85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975/exit-relieving/letter-4a1ef6f1-b877-4953-91eb-b05247b55712.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:13:30.927Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Shiva Eppa.pdf",
+              "fileSize": 253598,
+              "storageRef": "data/exit-letter-docs/85e9aadd-6b3e-5e7a-6fa1-4be3fba8f975/exit-relieving/letter-66591d97-7033-4b52-9593-e43d2a74f468.pdf"
+            }
           }
         }
       }
