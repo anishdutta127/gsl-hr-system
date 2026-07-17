@@ -4807,7 +4807,9 @@
             "filename": "No Dues Letter- Pooja Som.pdf",
             "fileSize": 358113,
             "storageRef": "data/exit-letter-docs/2c251e56-903f-5a06-b8cf-4d0462eaa0e3/exit-no-dues/letter-58fef6e7-8243-4413-8e1b-9c64482111e0.pdf"
-          }
+          },
+          "signed": true,
+          "signedAt": "2026-07-17T09:51:48.573Z"
         },
         "notes": "",
         "completedAt": "2026-07-17T09:51:11.298Z",
@@ -4850,7 +4852,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T09:33:46.000Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T09:51:11.298Z",
+    "updatedAt": "2026-07-17T09:51:17.258Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:33:46.000Z",
@@ -4900,6 +4902,39 @@
               "fileSize": 358113,
               "storageRef": "data/exit-letter-docs/2c251e56-903f-5a06-b8cf-4d0462eaa0e3/exit-no-dues/letter-58fef6e7-8243-4413-8e1b-9c64482111e0.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T09:51:17.258Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T09:51:11.298Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Pooja Som.pdf",
+              "fileSize": 358113,
+              "storageRef": "data/exit-letter-docs/2c251e56-903f-5a06-b8cf-4d0462eaa0e3/exit-no-dues/letter-58fef6e7-8243-4413-8e1b-9c64482111e0.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T09:51:11.298Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Pooja Som.pdf",
+              "fileSize": 358113,
+              "storageRef": "data/exit-letter-docs/2c251e56-903f-5a06-b8cf-4d0462eaa0e3/exit-no-dues/letter-58fef6e7-8243-4413-8e1b-9c64482111e0.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T09:51:48.573Z"
           }
         }
       }
