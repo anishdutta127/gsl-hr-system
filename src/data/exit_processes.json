@@ -8677,11 +8677,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T12:05:43.618Z",
+            "uploadedAt": "2026-07-17T12:13:21.846Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Relieving Letter- Suresh Mahurkar.pdf",
             "fileSize": 239937,
-            "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-relieving/letter-df4be4c2-5c03-4a78-b2f1-18b1514af517.pdf"
+            "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-relieving/letter-00ccf4e2-abf3-4dea-b0f0-90d0cfff78ee.pdf"
           }
         },
         "notes": "",
@@ -8711,7 +8711,7 @@
     "completedAt": "2026-07-17T12:05:54.561Z",
     "createdAt": "2026-07-10T11:39:30.313Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:13:12.603Z",
+    "updatedAt": "2026-07-17T12:13:21.846Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:39:30.313Z",
@@ -8965,6 +8965,37 @@
           "notes": "",
           "data": {
             "paymentDate": "2026-07-17"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:13:21.846Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:05:43.618Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Suresh Mahurkar.pdf",
+              "fileSize": 239937,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-relieving/letter-df4be4c2-5c03-4a78-b2f1-18b1514af517.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:13:21.846Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Relieving Letter- Suresh Mahurkar.pdf",
+              "fileSize": 239937,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-relieving/letter-00ccf4e2-abf3-4dea-b0f0-90d0cfff78ee.pdf"
+            }
           }
         }
       }
