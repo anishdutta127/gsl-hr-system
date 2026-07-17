@@ -8643,11 +8643,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T12:05:24.776Z",
+            "uploadedAt": "2026-07-17T12:13:03.251Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "GSL FNF form- pdf.pdf",
             "fileSize": 329949,
-            "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
+            "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-4c7ec287-bd5a-4afa-9378-09708e7cb30b.pdf"
           },
           "signed": true,
           "signedAt": "2026-07-17T12:05:59.551Z"
@@ -8711,7 +8711,7 @@
     "completedAt": "2026-07-17T12:05:54.561Z",
     "createdAt": "2026-07-10T11:39:30.313Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:12:54.910Z",
+    "updatedAt": "2026-07-17T12:13:03.251Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:39:30.313Z",
@@ -8876,6 +8876,41 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T12:13:26.235Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:13:03.251Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:05:24.776Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "GSL FNF form- pdf.pdf",
+              "fileSize": 329949,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T12:05:59.551Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:13:03.251Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "GSL FNF form- pdf.pdf",
+              "fileSize": 329949,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-4c7ec287-bd5a-4afa-9378-09708e7cb30b.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T12:05:59.551Z"
           }
         }
       }
