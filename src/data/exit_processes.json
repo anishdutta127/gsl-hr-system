@@ -5801,11 +5801,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T10:34:50.335Z",
+            "uploadedAt": "2026-07-17T10:35:36.040Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "No Dues Letter- Sangeetha Nanna.docx.pdf",
             "fileSize": 72106,
-            "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-no-dues/letter-cd6959c2-fed0-49fe-b423-4be4398a6309.pdf"
+            "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-no-dues/letter-c37bca08-7548-4e36-9a28-49a1fc98b06e.pdf"
           },
           "signed": true,
           "signedAt": "2026-07-17T10:35:26.289Z"
@@ -5869,7 +5869,7 @@
     "completedAt": "2026-07-17T10:35:20.928Z",
     "createdAt": "2026-07-10T09:41:40.233Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:35:20.928Z",
+    "updatedAt": "2026-07-17T10:35:36.040Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:41:40.233Z",
@@ -6015,6 +6015,41 @@
               "fileSize": 413535,
               "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-experience/letter-73129f41-124b-4081-9502-61909475a29c.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:35:36.040Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:34:50.335Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Sangeetha Nanna.docx.pdf",
+              "fileSize": 72106,
+              "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-no-dues/letter-cd6959c2-fed0-49fe-b423-4be4398a6309.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T10:35:26.289Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:35:36.040Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Sangeetha Nanna.docx.pdf",
+              "fileSize": 72106,
+              "storageRef": "data/exit-letter-docs/5364378a-9f51-57e2-6551-f238fdf39cee/exit-no-dues/letter-c37bca08-7548-4e36-9a28-49a1fc98b06e.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T10:35:26.289Z"
           }
         }
       }
