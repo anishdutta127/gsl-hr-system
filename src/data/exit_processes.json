@@ -5072,11 +5072,13 @@
         "name": "Full and final settlement",
         "kind": "ff",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "paymentDate": "2026-07-17"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T09:52:34.373Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-relieving",
@@ -5104,7 +5106,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T09:37:59.443Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T09:52:31.797Z",
+    "updatedAt": "2026-07-17T09:52:34.373Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:37:59.443Z",
@@ -5189,6 +5191,23 @@
           "data": {
             "signed": true,
             "signedAt": "2026-07-17T09:53:02.240Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T09:52:34.373Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.ff-settlement.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "paymentDate": "2026-07-17"
           }
         }
       }
