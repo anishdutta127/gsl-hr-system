@@ -7196,7 +7196,7 @@
             "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-no-dues/letter-7c975046-4568-4644-8c00-0c0192c9457f.docx"
           },
           "signed": true,
-          "signedAt": "2026-07-17T11:16:24.027Z"
+          "signedAt": "2026-07-17T11:22:33.813Z"
         },
         "notes": "",
         "completedAt": "2026-07-17T11:15:46.961Z",
@@ -7249,7 +7249,7 @@
     "completedAt": "2026-07-17T11:16:15.633Z",
     "createdAt": "2026-07-10T11:33:10.854Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:16:15.633Z",
+    "updatedAt": "2026-07-17T11:22:02.447Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:33:10.854Z",
@@ -7387,6 +7387,41 @@
               "fileSize": 219802,
               "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-experience/letter-73e09552-c430-4dd9-8cce-f0e11320be47.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:22:02.447Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:15:46.961Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Shruti Rawul.docx",
+              "fileSize": 19385,
+              "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-no-dues/letter-7c975046-4568-4644-8c00-0c0192c9457f.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:16:24.027Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:15:46.961Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Shruti Rawul.docx",
+              "fileSize": 19385,
+              "storageRef": "data/exit-letter-docs/fb4400da-d6ec-5c2d-9ae1-fb867cd61606/exit-no-dues/letter-7c975046-4568-4644-8c00-0c0192c9457f.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:22:33.813Z"
           }
         }
       }
