@@ -6551,17 +6551,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T10:43:18.589Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Sarika Chandratre.pdf",
+            "fileSize": 246303,
+            "storageRef": "data/exit-letter-docs/0da7f95f-a76a-51ef-ea98-af7f4c5edcdf/exit-experience/letter-5b66c4d0-a6dd-4a6e-9122-8c9ee5398f57.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T10:43:18.589Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T10:43:18.589Z",
     "createdAt": "2026-07-10T11:29:33.434Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:43:07.297Z",
+    "updatedAt": "2026-07-17T10:43:18.589Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:29:33.434Z",
@@ -6683,6 +6691,29 @@
               "filename": "MTPL Relieving Letter- Sarika Chandratre.pdf",
               "fileSize": 241064,
               "storageRef": "data/exit-letter-docs/0da7f95f-a76a-51ef-ea98-af7f4c5edcdf/exit-relieving/letter-3836b1fa-54cf-4f93-b135-d9fe45c115ff.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:43:18.589Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:43:18.589Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Sarika Chandratre.pdf",
+              "fileSize": 246303,
+              "storageRef": "data/exit-letter-docs/0da7f95f-a76a-51ef-ea98-af7f4c5edcdf/exit-experience/letter-5b66c4d0-a6dd-4a6e-9122-8c9ee5398f57.pdf"
             }
           }
         }
