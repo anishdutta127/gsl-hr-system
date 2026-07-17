@@ -8172,11 +8172,13 @@
         "name": "Handover",
         "kind": "handover",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "rmConfirmedAt": "2026-07-17T11:33:25.055Z"
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T11:32:53.845Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-no-dues",
@@ -8226,7 +8228,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T11:36:46.814Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-10T11:36:46.814Z",
+    "updatedAt": "2026-07-17T11:32:53.845Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:36:46.814Z",
@@ -8238,6 +8240,23 @@
           "lastWorkingDay": "2026-01-31"
         },
         "notes": "Exit initiated for SNEHA PATIL."
+      },
+      {
+        "timestamp": "2026-07-17T11:32:53.845Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-17T11:33:25.055Z"
+          }
+        }
       }
     ]
   },
