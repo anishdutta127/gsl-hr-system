@@ -7688,11 +7688,19 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T11:21:08.518Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "No Dues Letter- Siddhi Gawade (Signed copy).pdf",
+            "fileSize": 372943,
+            "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-no-dues/letter-e3de64f9-6f59-4ef0-b482-4c5ffe3a6fa1.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T11:21:08.518Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -7731,7 +7739,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T11:35:44.939Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:20:59.881Z",
+    "updatedAt": "2026-07-17T11:21:08.518Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:35:44.939Z",
@@ -7758,6 +7766,29 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T11:21:31.225Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:21:08.518Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:21:08.518Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Siddhi Gawade (Signed copy).pdf",
+              "fileSize": 372943,
+              "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-no-dues/letter-e3de64f9-6f59-4ef0-b482-4c5ffe3a6fa1.pdf"
+            }
           }
         }
       }
