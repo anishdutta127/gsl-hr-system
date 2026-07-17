@@ -8238,17 +8238,17 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
+        "status": "Completed",
         "data": {},
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T11:33:38.944Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T11:33:38.944Z",
     "createdAt": "2026-07-10T11:36:46.814Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:33:30.880Z",
+    "updatedAt": "2026-07-17T11:33:38.944Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:36:46.814Z",
@@ -8372,6 +8372,21 @@
               "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-relieving/letter-f7184f8e-8026-44db-9375-4b4f7545942f.pdf"
             }
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:33:38.944Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
         }
       }
     ]
