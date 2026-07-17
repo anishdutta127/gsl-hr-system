@@ -8648,7 +8648,9 @@
             "filename": "GSL FNF form- pdf.pdf",
             "fileSize": 329949,
             "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
-          }
+          },
+          "signed": true,
+          "signedAt": "2026-07-17T12:05:59.551Z"
         },
         "notes": "",
         "completedAt": "2026-07-17T12:05:24.776Z",
@@ -8691,7 +8693,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T11:39:30.313Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:05:24.776Z",
+    "updatedAt": "2026-07-17T12:05:28.205Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:39:30.313Z",
@@ -8741,6 +8743,39 @@
               "fileSize": 329949,
               "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:05:28.205Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:05:24.776Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "GSL FNF form- pdf.pdf",
+              "fileSize": 329949,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:05:24.776Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "GSL FNF form- pdf.pdf",
+              "fileSize": 329949,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-no-dues/letter-0b830a81-e1aa-4c9f-aaa4-d35ad710e32a.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T12:05:59.551Z"
           }
         }
       }
