@@ -7798,7 +7798,7 @@
             "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-no-dues/letter-66696020-4e2a-42de-8b1b-68ffaafdc033.pdf"
           },
           "signed": true,
-          "signedAt": "2026-07-17T11:21:43.465Z"
+          "signedAt": "2026-07-17T11:31:12.867Z"
         },
         "notes": "",
         "completedAt": "2026-07-17T11:21:08.518Z",
@@ -7851,7 +7851,7 @@
     "completedAt": "2026-07-17T11:21:32.254Z",
     "createdAt": "2026-07-10T11:35:44.939Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:30:37.949Z",
+    "updatedAt": "2026-07-17T11:30:41.513Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:35:44.939Z",
@@ -8043,6 +8043,41 @@
             },
             "signed": true,
             "signedAt": "2026-07-17T11:21:43.465Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:30:41.513Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:30:37.949Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Siddhi Gawade (Signed copy).pdf",
+              "fileSize": 372943,
+              "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-no-dues/letter-66696020-4e2a-42de-8b1b-68ffaafdc033.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:21:43.465Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:30:37.949Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Siddhi Gawade (Signed copy).pdf",
+              "fileSize": 372943,
+              "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-no-dues/letter-66696020-4e2a-42de-8b1b-68ffaafdc033.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:31:12.867Z"
           }
         }
       }
