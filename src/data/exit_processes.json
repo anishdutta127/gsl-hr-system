@@ -8693,17 +8693,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T12:05:54.561Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Suresh Mahurkar.pdf",
+            "fileSize": 246562,
+            "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-experience/letter-ceeaf570-e650-49e1-b5b1-59d6ab054a12.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T12:05:54.561Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T12:05:54.561Z",
     "createdAt": "2026-07-10T11:39:30.313Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:05:43.618Z",
+    "updatedAt": "2026-07-17T12:05:54.561Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:39:30.313Z",
@@ -8825,6 +8833,29 @@
               "filename": "MTPL Relieving Letter- Suresh Mahurkar.pdf",
               "fileSize": 239937,
               "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-relieving/letter-df4be4c2-5c03-4a78-b2f1-18b1514af517.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:05:54.561Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:05:54.561Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Suresh Mahurkar.pdf",
+              "fileSize": 246562,
+              "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-experience/letter-ceeaf570-e650-49e1-b5b1-59d6ab054a12.pdf"
             }
           }
         }
