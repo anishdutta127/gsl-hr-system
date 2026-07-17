@@ -6292,17 +6292,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T10:39:15.936Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Saptak Sarkar.pdf",
+            "fileSize": 224826,
+            "storageRef": "data/exit-letter-docs/3d9c7696-761d-5b81-7b0b-39993fcfa80a/exit-experience/letter-de56d3a1-14f3-4b85-9e49-4ad3162e0ecb.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T10:39:15.936Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T10:39:15.936Z",
     "createdAt": "2026-07-10T11:27:19.874Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:39:06.502Z",
+    "updatedAt": "2026-07-17T10:39:15.936Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:27:19.874Z",
@@ -6424,6 +6432,29 @@
               "filename": "MTPL Relieving Letter- Saptak Sarkar.pdf",
               "fileSize": 212102,
               "storageRef": "data/exit-letter-docs/3d9c7696-761d-5b81-7b0b-39993fcfa80a/exit-relieving/letter-13b76d83-a964-4a86-b457-fcede7cd5ae1.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:39:15.936Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:39:15.936Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Saptak Sarkar.pdf",
+              "fileSize": 224826,
+              "storageRef": "data/exit-letter-docs/3d9c7696-761d-5b81-7b0b-39993fcfa80a/exit-experience/letter-de56d3a1-14f3-4b85-9e49-4ad3162e0ecb.pdf"
             }
           }
         }
