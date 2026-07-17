@@ -8629,7 +8629,7 @@
         "isMandatory": true,
         "status": "Completed",
         "data": {
-          "rmConfirmedAt": "2026-07-17T12:13:26.235Z"
+          "rmConfirmedAt": "2026-07-17T12:16:04.562Z"
         },
         "notes": "",
         "completedAt": "2026-07-17T12:05:16.835Z",
@@ -8711,7 +8711,7 @@
     "completedAt": "2026-07-17T12:05:54.561Z",
     "createdAt": "2026-07-10T11:39:30.313Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:13:31.256Z",
+    "updatedAt": "2026-07-17T12:15:33.228Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:39:30.313Z",
@@ -9027,6 +9027,25 @@
               "fileSize": 246562,
               "storageRef": "data/exit-letter-docs/acfb8956-81c2-51ac-969c-50463be531ee/exit-experience/letter-027cb317-bd98-4d9e-bda4-bcbcebacedbf.pdf"
             }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:15:33.228Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.handover.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-17T12:13:26.235Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "rmConfirmedAt": "2026-07-17T12:16:04.562Z"
           }
         }
       }
