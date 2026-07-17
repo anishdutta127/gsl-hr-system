@@ -4315,7 +4315,7 @@
         "isMandatory": true,
         "status": "Completed",
         "data": {},
-        "notes": "",
+        "notes": "Termination so no letter",
         "completedAt": "2026-07-17T07:57:43.607Z",
         "completedBy": "Hiring@getsetlearn.info"
       }
@@ -4323,7 +4323,7 @@
     "completedAt": "2026-07-17T07:57:43.607Z",
     "createdAt": "2026-07-10T09:29:21.773Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T07:57:43.607Z",
+    "updatedAt": "2026-07-17T07:57:49.746Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:29:21.773Z",
@@ -4483,6 +4483,21 @@
         "after": {
           "status": "Completed",
           "notes": "",
+          "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-17T07:57:49.746Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "Termination so no letter",
           "data": {}
         }
       }
