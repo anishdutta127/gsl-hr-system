@@ -9242,11 +9242,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T12:18:05.671Z",
+            "uploadedAt": "2026-07-17T12:39:37.441Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "No Dues Letter- Tamanna Jaisinghani - Signed.pdf",
             "fileSize": 54963,
-            "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-d9d986b2-e794-4f1f-aa7f-26f773c4d241.pdf"
+            "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-e2c730e9-44af-4c09-927e-401de15b3802.pdf"
           },
           "signed": true,
           "signedAt": "2026-07-17T12:18:42.466Z"
@@ -9310,7 +9310,7 @@
     "completedAt": "2026-07-17T12:18:37.879Z",
     "createdAt": "2026-07-10T11:40:50.347Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:39:25.763Z",
+    "updatedAt": "2026-07-17T12:39:37.441Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:40:50.347Z",
@@ -9475,6 +9475,41 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T12:39:56.045Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:39:37.441Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:18:05.671Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Tamanna Jaisinghani - Signed.pdf",
+              "fileSize": 54963,
+              "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-d9d986b2-e794-4f1f-aa7f-26f773c4d241.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T12:18:42.466Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:39:37.441Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Tamanna Jaisinghani - Signed.pdf",
+              "fileSize": 54963,
+              "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-e2c730e9-44af-4c09-927e-401de15b3802.pdf"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T12:18:42.466Z"
           }
         }
       }
