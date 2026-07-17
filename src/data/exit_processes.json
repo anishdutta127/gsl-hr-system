@@ -8188,11 +8188,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T11:33:01.649Z",
+            "uploadedAt": "2026-07-17T11:59:52.542Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "No Dues Letter- Sneha Patil.docx",
             "fileSize": 110558,
-            "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-no-dues/letter-fa9761bc-02c1-4f41-b3c4-f4c63acc58c8.docx"
+            "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-no-dues/letter-e39d8e35-1e33-483d-aca6-235ab4679a5d.docx"
           },
           "signed": true,
           "signedAt": "2026-07-17T11:33:38.130Z"
@@ -8248,7 +8248,7 @@
     "completedAt": "2026-07-17T11:33:38.944Z",
     "createdAt": "2026-07-10T11:36:46.814Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:59:41.196Z",
+    "updatedAt": "2026-07-17T11:59:52.542Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:36:46.814Z",
@@ -8405,6 +8405,41 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T12:00:11.436Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:59:52.542Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:33:01.649Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Sneha Patil.docx",
+              "fileSize": 110558,
+              "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-no-dues/letter-fa9761bc-02c1-4f41-b3c4-f4c63acc58c8.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:33:38.130Z"
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:59:52.542Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Sneha Patil.docx",
+              "fileSize": 110558,
+              "storageRef": "data/exit-letter-docs/12eb7afa-2221-5758-6ad7-63a6dd9a7d8a/exit-no-dues/letter-e39d8e35-1e33-483d-aca6-235ab4679a5d.docx"
+            },
+            "signed": true,
+            "signedAt": "2026-07-17T11:33:38.130Z"
           }
         }
       }
