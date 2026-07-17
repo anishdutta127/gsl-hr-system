@@ -7851,7 +7851,7 @@
     "completedAt": "2026-07-17T11:21:32.254Z",
     "createdAt": "2026-07-10T11:35:44.939Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:30:45.230Z",
+    "updatedAt": "2026-07-17T11:30:52.727Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:35:44.939Z",
@@ -8098,6 +8098,21 @@
           "data": {
             "paymentDate": "2026-07-17"
           }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:30:52.727Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.relieving.update",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {}
         }
       }
     ]
