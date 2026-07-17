@@ -5539,11 +5539,19 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T10:10:42.181Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "FNF GSL.pdf",
+            "fileSize": 379375,
+            "storageRef": "data/exit-letter-docs/cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b/exit-no-dues/letter-dfd9ea77-022d-4818-ab19-ff9857c88e16.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T10:10:42.181Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -5582,7 +5590,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T09:40:20.098Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T10:10:34.695Z",
+    "updatedAt": "2026-07-17T10:10:42.181Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T09:40:20.098Z",
@@ -5609,6 +5617,29 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T10:11:04.925Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T10:10:42.181Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T10:10:42.181Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "FNF GSL.pdf",
+              "fileSize": 379375,
+              "storageRef": "data/exit-letter-docs/cfcd0cba-8bf1-5514-d4d1-c19e57a65e7b/exit-no-dues/letter-dfd9ea77-022d-4818-ab19-ff9857c88e16.pdf"
+            }
           }
         }
       }
