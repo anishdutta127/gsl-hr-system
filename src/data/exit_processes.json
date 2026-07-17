@@ -9295,11 +9295,11 @@
         "status": "Completed",
         "data": {
           "letterDocument": {
-            "uploadedAt": "2026-07-17T12:18:37.879Z",
+            "uploadedAt": "2026-07-17T12:40:39.123Z",
             "uploadedBy": "Hiring@getsetlearn.info",
             "filename": "MTPL Experience Letter- Tamanna Jaisinghani.pdf",
             "fileSize": 249359,
-            "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-experience/letter-2d2135f1-57d1-413f-916a-2aadc651497b.pdf"
+            "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-experience/letter-3b93e935-c6a3-49fb-b146-126b2e305ffd.pdf"
           }
         },
         "notes": "",
@@ -9310,7 +9310,7 @@
     "completedAt": "2026-07-17T12:18:37.879Z",
     "createdAt": "2026-07-10T11:40:50.347Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:40:20.736Z",
+    "updatedAt": "2026-07-17T12:40:39.123Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:40:50.347Z",
@@ -9594,6 +9594,37 @@
               "filename": "MTPL Relieving Letter- Tamanna Jaisinghani.pdf",
               "fileSize": 240886,
               "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-relieving/letter-e475566d-3ccc-4367-b0cd-718e0690e301.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:40:39.123Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:18:37.879Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Tamanna Jaisinghani.pdf",
+              "fileSize": 249359,
+              "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-experience/letter-2d2135f1-57d1-413f-916a-2aadc651497b.pdf"
+            }
+          }
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:40:39.123Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Tamanna Jaisinghani.pdf",
+              "fileSize": 249359,
+              "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-experience/letter-3b93e935-c6a3-49fb-b146-126b2e305ffd.pdf"
             }
           }
         }
