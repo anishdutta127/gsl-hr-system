@@ -7733,17 +7733,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T11:21:32.254Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "Experience Letter- Siddhi Gawade.pdf",
+            "fileSize": 221354,
+            "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-experience/letter-31eb43f1-3d96-45f3-9323-4865b65e038e.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T11:21:32.254Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T11:21:32.254Z",
     "createdAt": "2026-07-10T11:35:44.939Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:21:25.231Z",
+    "updatedAt": "2026-07-17T11:21:32.254Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:35:44.939Z",
@@ -7859,6 +7867,29 @@
           "status": "Completed",
           "notes": "",
           "data": {}
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:21:32.254Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:21:32.254Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "Experience Letter- Siddhi Gawade.pdf",
+              "fileSize": 221354,
+              "storageRef": "data/exit-letter-docs/0342dae1-f699-5c97-0065-8d10b0da51d6/exit-experience/letter-31eb43f1-3d96-45f3-9323-4865b65e038e.pdf"
+            }
+          }
         }
       }
     ]
