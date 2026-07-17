@@ -7482,17 +7482,25 @@
         "name": "Experience letter",
         "kind": "letter:EXPERIENCE-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T11:19:19.437Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "MTPL Experience Letter- Shyam Roy.pdf",
+            "fileSize": 245194,
+            "storageRef": "data/exit-letter-docs/fa68fe81-9768-5f42-138e-8aaab76149e2/exit-experience/letter-a80e8935-26e0-46ed-9884-9a908ee4fda6.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T11:19:19.437Z",
+        "completedBy": "Hiring@getsetlearn.info"
       }
     ],
-    "completedAt": null,
+    "completedAt": "2026-07-17T11:19:19.437Z",
     "createdAt": "2026-07-10T11:34:24.325Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T11:19:09.381Z",
+    "updatedAt": "2026-07-17T11:19:19.437Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:34:24.325Z",
@@ -7614,6 +7622,29 @@
               "filename": "MTPL Relieving Letter- Shyam Roy.pdf",
               "fileSize": 238282,
               "storageRef": "data/exit-letter-docs/fa68fe81-9768-5f42-138e-8aaab76149e2/exit-relieving/letter-334d15d1-c472-4947-b513-62944b966dc8.pdf"
+            }
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T11:19:19.437Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.experience.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T11:19:19.437Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "MTPL Experience Letter- Shyam Roy.pdf",
+              "fileSize": 245194,
+              "storageRef": "data/exit-letter-docs/fa68fe81-9768-5f42-138e-8aaab76149e2/exit-experience/letter-a80e8935-26e0-46ed-9884-9a908ee4fda6.pdf"
             }
           }
         }
