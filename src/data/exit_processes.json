@@ -9239,11 +9239,19 @@
         "name": "No Dues / Notice Certificate",
         "kind": "letter:NO-DUES-v1",
         "isMandatory": true,
-        "status": "Not Started",
-        "data": {},
+        "status": "Completed",
+        "data": {
+          "letterDocument": {
+            "uploadedAt": "2026-07-17T12:18:05.671Z",
+            "uploadedBy": "Hiring@getsetlearn.info",
+            "filename": "No Dues Letter- Tamanna Jaisinghani - Signed.pdf",
+            "fileSize": 54963,
+            "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-d9d986b2-e794-4f1f-aa7f-26f773c4d241.pdf"
+          }
+        },
         "notes": "",
-        "completedAt": null,
-        "completedBy": null
+        "completedAt": "2026-07-17T12:18:05.671Z",
+        "completedBy": "Hiring@getsetlearn.info"
       },
       {
         "templateId": "exit-ff-settlement",
@@ -9282,7 +9290,7 @@
     "completedAt": null,
     "createdAt": "2026-07-10T11:40:50.347Z",
     "createdBy": "Hiring@getsetlearn.info",
-    "updatedAt": "2026-07-17T12:17:57.472Z",
+    "updatedAt": "2026-07-17T12:18:05.671Z",
     "auditLog": [
       {
         "timestamp": "2026-07-10T11:40:50.347Z",
@@ -9309,6 +9317,29 @@
           "notes": "",
           "data": {
             "rmConfirmedAt": "2026-07-17T12:18:28.672Z"
+          }
+        }
+      },
+      {
+        "timestamp": "2026-07-17T12:18:05.671Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit.no-dues.letter.upload",
+        "before": {
+          "status": "Not Started",
+          "notes": "",
+          "data": {}
+        },
+        "after": {
+          "status": "Completed",
+          "notes": "",
+          "data": {
+            "letterDocument": {
+              "uploadedAt": "2026-07-17T12:18:05.671Z",
+              "uploadedBy": "Hiring@getsetlearn.info",
+              "filename": "No Dues Letter- Tamanna Jaisinghani - Signed.pdf",
+              "fileSize": 54963,
+              "storageRef": "data/exit-letter-docs/eb9f299d-ac36-5746-dbf9-55eec1968e15/exit-no-dues/letter-d9d986b2-e794-4f1f-aa7f-26f773c4d241.pdf"
+            }
           }
         }
       }
