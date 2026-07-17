@@ -418,27 +418,6 @@
     ]
   },
   {
-    "employeeId": "0342dae1-f699-5c97-0065-8d10b0da51d6",
-    "conductedAt": "2026-07-17T11:21:37.850Z",
-    "conductedBy": "Hiring@getsetlearn.info",
-    "reasonForLeaving": "",
-    "wouldRecommend": null,
-    "satisfactionWithManager": null,
-    "satisfactionWithRole": null,
-    "topThingsToChange": "",
-    "freeText": "",
-    "auditLog": [
-      {
-        "timestamp": "2026-07-17T11:21:37.850Z",
-        "user": "Hiring@getsetlearn.info",
-        "action": "exit-interview.create",
-        "after": {
-          "wouldRecommend": null
-        }
-      }
-    ]
-  },
-  {
     "employeeId": "fb4400da-d6ec-5c2d-9ae1-fb867cd61606",
     "conductedAt": "2026-07-17T11:22:22.220Z",
     "conductedBy": "Hiring@getsetlearn.info",
@@ -451,6 +430,27 @@
     "auditLog": [
       {
         "timestamp": "2026-07-17T11:22:22.220Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "exit-interview.create",
+        "after": {
+          "wouldRecommend": null
+        }
+      }
+    ]
+  },
+  {
+    "employeeId": "0342dae1-f699-5c97-0065-8d10b0da51d6",
+    "conductedAt": "2026-07-17T11:31:07.465Z",
+    "conductedBy": "Hiring@getsetlearn.info",
+    "reasonForLeaving": "",
+    "wouldRecommend": null,
+    "satisfactionWithManager": null,
+    "satisfactionWithRole": null,
+    "topThingsToChange": "",
+    "freeText": "",
+    "auditLog": [
+      {
+        "timestamp": "2026-07-17T11:31:07.465Z",
         "user": "Hiring@getsetlearn.info",
         "action": "exit-interview.create",
         "after": {
