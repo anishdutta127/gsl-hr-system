@@ -92,5 +92,60 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: Other"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4efac6c1-37d8-458a-8381-fe38b11094b5",
+    "queuedAt": "2026-07-22T12:22:42.569Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "a8b507bd-82a8-43f6-b9aa-b29ffa623587",
+      "title": "Tele-Sales",
+      "department": "Academics",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HOD2RoundScheduled",
+        "HOD2RoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities:</strong> </p><ul><li><p>Distribution and coordination with retailers</p></li><li><p>Building and maintaining retailer relationships to support sales and distribution objective.</p></li><li><p><strong>Preferred Background</strong></p></li><li><p>Bsc. IT, BTech, BCA etc</p></li><li><p>Role requires understanding of product specifications while liaising with retail partners</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-22T12:22:42.569Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-22T12:22:42.569Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Tele-Sales",
+            "department": "Academics",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
