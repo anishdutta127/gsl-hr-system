@@ -21,5 +21,28 @@
       "notes": "Paused by Hiring@getsetlearn.info."
     },
     "retryCount": 0
+  },
+  {
+    "id": "4474fbc0-5cd1-4af8-94f2-3154ce97fed2",
+    "queuedAt": "2026-07-22T12:08:27.957Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": null
+      },
+      "notes": "Paused by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
   }
 ]
