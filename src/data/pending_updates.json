@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "5a648cdd-e502-4ef2-b150-b7fbbad5cf63",
+    "queuedAt": "2026-07-22T12:08:20.410Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": null
+      },
+      "notes": "Paused by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0
+  }
+]
