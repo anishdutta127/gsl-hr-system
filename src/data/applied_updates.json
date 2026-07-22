@@ -1,169 +1,5 @@
 [
   {
-    "id": "4c8f1c22-dccf-4b16-a61f-5beb65f94a76",
-    "queuedAt": "2026-05-13T04:44:00.257Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "69271aee-729a-485e-a842-a6ffcbbdf14f",
-      "to": "pintubiswasphysics07@gmail.com",
-      "subject": "We received your application for Senior Academics Manager at GSL",
-      "body": "Hi Pintu,\n\nThanks for applying for Senior Academics Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODY0NzQ0MCwiZXhwaXJlc0F0IjoxNzc4NjQ4MzQwLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiOWVhYzA1NTQtMmRhOS00MjVjLWI5MGUtYThhZTE3YmMwNjMyIiwiYXBwbGljYXRpb25JZCI6IjU5NTQwMDgzLWZmY2YtNDgxOS05NDMzLWM2MGE0N2QyMjZiZiIsIm5vbmNlIjoiMTRhZDFmYzAtZmQxNy00YjE5LTg1MTktOWMxZGFlN2I0NzRiIn19.5RfEyr0zx6XlcYGrP7jdiwqB27h4rUNR-EeSS1KzVS8\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 9eac0554-2da9-425c-b90e-a8ae17bc0632",
-      "createdAt": "2026-05-13T04:44:00.257Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.416Z"
-  },
-  {
-    "id": "d1e03e85-6538-4205-9015-732ddacbaa37",
-    "queuedAt": "2026-05-13T05:22:09.794Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "47766d67-45a5-4729-b897-f2b13c211233",
-      "name": "Mohd. Sahil",
-      "email": "mohd.sahil2524@gmail.com",
-      "phone": "8890952524",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf",
-      "createdAt": "2026-05-13T05:22:08.845Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T05:22:08.845Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Mohd. Sahil",
-            "email": "mohd.sahil2524@gmail.com",
-            "source": "Application",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "resumeFilePath": "data/resumes/applications/2026/05/47766d67-45a5-4729-b897-f2b13c211233.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.447Z"
-  },
-  {
-    "id": "21b0ad00-f918-43c5-a936-042ee87d5f67",
-    "queuedAt": "2026-05-13T05:22:10.597Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "ebd3c479-5774-42cf-a50f-aeca597988f3",
-      "candidateId": "47766d67-45a5-4729-b897-f2b13c211233",
-      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T05:22:08.845Z",
-      "createdAt": "2026-05-13T05:22:08.845Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T05:22:08.845Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "47766d67-45a5-4729-b897-f2b13c211233",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.466Z"
-  },
-  {
-    "id": "e7149b11-ca4b-48b8-a4b0-4e489c5a9beb",
-    "queuedAt": "2026-05-13T05:22:11.956Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "bec9eca1-0162-4648-b0ea-943be465ad4a",
-      "to": "mohd.sahil2524@gmail.com",
-      "subject": "We received your application for STEM Trainer at GSL",
-      "body": "Hi Mohd.,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODY0OTczMSwiZXhwaXJlc0F0IjoxNzc4NjUwNjMxLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiNDc3NjZkNjctNDVhNS00NzI5LWI4OTctZjJiMTNjMjExMjMzIiwiYXBwbGljYXRpb25JZCI6ImViZDNjNDc5LTU3NzQtNDJjZi1hNTBmLWFlY2E1OTc5ODhmMyIsIm5vbmNlIjoiMmFmYjQxYzAtNGIwNy00Nzc2LWI1ZmUtNzMyNmRhMTMzNWEzIn19.loIVaRDPwsjjlG29uKez1BEXpgG1CbK47f5i9TbK0Io\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 47766d67-45a5-4729-b897-f2b13c211233",
-      "createdAt": "2026-05-13T05:22:11.956Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.466Z"
-  },
-  {
-    "id": "050f0d0a-e07d-4882-bc8a-e1a9c07e12a7",
-    "queuedAt": "2026-05-13T05:23:46.843Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "af8cc8d0-3642-4db3-ac48-d719df33b12a",
-      "name": "Mohd. Sahil",
-      "email": "mohd.sahil2524@gmail.com",
-      "phone": "8890952524",
-      "source": "Application",
-      "notes": "",
-      "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf",
-      "createdAt": "2026-05-13T05:23:45.890Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T05:23:45.890Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Mohd. Sahil",
-            "email": "mohd.sahil2524@gmail.com",
-            "source": "Application",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "resumeFilePath": "data/resumes/applications/2026/05/af8cc8d0-3642-4db3-ac48-d719df33b12a.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.508Z"
-  },
-  {
-    "id": "4013346a-ead5-4912-b21c-0edfbcf00000",
-    "queuedAt": "2026-05-13T05:23:47.668Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "b3d7b1ef-d9bc-4b10-aae3-f06cd90557af",
-      "candidateId": "af8cc8d0-3642-4db3-ac48-d719df33b12a",
-      "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T05:23:45.890Z",
-      "createdAt": "2026-05-13T05:23:45.890Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T05:23:45.890Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "af8cc8d0-3642-4db3-ac48-d719df33b12a",
-            "roleId": "1b15644c-b968-4b2d-82f4-b69d2ba4b52d",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T06:14:56.516Z"
-  },
-  {
     "id": "3e68d197-9769-4b4e-bac3-b3fa1215e3c9",
     "queuedAt": "2026-05-13T05:23:48.555Z",
     "queuedBy": "system",
@@ -13793,5 +13629,213 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-07-17T12:16:43.124Z"
+  },
+  {
+    "id": "5a648cdd-e502-4ef2-b150-b7fbbad5cf63",
+    "queuedAt": "2026-07-22T12:08:20.410Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": null
+      },
+      "notes": "Paused by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.001Z"
+  },
+  {
+    "id": "4474fbc0-5cd1-4af8-94f2-3154ce97fed2",
+    "queuedAt": "2026-07-22T12:08:27.957Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "94e48a71-5217-4c75-9165-95e7201c6e1b",
+      "operation": "role.pause",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Paused",
+        "pauseReason": null
+      },
+      "notes": "Paused by Hiring@getsetlearn.info."
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.002Z"
+  },
+  {
+    "id": "33186c65-7bbc-4431-8e86-b04aedff35a5",
+    "queuedAt": "2026-07-22T12:17:28.000Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "16a3a68b-3274-4820-b857-a5b9abc06663",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Other",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Other"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.003Z"
+  },
+  {
+    "id": "b21aef25-ccba-4250-b258-5362fd9a14d4",
+    "queuedAt": "2026-07-22T12:17:41.563Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e3276f56-d104-44a2-95ff-8143a9f7a57c",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Other",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Other"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.004Z"
+  },
+  {
+    "id": "4efac6c1-37d8-458a-8381-fe38b11094b5",
+    "queuedAt": "2026-07-22T12:22:42.569Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "a8b507bd-82a8-43f6-b9aa-b29ffa623587",
+      "title": "Tele-Sales",
+      "department": "Academics",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HOD2RoundScheduled",
+        "HOD2RoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities:</strong> </p><ul><li><p>Distribution and coordination with retailers</p></li><li><p>Building and maintaining retailer relationships to support sales and distribution objective.</p></li><li><p><strong>Preferred Background</strong></p></li><li><p>Bsc. IT, BTech, BCA etc</p></li><li><p>Role requires understanding of product specifications while liaising with retail partners</p></li></ul><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-22T12:22:42.569Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-22T12:22:42.569Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Tele-Sales",
+            "department": "Academics",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.005Z"
+  },
+  {
+    "id": "fb985e9e-b0b4-4d97-8f2a-7fd70f72a880",
+    "queuedAt": "2026-07-22T12:25:35.986Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "c36b9744-da54-4a5a-9d2a-6d10b17f3b4d",
+      "title": "Executive- Accounts",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<h3>Key Responsibilities</h3><ul><li><p>Identify and onboard new premium/key accounts within the assigned territory</p></li><li><p>Build and maintain strong relationships with existing key clients to ensure retention and satisfaction</p></li><li><p>Achieve monthly and quarterly sales targets for the premium product/service line</p></li><li><p>Conduct regular client visits, presentations, and product demonstrations</p></li><li><p>Understand client needs and recommend suitable premium offerings</p></li><li><p>Coordinate with internal teams (operations, support, logistics) to ensure smooth order fulfillment and service delivery</p></li><li><p>Track and report sales performance, market trends, and competitor activity</p></li><li><p>Resolve client queries and escalations promptly and professionally</p></li><li><p>Maintain accurate records of accounts, leads, and sales pipeline in CRM tools</p></li><li><p>Support senior sales staff in strategic account planning</p></li></ul><p><strong>Preferred Background:</strong></p><p>Education: Bsc IT, BTech, BCA etc.</p><p></p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-07-22T12:25:35.986Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-07-22T12:25:35.986Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Executive- Accounts",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-07-22T14:02:22.006Z"
   }
 ]
