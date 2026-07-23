@@ -231,7 +231,7 @@
     "department": "Academics",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Paused",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -281,8 +281,25 @@
           "description": "<p><strong>Role Purpose: </strong></p><p>To lead the design, structuring, and quality governance of K–12 instructional and curriculum frameworks in STEM, Robotics, Coding, Artificial Intelligence, etc., translating academic content into coherent, age-appropriate, and classroom-ready learning resources that are pedagogically robust, consistent, and implementation-feasible. </p><p>Key Responsibilities: </p><p>• Structure end-to-end curriculum frameworks and learning progressions across K–12 in STEM, Robotics, Coding, and AI. </p><p>• Ensure strong alignment between curriculum intent, instructional design methodology, hands-on activities, projects, and assessment strategies. </p><p>• Embed experiential, inquiry-based, problem-solving, and learner-centric pedagogical approaches within curriculum designs. </p><p>• Be responsible for design and development of teaching – learning resources, to ensure academic accuracy, conceptual clarity, consistency across grades and alignment with NEP 2020 recommendations, NCF guidelines and SDG goals. </p><p>• Ensure age-appropriateness, cognitive load balance, and practical classroom feasibility of learning designs, including lab and activity components. </p><p>• Identify design gaps, redundancies, or misalignments and recommend data informed improvements to enhance learning effectiveness. </p><p>• Collaborate closely with academic, product, and delivery teams to ensure curriculum/ content usability, teacher readiness, and smooth classroom implementation. </p><p>• Be responsible for the design, development and quality of teacher training design. </p><p>Qualifications:  B.Tech / M.Tech in Engineering, Technology, or a related STEM discipline </p><p>Experience: </p><p>• Minimum 5 years of experience in K–12 curriculum and content design for STEM, Robotics, Coding, and AI.</p><p>• Exposure to classroom implementation, pilots, or teacher training is preferred. </p><p>Core Competencies: </p><p>• Strong understanding of STEM, Robotics, Coding, and AI concepts at the K–12 level. </p><p>• Solid grounding in K–12 pedagogy and curriculum structuring. </p><p>• Clear understanding of school board alignment requirements for STEM, Robotics, and AI. </p><p>• Ability to guide teams, maintain design standards, and ensure consistency across grades. </p><p>• Strong attention to academic accuracy, design quality, and classroom feasibility.</p>"
         },
         "notes": "Edited by Hiring@getsetlearn.info."
+      },
+      {
+        "timestamp": "2026-07-23T07:59:38.163Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.pause",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Paused",
+          "pauseReason": "Awaiting clearance"
+        },
+        "notes": "Paused by Hiring@getsetlearn.info. Reason: Awaiting clearance"
       }
-    ]
+    ],
+    "pauseReason": "Awaiting clearance"
   },
   {
     "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
