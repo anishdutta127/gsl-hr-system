@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "c38a65de-9544-46bf-a336-427d4e89c635",
+    "queuedAt": "2026-08-07T12:24:13.362Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "e1efe1a9-b322-4578-af50-68b762a83ef7",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "Cancelled",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
+    },
+    "retryCount": 0
+  }
+]
