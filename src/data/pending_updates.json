@@ -70,5 +70,58 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4cfd7f4a-d2ae-4794-9751-2e60feefca3e",
+    "queuedAt": "2026-08-07T12:25:57.904Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "0d6bb3c0-ee18-4e3d-a6d0-5a9c3b6f895f",
+      "title": "Sales Associate",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;&nbsp;&nbsp;Identify and onboard new key accounts within the assigned territory</p><p>·&nbsp;&nbsp;&nbsp;Build and maintain strong relationships with existing key clients to ensure retention and satisfaction</p><p>·&nbsp;&nbsp;&nbsp;Achieve yearly sales targets for the premium products</p><p>·&nbsp;&nbsp;&nbsp;Conduct regular school visits, presentations, and product demonstrations</p><p>·&nbsp;&nbsp;&nbsp;Coordinate with internal teams (operations, support, logistics) to ensure smooth order fulfillment and service delivery</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-08-07T12:25:57.904Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-07T12:25:57.904Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Sales Associate",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
