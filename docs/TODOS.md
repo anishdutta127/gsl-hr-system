@@ -323,3 +323,10 @@ Running list of follow-up items. Newest entries on top. Each entry includes the 
 - Effort (human / CC): 1-2 weeks / 1 day
 - Reactivation signal: Mafatlal Group gives a real pitch commitment with a named buyer and a target timeline. Not before.
 - Notes: P7 from /office-hours was explicitly DEFER. Migration is additive: `tenantId` column on every entity, backfill `gsl`, scope queries. No tenant-aware magic-link scoping required until second tenant exists.
+
+### Amend a submitted interview scorecard (found by the roles-editability sweep)
+- Added: 2026-08-07
+- Priority: P2
+- Effort (human / CC): 0.5 day human decision / 3 hr CC
+- Reactivation signal: the first time a HOD or HR reports a wrong score, wrong round, or wrong recommendation on a submitted scorecard and asks for it to be changed.
+- Notes: `POST /api/interviews` creates an interview record (round, scores, notes, recommendation, aggregateScore) and there is NO PATCH, so a submitted scorecard cannot be corrected. Found while sweeping the hiring module for create-without-edit gaps alongside the roles work. Deliberately NOT fixed in that PR: unlike a role title, a scorecard is evidence of a judgement at a point in time, and free-form editing would let a hiring evaluation be rewritten silently after it influenced a decision. The fix needs a policy call from Anish/Riddhi first: amend-with-visible-history (original preserved, amendment appended, both shown) versus straight overwrite. Recommend amend-with-history, restricted to the original interviewer plus Admin. Everything else in the hiring module already has an edit path: roles (this PR), candidates (PATCH name/email/phone/source/notes/programmes), offers (update + lifecycle actions).

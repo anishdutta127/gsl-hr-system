@@ -374,11 +374,21 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
         return
 
     # Role lifecycle transitions: publish/pause/resume/close/reopen/archive/discard.
-    # role.edit edits the JD body (description, plus eventually responsibilities/etc).
-    # All write the relevant fields and append an audit entry.
+    # role.edit edits the role record: identity fields (title/department/
+    # location/employmentType), the JD body, pay, and HOD assignment.
+    #
+    # KEEP THIS TUPLE IN LOCKSTEP WITH ROLE_RUNNER_WRITABLE_FIELDS in
+    # src/lib/roles/editableFields.ts. A field the API can enqueue but that is
+    # missing here is dropped SILENTLY - the queue write succeeds, the UI
+    # reports success, and the value never changes. src/lib/__tests__/
+    # roleRunnerParity.test.ts parses this tuple and fails the build on drift.
     if isinstance(op, str) and op.startswith("role."):
         if isinstance(after, dict):
             for key in (
+                "title",
+                "department",
+                "location",
+                "employmentType",
                 "status",
                 "pauseReason",
                 "closeOutcome",
@@ -387,6 +397,9 @@ def apply_update(collection: list, payload: dict, queued_by: str) -> None:
                 "responsibilities",
                 "mustHaves",
                 "niceToHaves",
+                "salaryRange",
+                "hodUserId",
+                "hodRound2UserId",
             ):
                 if key in after:
                     entity[key] = after[key]
