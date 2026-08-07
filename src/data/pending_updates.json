@@ -46,5 +46,29 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
     },
     "retryCount": 0
+  },
+  {
+    "id": "1cef48bd-d429-428f-aec7-60c28f459b4d",
+    "queuedAt": "2026-08-07T12:24:37.929Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "c36b9744-da54-4a5a-9d2a-6d10b17f3b4d",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "No Suitable Candidate",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
+    },
+    "retryCount": 0
   }
 ]
