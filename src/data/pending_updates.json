@@ -128,5 +128,58 @@
       "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
     },
     "retryCount": 0
+  },
+  {
+    "id": "4713e987-728b-4063-842a-a268990776c7",
+    "queuedAt": "2026-08-07T12:45:13.992Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "344c701c-8015-4c1e-a315-c6828a4167e4",
+      "title": "Junior Video Editor",
+      "department": "Marketing",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;Produce both long-form content (brand films, webinar recordings, testimonials) and short-form content (reels, ad cuts, social snippets) across marketing sub-verticals.</p><p>·&nbsp;Build short-form video content for paid ad campaigns.</p><p>·&nbsp;Add captions, motion graphics, and basic animations to boost engagement and retention</p><p>·&nbsp;Collaborate with the performance marketing, social, and design to align edits with campaign briefs and creative strategy.</p><p>·&nbsp;Maintain an organized asset library (raw footage, templates, brand assets)</p><p><strong>Requirements</strong></p><p>·&nbsp;2-3 years of experience in video editing, with experience in ad video creation.</p><p>·&nbsp;Proficiency in Adobe Creative Suite (Premiere Pro, After Effects, Photoshop)</p><p>·&nbsp;Solid understanding of video formats and aspect ratios across platforms, with a creative portfolio.</p><p>·&nbsp;Ability to work from a creative brief with quick turnarounds.</p><p>·&nbsp;Basic motion graphics/animation skills</p><p>·&nbsp;Exposure AI video editing/generation tools (Higgsfeild, Magnific, Heygen, Eleven Labs).</p><p><strong>Nice to Have</strong></p><p>·&nbsp;Experience in edtech or education-adjacent content</p><p>·&nbsp;Familiarity with Canva/Figma for supporting graphics</p><p>·&nbsp;Exposure to A/B testing creative variants for ads</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-08-07T12:45:13.992Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-07T12:45:13.992Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Junior Video Editor",
+            "department": "Marketing",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
