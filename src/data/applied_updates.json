@@ -1,95 +1,5 @@
 [
   {
-    "id": "d3ab0d11-0beb-412b-b64e-3796d070e297",
-    "queuedAt": "2026-05-13T06:39:35.627Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "update",
-    "payload": {
-      "id": "f1bfb6bf-d360-4925-a20c-9622b6d6b366",
-      "operation": "stage-transition",
-      "before": {
-        "currentStage": "Sourced",
-        "stageEnteredAt": "2026-05-12T14:02:49.464Z"
-      },
-      "after": {
-        "currentStage": "Withdrawn",
-        "stageEnteredAt": "2026-05-13T06:39:35.627Z"
-      },
-      "notes": "Moved to Sales Executive."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.804Z"
-  },
-  {
-    "id": "92eb55d0-fd77-462a-8bfe-1ce48391f98c",
-    "queuedAt": "2026-05-13T06:39:36.390Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "0fe8becd-f9d6-49db-82b9-fd12925db368",
-      "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T06:39:35.627Z",
-      "createdAt": "2026-05-13T06:39:35.627Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T06:39:35.627Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "application.create",
-          "after": {
-            "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "currentStage": "Sourced"
-          },
-          "notes": "Moved from Senior Academics Manager."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.805Z"
-  },
-  {
-    "id": "72df27bf-ffd5-4ea5-b0f9-390e52a915e1",
-    "queuedAt": "2026-05-13T06:39:37.599Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "operation": "candidate.update",
-      "before": {},
-      "after": {},
-      "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.824Z"
-  },
-  {
-    "id": "614ec524-6e2d-4eb4-a858-11a4cdb1039e",
-    "queuedAt": "2026-05-13T06:41:30.289Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "update",
-    "payload": {
-      "id": "f1bfb6bf-d360-4925-a20c-9622b6d6b366",
-      "operation": "stage-transition",
-      "before": {
-        "currentStage": "Sourced",
-        "stageEnteredAt": "2026-05-12T14:02:49.464Z"
-      },
-      "after": {
-        "currentStage": "AssessmentSent",
-        "stageEnteredAt": "2026-05-13T06:41:30.289Z"
-      }
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.825Z"
-  },
-  {
     "id": "5a94d945-b4d7-4ab5-996a-7a0cdc49b03b",
     "queuedAt": "2026-05-13T06:41:59.866Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -13899,5 +13809,192 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-08-07T12:31:16.432Z"
+  },
+  {
+    "id": "45ce6a76-c53b-41e9-b739-5efa6657808b",
+    "queuedAt": "2026-08-07T12:41:33.879Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "b2d74602-8944-47bf-8ad6-f373186a0778",
+      "title": "Regional Manager",
+      "department": "Premium Sales",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;Own and deliver an annual revenue target for an assigned territory across the GSL programmes portfolio.</p><p>·&nbsp;Build and qualify a pipeline of schools and pre-schools</p><p>·&nbsp;Strong relationship with schools &amp; principals of your assigned territory.</p><p>·&nbsp;Dual capacity role: individual contributor &amp; team contributor</p><p>·&nbsp;Having 5-6 years of experience in managing team in the K-12 market.</p><p>·&nbsp;Retain and renew existing accounts, with clear ownership of renewal rates within the territory.</p><p>·&nbsp;Grow revenue per school by cross-selling and upselling across the portfolio, including premium programmes and bootcamps.</p><p>·&nbsp;Work with operations and support teams so that delivery quality holds up and renewals are earned on outcomes.</p><p>·&nbsp;Own escalations for your accounts to resolution.</p><p>·&nbsp;Develop relationships with school groups, education consultants in the territory.</p><p>·&nbsp;Forecasting, reporting and market intelligence</p><p>·&nbsp;Maintain accurate and current CRM records covering every opportunity, activity and next step.</p><p>·&nbsp;Provide reliable monthly and quarterly forecasts, and report on pipeline health, conversion and win-loss reasons.</p><p>·&nbsp;Track competitor activity, pricing movements and curriculum policy shifts, and feed this back to product and marketing.</p><p>·&nbsp;Contribute territory-level input to annual planning and pricing decisions.</p><p><strong>Qualifications and experience</strong></p><p><strong>•</strong> Graduate in any discipline. A postgraduate qualification in management or tech background is an advantage.</p><p>• 5-8 years in EdTech sector</p><p>• Strong verbal and written English, plus fluency in the primary language of the assigned region.</p><p>• Comfortable with Field Job.</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-08-07T12:41:33.877Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-07T12:41:33.877Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Regional Manager",
+            "department": "Premium Sales",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-07T13:18:39.070Z"
+  },
+  {
+    "id": "6aaf9e5b-63e0-4a0f-bf06-7198b83ad339",
+    "queuedAt": "2026-08-07T12:42:34.471Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "fb81c959-1715-4195-a189-9132a94cc55c",
+      "title": "Manager Sales",
+      "department": "Other",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p><strong>•</strong> Drive both new school acquisition and renewal or expansion revenue from the existing school base.</p><p>• Recruit, onboard and retain Area Sales Managers, Key Account Executives, Sales Executives and Tele-Sales Executives for the region.</p><p>• Lead principal, trustee and management conversations from first meeting through to commercial closure.</p><p>• Run and quality check school presentations, product demos, pilot sessions and parent orientation events.</p><p>• Negotiate commercials, payment terms and multi year or multi programme agreements within approved policy.</p><p>• Coordinate with Academics, STEM trainers and Operations so that every signed school is delivered on time and to standard.</p><p>• Maintain complete and current CRM records. Monthly &amp; Quarterly targets</p><p>• Collections and days sales outstanding for the region.</p><p>&nbsp;<strong>Qualifications and experience</strong></p><p><strong>•</strong> Graduate in any discipline. A postgraduate qualification in management or marketing is an advantage.</p><p>• 5-8 years in B2B, publication, EdTech sector</p><p>• Strong verbal and written English, plus fluency in the primary language of the assigned region.</p><p>• Comfortable with Field Job.</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-08-07T12:42:34.470Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-07T12:42:34.470Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Manager Sales",
+            "department": "Other",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-07T13:18:39.071Z"
+  },
+  {
+    "id": "6506f087-5ba1-405e-8b8d-9105cc610e9b",
+    "queuedAt": "2026-08-07T12:42:53.136Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "update",
+    "payload": {
+      "id": "0d6bb3c0-ee18-4e3d-a6d0-5a9c3b6f895f",
+      "operation": "role.close",
+      "before": {
+        "status": "Open",
+        "pauseReason": null,
+        "closeOutcome": null,
+        "closeNotes": null
+      },
+      "after": {
+        "status": "Closed",
+        "closeOutcome": "No Suitable Candidate",
+        "closeNotes": null
+      },
+      "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-07T13:18:39.073Z"
+  },
+  {
+    "id": "4713e987-728b-4063-842a-a268990776c7",
+    "queuedAt": "2026-08-07T12:45:13.992Z",
+    "queuedBy": "Hiring@getsetlearn.info",
+    "entity": "role",
+    "operation": "create",
+    "payload": {
+      "id": "344c701c-8015-4c1e-a315-c6828a4167e4",
+      "title": "Junior Video Editor",
+      "department": "Marketing",
+      "location": "Mumbai",
+      "employmentType": "Full-time",
+      "status": "Open",
+      "pipelineStages": [
+        "Sourced",
+        "Shortlisted",
+        "AssessmentSent",
+        "AssessmentDone",
+        "VideoSent",
+        "VideoDone",
+        "HODRoundScheduled",
+        "HODRoundDone",
+        "HRRoundScheduled",
+        "HRRoundDone",
+        "Offered",
+        "OfferAccepted",
+        "DocsCollected",
+        "Joined"
+      ],
+      "rubric": [],
+      "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;Produce both long-form content (brand films, webinar recordings, testimonials) and short-form content (reels, ad cuts, social snippets) across marketing sub-verticals.</p><p>·&nbsp;Build short-form video content for paid ad campaigns.</p><p>·&nbsp;Add captions, motion graphics, and basic animations to boost engagement and retention</p><p>·&nbsp;Collaborate with the performance marketing, social, and design to align edits with campaign briefs and creative strategy.</p><p>·&nbsp;Maintain an organized asset library (raw footage, templates, brand assets)</p><p><strong>Requirements</strong></p><p>·&nbsp;2-3 years of experience in video editing, with experience in ad video creation.</p><p>·&nbsp;Proficiency in Adobe Creative Suite (Premiere Pro, After Effects, Photoshop)</p><p>·&nbsp;Solid understanding of video formats and aspect ratios across platforms, with a creative portfolio.</p><p>·&nbsp;Ability to work from a creative brief with quick turnarounds.</p><p>·&nbsp;Basic motion graphics/animation skills</p><p>·&nbsp;Exposure AI video editing/generation tools (Higgsfeild, Magnific, Heygen, Eleven Labs).</p><p><strong>Nice to Have</strong></p><p>·&nbsp;Experience in edtech or education-adjacent content</p><p>·&nbsp;Familiarity with Canva/Figma for supporting graphics</p><p>·&nbsp;Exposure to A/B testing creative variants for ads</p>",
+      "responsibilities": [],
+      "mustHaves": [],
+      "niceToHaves": [],
+      "createdAt": "2026-08-07T12:45:13.992Z",
+      "createdBy": "Hiring@getsetlearn.info",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-07T12:45:13.992Z",
+          "user": "Hiring@getsetlearn.info",
+          "action": "role.create",
+          "after": {
+            "title": "Junior Video Editor",
+            "department": "Marketing",
+            "location": "Mumbai",
+            "employmentType": "Full-time"
+          },
+          "notes": "Created via UI"
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-07T13:18:39.074Z"
   }
 ]
