@@ -307,7 +307,7 @@
     "department": "Other",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -391,9 +391,28 @@
           "pauseReason": null
         },
         "notes": "resume by Hiring@getsetlearn.info."
+      },
+      {
+        "timestamp": "2026-08-07T12:31:16.426Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "Cancelled",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: Cancelled"
       }
     ],
-    "pauseReason": null
+    "pauseReason": null,
+    "closeOutcome": "Cancelled",
+    "closeNotes": null
   },
   {
     "id": "1822f2e9-cb2f-4138-9834-7b0443321e86",
@@ -779,7 +798,7 @@
     "department": "Academics",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -817,8 +836,27 @@
           "employmentType": "Full-time"
         },
         "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-08-07T12:31:16.427Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "No Suitable Candidate",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
       }
-    ]
+    ],
+    "closeOutcome": "No Suitable Candidate",
+    "closeNotes": null
   },
   {
     "id": "c36b9744-da54-4a5a-9d2a-6d10b17f3b4d",
@@ -826,7 +864,7 @@
     "department": "Premium Sales",
     "location": "Mumbai",
     "employmentType": "Full-time",
-    "status": "Open",
+    "status": "Closed",
     "pipelineStages": [
       "Sourced",
       "Shortlisted",
@@ -857,6 +895,115 @@
         "action": "role.create",
         "after": {
           "title": "Executive- Accounts",
+          "department": "Premium Sales",
+          "location": "Mumbai",
+          "employmentType": "Full-time"
+        },
+        "notes": "Created via UI"
+      },
+      {
+        "timestamp": "2026-08-07T12:31:16.428Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.close",
+        "before": {
+          "status": "Open",
+          "pauseReason": null,
+          "closeOutcome": null,
+          "closeNotes": null
+        },
+        "after": {
+          "status": "Closed",
+          "closeOutcome": "No Suitable Candidate",
+          "closeNotes": null
+        },
+        "notes": "Closed by Hiring@getsetlearn.info. Outcome: No Suitable Candidate"
+      }
+    ],
+    "closeOutcome": "No Suitable Candidate",
+    "closeNotes": null
+  },
+  {
+    "id": "0d6bb3c0-ee18-4e3d-a6d0-5a9c3b6f895f",
+    "title": "Sales Associate",
+    "department": "Premium Sales",
+    "location": "Mumbai",
+    "employmentType": "Full-time",
+    "status": "Open",
+    "pipelineStages": [
+      "Sourced",
+      "Shortlisted",
+      "AssessmentSent",
+      "AssessmentDone",
+      "VideoSent",
+      "VideoDone",
+      "HODRoundScheduled",
+      "HODRoundDone",
+      "HRRoundScheduled",
+      "HRRoundDone",
+      "Offered",
+      "OfferAccepted",
+      "DocsCollected",
+      "Joined"
+    ],
+    "rubric": [],
+    "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;&nbsp;&nbsp;Identify and onboard new key accounts within the assigned territory</p><p>·&nbsp;&nbsp;&nbsp;Build and maintain strong relationships with existing key clients to ensure retention and satisfaction</p><p>·&nbsp;&nbsp;&nbsp;Achieve yearly sales targets for the premium products</p><p>·&nbsp;&nbsp;&nbsp;Conduct regular school visits, presentations, and product demonstrations</p><p>·&nbsp;&nbsp;&nbsp;Coordinate with internal teams (operations, support, logistics) to ensure smooth order fulfillment and service delivery</p>",
+    "responsibilities": [],
+    "mustHaves": [],
+    "niceToHaves": [],
+    "createdAt": "2026-08-07T12:25:57.904Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-08-07T12:25:57.904Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.create",
+        "after": {
+          "title": "Sales Associate",
+          "department": "Premium Sales",
+          "location": "Mumbai",
+          "employmentType": "Full-time"
+        },
+        "notes": "Created via UI"
+      }
+    ]
+  },
+  {
+    "id": "ae2d2473-38b2-478d-aadb-ac9eb55d35ca",
+    "title": "Customer Service Representative",
+    "department": "Premium Sales",
+    "location": "Mumbai",
+    "employmentType": "Full-time",
+    "status": "Open",
+    "pipelineStages": [
+      "Sourced",
+      "Shortlisted",
+      "AssessmentSent",
+      "AssessmentDone",
+      "VideoSent",
+      "VideoDone",
+      "HODRoundScheduled",
+      "HODRoundDone",
+      "HRRoundScheduled",
+      "HRRoundDone",
+      "Offered",
+      "OfferAccepted",
+      "DocsCollected",
+      "Joined"
+    ],
+    "rubric": [],
+    "description": "<p><strong>Key Responsibilities</strong></p><p>·&nbsp;&nbsp;&nbsp;Distribution and coordination with retailers.</p><p>·&nbsp;&nbsp;&nbsp;Building and maintaining retailer relationships to support sales and distribution objectives</p><p><strong>Preferred Qualifications</strong></p><p>·&nbsp;Relevant bachelor's or master's degree in BTech, <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"http://Bsc.IT\">Bsc.IT</a> or BMM &amp; BMS</p><p>·&nbsp;Strong communication and interpersonal skills. Entry Level candidates</p><p>·&nbsp;Ability to work in a fast-paced, collaborative environment.</p>",
+    "responsibilities": [],
+    "mustHaves": [],
+    "niceToHaves": [],
+    "createdAt": "2026-08-07T12:27:05.088Z",
+    "createdBy": "Hiring@getsetlearn.info",
+    "auditLog": [
+      {
+        "timestamp": "2026-08-07T12:27:05.088Z",
+        "user": "Hiring@getsetlearn.info",
+        "action": "role.create",
+        "after": {
+          "title": "Customer Service Representative",
           "department": "Premium Sales",
           "location": "Mumbai",
           "employmentType": "Full-time"
