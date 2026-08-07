@@ -16,6 +16,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { getCurrentSession } from '@/lib/identity'
 import { findLastDrainCommit, readRepoFile } from '@/lib/queue/githubQueue'
+import { summarisePendingUpdates, type PendingSummaryItem } from '@/lib/queue/pendingSummary'
 import type { PendingUpdate } from '@/lib/types'
 
 export const runtime = 'nodejs'
@@ -25,13 +26,36 @@ interface SyncStatus {
   lastDrainAt: string | null
   lastDrainSubject: string | null
   source: 'github' | 'local'
+  /**
+   * Queue entries narrowed to `?entity=` when supplied. Lets a board show
+   * exactly which of its own records are saved-but-not-yet-visible, instead
+   * of rendering an honestly-empty list that reads as a failed write.
+   */
+  entityPendingCount: number
+  entityPendingItems: PendingSummaryItem[]
 }
 
-export async function GET() {
+const KNOWN_ENTITIES = new Set([
+  'role',
+  'candidate',
+  'application',
+  'employee',
+  'offer',
+  'interview',
+  'user',
+])
+
+export async function GET(request: Request) {
   const session = await getCurrentSession()
   if (!session) {
     return NextResponse.json({ message: 'Not signed in.' }, { status: 401 })
   }
+
+  const requested = new URL(request.url).searchParams.get('entity')
+  const entity =
+    requested && KNOWN_ENTITIES.has(requested)
+      ? (requested as PendingUpdate['entity'])
+      : undefined
 
   // Try GitHub first; fall back to local on any failure (incl. missing PAT
   // in dev). We never want this endpoint to 500 — the widget must render.
@@ -40,6 +64,14 @@ export async function GET() {
     lastDrainAt: null,
     lastDrainSubject: null,
     source: 'local',
+    entityPendingCount: 0,
+    entityPendingItems: [],
+  }
+
+  const applySummary = (parsed: PendingUpdate[]) => {
+    const summary = summarisePendingUpdates(parsed, entity)
+    status.entityPendingCount = summary.count
+    status.entityPendingItems = summary.items
   }
 
   try {
@@ -55,7 +87,10 @@ export async function GET() {
           lastDrainAt: lastDrain?.date ?? null,
           lastDrainSubject: lastDrain?.message ?? null,
           source: 'github',
+          entityPendingCount: 0,
+          entityPendingItems: [],
         }
+        applySummary(parsed)
       }
     }
   } catch {
@@ -68,7 +103,10 @@ export async function GET() {
       if (fs.existsSync(localPath)) {
         const text = fs.readFileSync(localPath, 'utf-8')
         const parsed = JSON.parse(text) as PendingUpdate[]
-        if (Array.isArray(parsed)) status.pendingCount = parsed.length
+        if (Array.isArray(parsed)) {
+          status.pendingCount = parsed.length
+          applySummary(parsed)
+        }
       }
     } catch {
       // Stay at zero.
