@@ -6,6 +6,7 @@ import {
   loadApplicationsForRole,
   loadOffers,
   loadRoles,
+  loadUsers,
 } from '@/lib/data'
 import { isTerminal, orderedStages } from '@/lib/pipeline'
 import { canAcceptNewCandidates, isPubliclyVisible } from '@/lib/roleStatus'
@@ -15,6 +16,7 @@ import { formatDate } from '@/lib/format'
 import { requireRoles } from '@/lib/guards'
 import { RoleStatusPanel } from './RoleStatusPanel'
 import { RoleDescriptionEdit } from './RoleDescriptionEdit'
+import { RoleDetailsEdit } from './RoleDetailsEdit'
 import type { CurrentMembership } from '@/components/PipelineActions'
 
 export default async function RoleDetailPage({
@@ -31,6 +33,13 @@ export default async function RoleDetailPage({
   const stages = orderedStages(role)
   const careersVisible = isPubliclyVisible(role)
   const canManageStatus = session.role === 'Admin' || session.role === 'HR'
+
+  // Hiring-manager picker options for the details editor. Active staff who
+  // can own a role: HODs plus Admin/HR (small org, people wear both hats).
+  const hodOptions = loadUsers()
+    .filter((u) => u.active && (u.role === 'HOD' || u.role === 'Admin' || u.role === 'HR'))
+    .map((u) => ({ id: u.id, name: u.name }))
+    .sort((a, b) => a.name.localeCompare(b.name))
 
   const activeCandidates = applications.filter((a) => !isTerminal(a.currentStage)).length
   const activeOffers = loadOffers().filter(
@@ -97,6 +106,7 @@ export default async function RoleDetailPage({
                 View on careers page
               </Link>
             )}
+            {canManageStatus && <RoleDetailsEdit role={role} hodOptions={hodOptions} />}
             {canManageStatus && (
               <RoleDescriptionEdit roleId={role.id} initialDescription={role.description ?? ''} />
             )}

@@ -38,9 +38,13 @@ export function NewRoleForm() {
         setError(body.message ?? 'Could not create role.')
         return
       }
-      const data = (await response.json()) as { roleId: string }
+      // The create is queued, not applied: the board will NOT show this role
+      // until the apply runner drains. Carry the title through so the board
+      // can say so by name instead of looking empty, which is how three real
+      // roles were reported lost on 2026-08-07.
+      await response.json().catch(() => ({}))
       startTransition(() => {
-        router.push('/roles')
+        router.push(`/roles?queued=${encodeURIComponent(form.title.trim())}`)
         router.refresh()
       })
     } catch (err) {
@@ -140,7 +144,8 @@ export function NewRoleForm() {
 
       <p className="text-xs text-ink-3">
         Default pipeline stages are applied. You can customise them on the role's detail page.
-        Changes save to the queue and appear in ~1 minute.
+        The role saves immediately, then appears on the Roles board once the next sync runs.
+        That can take up to an hour, so use Sync now on the board if you need it straight away.
       </p>
     </form>
   )

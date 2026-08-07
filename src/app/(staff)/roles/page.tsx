@@ -3,13 +3,29 @@ import { loadRoles, loadApplications } from '@/lib/data'
 import { isTerminal } from '@/lib/pipeline'
 import { formatCount, formatDate } from '@/lib/format'
 import { RoleStatusPill } from '@/components/RoleStatusPill'
+import { PendingWritesNotice } from '@/components/PendingWritesNotice'
+
+export const dynamic = 'force-dynamic'
+
+/**
+ * Every status the board renders a section for. Anything outside this set
+ * falls into the catch-all below rather than vanishing: a role whose status
+ * matches no section would otherwise be invisible on every tab, with no
+ * error anywhere, which is the same class of silent loss as an undrained
+ * queue write.
+ */
+const RENDERED_STATUSES = ['Open', 'Paused', 'Draft', 'Closed', 'Archived'] as const
 
 export default async function RolesPage({
   searchParams,
 }: {
-  searchParams: { archived?: string }
+  searchParams: { archived?: string; queued?: string }
 }) {
   const showArchived = searchParams.archived === '1'
+  const queuedTitle =
+    typeof searchParams.queued === 'string' && searchParams.queued.trim()
+      ? searchParams.queued.trim().slice(0, 120)
+      : null
   const allRoles = loadRoles()
   const roles = showArchived ? allRoles : allRoles.filter((r) => r.status !== 'Archived')
   const applications = loadApplications()
@@ -21,6 +37,12 @@ export default async function RolesPage({
     Closed: roles.filter((r) => r.status === 'Closed'),
     Archived: allRoles.filter((r) => r.status === 'Archived'),
   }
+
+  // Fail visible, not silent: any role carrying a status no section renders
+  // is surfaced here so it can be found and corrected.
+  const unrecognised = allRoles.filter(
+    (r) => !(RENDERED_STATUSES as readonly string[]).includes(r.status),
+  )
 
   return (
     <div className="container-page py-8">
@@ -39,7 +61,19 @@ export default async function RolesPage({
         </Link>
       </div>
 
-      {roles.length === 0 && rolesByStatus.Archived.length === 0 ? (
+      {queuedTitle && (
+        <div
+          role="status"
+          className="mb-4 rounded-lg border border-success bg-success-bg px-4 py-3 text-sm text-ink"
+        >
+          <span className="font-medium">{queuedTitle}</span> was saved. It appears on this board
+          once the next sync runs; use Sync now below if you need it immediately.
+        </div>
+      )}
+
+      <PendingWritesNotice entity="role" noun="role" />
+
+      {roles.length === 0 && rolesByStatus.Archived.length === 0 && unrecognised.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line-strong bg-card p-8 text-center">
           <p className="text-sm text-ink-2">
             No roles yet. Add the first role to start your pipeline.
@@ -70,6 +104,37 @@ export default async function RolesPage({
               roles={rolesByStatus.Archived}
               applications={applications}
             />
+          )}
+          {unrecognised.length > 0 && (
+            <section aria-labelledby="section-unrecognised">
+              <h2
+                id="section-unrecognised"
+                className="mb-1 font-display text-lg text-ink-2"
+              >
+                Needs attention ({formatCount(unrecognised.length)})
+              </h2>
+              <p className="mb-3 text-sm text-ink-2">
+                These roles carry a status the board does not recognise, so they appear in no
+                other section. Open each one and set its status.
+              </p>
+              <ul className="divide-y divide-line overflow-hidden rounded-lg border border-warning bg-card">
+                {unrecognised.map((role) => (
+                  <li key={role.id}>
+                    <Link
+                      href={`/roles/${role.id}`}
+                      className="flex items-center justify-between px-5 py-4 text-sm hover:bg-surface focus-visible:bg-surface focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal focus-visible:ring-inset"
+                    >
+                      <span>
+                        <span className="block font-medium text-ink">{role.title}</span>
+                        <span className="block text-xs text-ink-2">
+                          {role.department} · {role.location} · Status: {String(role.status) || 'not set'}
+                        </span>
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
         </div>
       )}

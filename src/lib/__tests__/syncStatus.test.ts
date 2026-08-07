@@ -52,10 +52,21 @@ afterEach(() => {
   vi.restoreAllMocks()
 })
 
+/**
+ * The handler reads `?entity=` off the request, so every call needs one.
+ * Pass an entity to narrow the pending list to a single board.
+ */
+function statusRequest(entity?: string): Request {
+  const url = entity
+    ? `http://test/api/sync/status?entity=${encodeURIComponent(entity)}`
+    : 'http://test/api/sync/status'
+  return new Request(url)
+}
+
 describe('GET /api/sync/status', () => {
   it('401s when there is no session', async () => {
     vi.mocked(getCurrentSession).mockResolvedValue(null)
-    const res = (await GET()) as NextResponse
+    const res = (await GET(statusRequest())) as NextResponse
     expect(res.status).toBe(401)
   })
 
@@ -73,7 +84,7 @@ describe('GET /api/sync/status', () => {
       message: 'chore(apply): drain queue 2026-05-13T06:14Z',
     })
 
-    const res = (await GET()) as NextResponse
+    const res = (await GET(statusRequest())) as NextResponse
     expect(res.status).toBe(200)
     const body = await res.json()
     expect(body.pendingCount).toBe(2)
@@ -86,7 +97,7 @@ describe('GET /api/sync/status', () => {
     vi.mocked(readRepoFile).mockResolvedValue(null)
     vi.mocked(findLastDrainCommit).mockResolvedValue(null)
 
-    const res = (await GET()) as NextResponse
+    const res = (await GET(statusRequest())) as NextResponse
     expect(res.status).toBe(200)
     const body = await res.json()
     expect(body.source).toBe('local')
@@ -101,7 +112,7 @@ describe('GET /api/sync/status', () => {
     vi.mocked(readRepoFile).mockRejectedValue(new Error('boom'))
     vi.mocked(findLastDrainCommit).mockResolvedValue(null)
 
-    const res = (await GET()) as NextResponse
+    const res = (await GET(statusRequest())) as NextResponse
     expect(res.status).toBe(200)
     const body = await res.json()
     expect(body.source).toBe('local')
@@ -112,7 +123,7 @@ describe('GET /api/sync/status', () => {
     vi.mocked(readRepoFile).mockResolvedValue('{ not valid json')
     vi.mocked(findLastDrainCommit).mockResolvedValue(null)
 
-    const res = (await GET()) as NextResponse
+    const res = (await GET(statusRequest())) as NextResponse
     expect(res.status).toBe(200)
     const body = await res.json()
     expect(body.source).toBe('local')
