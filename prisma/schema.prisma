@@ -114,7 +114,8 @@ model Candidate {
   source         String
   resumeFilePath String? @map("resume_file_path")
   searchableText String? @map("searchable_text")
-  status         String? @default("Active")
+  /// No default: 80 candidates have no status field and inventing "Active" broke parity.
+  status         String?
   createdAt      String? @map("created_at")
   createdBy      String? @map("created_by")
   tags           Json?
@@ -207,7 +208,8 @@ model Employee {
   confirmationDate       String?  @map("confirmation_date")
   tenureYears            Float?   @map("tenure_years")
   dateOfBirth            String?  @map("date_of_birth")
-  age                    Int?
+  /// Float in the source data (49.8, 50.5): storing Int silently truncated 82 records.
+  age                    Float?
   gender                 String?
   maritalStatus          String?  @map("marital_status")
   address                String?
@@ -263,21 +265,20 @@ model ExitProcess {
   @@map("exit_processes")
 }
 
+/// Like ExitProcess, keyed on employeeId: exit_interviews.json carries no id,
+/// and employeeId is unique across all 24 records.
 model ExitInterview {
-  id         String  @id
-  employeeId String  @map("employee_id")
+  employeeId String @id @map("employee_id")
   extra      Json?
 
-  @@index([employeeId])
   @@map("exit_interviews")
 }
 
+/// Keyed on employeeId for the same reason; unique across all 28 records.
 model ExitHandover {
-  id         String  @id
-  employeeId String  @map("employee_id")
+  employeeId String @id @map("employee_id")
   extra      Json?
 
-  @@index([employeeId])
   @@map("exit_handovers")
 }
 
