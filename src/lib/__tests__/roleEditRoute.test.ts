@@ -61,7 +61,7 @@ describe('PATCH /api/roles/[id] role gate', () => {
     mockSession.mockReset()
     mockFindRole.mockReset()
     mockEnqueue.mockReset()
-    mockFindRole.mockReturnValue(roleFixture())
+    mockFindRole.mockResolvedValue(roleFixture())
   })
 
   it('401 when signed out', async () => {
@@ -92,7 +92,7 @@ describe('PATCH /api/roles/[id] role gate', () => {
 
   it('404 for a role that does not exist', async () => {
     mockSession.mockResolvedValue(sessionOf('HR'))
-    mockFindRole.mockReturnValue(undefined)
+    mockFindRole.mockResolvedValue(undefined)
     expect((await PATCH(patch({ title: 'New' }), params)).status).toBe(404)
   })
 })
@@ -102,7 +102,7 @@ describe('PATCH /api/roles/[id] queue payload', () => {
     mockSession.mockReset()
     mockFindRole.mockReset()
     mockEnqueue.mockReset()
-    mockFindRole.mockReturnValue(roleFixture())
+    mockFindRole.mockResolvedValue(roleFixture())
     mockSession.mockResolvedValue(sessionOf('HR'))
   })
 

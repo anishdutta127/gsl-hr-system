@@ -75,8 +75,8 @@ function postRequest(body?: unknown): Request {
 
 beforeEach(() => {
   vi.clearAllMocks()
-  vi.mocked(findApplicationById).mockReturnValue(undefined)
-  vi.mocked(findRoleById).mockReturnValue(undefined)
+  vi.mocked(findApplicationById).mockResolvedValue(undefined)
+  vi.mocked(findRoleById).mockResolvedValue(undefined)
   vi.mocked(enqueueUpdate).mockResolvedValue({
     id: 'q-1',
     queuedAt: '',
@@ -95,21 +95,21 @@ afterEach(() => {
 describe('POST /api/offers/[id]/[action]', () => {
   it('401s when there is no session', async () => {
     vi.mocked(getCurrentSession).mockResolvedValue(null)
-    vi.mocked(findOfferById).mockReturnValue(offer())
+    vi.mocked(findOfferById).mockResolvedValue(offer())
     const res = await POST(postRequest({}), { params: { id: 'o-1', action: 'send' } })
     expect(res.status).toBe(401)
   })
 
   it('403s for HOD even when authenticated', async () => {
     mockSession('HOD')
-    vi.mocked(findOfferById).mockReturnValue(offer())
+    vi.mocked(findOfferById).mockResolvedValue(offer())
     const res = await POST(postRequest({}), { params: { id: 'o-1', action: 'send' } })
     expect(res.status).toBe(403)
   })
 
   it('rejects an unknown action', async () => {
     mockSession()
-    vi.mocked(findOfferById).mockReturnValue(offer())
+    vi.mocked(findOfferById).mockResolvedValue(offer())
     const res = await POST(postRequest({}), {
       params: { id: 'o-1', action: 'bogus' },
     })
@@ -119,7 +119,7 @@ describe('POST /api/offers/[id]/[action]', () => {
   describe('decline', () => {
     it('400s without a reason', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(postRequest({}), {
         params: { id: 'o-1', action: 'decline' },
       })
@@ -130,7 +130,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it("400s when reason is 'Other' but no notes provided", async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(
         postRequest({ declineReason: 'Other' }),
         { params: { id: 'o-1', action: 'decline' } },
@@ -142,7 +142,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it('persists the reason and structured note', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(
         postRequest({
           declineReason: 'Compensation',
@@ -168,7 +168,7 @@ describe('POST /api/offers/[id]/[action]', () => {
   describe('accept', () => {
     it('writes safe defaults when no acceptance details given', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(
+      vi.mocked(findOfferById).mockResolvedValue(
         offer({ proposedJoiningDate: '2026-06-01', compensation: { ctcAnnual: 1200000, noticePeriodDays: 30 } }),
       )
       const res = await POST(postRequest({}), {
@@ -185,7 +185,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it('captures negotiated CTC and overrides defaults', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(
         postRequest({
           acceptedCtcAnnual: 1650000,
@@ -204,7 +204,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it('ignores invalid CTC (zero or negative) and falls back to offer CTC', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(
         postRequest({ acceptedCtcAnnual: 0 }),
         { params: { id: 'o-1', action: 'accept' } },
@@ -219,7 +219,7 @@ describe('POST /api/offers/[id]/[action]', () => {
   describe('resend', () => {
     it('only allows resend from Sent', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer({ status: 'Approved' }))
+      vi.mocked(findOfferById).mockResolvedValue(offer({ status: 'Approved' }))
       const res = await POST(postRequest({}), {
         params: { id: 'o-1', action: 'resend' },
       })
@@ -228,7 +228,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it('stays at Sent and stamps a new sentAt + appendResentAt', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer())
+      vi.mocked(findOfferById).mockResolvedValue(offer())
       const res = await POST(postRequest({}), {
         params: { id: 'o-1', action: 'resend' },
       })
@@ -246,7 +246,7 @@ describe('POST /api/offers/[id]/[action]', () => {
       for (const status of ['Draft', 'Approved', 'Sent'] as const) {
         vi.clearAllMocks()
         mockSession()
-        vi.mocked(findOfferById).mockReturnValue(offer({ status }))
+        vi.mocked(findOfferById).mockResolvedValue(offer({ status }))
         const res = await POST(postRequest({}), {
           params: { id: 'o-1', action: 'withdraw' },
         })
@@ -256,7 +256,7 @@ describe('POST /api/offers/[id]/[action]', () => {
 
     it('rejects withdraw from a terminal status (Accepted)', async () => {
       mockSession()
-      vi.mocked(findOfferById).mockReturnValue(offer({ status: 'Accepted' }))
+      vi.mocked(findOfferById).mockResolvedValue(offer({ status: 'Accepted' }))
       const res = await POST(postRequest({}), {
         params: { id: 'o-1', action: 'withdraw' },
       })
