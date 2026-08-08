@@ -16,11 +16,11 @@ export const dynamic = 'force-dynamic'
  */
 export default async function NewNominationCyclePage() {
   const session = await requireRoles(['Admin', 'HR'])
-  const users = loadUsers()
+  const users = await loadUsers()
   const hods = users.filter((u) => u.active && u.role === 'HOD')
   const company = loadCompany()
   const month = currentMonth()
-  const cycles = loadNominationCycles()
+  const cycles = await loadNominationCycles()
   const existingCycle = cycles.find((c) => c.month === month)
 
   return (

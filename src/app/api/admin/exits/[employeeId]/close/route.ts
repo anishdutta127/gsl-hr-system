@@ -43,7 +43,7 @@ export async function POST(
   if (!session) return bad('Not signed in.', 401)
   if (!canCloseExitProcess(session)) return bad('Only Admin or HR can close an exit.', 403)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   let body: { reason?: unknown }

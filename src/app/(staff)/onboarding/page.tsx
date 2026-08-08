@@ -18,7 +18,7 @@ export default async function OnboardingOverviewPage() {
   const isHod = session.role === 'HOD'
   if (!isHrOrAdmin && !isLeadership && !isHod) redirect('/')
 
-  const employees = loadEmployees().filter((e) => e.status !== 'Exited')
+  const employees = (await loadEmployees()).filter((e) => e.status !== 'Exited')
   const templates = loadOnboardingTemplates()
   const allTasks = loadOnboardingTasks()
   const tasksByEmp = new Map<string, typeof allTasks>()
@@ -152,21 +152,21 @@ function Stat({ label, value, tone }: { label: string; value: number; tone: 'ok'
   )
 }
 
-function countOverdue(tasks: ReturnType<typeof loadOnboardingTasks>, now: Date): number {
+function countOverdue(tasks: Awaited<ReturnType<typeof loadOnboardingTasks>>, now: Date): number {
   return tasks.filter((t) => {
     if (t.status === 'Completed' || t.status === 'N/A') return false
     return new Date(`${t.dueDate}T00:00:00Z`).getTime() < now.getTime() - 24 * 60 * 60 * 1000
   }).length
 }
 
-function countDueToday(tasks: ReturnType<typeof loadOnboardingTasks>, now: Date): number {
+function countDueToday(tasks: Awaited<ReturnType<typeof loadOnboardingTasks>>, now: Date): number {
   const today = now.toISOString().slice(0, 10)
   return tasks.filter(
     (t) => t.status !== 'Completed' && t.status !== 'N/A' && t.dueDate === today,
   ).length
 }
 
-function oldestOverdue(tasks: ReturnType<typeof loadOnboardingTasks>, now: Date): number {
+function oldestOverdue(tasks: Awaited<ReturnType<typeof loadOnboardingTasks>>, now: Date): number {
   let oldest = 0
   for (const t of tasks) {
     if (t.status === 'Completed' || t.status === 'N/A') continue

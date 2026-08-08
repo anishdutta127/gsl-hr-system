@@ -29,7 +29,7 @@ function bad(message: string, status = 400) {
 }
 
 export async function POST(request: Request, { params }: { params: { id: string } }) {
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec) return bad('Not found.', 404)
   if (!rec.publicShareEnabled) return bad('Not a public celebration.', 403)
 
@@ -63,7 +63,7 @@ async function bumpCounter(id: string, kind: 'view' | 'share') {
   await atomicUpdateJson<Recognition[]>(
     RECOGNITIONS_PATH,
     (current) => {
-      const list = Array.isArray(current) ? current : loadRecognitions()
+      const list = Array.isArray(current) ? current : []
       const next = list.map((r) => {
         if (r.id !== id) return r
         return {
@@ -77,6 +77,6 @@ async function bumpCounter(id: string, kind: 'view' | 'share') {
         commitMessage: `chore(queue): bump recognition ${kind} counter ${id}`,
       }
     },
-    { defaultValue: loadRecognitions() },
+    { defaultValue: await loadRecognitions() },
   )
 }

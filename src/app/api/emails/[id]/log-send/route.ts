@@ -35,7 +35,7 @@ export async function POST(
   const subject = typeof body.subject === 'string' ? body.subject.slice(0, 200) : template.title
   if (!candidateId) return NextResponse.json({ message: 'candidateId required.' }, { status: 400 })
 
-  const candidate = findCandidateById(candidateId)
+  const candidate = await findCandidateById(candidateId)
   if (!candidate) return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
 
   try {

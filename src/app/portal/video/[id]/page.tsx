@@ -10,9 +10,9 @@ export default async function VideoPage({ params }: { params: { id: string } }) 
   const candidateId = await getCurrentCandidateId()
   if (!candidateId) redirect('/portal/request-new-link')
 
-  const app = findApplicationById(params.id)
+  const app = await findApplicationById(params.id)
   if (!app || app.candidateId !== candidateId) notFound()
-  const role = findRoleById(app.roleId)
+  const role = await findRoleById(app.roleId)
   if (!role) notFound()
 
   const done = app.currentStage === 'VideoDone'

@@ -25,7 +25,7 @@ export default async function RosterPage({
   const month = Number(params.month) || now.getUTCMonth() + 1
   const group = (params.group ?? 'person') as 'person' | 'department' | 'location'
 
-  const employees = loadEmployees()
+  const employees = (await loadEmployees())
     .filter((e) => e.status !== 'Exited')
     .sort((a, b) => a.name.localeCompare(b.name))
 

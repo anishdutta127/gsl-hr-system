@@ -18,14 +18,14 @@ export default async function PortalMePage() {
   const candidateId = await getCurrentCandidateId()
   if (!candidateId) redirect('/portal/request-new-link')
 
-  const candidate = findCandidateById(candidateId)
+  const candidate = await findCandidateById(candidateId)
   if (!candidate) redirect('/portal/request-new-link?reason=notfound')
 
   const company = loadCompany()
-  const apps = loadApplications()
+  const apps = (await loadApplications())
     .filter((a) => a.candidateId === candidateId)
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
-  const roles = loadRoles()
+  const roles = await loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
 
   return (

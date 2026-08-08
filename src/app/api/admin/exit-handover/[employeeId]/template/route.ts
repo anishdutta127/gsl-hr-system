@@ -28,7 +28,7 @@ export async function GET(request: Request, { params }: { params: { employeeId: 
   const session = await getCurrentSession()
   if (!session) return NextResponse.json({ message: 'Unauthorised.' }, { status: 401 })
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return NextResponse.json({ message: 'Employee not found.' }, { status: 404 })
 
   if (!canEditHandover(session, { reportingManagerId: employee.reportingManagerId ?? null })) {

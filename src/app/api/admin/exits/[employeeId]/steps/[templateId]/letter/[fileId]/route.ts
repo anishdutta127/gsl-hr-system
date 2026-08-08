@@ -49,7 +49,7 @@ export async function GET(
   const session = await getCurrentSession()
   if (!session) return json('Unauthorised.', 401)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return json('Employee not found.', 404)
 
   const exitProc = loadExitProcesses().find((p) => p.employeeId === params.employeeId)
@@ -103,7 +103,7 @@ export async function DELETE(
   if (!session) return json('Not signed in.', 401)
   if (!canEditExitProcess(session)) return json('Only Admin or HR can remove an exit letter.', 403)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return json('Employee not found.', 404)
 
   const exitProc = loadExitProcesses().find((p) => p.employeeId === params.employeeId)

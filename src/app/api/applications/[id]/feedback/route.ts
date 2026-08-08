@@ -41,7 +41,7 @@ export async function POST(
     return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
   }
 
-  const application = findApplicationById(params.id)
+  const application = await findApplicationById(params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }
@@ -107,8 +107,8 @@ export async function POST(
   // gate has cleared). Failure here never blocks the submit.
   try {
     const recruiterEmail = application.createdBy
-    const candidate = findCandidateById(application.candidateId)
-    const submitter = loadUsers().find((u) => u.id === session.sub)?.name ?? session.email
+    const candidate = await findCandidateById(application.candidateId)
+    const submitter = (await loadUsers()).find((u) => u.id === session.sub)?.name ?? session.email
     if (recruiterEmail && recruiterEmail.includes('@')) {
       await deliverEmail({
         to: recruiterEmail,

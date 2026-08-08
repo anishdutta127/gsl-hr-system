@@ -27,13 +27,13 @@ export async function POST(
     )
   }
 
-  const application = findApplicationById(params.id)
+  const application = await findApplicationById(params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }
 
   const hmName = application.hiringManagerId
-    ? (loadUsers().find((u) => u.id === application.hiringManagerId)?.name ?? application.hiringManagerId)
+    ? ((await loadUsers()).find((u) => u.id === application.hiringManagerId)?.name ?? application.hiringManagerId)
     : '(no hiring manager assigned)'
 
   try {

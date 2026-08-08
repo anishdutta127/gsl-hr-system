@@ -49,7 +49,7 @@ interface BulkImportBody {
 export async function GET() {
   const session = await getCurrentSession()
   if (!session) return bad('Unauthorised.', 401)
-  return NextResponse.json({ assets: loadITAssets() })
+  return NextResponse.json({ assets: await loadITAssets() })
 }
 
 export async function POST(request: Request) {

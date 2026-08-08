@@ -30,7 +30,7 @@ function loadTaxonomy(): { departments: Record<string, unknown>; locations: Reco
   }
 }
 
-export function buildReconcileContext({
+export async function buildReconcileContext({
   actor,
   now,
   overwriteFields,
@@ -38,8 +38,8 @@ export function buildReconcileContext({
   actor: string
   now: string
   overwriteFields?: Set<string>
-}): ReconcileContext {
-  const employees = loadEmployees()
+}): Promise<ReconcileContext> {
+  const employees = await loadEmployees()
   const taxonomy = loadTaxonomy()
   const { nameToId, idToName } = buildManagerLookup(employees)
   return {

@@ -46,7 +46,7 @@ export async function POST(
     return NextResponse.json({ message: 'action required.' }, { status: 400 })
   }
 
-  const application = findApplicationById(params.id)
+  const application = await findApplicationById(params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }

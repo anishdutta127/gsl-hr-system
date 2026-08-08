@@ -87,10 +87,10 @@ interface CachedStats {
 let cache: CachedStats | null = null
 const CACHE_MS = 60 * 60 * 1000
 
-export function statsCachedFor1h(): RecognitionStats {
+export async function statsCachedFor1h(): Promise<RecognitionStats> {
   const now = Date.now()
   if (cache && cache.expiresAt > now) return cache.value
-  const value = computeStats(loadRecognitions())
+  const value = computeStats(await loadRecognitions())
   cache = { expiresAt: now + CACHE_MS, value }
   return value
 }

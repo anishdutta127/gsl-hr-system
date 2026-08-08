@@ -51,7 +51,7 @@ export async function POST(
   if (!session) return bad('Not signed in.', 401)
   if (!canEditExitProcess(session)) return bad('Only Admin or HR can initiate an exit.', 403)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
   if (findExitProcess(employee.id)) return bad('An exit is already in progress for this employee.', 409)
 

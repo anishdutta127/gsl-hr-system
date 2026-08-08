@@ -19,7 +19,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return NextResponse.json({ message: 'Only Admin or HR can upload resumes.' }, { status: 403 })
   }
 
-  const candidate = findCandidateById(params.id)
+  const candidate = await findCandidateById(params.id)
   if (!candidate) return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
 
   let formData: FormData

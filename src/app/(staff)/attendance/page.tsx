@@ -29,7 +29,7 @@ export default async function AttendancePage({
   const month = Number(params.month) || now.getUTCMonth() + 1
   const departmentFilter = params.department ?? ''
 
-  let employees = loadEmployees().filter((e) => e.status !== 'Exited')
+  let employees = (await loadEmployees()).filter((e) => e.status !== 'Exited')
   if (isHod) {
     employees = employees.filter((e) => e.reportingManagerId === session.sub)
   }
@@ -39,7 +39,7 @@ export default async function AttendancePage({
   employees.sort((a, b) => a.name.localeCompare(b.name))
 
   const departments = Array.from(
-    new Set(loadEmployees().map((e) => e.department).filter(Boolean)),
+    new Set((await loadEmployees()).map((e) => e.department).filter(Boolean)),
   ).sort()
 
   const holidays = loadHolidays()

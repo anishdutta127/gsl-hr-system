@@ -10,9 +10,9 @@ export default async function WithdrawPage({ params }: { params: { applicationId
   const candidateId = await getCurrentCandidateId()
   if (!candidateId) redirect('/portal/request-new-link')
 
-  const app = findApplicationById(params.applicationId)
+  const app = await findApplicationById(params.applicationId)
   if (!app || app.candidateId !== candidateId) notFound()
-  const role = findRoleById(app.roleId)
+  const role = await findRoleById(app.roleId)
   if (!role) notFound()
 
   if (isTerminal(app.currentStage)) {

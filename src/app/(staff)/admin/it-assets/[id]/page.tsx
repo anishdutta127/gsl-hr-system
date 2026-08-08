@@ -20,10 +20,10 @@ export default async function ITAssetDetailPage({ params }: Props) {
   if (!session) redirect('/login')
   if (!canViewITAssets(session)) redirect('/')
 
-  const asset = findITAssetById(params.id)
+  const asset = await findITAssetById(params.id)
   if (!asset) notFound()
 
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const empById = new Map(employees.map((e) => [e.id, e]))
   const canEdit = canManageITAssets(session)
   const isAdmin = session.role === 'Admin'

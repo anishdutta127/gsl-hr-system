@@ -18,7 +18,7 @@ export default async function EmployeeLeavePage({ params }: { params: { id: stri
   const session = await getCurrentSession()
   if (!session) redirect('/login')
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
 
   const isHrOrAdmin = session.role === 'Admin' || session.role === 'HR'

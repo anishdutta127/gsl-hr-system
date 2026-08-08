@@ -16,9 +16,9 @@ export default async function EmployeesPage({
 }) {
   const session = await requireRoles(['Admin', 'HR', 'Leadership'])
   const canBulkUpload = session.role === 'Admin' || session.role === 'HR'
-  const employees = loadEmployees()
-  const applications = loadApplications()
-  const candidates = loadCandidates()
+  const employees = await loadEmployees()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
 
   const candidateById = new Map(candidates.map((c) => [c.id, c] as const))
 
@@ -209,7 +209,7 @@ function EmployeeSection({
   employees,
 }: {
   title: string
-  employees: ReturnType<typeof loadEmployees>
+  employees: Awaited<ReturnType<typeof loadEmployees>>
 }) {
   return (
     <section aria-labelledby={`section-${title}`} className="mb-10">

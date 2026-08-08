@@ -30,7 +30,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     return NextResponse.json({ message: 'Only Admin or HR can edit roles.' }, { status: 403 })
   }
 
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
   let body: Record<string, unknown>
@@ -43,7 +43,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     return NextResponse.json({ message: 'Invalid request.' }, { status: 400 })
   }
 
-  const knownUserIds = new Set(loadUsers().filter((u) => u.active).map((u) => u.id))
+  const knownUserIds = new Set((await loadUsers()).filter((u) => u.active).map((u) => u.id))
   const result = validateRoleEdit(role, body, {
     sanitiseDescription: sanitiseRoleHtml,
     knownUserIds,

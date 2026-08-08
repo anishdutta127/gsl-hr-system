@@ -25,7 +25,7 @@ export default async function LeaveOverviewPage({
   if (!isHrOrAdmin && !isLeadership && !isHod) redirect('/')
 
   const params = (await searchParams) ?? {}
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const empById = new Map(employees.map((e) => [e.id, e]))
   let apps = loadLeaveApplications()
 

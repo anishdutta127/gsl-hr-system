@@ -45,7 +45,7 @@ export async function POST(
     return NextResponse.json({ message: 'Unknown action.' }, { status: 400 })
   }
 
-  const offer = findOfferById(params.id)
+  const offer = await findOfferById(params.id)
   if (!offer) return NextResponse.json({ message: 'Offer not found.' }, { status: 404 })
   if (!rules.from.includes(offer.status)) {
     return NextResponse.json(
@@ -179,9 +179,9 @@ export async function POST(
 
     const targetStage = APPLICATION_STAGE_BY_ACTION[action]
     if (targetStage) {
-      const app = findApplicationById(offer.applicationId)
+      const app = await findApplicationById(offer.applicationId)
       if (app) {
-        const role = findRoleById(app.roleId)
+        const role = await findRoleById(app.roleId)
         if (role) {
           const { valid } = canTransition(role, app.currentStage, targetStage)
           if (valid) {

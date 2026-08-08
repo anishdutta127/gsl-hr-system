@@ -15,7 +15,7 @@ export default async function HrTaskDetailPage({ params }: { params: { id: strin
   const task = findHrTask(params.id)
   if (!task) notFound()
 
-  const users = loadUsers()
+  const users = (await loadUsers())
     .filter((u) => u.active)
     .map((u) => ({ id: u.id, name: u.name, role: u.role }))
     .sort((a, b) => a.name.localeCompare(b.name))

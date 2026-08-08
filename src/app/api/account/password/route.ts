@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'New password must be at least 6 characters.' }, { status: 400 })
   }
 
-  const user = loadUsers().find((u) => u.id === session.sub)
+  const user = (await loadUsers()).find((u) => u.id === session.sub)
   if (!user) return NextResponse.json({ message: 'User not found.' }, { status: 404 })
 
   const valid = await verifyPassword(currentPassword, user.bcryptHash)

@@ -49,7 +49,7 @@ export async function POST(
   if (!canEditExitProcess(session)) {
     return bad('Only Admin or HR can upload an exit letter.', 403)
   }
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   const exitProc = loadExitProcesses().find((p) => p.employeeId === params.employeeId)

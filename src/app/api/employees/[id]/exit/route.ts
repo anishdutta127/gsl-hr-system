@@ -15,7 +15,7 @@ export async function POST(
     return NextResponse.json({ message: 'Only Admin or HR can initiate exit.' }, { status: 403 })
   }
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) return NextResponse.json({ message: 'Employee not found.' }, { status: 404 })
   if (employee.status === 'Exited') {
     return NextResponse.json({ message: 'Already exited.' }, { status: 400 })

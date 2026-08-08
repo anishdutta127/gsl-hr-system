@@ -194,7 +194,7 @@ beforeEach(() => {
     const result = mutate(opts.defaultValue as never)
     return { next: result.next, commitSha: 'sha2' }
   })
-  mockFindEmp.mockReturnValue(SAMPLE_EMPLOYEE as never)
+  mockFindEmp.mockResolvedValue(SAMPLE_EMPLOYEE as never)
 })
 
 afterEach(() => {
@@ -303,7 +303,7 @@ describe('POST /api/admin/documents (upload)', () => {
 
   it('Unknown employeeId returns 404', async () => {
     mockGetSession.mockResolvedValue(HR_SESSION as never)
-    mockFindEmp.mockReturnValue(undefined)
+    mockFindEmp.mockResolvedValue(undefined)
     const res = await postUpload(uploadFormData())
     expect(res.status).toBe(404)
     expect(mockPutBinary).not.toHaveBeenCalled()

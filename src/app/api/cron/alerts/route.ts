@@ -63,7 +63,7 @@ export async function GET(request: Request) {
   }
 
   // Build the HR recipient list from active HR-role users.
-  const hrRecipients = loadUsers()
+  const hrRecipients = (await loadUsers())
     .filter((u) => u.active && (u.role === 'HR' || u.role === 'Admin'))
     .map((u) => u.email)
 
@@ -71,7 +71,7 @@ export async function GET(request: Request) {
     now,
     prefs,
     log: loadAlertLog(),
-    employees: loadEmployees(),
+    employees: await loadEmployees(),
     documents: loadEmployeeDocuments(),
     onboardingTasks: loadOnboardingTasks(),
     onboardingTemplates: loadOnboardingTemplates(),

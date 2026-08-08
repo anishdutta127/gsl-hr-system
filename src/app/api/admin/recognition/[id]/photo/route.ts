@@ -36,7 +36,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return bad('Only HR or Admin can upload recognition photos.', 403)
   }
 
-  const recognition = findRecognitionById(params.id)
+  const recognition = await findRecognitionById(params.id)
   if (!recognition) return bad('Recognition not found.', 404)
 
   let formData: FormData

@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function CareersIndexPage() {
+export default async function CareersIndexPage() {
   const company = loadCompany()
-  const roles = loadRoles().filter(isPubliclyVisible)
+  const roles = (await loadRoles()).filter(isPubliclyVisible)
 
   return (
     <div className="container-page pb-16 pt-12">

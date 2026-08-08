@@ -61,7 +61,7 @@ export async function POST(request: Request) {
   const results: Array<{ candidateId: string; status: 'ok' | 'skipped' | 'error'; reason?: string }> = []
 
   if (action.type === 'add-to-pipeline') {
-    const role = findRoleById(action.roleId)
+    const role = await findRoleById(action.roleId)
     if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
     if (!canAcceptNewCandidates(role)) {
       return NextResponse.json(
@@ -70,9 +70,9 @@ export async function POST(request: Request) {
       )
     }
 
-    const existingApps = loadApplications()
+    const existingApps = await loadApplications()
     for (const cid of candidateIds) {
-      const candidate = findCandidateById(cid)
+      const candidate = await findCandidateById(cid)
       if (!candidate) {
         results.push({ candidateId: cid, status: 'error', reason: 'not found' })
         continue
@@ -116,7 +116,7 @@ export async function POST(request: Request) {
     }
   } else if (action.type === 'archive') {
     for (const cid of candidateIds) {
-      const candidate = findCandidateById(cid)
+      const candidate = await findCandidateById(cid)
       if (!candidate) {
         results.push({ candidateId: cid, status: 'error', reason: 'not found' })
         continue
@@ -146,7 +146,7 @@ export async function POST(request: Request) {
     const via = action.via === 'outlook' ? 'outlook' : 'log-only'
     const noteSuffix = via === 'outlook' ? ' Composed in Outlook (mailto).' : ''
     for (const cid of candidateIds) {
-      const candidate = findCandidateById(cid)
+      const candidate = await findCandidateById(cid)
       if (!candidate) {
         results.push({ candidateId: cid, status: 'error', reason: 'not found' })
         continue

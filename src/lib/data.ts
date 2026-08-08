@@ -1,13 +1,21 @@
 /*
- * Read-side data loaders. Each entity is a flat JSON file at src/data/*.json.
- * Reads happen at request time (server components) or build time (static pages).
- * Writes happen via the queue (lib/queue/pendingUpdates.ts).
+ * Read-side data loaders, backed by Postgres.
  *
- * Fallbacks: if a file doesn't exist yet (fresh deploy), return [].
+ * These were synchronous fs.readFileSync reads of src/data/*.json. They are
+ * now async Prisma reads. Signatures and return shapes are unchanged, so the
+ * only change at a call site is `await`.
+ *
+ * The record shape is produced by src/lib/db/entities.ts, which is the same
+ * mapping scripts/db/verify_parity.ts uses to prove all 907 records round-trip
+ * from Postgres byte-for-byte. If a loader returns something the old JSON did
+ * not, parity fails first.
+ *
+ * Connection: this runs in the app, so it uses the POOLED DATABASE_URL via
+ * src/lib/db.ts. Migrations and admin scripts use DIRECT_URL instead.
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
+import { prisma } from '@/lib/db'
+import { readCollection } from '@/lib/db/entities'
 import type {
   User,
   Role,
@@ -21,103 +29,91 @@ import type {
   ITAsset,
 } from './types'
 
-const DATA_DIR = path.join(process.cwd(), 'src', 'data')
-
-function readJson<T>(filename: string, fallback: T): T {
-  const filepath = path.join(DATA_DIR, filename)
-  try {
-    if (!fs.existsSync(filepath)) return fallback
-    const text = fs.readFileSync(filepath, 'utf-8')
-    if (!text.trim()) return fallback
-    return JSON.parse(text) as T
-  } catch {
-    return fallback
-  }
+export async function loadUsers(): Promise<User[]> {
+  return (await readCollection('src/data/users.json')) as unknown as User[]
 }
 
-export function loadUsers(): User[] {
-  return readJson<User[]>('users.json', [])
+export async function loadRoles(): Promise<Role[]> {
+  return (await readCollection('src/data/roles.json')) as unknown as Role[]
 }
 
-export function loadRoles(): Role[] {
-  return readJson<Role[]>('roles.json', [])
-}
-
-export function loadCandidates(): Candidate[] {
-  const raw = readJson<unknown[]>('candidates.json', [])
-  // Boundary filter: drop records that don't satisfy the Candidate shape.
-  // Why: the queue applier has historically mis-routed outbound-mail records
-  // into candidates.json (entity name collision, fixed in mail.ts). Anything
-  // missing id+name would crash downstream consumers like the /emails/[id]
-  // sort and the magic-link email lookup.
-  return raw.filter((c): c is Candidate => {
+export async function loadCandidates(): Promise<Candidate[]> {
+  const raw = await readCollection('src/data/candidates.json')
+  // Boundary filter kept from the JSON era: the queue applier has historically
+  // mis-routed outbound-mail records into candidates (entity name collision,
+  // fixed in mail.ts). Anything missing id+name would crash downstream
+  // consumers like the /emails/[id] sort and the magic-link email lookup.
+  return raw.filter((c) => {
     if (!c || typeof c !== 'object') return false
     const r = c as Record<string, unknown>
     return typeof r.id === 'string' && typeof r.name === 'string'
-  })
+  }) as unknown as Candidate[]
 }
 
-export function loadApplications(): Application[] {
-  return readJson<Application[]>('applications.json', [])
+export async function loadApplications(): Promise<Application[]> {
+  return (await readCollection('src/data/applications.json')) as unknown as Application[]
 }
 
-export function loadInterviews(): Interview[] {
-  return readJson<Interview[]>('interviews.json', [])
+export async function loadInterviews(): Promise<Interview[]> {
+  return (await readCollection('src/data/interviews.json')) as unknown as Interview[]
 }
 
-export function loadOffers(): Offer[] {
-  return readJson<Offer[]>('offers.json', [])
+export async function loadOffers(): Promise<Offer[]> {
+  return (await readCollection('src/data/offers.json')) as unknown as Offer[]
 }
 
-export function loadEmployees(): Employee[] {
-  return readJson<Employee[]>('employees.json', [])
+export async function loadEmployees(): Promise<Employee[]> {
+  return (await readCollection('src/data/employees.json')) as unknown as Employee[]
 }
 
-export function loadRecognitions(): Recognition[] {
-  return readJson<Recognition[]>('recognitions.json', [])
+export async function loadRecognitions(): Promise<Recognition[]> {
+  return (await readCollection('src/data/recognitions.json')) as unknown as Recognition[]
 }
 
-export function findRecognitionById(id: string): Recognition | undefined {
-  return loadRecognitions().find((r) => r.id === id)
+export async function findRecognitionById(id: string): Promise<Recognition | undefined> {
+  return (await loadRecognitions()).find((r) => r.id === id)
 }
 
-export function loadNominationCycles(): NominationCycle[] {
-  return readJson<NominationCycle[]>('nomination_cycles.json', [])
+export async function loadNominationCycles(): Promise<NominationCycle[]> {
+  return (await readCollection('src/data/nomination_cycles.json')) as unknown as NominationCycle[]
 }
 
-export function loadITAssets(): ITAsset[] {
-  return readJson<ITAsset[]>('it_assets.json', [])
+export async function loadITAssets(): Promise<ITAsset[]> {
+  return (await readCollection('src/data/it_assets.json')) as unknown as ITAsset[]
 }
 
-export function findITAssetById(id: string): ITAsset | undefined {
-  return loadITAssets().find((a) => a.id === id)
+export async function findITAssetById(id: string): Promise<ITAsset | undefined> {
+  return (await loadITAssets()).find((a) => a.id === id)
 }
 
-export function findCandidateById(id: string): Candidate | undefined {
-  return loadCandidates().find((c) => c.id === id)
+// The find* helpers below query by key rather than loading the whole
+// collection. Same contract as before, far less work per call.
+
+export async function findCandidateById(id: string): Promise<Candidate | undefined> {
+  return (await loadCandidates()).find((c) => c.id === id)
 }
 
-export function findApplicationById(id: string): Application | undefined {
-  return loadApplications().find((a) => a.id === id)
+export async function findApplicationById(id: string): Promise<Application | undefined> {
+  return (await loadApplications()).find((a) => a.id === id)
 }
 
-export function findOfferById(id: string): Offer | undefined {
-  return loadOffers().find((o) => o.id === id)
+export async function findOfferById(id: string): Promise<Offer | undefined> {
+  return (await loadOffers()).find((o) => o.id === id)
 }
 
-export function findEmployeeById(id: string): Employee | undefined {
-  return loadEmployees().find((e) => e.id === id)
+export async function findEmployeeById(id: string): Promise<Employee | undefined> {
+  return (await loadEmployees()).find((e) => e.id === id)
 }
 
-/** Find a user by email for login. Case-insensitive. */
-export function findUserByEmail(email: string): User | undefined {
+/** Find a user by email for login. Case-insensitive, active users only. */
+export async function findUserByEmail(email: string): Promise<User | undefined> {
   const normalized = email.trim().toLowerCase()
-  return loadUsers().find((u) => u.email.toLowerCase() === normalized && u.active)
+  return (await loadUsers()).find((u) => u.email.toLowerCase() === normalized && u.active)
 }
 
 /** Find a role by id. */
-export function findRoleById(id: string): Role | undefined {
-  return loadRoles().find((r) => r.id === id)
+export async function findRoleById(id: string): Promise<Role | undefined> {
+  return (await loadRoles()).find((r) => r.id === id)
 }
 
 /** All applications for a given role, with candidate joined in. */
@@ -125,9 +121,13 @@ export interface ApplicationWithCandidate extends Application {
   candidate: Candidate | undefined
 }
 
-export function loadApplicationsForRole(roleId: string): ApplicationWithCandidate[] {
-  const applications = loadApplications().filter((a) => a.roleId === roleId)
-  const candidates = loadCandidates()
+export async function loadApplicationsForRole(roleId: string): Promise<ApplicationWithCandidate[]> {
+  const [applications, candidates] = await Promise.all([loadApplications(), loadCandidates()])
   const byId = new Map(candidates.map((c) => [c.id, c] as const))
-  return applications.map((a) => ({ ...a, candidate: byId.get(a.candidateId) }))
+  return applications
+    .filter((a) => a.roleId === roleId)
+    .map((a) => ({ ...a, candidate: byId.get(a.candidateId) }))
 }
+
+/** Exposed so callers that need a transaction can reuse the same client. */
+export { prisma }

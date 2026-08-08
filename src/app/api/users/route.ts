@@ -47,7 +47,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Starter password (min 6 chars) required.' }, { status: 400 })
   }
 
-  const existing = loadUsers().find((u) => u.email.toLowerCase() === email)
+  const existing = (await loadUsers()).find((u) => u.email.toLowerCase() === email)
   if (existing) {
     return NextResponse.json({ message: 'A user with that email already exists.' }, { status: 409 })
   }

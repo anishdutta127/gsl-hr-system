@@ -43,7 +43,7 @@ export async function POST(
     )
   }
 
-  const application = loadApplications().find((a) => a.id === params.id)
+  const application = (await loadApplications()).find((a) => a.id === params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }
@@ -55,7 +55,7 @@ export async function POST(
     )
   }
 
-  const role = findRoleById(application.roleId)
+  const role = await findRoleById(application.roleId)
   if (!role) {
     return NextResponse.json({ message: 'Role not found for this application.' }, { status: 404 })
   }
@@ -91,7 +91,7 @@ export async function POST(
     )
   }
 
-  const candidate = findCandidateById(application.candidateId)
+  const candidate = await findCandidateById(application.candidateId)
   const fromStage = application.currentStage
   const composedNotes = `Reopened from ${fromStage} to ${targetStage}: ${reason}${
     notifyCandidate ? ' (follow-up reminder requested)' : ''

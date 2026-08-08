@@ -14,11 +14,11 @@ export const dynamic = 'force-dynamic'
 
 export default async function DashboardPage() {
   await requireRoles(['Admin', 'HR', 'Leadership'])
-  const roles = loadRoles()
-  const applications = loadApplications()
-  const candidates = loadCandidates()
-  const offers = loadOffers()
-  const employees = loadEmployees()
+  const roles = await loadRoles()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
+  const offers = await loadOffers()
+  const employees = await loadEmployees()
 
   const openRoles = roles.filter((r) => r.status === 'Open')
   const inFlight = applications.filter((a) => !isTerminal(a.currentStage))

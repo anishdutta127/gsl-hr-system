@@ -46,7 +46,7 @@ export async function POST(
   const session = await getCurrentSession()
   if (!session) return bad('Not signed in.', 401)
 
-  const list = loadRecognitions()
+  const list = await loadRecognitions()
   const target = list.find((r) => r.id === params.id)
   if (!target) return bad('Recognition not found.', 404)
 
@@ -113,7 +113,7 @@ export async function POST(
           commitMessage: `feat(recognition): ${action} ${params.id}`,
         }
       },
-      { defaultValue: loadRecognitions() },
+      { defaultValue: await loadRecognitions() },
     )
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Save failed.'

@@ -19,10 +19,10 @@ export default async function NewOfferPage({
 
   const applicationId = searchParams.applicationId
   if (!applicationId) notFound()
-  const app = findApplicationById(applicationId)
+  const app = await findApplicationById(applicationId)
   if (!app) notFound()
-  const candidate = findCandidateById(app.candidateId)
-  const role = findRoleById(app.roleId)
+  const candidate = await findCandidateById(app.candidateId)
+  const role = await findRoleById(app.roleId)
   if (!candidate || !role) notFound()
 
   return (

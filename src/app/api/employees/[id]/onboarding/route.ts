@@ -18,7 +18,7 @@ export async function POST(
     )
   }
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) return NextResponse.json({ message: 'Employee not found.' }, { status: 404 })
 
   let body: { itemId?: unknown; done?: unknown }

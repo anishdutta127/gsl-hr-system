@@ -129,7 +129,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Cover note too long.' }, { status: 400 })
   }
 
-  const role = findRoleById(roleId)
+  const role = await findRoleById(roleId)
   if (!role || role.status !== 'Open') {
     return NextResponse.json(
       { message: 'That role is not accepting applications right now.' },

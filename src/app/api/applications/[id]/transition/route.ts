@@ -43,12 +43,12 @@ export async function POST(
     return NextResponse.json({ message: 'Target stage required.' }, { status: 400 })
   }
 
-  const application = loadApplications().find((a) => a.id === params.id)
+  const application = (await loadApplications()).find((a) => a.id === params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }
 
-  const role = findRoleById(application.roleId)
+  const role = await findRoleById(application.roleId)
   if (!role) {
     return NextResponse.json({ message: 'Role not found for this application.' }, { status: 404 })
   }
@@ -200,9 +200,9 @@ async function notifyHodOfRound(
   stage: string,
   movedBy: string,
 ): Promise<void> {
-  const candidate = findCandidateById(candidateId)
+  const candidate = await findCandidateById(candidateId)
   const candidateName = candidate?.name ?? 'a candidate'
-  const users = loadUsers()
+  const users = await loadUsers()
   const targets =
     stage === 'HOD2RoundScheduled' && role.hodRound2UserId
       ? [role.hodRound2UserId]

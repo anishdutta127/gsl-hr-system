@@ -113,7 +113,7 @@ export async function POST(request: Request) {
     return bad('Half-day leave must start and end on the same date.')
   }
 
-  const employee = findEmployeeById(employeeId)
+  const employee = await findEmployeeById(employeeId)
   if (!employee) return bad('Employee not found.', 404)
   if (employee.status === 'Exited') return bad('Cannot apply leave for an exited employee.', 409)
 

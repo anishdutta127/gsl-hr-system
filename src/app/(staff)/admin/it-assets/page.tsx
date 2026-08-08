@@ -22,8 +22,8 @@ export default async function ITAssetsAdminPage() {
   if (!session) redirect('/login')
   if (!canViewITAssets(session)) redirect('/')
 
-  const assets = loadITAssets()
-  const employees = loadEmployees().map((e) => ({
+  const assets = await loadITAssets()
+  const employees = (await loadEmployees()).map((e) => ({
     id: e.id,
     name: e.name,
     code: e.employeeCode ?? '',

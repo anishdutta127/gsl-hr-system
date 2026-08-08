@@ -12,7 +12,7 @@ export default async function LetterGenerateePage({ params }: { params: { id: st
   const template = findTemplateById(params.id)
   if (!template) notFound()
 
-  let employees = loadEmployees()
+  let employees = await loadEmployees()
   if (template.audience === 'exited') {
     employees = employees.filter((e) => e.status === 'Exited')
   } else if (template.audience === 'all-employees') {

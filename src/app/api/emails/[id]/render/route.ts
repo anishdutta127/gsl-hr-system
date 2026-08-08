@@ -18,10 +18,10 @@ function firstName(fullName: string): string {
 function resolveDefault(
   source: EmailVariable['defaultFrom'],
   ctx: {
-    candidate?: ReturnType<typeof findCandidateById>
-    role?: ReturnType<typeof loadRoles>[number]
-    hod?: ReturnType<typeof loadUsers>[number]
-    company: ReturnType<typeof loadCompany>
+    candidate?: Awaited<ReturnType<typeof findCandidateById>>
+    role?: Awaited<ReturnType<typeof loadRoles>>[number]
+    hod?: Awaited<ReturnType<typeof loadUsers>>[number]
+    company: Awaited<ReturnType<typeof loadCompany>>
   },
 ): string {
   if (!source) return ''
@@ -82,20 +82,20 @@ export async function POST(
   const roleIdOverride = typeof body.roleId === 'string' ? body.roleId : ''
   const provided = body.values && typeof body.values === 'object' ? (body.values as Record<string, unknown>) : {}
 
-  const candidate = candidateId ? findCandidateById(candidateId) : undefined
+  const candidate = candidateId ? await findCandidateById(candidateId) : undefined
 
   // If roleId not given, guess via the candidate's most-recent application.
-  let role: ReturnType<typeof loadRoles>[number] | undefined
+  let role: Awaited<ReturnType<typeof loadRoles>>[number] | undefined
   if (roleIdOverride) {
-    role = loadRoles().find((r) => r.id === roleIdOverride)
+    role = (await loadRoles()).find((r) => r.id === roleIdOverride)
   } else if (candidate) {
-    const apps = loadApplications().filter((a) => a.candidateId === candidate.id)
+    const apps = (await loadApplications()).filter((a) => a.candidateId === candidate.id)
     const latest = apps.sort((a, b) => b.createdAt.localeCompare(a.createdAt))[0]
-    if (latest) role = loadRoles().find((r) => r.id === latest.roleId)
+    if (latest) role = (await loadRoles()).find((r) => r.id === latest.roleId)
   }
 
-  let hod: ReturnType<typeof loadUsers>[number] | undefined
-  if (role?.hodUserId) hod = loadUsers().find((u) => u.id === role!.hodUserId)
+  let hod: Awaited<ReturnType<typeof loadUsers>>[number] | undefined
+  if (role?.hodUserId) hod = (await loadUsers()).find((u) => u.id === role!.hodUserId)
 
   const company = loadCompany()
 

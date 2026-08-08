@@ -51,7 +51,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Valid email required.' }, { status: 400 })
   }
 
-  const candidate = loadCandidates().find((c) => c.email.toLowerCase() === email)
+  const candidate = (await loadCandidates()).find((c) => c.email.toLowerCase() === email)
   if (!candidate) {
     // Still return ok to prevent enumeration. Log for ops visibility.
     console.info('magic-link request for unknown email:', email)

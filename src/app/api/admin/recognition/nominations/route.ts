@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Select at least one HOD.' }, { status: 400 })
   }
 
-  const users = loadUsers()
+  const users = await loadUsers()
   const validHodIds = new Set(
     users.filter((u) => u.active && u.role === 'HOD').map((u) => u.id),
   )
@@ -82,7 +82,7 @@ export async function POST(request: Request) {
         next: [...current, cycle],
         commitMessage: `chore(recognition): open nomination cycle for ${month}`,
       }),
-      { defaultValue: loadNominationCycles() },
+      { defaultValue: await loadNominationCycles() },
     )
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Save failed.'

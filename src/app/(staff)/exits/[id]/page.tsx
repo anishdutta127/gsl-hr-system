@@ -28,7 +28,7 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
   const session = await getCurrentSession()
   if (!session) redirect('/login')
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
 
   if (!canViewExitProcess(session, employee)) redirect('/')
@@ -39,7 +39,7 @@ export default async function ExitCockpitPage({ params }: { params: { id: string
   const company = loadCompany()
 
   // Resolve the reporting manager for the handover email.
-  const users = loadUsers()
+  const users = await loadUsers()
   const rmUser = employee.reportingManagerId
     ? users.find((u) => u.id === employee.reportingManagerId)
     : undefined

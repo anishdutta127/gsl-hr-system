@@ -16,7 +16,7 @@ export async function GET(
   // resumes inherit that visibility through the existing UI surfaces.
   await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
 
-  const candidate = findCandidateById(params.candidateId)
+  const candidate = await findCandidateById(params.candidateId)
   if (!candidate || !candidate.resumeFilePath) {
     return NextResponse.json({ message: 'No resume on file.' }, { status: 404 })
   }

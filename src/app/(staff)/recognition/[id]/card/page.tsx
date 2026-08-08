@@ -18,15 +18,15 @@ interface Props {
 export default async function RecognitionCardPage({ params }: Props) {
   await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
 
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec) notFound()
   // Unreviewed nominations stay private to /admin/recognition. The card
   // view is for Approved + Published + Archived (audit view) only.
   if (rec.status === 'Draft') notFound()
 
   const company = loadCompany()
-  const users = loadUsers()
-  const employees = loadEmployees()
+  const users = await loadUsers()
+  const employees = await loadEmployees()
 
   // Find the employee for this recognition. employeeId may be a User id
   // (the form maps employees through the User table) or, for legacy

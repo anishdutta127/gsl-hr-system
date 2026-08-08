@@ -24,7 +24,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
   if (session.role !== 'Admin' && session.role !== 'HR') {
     return bad('Only HR or Admin can record voucher delivery.', 403)
   }
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec) return bad('Recognition not found.', 404)
 
   let body: Body
