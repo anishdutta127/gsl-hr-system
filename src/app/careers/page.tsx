@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { loadRoles } from '@/lib/data'
 import { loadCompany } from '@/lib/company'
 import { isPubliclyVisible } from '@/lib/roleStatus'
+import { toPublicRoleSummary } from '@/lib/roles/publicRole'
 import { CareersBrowser } from './CareersBrowser'
 
 export const dynamic = 'force-dynamic'
@@ -33,7 +34,10 @@ export const metadata: Metadata = {
 
 export default function CareersIndexPage() {
   const company = loadCompany()
-  const roles = loadRoles().filter(isPubliclyVisible)
+  // Projected BEFORE it reaches CareersBrowser. That component is 'use client',
+  // so whatever is passed here is serialised into the RSC payload and served to
+  // every anonymous visitor, rendered or not.
+  const roles = loadRoles().filter(isPubliclyVisible).map(toPublicRoleSummary)
 
   return (
     <div className="container-page pb-16 pt-12">
