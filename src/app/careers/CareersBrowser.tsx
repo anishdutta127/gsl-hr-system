@@ -2,11 +2,11 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import type { Role } from '@/lib/types'
+import type { PublicRoleSummary } from '@/lib/roles/publicRole'
 
 type Filter = 'team' | 'location' | 'type'
 
-export function CareersBrowser({ roles }: { roles: Role[] }) {
+export function CareersBrowser({ roles }: { roles: PublicRoleSummary[] }) {
   const [team, setTeam] = useState<string>('all')
   const [location, setLocation] = useState<string>('all')
   const [type, setType] = useState<string>('all')

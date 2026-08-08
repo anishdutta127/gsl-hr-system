@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { findRoleById } from '@/lib/data'
 import { formatRs } from '@/lib/format'
 import { isPubliclyVisible } from '@/lib/roleStatus'
+import { toPublicRole } from '@/lib/roles/publicRole'
 import { plainTextToHtml, sanitiseRoleHtml } from '@/lib/sanitiseHtml'
 import { RoleApplyForm } from './RoleApplyForm'
 
@@ -51,13 +52,19 @@ const TIMELINE_STEPS = [
 ]
 
 export default function CareersRolePage({ params }: { params: { roleId: string } }) {
-  const role = findRoleById(params.roleId)
-  if (!role || !isPubliclyVisible(role)) notFound()
+  const record = findRoleById(params.roleId)
+  if (!record || !isPubliclyVisible(record)) notFound()
 
-  const salary =
-    role.salaryRange && role.salaryRange.disclose
-      ? `${formatRs(role.salaryRange.min, { compact: true })} to ${formatRs(role.salaryRange.max, { compact: true })} per ${role.salaryRange.period === 'annual' ? 'year' : 'month'}`
-      : 'Shared at first interview.'
+  // Everything below renders from the PROJECTION, never from the record. This
+  // page is a server component so only its output ships today, but projecting
+  // here means a future prop handed to a client component cannot leak either.
+  const role = toPublicRole(record)
+
+  // Undisclosed pay is absent from the projection rather than merely unrendered,
+  // so the figures cannot appear in the payload.
+  const salary = role.salary
+    ? `${formatRs(role.salary.min, { compact: true })} to ${formatRs(role.salary.max, { compact: true })} per ${role.salary.period === 'annual' ? 'year' : 'month'}`
+    : 'Shared at first interview.'
 
   return (
     <div className="container-page pb-16 pt-8">
