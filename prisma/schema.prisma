@@ -1,0 +1,508 @@
+// GSL HR System - Postgres schema.
+//
+// Derived from src/lib/types.ts AND a profile of the real src/data/*.json
+// (scripts/db/profile_json.mjs). Types alone were not enough: exit_processes
+// carries no `id` and is keyed on employeeId, roles.closeNotes is null in
+// every existing record, and real nullability (22 employees with no phone, 47
+// with no confirmationDate) only shows up in the data.
+//
+// SHAPE DECISION. Scalars the UI filters, sorts or joins on are real columns
+// with real indexes. Genuinely document-shaped sub-structures (leaveBalance,
+// the exit block, exit step payloads, rubric criteria, pipeline stages) stay
+// as Json, because they are read and written whole and normalising them would
+// buy nothing but joins. Nothing is dropped: every field present in the JSON
+// is either a column or inside a Json column.
+//
+// AUDIT. Every entity previously carried an inline auditLog[]. Git history was
+// the implicit audit trail and Postgres has no equivalent, so audit entries
+// become rows in a single append-only audit_entries table keyed by
+// (entityType, entityId). See docs/DB-NOTES.md.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// --- Audit -----------------------------------------------------------------
+
+/// Append-only. One row per audit entry that used to live in an entity's
+/// auditLog[]. Never updated, never deleted.
+model AuditEntry {
+  id         String   @id @default(uuid())
+  entityType String   @map("entity_type")
+  entityId   String   @map("entity_id")
+  timestamp  String
+  actor      String
+  action     String
+  before     Json?
+  after      Json?
+  notes      String?
+  /// Ordinal within the source auditLog[], so original ordering survives a
+  /// migration where several entries share a timestamp.
+  seq        Int      @default(0)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([entityType, entityId])
+  @@index([entityType, entityId, seq])
+  @@index([timestamp])
+  @@map("audit_entries")
+}
+
+// --- Staff and access ------------------------------------------------------
+
+model User {
+  id           String   @id
+  email        String   @unique
+  name         String
+  role         String
+  bcryptHash   String?  @map("bcrypt_hash")
+  createdAt    String   @map("created_at")
+  active       Boolean  @default(true)
+  ownedRoleIds Json?    @map("owned_role_ids")
+  /// Anything present in users.json but not modelled above.
+  extra        Json?
+
+  @@index([role])
+  @@index([active])
+  @@map("users")
+}
+
+// --- Hiring ----------------------------------------------------------------
+
+model Role {
+  id              String  @id
+  title           String
+  department      String
+  location        String
+  employmentType  String  @map("employment_type")
+  status          String
+  description     String  @default("")
+  hodUserId       String? @map("hod_user_id")
+  hodRound2UserId String? @map("hod_round2_user_id")
+  pauseReason     String? @map("pause_reason")
+  closeOutcome    String? @map("close_outcome")
+  closeNotes      String? @map("close_notes")
+  createdAt       String  @map("created_at")
+  createdBy       String  @map("created_by")
+
+  pipelineStages  Json    @map("pipeline_stages")
+  rubric          Json    @default("[]")
+  responsibilities Json   @default("[]")
+  mustHaves       Json    @default("[]") @map("must_haves")
+  niceToHaves     Json    @default("[]") @map("nice_to_haves")
+  salaryRange     Json?   @map("salary_range")
+  extra           Json?
+
+  applications Application[]
+
+  @@index([status])
+  @@index([department])
+  @@index([createdAt])
+  @@map("roles")
+}
+
+model Candidate {
+  id             String  @id
+  name           String
+  email          String
+  phone          String  @default("")
+  source         String
+  resumeFilePath String? @map("resume_file_path")
+  searchableText String? @map("searchable_text")
+  status         String? @default("Active")
+  createdAt      String? @map("created_at")
+  createdBy      String? @map("created_by")
+  tags           Json?
+  extra          Json?
+
+  applications Application[]
+
+  @@index([email])
+  @@index([status])
+  @@index([source])
+  @@map("candidates")
+}
+
+model Application {
+  id           String  @id
+  candidateId  String  @map("candidate_id")
+  roleId       String  @map("role_id")
+  currentStage String  @map("current_stage")
+  createdAt    String? @map("created_at")
+  createdBy    String? @map("created_by")
+  updatedAt    String? @map("updated_at")
+  extra        Json?
+
+  candidate Candidate @relation(fields: [candidateId], references: [id], onDelete: Cascade)
+  role      Role      @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@index([roleId])
+  @@index([candidateId])
+  @@index([currentStage])
+  @@index([roleId, currentStage])
+  @@map("applications")
+}
+
+model Interview {
+  id                String  @id
+  applicationId     String  @map("application_id")
+  roleId            String? @map("role_id")
+  candidateId       String? @map("candidate_id")
+  round             String
+  interviewerUserId String? @map("interviewer_user_id")
+  scheduledAt       String? @map("scheduled_at")
+  conductedAt       String? @map("conducted_at")
+  notes             String  @default("")
+  recommendation    String?
+  aggregateScore    Float?  @map("aggregate_score")
+  createdAt         String? @map("created_at")
+  createdBy         String? @map("created_by")
+  scores            Json    @default("[]")
+  extra             Json?
+
+  @@index([applicationId])
+  @@index([roleId])
+  @@index([candidateId])
+  @@map("interviews")
+}
+
+model Offer {
+  id            String  @id
+  applicationId String? @map("application_id")
+  candidateId   String? @map("candidate_id")
+  roleId        String? @map("role_id")
+  status        String
+  createdAt     String? @map("created_at")
+  createdBy     String? @map("created_by")
+  updatedAt     String? @map("updated_at")
+  extra         Json?
+
+  @@index([status])
+  @@index([applicationId])
+  @@index([roleId])
+  @@map("offers")
+}
+
+// --- People ----------------------------------------------------------------
+
+model Employee {
+  id                     String   @id
+  employeeCode           String   @map("employee_code")
+  title                  String   @default("")
+  name                   String
+  email                  String   @default("")
+  phone                  String?
+  designation            String   @default("")
+  department             String   @default("")
+  location               String   @default("")
+  reportingTo            String?  @map("reporting_to")
+  reportingManagerId     String?  @map("reporting_manager_id")
+  dateOfJoining          String?  @map("date_of_joining")
+  status                 String
+  confirmationDate       String?  @map("confirmation_date")
+  tenureYears            Float?   @map("tenure_years")
+  dateOfBirth            String?  @map("date_of_birth")
+  age                    Int?
+  gender                 String?
+  maritalStatus          String?  @map("marital_status")
+  address                String?
+  personalEmail          String?  @map("personal_email")
+  officialEmailMissing   Boolean  @default(false) @map("official_email_missing")
+  locationType           String?  @map("location_type")
+  employmentStatus       String?  @map("employment_status")
+  workPattern            String?  @map("work_pattern")
+  leaveYearStart         String?  @map("leave_year_start")
+  createdAt              String   @map("created_at")
+  createdBy              String   @map("created_by")
+  updatedAt              String?  @map("updated_at")
+
+  leaveBalance        Json?  @map("leave_balance")
+  exit                Json?
+  onboardingChecklist Json?  @map("onboarding_checklist")
+  extra               Json?
+
+  @@unique([employeeCode])
+  @@index([status])
+  @@index([department])
+  @@index([location])
+  @@index([employmentStatus])
+  @@index([reportingManagerId])
+  @@index([dateOfJoining])
+  @@map("employees")
+}
+
+// --- Exits -----------------------------------------------------------------
+
+/// Keyed on employeeId: exit_processes.json carries no id of its own.
+model ExitProcess {
+  employeeId       String  @id @map("employee_id")
+  exitType         String  @map("exit_type")
+  reasonForLeaving String  @map("reason_for_leaving")
+  resignationDate  String? @map("resignation_date")
+  terminationDate  String? @map("termination_date")
+  lastWorkingDay   String  @map("last_working_day")
+  completedAt      String? @map("completed_at")
+  closedAt         String? @map("closed_at")
+  closedBy         String? @map("closed_by")
+  closeReason      String? @map("close_reason")
+  createdAt        String  @map("created_at")
+  createdBy        String  @map("created_by")
+  updatedAt        String? @map("updated_at")
+
+  steps Json
+  extra Json?
+
+  @@index([completedAt])
+  @@index([closedAt])
+  @@index([lastWorkingDay])
+  @@map("exit_processes")
+}
+
+model ExitInterview {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("exit_interviews")
+}
+
+model ExitHandover {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("exit_handovers")
+}
+
+model FFSettlement {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("ff_settlements")
+}
+
+// --- HR operations ---------------------------------------------------------
+
+model OnboardingTask {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  templateId String? @map("template_id")
+  status     String?
+  dueDate    String? @map("due_date")
+  assigneeId String? @map("assignee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@index([status])
+  @@index([assigneeId])
+  @@map("employee_onboarding_tasks")
+}
+
+model OffboardingTask {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  templateId String? @map("template_id")
+  status     String?
+  dueDate    String? @map("due_date")
+  assigneeId String? @map("assignee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@index([status])
+  @@index([assigneeId])
+  @@map("employee_offboarding_tasks")
+}
+
+model EmployeeDocument {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("employee_documents")
+}
+
+model LeaveApplication {
+  id         String  @id
+  employeeId String  @map("employee_id")
+  status     String?
+  extra      Json?
+
+  @@index([employeeId])
+  @@index([status])
+  @@map("leave_applications")
+}
+
+model LeaveBalanceRecord {
+  id         String  @id
+  employeeId String? @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("leave_balances")
+}
+
+model AttendanceException {
+  id         String  @id
+  employeeId String? @map("employee_id")
+  date       String?
+  extra      Json?
+
+  @@index([employeeId])
+  @@index([date])
+  @@map("attendance_exceptions")
+}
+
+model Holiday {
+  id    String @id
+  date  String
+  extra Json?
+
+  @@index([date])
+  @@map("holidays")
+}
+
+model EmployeeOptionalHoliday {
+  id         String  @id
+  employeeId String? @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("employee_optional_holidays")
+}
+
+model ITAsset {
+  id         String  @id
+  employeeId String? @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("it_assets")
+}
+
+model Asset {
+  id         String  @id
+  employeeId String? @map("employee_id")
+  extra      Json?
+
+  @@index([employeeId])
+  @@map("assets")
+}
+
+model HrTask {
+  id       String  @id
+  status   String?
+  dueDate  String? @map("due_date")
+  assignee String?
+  extra    Json?
+
+  @@index([status])
+  @@index([assignee])
+  @@map("hr_tasks")
+}
+
+model Recognition {
+  id    String @id
+  extra Json?
+
+  @@map("recognitions")
+}
+
+model NominationCycle {
+  id    String @id
+  extra Json?
+
+  @@map("nomination_cycles")
+}
+
+// --- Templates and configuration ------------------------------------------
+
+model OnboardingTaskTemplate {
+  id    String @id
+  extra Json?
+
+  @@map("onboarding_task_templates")
+}
+
+model OffboardingTaskTemplate {
+  id    String @id
+  extra Json?
+
+  @@map("offboarding_task_templates")
+}
+
+model ExitStepTemplate {
+  id    String @id
+  extra Json?
+
+  @@map("exit_step_templates")
+}
+
+model DocumentTemplate {
+  id    String @id
+  extra Json?
+
+  @@map("document_templates")
+}
+
+model Prompt {
+  id    String @id
+  extra Json?
+
+  @@map("prompts")
+}
+
+/// Singleton JSON documents (taxonomy, system_settings, alert_preferences).
+/// One row per document, keyed by its filename stem, so the existing
+/// read-modify-write callers keep working unchanged.
+model SingletonDoc {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("singleton_docs")
+}
+
+// --- Operational logs ------------------------------------------------------
+
+model AlertLog {
+  id    String @id
+  extra Json?
+
+  @@map("alert_log")
+}
+
+model OutboundMail {
+  id    String @id
+  extra Json?
+
+  @@map("outbound_mail")
+}
+
+/// Historical record of the retired git-queue. applied_updates.json and
+/// failed_updates.json are preserved here so the queue's history survives the
+/// migration that removes the queue itself. Never written by the app again.
+model QueueArchive {
+  id       String  @id @default(uuid())
+  sourceId String? @map("source_id")
+  kind     String
+  queuedAt String? @map("queued_at")
+  queuedBy String? @map("queued_by")
+  entity   String?
+  operation String?
+  payload  Json?
+  extra    Json?
+
+  @@index([kind])
+  @@index([entity])
+  @@map("queue_archive")
+}
