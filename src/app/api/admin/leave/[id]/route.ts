@@ -66,7 +66,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
   const app = apps.find((a) => a.id === id)
   if (!app) return bad('Leave not found.', 404)
 
-  const employee = findEmployeeById(app.employeeId)
+  const employee = await findEmployeeById(app.employeeId)
   // employee may have been deleted; we still let HR cancel/correct in that
   // case but block approval flow.
 

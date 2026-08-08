@@ -52,7 +52,7 @@ interface ReviewBody {
 export async function GET(_request: Request, { params }: { params: { employeeId: string } }) {
   const session = await getCurrentSession()
   if (!session) return bad('Unauthorised.', 401)
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
   // All staff roles can view; HOD scoping is enforced at the page layer
   // because the handover doc itself is not confidential the way exit
@@ -64,7 +64,7 @@ export async function GET(_request: Request, { params }: { params: { employeeId:
 export async function PUT(request: Request, { params }: { params: { employeeId: string } }) {
   const session = await getCurrentSession()
   if (!session) return bad('Unauthorised.', 401)
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
   if (!canEditHandover(session, { reportingManagerId: employee.reportingManagerId ?? null })) {
     return bad('Forbidden.', 403)

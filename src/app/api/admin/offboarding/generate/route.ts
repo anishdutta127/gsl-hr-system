@@ -52,7 +52,7 @@ export async function POST(request: Request) {
   const employeeId = body.employeeId?.trim()
   if (!employeeId) return bad('employeeId is required.')
 
-  const employee = findEmployeeById(employeeId)
+  const employee = await findEmployeeById(employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   const today = new Date().toISOString().slice(0, 10)
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
   }
 
   const templates = loadOffboardingTemplates()
-  const users = loadUsers()
+  const users = await loadUsers()
   const existing = loadOffboardingTasks()
   const generated = generateOffboardingTasksForEmployee({
     employee,

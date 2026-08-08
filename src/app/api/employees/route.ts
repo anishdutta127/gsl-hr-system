@@ -54,28 +54,28 @@ export async function POST(request: Request) {
   if (!designation) return NextResponse.json({ message: 'Designation required.' }, { status: 400 })
   if (!dateOfJoining) return NextResponse.json({ message: 'Date of joining required.' }, { status: 400 })
 
-  const app = findApplicationById(applicationId)
+  const app = await findApplicationById(applicationId)
   if (!app) return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
-  const candidate = findCandidateById(app.candidateId)
+  const candidate = await findCandidateById(app.candidateId)
   if (!candidate) return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
-  const role = findRoleById(app.roleId)
+  const role = await findRoleById(app.roleId)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
-  const duplicates = loadEmployees().filter((e) => e.applicationId === applicationId)
+  const duplicates = (await loadEmployees()).filter((e) => e.applicationId === applicationId)
   if (duplicates.length > 0) {
     return NextResponse.json(
       { message: 'An employee record already exists for this application.' },
       { status: 409 },
     )
   }
-  const codeClash = loadEmployees().find(
+  const codeClash = (await loadEmployees()).find(
     (e) => e.employeeCode.toLowerCase() === employeeCode.toLowerCase(),
   )
   if (codeClash) {
     return NextResponse.json({ message: 'Employee code already in use.' }, { status: 409 })
   }
 
-  const offer = loadOffers().find((o) => o.applicationId === applicationId && o.status === 'Accepted')
+  const offer = (await loadOffers()).find((o) => o.applicationId === applicationId && o.status === 'Accepted')
 
   const now = new Date().toISOString()
   const employeeId = crypto.randomUUID()

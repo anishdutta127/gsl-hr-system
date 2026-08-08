@@ -26,8 +26,12 @@ export const dynamic = 'force-dynamic'
 
 export default async function EmployeeDetailPage({ params }: { params: { id: string } }) {
   const session = await requireRoles(['Admin', 'HR', 'Leadership'])
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
+
+  // Loaded here rather than inside the JSX IIFE below: that callback is
+  // synchronous, so it cannot await, and the load has to happen once anyway.
+  const allItAssets = await loadITAssets()
 
   const canEdit = session.role === 'Admin' || session.role === 'HR'
   // Leadership reads the page but does not see the salary breakdown - kept to
@@ -86,7 +90,7 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
                 }}
                 knownLocations={[
                   ...new Set(
-                    loadEmployees()
+                    (await loadEmployees())
                       .map((e) => e.location)
                       .filter((l): l is string => !!l && l.length > 0),
                   ),
@@ -331,7 +335,7 @@ export default async function EmployeeDetailPage({ params }: { params: { id: str
           })()}
 
           {(() => {
-            const itAssigned = itAssetsAssignedTo(loadITAssets(), employee.id)
+            const itAssigned = itAssetsAssignedTo(allItAssets, employee.id)
             return (
               <section className="mt-6 rounded-lg border border-line bg-card p-5">
                 <div className="flex items-baseline justify-between">

@@ -13,7 +13,7 @@ import { deriveSalaryTokens } from '@/lib/salaryTokens'
 
 export const runtime = 'nodejs'
 
-type DefaultFrom = NonNullable<ReturnType<typeof findTemplateById>>['variables'][number]['defaultFrom']
+type DefaultFrom = NonNullable<Awaited<ReturnType<typeof findTemplateById>>>['variables'][number]['defaultFrom']
 
 /** Resolve he/she pronouns from the employee gender field. Unknown / blank
  *  gender falls back to the gender-neutral they/them/their so a letter never
@@ -30,7 +30,7 @@ function derivePronoun(
 
 function resolveDefault(
   source: DefaultFrom | undefined,
-  ctx: { employee?: ReturnType<typeof findEmployeeById>; company: ReturnType<typeof loadCompany> },
+  ctx: { employee?: Awaited<ReturnType<typeof findEmployeeById>>; company: Awaited<ReturnType<typeof loadCompany>> },
 ): string {
   if (!source) return ''
   const { employee, company } = ctx
@@ -80,7 +80,7 @@ export async function POST(
   const employeeId = typeof body.employeeId === 'string' ? body.employeeId : ''
   const providedValues = (body.values && typeof body.values === 'object') ? body.values as Record<string, unknown> : {}
 
-  const employee = employeeId ? findEmployeeById(employeeId) : undefined
+  const employee = employeeId ? await findEmployeeById(employeeId) : undefined
   const company = loadCompany()
 
   // Merge: start with defaults, overlay derived salary tokens, then provided values.

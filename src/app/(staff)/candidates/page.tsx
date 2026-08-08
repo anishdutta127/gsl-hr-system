@@ -15,9 +15,9 @@ export default async function CandidatesPage({
   searchParams: { programme?: string; q?: string; notice?: string; name?: string }
 }) {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
-  const allCandidates = loadCandidates()
-  const allApplications = loadApplications()
-  const roles = loadRoles()
+  const allCandidates = await loadCandidates()
+  const allApplications = await loadApplications()
+  const roles = await loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
 
   // HOD scoping: only candidates applied to roles this HOD owns.

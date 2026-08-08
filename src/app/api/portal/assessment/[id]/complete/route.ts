@@ -15,11 +15,11 @@ export async function POST(
     return NextResponse.json({ message: 'Session expired.' }, { status: 401 })
   }
 
-  const app = findApplicationById(params.id)
+  const app = await findApplicationById(params.id)
   if (!app || app.candidateId !== candidateId) {
     return NextResponse.json({ message: 'Not found.' }, { status: 404 })
   }
-  const role = findRoleById(app.roleId)
+  const role = await findRoleById(app.roleId)
   if (!role) {
     return NextResponse.json({ message: 'Role missing.' }, { status: 404 })
   }

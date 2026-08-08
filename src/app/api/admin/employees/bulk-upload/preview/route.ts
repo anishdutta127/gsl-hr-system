@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   if (errors.length) return NextResponse.json({ message: errors.join(' '), fileErrors: errors }, { status: 422 })
   if (rows.length === 0) return bad('No data rows found in the file.', 422)
 
-  const ctx = buildReconcileContext({ actor: session.email, now: new Date().toISOString() })
+  const ctx = await buildReconcileContext({ actor: session.email, now: new Date().toISOString() })
   const results = reconcileEmployeeImport(rows, ctx)
 
   return NextResponse.json({

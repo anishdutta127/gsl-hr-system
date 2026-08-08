@@ -11,7 +11,7 @@ export default async function NewUserPage() {
   if (!session) redirect('/login')
   if (session.role !== 'Admin') redirect('/')
 
-  const roles = loadRoles()
+  const roles = await loadRoles()
 
   return (
     <div className="container-page py-8">

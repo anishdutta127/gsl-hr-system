@@ -14,6 +14,15 @@
  */
 
 import type { PendingUpdate } from '../types'
+import { prisma } from '@/lib/db'
+import {
+  isRegisteredPath,
+  isSingletonPath,
+  readCollection,
+  readSingleton,
+  writeCollection,
+  writeSingleton,
+} from '@/lib/db/entities'
 
 const DEFAULT_REPO = 'anishdutta127/gsl-hr-system'
 const DEFAULT_BRANCH = 'main'
@@ -121,7 +130,70 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+/**
+ * Read-modify-write a collection, now backed by Postgres.
+ *
+ * The signature is unchanged from the GitHub Contents API version on purpose:
+ * all 57 call sites already await it and pass the same `src/data/*.json` path,
+ * so none of them had to change. What changed is that the write is SYNCHRONOUS
+ * to the caller. There is no queue, no cron, no drain: when this resolves, a
+ * subsequent read sees the new value.
+ *
+ * The whole read-modify-write runs inside one transaction, so a multi-record
+ * mutation is atomic and a concurrent writer cannot interleave. `commitSha` is
+ * retained for callers that log it and is now the transaction marker rather
+ * than a git sha.
+ *
+ * FAILURE BEHAVIOUR: this throws. It never returns a value that would let a
+ * caller record an audit entry claiming a write succeeded when it did not,
+ * because the audit append happens inside the same transaction.
+ */
 export async function atomicUpdateJson<T>(
+  path: string,
+  mutate: (current: T) => { next: T; commitMessage: string },
+  options: {
+    defaultValue: T
+    maxRetries?: number
+  },
+): Promise<{ next: T; commitSha: string }> {
+  if (!isRegisteredPath(path)) {
+    throw new Error(
+      `atomicUpdateJson: no Postgres entity registered for "${path}". ` +
+        'Add it to ENTITIES or SINGLETONS in src/lib/db/entities.ts. ' +
+        'Refusing to write, rather than silently dropping the change.',
+    )
+  }
+
+  return prisma.$transaction(
+    async (tx) => {
+      if (isSingletonPath(path)) {
+        const current = await readSingleton<T>(path, options.defaultValue, tx)
+        const { next } = mutate(current)
+        await writeSingleton(path, next, tx)
+        return { next, commitSha: `pg:${path}` }
+      }
+
+      const current = (await readCollection(path, tx)) as unknown as T
+      const { next } = mutate(current)
+      if (!Array.isArray(next)) {
+        throw new Error(`atomicUpdateJson: "${path}" is a collection, but mutate returned a non-array`)
+      }
+      await writeCollection(path, next as unknown as Record<string, unknown>[], tx)
+      return { next, commitSha: `pg:${path}` }
+    },
+    { timeout: 30_000, maxWait: 10_000 },
+  )
+}
+
+/**
+ * The original GitHub Contents API read-modify-write.
+ *
+ * KEPT DELIBERATELY, and used by exactly one caller: enqueueUpdate, which
+ * writes src/data/pending_updates.json. That queue is still what production
+ * uses for its write path, and it is removed at cutover, not here. Everything
+ * else now goes through the Postgres atomicUpdateJson above.
+ */
+export async function atomicUpdateJsonViaGitHub<T>(
   path: string,
   mutate: (current: T) => { next: T; commitMessage: string },
   options: {
@@ -297,7 +369,7 @@ export async function dispatchWorkflow(workflowFileName: string): Promise<void> 
 }
 
 export async function appendToQueue(entry: PendingUpdate): Promise<{ commitSha: string }> {
-  const { commitSha } = await atomicUpdateJson<PendingUpdate[]>(
+  const { commitSha } = await atomicUpdateJsonViaGitHub<PendingUpdate[]>(
     PENDING_UPDATES_PATH,
     (current) => {
       const list = Array.isArray(current) ? current : []

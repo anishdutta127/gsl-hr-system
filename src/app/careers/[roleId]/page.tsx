@@ -14,7 +14,7 @@ export async function generateMetadata({
 }: {
   params: { roleId: string }
 }): Promise<Metadata> {
-  const role = findRoleById(params.roleId)
+  const role = await findRoleById(params.roleId)
   if (!role) return { title: 'Role · GSL Careers' }
   const title = `${role.title} · GSL Careers`
   // Strip HTML tags for the meta description so OG previews are plain text.
@@ -50,8 +50,8 @@ const TIMELINE_STEPS = [
   { label: 'Offer', description: 'We confirm, you decide.' },
 ]
 
-export default function CareersRolePage({ params }: { params: { roleId: string } }) {
-  const role = findRoleById(params.roleId)
+export default async function CareersRolePage({ params }: { params: { roleId: string } }) {
+  const role = await findRoleById(params.roleId)
   if (!role || !isPubliclyVisible(role)) notFound()
 
   const salary =

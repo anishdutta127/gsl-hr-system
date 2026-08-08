@@ -11,9 +11,9 @@ export default async function EditUserPage({ params }: { params: { id: string } 
   if (!session) redirect('/login')
   if (session.role !== 'Admin') redirect('/')
 
-  const user = loadUsers().find((u) => u.id === params.id)
+  const user = (await loadUsers()).find((u) => u.id === params.id)
   if (!user) notFound()
-  const roles = loadRoles()
+  const roles = await loadRoles()
 
   return (
     <div className="container-page py-8">

@@ -26,9 +26,9 @@ export default async function RolesPage({
     typeof searchParams.queued === 'string' && searchParams.queued.trim()
       ? searchParams.queued.trim().slice(0, 120)
       : null
-  const allRoles = loadRoles()
+  const allRoles = await loadRoles()
   const roles = showArchived ? allRoles : allRoles.filter((r) => r.status !== 'Archived')
-  const applications = loadApplications()
+  const applications = await loadApplications()
 
   const rolesByStatus = {
     Open: roles.filter((r) => r.status === 'Open'),

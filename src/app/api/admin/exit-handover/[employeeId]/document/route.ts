@@ -38,7 +38,7 @@ export async function POST(request: Request, { params }: { params: { employeeId:
   const session = await getCurrentSession()
   if (!session) return bad('Unauthorised.', 401)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
   if (!canEditHandover(session, { reportingManagerId: employee.reportingManagerId ?? null })) {
     return bad('Forbidden.', 403)

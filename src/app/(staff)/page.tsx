@@ -25,12 +25,12 @@ export default async function HomePage() {
   const session = await getCurrentSession()
   if (!session) return null
 
-  const roles = loadRoles()
+  const roles = await loadRoles()
   const openRoles = roles.filter((r) => r.status === 'Open')
-  const applications = loadApplications()
-  const candidates = loadCandidates()
-  const interviews = loadInterviews()
-  const offers = loadOffers()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
+  const interviews = await loadInterviews()
+  const offers = await loadOffers()
   const inFlight = applications.filter((a) => !isTerminal(a.currentStage))
 
   const attention = buildAttentionFeed({

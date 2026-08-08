@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 export default async function RoleRubricPage({ params }: { params: { id: string } }) {
   await requireRoles(['Admin', 'HR'])
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) notFound()
   return (
     <div className="container-page py-8">

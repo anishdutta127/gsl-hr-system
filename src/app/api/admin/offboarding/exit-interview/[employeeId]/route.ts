@@ -45,7 +45,7 @@ export async function PUT(
   if (!canEditExitInterview(session)) {
     return bad('Only Admin or HR can submit exit interviews.', 403)
   }
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   let body: Body

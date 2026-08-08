@@ -18,12 +18,12 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec || !rec.publicShareEnabled || rec.status !== 'Published') {
     return { title: 'Celebration not found' }
   }
-  const users = loadUsers()
-  const employees = loadEmployees()
+  const users = await loadUsers()
+  const employees = await loadEmployees()
   const user = users.find((u) => u.id === rec.employeeId)
   const employee = user
     ? employees.find((e) => e.email.toLowerCase() === user.email.toLowerCase())
@@ -52,14 +52,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CelebratePage({ params }: PageProps) {
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec || !rec.publicShareEnabled || rec.status !== 'Published') {
     notFound()
   }
 
   const company = loadCompany()
-  const users = loadUsers()
-  const employees = loadEmployees()
+  const users = await loadUsers()
+  const employees = await loadEmployees()
   const user = users.find((u) => u.id === rec.employeeId)
   const employee = user
     ? employees.find((e) => e.email.toLowerCase() === user.email.toLowerCase())
@@ -67,7 +67,7 @@ export default async function CelebratePage({ params }: PageProps) {
   const employeeName = employee?.name ?? user?.name ?? 'Get Set Learn team member'
   const employeeDesignation = employee?.designation ?? ''
 
-  const stats = statsCachedFor1h()
+  const stats = await statsCachedFor1h()
   // Drop the focal recognition from the leaderboard so we don't show the
   // same card twice. Cap at 6 for the small grid.
   const recentForLeaderboard = stats.recent

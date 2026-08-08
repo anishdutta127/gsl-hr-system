@@ -52,7 +52,7 @@ export async function POST(request: Request, { params }: { params: { employeeId:
   if (!canEditExitInterview(session)) {
     return bad('Only Admin or HR can upload exit-interview documents.', 403)
   }
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   let formData: FormData

@@ -26,7 +26,7 @@ export default async function HolidaysPage() {
   const mandatory = sorted.filter((h) => h.type === 'mandatory')
   const optional = sorted.filter((h) => h.type === 'optional')
 
-  const employees = loadEmployees()
+  const employees = (await loadEmployees())
     .filter((e) => e.status !== 'Exited')
     .sort((a, b) => a.name.localeCompare(b.name))
   const picks = loadEmployeeOptionalHolidays()

@@ -52,11 +52,11 @@ export async function POST(request: Request) {
   const employeeId = body.employeeId?.trim()
   if (!employeeId) return bad('employeeId is required.')
 
-  const employee = findEmployeeById(employeeId)
+  const employee = await findEmployeeById(employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   const templates = loadOnboardingTemplates()
-  const users = loadUsers()
+  const users = await loadUsers()
   const existing = loadOnboardingTasks()
   const generated = generateOnboardingTasksForEmployee({
     employee,

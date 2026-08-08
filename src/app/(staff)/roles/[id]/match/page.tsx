@@ -13,10 +13,10 @@ export const dynamic = 'force-dynamic'
 
 export default async function RoleMatchPage({ params }: { params: { id: string } }) {
   await requireRoles(['Admin', 'HR'])
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) notFound()
 
-  const matches = matchCandidatesToRole(role, loadCandidates(), loadApplications())
+  const matches = matchCandidatesToRole(role, await loadCandidates(), await loadApplications())
   const top = matches.slice(0, 20)
 
   return (

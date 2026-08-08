@@ -47,7 +47,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     return bad('Only Admin or HR can manage probation.', 403)
   }
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) return bad('Employee not found.', 404)
   if (employee.status === 'Exited') return bad('Cannot modify probation on exited employee.', 409)
 

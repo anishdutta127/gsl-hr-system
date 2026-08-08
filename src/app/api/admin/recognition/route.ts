@@ -85,8 +85,8 @@ export async function POST(request: Request) {
 
   // Look up the employee + matching user record (employees + users share
   // emails since the muster migration).
-  const employees = loadEmployees()
-  const users = loadUsers()
+  const employees = await loadEmployees()
+  const users = await loadUsers()
   // employeeId may come from either the User.id or the Employee.id; we try
   // user first (matches the dropdown shape from NominateForm), then fall back
   // to a direct employee id lookup for HR/Admin who might paste an emp id.
@@ -165,7 +165,7 @@ export async function POST(request: Request) {
           commitMessage: `feat(recognition): nominate ${employee.name} (${id})`,
         }
       },
-      { defaultValue: loadRecognitions() },
+      { defaultValue: await loadRecognitions() },
     )
     // Best-effort sanity check: created should now be the last entry of next.
     if (!created && next.length > 0) {

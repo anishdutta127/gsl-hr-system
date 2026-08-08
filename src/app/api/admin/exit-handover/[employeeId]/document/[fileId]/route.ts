@@ -17,7 +17,7 @@ export async function GET(
   // All staff roles can view their respective handover docs through the
   // page-level guard; we permit read at the API too because review work
   // benefits Leadership and HR alike.
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return NextResponse.json({ message: 'Employee not found.' }, { status: 404 })
 
   const handover = loadExitHandovers().find((h) => h.employeeId === params.employeeId)

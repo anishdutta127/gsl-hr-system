@@ -38,13 +38,13 @@ export async function POST(
   const hiringManagerId =
     typeof raw === 'string' && raw.trim() ? raw.trim() : null
 
-  const application = findApplicationById(params.id)
+  const application = await findApplicationById(params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }
 
   if (hiringManagerId) {
-    const user = loadUsers().find((u) => u.id === hiringManagerId)
+    const user = (await loadUsers()).find((u) => u.id === hiringManagerId)
     if (!user) {
       return NextResponse.json(
         { message: 'Hiring manager not found.' },
@@ -59,6 +59,10 @@ export async function POST(
     }
   }
 
+  // Loaded before the write: the notes string below is built inside a
+  // synchronous object literal and cannot await.
+  const allUsers = await loadUsers()
+
   try {
     await enqueueUpdate({
       queuedBy: session.email,
@@ -70,7 +74,7 @@ export async function POST(
         before: { hiringManagerId: application.hiringManagerId ?? null },
         after: { hiringManagerId },
         notes: hiringManagerId
-          ? `Assigned hiring manager: ${loadUsers().find((u) => u.id === hiringManagerId)?.name ?? hiringManagerId}.`
+          ? `Assigned hiring manager: ${allUsers.find((u) => u.id === hiringManagerId)?.name ?? hiringManagerId}.`
           : 'Cleared hiring manager.',
       },
     })

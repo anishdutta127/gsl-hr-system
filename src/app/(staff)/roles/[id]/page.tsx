@@ -27,22 +27,22 @@ export default async function RoleDetailPage({
   searchParams?: { filters?: string | string[] }
 }) {
   const session = await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) notFound()
-  const applications = loadApplicationsForRole(role.id)
+  const applications = await loadApplicationsForRole(role.id)
   const stages = orderedStages(role)
   const careersVisible = isPubliclyVisible(role)
   const canManageStatus = session.role === 'Admin' || session.role === 'HR'
 
   // Hiring-manager picker options for the details editor. Active staff who
   // can own a role: HODs plus Admin/HR (small org, people wear both hats).
-  const hodOptions = loadUsers()
+  const hodOptions = (await loadUsers())
     .filter((u) => u.active && (u.role === 'HOD' || u.role === 'Admin' || u.role === 'HR'))
     .map((u) => ({ id: u.id, name: u.name }))
     .sort((a, b) => a.name.localeCompare(b.name))
 
   const activeCandidates = applications.filter((a) => !isTerminal(a.currentStage)).length
-  const activeOffers = loadOffers().filter(
+  const activeOffers = (await loadOffers()).filter(
     (o) => o.roleId === role.id && !['Accepted', 'Declined', 'Withdrawn'].includes(o.status),
   ).length
 
@@ -51,9 +51,9 @@ export default async function RoleDetailPage({
   // open roles HR can move/add into. Loading happens once on the server so the
   // panel renders instantly.
   const candidateIdsInRole = new Set(applications.map((a) => a.candidateId))
-  const allRoles = loadRoles()
+  const allRoles = await loadRoles()
   const allRolesById = new Map(allRoles.map((r) => [r.id, r] as const))
-  const allApps = loadApplications()
+  const allApps = await loadApplications()
   const membershipsByCandidate: Record<string, CurrentMembership[]> = {}
   for (const a of allApps) {
     if (!candidateIdsInRole.has(a.candidateId)) continue

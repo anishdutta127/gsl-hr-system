@@ -12,7 +12,7 @@ export async function POST(_request: Request, { params }: { params: { id: string
     return NextResponse.json({ message: 'Only Admin or HR can unarchive.' }, { status: 403 })
   }
 
-  const candidate = findCandidateById(params.id)
+  const candidate = await findCandidateById(params.id)
   if (!candidate) return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
   if (candidate.status !== 'Archived') {
     return NextResponse.json({ message: 'Candidate is not archived.' }, { status: 400 })

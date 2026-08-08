@@ -23,7 +23,7 @@ export default async function EmployeeDocumentsPage({
   if (!session) redirect('/login')
   if (!canViewEmployeeDocuments(session)) redirect('/')
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
 
   const templates = loadDocumentTemplates()

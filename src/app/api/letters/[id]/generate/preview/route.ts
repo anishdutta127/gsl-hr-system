@@ -22,7 +22,7 @@ export async function GET(
 
   const url = new URL(request.url)
   const employeeId = url.searchParams.get('employeeId') ?? ''
-  const employee = employeeId ? findEmployeeById(employeeId) : undefined
+  const employee = employeeId ? await findEmployeeById(employeeId) : undefined
   const company = loadCompany()
 
   const values: Record<string, string> = {}

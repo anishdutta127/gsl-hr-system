@@ -70,7 +70,7 @@ export async function POST(request: Request) {
   if (rows.length === 0) return bad('No data rows found in the file.', 422)
 
   const now = new Date().toISOString()
-  const ctx = buildReconcileContext({ actor: session.email, now, overwriteFields })
+  const ctx = await buildReconcileContext({ actor: session.email, now, overwriteFields })
   const results = reconcileEmployeeImport(rows, ctx)
   const writable = results.filter((r) => r.classification !== 'error' && r.employee)
 
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
   // 2) Generate onboarding tasks for the fresh creates (same as the UI path).
   const creates = writable.filter((r) => r.classification === 'create').map((r) => r.employee!)
   const templates = loadOnboardingTemplates()
-  const users = loadUsers()
+  const users = await loadUsers()
   let onboardingGenerated = 0
   if (creates.length > 0) {
     const existingTasks = loadOnboardingTasks()

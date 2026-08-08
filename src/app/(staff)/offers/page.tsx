@@ -18,10 +18,10 @@ export default async function OffersPage({
   searchParams: { notice?: string }
 }) {
   await requireRoles(['Admin', 'HR'])
-  const applications = loadApplications()
-  const candidates = loadCandidates()
-  const roles = loadRoles()
-  const offers = loadOffers()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
+  const roles = await loadRoles()
+  const offers = await loadOffers()
 
   const candidateById = new Map(candidates.map((c) => [c.id, c] as const))
   const roleById = new Map(roles.map((r) => [r.id, r] as const))

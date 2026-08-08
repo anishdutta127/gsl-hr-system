@@ -52,7 +52,7 @@ export async function GET(
   // Confidentiality gate - the whole point of this route.
   if (!canViewExitInterview(session)) return json('Forbidden.', 403)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return json('Employee not found.', 404)
 
   const interview = loadExitInterviews().find((i) => i.employeeId === params.employeeId)
@@ -96,7 +96,7 @@ export async function DELETE(
   const session = await getCurrentSession()
   if (!canEditExitInterview(session)) return json('Only Admin or HR can remove the document.', 403)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return json('Employee not found.', 404)
 
   const interview = loadExitInterviews().find((i) => i.employeeId === params.employeeId)

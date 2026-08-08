@@ -17,8 +17,8 @@ export const dynamic = 'force-dynamic'
  */
 export default async function NominatePage() {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
-  const employees = loadEmployees().filter((e) => e.status === 'Active')
-  const users = loadUsers()
+  const employees = (await loadEmployees()).filter((e) => e.status === 'Active')
+  const users = await loadUsers()
 
   // HOD: limit the dropdown to their department. We resolve the HOD's
   // department by looking up the employee record that shares their email.

@@ -36,7 +36,7 @@ export async function POST(
   const session = await getCurrentSession()
   if (!session) return bad('Not signed in.', 401)
 
-  const employee = findEmployeeById(params.employeeId)
+  const employee = await findEmployeeById(params.employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   const process = findExitProcess(employee.id)

@@ -5,6 +5,7 @@ import {
   loadApplications,
   findRoleById,
   findCandidateById,
+  loadRoles,
 } from '@/lib/data'
 import { isTerminal } from '@/lib/pipeline'
 import { isPipelineReadOnly } from '@/lib/roleStatus'
@@ -87,14 +88,15 @@ export async function POST(request: Request) {
     )
   }
 
-  const apps = loadApplications()
+  const apps = await loadApplications()
   const result: BulkResult = { applied: 0, skipped: 0, errors: 0, details: [] }
   const now = new Date().toISOString()
 
-  const roleCache = new Map<string, Role | undefined>()
+  // Prefetched once instead of a lazy per-id cache: findRoleById is async now,
+  // and this ran inside a synchronous helper. One read beats N.
+  const rolesById = new Map((await loadRoles()).map((r) => [r.id, r] as const))
   function roleFor(id: string): Role | undefined {
-    if (!roleCache.has(id)) roleCache.set(id, findRoleById(id))
-    return roleCache.get(id)
+    return rolesById.get(id)
   }
 
   const isAdmin = session.role === 'Admin'
@@ -167,7 +169,7 @@ export async function POST(request: Request) {
       continue
     }
 
-    const candidate = findCandidateById(app.candidateId)
+    const candidate = await findCandidateById(app.candidateId)
     const composedNotes = `Reopened from ${app.currentStage} to ${targetStage}: ${reason}${
       notifyCandidate ? ' (follow-up reminder requested)' : ''
     }`

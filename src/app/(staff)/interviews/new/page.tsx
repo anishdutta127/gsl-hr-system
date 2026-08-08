@@ -23,10 +23,10 @@ export default async function NewInterviewPage({
 
   const applicationId = searchParams.applicationId
   if (!applicationId) notFound()
-  const app = findApplicationById(applicationId)
+  const app = await findApplicationById(applicationId)
   if (!app) notFound()
-  const role = findRoleById(app.roleId)
-  const candidate = findCandidateById(app.candidateId)
+  const role = await findRoleById(app.roleId)
+  const candidate = await findCandidateById(app.candidateId)
   if (!role || !candidate) notFound()
 
   // Infer round from current stage if not explicit
@@ -56,10 +56,10 @@ export default async function NewInterviewPage({
   // context on where they've been.
   const resumeSnippet = (candidate.searchableText ?? '').slice(0, 600)
   const programmes = candidate.tags?.programmes ?? []
-  const allApps = loadApplications().filter((a) => a.candidateId === candidate.id)
-  const allRoles = loadRoles()
+  const allApps = (await loadApplications()).filter((a) => a.candidateId === candidate.id)
+  const allRoles = await loadRoles()
   const roleById = new Map(allRoles.map((r) => [r.id, r] as const))
-  const priorInterviews = loadInterviews()
+  const priorInterviews = (await loadInterviews())
     .filter((i) => i.candidateId === candidate.id)
     .sort((a, b) => (b.conductedAt ?? b.createdAt).localeCompare(a.conductedAt ?? a.createdAt))
 

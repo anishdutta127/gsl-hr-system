@@ -18,9 +18,9 @@ export default async function ComposeEmailPage({
   const template = findEmailTemplateById(params.id)
   if (!template) notFound()
 
-  const candidates = loadCandidates()
-  const roles = loadRoles()
-  const applications = loadApplications()
+  const candidates = await loadCandidates()
+  const roles = await loadRoles()
+  const applications = await loadApplications()
 
   // Candidates in an active stage first, then the rest
   const activeIds = new Set(

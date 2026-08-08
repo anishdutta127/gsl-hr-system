@@ -141,7 +141,7 @@ export async function POST(request: Request) {
     )
   }
 
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const codeIndex = new Map(employees.map((e) => [e.employeeCode.toLowerCase(), e]))
 
   const accepted: Array<{ employeeCode: string }> = []

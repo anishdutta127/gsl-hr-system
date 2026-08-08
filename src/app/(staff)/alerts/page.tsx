@@ -45,12 +45,12 @@ const ACTION_HEADINGS: Record<AttentionAction, string> = {
 export default async function AlertsPage() {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
 
-  const roles = loadRoles()
-  const applications = loadApplications()
-  const candidates = loadCandidates()
-  const interviews = loadInterviews()
-  const offers = loadOffers()
-  const employees = loadEmployees()
+  const roles = await loadRoles()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
+  const interviews = await loadInterviews()
+  const offers = await loadOffers()
+  const employees = await loadEmployees()
 
   const attention = buildAttentionFeed({
     session,

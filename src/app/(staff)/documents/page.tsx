@@ -17,7 +17,7 @@ export default async function DocumentsAggregatePage() {
   if (!session) redirect('/login')
   if (!canViewEmployeeDocuments(session)) redirect('/')
 
-  const employees = loadEmployees().filter((e) => e.status !== 'Exited')
+  const employees = (await loadEmployees()).filter((e) => e.status !== 'Exited')
   const templates = loadDocumentTemplates()
   const documents = loadEmployeeDocuments()
 

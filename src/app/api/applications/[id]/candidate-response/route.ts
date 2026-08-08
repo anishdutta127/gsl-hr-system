@@ -65,7 +65,7 @@ export async function POST(
 
   const notes = typeof body.notes === 'string' && body.notes.trim() ? body.notes.trim() : undefined
 
-  const application = findApplicationById(params.id)
+  const application = await findApplicationById(params.id)
   if (!application) {
     return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
   }

@@ -22,13 +22,13 @@ export default async function RecognitionHistoryPage({
   await requireRoles(['Admin', 'HR', 'HOD', 'Leadership'])
   const q = (searchParams.q ?? '').trim()
 
-  const all = loadRecognitions().filter(
+  const all = (await loadRecognitions()).filter(
     (r) => r.status === 'Approved' || r.status === 'Published',
   )
   const matched = all.filter((r) => matchesQuery(r, q))
 
-  const employeesById = new Map(loadEmployees().map((e) => [e.id, e] as const))
-  const usersById = new Map(loadUsers().map((u) => [u.id, u] as const))
+  const employeesById = new Map((await loadEmployees()).map((e) => [e.id, e] as const))
+  const usersById = new Map((await loadUsers()).map((u) => [u.id, u] as const))
 
   const byMonth = groupByMonth(matched)
   const monthsDesc = [...byMonth.keys()].sort((a, b) => b.localeCompare(a))

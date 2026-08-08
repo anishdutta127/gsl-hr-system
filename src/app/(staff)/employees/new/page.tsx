@@ -25,18 +25,18 @@ export default async function NewEmployeePage({
 
   const applicationId = searchParams.applicationId
   if (!applicationId) notFound()
-  const app = findApplicationById(applicationId)
+  const app = await findApplicationById(applicationId)
   if (!app) notFound()
-  const candidate = findCandidateById(app.candidateId)
-  const role = findRoleById(app.roleId)
+  const candidate = await findCandidateById(app.candidateId)
+  const role = await findRoleById(app.roleId)
   if (!candidate || !role) notFound()
 
-  const existing = loadEmployees().find((e) => e.applicationId === applicationId)
+  const existing = (await loadEmployees()).find((e) => e.applicationId === applicationId)
   if (existing) {
     redirect(`/employees/${existing.id}`)
   }
 
-  const offer = loadOffers().find(
+  const offer = (await loadOffers()).find(
     (o) => o.applicationId === applicationId && o.status === 'Accepted',
   )
 

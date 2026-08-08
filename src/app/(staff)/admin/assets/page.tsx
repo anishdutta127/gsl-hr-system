@@ -14,7 +14,7 @@ export default async function AssetsPage() {
   if (!isHrOrAdmin && !isLeadership) redirect('/')
 
   const assets = loadAssets()
-  const employees = loadEmployees().map((e) => ({
+  const employees = (await loadEmployees()).map((e) => ({
     id: e.id,
     name: e.name,
     code: e.employeeCode,

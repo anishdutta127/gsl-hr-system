@@ -48,7 +48,7 @@ export async function PATCH(
   const task = tasks.find((t) => t.id === taskId)
   if (!task) return bad('Task not found.', 404)
 
-  const employee = findEmployeeById(task.employeeId)
+  const employee = await findEmployeeById(task.employeeId)
   if (!employee) return bad('Employee for this task no longer exists.', 404)
 
   // Permission: HR/Admin always; HOD only when canUserSeeTask says yes.

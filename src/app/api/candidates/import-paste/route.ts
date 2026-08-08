@@ -71,7 +71,7 @@ export async function POST(request: Request) {
   // never sees a 404 from a stale queue-create.
   if (email) {
     const lowered = email.toLowerCase()
-    const existing = loadCandidates().find(
+    const existing = (await loadCandidates()).find(
       (c) => c.email && c.email.trim().toLowerCase() === lowered,
     )
     if (existing) {

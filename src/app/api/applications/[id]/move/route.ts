@@ -52,7 +52,7 @@ export async function POST(
   const userNotes = typeof body.notes === 'string' ? body.notes.trim() : ''
   const force = body.force === true
 
-  const apps = loadApplications()
+  const apps = await loadApplications()
   const sourceApp = apps.find((a) => a.id === params.id)
   if (!sourceApp) {
     return NextResponse.json({ message: 'Source application not found.' }, { status: 404 })
@@ -65,13 +65,13 @@ export async function POST(
     )
   }
 
-  const sourceRole = findRoleById(sourceApp.roleId)
-  const destinationRole = findRoleById(destinationRoleId)
+  const sourceRole = await findRoleById(sourceApp.roleId)
+  const destinationRole = await findRoleById(destinationRoleId)
   if (!destinationRole) {
     return NextResponse.json({ message: 'Destination role not found.' }, { status: 404 })
   }
 
-  const candidate = findCandidateById(sourceApp.candidateId)
+  const candidate = await findCandidateById(sourceApp.candidateId)
   if (!candidate) {
     return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
   }

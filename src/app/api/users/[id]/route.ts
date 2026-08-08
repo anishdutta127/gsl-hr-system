@@ -19,7 +19,7 @@ export async function POST(
     return NextResponse.json({ message: 'Only Admin can manage users.' }, { status: 403 })
   }
 
-  const user = loadUsers().find((u) => u.id === params.id)
+  const user = (await loadUsers()).find((u) => u.id === params.id)
   if (!user) return NextResponse.json({ message: 'User not found.' }, { status: 404 })
 
   let body: {
@@ -49,7 +49,7 @@ export async function POST(
   const password = typeof body.password === 'string' ? body.password : ''
 
   if (email !== user.email) {
-    const clash = loadUsers().find(
+    const clash = (await loadUsers()).find(
       (u) => u.id !== user.id && u.email.toLowerCase() === email,
     )
     if (clash) {

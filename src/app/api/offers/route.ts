@@ -44,9 +44,9 @@ export async function POST(request: Request) {
   if (!designation) return NextResponse.json({ message: 'Designation required.' }, { status: 400 })
   if (!(ctcAnnual > 0)) return NextResponse.json({ message: 'CTC must be positive.' }, { status: 400 })
 
-  const app = findApplicationById(applicationId)
+  const app = await findApplicationById(applicationId)
   if (!app) return NextResponse.json({ message: 'Application not found.' }, { status: 404 })
-  const role = findRoleById(app.roleId)
+  const role = await findRoleById(app.roleId)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
   const offerId = crypto.randomUUID()

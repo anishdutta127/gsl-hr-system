@@ -17,7 +17,7 @@ export async function POST(
   if (session.role !== 'Admin' && session.role !== 'HR') {
     return NextResponse.json({ message: 'Only Admin or HR can edit a rubric.' }, { status: 403 })
   }
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
   let body: { rubric?: unknown }

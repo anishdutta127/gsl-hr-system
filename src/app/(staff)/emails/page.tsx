@@ -24,8 +24,8 @@ interface LogBatch {
 
 /** Group consecutive email.sent audit entries within the same minute by
  * (sender, templateId) so a "Bulk-send 12 candidates" lands as one row, not 12. */
-function buildLog(): LogBatch[] {
-  const candidates = loadCandidates()
+async function buildLog(): Promise<LogBatch[]> {
+  const candidates = await loadCandidates()
   const buckets = new Map<string, LogBatch>()
   for (const c of candidates) {
     for (const entry of c.auditLog ?? []) {
@@ -60,7 +60,7 @@ function buildLog(): LogBatch[] {
 
 export default async function EmailsPage() {
   await requireRoles(['Admin', 'HR'])
-  const log = buildLog()
+  const log = await buildLog()
   return (
     <div className="container-page py-8">
       <div className="mb-6">

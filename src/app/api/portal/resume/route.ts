@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       { status: 401 },
     )
   }
-  const candidate = findCandidateById(candidateId)
+  const candidate = await findCandidateById(candidateId)
   if (!candidate) {
     return NextResponse.json({ message: 'Candidate record not found.' }, { status: 404 })
   }

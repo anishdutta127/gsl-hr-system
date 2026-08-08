@@ -46,7 +46,7 @@ export default async function AnalyticsPage({
     location: params.location,
   }
 
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const headcount = buildHeadcountWidget({ employees, filter, now })
   const attrition = buildAttritionWidget({
     employees,

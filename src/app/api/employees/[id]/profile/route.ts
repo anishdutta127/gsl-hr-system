@@ -48,7 +48,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     return bad('Only Admin or HR can edit employee profiles.', 403)
   }
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) return bad('Employee not found.', 404)
 
   let body: PatchBody
@@ -69,7 +69,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
       reportingManagerId = null
     } else {
       const lookup = new Map<string, string>()
-      for (const e of loadEmployees()) {
+      for (const e of await loadEmployees()) {
         if (e.id === employee.id) continue
         const cleanName = cleanString(e.name).toLowerCase()
         if (cleanName) lookup.set(cleanName, e.id)

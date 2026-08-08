@@ -21,7 +21,7 @@ export default async function EmployeeOnboardingPage({
   const session = await getCurrentSession()
   if (!session) redirect('/login')
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
 
   const isHrOrAdmin = session.role === 'Admin' || session.role === 'HR'
@@ -47,7 +47,7 @@ export default async function EmployeeOnboardingPage({
       )
 
   const summary = summariseOnboarding({ templates, tasks: allTasks })
-  const users = loadUsers().map((u) => ({ id: u.id, name: u.name, role: u.role }))
+  const users = (await loadUsers()).map((u) => ({ id: u.id, name: u.name, role: u.role }))
 
   return (
     <div className="container-page py-8">

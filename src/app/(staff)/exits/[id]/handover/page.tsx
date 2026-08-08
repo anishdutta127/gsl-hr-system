@@ -23,7 +23,7 @@ export default async function ExitHandoverPage({ params }: Props) {
   const session = await getCurrentSession()
   if (!session) redirect('/login')
 
-  const employee = findEmployeeById(params.id)
+  const employee = await findEmployeeById(params.id)
   if (!employee) notFound()
 
   const editable = canEditHandover(session, {
@@ -49,7 +49,7 @@ export default async function ExitHandoverPage({ params }: Props) {
 
   // IT assets historically attached to this employee - lets HR tick which
   // ones have been returned right from the handover view.
-  const itAssets = itAssetHistoryFor(loadITAssets(), employee.id).map((a) => ({
+  const itAssets = itAssetHistoryFor(await loadITAssets(), employee.id).map((a) => ({
     id: a.id,
     label: `${a.id} - ${a.make} ${a.model} (${a.serialNumber})`,
     currentlyAssigned: a.currentAssignment?.employeeId === employee.id,

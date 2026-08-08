@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     return bad(`File too large: ${(file.size / 1024 / 1024).toFixed(1)} MB > 10 MB.`, 413)
   }
 
-  const employee = findEmployeeById(employeeId)
+  const employee = await findEmployeeById(employeeId)
   if (!employee) return bad('Employee not found.', 404)
 
   const lower = file.name.toLowerCase()

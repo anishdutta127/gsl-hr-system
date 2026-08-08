@@ -6,6 +6,7 @@ import {
   findRoleById,
   findCandidateById,
   loadUsers,
+  loadRoles,
 } from '@/lib/data'
 import { canTransition } from '@/lib/pipeline'
 import { isPipelineReadOnly } from '@/lib/roleStatus'
@@ -111,16 +112,17 @@ export async function POST(request: Request) {
 
   const notes = typeof body.notes === 'string' ? body.notes : undefined
 
-  const apps = loadApplications()
+  const apps = await loadApplications()
   const result: BulkResult = { applied: 0, skipped: 0, errors: 0, details: [] }
   const now = new Date().toISOString()
 
   // Cache of role lookups + role-readonly checks; loadApplications already hit
   // disk once, so we only re-read role-by-id per unique role.
-  const roleCache = new Map<string, Role | undefined>()
+  // Prefetched once instead of a lazy per-id cache: findRoleById is async now,
+  // and this ran inside a synchronous helper. One read beats N.
+  const rolesById = new Map((await loadRoles()).map((r) => [r.id, r] as const))
   function roleFor(id: string): Role | undefined {
-    if (!roleCache.has(id)) roleCache.set(id, findRoleById(id))
-    return roleCache.get(id)
+    return rolesById.get(id)
   }
 
   // Track applications that landed on a HOD-round stage so we can notify after
@@ -214,7 +216,7 @@ export async function POST(request: Request) {
       result.skipped++
       result.details.push({
         applicationId: id,
-        candidateName: findCandidateById(app.candidateId)?.name,
+        candidateName: (await findCandidateById(app.candidateId))?.name,
         fromStage: app.currentStage as string,
         toStage,
         status: 'skipped',
@@ -235,7 +237,7 @@ export async function POST(request: Request) {
       if (rejectionNotes) after.rejectionNotes = rejectionNotes
     }
 
-    const candidate = findCandidateById(app.candidateId)
+    const candidate = await findCandidateById(app.candidateId)
     const composedNotes =
       rejectionReason && toStage === 'Rejected'
         ? `Rejected: ${rejectionReason}${rejectionNotes ? `. ${rejectionNotes}` : ''}${notes ? ` ${notes}` : ''}`
@@ -279,10 +281,10 @@ export async function POST(request: Request) {
 
   // Fire HOD notifications best-effort.
   if (hodNotifyTargets.length > 0) {
-    const users = loadUsers()
+    const users = await loadUsers()
     for (const t of hodNotifyTargets) {
       try {
-        const candidate = findCandidateById(t.candidateId)
+        const candidate = await findCandidateById(t.candidateId)
         const candidateName = candidate?.name ?? 'a candidate'
         const ids =
           t.toStage === 'HOD2RoundScheduled' && t.role.hodRound2UserId

@@ -29,7 +29,7 @@ export async function POST(request: Request, { params }: { params: { id: string 
     )
   }
 
-  const role = findRoleById(params.id)
+  const role = await findRoleById(params.id)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
   let body: Body

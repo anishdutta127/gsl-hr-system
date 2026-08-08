@@ -51,12 +51,12 @@ export default async function CandidateDetailPage({
   searchParams: { notice?: string }
 }) {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
-  const candidate = findCandidateById(params.id)
+  const candidate = await findCandidateById(params.id)
   if (!candidate) notFound()
   const notice = searchParams.notice ?? ''
 
-  const apps = loadApplications().filter((a) => a.candidateId === candidate.id)
-  const roles = loadRoles()
+  const apps = (await loadApplications()).filter((a) => a.candidateId === candidate.id)
+  const roles = await loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
 
   // HOD scoping: must own at least one of the roles this candidate applied to.
@@ -65,9 +65,9 @@ export default async function CandidateDetailPage({
     if (!owns) redirect('/candidates')
   }
 
-  const interviews = loadInterviews().filter((i) => i.candidateId === candidate.id)
-  const offers = loadOffers().filter((o) => o.candidateId === candidate.id)
-  const users = loadUsers()
+  const interviews = (await loadInterviews()).filter((i) => i.candidateId === candidate.id)
+  const offers = (await loadOffers()).filter((o) => o.candidateId === candidate.id)
+  const users = await loadUsers()
   const usersById = new Map(users.map((u) => [u.id, u] as const))
   const activeStaffOptions = users
     .filter((u) => u.active)
@@ -78,12 +78,12 @@ export default async function CandidateDetailPage({
   // Match the candidate to an Employee record by email so HR-Admin can
   // assign IT assets once the candidate has joined.
   const matchedEmployee = candidate.email
-    ? loadEmployees().find(
+    ? (await loadEmployees()).find(
         (e) => e.email.toLowerCase() === candidate.email.toLowerCase() && e.status === 'Active',
       )
     : undefined
   const availableITAssets = matchedEmployee
-    ? loadITAssets()
+    ? (await loadITAssets())
         .filter((a) => a.status === 'Available')
         .map((a) => ({
           id: a.id,

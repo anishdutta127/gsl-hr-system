@@ -11,8 +11,8 @@ export default async function UsersPage() {
   if (!session) redirect('/login')
   if (session.role !== 'Admin') redirect('/')
 
-  const users = loadUsers()
-  const roles = loadRoles()
+  const users = await loadUsers()
+  const roles = await loadRoles()
   const roleById = new Map(roles.map((r) => [r.id, r] as const))
 
   return (

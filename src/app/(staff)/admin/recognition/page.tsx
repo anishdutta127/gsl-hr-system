@@ -17,9 +17,9 @@ const STATUS_TONE: Record<RecognitionStatus, string> = {
 
 export default async function AdminRecognitionPage() {
   await requireRoles(['Admin', 'HR'])
-  const recognitions = loadRecognitions()
-  const users = loadUsers()
-  const employees = loadEmployees()
+  const recognitions = await loadRecognitions()
+  const users = await loadUsers()
+  const employees = await loadEmployees()
 
   // Sort newest month first; within a month, newest nomination first.
   const grouped = groupByMonth(recognitions)

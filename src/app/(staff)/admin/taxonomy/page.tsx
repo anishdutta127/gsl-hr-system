@@ -15,7 +15,7 @@ export default async function TaxonomyPage() {
   if (!session) redirect('/login')
   if (session.role !== 'Admin' && session.role !== 'HR') redirect('/')
 
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const taxonomy = loadTaxonomy()
   const locations = buildLocationViews(employees, taxonomy)
   const departments = buildDepartmentViews(employees, taxonomy)

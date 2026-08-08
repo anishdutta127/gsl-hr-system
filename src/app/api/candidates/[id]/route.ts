@@ -15,7 +15,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     return NextResponse.json({ message: 'Only Admin or HR can edit candidates.' }, { status: 403 })
   }
 
-  const candidate = findCandidateById(params.id)
+  const candidate = await findCandidateById(params.id)
   if (!candidate) return NextResponse.json({ message: 'Candidate not found.' }, { status: 404 })
 
   let body: {
@@ -51,7 +51,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
       return NextResponse.json({ message: 'Email format is invalid.' }, { status: 400 })
     }
     if (email && email.toLowerCase() !== candidate.email.toLowerCase()) {
-      const dup = loadCandidates().find(
+      const dup = (await loadCandidates()).find(
         (c) => c.id !== candidate.id && c.email.toLowerCase() === email.toLowerCase(),
       )
       if (dup) {

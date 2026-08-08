@@ -69,7 +69,7 @@ describe('loadCandidates boundary filter', () => {
 
     // Import after chdir + file write so the loader reads our fixture.
     const { loadCandidates } = await import('../data')
-    const candidates = loadCandidates()
+    const candidates = await loadCandidates()
 
     expect(candidates).toHaveLength(2)
     expect(candidates.map((c) => c.id)).toEqual(['real-1', 'real-2'])
@@ -80,6 +80,6 @@ describe('loadCandidates boundary filter', () => {
 
   it('returns [] when the file is missing', async () => {
     const { loadCandidates } = await import('../data')
-    expect(loadCandidates()).toEqual([])
+    expect(await loadCandidates()).toEqual([])
   })
 })

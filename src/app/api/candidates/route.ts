@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   if (!EMAIL_RE.test(email)) return NextResponse.json({ message: 'Valid email required.' }, { status: 400 })
   if (!roleId) return NextResponse.json({ message: 'Role required.' }, { status: 400 })
 
-  const role = findRoleById(roleId)
+  const role = await findRoleById(roleId)
   if (!role) return NextResponse.json({ message: 'Role not found.' }, { status: 404 })
 
   const now = new Date().toISOString()

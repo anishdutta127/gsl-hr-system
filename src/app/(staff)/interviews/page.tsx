@@ -16,10 +16,10 @@ const AWAITING_SCORE_STAGES = new Set(['HODRoundScheduled', 'HOD2RoundScheduled'
 export default async function InterviewsPage() {
   const session = await requireRoles(['Admin', 'HR', 'HOD'])
 
-  const interviews = loadInterviews()
-  const applications = loadApplications()
-  const candidates = loadCandidates()
-  const roles = loadRoles()
+  const interviews = await loadInterviews()
+  const applications = await loadApplications()
+  const candidates = await loadCandidates()
+  const roles = await loadRoles()
 
   const candidateById = new Map(candidates.map((c) => [c.id, c] as const))
   const roleById = new Map(roles.map((r) => [r.id, r] as const))

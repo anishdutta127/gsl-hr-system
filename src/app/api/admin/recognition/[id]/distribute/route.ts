@@ -52,7 +52,7 @@ export async function POST(
     )
   }
 
-  const recognition = findRecognitionById(params.id)
+  const recognition = await findRecognitionById(params.id)
   if (!recognition) {
     return NextResponse.json({ message: 'Recognition not found.' }, { status: 404 })
   }
@@ -110,7 +110,7 @@ export async function POST(
           commitMessage: `chore(recognition): distribute ${recognition.id}`,
         }
       },
-      { defaultValue: loadRecognitions() },
+      { defaultValue: await loadRecognitions() },
     )
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Save failed.'

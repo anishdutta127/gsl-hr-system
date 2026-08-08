@@ -31,7 +31,7 @@ export default async function ExitsPage() {
   const isHod = session.role === 'HOD'
   if (!isHrOrAdmin && !isLeadership && !isHod) redirect('/')
 
-  const employees = loadEmployees()
+  const employees = await loadEmployees()
   const employeeById = new Map(employees.map((e) => [e.id, e] as const))
   const processes = loadExitProcesses()
   const templates = loadExitStepTemplates()

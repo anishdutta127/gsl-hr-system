@@ -14,11 +14,11 @@ export const dynamic = 'force-dynamic'
 
 export default async function OfferDetailPage({ params }: { params: { id: string } }) {
   await requireRoles(['Admin', 'HR'])
-  const offer = findOfferById(params.id)
+  const offer = await findOfferById(params.id)
   if (!offer) notFound()
-  const candidate = findCandidateById(offer.candidateId)
-  const role = findRoleById(offer.roleId)
-  const application = findApplicationById(offer.applicationId)
+  const candidate = await findCandidateById(offer.candidateId)
+  const role = await findRoleById(offer.roleId)
+  const application = await findApplicationById(offer.applicationId)
   if (!candidate || !role || !application) notFound()
 
   return (

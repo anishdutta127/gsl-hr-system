@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'Email and password required.' }, { status: 400 })
   }
 
-  const user = findUserByEmail(email)
+  const user = await findUserByEmail(email)
   if (!user) {
     // Intentionally generic message: don't confirm email existence.
     return NextResponse.json({ message: 'Invalid credentials.' }, { status: 401 })

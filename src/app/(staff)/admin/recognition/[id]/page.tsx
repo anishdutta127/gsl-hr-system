@@ -19,12 +19,12 @@ export default async function AdminRecognitionDetailPage({
   params: { id: string }
 }) {
   const session = await requireRoles(['Admin', 'HR'])
-  const rec = findRecognitionById(params.id)
+  const rec = await findRecognitionById(params.id)
   if (!rec) notFound()
   const company = loadCompany()
 
-  const users = loadUsers()
-  const employees = loadEmployees()
+  const users = await loadUsers()
+  const employees = await loadEmployees()
   const user = users.find((u) => u.id === rec.employeeId)
   const employee = user
     ? employees.find((e) => e.email.toLowerCase() === user.email.toLowerCase())
