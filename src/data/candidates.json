@@ -9564,5 +9564,31 @@
         "notes": "Self-applied via /careers with resume."
       }
     ]
+  },
+  {
+    "id": "c601c96c-7534-477e-9342-e1d56c59a822",
+    "name": "Gaurav Sharma",
+    "email": "gaurav.sharma0905@gmail.com",
+    "phone": "7307388597",
+    "source": "Application",
+    "notes": "",
+    "resumeFilePath": "data/resumes/applications/2026/08/c601c96c-7534-477e-9342-e1d56c59a822.pdf",
+    "createdAt": "2026-08-11T14:22:36.504Z",
+    "createdBy": "public:careers",
+    "auditLog": [
+      {
+        "timestamp": "2026-08-11T14:22:36.504Z",
+        "user": "public:careers",
+        "action": "candidate.create",
+        "after": {
+          "name": "Gaurav Sharma",
+          "email": "gaurav.sharma0905@gmail.com",
+          "source": "Application",
+          "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+          "resumeFilePath": "data/resumes/applications/2026/08/c601c96c-7534-477e-9342-e1d56c59a822.pdf"
+        },
+        "notes": "Self-applied via /careers with resume."
+      }
+    ]
   }
 ]

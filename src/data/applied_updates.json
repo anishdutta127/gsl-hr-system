@@ -1,87 +1,5 @@
 [
   {
-    "id": "da1afa7b-dc44-43c3-8eb6-8a9701792235",
-    "queuedAt": "2026-05-13T07:50:49.029Z",
-    "queuedBy": "public:careers",
-    "entity": "candidate",
-    "operation": "create",
-    "payload": {
-      "id": "0d8bc546-efbc-4c1e-8128-f41f7ce33198",
-      "name": "Sameer shaikh",
-      "email": "sameershaikh49910@gmail.com",
-      "phone": "9370449910",
-      "source": "Application",
-      "notes": "I’m eager to learn, grow, and give my best to this role. I’m hardworking, quick to adapt, and excited for the opportunity.",
-      "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf",
-      "createdAt": "2026-05-13T07:50:48.074Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T07:50:48.074Z",
-          "user": "public:careers",
-          "action": "candidate.create",
-          "after": {
-            "name": "Sameer shaikh",
-            "email": "sameershaikh49910@gmail.com",
-            "source": "Application",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "resumeFilePath": "data/resumes/applications/2026/05/0d8bc546-efbc-4c1e-8128-f41f7ce33198.pdf"
-          },
-          "notes": "Self-applied via /careers with resume."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.910Z"
-  },
-  {
-    "id": "cef2d736-fb22-4321-9da4-6d1a9bd4988d",
-    "queuedAt": "2026-05-13T07:50:49.862Z",
-    "queuedBy": "public:careers",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "882e5968-3c82-4ac1-b438-d915ad600aaa",
-      "candidateId": "0d8bc546-efbc-4c1e-8128-f41f7ce33198",
-      "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T07:50:48.074Z",
-      "createdAt": "2026-05-13T07:50:48.074Z",
-      "createdBy": "public:careers",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T07:50:48.074Z",
-          "user": "public:careers",
-          "action": "application.create",
-          "after": {
-            "candidateId": "0d8bc546-efbc-4c1e-8128-f41f7ce33198",
-            "roleId": "78179d13-6a9d-4f50-be07-0b20a963ee58",
-            "currentStage": "Sourced"
-          }
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.911Z"
-  },
-  {
-    "id": "11b8673f-0445-48a4-b019-32e28799c217",
-    "queuedAt": "2026-05-13T07:50:51.185Z",
-    "queuedBy": "system",
-    "entity": "outbound_mail",
-    "operation": "create",
-    "payload": {
-      "id": "b78dc0c8-4bba-46ad-9cb1-62d31df1a931",
-      "to": "sameershaikh49910@gmail.com",
-      "subject": "We received your application for STEM Trainer at GSL",
-      "body": "Hi Sameer,\n\nThanks for applying for STEM Trainer at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc3ODY1ODY1MSwiZXhwaXJlc0F0IjoxNzc4NjU5NTUxLCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMGQ4YmM1NDYtZWZiYy00YzFlLTgxMjgtZjQxZjdjZTMzMTk4IiwiYXBwbGljYXRpb25JZCI6Ijg4MmU1OTY4LTNjODItNGFjMS1iNDM4LWQ5MTVhZDYwMGFhYSIsIm5vbmNlIjoiMDkyZTQwOWUtZmJkYi00YWJhLWExOWMtMjE3NTMyNWM4Njc4In19.DopPnezxHUYAT4YlG65ZkG4wzxwc6aDeYs3j7fojlig\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
-      "context": "welcome magic link for candidate 0d8bc546-efbc-4c1e-8128-f41f7ce33198",
-      "createdAt": "2026-05-13T07:50:51.185Z"
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.912Z"
-  },
-  {
     "id": "bded5325-69c6-4e39-b3b0-c04946e94533",
     "queuedAt": "2026-05-13T07:55:19.256Z",
     "queuedBy": "public:careers",
@@ -14056,5 +13974,87 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-08-11T13:51:42.797Z"
+  },
+  {
+    "id": "51ea61d8-abab-4df7-9d84-953f95fc0c4e",
+    "queuedAt": "2026-08-11T14:22:38.009Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "c601c96c-7534-477e-9342-e1d56c59a822",
+      "name": "Gaurav Sharma",
+      "email": "gaurav.sharma0905@gmail.com",
+      "phone": "7307388597",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/08/c601c96c-7534-477e-9342-e1d56c59a822.pdf",
+      "createdAt": "2026-08-11T14:22:36.504Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T14:22:36.504Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Gaurav Sharma",
+            "email": "gaurav.sharma0905@gmail.com",
+            "source": "Application",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "resumeFilePath": "data/resumes/applications/2026/08/c601c96c-7534-477e-9342-e1d56c59a822.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T14:45:56.906Z"
+  },
+  {
+    "id": "93fce358-9305-4163-89d9-b50e6e74372b",
+    "queuedAt": "2026-08-11T14:22:38.949Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "df7253c5-2ecc-4ff3-b818-a1146face205",
+      "candidateId": "c601c96c-7534-477e-9342-e1d56c59a822",
+      "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-08-11T14:22:36.504Z",
+      "createdAt": "2026-08-11T14:22:36.504Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T14:22:36.504Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "c601c96c-7534-477e-9342-e1d56c59a822",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T14:45:56.909Z"
+  },
+  {
+    "id": "de50ae2a-3601-4ff9-ba87-fc8c24f62705",
+    "queuedAt": "2026-08-11T14:22:39.768Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "ba525f34-d5da-420e-96da-68705c47e8d0",
+      "to": "gaurav.sharma0905@gmail.com",
+      "subject": "We received your application for Regional Manager at GSL",
+      "body": "Hi Gaurav,\n\nThanks for applying for Regional Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4NjQ1ODE1OSwiZXhwaXJlc0F0IjoxNzg2NDU5MDU5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiYzYwMWM5NmMtNzUzNC00NzdlLTkzNDItZTFkNTZjNTlhODIyIiwiYXBwbGljYXRpb25JZCI6ImRmNzI1M2M1LTJlY2MtNGZmMy1iODE4LWExMTQ2ZmFjZTIwNSIsIm5vbmNlIjoiZWQxOWRjYmYtYTFhNy00N2VlLTgwY2ItMmY4Njk3NDk4YjFlIn19.1PiClFRB3js0Zo1DR1E974vou42v-Yw-IVe33xnLsrE\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate c601c96c-7534-477e-9342-e1d56c59a822",
+      "createdAt": "2026-08-11T14:22:39.768Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T14:45:56.910Z"
   }
 ]
