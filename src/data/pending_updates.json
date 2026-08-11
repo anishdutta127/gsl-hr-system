@@ -156,5 +156,39 @@
       "createdAt": "2026-08-11T13:16:56.374Z"
     },
     "retryCount": 0
+  },
+  {
+    "id": "c708d23d-e878-4e5d-b088-92b0570f65a1",
+    "queuedAt": "2026-08-11T13:33:52.739Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "173f7b86-5677-4096-813e-41a4f148cd63",
+      "name": "Amit Padmayya",
+      "email": "amitpaddy@gmail.com",
+      "phone": "9967408652",
+      "source": "Application",
+      "notes": "",
+      "resumeFilePath": "data/resumes/applications/2026/08/173f7b86-5677-4096-813e-41a4f148cd63.pdf",
+      "createdAt": "2026-08-11T13:33:51.488Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T13:33:51.488Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Amit Padmayya",
+            "email": "amitpaddy@gmail.com",
+            "source": "Application",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "resumeFilePath": "data/resumes/applications/2026/08/173f7b86-5677-4096-813e-41a4f148cd63.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
   }
 ]
