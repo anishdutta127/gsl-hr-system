@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "52930531-03c9-4406-8c91-016c0584b5af",
+    "queuedAt": "2026-08-11T07:55:40.141Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "cde12c43-5d42-48b8-9eef-062413a67343",
+      "name": "Sanjay Pathak",
+      "email": "sanjaypathak9839188173@gmail.com",
+      "phone": "9839188173",
+      "source": "Application",
+      "notes": "I am having rich experience in k12 domain B2B sales",
+      "resumeFilePath": "data/resumes/applications/2026/08/cde12c43-5d42-48b8-9eef-062413a67343.pdf",
+      "createdAt": "2026-08-11T07:55:38.849Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T07:55:38.849Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Sanjay Pathak",
+            "email": "sanjaypathak9839188173@gmail.com",
+            "source": "Application",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "resumeFilePath": "data/resumes/applications/2026/08/cde12c43-5d42-48b8-9eef-062413a67343.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0
+  }
+]
