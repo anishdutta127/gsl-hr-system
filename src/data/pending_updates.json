@@ -219,5 +219,21 @@
       ]
     },
     "retryCount": 0
+  },
+  {
+    "id": "94d9d1fb-352e-4578-b892-e530f1c44061",
+    "queuedAt": "2026-08-11T13:33:55.199Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "53779a7d-c46c-4bec-b3b8-cd875771b013",
+      "to": "amitpaddy@gmail.com",
+      "subject": "We received your application for Regional Manager at GSL",
+      "body": "Hi Amit,\n\nThanks for applying for Regional Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4NjQ1NTIzNSwiZXhwaXJlc0F0IjoxNzg2NDU2MTM1LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMTczZjdiODYtNTY3Ny00MDk2LTgxM2UtNDFhNGYxNDhjZDYzIiwiYXBwbGljYXRpb25JZCI6ImQyZWQ0OTE2LTFmNjgtNGU4Ni05NTk2LTRkNDAyMGYwYTEwMiIsIm5vbmNlIjoiMjI2MTdmODYtNTU2ZS00NmNhLTk1NmUtYmY1ZjA1YmVkM2ViIn19.W7pEteot9sbCN7DRFzSIQ_KQoZ9gRJYTakec3hqaIdg\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 173f7b86-5677-4096-813e-41a4f148cd63",
+      "createdAt": "2026-08-11T13:33:55.199Z"
+    },
+    "retryCount": 0
   }
 ]
