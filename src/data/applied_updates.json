@@ -1,73 +1,5 @@
 [
   {
-    "id": "dcabf903-dbc7-49e8-bffc-9a9a00948232",
-    "queuedAt": "2026-05-13T06:46:25.816Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "create",
-    "payload": {
-      "id": "ed7f6cfb-6bcd-416c-b0f2-28d63940fb39",
-      "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-      "currentStage": "Sourced",
-      "stageEnteredAt": "2026-05-13T06:46:25.042Z",
-      "createdAt": "2026-05-13T06:46:25.042Z",
-      "createdBy": "Hiring@getsetlearn.info",
-      "auditLog": [
-        {
-          "timestamp": "2026-05-13T06:46:25.042Z",
-          "user": "Hiring@getsetlearn.info",
-          "action": "application.create",
-          "after": {
-            "candidateId": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-            "roleId": "e1efe1a9-b322-4578-af50-68b762a83ef7",
-            "currentStage": "Sourced"
-          },
-          "notes": "Moved from Senior Academics Manager."
-        }
-      ]
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.830Z"
-  },
-  {
-    "id": "b62aec78-76af-4a58-9169-40d664905ee7",
-    "queuedAt": "2026-05-13T06:46:26.546Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "candidate",
-    "operation": "update",
-    "payload": {
-      "id": "9c8f7df6-01d5-4ce5-96e3-f066b3b7116f",
-      "operation": "candidate.update",
-      "before": {},
-      "after": {},
-      "notes": "Pipeline move: Senior Academics Manager → Sales Executive."
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.848Z"
-  },
-  {
-    "id": "e09e9ab2-fcc7-4c12-a0ac-e0fc384c1d6d",
-    "queuedAt": "2026-05-13T06:47:06.912Z",
-    "queuedBy": "Hiring@getsetlearn.info",
-    "entity": "application",
-    "operation": "update",
-    "payload": {
-      "id": "b53e78fb-0b04-4244-863d-f17e9f818b32",
-      "operation": "stage-transition",
-      "before": {
-        "currentStage": "Sourced",
-        "stageEnteredAt": "2026-05-12T14:55:31.163Z"
-      },
-      "after": {
-        "currentStage": "OnHold",
-        "stageEnteredAt": "2026-05-13T06:47:06.912Z"
-      }
-    },
-    "retryCount": 0,
-    "appliedAt": "2026-05-13T09:19:38.849Z"
-  },
-  {
     "id": "c2a20a0b-627b-4865-ac50-1a0bf99ae1e7",
     "queuedAt": "2026-05-13T06:49:11.290Z",
     "queuedBy": "Hiring@getsetlearn.info",
@@ -14014,5 +13946,87 @@
     },
     "retryCount": 0,
     "appliedAt": "2026-08-11T08:16:14.687Z"
+  },
+  {
+    "id": "1086c397-a985-4257-b754-452d4d5b38e4",
+    "queuedAt": "2026-08-11T10:10:17.878Z",
+    "queuedBy": "public:careers",
+    "entity": "candidate",
+    "operation": "create",
+    "payload": {
+      "id": "31f81dd8-e532-4ca2-a594-0dfb3a3ae669",
+      "name": "Kishore",
+      "email": "kishore96.k@outlook.com",
+      "phone": "+918053941580",
+      "source": "Application",
+      "notes": "I am looking for the role requires managing the overall P&L for a business Category that is Rs.10 Cr/year to Rs. 30 Cr/year today, and scaling it to 3x next year.\r\n\r\nThe teams that would be directly reporting to me\r\n\r\nI will lead Growth, Content & Growth Ops, Field Sales, and Inside Sales,B2B and B2B2C,Product Management.",
+      "resumeFilePath": "data/resumes/applications/2026/08/31f81dd8-e532-4ca2-a594-0dfb3a3ae669.pdf",
+      "createdAt": "2026-08-11T10:10:16.568Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T10:10:16.568Z",
+          "user": "public:careers",
+          "action": "candidate.create",
+          "after": {
+            "name": "Kishore",
+            "email": "kishore96.k@outlook.com",
+            "source": "Application",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "resumeFilePath": "data/resumes/applications/2026/08/31f81dd8-e532-4ca2-a594-0dfb3a3ae669.pdf"
+          },
+          "notes": "Self-applied via /careers with resume."
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T11:01:18.802Z"
+  },
+  {
+    "id": "adfca393-4a57-4b7d-8c68-a4c54253ecf8",
+    "queuedAt": "2026-08-11T10:10:18.804Z",
+    "queuedBy": "public:careers",
+    "entity": "application",
+    "operation": "create",
+    "payload": {
+      "id": "a6cb51c9-23b2-4242-8e11-f6468b1ecf79",
+      "candidateId": "31f81dd8-e532-4ca2-a594-0dfb3a3ae669",
+      "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+      "currentStage": "Sourced",
+      "stageEnteredAt": "2026-08-11T10:10:16.568Z",
+      "createdAt": "2026-08-11T10:10:16.568Z",
+      "createdBy": "public:careers",
+      "auditLog": [
+        {
+          "timestamp": "2026-08-11T10:10:16.568Z",
+          "user": "public:careers",
+          "action": "application.create",
+          "after": {
+            "candidateId": "31f81dd8-e532-4ca2-a594-0dfb3a3ae669",
+            "roleId": "b2d74602-8944-47bf-8ad6-f373186a0778",
+            "currentStage": "Sourced"
+          }
+        }
+      ]
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T11:01:18.806Z"
+  },
+  {
+    "id": "64326d28-5141-4ef5-9558-fb4b187393d1",
+    "queuedAt": "2026-08-11T10:10:19.851Z",
+    "queuedBy": "system",
+    "entity": "outbound_mail",
+    "operation": "create",
+    "payload": {
+      "id": "4784f9de-deb6-4b6c-9e28-5f79a4497786",
+      "to": "kishore96.k@outlook.com",
+      "subject": "We received your application for Regional Manager at GSL",
+      "body": "Hi Kishore,\n\nThanks for applying for Regional Manager at GSL. We've got your details.\n\nYour application portal is here:\nhttps://gsl-hr-system.vercel.app/portal/exchange?t=eyJ2IjoxLCJpc3N1ZWRBdCI6MTc4NjQ0MzAxOSwiZXhwaXJlc0F0IjoxNzg2NDQzOTE5LCJzY29wZSI6Im1hZ2ljLWxpbmsiLCJkYXRhIjp7ImNhbmRpZGF0ZUlkIjoiMzFmODFkZDgtZTUzMi00Y2EyLWE1OTQtMGRmYjNhM2FlNjY5IiwiYXBwbGljYXRpb25JZCI6ImE2Y2I1MWM5LTIzYjItNDI0Mi04ZTExLWY2NDY4YjFlY2Y3OSIsIm5vbmNlIjoiMDJiN2I5ZGItYTRiNS00NDIyLWJmYTItZTc2NjdhYzY4OGVkIn19.LGaElclpsu6nAl9EiXITmDhpH7ayfabx6NzLXWcgMcE\n\nThe link expires in 15 minutes. If it does, head to /portal/request-new-link and we will send a fresh one.\n\n- Shruti, HR Lead",
+      "context": "welcome magic link for candidate 31f81dd8-e532-4ca2-a594-0dfb3a3ae669",
+      "createdAt": "2026-08-11T10:10:19.851Z"
+    },
+    "retryCount": 0,
+    "appliedAt": "2026-08-11T11:01:18.807Z"
   }
 ]
